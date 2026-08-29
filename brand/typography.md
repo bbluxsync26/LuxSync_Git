@@ -1,189 +1,74 @@
-# Typography
+# LuxSync Typography
 
-## Intelligent Calm Voice Through Type
+The Luxury Orbit refresh uses a three-part typography system: a fashion-luxury serif for the LuxSync wordmark, a geometric sans for display/UI, and a softer humanist sans for body copy.
 
-The LuxSync typography system is designed to reflect our brand personality: warm, refined, human, and effortless.
+## Brand Wordmark / Editorial Serif
 
----
+Preferred stack:
 
-## Headlines & Display Text
+```css
+font-family: "Bodoni Moda", "Bodoni MT", Didot, Georgia, serif;
+```
 
-**Font: Manrope**
+Use for:
 
-### Characteristics
+- `LUXSYNC` wordmark treatment
+- Select editorial headings
+- Premium campaign or guide-cover accents
 
-- Soft, rounded geometric forms
-- Premium without feeling corporate
-- Modern and highly readable
-- Strong visual hierarchy without harshness
-- Excellent for brand presence and emphasis
+Do not use the serif for long body copy or dense interface text.
 
-### Recommended Weights
+## Headings, Navigation, and Graphic UI
 
-- **500** (Regular) — Subheadings, feature headings
-- **600** (Semibold) — Primary headings, emphasizing key messages
+Preferred design reference: **Century Gothic**.
 
-**Avoid**: Heavy bold weights (700+) unless required for accessibility or very specific callouts.
+Web-safe stack:
 
-### Usage
+```css
+font-family: "Century Gothic", Montserrat, Arial, sans-serif;
+```
 
-- Page titles and section headings
-- Feature headlines
-- Call-to-action text
-- Brand storytelling
-- Promotional messaging
+Use for:
 
----
+- Hero headlines
+- Section headings
+- Navigation
+- CTA labels
+- Product-card titles
+- Graphic labels
 
-## Body Copy & Paragraph Text
+Recommended weights: 400, 600, 700.
 
-**Font: Inter**
+## Body Copy and Supporting UI
 
-### Characteristics
+Preferred design reference: **Candara**.
 
-- Comfortable for extended reading
-- Exceptional screen legibility
-- Clean and unobtrusive
-- Optimized for modern digital interfaces
-- Friendly without being casual
-- Professional yet approachable
+Web-safe stack:
 
-### Recommended Weights
+```css
+font-family: Candara, Inter, "Segoe UI", Arial, sans-serif;
+```
 
-- **400** (Regular) — Standard body text, long-form content
-- **500** (Medium) — Emphasis within body copy, labels, helper text
+Use for:
 
-### Usage
-
-- Article text and long-form content
-- Description copy
+- Body copy
 - Product descriptions
-- Customer testimonials
-- Educational content
-- Email body text
+- Helper text
+- Form text
+- Supporting captions
 
----
+Recommended weights: 400 and 500.
 
-## UI Elements & Controls
+## Styling Notes
 
-**Font: Inter**
+- The LuxSync wordmark is normally uppercase with generous tracking.
+- Graphic CTAs may use uppercase labels when the component is compact and highly visual.
+- Website body copy should remain easy to scan and should not rely on all caps.
+- Preserve strong contrast on Deep Navy surfaces.
+- Keep typography airy and refined rather than dense or heavy.
 
-### Recommended Weight
+## Fallback Behavior
 
-- **500** (Medium) — All interactive elements
+The SVG library includes robust fallback stacks so the assets remain usable without proprietary fonts. Raster exports may use the closest available fallback font on the build runner.
 
-### Button Styling
-
-- Sentence case preferred (not ALL CAPS)
-- Letter spacing: `0.02em`
-- Pair with Warm Taupe Mauve (#9E8B85) or Dusty Steel (#7B96B2)
-
-### Usage
-
-- Button labels
-- Navigation links
-- Form labels and placeholders
-- Badges and tags
-- Micro-copy and helper text
-- Interface controls
-
----
-
-## Font Stacks (Fallback Order)
-
-### Headlines
-```css
-font-family: "Manrope", system-ui, -apple-system, sans-serif;
-```
-
-### Body & UI
-```css
-font-family: "Inter", system-ui, -apple-system, sans-serif;
-```
-
----
-
-## Typography Goals
-
-**Embody These Qualities**
-
-- Warm — Genuine and approachable
-- Comfortable — Easy to read, never harsh
-- Refined — Premium quality in every detail
-- Human — Conversational, not robotic
-- Modern — Clean, current aesthetic
-- Effortless — Simple, intuitive experience
-
-**Avoid These Qualities**
-
-- Aggressive — No forceful or pushy messaging
-- Corporate — Avoid stiff, formal tone
-- Technical — No jargon or intimidating language
-- Cold — Never sterile or impersonal
-
----
-
-## Practical Examples
-
-### Do This
-
-**Headline (Manrope 600):** "Create Smarter, Safer Spaces"
-
-**Body (Inter 400):** "Thoughtfully selected smart-home solutions designed to enhance your everyday living experience."
-
-**Button (Inter 500):** "Explore Collections"
-
-### Don't Do This
-
-**Headline (Manrope 700):** "BUY NOW OR MISS OUT" — Too aggressive and heavy
-
-**Body (Serif font):** "Lorem ipsum dolor sit amet..." — Wrong typeface for digital
-
-**Button (Century Gothic):** "CLICK HERE NOW" — Wrong font and tone
-
----
-
-## Web Integration
-
-### Google Fonts Import
-
-```html
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600&display=swap" rel="stylesheet">
-```
-
-### CSS Variables (Recommended)
-
-```css
-:root {
-  --font-headline: "Manrope", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-headline);
-  font-weight: var(--font-weight-semibold);
-}
-
-body, p, span {
-  font-family: var(--font-body);
-  font-weight: var(--font-weight-regular);
-}
-
-button, label {
-  font-family: var(--font-body);
-  font-weight: var(--font-weight-medium);
-}
-```
-
----
-
-## Design Principle
-
-> Where warmth meets intelligence.
->
-> Where luxury feels like home.
-
-Every typographic choice should support this philosophy — elegant yet approachable, sophisticated yet human.
+**Official slogan:** Where Luxury Lives Intelligently

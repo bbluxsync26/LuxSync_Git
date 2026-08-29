@@ -1,29 +1,42 @@
-# Plush Drift v2.1 Color System
+# LuxSync Luxury Orbit Color System
 
-## Primary Colors
+The Luxury Orbit refresh replaces the previous Plush Drift palette for current website and web-graphic work.
 
-Slate Navy
-#0D1526
+## Core Colors
 
-Dark Suede
-#172036
+| Role | Name | Hex |
+|---|---|---|
+| Primary background | Deep Navy | `#0B1D3A` |
+| Elevated surface | Midnight Blue | `#172846` |
+| Light surface / primary light text | Pale Blush | `#F3ECE8` |
+| Secondary neutral | Taupe | `#A69A8E` |
+| Warm soft accent | Dusty Rose | `#E7B5B8` |
+| Cool intelligent accent | Soft Powder Blue | `#A6B9CE` |
 
-Pale Driftwood
-#D0BEB0
+## Metallic Accent
 
-## Supporting Colors
+**Rose Gold** uses a gradient rather than a single flat color. Use `#D6B0A0` as the base reference and layer lighter champagne and deeper copper stops around it.
 
-Warm Taupe Mauve
-#9E8B85
+Recommended SVG gradient family:
 
-Antique Rose Taupe
-#967878
+- Highlight: `#FFF2EA`
+- Champagne: `#EAC8B9`
+- Rose Gold base: `#D6B0A0`
+- Copper shadow: `#9C675C`
+- Bright reflected edge: `#F2D6C8`
+- Deep rose shadow: `#7D4E49`
 
-Dusty Steel
-#7B96B2
+## Lighting Accent
 
-## Design Principle
+Use Soft Powder Blue as the source for the LuxSync orbit/glow effect. Keep blue illumination soft and atmospheric rather than neon.
 
-Where warmth meets intelligence.
+## Design Rules
 
-Where luxury feels like home.
+- Deep Navy is the default dark canvas.
+- Rose Gold is the premium focal accent for logos, CTAs, rims, and key line icons.
+- Powder Blue is a secondary technology cue, especially for orbit/glow treatments.
+- Pale Blush keeps light layouts warm instead of stark white.
+- Avoid electric cyan, saturated magenta, or cyberpunk neon.
+- Use gradients and glows selectively so the interface remains calm and premium.
+
+**Official slogan:** Where Luxury Lives Intelligently
