@@ -1,0 +1,976 @@
+{
+  "palette": {
+    "navy": "#0D1526",
+    "suede": "#172036",
+    "cream": "#D0BEB0",
+    "taupe": "#9E8B85",
+    "rose": "#967878",
+    "steel": "#7B96B2"
+  },
+  "fonts": {
+    "display": "Century Gothic; fallback URW Gothic",
+    "body": "Candara; fallback DejaVu Sans"
+  },
+  "assets": [
+    {
+      "category": "01-brand",
+      "name": "luxsync-wordmark-light",
+      "description": "Primary LuxSync wordmark for dark backgrounds",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 1200,
+      "height": 320,
+      "svg": "01-brand/luxsync-wordmark-light.svg"
+    },
+    {
+      "category": "01-brand",
+      "name": "luxsync-wordmark-dark",
+      "description": "Dark LuxSync wordmark for pale backgrounds",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 1200,
+      "height": 320,
+      "svg": "01-brand/luxsync-wordmark-dark.svg"
+    },
+    {
+      "category": "01-brand",
+      "name": "luxsync-monogram-orb",
+      "description": "LS monogram with the Plush Drift swirl",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "01-brand/luxsync-monogram-orb.svg"
+    },
+    {
+      "category": "01-brand",
+      "name": "luxsync-favicon",
+      "description": "Square favicon/app icon",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "01-brand/luxsync-favicon.svg"
+    },
+    {
+      "category": "01-brand",
+      "name": "luxsync-horizontal-lockup",
+      "description": "Horizontal logo with monogram and descriptor",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 1600,
+      "height": 460,
+      "svg": "01-brand/luxsync-horizontal-lockup.svg"
+    },
+    {
+      "category": "01-brand",
+      "name": "luxsync-stacked-lockup",
+      "description": "Stacked logo with monogram and descriptor",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 1000,
+      "height": 960,
+      "svg": "01-brand/luxsync-stacked-lockup.svg"
+    },
+    {
+      "category": "01-brand",
+      "name": "luxsync-hero-card",
+      "description": "Primary glowing brand hero card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1400,
+      "height": 800,
+      "svg": "01-brand/luxsync-hero-card.svg"
+    },
+    {
+      "category": "01-brand",
+      "name": "luxsync-divider",
+      "description": "Section divider with rose center point",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 1400,
+      "height": 120,
+      "svg": "01-brand/luxsync-divider.svg"
+    },
+    {
+      "category": "02-icons-brand",
+      "name": "tactile-luxury",
+      "description": "Tactile Luxury",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "02-icons-brand/tactile-luxury.svg"
+    },
+    {
+      "category": "02-icons-brand",
+      "name": "intelligent-calm",
+      "description": "Intelligent Calm",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "02-icons-brand/intelligent-calm.svg"
+    },
+    {
+      "category": "02-icons-brand",
+      "name": "warm-futurism",
+      "description": "Warm Futurism",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "02-icons-brand/warm-futurism.svg"
+    },
+    {
+      "category": "02-icons-brand",
+      "name": "effortless-sophistication",
+      "description": "Effortless Sophistication",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "02-icons-brand/effortless-sophistication.svg"
+    },
+    {
+      "category": "02-icons-brand",
+      "name": "corner-radius",
+      "description": "Generous Corner Radius",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "02-icons-brand/corner-radius.svg"
+    },
+    {
+      "category": "02-icons-brand",
+      "name": "breathing-space",
+      "description": "Inner Breathing Space",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "02-icons-brand/breathing-space.svg"
+    },
+    {
+      "category": "02-icons-brand",
+      "name": "soft-border",
+      "description": "Soft Borders",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "02-icons-brand/soft-border.svg"
+    },
+    {
+      "category": "02-icons-brand",
+      "name": "layered-depth",
+      "description": "Layered Depth",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "02-icons-brand/layered-depth.svg"
+    },
+    {
+      "category": "02-icons-brand",
+      "name": "ambient-glow",
+      "description": "Ambient Glow",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "02-icons-brand/ambient-glow.svg"
+    },
+    {
+      "category": "02-icons-brand",
+      "name": "organic-motion",
+      "description": "Organic Motion",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "02-icons-brand/organic-motion.svg"
+    },
+    {
+      "category": "02-icons-brand",
+      "name": "check",
+      "description": "Check",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "02-icons-brand/check.svg"
+    },
+    {
+      "category": "02-icons-brand",
+      "name": "close",
+      "description": "Close",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "02-icons-brand/close.svg"
+    },
+    {
+      "category": "03-icons-website",
+      "name": "security",
+      "description": "security icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "03-icons-website/security.svg"
+    },
+    {
+      "category": "03-icons-website",
+      "name": "delivery",
+      "description": "delivery icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "03-icons-website/delivery.svg"
+    },
+    {
+      "category": "03-icons-website",
+      "name": "phone",
+      "description": "phone icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "03-icons-website/phone.svg"
+    },
+    {
+      "category": "03-icons-website",
+      "name": "lock",
+      "description": "lock icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "03-icons-website/lock.svg"
+    },
+    {
+      "category": "03-icons-website",
+      "name": "smart-home",
+      "description": "smart home icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "03-icons-website/smart-home.svg"
+    },
+    {
+      "category": "03-icons-website",
+      "name": "star",
+      "description": "star icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "03-icons-website/star.svg"
+    },
+    {
+      "category": "03-icons-website",
+      "name": "value",
+      "description": "value icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "03-icons-website/value.svg"
+    },
+    {
+      "category": "03-icons-website",
+      "name": "support",
+      "description": "support icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "03-icons-website/support.svg"
+    },
+    {
+      "category": "03-icons-website",
+      "name": "cart",
+      "description": "cart icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "03-icons-website/cart.svg"
+    },
+    {
+      "category": "03-icons-website",
+      "name": "search",
+      "description": "search icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "03-icons-website/search.svg"
+    },
+    {
+      "category": "03-icons-website",
+      "name": "user",
+      "description": "user icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "03-icons-website/user.svg"
+    },
+    {
+      "category": "03-icons-website",
+      "name": "heart",
+      "description": "heart icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "03-icons-website/heart.svg"
+    },
+    {
+      "category": "03-icons-website",
+      "name": "arrow-right",
+      "description": "arrow right icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "03-icons-website/arrow-right.svg"
+    },
+    {
+      "category": "03-icons-website",
+      "name": "chevron-down",
+      "description": "chevron down icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "03-icons-website/chevron-down.svg"
+    },
+    {
+      "category": "04-icons-social",
+      "name": "instagram",
+      "description": "instagram social icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "04-icons-social/instagram.svg"
+    },
+    {
+      "category": "04-icons-social",
+      "name": "facebook",
+      "description": "facebook social icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "04-icons-social/facebook.svg"
+    },
+    {
+      "category": "04-icons-social",
+      "name": "linkedin",
+      "description": "linkedin social icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "04-icons-social/linkedin.svg"
+    },
+    {
+      "category": "04-icons-social",
+      "name": "pinterest",
+      "description": "pinterest social icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "04-icons-social/pinterest.svg"
+    },
+    {
+      "category": "04-icons-social",
+      "name": "youtube",
+      "description": "youtube social icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "04-icons-social/youtube.svg"
+    },
+    {
+      "category": "04-icons-social",
+      "name": "x",
+      "description": "x social icon",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 512,
+      "height": 512,
+      "svg": "04-icons-social/x.svg"
+    },
+    {
+      "category": "05-palette",
+      "name": "slate-navy",
+      "description": "Slate Navy color swatch",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 640,
+      "height": 400,
+      "svg": "05-palette/slate-navy.svg"
+    },
+    {
+      "category": "05-palette",
+      "name": "dark-suede",
+      "description": "Dark Suede color swatch",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 640,
+      "height": 400,
+      "svg": "05-palette/dark-suede.svg"
+    },
+    {
+      "category": "05-palette",
+      "name": "pale-driftwood",
+      "description": "Pale Driftwood color swatch",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 640,
+      "height": 400,
+      "svg": "05-palette/pale-driftwood.svg"
+    },
+    {
+      "category": "05-palette",
+      "name": "warm-taupe-mauve",
+      "description": "Warm Taupe Mauve color swatch",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 640,
+      "height": 400,
+      "svg": "05-palette/warm-taupe-mauve.svg"
+    },
+    {
+      "category": "05-palette",
+      "name": "antique-rose-taupe",
+      "description": "Antique Rose Taupe color swatch",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 640,
+      "height": 400,
+      "svg": "05-palette/antique-rose-taupe.svg"
+    },
+    {
+      "category": "05-palette",
+      "name": "dusty-steel",
+      "description": "Dusty Steel color swatch",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 640,
+      "height": 400,
+      "svg": "05-palette/dusty-steel.svg"
+    },
+    {
+      "category": "05-palette",
+      "name": "plush-drift-palette-strip",
+      "description": "All six signature tones",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1500,
+      "height": 330,
+      "svg": "05-palette/plush-drift-palette-strip.svg"
+    },
+    {
+      "category": "05-palette",
+      "name": "suede-texture-tile",
+      "description": "Seamless-feel suede background tile",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1200,
+      "height": 1200,
+      "svg": "05-palette/suede-texture-tile.svg"
+    },
+    {
+      "category": "06-gradients",
+      "name": "navy-drift",
+      "description": "Navy Drift — primary full-bleed background",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1200,
+      "height": 800,
+      "svg": "06-gradients/navy-drift.svg"
+    },
+    {
+      "category": "06-gradients",
+      "name": "rose-drift",
+      "description": "Rose Drift — hero glow and CTA halo",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1200,
+      "height": 800,
+      "svg": "06-gradients/rose-drift.svg"
+    },
+    {
+      "category": "06-gradients",
+      "name": "lavender-mist",
+      "description": "Lavender Mist — decorative overlay",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1200,
+      "height": 800,
+      "svg": "06-gradients/lavender-mist.svg"
+    },
+    {
+      "category": "06-gradients",
+      "name": "warm-veil",
+      "description": "Warm Veil — reading comfort backdrop",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1200,
+      "height": 800,
+      "svg": "06-gradients/warm-veil.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "button-primary",
+      "description": "EXPLORE THE COLLECTION button",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 560,
+      "height": 160,
+      "svg": "07-components/button-primary.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "button-secondary",
+      "description": "VIEW THE GUIDE button",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 560,
+      "height": 160,
+      "svg": "07-components/button-secondary.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "button-outline",
+      "description": "LEARN MORE button",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 560,
+      "height": 160,
+      "svg": "07-components/button-outline.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "badge-curated",
+      "description": "CURATED badge",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 420,
+      "height": 130,
+      "svg": "07-components/badge-curated.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "badge-host-ready",
+      "description": "HOST-READY badge",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 420,
+      "height": 130,
+      "svg": "07-components/badge-host-ready.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "badge-no-subscription",
+      "description": "NO SUBSCRIPTION badge",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 420,
+      "height": 130,
+      "svg": "07-components/badge-no-subscription.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "badge-luxsync-pick",
+      "description": "LUXSYNC PICK badge",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 420,
+      "height": 130,
+      "svg": "07-components/badge-luxsync-pick.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "toggle-on",
+      "description": "Toggle control — on",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 220,
+      "height": 120,
+      "svg": "07-components/toggle-on.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "toggle-off",
+      "description": "Toggle control — off",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 220,
+      "height": 120,
+      "svg": "07-components/toggle-off.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "scene-tag",
+      "description": "Scene status tag",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 460,
+      "height": 120,
+      "svg": "07-components/scene-tag.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "quantity-selector",
+      "description": "Product quantity selector",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 390,
+      "height": 130,
+      "svg": "07-components/quantity-selector.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "search-field",
+      "description": "Website search field",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 760,
+      "height": 130,
+      "svg": "07-components/search-field.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "sort-control",
+      "description": "Product sorting control",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 620,
+      "height": 130,
+      "svg": "07-components/sort-control.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "pagination",
+      "description": "Pagination control",
+      "transparent": true,
+      "formats": "svg-png-webp",
+      "width": 820,
+      "height": 130,
+      "svg": "07-components/pagination.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "notification-card",
+      "description": "Email/notification card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 780,
+      "height": 420,
+      "svg": "07-components/notification-card.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "quote-card",
+      "description": "Brand quote/pull-quote card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 900,
+      "height": 360,
+      "svg": "07-components/quote-card.svg"
+    },
+    {
+      "category": "07-components",
+      "name": "trust-bar",
+      "description": "Four-point website trust bar",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1600,
+      "height": 210,
+      "svg": "07-components/trust-bar.svg"
+    },
+    {
+      "category": "08-cards",
+      "name": "tactile-luxury-card",
+      "description": "Tactile Luxury pillar card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 600,
+      "height": 840,
+      "svg": "08-cards/tactile-luxury-card.svg"
+    },
+    {
+      "category": "08-cards",
+      "name": "intelligent-calm-card",
+      "description": "Intelligent Calm pillar card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 600,
+      "height": 840,
+      "svg": "08-cards/intelligent-calm-card.svg"
+    },
+    {
+      "category": "08-cards",
+      "name": "warm-futurism-card",
+      "description": "Warm Futurism pillar card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 600,
+      "height": 840,
+      "svg": "08-cards/warm-futurism-card.svg"
+    },
+    {
+      "category": "08-cards",
+      "name": "effortless-sophistication-card",
+      "description": "Effortless Sophistication pillar card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 600,
+      "height": 840,
+      "svg": "08-cards/effortless-sophistication-card.svg"
+    },
+    {
+      "category": "08-cards",
+      "name": "manifesto-card",
+      "description": "Brand manifesto card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 900,
+      "height": 1100,
+      "svg": "08-cards/manifesto-card.svg"
+    },
+    {
+      "category": "08-cards",
+      "name": "diagnostic-matrix",
+      "description": "Comparison matrix card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1500,
+      "height": 860,
+      "svg": "08-cards/diagnostic-matrix.svg"
+    },
+    {
+      "category": "08-cards",
+      "name": "type-specimen-display",
+      "description": "Display typography",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 900,
+      "height": 720,
+      "svg": "08-cards/type-specimen-display.svg"
+    },
+    {
+      "category": "08-cards",
+      "name": "type-specimen-body",
+      "description": "Body typography",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 900,
+      "height": 720,
+      "svg": "08-cards/type-specimen-body.svg"
+    },
+    {
+      "category": "08-cards",
+      "name": "tone-calibration",
+      "description": "Brand voice calibration graphic",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1500,
+      "height": 580,
+      "svg": "08-cards/tone-calibration.svg"
+    },
+    {
+      "category": "08-cards",
+      "name": "always-do",
+      "description": "Always Do card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 840,
+      "height": 700,
+      "svg": "08-cards/always-do.svg"
+    },
+    {
+      "category": "08-cards",
+      "name": "never-do",
+      "description": "Never Do card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 840,
+      "height": 700,
+      "svg": "08-cards/never-do.svg"
+    },
+    {
+      "category": "08-cards",
+      "name": "sounds-like",
+      "description": "LuxSync Sounds Like card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 840,
+      "height": 700,
+      "svg": "08-cards/sounds-like.svg"
+    },
+    {
+      "category": "08-cards",
+      "name": "never-sounds-like",
+      "description": "LuxSync Never Sounds Like card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 840,
+      "height": 700,
+      "svg": "08-cards/never-sounds-like.svg"
+    },
+    {
+      "category": "09-illustrations",
+      "name": "layered-depth-stack",
+      "description": "Four-layer depth construction illustration",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1200,
+      "height": 900,
+      "svg": "09-illustrations/layered-depth-stack.svg"
+    },
+    {
+      "category": "09-illustrations",
+      "name": "ambient-glow-example",
+      "description": "Correct gentle ambient illumination",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 900,
+      "height": 700,
+      "svg": "09-illustrations/ambient-glow-example.svg"
+    },
+    {
+      "category": "09-illustrations",
+      "name": "forbidden-light-example",
+      "description": "Incorrect neon/hard-glow example",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 900,
+      "height": 700,
+      "svg": "09-illustrations/forbidden-light-example.svg"
+    },
+    {
+      "category": "09-illustrations",
+      "name": "organic-motion-curve",
+      "description": "Motion/easing curve graphic",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1200,
+      "height": 800,
+      "svg": "09-illustrations/organic-motion-curve.svg"
+    },
+    {
+      "category": "09-illustrations",
+      "name": "dashboard-tablet",
+      "description": "Stylized smart-home dashboard touchpoint",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1400,
+      "height": 900,
+      "svg": "09-illustrations/dashboard-tablet.svg"
+    },
+    {
+      "category": "09-illustrations",
+      "name": "floating-widgets",
+      "description": "Mobile interface with floating widget cards",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1000,
+      "height": 800,
+      "svg": "09-illustrations/floating-widgets.svg"
+    },
+    {
+      "category": "09-illustrations",
+      "name": "luxury-smart-hub",
+      "description": "Physical smart-hub/unboxing illustration",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1000,
+      "height": 800,
+      "svg": "09-illustrations/luxury-smart-hub.svg"
+    },
+    {
+      "category": "10-product-cards",
+      "name": "category-comfort",
+      "description": "COMFORT category/product card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 700,
+      "height": 920,
+      "svg": "10-product-cards/category-comfort.svg"
+    },
+    {
+      "category": "10-product-cards",
+      "name": "category-security",
+      "description": "SECURITY category/product card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 700,
+      "height": 920,
+      "svg": "10-product-cards/category-security.svg"
+    },
+    {
+      "category": "10-product-cards",
+      "name": "category-energy",
+      "description": "ENERGY category/product card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 700,
+      "height": 920,
+      "svg": "10-product-cards/category-energy.svg"
+    },
+    {
+      "category": "10-product-cards",
+      "name": "category-hosting",
+      "description": "HOSTING category/product card",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 700,
+      "height": 920,
+      "svg": "10-product-cards/category-hosting.svg"
+    },
+    {
+      "category": "11-banners",
+      "name": "hero-technology-feels-like-home",
+      "description": "Primary homepage hero banner",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1600,
+      "height": 700,
+      "svg": "11-banners/hero-technology-feels-like-home.svg"
+    },
+    {
+      "category": "11-banners",
+      "name": "shop-curated-smart-living",
+      "description": "Shop/category banner",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1600,
+      "height": 360,
+      "svg": "11-banners/shop-curated-smart-living.svg"
+    },
+    {
+      "category": "11-banners",
+      "name": "str-smart-home-roi-guide",
+      "description": "Lead-magnet banner",
+      "transparent": false,
+      "formats": "svg-png-webp",
+      "width": 1600,
+      "height": 360,
+      "svg": "11-banners/str-smart-home-roi-guide.svg"
+    }
+  ]
+}

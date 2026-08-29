@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="210" viewBox="0 0 1600 210" role="img" aria-label="LuxSync trust bar">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0D1526"/><stop offset="1" stop-color="#172036"/></linearGradient>
+    <linearGradient id="navyDrift" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0D1526"/><stop offset="1" stop-color="#172036"/></linearGradient>
+    <linearGradient id="warmVeil" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#D0BEB0" stop-opacity=".72"/><stop offset="1" stop-color="#D0BEB0" stop-opacity="0"/></linearGradient>
+    <linearGradient id="lavenderMist" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7B96B2" stop-opacity=".55"/><stop offset="1" stop-color="#7B96B2" stop-opacity="0"/></linearGradient>
+    <radialGradient id="roseDrift"><stop stop-color="#967878" stop-opacity=".85"/><stop offset="1" stop-color="#967878" stop-opacity="0"/></radialGradient>
+    <radialGradient id="softLight"><stop stop-color="#D0BEB0"/><stop offset=".32" stop-color="#967878" stop-opacity=".7"/><stop offset="1" stop-color="#967878" stop-opacity="0"/></radialGradient>
+    <filter id="roseGlow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="14" result="b"/><feColorMatrix in="b" values="0 0 0 0 .588 0 0 0 0 .471 0 0 0 0 .471 0 0 0 .75 0"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="steelGlow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="10" result="b"/><feColorMatrix in="b" values="0 0 0 0 .482 0 0 0 0 .588 0 0 0 0 .698 0 0 0 .7 0"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#0D1526" flood-opacity=".6"/></filter>
+    <filter id="suedeNoise" x="0" y="0" width="100%" height="100%"><feTurbulence baseFrequency=".7" numOctaves="4" seed="23" type="fractalNoise" result="n"/><feColorMatrix in="n" type="saturate" values="0" result="g"/><feComponentTransfer in="g"><feFuncA type="table" tableValues="0 .15"/></feComponentTransfer><feBlend in="SourceGraphic" mode="soft-light"/></filter>
+    <style>
+      .display{font-family:'Century Gothic','URW Gothic','DejaVu Sans',sans-serif}
+      .body{font-family:Candara,'DejaVu Sans',sans-serif}
+      .mono{font-family:Consolas,'DejaVu Sans Mono',monospace}
+      .line{fill:none;stroke:#967878;stroke-width:18;stroke-linecap:round;stroke-linejoin:round}
+      .line2{fill:none;stroke:#D0BEB0;stroke-width:12;stroke-linecap:round;stroke-linejoin:round}
+      .soft{fill:#172036;stroke:#967878;stroke-opacity:.55;stroke-width:3}
+    </style>
+  </defs><rect width="1600" height="210" fill="#172036"/><g transform="translate(0 0)"><path d="M170 70 200 54l30 16v24c0 28-16 46-30 52-14-6-30-24-30-52Z" fill="none" stroke="#967878" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" filter="url(#roseGlow)"/><text x="200" y="180" class="body" font-size="23" fill="#D0BEB0" text-anchor="middle" letter-spacing="1.5">CURATED FOR COMPATIBILITY</text></g><g transform="translate(400 0)"><path d="M566 88 600 68l34 20-34 20ZM566 88v34l34 20 34-20V88" fill="none" stroke="#967878" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" filter="url(#roseGlow)"/><text x="200" y="180" class="body" font-size="23" fill="#D0BEB0" text-anchor="middle" letter-spacing="1.5">ZERO INVENTORY</text></g><g transform="translate(800 0)"><path d="M976 72h48v64h-48ZM988 124h24" fill="none" stroke="#967878" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" filter="url(#roseGlow)"/><text x="200" y="180" class="body" font-size="23" fill="#D0BEB0" text-anchor="middle" letter-spacing="1.5">SELF-SERVICE SETUP</text></g><g transform="translate(1200 0)"><path d="M1368 110v-12c0-66 64-66 64 0v28M1368 110h16v30h-16M1432 110h-16v30h16" fill="none" stroke="#967878" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" filter="url(#roseGlow)"/><text x="200" y="180" class="body" font-size="23" fill="#D0BEB0" text-anchor="middle" letter-spacing="1.5">GUIDED SUPPORT</text></g></svg>

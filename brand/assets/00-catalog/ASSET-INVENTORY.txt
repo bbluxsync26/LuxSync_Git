@@ -1,0 +1,26 @@
+LUXSYNC WEB ASSET INVENTORY
+Plush Drift v2.1
+
+Total individual graphics: 96
+Formats per graphic: SVG master, PNG fallback, WebP fallback
+
+01-brand                 8
+02-icons-brand          12
+03-icons-website        14
+04-icons-social          6
+05-palette               8
+06-gradients             4
+07-components           17
+08-cards                13
+09-illustrations         7
+10-product-cards         4
+11-banners               3
+
+Catalog files
+-------------
+LuxSync-Asset-Catalog.html      Browser-based visual catalog with links
+LuxSync-master-contact-sheet.png Master visual overview
+01–11 category contact sheets    Labeled previews by asset group
+asset-manifest.csv/json          Machine-readable dimensions and descriptions
+README.txt                       Palette, fonts, and format guidance
+
