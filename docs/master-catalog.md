@@ -7,7 +7,7 @@
 
 ## Purpose
 
-This file is the repository index for approved LuxSync strategy, brand, website, prompt, architecture, decision, and runbook artifacts.
+This file is the repository index for approved LuxSync strategy, brand, website, prompt, architecture, decision, runbook, and checklist artifacts.
 
 The repository is the LuxSync source of truth. Conversation drafts or external copies do not override the current repository unless they are intentionally reconciled and committed.
 
@@ -86,6 +86,14 @@ Official slogan:
 
 ---
 
+## Checklists
+
+| ID | Artifact | Path | Status |
+|---|---|---|---|
+| CL-001 | Airo First-Pass Review | `docs/checklists/CL-001-Airo-First-Pass-Review.md` | Active |
+
+---
+
 ## Prompt Catalog
 
 | ID | Artifact | Path | Status | Use |
@@ -130,7 +138,7 @@ Search | Account | Cart
 1. Validate live Commerce Plus product catalog and product data before publishing prices/availability.
 2. Resolve conflicting senior-service pricing before public display.
 3. Run first PR-001 generation in Airo AI Builder.
-4. Review Airo output against ARC-001 and brand standards.
+4. Review Airo output using CL-001 against ARC-001 and brand standards.
 5. Determine exported source structure after inspecting actual Airo output.
 6. Define CI/CD only after the generated/selected implementation technology is known.
 7. Define staging, production deployment, and rollback runbooks.
