@@ -1,12 +1,14 @@
 # LuxSync
 
-[![Status](https://img.shields.io/badge/Status-Foundation%20%26%20Launch-172036?style=for-the-badge)](#current-phase)
-[![Launch](https://img.shields.io/badge/Launch-6-Day%20Model-1F7A5C?style=for-the-badge)](#launch-strategy)
+[![Status](https://img.shields.io/badge/Status-Foundation%20%26%20Launch-0D1526?style=for-the-badge)](#current-phase)
+[![Launch](https://img.shields.io/badge/Launch-6--Day%20Model-172036?style=for-the-badge)](#launch-strategy)
 [![Business Model](https://img.shields.io/badge/Business%20Model-Zero--Inventory-7B96B2?style=for-the-badge)](#business-model)
-[![Ecosystem](https://img.shields.io/badge/Ecosystem-SmartThings-15B8FF?style=for-the-badge)](#technology-philosophy)
-[![Focus](https://img.shields.io/badge/Focus-Smart%20Automation-7B96B2?style=for-the-badge)](#the-business)
+[![Philosophy](https://img.shields.io/badge/Philosophy-Intelligent%20Luxury-9E8B85?style=for-the-badge)](#brand-principles)
+[![Focus](https://img.shields.io/badge/Focus-Smart%20Automation-967878?style=for-the-badge)](#the-business)
 
-> **Where Luxury Lives Intelligently**
+> **Where Warmth Meets Intelligence**
+>
+> **Where Luxury Feels Like Home**
 
 **Repository Areas:** `docs` • `brand` • `content` • `prompts` • `website`
 
@@ -87,9 +89,9 @@ Every document, asset, prompt, and line of code should support the core question
 
 LuxSync exists to curate the exceptional.
 
-We help customers create smarter, safer, and more elegant living environments through carefully selected technology, thoughtful automation, and premium design.
+We help customers create smarter, safer, and more elegant living environments through thoughtfully selected technology, refined automation, and timeless design.
 
-In a market crowded with complexity, LuxSync provides clarity through trusted recommendations, seamless compatibility, and a luxury customer experience.
+In a market crowded with complexity, LuxSync provides clarity through trusted recommendations, seamless compatibility, and a premium customer experience that feels unhurried and approachable.
 
 ### Signature Statement
 
@@ -99,12 +101,12 @@ In a market crowded with complexity, LuxSync provides clarity through trusted re
 
 Every product, bundle, and customer interaction reflects our commitment to:
 
-- Quality
-- Sophistication
-- Simplicity
-- Reliability
-- Long-term value
-- Exceptional service
+- **Quality** - Carefully selected, beautifully designed
+- **Sophistication** - Premium without pretension
+- **Simplicity** - Technology that feels effortless
+- **Reliability** - Products and service you can trust
+- **Long-term Value** - Built for lasting relationships
+- **Exceptional Service** - Thoughtful, warm, and attentive
 
 Our goal is not to sell gadgets.
 
@@ -422,45 +424,108 @@ Technology should feel invisible, intuitive, and dependable.
 
 ### Intelligent Calm
 
-Every interaction should feel:
+Every interaction should reflect our voice and personality:
 
-- Warm
-- Professional
-- Confident
-- Unhurried
+- **Warm** - Approachable and human, never cold or distant
+- **Professional** - Confident and knowledgeable without being condescending
+- **Thoughtful** - Carefully considered recommendations and solutions
+- **Unhurried** - Patient, measured communication that respects the customer's time
+- **Confident** - Clear guidance rooted in expertise and experience
+
+We sound like a trusted advisor — someone who understands both technology and the desire for a beautiful, functional home.
+
+We do not sound like:
+
+- Pushy salespeople
+- Tech enthusiasts showing off
+- Corporate marketing jargon
+- Aggressive or urgent urgency tactics
 
 ### Curation Over Complexity
 
 Customers should never feel overwhelmed by choice.
 
+Every product included in LuxSync, every bundle offered, and every recommendation made is intentionally selected to simplify the buying process and deliver genuine value.
+
 ### Luxury Through Simplicity
 
 Technology should enhance life without adding friction.
+
+Automation, controls, and systems should feel invisible and intuitive. Complexity belongs behind the scenes.
 
 ### Trust Before Transactions
 
 Long-term relationships matter more than short-term sales.
 
+We prioritize customer success and satisfaction above immediate revenue, building foundations for loyalty and advocacy.
+
 ### Excellence in Every Detail
 
-The brand experience should feel premium at every touchpoint.
+From product selection to customer communications, from website design to fulfillment, every touchpoint should reflect our premium brand standards and commitment to quality.
 
 ---
 
 ## Brand Standards
 
-### Design System
+### Color System
 
-LuxSync uses the **Plush Drift v2.1** aesthetic system.
+LuxSync uses the **Plush Drift v2.1** aesthetic system, reflecting our design principle:
+
+> Where warmth meets intelligence. Where luxury feels like home.
+
+#### Primary Colors
 
 | Role | Color | Hex |
 |--------|--------|--------|
 | Primary Background | Slate Navy | `#0D1526` |
 | Card Surface | Dark Suede | `#172036` |
 | Primary Text | Pale Driftwood | `#D0BEB0` |
+
+#### Supporting Colors
+
+| Role | Color | Hex |
+|--------|--------|--------|
 | Secondary Text | Warm Taupe Mauve | `#9E8B85` |
 | Tertiary Accent | Antique Rose Taupe | `#967878` |
 | Primary Accent | Dusty Steel | `#7B96B2` |
+
+These colors combine warmth with sophistication, creating a visual identity that feels both premium and approachable.
+
+### Voice & Tone
+
+The LuxSync brand voice is **Intelligent Calm**.
+
+#### Personality Traits
+
+- **Warm** - Genuine, approachable, and human
+- **Confident** - Clear direction rooted in expertise
+- **Thoughtful** - Careful consideration and patience
+- **Unhurried** - Calm, measured, and never pushy
+- **Professional** - Knowledgeable without being condescending
+
+#### Communication Principles
+
+✓ **Do This:**
+
+- Recommend thoughtfully selected solutions
+- Explain benefits in terms of customer lifestyle
+- Use warm, conversational language
+- Be patient and educational
+- Build trust through authenticity
+
+✗ **Avoid This:**
+
+- Aggressive sales language or urgency tactics
+- Technical jargon or "showing off"
+- Corporate or impersonal tone
+- Pushy or manipulative messaging
+- Cold, sterile communication
+
+#### Example
+
+**Don't say:** "Buy now before supplies run out!"
+
+**Do say:** "Thoughtfully selected solutions designed to make everyday living simpler and more enjoyable."
 
 ### Typography
 
