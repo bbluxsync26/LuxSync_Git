@@ -1,26 +1,25 @@
 # LuxSync Brand Asset Library
 
-**Plush Drift v2.1 — Complete Web Graphics Collection**
+**Plush Drift v2.1 — Web Graphics Collection**
 
 > Where warmth meets intelligence. Where luxury feels like home.
 
----
+## Authority and precedence
 
-## Overview
+The current LuxSync brand standards in `brand/` are authoritative. For typography, **Manrope** is the headline/display font and **Inter** is the body/UI font. Any older generated asset metadata or embedded SVG declarations that reference Century Gothic or Candara are legacy implementation artifacts and do not override the active brand standard.
 
-Complete asset library for LuxSync branding and web presence:
+The official LuxSync slogan is **Where Luxury Lives Intelligently**.
 
-- **96 individual web graphics** across 11 organized categories
-- **Multiple formats**: SVG (vector), PNG (transparent/opaque), WebP (optimized)
-- **Color system**: Plush Drift v2.1 palette integration
-- **Primary use cases**: Logos, icons, banners, cards, illustrations, components
+## Current library
 
----
+The library contains **97 logical graphics** across 11 numbered asset categories. Most graphics are supplied in SVG, PNG, and WebP formats.
 
-## Color Palette
+The original 96-graphic pack was expanded by the later `hero-where-luxury-lives-intelligently` banner set.
+
+## Color palette
 
 | Role | Color | Hex |
-|--------|--------|--------|
+|---|---|---|
 | Primary Background | Slate Navy | `#0D1526` |
 | Card Surface | Dark Suede | `#172036` |
 | Primary Text | Pale Driftwood | `#D0BEB0` |
@@ -28,231 +27,96 @@ Complete asset library for LuxSync branding and web presence:
 | Tertiary Accent | Antique Rose Taupe | `#967878` |
 | Primary Accent | Dusty Steel | `#7B96B2` |
 
----
+## Typography
 
-## Asset Categories
+| Role | Standard | Recommended weights |
+|---|---|---|
+| Headlines / Display | Manrope | 500, 600 |
+| Body / UI | Inter | 400, 500 |
 
-### 1. Brand Marks
-Primary logos, wordmarks, and signature brand identifiers.
+For website implementation, render important text in HTML/CSS with these fonts whenever practical. Do not treat legacy font names embedded in older generated assets as current standards.
 
-**Formats**: SVG, PNG (transparent), WebP  
-**Use**: Website header, social profiles, official documentation  
-**Location**: `./brand-marks/`
+## Actual repository structure
 
----
-
-### 2. Brand Icons
-Decorative and symbolic icons representing LuxSync brand concepts.
-
-**Formats**: SVG, PNG (transparent), WebP  
-**Use**: Feature callouts, brand storytelling, visual hierarchy  
-**Location**: `./brand-icons/`
-
----
-
-### 3. Website Icons
-Functional UI icons for navigation, actions, and interface elements.
-
-**Formats**: SVG, PNG (transparent), WebP  
-**Use**: Buttons, navigation, feature icons, interface controls  
-**Location**: `./website-icons/`
-
----
-
-### 4. Social Icons
-Platform-specific and social media icons.
-
-**Formats**: SVG, PNG (transparent), WebP  
-**Use**: Social links, share buttons, platform integration  
-**Location**: `./social-icons/`
-
----
-
-### 5. Palette & Texture
-Color swatches, texture samples, and visual references.
-
-**Formats**: SVG, PNG, WebP  
-**Use**: Brand guidelines, design reference, material samples  
-**Location**: `./palette-texture/`
-
----
-
-### 6. Gradients
-Gradient fills, background patterns, and color transitions.
-
-**Formats**: SVG, PNG, WebP  
-**Use**: Hero sections, backgrounds, decorative elements  
-**Location**: `./gradients/`
-
----
-
-### 7. Components
-Reusable UI components and design modules.
-
-**Formats**: SVG, PNG (transparent), WebP  
-**Use**: Button styles, form elements, component library  
-**Location**: `./components/`
-
----
-
-### 8. Cards
-Card designs, containers, and layout modules.
-
-**Formats**: SVG, PNG, WebP  
-**Use**: Product cards, feature cards, content blocks  
-**Location**: `./cards/`
-
----
-
-### 9. Illustrations
-Custom illustrations, diagrams, and visual narratives.
-
-**Formats**: SVG, PNG (transparent), WebP  
-**Use**: Hero images, storytelling, feature illustrations  
-**Location**: `./illustrations/`
-
----
-
-### 10. Category Cards
-Pre-designed cards for product categories and navigation.
-
-**Formats**: SVG, PNG, WebP  
-**Use**: Product category pages, navigation tiles, feature cards  
-**Location**: `./category-cards/`
-
----
-
-### 11. Website Banners
-Full-width banners and promotional graphics.
-
-**Formats**: SVG, PNG, WebP  
-**Use**: Hero sections, campaign banners, seasonal promotions  
-**Location**: `./website-banners/`
-
----
-
-## Format Guidance
-
-### SVG (Preferred)
-- **Use for**: Logos, icons, controls, badges, cards, and gradients
-- **Advantage**: Vector-based, scales infinitely, smallest file size for simple graphics
-- **Web use**: Direct embedding in HTML or CSS
-
-### PNG
-- **Use when**: CMS requires raster upload or transparency fallback
-- **Advantage**: Universal compatibility, lossless quality, transparency support
-- **Web use**: Standard `<img>` tags, email, fallback format
-
-### WebP
-- **Use for**: Banners, cards, textures, and illustrations where file size matters
-- **Advantage**: Optimized compression, smaller than PNG/JPG
-- **Web use**: Modern browsers with PNG fallback
-
----
-
-## Manifest & Metadata
-
-Complete asset metadata available in [`asset-manifest.json`](./asset-manifest.json):
-
-- Asset descriptions
-- Category organization
-- Format specifications
-- Dimensions (width/height)
-- Transparency information
-- File paths
-
----
-
-## Typography Reference
-
-> **Current Standard:** Headlines use Manrope (weights 500, 600); Body Copy and UI use Inter (weights 400, 500).
-> The asset catalog was originally built with different fonts, but the current LuxSync brand standard is Manrope and Inter.
-
-| Role | Font | Fallback |
-|--------|--------|---------|
-| Display/Headings | Manrope | system-ui, -apple-system, sans-serif |
-| Body Copy | Inter | system-ui, -apple-system, sans-serif |
-
----
-
-## Usage Guidelines
-
-### For Web Projects
-1. Choose SVG for logos and icons
-2. Use WebP for banners and large graphics
-3. Provide PNG fallbacks for older browsers
-4. Reference color hex codes for design consistency
-
-### For Documentation & READMEs
-1. Reference SVG files directly in markdown
-2. Use relative paths: `./brand-marks/asset-name.svg`
-3. Include alt text for accessibility
-
-### For Design Tools
-1. Import SVG files into Figma, Illustrator, or similar
-2. Maintain Plush Drift v2.1 color palette
-3. Update asset-manifest.json with any modifications
-
----
-
-## File Structure
-
-```
+```text
 brand/assets/
-├── README.md                      (this file)
-├── asset-manifest.json            (metadata index)
-├── brand-marks/                   (11 assets)
-├── brand-icons/                   (12 assets)
-├── website-icons/                 (8 assets)
-├── social-icons/                  (7 assets)
-├── palette-texture/               (6 assets)
-├── gradients/                     (9 assets)
-├── components/                    (8 assets)
-├── cards/                         (7 assets)
-├── illustrations/                 (10 assets)
-├── category-cards/                (11 assets)
-└── website-banners/               (7 assets)
+├── 00-catalog/          Catalogs, contact sheets, QA documentation
+├── 01-brand/            Logos, wordmarks, lockups, brand identifiers
+├── 02-icons-brand/      Brand principle and decorative icons
+├── 03-icons-website/    Functional website icons
+├── 04-icons-social/     Social-platform icons
+├── 05-palette/          Palette and texture assets
+├── 06-gradients/        Gradient/background assets
+├── 07-components/       Buttons, badges, controls, trust components
+├── 08-cards/            Brand/content cards
+├── 09-illustrations/    Illustrations and UI concepts
+├── 10-product-cards/    Commerce category cards
+├── 11-banners/          Website and campaign banners
+├── asset-manifest.csv   Canonical detailed asset inventory
+└── asset-manifest.json  Lightweight machine-readable library metadata
 ```
 
----
+## Category counts
 
-## Asset Management
+| Category | Logical graphics |
+|---|---:|
+| 01-brand | 8 |
+| 02-icons-brand | 12 |
+| 03-icons-website | 14 |
+| 04-icons-social | 6 |
+| 05-palette | 8 |
+| 06-gradients | 4 |
+| 07-components | 17 |
+| 08-cards | 13 |
+| 09-illustrations | 7 |
+| 10-product-cards | 4 |
+| 11-banners | 4 |
+| **Total** | **97** |
 
-### Adding New Assets
-1. Place files in appropriate category folder
-2. Update [`asset-manifest.json`](./asset-manifest.json)
-3. Commit changes with clear messages
-4. Update this README if adding new categories
+## Format guidance
 
-### Updating Existing Assets
-1. Replace files while maintaining names
-2. Update asset-manifest.json metadata if needed
-3. Commit with changelog message
+- **SVG:** preferred for logos, icons, controls, badges, gradients, and other vector graphics.
+- **WebP:** preferred for larger banners, cards, textures, and illustrations where raster delivery is appropriate.
+- **PNG:** compatibility/export fallback, especially where transparency is needed.
 
----
+Because some PNG/WebP files were generated before the current typography standard was fully normalized, verify text-bearing raster assets visually before production use. Prefer current SVGs or HTML/CSS-rendered text when typography fidelity matters.
 
-## Design Principles
+## Manifest guidance
 
-All assets follow LuxSync brand principles:
+`asset-manifest.csv` is the canonical detailed per-asset inventory until an automated manifest generator is introduced.
 
-- **Intelligent Calm** — Professional yet approachable
-- **Warm & Premium** — Luxury without coldness
-- **Functional Beauty** — Form follows function
-- **Consistent Quality** — Every detail matters
+`asset-manifest.json` provides valid machine-readable library metadata and points consumers to the canonical CSV inventory. Do not add hand-edited duplicate per-asset data to both files unless they are generated from the same source.
 
----
+## Asset management
 
-## Support
+When adding or updating an asset:
 
-For questions about specific assets or usage:
-- Check [`asset-manifest.json`](./asset-manifest.json) for detailed metadata
-- Review category README files if available
-- Refer to main brand guidelines in parent directory
+1. Place it in the appropriate numbered directory.
+2. Update `asset-manifest.csv`.
+3. Update catalog/contact-sheet outputs when applicable.
+4. Verify Manrope/Inter typography for text-bearing assets.
+5. Verify the official slogan where brand-line text appears.
+6. Commit the change with a clear message.
 
----
+## Web implementation principles
 
-**Version**: Plush Drift v2.1  
-**Last Updated**: August 29, 2026  
-**Total Assets**: 96 graphics  
-**Categories**: 11  
-**Formats**: SVG, PNG, WebP
+Use the assets in support of the active Plush Drift v2.1 system:
+
+- Intelligent Calm
+- Warm and premium
+- Functional beauty
+- Generous breathing space
+- Layered depth
+- Restrained ambient glow
+- Consistent quality
+
+See also:
+
+- `../README.md` for brand-system guidance
+- `../typography.md` for authoritative typography
+- `../colors.md` for authoritative colors
+- `../../website/styles/design-system.md` for website implementation guidance
+
+**Version:** Plush Drift v2.1  
+**Updated:** August 29, 2026  
+**Status:** Active
