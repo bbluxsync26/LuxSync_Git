@@ -22,6 +22,7 @@ Before beginning an Airo build, review:
 8. `content/homepage.md`
 9. `content/about.md`
 10. `prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md`
+11. `docs/runbooks/RB-007-Brand-Asset-Raster-Regeneration.md`
 
 ## Current GoDaddy Product Distinction
 
@@ -133,7 +134,7 @@ Primary folders:
 
 Use SVG for logos/icons where supported and WebP for larger raster graphics.
 
-If a text-bearing legacy raster image visibly uses obsolete typography, do not treat the raster text as the brand standard. Prefer HTML/CSS text or a regenerated asset using Manrope/Inter.
+Current text-bearing raster assets on `master` are generated from normalized SVG masters using Manrope/Inter. When text-bearing SVG content or typography changes, follow `RB-007 — Brand Asset Raster Regeneration` before using the updated PNG/WebP derivatives in Airo.
 
 ## Step 5 — Commerce Representation
 
