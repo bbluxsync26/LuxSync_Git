@@ -165,10 +165,13 @@ Complete asset metadata available in [`asset-manifest.json`](./asset-manifest.js
 
 ## Typography Reference
 
+> **Current Standard:** Headlines use Manrope (weights 500, 600); Body Copy and UI use Inter (weights 400, 500).
+> The asset catalog was originally built with different fonts, but the current LuxSync brand standard is Manrope and Inter.
+
 | Role | Font | Fallback |
-|--------|--------|--------|
-| Display/Headings | Century Gothic | URW Gothic / sans-serif |
-| Body Copy | Candara | DejaVu Sans / sans-serif |
+|--------|--------|---------|
+| Display/Headings | Manrope | system-ui, -apple-system, sans-serif |
+| Body Copy | Inter | system-ui, -apple-system, sans-serif |
 
 ---
 
