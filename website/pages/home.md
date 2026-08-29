@@ -15,20 +15,20 @@ LuxSync
 
 ### Hero message
 
-**Technology That Feels Like Home**
+**Smart Living. Elevated.**
 
 ### Supporting copy
 
-Curated smart-home solutions, premium automation, and elevated living experiences designed to make life simpler.
+Luxury smart-home technology designed for modern living, with curated hardware and thoughtful automation that bring comfort, control, and confidence to every space.
 
 ### Calls to action
 
-- Primary: **Shop Collections**
-- Secondary: **Explore Solutions**
+- Primary: **Shop Smart Home**
+- Secondary: **Get the ROI Guide**
 
 ### Visual direction
 
-Use a strong LuxSync brand asset or premium smart-living environment with restrained Plush Drift illumination. Keep the CTA visible above the fold on desktop and mobile.
+Use the Luxury Orbit visual system: deep architectural navy, rose-gold metallic accents, soft powder-blue orbit light, pale blush copy, generous negative space, and premium smart-living imagery. Keep the CTA visible above the fold on desktop and mobile.
 
 ---
 
@@ -69,7 +69,7 @@ Feature the current customer-facing collection structure:
 - Hosting
 - Curated Bundles
 
-Use the current category-card assets where visually appropriate.
+Use the current Luxury Orbit category-card assets where visually appropriate.
 
 Primary section CTA: **Shop Collections**
 
@@ -147,7 +147,7 @@ Commerce utilities such as Search, Account, and Cart should remain accessible th
 - Search/cart readily accessible
 - One-column sections where appropriate
 - Large tap targets
-- Readable Manrope/Inter typography
+- Readable Century Gothic / Candara-compatible typography stacks
 - Avoid horizontally compressed desktop layouts
 
 ---
@@ -156,17 +156,19 @@ Commerce utilities such as Search, Account, and Cart should remain accessible th
 
 ### Colors
 
-- Slate Navy `#0D1526`
-- Dark Suede `#172036`
-- Pale Driftwood `#D0BEB0`
-- Warm Taupe Mauve `#9E8B85`
-- Antique Rose Taupe `#967878`
-- Dusty Steel `#7B96B2`
+- Deep Navy `#0B1D3A`
+- Midnight Blue `#172846`
+- Pale Blush `#F3ECE8`
+- Taupe `#A69A8E`
+- Dusty Rose `#E7B5B8`
+- Soft Powder Blue `#A6B9CE`
+- Rose Gold base `#D6B0A0` with metallic gradient treatment
 
 ### Typography
 
-- Headings: Manrope 500/600
-- Body/UI: Inter 400/500
+- Wordmark/editorial: Bodoni Moda / Bodoni MT / Didot / Georgia
+- Headings/UI: Century Gothic / Montserrat
+- Body: Candara / Inter / Segoe UI
 
 ### Voice
 
