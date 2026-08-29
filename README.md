@@ -1,10 +1,10 @@
 # LuxSync
 
-[![Status](https://img.shields.io/badge/Status-Foundation%20%26%20Launch-172036?style=for-the-badge)](#current-phase)
-[![Launch](https://img.shields.io/badge/Launch-6-Day%20Model-1F7A5C?style=for-the-badge)](#launch-strategy)
-[![Business Model](https://img.shields.io/badge/Business%20Model-Zero--Inventory-7B96B2?style=for-the-badge)](#business-model)
-[![Ecosystem](https://img.shields.io/badge/Ecosystem-SmartThings-15B8FF?style=for-the-badge)](#technology-philosophy)
-[![Focus](https://img.shields.io/badge/Focus-Smart%20Automation-7B96B2?style=for-the-badge)](#the-business)
+[![Status](https://img.shields.io/badge/Status-Foundation%20%26%20Launch-172036?style=for-the-badge)](https://github.com/bbluxsync26/LuxSync_Git#current-phase)
+[![Launch](https://img.shields.io/badge/Launch-6--Day%20Model-1F7A5C?style=for-the-badge)](https://github.com/bbluxsync26/LuxSync_Git#launch-strategy)
+[![Business Model](https://img.shields.io/badge/Business%20Model-Zero--Inventory-7B96B2?style=for-the-badge)](https://github.com/bbluxsync26/LuxSync_Git#business-model)
+[![Ecosystem](https://img.shields.io/badge/Ecosystem-SmartThings-15B8FF?style=for-the-badge)](https://github.com/bbluxsync26/LuxSync_Git#technology-philosophy)
+[![Focus](https://img.shields.io/badge/Focus-Smart%20Automation-7B96B2?style=for-the-badge)](https://github.com/bbluxsync26/LuxSync_Git#the-business)
 
 > **Where Luxury Lives Intelligently**
 
@@ -44,9 +44,9 @@
 
 LuxSync is a luxury smart-home automation and commerce company positioned at the intersection of premium branding and intelligent home technology.
 
-Rather than launching as a software-first startup, LuxSync prioritizes a curated retail model built around trusted smart-home technology, premium customer experiences, and elegant product selection. The company is designed to launch rapidly using a zero-inventory dropshipping model, allowing immediate market entry with minimal overhead while preserving a luxury brand experience.
+Rather than launching as a software-first startup, LuxSync prioritizes a curated retail model built around trusted smart-home technology, premium customer experiences, and elegant product selection.
 
-LuxSync serves homeowners, short-term rental operators, caregivers, families, and professionals seeking intelligent solutions without complexity. Through carefully selected products, SmartThings-compatible automation solutions, educational content, and AI-assisted customer engagement, LuxSync helps customers create smarter, safer, and more beautiful environments.
+LuxSync serves homeowners, short-term rental operators, caregivers, families, and professionals seeking intelligent solutions without complexity. Through carefully selected products, SmartThings-compatible automation, and AI-enabled customer engagement, LuxSync helps customers create smarter, safer, and more elegant living environments.
 
 ---
 
@@ -281,7 +281,7 @@ LuxSync is positioned where luxury living meets intelligent technology.
 
 LuxSync is a luxury smart-home automation and commerce company positioned at the intersection of premium branding and intelligent home technology.
 
-Through curated products, SmartThings-compatible automation solutions, and an AI-enabled customer experience, LuxSync helps homeowners, property operators, and families create smarter, safer, and more elegant environments.
+Through curated products, SmartThings-compatible automation solutions, and an AI-enabled customer experience, LuxSync helps homeowners, property operators, and families create smarter, safer, and more elegant living environments.
 
 ---
 
