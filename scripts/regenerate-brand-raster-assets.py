@@ -1,184 +1,133 @@
 #!/usr/bin/env python3
-"""Normalize LuxSync SVG typography and regenerate text-bearing PNG/WebP siblings.
-
-Source of truth:
-- Headlines/display: Manrope
-- Body/UI: Inter
-
-Legacy mappings:
-- Century Gothic -> Manrope
-- Candara -> Inter
-
-The script intentionally regenerates only SVGs that contain actual <text> elements and
-already have PNG and/or WebP siblings. Existing raster dimensions are preserved.
-"""
-
+"""Generate LuxSync Luxury Orbit SVG masters, PNG/WebP siblings, and contact sheets."""
 from __future__ import annotations
 
 import re
 import shutil
 import subprocess
 import sys
-import tempfile
 from pathlib import Path
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
-ASSET_ROOT = ROOT / "brand" / "assets"
+ASSET_ROOT = ROOT / 'brand' / 'assets'
+GENERATOR = ROOT / 'scripts' / 'generate-luxury-orbit-assets.py'
 
-LEGACY_FONT_REPLACEMENTS = (
-    ("Century Gothic", "Manrope"),
-    ("Candara", "Inter"),
-)
+CATEGORY_SHEETS = {
+    '01-brand': '01-brand-contact-sheet.png',
+    '02-icons-brand': '02-icons-brand-contact-sheet.png',
+    '03-icons-website': '03-icons-website-contact-sheet.png',
+    '04-icons-social': '04-icons-social-contact-sheet.png',
+    '05-palette': '05-palette-contact-sheet.png',
+    '06-gradients': '06-gradients-contact-sheet.png',
+    '07-components': '07-components-contact-sheet.png',
+    '08-cards': '08-cards-contact-sheet.png',
+    '09-illustrations': '09-illustrations-contact-sheet.png',
+    '10-product-cards': '10-product-cards-contact-sheet.png',
+    '11-banners': '11-banners-contact-sheet.png',
+}
 
-TEXT_RE = re.compile(r"<text\b", re.IGNORECASE)
+def run(*args: str) -> None:
+    subprocess.run(list(args), check=True)
 
+def svg_size(svg: Path) -> tuple[int, int]:
+    text = svg.read_text(encoding='utf-8')[:1000]
+    m = re.search(r'<svg[^>]*\bwidth="([0-9.]+)"[^>]*\bheight="([0-9.]+)"', text)
+    if not m:
+        return 1200, 800
+    return max(64, int(float(m.group(1)))), max(64, int(float(m.group(2))))
 
-def run(*args: str) -> str:
-    result = subprocess.run(
-        list(args),
-        check=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True,
-    )
-    return result.stdout.strip()
-
-
-def imagemagick_identify(path: Path) -> str:
-    """Return '<width> <height>' using ImageMagick 6 or 7."""
-    magick = shutil.which("magick")
-    if magick:
-        return run(magick, "identify", "-format", "%w %h", str(path))
-
-    identify = shutil.which("identify")
-    if not identify:
-        raise RuntimeError("ImageMagick identify command was not found")
-    return run(identify, "-format", "%w %h", str(path))
-
-
-def imagemagick_convert(source: Path, output: Path) -> None:
-    """Convert an image using ImageMagick 6 or 7."""
-    magick = shutil.which("magick")
-    if magick:
-        run(magick, str(source), "-strip", "-quality", "92", str(output))
-        return
-
-    convert = shutil.which("convert")
+def render_svg(svg: Path) -> None:
+    w, h = svg_size(svg)
+    png = svg.with_suffix('.png')
+    webp = svg.with_suffix('.webp')
+    run('inkscape', str(svg), '--export-type=png', f'--export-filename={png}', f'--export-width={w}', f'--export-height={h}', '--export-background-opacity=0')
+    convert = shutil.which('magick') or shutil.which('convert')
     if not convert:
-        raise RuntimeError("ImageMagick convert command was not found")
-    run(convert, str(source), "-strip", "-quality", "92", str(output))
+        raise RuntimeError('ImageMagick convert/magick not found')
+    run(convert, str(png), '-strip', '-quality', '92', str(webp))
 
+def font(size: int, bold: bool=False):
+    candidates = [
+        '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf' if bold else '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',
+        '/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf' if bold else '/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf',
+    ]
+    for p in candidates:
+        if Path(p).exists():
+            return ImageFont.truetype(p, size)
+    return ImageFont.load_default()
 
-def raster_dimensions(path: Path) -> tuple[int, int]:
-    value = imagemagick_identify(path)
-    width, height = value.split()
-    return int(width), int(height)
-
-
-def normalize_svg_text(svg_text: str) -> tuple[str, bool]:
-    normalized = svg_text
-    for old, new in LEGACY_FONT_REPLACEMENTS:
-        normalized = normalized.replace(old, new)
-    return normalized, normalized != svg_text
-
-
-def has_text(svg_text: str) -> bool:
-    return bool(TEXT_RE.search(svg_text))
-
-
-def render_png(svg: Path, output: Path, width: int, height: int) -> None:
-    run(
-        "inkscape",
-        str(svg),
-        "--export-type=png",
-        f"--export-filename={output}",
-        f"--export-width={width}",
-        f"--export-height={height}",
-        "--export-background-opacity=0",
-    )
-
-
-def regenerate(svg: Path, png: Path | None, webp: Path | None) -> None:
-    reference = png if png and png.exists() else webp
-    if reference is None or not reference.exists():
+def make_contact_sheet(category: str, filename: str) -> None:
+    folder = ASSET_ROOT / category
+    files = sorted(folder.glob('*.png'))
+    if not files:
         return
+    cols = 4
+    tile_w, tile_h = 360, 300
+    rows = (len(files) + cols - 1) // cols
+    canvas = Image.new('RGB', (cols*tile_w + 60, rows*tile_h + 90), '#F7F4F2')
+    draw = ImageDraw.Draw(canvas)
+    draw.text((30,20), f'LuxSync Luxury Orbit • {category}', font=font(28,True), fill='#0B1D3A')
+    for i, path in enumerate(files):
+        im = Image.open(path).convert('RGBA')
+        im.thumbnail((tile_w-50, tile_h-80), Image.Resampling.LANCZOS)
+        card_x = 30 + (i % cols)*tile_w + 10
+        card_y = 60 + (i // cols)*tile_h + 10
+        canvas.paste('#FFFFFF', (card_x, card_y, card_x+tile_w-20, card_y+tile_h-20))
+        x = 30 + (i % cols)*tile_w + (tile_w-im.width)//2
+        y = 60 + (i // cols)*tile_h + 10
+        canvas.paste(im, (x,y), im)
+        draw.text((30+(i%cols)*tile_w+24, 60+(i//cols)*tile_h+tile_h-48), path.stem, font=font(18), fill='#172846')
+    out = ASSET_ROOT / '00-catalog' / filename
+    out.parent.mkdir(parents=True, exist_ok=True)
+    canvas.save(out, optimize=True)
 
-    width, height = raster_dimensions(reference)
-
-    with tempfile.TemporaryDirectory(prefix="luxsync-raster-") as tmpdir:
-        rendered_png = Path(tmpdir) / "rendered.png"
-        render_png(svg, rendered_png, width, height)
-
-        if png and png.exists():
-            shutil.copyfile(rendered_png, png)
-
-        if webp and webp.exists():
-            imagemagick_convert(rendered_png, webp)
-
-        # Verify regenerated dimensions before accepting the outputs.
-        for candidate in (png, webp):
-            if candidate and candidate.exists():
-                candidate_size = raster_dimensions(candidate)
-                if candidate_size != (width, height):
-                    raise RuntimeError(
-                        f"Dimension mismatch for {candidate}: {candidate_size} != {(width, height)}"
-                    )
-
+def make_master_sheet() -> None:
+    selected = [
+        ASSET_ROOT/'01-brand/luxsync-horizontal-lockup.png',
+        ASSET_ROOT/'11-banners/str-smart-home-roi-guide.png',
+        ASSET_ROOT/'03-icons-website/security.png',
+        ASSET_ROOT/'07-components/button-primary.png',
+        ASSET_ROOT/'10-product-cards/category-security.png',
+        ASSET_ROOT/'10-product-cards/category-comfort.png',
+        ASSET_ROOT/'11-banners/hero-where-luxury-lives-intelligently.png',
+        ASSET_ROOT/'11-banners/shop-curated-smart-living.png',
+    ]
+    positions=[(50,110,820,360),(930,110,820,360),(50,520,500,330),(600,520,500,330),(1150,520,600,330),(50,900,520,430),(610,900,520,430),(1170,900,580,430)]
+    canvas = Image.new('RGB',(1800,1400),'#F7F4F2')
+    draw = ImageDraw.Draw(canvas)
+    draw.text((50,30),'LuxSync Luxury Orbit • Master Contact Sheet',font=font(36,True),fill='#0B1D3A')
+    for path,pos in zip(selected,positions):
+        if not path.exists():
+            continue
+        x,y,w,h=pos
+        im=Image.open(path).convert('RGBA')
+        im.thumbnail((w,h),Image.Resampling.LANCZOS)
+        canvas.paste(im,(x+(w-im.width)//2,y+(h-im.height)//2),im)
+    canvas.save(ASSET_ROOT/'00-catalog/LuxSync-master-contact-sheet.png', optimize=True)
 
 def main() -> int:
-    if not ASSET_ROOT.exists():
-        raise RuntimeError(f"Asset root not found: {ASSET_ROOT}")
-
-    normalized_svgs: list[Path] = []
-    regenerated: list[Path] = []
-
-    for svg in sorted(ASSET_ROOT.rglob("*.svg")):
-        # Catalog contact sheets are raster-only; skip any future catalog SVG helpers.
-        if "00-catalog" in svg.parts:
-            continue
-
-        original = svg.read_text(encoding="utf-8")
-        normalized, changed = normalize_svg_text(original)
-        if changed:
-            svg.write_text(normalized, encoding="utf-8")
-            normalized_svgs.append(svg)
-
-        # Regenerate only files with visible SVG text and existing raster siblings.
-        if not has_text(normalized):
-            continue
-
-        png = svg.with_suffix(".png")
-        webp = svg.with_suffix(".webp")
-        if not png.exists() and not webp.exists():
-            continue
-
-        regenerate(
-            svg,
-            png if png.exists() else None,
-            webp if webp.exists() else None,
-        )
-        regenerated.append(svg)
-
-    # No legacy typography may remain in text-bearing SVG sources after normalization.
-    leftovers: list[str] = []
-    for svg in sorted(ASSET_ROOT.rglob("*.svg")):
-        text = svg.read_text(encoding="utf-8")
-        if not has_text(text):
-            continue
-        for old, _new in LEGACY_FONT_REPLACEMENTS:
-            if old in text:
-                leftovers.append(f"{svg.relative_to(ROOT)}: {old}")
-
-    if leftovers:
-        raise RuntimeError("Legacy fonts remain:\n" + "\n".join(leftovers))
-
-    print(f"Normalized SVG masters: {len(normalized_svgs)}")
-    print(f"Regenerated text-bearing raster sets: {len(regenerated)}")
-    for svg in regenerated:
-        print(f"  - {svg.relative_to(ROOT)}")
-
+    run(sys.executable, str(GENERATOR))
+    svgs=[p for p in ASSET_ROOT.rglob('*.svg') if '00-catalog' not in p.parts]
+    for i, svg in enumerate(sorted(svgs),1):
+        print(f'[{i}/{len(svgs)}] {svg.relative_to(ROOT)}')
+        render_svg(svg)
+    for cat, fn in CATEGORY_SHEETS.items():
+        make_contact_sheet(cat,fn)
+    make_master_sheet()
+    svg_list = ASSET_ROOT / '00-catalog' / 'SVG-ASSET-LIST.md'
+    lines = ['# LuxSync Luxury Orbit SVG Asset List', '', f'Generated SVG masters: **{len(svgs)}**', '', 'These SVGs are generated directly by `scripts/generate-luxury-orbit-assets.py`; they do **not** need to be sent through an image generator.', '']
+    current = None
+    for svg in sorted(svgs):
+        rel = svg.relative_to(ASSET_ROOT)
+        category = rel.parts[0]
+        if category != current:
+            current = category
+            lines.extend([f'## {category}', ''])
+        lines.append(f'- `{rel.as_posix()}`')
+    svg_list.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    print(f'Regenerated {len(svgs)} SVG/PNG/WebP asset sets plus contact sheets.')
     return 0
 
-
-if __name__ == "__main__":
-    sys.exit(main())
+if __name__ == '__main__':
+    raise SystemExit(main())
