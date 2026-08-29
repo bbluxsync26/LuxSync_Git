@@ -83,6 +83,7 @@ Official slogan:
 | RB-004 | CI/CD | TBD | Planned |
 | RB-005 | Production Deployment | TBD | Planned |
 | RB-006 | Rollback | TBD | Planned |
+| RB-007 | Brand Asset Raster Regeneration | `docs/runbooks/RB-007-Brand-Asset-Raster-Regeneration.md` | Active |
 
 ---
 
@@ -142,7 +143,6 @@ Search | Account | Cart
 5. Determine exported source structure after inspecting actual Airo output.
 6. Define CI/CD only after the generated/selected implementation technology is known.
 7. Define staging, production deployment, and rollback runbooks.
-8. Regenerate text-bearing PNG/WebP assets where legacy typography is visually embedded.
 
 ---
 
