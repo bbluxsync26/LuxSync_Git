@@ -164,3 +164,5 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
+# Workflow trigger marker: 2026-08-29 raster-font regeneration
