@@ -1,8 +1,8 @@
 LUXSYNC WEB ASSET INVENTORY
 Plush Drift v2.1
 
-Total individual graphics: 96
-Formats per graphic: SVG master, PNG fallback, WebP fallback
+Total logical graphics: 97
+Most graphics are supplied as SVG master, PNG fallback, and WebP fallback.
 
 01-brand                 8
 02-icons-brand          12
@@ -14,13 +14,24 @@ Formats per graphic: SVG master, PNG fallback, WebP fallback
 08-cards                13
 09-illustrations         7
 10-product-cards         4
-11-banners               3
+11-banners               4
+
+The fourth banner is hero-where-luxury-lives-intelligently, added after the original
+96-graphic pack.
 
 Catalog files
 -------------
-LuxSync-Asset-Catalog.html      Browser-based visual catalog with links
+LuxSync-Asset-Catalog.html       Browser-based visual catalog with links
 LuxSync-master-contact-sheet.png Master visual overview
 01–11 category contact sheets    Labeled previews by asset group
-asset-manifest.csv/json          Machine-readable dimensions and descriptions
-README.txt                       Palette, fonts, and format guidance
+asset-manifest.csv               Canonical detailed asset inventory
+asset-manifest.json              Machine-readable library metadata
+README.md / README.txt           Palette, typography, paths, and format guidance
 
+Typography authority
+--------------------
+Headlines / Display: Manrope
+Body / UI: Inter
+
+Legacy Century Gothic and Candara references in older generated assets do not
+override the current LuxSync brand standard.
