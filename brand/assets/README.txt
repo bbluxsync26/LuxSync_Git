@@ -2,10 +2,9 @@ LUXSYNC WEB ASSET PACK — PLUSH DRIFT v2.1
 
 Contents
 --------
-96 individual web graphics in SVG, transparent/opaque PNG, and WebP.
-11 organized categories: brand marks, brand icons, website icons, social icons,
-palette/texture, gradients, components, cards, illustrations, category cards,
-and website banners.
+97 logical web graphics across 11 organized categories. Most graphics are supplied
+in SVG, PNG, and WebP formats. The original 96-graphic pack was expanded by the
+hero-where-luxury-lives-intelligently banner set.
 
 Primary palette
 ---------------
@@ -18,17 +17,28 @@ Dusty Steel       #7B96B2  — CTA / accent glow
 
 Typography
 ----------
-Display: Century Gothic (fallback: URW Gothic / sans-serif)
-Body: Candara (fallback: DejaVu Sans / sans-serif)
+Headlines / Display: Manrope (500, 600)
+Body / UI: Inter (400, 500)
+
+Manrope and Inter are authoritative. Century Gothic and Candara references in older
+generated asset sources are legacy implementation artifacts and do not define the
+current LuxSync brand standard.
+
+Official slogan
+---------------
+Where Luxury Lives Intelligently
 
 Format guidance
 ---------------
 SVG: preferred for logos, icons, controls, badges, cards, and gradients.
-PNG: use when a CMS needs a raster upload or transparency fallback.
-WebP: use for banners, cards, textures, and illustrations where file size matters.
+PNG: compatibility/transparency fallback.
+WebP: preferred for larger raster banners, cards, textures, and illustrations.
 
 Notes
 -----
 The supplied PPTX stores each slide as one flattened image, so separate original
-vectors were not available. The assets in this pack were rebuilt as clean vector
-masters, following the source geometry and the confirmed v2.1 palette.
+vectors were not available. The asset pack was rebuilt as vector interpretations
+using the confirmed Plush Drift v2.1 palette.
+
+For production website use, verify text-bearing raster fallbacks visually and prefer
+current SVG or HTML/CSS-rendered text when typography fidelity matters.
