@@ -18,8 +18,13 @@ Dusty Steel       #7B96B2  — CTA / accent glow
 
 Typography
 ----------
-Display: Century Gothic (fallback: URW Gothic / sans-serif)
-Body: Candara (fallback: DejaVu Sans / sans-serif)
+Headlines: Manrope (weights 500, 600)
+Body Copy: Inter (weights 400, 500)
+UI Elements: Inter (weight 500)
+
+Typography Goals:
+- Warm, comfortable, refined, human, modern, effortless
+- Avoid: aggressive, corporate, technical, cold
 
 Format guidance
 ---------------
