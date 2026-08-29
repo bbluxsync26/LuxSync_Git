@@ -44,8 +44,33 @@ def run(*args: str) -> str:
     return result.stdout.strip()
 
 
+def imagemagick_identify(path: Path) -> str:
+    """Return '<width> <height>' using ImageMagick 6 or 7."""
+    magick = shutil.which("magick")
+    if magick:
+        return run(magick, "identify", "-format", "%w %h", str(path))
+
+    identify = shutil.which("identify")
+    if not identify:
+        raise RuntimeError("ImageMagick identify command was not found")
+    return run(identify, "-format", "%w %h", str(path))
+
+
+def imagemagick_convert(source: Path, output: Path) -> None:
+    """Convert an image using ImageMagick 6 or 7."""
+    magick = shutil.which("magick")
+    if magick:
+        run(magick, str(source), "-strip", "-quality", "92", str(output))
+        return
+
+    convert = shutil.which("convert")
+    if not convert:
+        raise RuntimeError("ImageMagick convert command was not found")
+    run(convert, str(source), "-strip", "-quality", "92", str(output))
+
+
 def raster_dimensions(path: Path) -> tuple[int, int]:
-    value = run("magick", "identify", "-format", "%w %h", str(path))
+    value = imagemagick_identify(path)
     width, height = value.split()
     return int(width), int(height)
 
@@ -88,14 +113,7 @@ def regenerate(svg: Path, png: Path | None, webp: Path | None) -> None:
             shutil.copyfile(rendered_png, png)
 
         if webp and webp.exists():
-            run(
-                "magick",
-                str(rendered_png),
-                "-strip",
-                "-quality",
-                "92",
-                str(webp),
-            )
+            imagemagick_convert(rendered_png, webp)
 
         # Verify regenerated dimensions before accepting the outputs.
         for candidate in (png, webp):
@@ -164,5 +182,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
-
-# Workflow trigger marker: 2026-08-29 raster-font regeneration
