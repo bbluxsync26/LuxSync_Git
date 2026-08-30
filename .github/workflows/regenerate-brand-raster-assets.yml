@@ -55,11 +55,32 @@ jobs:
       - name: Render PNG WebP and catalog sheets
         run: python3 scripts/render-luxury-orbit-assets.py
 
+      - name: Add production scene photography
+        run: |
+          mkdir -p brand/assets/12-scenes /tmp/luxsync-scenes
+
+          fetch_scene() {
+            name="$1"
+            url="$2"
+            curl -L --fail --retry 3 "$url" -o "/tmp/luxsync-scenes/${name}-source.png"
+            convert "/tmp/luxsync-scenes/${name}-source.png" -resize '2000x2000>' -strip "brand/assets/12-scenes/${name}.png"
+            convert "brand/assets/12-scenes/${name}.png" -strip -quality 88 "brand/assets/12-scenes/${name}.webp"
+          }
+
+          fetch_scene 'home-hero-room' 'https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:0a763e5c-f44d-4ea0-801f-aa9d707c1d3b'
+          fetch_scene 'shop-smart-home-hardware' 'https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:64e55619-4885-4cc9-84f1-5549696fbb06'
+          fetch_scene 'roi-guide-backdrop' 'https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:15ba8b2f-d9ea-478f-8426-7c4212cc38af'
+          fetch_scene 'smart-hub-vignette' 'https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:6249bf78-0878-4932-99f1-5e0222337f4b'
+          fetch_scene 'dashboard-tablet-scene' 'https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:6ce2e134-a43a-49c5-a56f-435d0c5ea634'
+          fetch_scene 'mobile-automation-scene' 'https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:deecc340-6522-4fc4-831f-e239825b0a79'
+
       - name: Validate generated library
         run: |
           test "$(find brand/assets -type f -name '*.svg' | wc -l)" -eq 97
-          test "$(find brand/assets -type f -name '*.webp' | wc -l)" -eq 97
-          test "$(find brand/assets -type f -name '*.png' | grep -v '/00-catalog/' | wc -l)" -eq 97
+          test "$(find brand/assets -type f -name '*.webp' ! -path '*/12-scenes/*' | wc -l)" -eq 97
+          test "$(find brand/assets -type f -name '*.png' ! -path '*/12-scenes/*' | grep -v '/00-catalog/' | wc -l)" -eq 97
+          test "$(find brand/assets/12-scenes -type f -name '*.png' | wc -l)" -eq 6
+          test "$(find brand/assets/12-scenes -type f -name '*.webp' | wc -l)" -eq 6
           test -f brand/assets/00-catalog/SVG-ASSET-LIST.md
           test -f brand/assets/00-catalog/LuxSync-master-contact-sheet.png
           if grep -RIl --include='*.svg' -E '<text\b' brand/assets \
@@ -87,5 +108,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add brand/assets scripts/generate-luxury-orbit-assets.py
-          git commit -m 'Normalize Luxury Orbit source and assets to Manrope and Inter'
+          git commit -m 'Add Luxury Orbit production scene imagery'
           git push origin HEAD:${GITHUB_REF_NAME}
