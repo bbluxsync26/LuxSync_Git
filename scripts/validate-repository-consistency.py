@@ -70,10 +70,12 @@ def require(text: str, token: str, rel: str, errors: list[str]) -> None:
 
 def svg_size(path: Path) -> tuple[int, int]:
     text = path.read_text(encoding="utf-8")[:2000]
-    m = re.search(r'<svg[^>]*\bwidth="([0-9.]+)"[^>]*\bheight="([0-9.]+)"', text)
-    if not m:
+    match = re.search(
+        r'<svg[^>]*\bwidth="([0-9.]+)"[^>]*\bheight="([0-9.]+)"', text
+    )
+    if not match:
         raise RuntimeError(f"Missing explicit SVG dimensions: {path.relative_to(ROOT)}")
-    return int(float(m.group(1))), int(float(m.group(2)))
+    return int(float(match.group(1))), int(float(match.group(2)))
 
 
 def validate_governing_docs(errors: list[str]) -> None:
@@ -101,16 +103,16 @@ def validate_governing_docs(errors: list[str]) -> None:
     src_readme = read("website/src/README.md")
     require(src_readme, "Placeholder", "website/src/README.md", errors)
 
-    typography = read("brand/typography.md")
-    if "Manrope 500/600" not in typography and "Manrope", "Inter":
-        pass
-
     colors = read("brand/colors.md")
     for color in BASE_COLORS:
         require(colors, color, "brand/colors.md", errors)
     for color in LEGACY_BASE_COLORS:
         if color in colors:
             errors.append(f"brand/colors.md: legacy replacement base color remains: {color}")
+
+    typography = read("brand/typography.md")
+    require(typography, "Manrope", "brand/typography.md", errors)
+    require(typography, "Inter", "brand/typography.md", errors)
 
 
 def validate_generator_and_svgs(errors: list[str]) -> None:
@@ -127,8 +129,9 @@ def validate_generator_and_svgs(errors: list[str]) -> None:
             errors.append(f"scripts/generate-luxury-orbit-assets.py: legacy base color {color}")
 
     svgs = [
-        p for p in ASSET_ROOT.rglob("*.svg")
-        if "00-catalog" not in p.parts and "12-scenes" not in p.parts
+        path
+        for path in ASSET_ROOT.rglob("*.svg")
+        if "00-catalog" not in path.parts and "12-scenes" not in path.parts
     ]
     if len(svgs) != 97:
         errors.append(f"brand/assets: expected 97 SVG masters; found {len(svgs)}")
@@ -147,12 +150,13 @@ def validate_generator_and_svgs(errors: list[str]) -> None:
     for rel, raster in protected.items():
         text = read(f"brand/assets/{rel}")
         if raster not in text:
-            errors.append(f"brand/assets/{rel}: protected exact logo wrapper no longer references {raster}")
+            errors.append(
+                f"brand/assets/{rel}: protected exact logo wrapper no longer references {raster}"
+            )
 
 
 def validate_asset_metadata(errors: list[str]) -> None:
-    json_path = ASSET_ROOT / "asset-manifest.json"
-    data = json.loads(json_path.read_text(encoding="utf-8"))
+    data = json.loads((ASSET_ROOT / "asset-manifest.json").read_text(encoding="utf-8"))
 
     if data.get("brand_system") != "Plush Drift v2.1":
         errors.append("asset-manifest.json: brand_system must be Plush Drift v2.1")
@@ -211,9 +215,13 @@ def validate_asset_metadata(errors: list[str]) -> None:
 def validate_business_guardrails(errors: list[str]) -> None:
     plan = read("docs/business-plan.md")
     if "Pricing status: unresolved" not in plan:
-        errors.append("docs/business-plan.md: senior-service pricing must be explicitly marked unresolved")
+        errors.append(
+            "docs/business-plan.md: senior-service pricing must be explicitly marked unresolved"
+        )
     if "approximately $28,590/month" not in plan:
-        errors.append("docs/business-plan.md: founder transition threshold must reflect corrected Phase 2 math")
+        errors.append(
+            "docs/business-plan.md: founder transition threshold must reflect corrected Phase 2 math"
+        )
 
     value = read("docs/value-proposition.md")
     for segment in (
@@ -226,7 +234,9 @@ def validate_business_guardrails(errors: list[str]) -> None:
         if segment not in value:
             errors.append(f"docs/value-proposition.md: missing approved segment {segment}")
     if "Smart Sleep Nursery" not in value:
-        errors.append("docs/value-proposition.md: standard bundle name Smart Sleep Nursery missing")
+        errors.append(
+            "docs/value-proposition.md: standard bundle name Smart Sleep Nursery missing"
+        )
 
 
 def main() -> int:
