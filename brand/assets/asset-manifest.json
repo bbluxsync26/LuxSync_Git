@@ -23,7 +23,8 @@
     }
   },
   "inventory": {
-    "canonical_detailed_manifest": "asset-manifest.csv",
+    "vector_manifest": "asset-manifest.csv",
+    "scene_manifest": "12-scenes/scene-manifest.csv",
     "logical_asset_count": 103,
     "svg_master_count": 97,
     "production_scene_count": 6,
@@ -43,7 +44,8 @@
     }
   },
   "implementation_notes": [
-    "The CSV manifest is the canonical detailed per-asset inventory.",
+    "asset-manifest.csv is the detailed inventory for the 97 SVG-based vector graphics.",
+    "12-scenes/scene-manifest.csv is the detailed inventory for the six production raster scenes.",
     "Manrope and Inter are the authoritative typography system for current LuxSync web graphics.",
     "The 97 SVG-based graphics are generated in-repository and do not require image generation.",
     "The six production scenes are text-free raster assets intended for composition beneath native HTML/CSS and vector branding.",
