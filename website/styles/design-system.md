@@ -1,56 +1,75 @@
 # LuxSync Website Design System
 
-## Active Direction: Luxury Orbit
+**Status:** Active  
+**Base brand system:** Plush Drift v2.1  
+**Active web treatment:** Luxury Orbit
 
-Luxury Orbit replaces Plush Drift for current website visual work.
+Luxury Orbit is the active website treatment layered on the authoritative Plush Drift v2.1 design system. It adds atmospheric orbit light, restrained metallic rose detail, premium photography, and spacious editorial composition without replacing the base palette or typography.
 
-### Colors
+## Base Colors
 
-- Deep Navy `#0B1D3A` — primary dark background
-- Midnight Blue `#172846` — elevated dark surfaces
-- Pale Blush `#F3ECE8` — light surfaces and primary light text
-- Taupe `#A69A8E` — secondary neutral text/details
-- Dusty Rose `#E7B5B8` — warm atmospheric accent
-- Soft Powder Blue `#A6B9CE` — intelligent glow/orbit accent
-- Rose Gold base `#D6B0A0` — metallic CTA, line, rim, and logo accent
+- Slate Navy `#0D1526` — primary dark background
+- Dark Suede `#172036` — elevated dark surfaces
+- Pale Driftwood `#D0BEB0` — primary light text / warm light surface
+- Warm Taupe Mauve `#9E8B85` — secondary neutral text/details
+- Antique Rose Taupe `#967878` — warm decorative accent
+- Dusty Steel `#7B96B2` — interactive and orbit/glow accent
 
-### Typography
+### Derived Luxury Orbit Treatments
 
-- Wordmark/editorial: Bodoni Moda / Bodoni MT / Didot / Georgia
-- Headings/UI: Century Gothic / Montserrat / Arial
-- Body: Candara / Inter / Segoe UI / Arial
+- Rose-metal gradients may use derived champagne/copper highlight and shadow stops around `#D6B0A0`.
+- Icy-blue highlight tints may be derived from Dusty Steel for restrained orbit illumination.
+- Derived treatments are effects, not replacement base colors.
 
-### Component Language
+## Typography
 
-- Dark rounded cards on Deep Navy/Midnight Blue
-- Warm rose-gold rims and CTA treatments
-- Pale blush text and light surfaces
-- Powder-blue orbit/glow used sparingly
-- Generous spacing
+- **Headings / display / navigation / CTA labels / graphic UI:** Manrope 500/600
+- **Body / product copy / forms / supporting UI:** Inter 400/500
+
+Approved logo artwork may preserve exact custom lettering as artwork. Logo appearance does not redefine website typography.
+
+Do not use Century Gothic, Candara, Montserrat, Bodoni-family, Didot, or Georgia as LuxSync website-system fonts.
+
+## Component Language
+
+- Dark rounded cards on Slate Navy / Dark Suede
+- Restrained rose-metal rims and premium accents
+- Pale Driftwood primary copy
+- Dusty Steel orbit/glow used sparingly
+- Generous spacing and breathing room
 - Soft architectural curves and wave dividers
-- High contrast and large touch targets
+- Clear focus states and large touch targets
+- Native HTML/CSS text wherever practical
 
-### Hero Language
+## Hero Language
 
 Preferred visual treatment:
 
-- Dark luxury interior or dark architectural field
+- Dark luxury interior or architectural field
 - Warm edge lighting
-- Rose-gold headline emphasis
-- Quiet blue orbit/light signature
-- Editorial negative space for copy
+- Restrained metallic rose emphasis
+- Quiet Dusty Steel orbit/light signature
+- Editorial negative space for native copy
 
-Approved hero line for the new graphic set:
+Approved hero line:
 
 **Smart Living. Elevated.**
 
-Official slogan remains:
+Official slogan:
 
 **Where Luxury Lives Intelligently**
 
-### Avoid
+## Image Rules
+
+- Production photography should be text-free.
+- Do not bake navigation, prices, ratings, CTA labels, or promotional claims into photographs.
+- Use approved brand assets for logos and native HTML/CSS for website text.
+- Prefer SVG for vector UI and WebP for production scene imagery.
+
+## Avoid
 
 - Cyberpunk neon
+- Lavender as an unapproved base palette color
 - Loud electric gradients
 - Overly glossy glassmorphism
 - Dense gadget-store grids
