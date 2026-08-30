@@ -67,6 +67,10 @@ jobs:
             echo 'Legacy font declaration remains in a generated SVG.' >&2
             exit 1
           fi
+          if grep -nE 'Century Gothic|Candara|Bodoni Moda|Bodoni MT|Didot|Georgia,serif' scripts/generate-luxury-orbit-assets.py; then
+            echo 'Legacy font declaration remains in the editable generator source.' >&2
+            exit 1
+          fi
           if ! grep -RIl --include='*.svg' -E '<text\b' brand/assets \
             | xargs -r grep -lE 'Manrope|Inter' >/dev/null; then
             echo 'Expected Manrope or Inter declarations were not found.' >&2
@@ -82,6 +86,6 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add brand/assets
-          git commit -m 'Regenerate LuxSync Luxury Orbit web graphics with Manrope and Inter'
+          git add brand/assets scripts/generate-luxury-orbit-assets.py
+          git commit -m 'Normalize Luxury Orbit source and assets to Manrope and Inter'
           git push origin HEAD:${GITHUB_REF_NAME}
