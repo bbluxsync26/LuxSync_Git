@@ -15,11 +15,17 @@
   "fonts": {
     "headlines_display": {
       "family": "Manrope",
-      "weights": [500, 600]
+      "weights": [
+        500,
+        600
+      ]
     },
     "body_ui": {
       "family": "Inter",
-      "weights": [400, 500]
+      "weights": [
+        400,
+        500
+      ]
     }
   },
   "inventory": {
@@ -44,12 +50,13 @@
     }
   },
   "implementation_notes": [
-    "asset-manifest.csv is the detailed inventory for the 97 SVG-based vector graphics.",
+    "asset-manifest.csv is the detailed inventory for the 97 SVG-based vector graphics and its dimensions are reconciled from the actual SVG masters.",
     "12-scenes/scene-manifest.csv is the detailed inventory for the six production raster scenes.",
     "Manrope and Inter are the authoritative typography system for current LuxSync web graphics.",
+    "Plush Drift v2.1 supplies the six authoritative base colors; Luxury Orbit is the active web/graphics treatment layered on that base.",
     "The 97 SVG-based graphics are generated in-repository and do not require image generation.",
-    "The six production scenes are text-free raster assets intended for composition beneath native HTML/CSS and vector branding.",
+    "The six production scenes are text-free raster assets intended for composition beneath native HTML/CSS and approved branding.",
     "Do not bake prices, ratings, stock claims, navigation, CTAs, or promotional copy into production scene photography.",
-    "Prefer WebP for scene delivery and SVG for logos, icons, controls, and other vector assets."
+    "The approved primary monogram and horizontal lockup rasters are protected exact artwork and must not be replaced by generic regeneration."
   ]
 }
