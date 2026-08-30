@@ -1,5 +1,10 @@
 # LuxSync Master Catalog
 
+<p align="center">
+  <img src="../brand/assets/01-brand/luxsync-horizontal-lockup.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="760">
+</p>
+
+**Company:** LuxSync LLC  
 **Status:** Active  
 **Repository:** `bbluxsync26/LuxSync_Git`  
 **Default branch:** `master`  
@@ -25,17 +30,23 @@ The repository is the LuxSync source of truth. Conversation drafts or external c
 
 When current LuxSync files disagree, apply these rules:
 
+- **Company:** LuxSync LLC
 - **Base brand system:** Plush Drift v2.1
 - **Active web/graphics treatment:** Luxury Orbit
+- **Protected logo lettering:** approved Didone/Bodoni-style serif artwork for the `LS` monogram and `LUXSYNC` wordmark only
 - **Headings / display / navigation / graphic UI:** Manrope 500/600
 - **Body / supporting UI:** Inter 400/500
 - **Official slogan:** Where Luxury Lives Intelligently
+- **Logo orbit:** exact approved luminous orbit; icy Dusty Steel-derived blue, not lavender/purple
+- **Logo metallic treatment:** cooler blush/rose/champagne derived from Plush Drift; avoid orange/copper drift
+- **Logo sparkle treatment:** preserve approved peak-shine accents
+- **Protected exact logo artwork:** approved primary monogram and horizontal lockup remain exact artwork and are not re-typeset merely to enforce live-text typography
+- **Documentation branding:** durable LuxSync documentation, including Markdown, should carry approved logo branding and identify LuxSync LLC where the format supports it
 - **Homepage hero:** Smart Living. Elevated.
 - **Primary CTA:** Shop Smart Home
 - **Secondary CTA:** Get the ROI Guide
-- **Protected exact logo artwork:** the approved primary monogram and horizontal lockup remain exact artwork and are not re-typeset merely to enforce live-text typography
 
-Luxury Orbit may add restrained metallic rose and Dusty Steel-derived orbit-light treatments, but it does not replace the Plush Drift base palette or Manrope/Inter typography.
+Luxury Orbit may add restrained metallic rose/champagne and Dusty Steel-derived orbit-light treatments, but it does not replace the Plush Drift base palette or Manrope/Inter live typography.
 
 ## Core Strategy Documents
 
@@ -55,12 +66,13 @@ Luxury Orbit may add restrained metallic rose and Dusty Steel-derived orbit-ligh
 |---|---|---|---|
 | BRAND-001 | Brand Guidelines | `brand/README.md` | Active — Plush Drift v2.1 + Luxury Orbit |
 | BRAND-002 | Color System | `brand/colors.md` | Active — Plush Drift v2.1 base palette |
-| BRAND-003 | Typography | `brand/typography.md` | Active — Manrope + Inter |
+| BRAND-003 | Typography | `brand/typography.md` | Active — logo-only Didone artwork + Manrope/Inter live type |
 | BRAND-004 | Voice & Tone | `brand/voice-and-tone.md` | Active — Intelligent Calm |
 | BRAND-005 | Asset Library | `brand/assets/` | Active — 103 logical assets |
 | BRAND-006 | Vector Asset CSV | `brand/assets/asset-manifest.csv` | Active — 97 SVG-based graphics |
 | BRAND-007 | Asset JSON Summary | `brand/assets/asset-manifest.json` | Active |
 | BRAND-008 | Production Scene Manifest | `brand/assets/12-scenes/scene-manifest.csv` | Active — 6 text-free scenes |
+| BRAND-009 | Logo Usage Standard | `brand/logo-usage.md` | Active / Authoritative |
 
 ## Architecture and Decisions
 
@@ -107,7 +119,7 @@ Luxury Orbit may add restrained metallic rose and Dusty Steel-derived orbit-ligh
 | Artifact | Path | Purpose |
 |---|---|---|
 | Brand Generator | `scripts/generate-luxury-orbit-assets.py` | Generate editable SVG-based graphics |
-| Brand Normalizer | `scripts/normalize-luxury-orbit-fonts.py` | Enforce Manrope/Inter, base palette, and safe generated copy |
+| Brand Normalizer | `scripts/normalize-luxury-orbit-fonts.py` | Enforce Manrope/Inter, base palette, and safe generated copy outside protected logo artwork |
 | Brand Renderer | `scripts/render-luxury-orbit-assets.py` | Render PNG/WebP derivatives and contact sheets while preserving approved logos |
 | Asset Metadata Reconciler | `scripts/reconcile-asset-metadata.py` | Synchronize CSV/JSON/inventory/catalog metadata to committed assets |
 | Repository Validator | `scripts/validate-repository-consistency.py` | Validate cross-repository source-of-truth consistency |
@@ -123,7 +135,8 @@ Luxury Orbit may add restrained metallic rose and Dusty Steel-derived orbit-ligh
 - Mobile-first, accessible, performant experience
 - Plush Drift v2.1 base brand system
 - Luxury Orbit web/graphics treatment
-- Manrope + Inter typography
+- Protected Didone/Bodoni-style logo artwork
+- Manrope + Inter live typography
 - Intelligent Calm voice
 
 Primary launch navigation:
@@ -158,6 +171,7 @@ Search | Account | Cart
 6. Review this catalog after material architecture, brand, business-model, or production-deployment changes.
 7. Repository paths in this catalog must correspond to actual committed files.
 8. When an intentional decision changes a validator-enforced rule, update the governing document and validator in the same change set.
+9. New durable LuxSync LLC documentation should include approved logo branding and company identification where the format supports it, including Markdown.
 
 ## Change Log
 
@@ -167,3 +181,8 @@ Search | Account | Cart
 | 2026-08-30 | Added DOC-007 and website/Airo architecture artifacts. |
 | 2026-08-30 | Reconciled Plush Drift v2.1, Luxury Orbit, Manrope/Inter, asset counts, business-plan math, and repository consistency automation. |
 | 2026-08-30 | Added DEC-005 to preserve unresolved senior-service pricing as an explicit publication guardrail. |
+| 2026-08-30 | Locked the final Didone/Bodoni-style logo treatment, exact orbit, palette discipline, and documentation-branding rule; added BRAND-009. |
+
+---
+
+<p align="center"><strong>LuxSync LLC</strong><br><em>Where Luxury Lives Intelligently</em></p>
