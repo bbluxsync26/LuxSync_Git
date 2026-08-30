@@ -1,0 +1,73 @@
+name: Import exact LuxSync final logo
+
+on:
+  push:
+    branches:
+      - brand/exact-final-logo
+    paths:
+      - .github/workflows/import-exact-final-logo.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-logo:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Install image conversion tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick curl
+
+      - name: Import exact approved artwork
+        run: |
+          curl -L --fail --retry 3 'https://at.adobe.com/XjBExfjjn3VmiGgo' \
+            -o brand/assets/01-brand/luxsync-logo-final-source.png
+          curl -L --fail --retry 3 'https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:6ad9d498-8f9d-4a64-8a49-3b3fa6126886' \
+            -o brand/assets/01-brand/luxsync-monogram-orb.png
+          curl -L --fail --retry 3 'https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:c693d6d3-f0b0-4092-a9a8-56e04b8d4adc' \
+            -o brand/assets/01-brand/luxsync-horizontal-lockup.png
+          convert brand/assets/01-brand/luxsync-monogram-orb.png -strip -quality 96 brand/assets/01-brand/luxsync-monogram-orb.webp
+          convert brand/assets/01-brand/luxsync-horizontal-lockup.png -strip -quality 96 brand/assets/01-brand/luxsync-horizontal-lockup.webp
+
+          cat > brand/assets/01-brand/luxsync-monogram-orb.svg <<'SVG'
+          <svg xmlns="http://www.w3.org/2000/svg" width="860" height="584" viewBox="0 0 860 584" role="img" aria-label="LuxSync LS orbit monogram">
+            <image href="luxsync-monogram-orb.png" x="0" y="0" width="860" height="584" preserveAspectRatio="xMidYMid meet"/>
+          </svg>
+          SVG
+
+          cat > brand/assets/01-brand/luxsync-horizontal-lockup.svg <<'SVG'
+          <svg xmlns="http://www.w3.org/2000/svg" width="1513" height="389" viewBox="0 0 1513 389" role="img" aria-label="LuxSync horizontal logo lockup">
+            <image href="luxsync-horizontal-lockup.png" x="0" y="0" width="1513" height="389" preserveAspectRatio="xMidYMid meet"/>
+          </svg>
+          SVG
+
+      - name: Validate exact logo imports
+        run: |
+          test -s brand/assets/01-brand/luxsync-logo-final-source.png
+          test -s brand/assets/01-brand/luxsync-monogram-orb.png
+          test -s brand/assets/01-brand/luxsync-monogram-orb.webp
+          test -s brand/assets/01-brand/luxsync-horizontal-lockup.png
+          test -s brand/assets/01-brand/luxsync-horizontal-lockup.webp
+          grep -q 'luxsync-monogram-orb.png' brand/assets/01-brand/luxsync-monogram-orb.svg
+          grep -q 'luxsync-horizontal-lockup.png' brand/assets/01-brand/luxsync-horizontal-lockup.svg
+          git diff --check
+
+      - name: Commit exact final logo artwork
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add brand/assets/01-brand
+          if git diff --cached --quiet; then
+            echo 'No logo changes required.'
+            exit 0
+          fi
+          git commit -m 'Adopt exact approved LuxSync logo artwork'
+          git push origin HEAD:${GITHUB_REF_NAME}
