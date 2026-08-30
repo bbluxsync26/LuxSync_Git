@@ -89,6 +89,7 @@ Luxury Orbit does not replace the Plush Drift v2.1 base palette or Manrope/Inter
 |---|---|---|---|
 | ARC-001 | Launch Website Information Architecture | `docs/architecture/website-information-architecture.md` | Active baseline |
 | DEC-004 | Commerce Plus and Airo Role | `docs/decisions/DEC-004-commerce-plus-and-airo-role.md` | Active |
+| DEC-005 | Senior Service Pricing | `docs/decisions/DEC-005-senior-service-pricing.md` | Open / Decision Required |
 | RB-002 | GoDaddy Airo AI Builder | `docs/runbooks/RB-002-GoDaddy-Airo-AI-Builder.md` | Active |
 | RB-007 | Brand Asset Raster Regeneration | `docs/runbooks/RB-007-Brand-Asset-Raster-Regeneration.md` | Historical / Superseded |
 | RB-008 | Luxury Orbit Brand Asset Generation | `docs/runbooks/RB-008-Luxury-Orbit-Brand-Asset-Generation.md` | Active |
@@ -113,10 +114,11 @@ Luxury Orbit does not replace the Plush Drift v2.1 base palette or Manrope/Inter
 - [x] First-pass review checklist reconciled
 - [x] Automated repository consistency validation defined
 - [x] Asset metadata reconciliation defined
+- [x] Senior-service pricing conflict captured as DEC-005 rather than silently resolved
 
 ### Next
 
-- [ ] Resolve senior-service pricing through a dedicated decision before public display
+- [ ] Complete DEC-005 with one approved senior-service pricing model before public display
 - [ ] Confirm repository consistency validation passes on the reconciled baseline
 - [ ] Validate Commerce Plus catalog data before publishing prices or availability
 - [ ] Run the first staging generation with PR-001
@@ -171,6 +173,7 @@ Asset metadata reconciliation should leave no uncommitted changes when the repos
 | DEC-002 | 2026-08-29 | Separate Integration, Website/CI/CD, and Prompts/Docs workstreams | Active |
 | DEC-003 | 2026-08-29 | Maintain the master catalog and project runbook as durable records | Active |
 | DEC-004 | 2026-08-29 | Commerce Plus governs launch commerce; Airo accelerates staging/design | Active |
+| DEC-005 | 2026-08-30 | Do not publish senior-service pricing until one candidate model is explicitly approved | Open / Decision Required |
 
 ## Change Log
 
@@ -179,3 +182,4 @@ Asset metadata reconciliation should leave no uncommitted changes when the repos
 | 2026-08-29 | Initial project runbook created. |
 | 2026-08-30 | Reconciled operational baseline to Plush Drift v2.1 + Luxury Orbit and current website architecture. |
 | 2026-08-30 | Added Manrope/Inter tie-breaker, protected-logo rules, asset metadata reconciliation, and repository consistency validation. |
+| 2026-08-30 | Added DEC-005 to preserve the unresolved senior-pricing conflict as an explicit publication guardrail. |
