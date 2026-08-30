@@ -62,12 +62,13 @@ Luxury Orbit may add restrained metallic rose and Dusty Steel-derived orbit-ligh
 | BRAND-007 | Asset JSON Summary | `brand/assets/asset-manifest.json` | Active |
 | BRAND-008 | Production Scene Manifest | `brand/assets/12-scenes/scene-manifest.csv` | Active — 6 text-free scenes |
 
-## Website Architecture and Decisions
+## Architecture and Decisions
 
 | ID | Artifact | Path | Status |
 |---|---|---|---|
 | ARC-001 | Launch Website Information Architecture | `docs/architecture/website-information-architecture.md` | Active / Approved baseline |
 | DEC-004 | Commerce Plus and Airo Role | `docs/decisions/DEC-004-commerce-plus-and-airo-role.md` | Active |
+| DEC-005 | Senior Service Pricing | `docs/decisions/DEC-005-senior-service-pricing.md` | Open / Decision Required |
 | WEB-001 | Homepage Blueprint | `website/pages/home.md` | Active launch baseline |
 | WEB-002 | Website Design System | `website/styles/design-system.md` | Active — Plush Drift + Luxury Orbit |
 | WEB-003 | Website Source Area | `website/src/README.md` | Placeholder until first reviewed export |
@@ -108,7 +109,7 @@ Luxury Orbit may add restrained metallic rose and Dusty Steel-derived orbit-ligh
 | Brand Generator | `scripts/generate-luxury-orbit-assets.py` | Generate editable SVG-based graphics |
 | Brand Normalizer | `scripts/normalize-luxury-orbit-fonts.py` | Enforce Manrope/Inter, base palette, and safe generated copy |
 | Brand Renderer | `scripts/render-luxury-orbit-assets.py` | Render PNG/WebP derivatives and contact sheets while preserving approved logos |
-| Asset Metadata Reconciler | `scripts/reconcile-asset-metadata.py` | Synchronize CSV/JSON/inventory metadata to committed assets |
+| Asset Metadata Reconciler | `scripts/reconcile-asset-metadata.py` | Synchronize CSV/JSON/inventory/catalog metadata to committed assets |
 | Repository Validator | `scripts/validate-repository-consistency.py` | Validate cross-repository source-of-truth consistency |
 | Brand Generation Workflow | `.github/workflows/regenerate-brand-raster-assets.yml` | Generate/normalize/render/validate brand assets |
 | Consistency Workflow | `.github/workflows/validate-repository-consistency.yml` | Gate pull requests and master on repository consistency |
@@ -139,7 +140,7 @@ Search | Account | Cart
 
 ## Open Decisions / Validation Items
 
-1. Resolve senior-service pricing through a dedicated commercial decision before public display.
+1. **DEC-005:** Select and approve one senior-service pricing model before public display.
 2. Validate live Commerce Plus product catalog and product data before publishing prices or availability.
 3. Run the repository consistency gate and confirm canonical asset metadata is clean.
 4. Run the first PR-001 generation in Airo AI Builder.
@@ -165,3 +166,4 @@ Search | Account | Cart
 | 2026-08-29 | Repository master catalog established. |
 | 2026-08-30 | Added DOC-007 and website/Airo architecture artifacts. |
 | 2026-08-30 | Reconciled Plush Drift v2.1, Luxury Orbit, Manrope/Inter, asset counts, business-plan math, and repository consistency automation. |
+| 2026-08-30 | Added DEC-005 to preserve unresolved senior-service pricing as an explicit publication guardrail. |
