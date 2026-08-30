@@ -1,6 +1,6 @@
 # PR-001 — LuxSync Airo Master Website Build Prompt
 
-**Status:** Draft / Ready for first Airo generation  
+**Status:** Draft / Ready for first Airo generation after repository consistency validation  
 **Updated:** 2026-08-30  
 **Purpose:** Generate the LuxSync launch storefront in GoDaddy Airo AI Builder while preserving the repository source of truth and Commerce Plus production boundary.
 
@@ -94,39 +94,43 @@ Samsung SmartThings is the primary launch compatibility standard. Emphasize comp
 
 GoDaddy Commerce Plus remains the production commerce system of record. Represent storefront UX in staging, but do not connect live payments, alter production DNS, replace Commerce Plus, or create a second unmanaged live catalog.
 
-### Luxury Orbit visual system
+### Brand system and Luxury Orbit treatment
 
-Use **Luxury Orbit**, which replaces the older Plush Drift direction for current website work.
+Use **Plush Drift v2.1** as the authoritative base brand system and **Luxury Orbit** as the active website/web-graphics treatment.
 
-Colors:
+Base colors:
 
-- Deep Navy `#0B1D3A` — primary dark canvas
-- Midnight Blue `#172846` — elevated surfaces
-- Pale Blush `#F3ECE8` — warm light surfaces and primary light text
-- Taupe `#A69A8E` — secondary neutral
-- Dusty Rose `#E7B5B8` — warm atmospheric accent
-- Soft Powder Blue `#A6B9CE` — restrained orbit/glow accent
-- Rose Gold base `#D6B0A0` — metallic CTA, line, rim, and logo accent using champagne/copper highlights and shadows
+- Slate Navy `#0D1526`
+- Dark Suede `#172036`
+- Pale Driftwood `#D0BEB0`
+- Warm Taupe Mauve `#9E8B85`
+- Antique Rose Taupe `#967878`
+- Dusty Steel `#7B96B2`
+
+Luxury Orbit may use restrained metallic rose gradients and Dusty Steel-derived icy orbit highlights for depth. Treat those as visual effects, not replacement base colors.
 
 Typography:
 
-- Wordmark/editorial: `Bodoni Moda`, `Bodoni MT`, Didot, Georgia, serif
-- Headings/navigation/UI: `Century Gothic`, Montserrat, Arial, sans-serif
-- Body/supporting UI: Candara, Inter, `Segoe UI`, Arial, sans-serif
+- **Headings / display / navigation / CTA labels / graphic UI:** Manrope 500/600
+- **Body / product copy / forms / supporting UI:** Inter 400/500
+
+Do not use Century Gothic, Candara, Montserrat, Bodoni-family, Didot, or Georgia as website-system fonts.
+
+Approved exact LuxSync logo artwork may retain its exact visual lettering as artwork. Do not recreate or re-typeset protected logo art merely to force live-text typography into the logo.
 
 Visual direction:
 
-- Deep architectural navy
-- Warm rose-gold metal
-- Soft powder-blue orbit light
-- Pale blush copy and surfaces
+- Layered Slate Navy / Dark Suede surfaces
+- Restrained warm metallic rose detail
+- Soft Dusty Steel orbit light
+- Pale Driftwood copy
 - Premium smart-living/interior imagery
 - Spacious editorial composition
-- Refined rounded dark cards
+- Refined rounded cards
 - Selective atmospheric glow
 - Minimal organic motion
 
-Avoid cyberpunk neon, saturated cyan/magenta, loud gradients, generic SaaS blue, dense gadget-store grids, cartoon UI, excessive glassmorphism, hard glowing borders, flashing animation, aggressive popups, and text baked into photographs when native text is possible.
+Avoid cyberpunk neon, unapproved lavender/cyan/magenta base colors, loud gradients, generic SaaS blue, dense gadget-store grids, cartoon UI, excessive glassmorphism, hard glowing borders, flashing animation, aggressive popups, and text baked into photographs when native text is possible.
 
 ### Voice
 
@@ -136,7 +140,7 @@ Avoid hype, fear-based security language, jargon, technical showing-off, urgency
 
 ### Responsive, accessibility, and performance
 
-Design mobile first. Mobile uses compact navigation, accessible search/cart, large touch targets, readable type, scannable sections, and thumb-friendly product cards. Tablet reduces columns; desktop may use wider editorial layouts.
+Design mobile first. Mobile uses compact navigation, accessible search/cart, large touch targets, readable Manrope/Inter type, scannable sections, and thumb-friendly product cards. Tablet reduces columns; desktop may use wider editorial layouts.
 
 Target WCAG 2.2 AA practices: semantic headings, keyboard access, visible focus, sufficient contrast, labels, meaningful alt text, adequate targets, reduced-motion behavior, and no color-only meaning.
 
@@ -144,9 +148,12 @@ Use responsive images, modern formats, lazy loading, stable layouts, efficient f
 
 ### Repository assets
 
-Prefer current assets beneath `brand/assets/`, including the brand, website-icon, component, card, illustration, product-card, and banner folders. Prefer SVG for logos/icons and optimized WebP for larger imagery.
+Prefer current approved assets beneath `brand/assets/`.
 
-The current SVG masters are generated from the repository's Luxury Orbit asset generator. Do not recreate them through an image generator unless a photographic/interior scene is intentionally required.
+- Use protected approved primary logo artwork exactly as supplied.
+- Prefer SVG for icons/vector UI and optimized WebP for larger scene imagery.
+- Production scenes under `brand/assets/12-scenes/` are text-free backgrounds intended for native HTML/CSS copy and approved branding overlays.
+- Do not recreate repository SVG assets through an image generator.
 
 ### Future roadmap
 
