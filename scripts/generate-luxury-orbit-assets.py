@@ -4,10 +4,10 @@ from html import escape
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'brand'/'assets'
-P={'navy':'#0B1D3A','blue':'#172846','blush':'#F3ECE8','taupe':'#A69A8E','rose':'#E7B5B8','powder':'#A6B9CE','gold':'#D6B0A0','ink':'#090E1B'}
-DISPLAY="font-family='Bodoni Moda,Bodoni MT,Didot,Georgia,serif'"
-UI="font-family='Century Gothic,Montserrat,Arial,sans-serif'"
-BODY="font-family='Candara,Inter,Segoe UI,Arial,sans-serif'"
+P={'navy':'#0D1526','blue':'#172036','blush':'#D0BEB0','taupe':'#9E8B85','rose':'#967878','powder':'#7B96B2','gold':'#D6B0A0','ink':'#090E1B'}
+DISPLAY="font-family='Manrope,Arial,sans-serif'"
+UI="font-family='Manrope,Arial,sans-serif'"
+BODY="font-family='Inter,Arial,sans-serif'"
 DEFS=f'''<defs><linearGradient id="n" x1="0" y1="0" x2="1" y2="1"><stop stop-color="{P['navy']}"/><stop offset="1" stop-color="{P['ink']}"/></linearGradient><linearGradient id="m" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF2EA"/><stop offset=".18" stop-color="#EAC8B9"/><stop offset=".42" stop-color="{P['gold']}"/><stop offset=".64" stop-color="#9C675C"/><stop offset=".82" stop-color="#F2D6C8"/><stop offset="1" stop-color="#7D4E49"/></linearGradient><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F4FAFF"/><stop offset=".45" stop-color="#D7E8FF"/><stop offset="1" stop-color="{P['powder']}"/></linearGradient><radialGradient id="w"><stop stop-color="#F9E3D7" stop-opacity=".95"/><stop offset=".45" stop-color="#E7A27D" stop-opacity=".45"/><stop offset="1" stop-color="#E7A27D" stop-opacity="0"/></radialGradient><filter id="g" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="13" result="q"/><feMerge><feMergeNode in="q"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>'''
 
 def svg(w,h,body,bg=None,aria='LuxSync graphic'):
@@ -23,7 +23,7 @@ def mono(cx,cy,s=1,disk=False):
     r=210*s; z=''
     if disk:z+=f'<circle cx="{cx}" cy="{cy}" r="{r*1.12}" fill="url(#n)" stroke="{P["gold"]}" stroke-opacity=".25" stroke-width="3"/>'
     z+=f'<g fill="none" stroke="url(#b)" filter="url(#g)"><ellipse cx="{cx}" cy="{cy}" rx="{245*s}" ry="{83*s}" transform="rotate(-12 {cx} {cy})" stroke-width="{9*s}"/><ellipse cx="{cx}" cy="{cy}" rx="{235*s}" ry="{76*s}" transform="rotate(17 {cx} {cy})" stroke-width="{3*s}" opacity=".55"/></g>'
-    z+=f'<text x="{cx}" y="{cy+102*s}" text-anchor="middle" {DISPLAY} font-size="{315*s}" font-weight="700" letter-spacing="{-42*s}" fill="url(#m)" stroke="#7D4E49" stroke-width="{2.5*s}" paint-order="stroke fill">LS</text>'
+    z+=f'<text x="{cx}" y="{cy+102*s}" text-anchor="middle" {DISPLAY} font-size="{315*s}" font-weight="600" letter-spacing="{-42*s}" fill="url(#m)" stroke="#7D4E49" stroke-width="{2.5*s}" paint-order="stroke fill">LS</text>'
     return z
 
 def wordmark(y=0,light=False):
@@ -52,7 +52,7 @@ for cat,names in [('02-icons-brand',brand_icons),('03-icons-website',web_icons)]
 
 # 04 social
 for n,g in {'facebook':'f','instagram':'◎','linkedin':'in','pinterest':'p','x':'X','youtube':'▶'}.items():
-    body=f'<circle cx="256" cy="256" r="202" fill="url(#n)" stroke="url(#m)" stroke-width="17"/><text x="256" y="320" text-anchor="middle" {UI} font-size="170" font-weight="700" fill="url(#m)">{g}</text>'
+    body=f'<circle cx="256" cy="256" r="202" fill="url(#n)" stroke="url(#m)" stroke-width="17"/><text x="256" y="320" text-anchor="middle" {UI} font-size="170" font-weight="600" fill="url(#m)">{g}</text>'
     write(f'04-icons-social/{n}.svg',svg(512,512,body))
 
 # 05 palette
@@ -106,16 +106,16 @@ for i,n in enumerate(ills):
     write(f'09-illustrations/{n}.svg',svg(1200,800,body))
 
 # 10 product cards
-prod={'category-comfort':('Comfort & Lighting','$79+','◉'),'category-energy':('Energy & Control','$24+','◫'),'category-hosting':('Hosting Essentials','$139+','⌂'),'category-security':('Security & Access','$139+','▣')}
+prod={'category-comfort':('Comfort &amp; Lighting','$79+','◉'),'category-energy':('Energy &amp; Control','$24+','◫'),'category-hosting':('Hosting Essentials','$139+','⌂'),'category-security':('Security &amp; Access','$139+','▣')}
 for n,(t,price,g) in prod.items():
     body=f'<rect x="34" y="34" width="732" height="1032" rx="54" fill="url(#n)" stroke="{P["gold"]}" stroke-opacity=".45" stroke-width="3"/><circle cx="400" cy="320" r="178" fill="url(#w)"/><text x="400" y="390" text-anchor="middle" {UI} font-size="210" fill="url(#m)">{g}</text><path d="M80 540C260 370 450 620 740 350" fill="none" stroke="url(#m)" stroke-width="13" opacity=".42"/><text x="90" y="720" {UI} font-size="46" fill="{P["blush"]}">{t}</text><text x="90" y="790" {BODY} font-size="40" fill="{P["gold"]}">{price}</text><text x="90" y="850" {BODY} font-size="32" fill="{P["gold"]}">★★★★★</text><rect x="90" y="910" width="620" height="104" rx="30" fill="url(#m)"/><text x="400" y="980" text-anchor="middle" {UI} font-size="32" fill="{P["navy"]}">SHOP CATEGORY</text>'
     write(f'10-product-cards/{n}.svg',svg(800,1100,body))
 
 # 11 banners
 def waves():return f'<path d="M690 560C930 320 1130 710 1590 330" fill="none" stroke="url(#m)" stroke-width="14" opacity=".42"/><path d="M760 610C980 390 1220 720 1600 410" fill="none" stroke="{P["gold"]}" stroke-width="4" opacity=".35"/>'
-write('11-banners/hero-where-luxury-lives-intelligently.svg',svg(1600,700,f'<rect width="1600" height="700" rx="46" fill="url(#n)"/>{waves()}<text x="110" y="160" {UI} font-size="88" font-weight="700" fill="{P["gold"]}">Smart Living.</text><text x="110" y="258" {UI} font-size="88" font-weight="700" fill="{P["gold"]}">Elevated.</text><text x="115" y="330" {BODY} font-size="33" fill="{P["blush"]}">Luxury smart-home technology designed for modern living.</text><rect x="115" y="390" width="300" height="86" rx="26" fill="url(#m)"/><text x="265" y="446" text-anchor="middle" {UI} font-size="27" fill="{P["navy"]}">SHOP SMART HOME</text>{mono(1240,300,.55,True)}'))
+write('11-banners/hero-where-luxury-lives-intelligently.svg',svg(1600,700,f'<rect width="1600" height="700" rx="46" fill="url(#n)"/>{waves()}<text x="110" y="160" {UI} font-size="88" font-weight="600" fill="{P["gold"]}">Smart Living.</text><text x="110" y="258" {UI} font-size="88" font-weight="600" fill="{P["gold"]}">Elevated.</text><text x="115" y="330" {BODY} font-size="33" fill="{P["blush"]}">Luxury smart-home technology designed for modern living.</text><rect x="115" y="390" width="300" height="86" rx="26" fill="url(#m)"/><text x="265" y="446" text-anchor="middle" {UI} font-size="27" fill="{P["navy"]}">SHOP SMART HOME</text>{mono(1240,300,.55,True)}'))
 write('11-banners/hero-technology-feels-like-home.svg',svg(1600,700,f'<rect width="1600" height="700" rx="46" fill="url(#n)"/>{waves()}<text x="110" y="190" {DISPLAY} font-size="82" fill="{P["blush"]}">Technology that feels</text><text x="110" y="285" {DISPLAY} font-size="82" fill="{P["gold"]}">like home.</text><text x="115" y="360" {BODY} font-size="33" fill="{P["powder"]}">Quiet intelligence. Beautifully integrated.</text>{mono(1240,310,.58,False)}'))
 write('11-banners/shop-curated-smart-living.svg',svg(1600,600,f'<rect width="1600" height="600" rx="46" fill="url(#n)"/>{waves()}<text x="100" y="165" {UI} font-size="52" fill="{P["blush"]}">Luxury smart home hardware,</text><text x="100" y="230" {UI} font-size="52" fill="{P["gold"]}">curated for modern living.</text><rect x="105" y="300" width="240" height="82" rx="26" fill="url(#m)"/><text x="225" y="353" text-anchor="middle" {UI} font-size="27" fill="{P["navy"]}">SHOP NOW</text><rect x="760" y="200" width="160" height="265" rx="50" fill="#292C35" stroke="url(#m)" stroke-width="6"/><rect x="955" y="230" width="250" height="220" rx="52" fill="#F5EFEA"/><rect x="1240" y="280" width="90" height="150" rx="28" fill="#F5EFEA"/><rect x="1360" y="230" width="160" height="220" rx="38" fill="#111521" stroke="{P["gold"]}" stroke-width="4"/>'))
-write('11-banners/str-smart-home-roi-guide.svg',svg(1600,600,f'<rect width="1600" height="600" rx="46" fill="url(#n)"/>{waves()}<g transform="translate(90 92) rotate(-7 250 210)"><rect width="500" height="420" rx="18" fill="{P["blush"]}"/><text x="54" y="92" {UI} font-size="34" fill="{P["navy"]}">SMART HOME</text><text x="54" y="156" {DISPLAY} font-size="68" fill="{P["navy"]}">ROI GUIDE</text><path d="M0 330C140 270 290 390 500 290" fill="none" stroke="url(#m)" stroke-width="18" opacity=".7"/></g><text x="680" y="190" {UI} font-size="60" font-weight="700" fill="{P["blush"]}">Free STR Smart Home ROI Guide</text><text x="685" y="265" {BODY} font-size="33" fill="{P["powder"]}">Unlock higher occupancy, smoother stays, and measurable ROI.</text><rect x="685" y="330" width="360" height="86" rx="26" fill="url(#m)"/><text x="865" y="386" text-anchor="middle" {UI} font-size="27" fill="{P["navy"]}">GET YOUR FREE GUIDE</text>'))
+write('11-banners/str-smart-home-roi-guide.svg',svg(1600,600,f'<rect width="1600" height="600" rx="46" fill="url(#n)"/>{waves()}<g transform="translate(90 92) rotate(-7 250 210)"><rect width="500" height="420" rx="18" fill="{P["blush"]}"/><text x="54" y="92" {UI} font-size="34" fill="{P["navy"]}">SMART HOME</text><text x="54" y="156" {DISPLAY} font-size="68" fill="{P["navy"]}">ROI GUIDE</text><path d="M0 330C140 270 290 390 500 290" fill="none" stroke="url(#m)" stroke-width="18" opacity=".7"/></g><text x="680" y="190" {UI} font-size="60" font-weight="600" fill="{P["blush"]}">Free STR Smart Home ROI Guide</text><text x="685" y="265" {BODY} font-size="33" fill="{P["powder"]}">Unlock higher occupancy, smoother stays, and measurable ROI.</text><rect x="685" y="330" width="360" height="86" rx="26" fill="url(#m)"/><text x="865" y="386" text-anchor="middle" {UI} font-size="27" fill="{P["navy"]}">GET YOUR FREE GUIDE</text>'))
 
 print('Generated',len(list(OUT.rglob('*.svg'))),'Luxury Orbit SVG masters')

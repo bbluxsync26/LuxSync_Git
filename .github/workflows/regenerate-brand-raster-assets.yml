@@ -7,6 +7,8 @@ on:
       - brand/luxury-orbit-refresh
     paths:
       - scripts/generate-luxury-orbit-assets.py
+      - scripts/normalize-luxury-orbit-fonts.py
+      - scripts/render-luxury-orbit-assets.py
       - scripts/regenerate-brand-raster-assets.py
       - .github/workflows/regenerate-brand-raster-assets.yml
   workflow_dispatch:
@@ -29,27 +31,57 @@ jobs:
       - name: Install rendering tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y inkscape imagemagick python3-pil fonts-dejavu-core fonts-liberation
+          sudo apt-get install -y inkscape imagemagick python3-pil fontconfig curl
 
-      - name: Generate SVG, PNG, WebP, and catalog sheets
-        run: python3 scripts/regenerate-brand-raster-assets.py
+      - name: Install authoritative LuxSync fonts
+        run: |
+          mkdir -p "$HOME/.local/share/fonts"
+          curl -L --fail --retry 3 'https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/Manrope%5Bwght%5D.ttf' -o "$HOME/.local/share/fonts/Manrope.ttf"
+          curl -L --fail --retry 3 'https://raw.githubusercontent.com/google/fonts/main/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf' -o "$HOME/.local/share/fonts/Inter.ttf"
+          fc-cache -f
+
+      - name: Generate Luxury Orbit SVG masters
+        run: python3 scripts/generate-luxury-orbit-assets.py
+
+      - name: Normalize typography and brand rules
+        run: python3 scripts/normalize-luxury-orbit-fonts.py
+
+      - name: Render PNG WebP and catalog sheets
+        run: python3 scripts/render-luxury-orbit-assets.py
 
       - name: Validate generated library
         run: |
           test "$(find brand/assets -type f -name '*.svg' | wc -l)" -eq 97
-          test "$(find brand/assets -type f -name '*.webp' | wc -l)" -eq 97
-          test "$(find brand/assets -type f -name '*.png' | wc -l)" -ge 108
+          test "$(find brand/assets -type f -name '*.webp' ! -path '*/12-scenes/*' | wc -l)" -eq 97
+          test "$(find brand/assets -type f -name '*.png' ! -path '*/12-scenes/*' | grep -v '/00-catalog/' | wc -l)" -eq 97
+          test "$(find brand/assets/12-scenes -type f -name '*.png' | wc -l)" -eq 6
+          test "$(find brand/assets/12-scenes -type f -name '*.webp' | wc -l)" -eq 6
+          test -f brand/assets/12-scenes/scene-manifest.csv
           test -f brand/assets/00-catalog/SVG-ASSET-LIST.md
+          test -f brand/assets/00-catalog/LuxSync-master-contact-sheet.png
+          if grep -RIl --include='*.svg' -E '<text\b' brand/assets \
+            | xargs -r grep -nE 'Century Gothic|Candara|Bodoni Moda|Bodoni MT|Didot|Georgia,serif'; then
+            echo 'Legacy font declaration remains in a generated SVG.' >&2
+            exit 1
+          fi
+          if grep -nE 'Century Gothic|Candara|Bodoni Moda|Bodoni MT|Didot|Georgia,serif' scripts/generate-luxury-orbit-assets.py; then
+            echo 'Legacy font declaration remains in the editable generator source.' >&2
+            exit 1
+          fi
           git diff --check
 
-      - name: Commit regenerated assets
+      - name: Commit regenerated vector assets
         run: |
-          if git diff --quiet; then
-            echo 'No generated asset changes were required.'
-            exit 0
-          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add brand/assets
-          git commit -m 'Regenerate LuxSync Luxury Orbit web graphics'
+          git add brand/assets/00-catalog brand/assets/01-brand brand/assets/02-icons-brand \
+            brand/assets/03-icons-website brand/assets/04-icons-social brand/assets/05-palette \
+            brand/assets/06-gradients brand/assets/07-components brand/assets/08-cards \
+            brand/assets/09-illustrations brand/assets/10-product-cards brand/assets/11-banners \
+            scripts/generate-luxury-orbit-assets.py
+          if git diff --cached --quiet; then
+            echo 'No generated vector changes were required.'
+            exit 0
+          fi
+          git commit -m 'Regenerate Luxury Orbit vector web graphics'
           git push origin HEAD:${GITHUB_REF_NAME}
