@@ -35,6 +35,15 @@ Dusty Steel `#7B96B2` is the source color for the cool orbit/glow signature. Der
 
 The effect must remain soft and atmospheric rather than neon.
 
+## Typography Relationship
+
+Color treatments never redefine typography. The authoritative LuxSync type system remains:
+
+- **Manrope 500/600** for headings, display, navigation, CTAs, and graphic UI.
+- **Inter 400/500** for body copy and supporting UI.
+
+See `brand/typography.md` for the complete typography contract.
+
 ## Design Rules
 
 - Slate Navy is the default dark canvas.
