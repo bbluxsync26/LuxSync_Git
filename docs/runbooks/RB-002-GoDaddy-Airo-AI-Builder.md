@@ -1,282 +1,139 @@
 # RB-002 — GoDaddy Airo AI Builder
 
 **Status:** Active  
-**Date:** 2026-08-29  
+**Last updated:** 2026-08-30  
 **Scope:** LuxSync website generation and staging workflow
 
 ## Purpose
 
-Provide the repeatable process for using GoDaddy Airo AI Builder without allowing the AI builder to override the LuxSync repository source of truth or prematurely replace the GoDaddy Commerce Plus commerce system.
+Provide a repeatable Airo workflow without allowing generated output to override the repository or prematurely replace GoDaddy Commerce Plus.
 
 ## Governing References
 
-Before beginning an Airo build, review:
+Review before each Airo build:
 
-1. `README.md`
-2. `docs/architecture/website-information-architecture.md`
-3. `docs/decisions/DEC-004-commerce-plus-and-airo-role.md`
-4. `brand/README.md`
-5. `brand/colors.md`
-6. `brand/typography.md`
-7. `brand/voice-and-tone.md`
-8. `content/homepage.md`
-9. `content/about.md`
-10. `prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md`
-11. `docs/runbooks/RB-007-Brand-Asset-Raster-Regeneration.md`
+1. `docs/project-runbook.md`
+2. `docs/master-catalog.md`
+3. `docs/architecture/website-information-architecture.md`
+4. `docs/decisions/DEC-004-commerce-plus-and-airo-role.md`
+5. `brand/README.md`
+6. `brand/colors.md`
+7. `brand/typography.md`
+8. `brand/voice-and-tone.md`
+9. `website/pages/home.md`
+10. `website/styles/design-system.md`
+11. `prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md`
+12. `docs/runbooks/RB-008-Luxury-Orbit-Brand-Asset-Generation.md`
 
-## Current GoDaddy Product Distinction
+## Product Distinction
 
-Do not treat these names as interchangeable:
-
-- **GoDaddy Commerce Plus / Websites + Marketing:** Current LuxSync launch commerce platform and system of record.
-- **Airo AI Builder:** Standalone conversational builder capable of websites, applications, online-store prototypes, code-level editing, deployment, and code export.
-- **Airo Plus:** AI-powered branding, optimization, marketing, and compliance-assistant features. It is not the LuxSync commerce architecture.
+- **Commerce Plus / Websites + Marketing:** launch commerce platform and system of record.
+- **Airo AI Builder:** staging/reference website, application, store, design, and code-generation environment.
+- **Airo Plus:** supporting branding, SEO, content, marketing, accessibility, and compliance-assistant capabilities where available; not the governing architecture.
 
 ## Preconditions
 
-Before starting a generation pass:
-
 - Repository `master` is current.
-- PR-001 is the approved prompt version to use.
+- PR-001 is the approved draft for the first generation pass.
+- Luxury Orbit is the active visual system.
 - Official slogan is `Where Luxury Lives Intelligently`.
-- Headline font is Manrope.
-- Body/UI font is Inter.
-- Plush Drift v2.1 colors are available.
-- The build is treated as staging/prototype until the validation gate is complete.
-- No live payment connection is enabled during the initial generation pass.
+- Homepage hero is `Smart Living. Elevated.`.
+- Primary CTA is `Shop Smart Home`; secondary CTA is `Get the ROI Guide`.
+- The build is staging/reference until the validation gate passes.
+- Live payments and production DNS remain unchanged.
 
-## Step 1 — Start the Airo AI Builder Project
+## Step 1 — Start the Staging Project
 
 1. Sign in to GoDaddy.
-2. Open **Airo AI Builder**, not the legacy GoDaddy AI Website Builder.
-3. Start a new website/store project.
-4. Name the project clearly, for example:
-   - `LuxSync Storefront Staging`
-5. Paste the complete current PR-001 prompt from the repository.
-6. Start the build.
+2. Open **Airo AI Builder**, not the legacy AI Website Builder.
+3. Start a website/store project named clearly, such as `LuxSync Storefront Staging`.
+4. Paste the complete current PR-001 prompt.
+5. Start the build.
 
-## Step 2 — First-Pass Acceptance Review
+## Step 2 — Structural Review
 
-Do not immediately edit cosmetic details.
+Before cosmetic edits, verify Home, Shop, Solutions, Guides, About, Support, Search, Account, and Cart.
 
-First verify structural compliance:
+Confirm the hero, slogan, calls to action, five approved audiences, product collections, and future-product guardrails match ARC-001 and the homepage blueprint.
 
-- Home exists.
-- Shop exists.
-- Solutions exists.
-- Guides exists.
-- About exists.
-- Support exists.
-- Search/cart/account behavior is represented appropriately.
-- Homepage uses `Technology That Feels Like Home` as hero messaging.
-- Official slogan is present and exact.
-- Primary CTA is `Shop Collections`.
-- No unsupported audiences were invented.
-- No future LuxSync Grid or template products are presented as live.
-- No unsupported partnerships, awards, reviews, certifications, or customer counts were invented.
-- No internal financial targets or supplier costs appear.
+Reject invented partnerships, awards, reviews, certifications, customer counts, prices, availability, financial data, or supplier claims.
 
-If the structure is wrong, correct the structure before visual polishing.
-
-## Step 3 — Brand Calibration
-
-Use Airo edits or manual editing to enforce:
+## Step 3 — Luxury Orbit Calibration
 
 ### Colors
 
-- Slate Navy `#0D1526`
-- Dark Suede `#172036`
-- Pale Driftwood `#D0BEB0`
-- Warm Taupe Mauve `#9E8B85`
-- Antique Rose Taupe `#967878`
-- Dusty Steel `#7B96B2`
+- Deep Navy `#0B1D3A`
+- Midnight Blue `#172846`
+- Pale Blush `#F3ECE8`
+- Taupe `#A69A8E`
+- Dusty Rose `#E7B5B8`
+- Soft Powder Blue `#A6B9CE`
+- Rose Gold base `#D6B0A0` with metallic gradient treatment
 
 ### Typography
 
-- Manrope 500/600 for headings/display
-- Inter 400/500 for body/UI
+- Wordmark/editorial: Bodoni Moda / Bodoni MT / Didot / Georgia
+- Headings/navigation/UI: Century Gothic / Montserrat / Arial
+- Body/supporting UI: Candara / Inter / Segoe UI / Arial
 
-### Visual character
+### Character
 
-- Dark, calm surfaces
-- Warm luxury neutrals
-- Restrained rose/steel illumination
-- Generous breathing space
-- Refined rounded corners
-- Minimal motion
+Use deep architectural navy, warm rose-gold accents, soft powder-blue orbit light, pale blush copy/surfaces, premium imagery, generous negative space, and minimal organic motion.
 
-Reject:
-
-- Neon/cyberpunk styling
-- Excessive gradients
-- Gadget-store presentation
-- Cartoon UI
-- Aggressive popups
-- Overly rounded bubble interfaces
-- Busy dashboards on marketing pages
+Reject cyberpunk neon, loud gradients, generic SaaS blue, dense gadget-store grids, excessive glassmorphism, and aggressive popups.
 
 ## Step 4 — Load Repository Assets
 
-Prefer current assets from the repository.
+Prefer current assets beneath `brand/assets/`, especially the brand, website-icon, component, card, illustration, product-card, and banner folders.
 
-Primary folders:
+Use SVG for logos/icons and optimized WebP for larger imagery where supported.
 
-- `brand/assets/01-brand/`
-- `brand/assets/02-icons-brand/`
-- `brand/assets/03-icons-website/`
-- `brand/assets/05-palette/`
-- `brand/assets/06-gradients/`
-- `brand/assets/07-components/`
-- `brand/assets/08-cards/`
-- `brand/assets/09-illustrations/`
-- `brand/assets/10-product-cards/`
-- `brand/assets/11-banners/`
-
-Use SVG for logos/icons where supported and WebP for larger raster graphics.
-
-Current text-bearing raster assets on `master` are generated from normalized SVG masters using Manrope/Inter. When text-bearing SVG content or typography changes, follow `RB-007 — Brand Asset Raster Regeneration` before using the updated PNG/WebP derivatives in Airo.
+The current SVG masters are generated by `scripts/generate-luxury-orbit-assets.py`; PNG/WebP derivatives are regenerated by `scripts/regenerate-brand-raster-assets.py`. Follow RB-008 when assets change.
 
 ## Step 5 — Commerce Representation
 
-During staging, represent commerce UX without assuming that Airo is the final commerce engine.
+Represent catalog browsing, product details, search, account, cart, and checkout flow without treating Airo as the approved production commerce engine.
 
-Required UX:
-
-- Product catalog
-- Collection/category browsing
-- Product-detail presentation
-- Search
-- Cart
-- Customer account concept where appropriate
-- Checkout path representation
-
-Do **not** connect live payments during the initial generation pass.
-
-Do not create an unmanaged second source of product truth. Validated product data ultimately comes from the production commerce catalog.
+Do not connect live payments, create an unmanaged live catalog, or use unvalidated product data.
 
 ## Step 6 — Responsive Review
 
-Review at minimum:
-
-- Desktop
-- Tablet
-- Mobile
-
-Check:
-
-- Navigation
-- Hero crop
-- CTA visibility
-- Collection cards
-- Product cards
-- Forms
-- Cart behavior
-- Footer
-- Font sizes
-- Touch targets
-
-Mobile must be intentionally composed, not a shrunken desktop layout.
+Review desktop, tablet, and mobile navigation, hero crop, CTA visibility, cards, forms, cart, footer, typography, and touch targets. Mobile must be intentionally composed.
 
 ## Step 7 — Accessibility Review
 
-Validate:
-
-- Semantic heading hierarchy
-- Keyboard navigation
-- Visible focus states
-- Color contrast
-- Meaningful alt text
-- Accessible form labels
-- Touch-target size
-- Reduced-motion behavior
-- No color-only status communication
-
-Airo output is not presumed compliant merely because it was generated successfully.
+Validate semantic headings, keyboard access, visible focus, contrast, alt text, labels, touch targets, reduced motion, and no color-only meaning. Generated output is not presumed compliant.
 
 ## Step 8 — Content Review
 
-Every claim must trace to repository-supported content.
+Every claim must trace to repository-supported content. Reject unsupported awards, certifications, testimonials, savings, compatibility, supplier relationships, endorsements, or medical outcomes.
 
-Reject generated claims involving:
+## Step 9 — Export and Repository Review
 
-- Awards
-- Certifications
-- Testimonials
-- Customer counts
-- Guaranteed savings
-- Unsupported compatibility
-- Supplier relationships not documented in the repository
-- Samsung/SmartThings endorsement
-- Airbnb/VRBO endorsement
-- Medical outcomes
+If code export is available:
 
-## Step 9 — Export / Repository Review
-
-If the Airo plan provides code export:
-
-1. Export the generated code.
-2. Preserve the untouched export as a reference snapshot before major refactoring.
-3. Place reviewed website source beneath `website/` using a structure approved in a separate architecture decision.
-4. Review dependencies, generated secrets, APIs, analytics code, and build tooling before commit.
-5. Never commit API keys, payment credentials, passwords, or private tokens.
-
-Do not invent a framework choice before inspecting the generated source.
+1. Export the generated source.
+2. Preserve an untouched reference snapshot.
+3. Inspect the actual framework, dependencies, build commands, APIs, analytics, and generated secrets.
+4. Place reviewed source beneath `website/` only after the structure is understood.
+5. Never commit secrets or credentials.
 
 ## Step 10 — Commerce Validation Gate
 
-Before any Airo-generated storefront could replace or bypass Commerce Plus, validate:
+Before any Airo storefront could replace or bypass Commerce Plus, validate catalog, shipping, sales tax, payments, orders, refunds, customer accounts, fulfillment, recurring billing, analytics, accessibility, SEO, source-control/export, and rollback.
 
-1. Product catalog behavior
-2. Shipping
-3. Sales tax
-4. Payment processing
-5. Order management
-6. Refund/cancellation flow
-7. Customer accounts
-8. Fulfillment/supplier workflow
-9. Recurring billing where required
-10. Analytics
-11. Accessibility
-12. SEO
-13. Source-control/export path
-14. Rollback
-
-If any required capability is missing, Commerce Plus remains the production commerce system.
+If any required capability is missing, Commerce Plus remains production authority.
 
 ## Step 11 — Publish Rules
 
-Initial Airo builds are staging/reference builds.
+Temporary staging publication is acceptable for review if it does not alter production DNS or commerce behavior.
 
-Do not:
-
-- Connect the production domain during first-pass generation.
-- Enable live payment processing during first-pass generation.
-- Replace the production storefront before validation.
-
-Publishing to a temporary/staging URL is acceptable for review when it does not alter production DNS or commerce behavior.
+Do not connect the production domain, enable live payments, or replace the production storefront during the first pass.
 
 ## Step 12 — Record the Result
 
-After each meaningful generation pass, record:
-
-- Prompt version
-- Airo project name
-- Date
-- Major deviations from PR-001
-- Screens/pages approved
-- Screens/pages requiring changes
-- Whether code was exported
-- Export commit/branch if applicable
-- Commerce validation status
+Record prompt version, Airo project name, date, deviations, approved/rejected screens, export status, branch/commit, and commerce-validation status.
 
 ## Completion Criteria
 
-RB-002 is complete for a generation cycle when:
-
-- The staging site follows ARC-001.
-- Brand rules are correctly applied.
-- Generated claims are repository-supported.
-- Responsive review is complete.
-- Accessibility review is complete.
-- Commerce-system boundaries remain intact.
-- Any exported code is captured in GitHub for review.
+A generation cycle is complete when CL-001 has been executed; structure, brand, content, responsive behavior, accessibility, and commerce boundaries have been reviewed; and exported source, if any, has been captured for repository review.
