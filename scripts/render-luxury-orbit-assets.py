@@ -9,6 +9,10 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 ASSET_ROOT = ROOT / "brand" / "assets"
 CATALOG = ASSET_ROOT / "00-catalog"
+PROTECTED_EXACT_LOGOS = {
+    "01-brand/luxsync-monogram-orb.svg",
+    "01-brand/luxsync-horizontal-lockup.svg",
+}
 
 
 def run(*args: str) -> None:
@@ -94,10 +98,14 @@ def rebuild_catalog(svgs: list[Path]) -> None:
 def main() -> int:
     svgs = sorted(p for p in ASSET_ROOT.rglob("*.svg") if "00-catalog" not in p.parts)
     for index, svg in enumerate(svgs, 1):
+        rel = svg.relative_to(ASSET_ROOT).as_posix()
+        if rel in PROTECTED_EXACT_LOGOS:
+            print(f"[{index}/{len(svgs)}] preserve exact approved logo: {svg.relative_to(ROOT)}")
+            continue
         print(f"[{index}/{len(svgs)}] {svg.relative_to(ROOT)}")
         render(svg)
     rebuild_catalog(svgs)
-    print(f"Rendered {len(svgs)} normalized SVG masters to PNG/WebP")
+    print(f"Rendered normalized SVG masters while preserving {len(PROTECTED_EXACT_LOGOS)} exact approved logo rasters")
     return 0
 
 

@@ -1,10 +1,12 @@
 name: Generate LuxSync Luxury Orbit assets
+# Primary monogram and horizontal lockup rasters are exact approved artwork and must be preserved.
 
 on:
   push:
     branches:
       - master
       - brand/luxury-orbit-refresh
+      - brand/exact-final-logo
     paths:
       - scripts/generate-luxury-orbit-assets.py
       - scripts/normalize-luxury-orbit-fonts.py
@@ -46,6 +48,23 @@ jobs:
       - name: Normalize typography and brand rules
         run: python3 scripts/normalize-luxury-orbit-fonts.py
 
+      - name: Restore exact approved primary logo wrappers
+        run: |
+          test -s brand/assets/01-brand/luxsync-monogram-orb.png
+          test -s brand/assets/01-brand/luxsync-horizontal-lockup.png
+
+          cat > brand/assets/01-brand/luxsync-monogram-orb.svg <<'SVG'
+          <svg xmlns="http://www.w3.org/2000/svg" width="860" height="584" viewBox="0 0 860 584" role="img" aria-label="LuxSync LS orbit monogram">
+            <image href="luxsync-monogram-orb.png" x="0" y="0" width="860" height="584" preserveAspectRatio="xMidYMid meet"/>
+          </svg>
+          SVG
+
+          cat > brand/assets/01-brand/luxsync-horizontal-lockup.svg <<'SVG'
+          <svg xmlns="http://www.w3.org/2000/svg" width="1513" height="389" viewBox="0 0 1513 389" role="img" aria-label="LuxSync horizontal logo lockup">
+            <image href="luxsync-horizontal-lockup.png" x="0" y="0" width="1513" height="389" preserveAspectRatio="xMidYMid meet"/>
+          </svg>
+          SVG
+
       - name: Render PNG WebP and catalog sheets
         run: python3 scripts/render-luxury-orbit-assets.py
 
@@ -59,6 +78,8 @@ jobs:
           test -f brand/assets/12-scenes/scene-manifest.csv
           test -f brand/assets/00-catalog/SVG-ASSET-LIST.md
           test -f brand/assets/00-catalog/LuxSync-master-contact-sheet.png
+          grep -q 'luxsync-monogram-orb.png' brand/assets/01-brand/luxsync-monogram-orb.svg
+          grep -q 'luxsync-horizontal-lockup.png' brand/assets/01-brand/luxsync-horizontal-lockup.svg
           if grep -RIl --include='*.svg' -E '<text\b' brand/assets \
             | xargs -r grep -nE 'Century Gothic|Candara|Bodoni Moda|Bodoni MT|Didot|Georgia,serif'; then
             echo 'Legacy font declaration remains in a generated SVG.' >&2
