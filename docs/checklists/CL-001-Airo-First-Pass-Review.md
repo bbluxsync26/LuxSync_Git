@@ -21,17 +21,31 @@
 - [ ] Why LuxSync, Product Collections, How It Works, featured products, and lead-magnet blocks are present
 - [ ] Featured products do not use invented prices or availability
 
-## Luxury Orbit Brand
+## Brand System
 
-- [ ] Wordmark/editorial typography uses the Bodoni-family stack
-- [ ] Headings/navigation/UI use Century Gothic / Montserrat-compatible styling
-- [ ] Body/supporting UI use Candara / Inter / Segoe UI-compatible styling
-- [ ] Deep Navy `#0B1D3A` and Midnight Blue `#172846` anchor the dark surfaces
-- [ ] Pale Blush `#F3ECE8` provides warm light text/surfaces
-- [ ] Rose Gold around `#D6B0A0` is the premium focal accent
-- [ ] Soft Powder Blue `#A6B9CE` is used as restrained orbit/glow lighting
+### Plush Drift v2.1 base
+
+- [ ] Slate Navy `#0D1526` anchors primary dark surfaces
+- [ ] Dark Suede `#172036` is used for elevated/card surfaces
+- [ ] Pale Driftwood `#D0BEB0` is the primary light text/surface tone
+- [ ] Warm Taupe Mauve `#9E8B85` supports secondary information
+- [ ] Antique Rose Taupe `#967878` provides restrained warm accent
+- [ ] Dusty Steel `#7B96B2` provides interaction/orbit-light emphasis
+
+### Typography
+
+- [ ] Headings, navigation, CTAs, and graphic UI use **Manrope 500/600**
+- [ ] Body copy, product descriptions, forms, and supporting UI use **Inter 400/500**
+- [ ] Century Gothic, Candara, Montserrat, Bodoni-family, Didot, and Georgia are not used as website-system fonts
+- [ ] Approved exact logo artwork is preserved rather than re-typeset
+
+### Luxury Orbit treatment
+
+- [ ] Metallic rose effects are restrained derived treatments rather than replacement base colors
+- [ ] Dusty Steel-derived orbit/glow is soft and atmospheric
 - [ ] Design feels architectural, warm, refined, spacious, and premium
-- [ ] No cyberpunk neon, dense gadget-store layout, generic SaaS blue, or excessive glow/motion
+- [ ] Production photography contains no baked-in website copy, navigation, prices, ratings, or CTAs
+- [ ] No cyberpunk neon, unapproved lavender base treatment, dense gadget-store layout, generic SaaS blue, or excessive glow/motion
 
 ## Content Integrity
 
@@ -57,6 +71,7 @@
 - [ ] Search/cart remain easy to reach
 - [ ] Tap targets and product cards are usable
 - [ ] Hero copy and CTAs remain readable and visible
+- [ ] Manrope/Inter typography remains legible at mobile sizes
 
 ## Accessibility
 
@@ -67,6 +82,7 @@
 - [ ] Forms have labels
 - [ ] Images have meaningful alt text where needed
 - [ ] Motion is non-essential and respects reduced-motion preferences
+- [ ] Information does not rely on color alone
 
 ## Result
 
