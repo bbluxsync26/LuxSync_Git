@@ -106,7 +106,7 @@ for i,n in enumerate(ills):
     write(f'09-illustrations/{n}.svg',svg(1200,800,body))
 
 # 10 product cards
-prod={'category-comfort':('Comfort & Lighting','$79+','◉'),'category-energy':('Energy & Control','$24+','◫'),'category-hosting':('Hosting Essentials','$139+','⌂'),'category-security':('Security & Access','$139+','▣')}
+prod={'category-comfort':('Comfort &amp; Lighting','$79+','◉'),'category-energy':('Energy &amp; Control','$24+','◫'),'category-hosting':('Hosting Essentials','$139+','⌂'),'category-security':('Security &amp; Access','$139+','▣')}
 for n,(t,price,g) in prod.items():
     body=f'<rect x="34" y="34" width="732" height="1032" rx="54" fill="url(#n)" stroke="{P["gold"]}" stroke-opacity=".45" stroke-width="3"/><circle cx="400" cy="320" r="178" fill="url(#w)"/><text x="400" y="390" text-anchor="middle" {UI} font-size="210" fill="url(#m)">{g}</text><path d="M80 540C260 370 450 620 740 350" fill="none" stroke="url(#m)" stroke-width="13" opacity=".42"/><text x="90" y="720" {UI} font-size="46" fill="{P["blush"]}">{t}</text><text x="90" y="790" {BODY} font-size="40" fill="{P["gold"]}">{price}</text><text x="90" y="850" {BODY} font-size="32" fill="{P["gold"]}">★★★★★</text><rect x="90" y="910" width="620" height="104" rx="30" fill="url(#m)"/><text x="400" y="980" text-anchor="middle" {UI} font-size="32" fill="{P["navy"]}">SHOP CATEGORY</text>'
     write(f'10-product-cards/{n}.svg',svg(800,1100,body))
