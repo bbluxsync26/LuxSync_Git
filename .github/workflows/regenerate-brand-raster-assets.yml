@@ -17,6 +17,10 @@ on:
       - .github/workflows/regenerate-brand-raster-assets.yml
   workflow_dispatch:
 
+concurrency:
+  group: luxsync-brand-assets-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -113,4 +117,6 @@ jobs:
             exit 0
           fi
           git commit -m 'Regenerate LuxSync assets and reconcile metadata'
-          git push origin HEAD:${GITHUB_REF_NAME}
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
