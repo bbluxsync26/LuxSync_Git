@@ -7,6 +7,8 @@ on:
       - brand/luxury-orbit-refresh
     paths:
       - scripts/generate-luxury-orbit-assets.py
+      - scripts/normalize-luxury-orbit-fonts.py
+      - scripts/render-luxury-orbit-assets.py
       - scripts/regenerate-brand-raster-assets.py
       - .github/workflows/regenerate-brand-raster-assets.yml
   workflow_dispatch:
@@ -29,17 +31,47 @@ jobs:
       - name: Install rendering tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y inkscape imagemagick python3-pil fonts-dejavu-core fonts-liberation
+          sudo apt-get install -y inkscape imagemagick python3-pil fontconfig curl
 
-      - name: Generate SVG, PNG, WebP, and catalog sheets
-        run: python3 scripts/regenerate-brand-raster-assets.py
+      - name: Install authoritative LuxSync fonts
+        run: |
+          mkdir -p "$HOME/.local/share/fonts"
+          curl -L --fail --retry 3 \
+            'https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/Manrope%5Bwght%5D.ttf' \
+            -o "$HOME/.local/share/fonts/Manrope.ttf"
+          curl -L --fail --retry 3 \
+            'https://raw.githubusercontent.com/google/fonts/main/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf' \
+            -o "$HOME/.local/share/fonts/Inter.ttf"
+          fc-cache -f
+          fc-match Manrope
+          fc-match Inter
+
+      - name: Generate Luxury Orbit SVG masters
+        run: python3 scripts/generate-luxury-orbit-assets.py
+
+      - name: Normalize typography to Manrope and Inter
+        run: python3 scripts/normalize-luxury-orbit-fonts.py
+
+      - name: Render PNG WebP and catalog sheets
+        run: python3 scripts/render-luxury-orbit-assets.py
 
       - name: Validate generated library
         run: |
           test "$(find brand/assets -type f -name '*.svg' | wc -l)" -eq 97
           test "$(find brand/assets -type f -name '*.webp' | wc -l)" -eq 97
-          test "$(find brand/assets -type f -name '*.png' | wc -l)" -ge 108
+          test "$(find brand/assets -type f -name '*.png' | grep -v '/00-catalog/' | wc -l)" -eq 97
           test -f brand/assets/00-catalog/SVG-ASSET-LIST.md
+          test -f brand/assets/00-catalog/LuxSync-master-contact-sheet.png
+          if grep -RIl --include='*.svg' -E '<text\b' brand/assets \
+            | xargs -r grep -nE 'Century Gothic|Candara|Bodoni Moda|Bodoni MT|Didot|Georgia,serif'; then
+            echo 'Legacy font declaration remains in a generated SVG.' >&2
+            exit 1
+          fi
+          if ! grep -RIl --include='*.svg' -E '<text\b' brand/assets \
+            | xargs -r grep -lE 'Manrope|Inter' >/dev/null; then
+            echo 'Expected Manrope or Inter declarations were not found.' >&2
+            exit 1
+          fi
           git diff --check
 
       - name: Commit regenerated assets
@@ -51,5 +83,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add brand/assets
-          git commit -m 'Regenerate LuxSync Luxury Orbit web graphics'
+          git commit -m 'Regenerate LuxSync Luxury Orbit web graphics with Manrope and Inter'
           git push origin HEAD:${GITHUB_REF_NAME}
