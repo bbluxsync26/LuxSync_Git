@@ -1,74 +1,62 @@
 # LuxSync Typography
 
-The Luxury Orbit refresh uses a three-part typography system: a fashion-luxury serif for the LuxSync wordmark, a geometric sans for display/UI, and a softer humanist sans for body copy.
+**Status:** Active / Authoritative  
+**Base brand system:** Plush Drift v2.1  
+**Web visual treatment:** Luxury Orbit
 
-## Brand Wordmark / Editorial Serif
+## Typography Contract
 
-Preferred stack:
+LuxSync uses one authoritative website and graphic-UI typography system:
 
-```css
-font-family: "Bodoni Moda", "Bodoni MT", Didot, Georgia, serif;
-```
+- **Headings / display / navigation / CTA labels / graphic UI:** Manrope
+- **Body copy / product descriptions / forms / supporting UI:** Inter
 
-Use for:
+When another file, generated asset, fallback, or historical document conflicts with this file, **Manrope and Inter govern**.
 
-- `LUXSYNC` wordmark treatment
-- Select editorial headings
-- Premium campaign or guide-cover accents
-
-Do not use the serif for long body copy or dense interface text.
-
-## Headings, Navigation, and Graphic UI
-
-Preferred design reference: **Century Gothic**.
-
-Web-safe stack:
+## Headings, Display, Navigation, and Graphic UI
 
 ```css
-font-family: "Century Gothic", Montserrat, Arial, sans-serif;
+font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
 ```
 
-Use for:
+Approved weights:
 
-- Hero headlines
-- Section headings
-- Navigation
-- CTA labels
-- Product-card titles
-- Graphic labels
+- 500 — standard display and section headings
+- 600 — emphasis, hero headings, CTA labels, navigation emphasis
 
-Recommended weights: 400, 600, 700.
+Do not introduce Century Gothic, Montserrat, Bodoni, Didot, Georgia, or another typeface as a LuxSync website-system heading font.
 
 ## Body Copy and Supporting UI
 
-Preferred design reference: **Candara**.
-
-Web-safe stack:
-
 ```css
-font-family: Candara, Inter, "Segoe UI", Arial, sans-serif;
+font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 ```
 
-Use for:
+Approved weights:
 
-- Body copy
-- Product descriptions
-- Helper text
-- Form text
-- Supporting captions
+- 400 — body copy and supporting text
+- 500 — labels, controls, emphasized body/UI text
 
-Recommended weights: 400 and 500.
+Do not introduce Candara or another typeface as a LuxSync website-system body font.
 
-## Styling Notes
+## Approved Logo Artwork Exception
 
-- The LuxSync wordmark is normally uppercase with generous tracking.
-- Graphic CTAs may use uppercase labels when the component is compact and highly visual.
-- Website body copy should remain easy to scan and should not rely on all caps.
-- Preserve strong contrast on Deep Navy surfaces.
-- Keep typography airy and refined rather than dense or heavy.
+The approved LuxSync logo/monogram files are artwork. Their exact visual lettering may be preserved as approved raster/vector artwork and does **not** redefine the website typography system.
 
-## Fallback Behavior
+Do not recreate, re-typeset, or modify protected exact logo artwork merely to force live-text typography into the logo.
 
-The SVG library includes robust fallback stacks so the assets remain usable without proprietary fonts. Raster exports may use the closest available fallback font on the build runner.
+## Luxury Orbit Styling
+
+Luxury Orbit may use spacing, tracking, scale, metallic treatment, orbit lighting, and editorial composition to create a luxury character, but typography remains Manrope + Inter.
+
+Use typography that feels airy, refined, calm, and highly legible. Avoid dense all-caps body copy and excessive letter spacing.
+
+## Generation and Raster Rules
+
+- `scripts/generate-luxury-orbit-assets.py` must emit Manrope/Inter for editable text.
+- `scripts/normalize-luxury-orbit-fonts.py` is the enforcement layer for generated SVGs.
+- Build runners must install Manrope and Inter before raster rendering.
+- Generated SVGs must fail validation if legacy Century Gothic, Candara, Bodoni-family, Didot, or Georgia system declarations remain in editable text.
+- Where copy can be HTML/CSS instead of baked into imagery, prefer semantic HTML/CSS.
 
 **Official slogan:** Where Luxury Lives Intelligently
