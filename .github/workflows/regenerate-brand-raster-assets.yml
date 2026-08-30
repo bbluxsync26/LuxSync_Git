@@ -1,4 +1,5 @@
 name: Generate LuxSync Luxury Orbit assets
+# Primary monogram and horizontal lockup rasters are exact approved artwork and must be preserved.
 
 on:
   push:
