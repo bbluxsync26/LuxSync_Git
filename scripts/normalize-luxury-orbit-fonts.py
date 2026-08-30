@@ -38,14 +38,19 @@ FONT_REPLACEMENTS = (
     ("Georgia,serif", "Arial,sans-serif"),
 )
 
-# Map the first-pass Luxury Orbit base colors back to Plush Drift v2.1.
 COLOR_REPLACEMENTS = (
-    ("#0B1D3A", "#0D1526"),  # navy -> Slate Navy
-    ("#172846", "#172036"),  # blue -> Dark Suede
-    ("#F3ECE8", "#D0BEB0"),  # blush -> Pale Driftwood
-    ("#A69A8E", "#9E8B85"),  # taupe -> Warm Taupe Mauve
-    ("#E7B5B8", "#967878"),  # rose -> Antique Rose Taupe
-    ("#A6B9CE", "#7B96B2"),  # powder -> Dusty Steel
+    ("#0B1D3A", "#0D1526"),
+    ("#172846", "#172036"),
+    ("#F3ECE8", "#D0BEB0"),
+    ("#A69A8E", "#9E8B85"),
+    ("#E7B5B8", "#967878"),
+    ("#A6B9CE", "#7B96B2"),
+)
+
+XML_TEXT_REPLACEMENTS = (
+    ("Comfort & Lighting", "Comfort &amp; Lighting"),
+    ("Energy & Control", "Energy &amp; Control"),
+    ("Security & Access", "Security &amp; Access"),
 )
 
 FORBIDDEN_FONTS = (
@@ -65,8 +70,9 @@ def normalize_text(text: str) -> str:
         normalized = normalized.replace(old, new)
     for old, new in COLOR_REPLACEMENTS:
         normalized = normalized.replace(old, new)
+    for old, new in XML_TEXT_REPLACEMENTS:
+        normalized = normalized.replace(old, new)
 
-    # The active brand system tops out at Manrope 600 for display work.
     normalized = normalized.replace('font-weight="700"', 'font-weight="600"')
     normalized = normalized.replace("font-weight='700'", "font-weight='600'")
     return normalized
@@ -112,11 +118,9 @@ def normalize_file(path: Path) -> bool:
 def main() -> int:
     changed = 0
 
-    # Keep the editable generator source aligned with approved base colors/fonts.
     if GENERATOR.exists() and normalize_file(GENERATOR):
         changed += 1
 
-    # Normalize every generated SVG before rasterization.
     for svg in sorted(ASSET_ROOT.rglob("*.svg")):
         if normalize_file(svg):
             changed += 1
@@ -136,19 +140,21 @@ def main() -> int:
         if 'font-weight="700"' in text or "font-weight='700'" in text:
             leftovers.append(f"{path.relative_to(ROOT)}: Manrope 700 weight")
 
-        # Production-facing category graphics must not carry fabricated commerce data.
         if path.parent.name == "10-product-cards" and path.suffix.lower() == ".svg":
             if re.search(r'>\$\d', text):
                 leftovers.append(f"{path.relative_to(ROOT)}: invented price")
             if "★★★★★" in text:
                 leftovers.append(f"{path.relative_to(ROOT)}: invented rating")
+            if re.search(r'>(?:Comfort|Energy|Security) & (?:Lighting|Control|Access)<', text):
+                leftovers.append(f"{path.relative_to(ROOT)}: unescaped XML ampersand")
 
     if leftovers:
         raise RuntimeError("Brand normalization leftovers remain:\n" + "\n".join(leftovers))
 
     print(
         f"Normalized {changed} generator/SVG files to Manrope/Inter, "
-        "Plush Drift v2.1 base colors, approved display weights, and safe category copy"
+        "Plush Drift v2.1 base colors, approved display weights, XML-safe text, "
+        "and safe category copy"
     )
     return 0
 
