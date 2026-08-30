@@ -28,7 +28,7 @@ Luxury smart-home technology designed for modern living, with curated hardware a
 
 ### Visual direction
 
-Use the Luxury Orbit visual system: deep architectural navy, rose-gold metallic accents, soft powder-blue orbit light, pale blush copy, generous negative space, and premium smart-living imagery. Keep the CTA visible above the fold on desktop and mobile.
+Use Luxury Orbit as the active web treatment on the Plush Drift v2.1 base system: Slate Navy / Dark Suede surfaces, restrained metallic rose detail, Dusty Steel orbit light, Pale Driftwood copy, generous negative space, and premium smart-living imagery. Keep the CTA visible above the fold on desktop and mobile.
 
 ---
 
@@ -69,7 +69,7 @@ Feature the current customer-facing collection structure:
 - Hosting
 - Curated Bundles
 
-Use the current Luxury Orbit category-card assets where visually appropriate.
+Use current approved category-card assets where visually appropriate.
 
 Primary section CTA: **Shop Collections**
 
@@ -97,7 +97,7 @@ Rules:
 - Product names, prices, stock state, and availability must come from validated commerce data.
 - Use editable placeholders during design when live catalog data is unavailable.
 - Do not expose supplier costs or internal margin information.
-- Do not invent ratings, reviews, badges, or scarcity messages.
+- Do not invent ratings, reviews, badges, scarcity, or stock urgency.
 
 ---
 
@@ -147,28 +147,30 @@ Commerce utilities such as Search, Account, and Cart should remain accessible th
 - Search/cart readily accessible
 - One-column sections where appropriate
 - Large tap targets
-- Readable Century Gothic / Candara-compatible typography stacks
+- Manrope headings and Inter body/UI remain readable at mobile sizes
 - Avoid horizontally compressed desktop layouts
 
 ---
 
 ## Brand Rules
 
-### Colors
+### Base palette
 
-- Deep Navy `#0B1D3A`
-- Midnight Blue `#172846`
-- Pale Blush `#F3ECE8`
-- Taupe `#A69A8E`
-- Dusty Rose `#E7B5B8`
-- Soft Powder Blue `#A6B9CE`
-- Rose Gold base `#D6B0A0` with metallic gradient treatment
+- Slate Navy `#0D1526`
+- Dark Suede `#172036`
+- Pale Driftwood `#D0BEB0`
+- Warm Taupe Mauve `#9E8B85`
+- Antique Rose Taupe `#967878`
+- Dusty Steel `#7B96B2`
+
+Derived metallic rose and icy orbit highlights may be used sparingly as Luxury Orbit effects.
 
 ### Typography
 
-- Wordmark/editorial: Bodoni Moda / Bodoni MT / Didot / Georgia
-- Headings/UI: Century Gothic / Montserrat
-- Body: Candara / Inter / Segoe UI
+- Headings / display / navigation / graphic UI: **Manrope 500/600**
+- Body / supporting UI: **Inter 400/500**
+
+Approved exact logo artwork is exempt from re-typesetting and does not redefine site fonts.
 
 ### Voice
 
