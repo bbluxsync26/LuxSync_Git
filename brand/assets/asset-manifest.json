@@ -1,7 +1,8 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "library": "LuxSync Brand Asset Library",
   "brand_system": "Plush Drift v2.1",
+  "web_visual_direction": "Luxury Orbit",
   "official_slogan": "Where Luxury Lives Intelligently",
   "palette": {
     "slate_navy": "#0D1526",
@@ -23,7 +24,9 @@
   },
   "inventory": {
     "canonical_detailed_manifest": "asset-manifest.csv",
-    "logical_graphic_count": 97,
+    "logical_asset_count": 103,
+    "svg_master_count": 97,
+    "production_scene_count": 6,
     "categories": {
       "01-brand": 8,
       "02-icons-brand": 12,
@@ -35,13 +38,16 @@
       "08-cards": 13,
       "09-illustrations": 7,
       "10-product-cards": 4,
-      "11-banners": 4
+      "11-banners": 4,
+      "12-scenes": 6
     }
   },
   "implementation_notes": [
     "The CSV manifest is the canonical detailed per-asset inventory.",
-    "Manrope and Inter supersede legacy Century Gothic and Candara references in older generated asset sources.",
-    "The current library count includes the hero-where-luxury-lives-intelligently banner added after the original 96-graphic pack.",
-    "Verify text-bearing raster fallbacks before production use; prefer current SVG or HTML/CSS text when typography fidelity matters."
+    "Manrope and Inter are the authoritative typography system for current LuxSync web graphics.",
+    "The 97 SVG-based graphics are generated in-repository and do not require image generation.",
+    "The six production scenes are text-free raster assets intended for composition beneath native HTML/CSS and vector branding.",
+    "Do not bake prices, ratings, stock claims, navigation, CTAs, or promotional copy into production scene photography.",
+    "Prefer WebP for scene delivery and SVG for logos, icons, controls, and other vector assets."
   ]
 }
