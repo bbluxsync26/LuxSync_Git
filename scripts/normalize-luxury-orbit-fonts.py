@@ -1,12 +1,28 @@
 #!/usr/bin/env python3
-"""Normalize LuxSync generator/source typography to the authoritative Manrope/Inter system."""
+"""Normalize Luxury Orbit outputs to the authoritative LuxSync brand system.
+
+Authoritative typography:
+- Manrope 500/600 for display and headings
+- Inter 400/500 for body and UI
+
+Authoritative Plush Drift v2.1 colors:
+- Slate Navy #0D1526
+- Dark Suede #172036
+- Pale Driftwood #D0BEB0
+- Warm Taupe Mauve #9E8B85
+- Antique Rose Taupe #967878
+- Dusty Steel #7B96B2
+
+The metallic rose and icy-blue orbit treatments may use derived highlight/shadow
+tints, but the six flat base colors above remain the source-of-truth palette.
+"""
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSET_ROOT = ROOT / "brand" / "assets"
 GENERATOR = ROOT / "scripts" / "generate-luxury-orbit-assets.py"
 
-REPLACEMENTS = (
+FONT_REPLACEMENTS = (
     ("Bodoni Moda,Bodoni MT,Didot,Georgia,serif", "Manrope,Arial,sans-serif"),
     ("Century Gothic,Montserrat,Arial,sans-serif", "Manrope,Arial,sans-serif"),
     ("Candara,Inter,Segoe UI,Arial,sans-serif", "Inter,Arial,sans-serif"),
@@ -17,14 +33,44 @@ REPLACEMENTS = (
     ("Didot", "Manrope"),
     ("Georgia,serif", "Arial,sans-serif"),
 )
-FORBIDDEN = tuple(old for old, _new in REPLACEMENTS[3:])
+
+# Map the first-pass Luxury Orbit base colors back to Plush Drift v2.1.
+COLOR_REPLACEMENTS = (
+    ("#0B1D3A", "#0D1526"),  # navy -> Slate Navy
+    ("#172846", "#172036"),  # blue -> Dark Suede
+    ("#F3ECE8", "#D0BEB0"),  # blush -> Pale Driftwood
+    ("#A69A8E", "#9E8B85"),  # taupe -> Warm Taupe Mauve
+    ("#E7B5B8", "#967878"),  # rose -> Antique Rose Taupe
+    ("#A6B9CE", "#7B96B2"),  # powder -> Dusty Steel
+)
+
+FORBIDDEN_FONTS = (
+    "Century Gothic",
+    "Candara",
+    "Bodoni Moda",
+    "Bodoni MT",
+    "Didot",
+    "Georgia,serif",
+)
+FORBIDDEN_BASE_COLORS = tuple(old for old, _new in COLOR_REPLACEMENTS)
+
+
+def normalize_text(text: str) -> str:
+    normalized = text
+    for old, new in FONT_REPLACEMENTS:
+        normalized = normalized.replace(old, new)
+    for old, new in COLOR_REPLACEMENTS:
+        normalized = normalized.replace(old, new)
+
+    # The active brand system tops out at Manrope 600 for display work.
+    normalized = normalized.replace('font-weight="700"', 'font-weight="600"')
+    normalized = normalized.replace("font-weight='700'", "font-weight='600'")
+    return normalized
 
 
 def normalize_file(path: Path) -> bool:
     text = path.read_text(encoding="utf-8")
-    normalized = text
-    for old, new in REPLACEMENTS:
-        normalized = normalized.replace(old, new)
+    normalized = normalize_text(text)
     if normalized != text:
         path.write_text(normalized, encoding="utf-8")
         return True
@@ -34,7 +80,8 @@ def normalize_file(path: Path) -> bool:
 def main() -> int:
     changed = 0
 
-    # Keep the editable generator source aligned with the final asset standard.
+    # Keep the editable generator source aligned with the final base palette and
+    # approved typography. This makes later direct regeneration safer too.
     if GENERATOR.exists() and normalize_file(GENERATOR):
         changed += 1
 
@@ -43,19 +90,28 @@ def main() -> int:
         if normalize_file(svg):
             changed += 1
 
-    leftovers = []
+    leftovers: list[str] = []
     check_files = [GENERATOR] if GENERATOR.exists() else []
     check_files.extend(sorted(ASSET_ROOT.rglob("*.svg")))
+
     for path in check_files:
         text = path.read_text(encoding="utf-8")
-        for token in FORBIDDEN:
+        for token in FORBIDDEN_FONTS:
             if token in text:
-                leftovers.append(f"{path.relative_to(ROOT)}: {token}")
+                leftovers.append(f"{path.relative_to(ROOT)}: legacy font {token}")
+        for token in FORBIDDEN_BASE_COLORS:
+            if token in text:
+                leftovers.append(f"{path.relative_to(ROOT)}: legacy base color {token}")
+        if 'font-weight="700"' in text or "font-weight='700'" in text:
+            leftovers.append(f"{path.relative_to(ROOT)}: Manrope 700 weight")
 
     if leftovers:
-        raise RuntimeError("Legacy font declarations remain:\n" + "\n".join(leftovers))
+        raise RuntimeError("Brand normalization leftovers remain:\n" + "\n".join(leftovers))
 
-    print(f"Normalized typography in {changed} source/SVG files to Manrope/Inter")
+    print(
+        f"Normalized {changed} generator/SVG files to Manrope/Inter, "
+        "Plush Drift v2.1 base colors, and approved display weights"
+    )
     return 0
 
 
