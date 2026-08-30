@@ -1,28 +1,37 @@
-LUXSYNC WEB ASSET PACK — PLUSH DRIFT v2.1
+LUXSYNC WEB ASSET PACK
+Plush Drift v2.1 base system / Luxury Orbit web treatment
 
 Contents
 --------
-97 logical web graphics across 11 organized categories. Most graphics are supplied
-in SVG, PNG, and WebP formats. The original 96-graphic pack was expanded by the
-hero-where-luxury-lives-intelligently banner set.
+103 logical assets across 12 categories:
+- 97 SVG-based graphics with PNG/WebP derivatives
+- 6 text-free production raster scenes with PNG/WebP delivery files
 
-Primary palette
----------------
+Primary base palette
+--------------------
 Slate Navy        #0D1526  — page background
-Dark Suede        #172036  — card surface
-Pale Driftwood    #D0BEB0  — primary text
-Warm Taupe Mauve  #9E8B85  — secondary text
+Dark Suede        #172036  — card/elevated surface
+Pale Driftwood    #D0BEB0  — primary light text / warm light surface
+Warm Taupe Mauve  #9E8B85  — secondary text / neutral
 Antique Rose      #967878  — decorative / tertiary
-Dusty Steel       #7B96B2  — CTA / accent glow
+Dusty Steel       #7B96B2  — CTA / interaction / orbit-light anchor
+
+Luxury Orbit may add restrained metallic rose and icy-blue highlight/shadow tints,
+but those are derived effects rather than replacement base colors.
 
 Typography
 ----------
-Headlines / Display: Manrope (500, 600)
-Body / UI: Inter (400, 500)
+Headings / Display / Graphic UI: Manrope (500, 600)
+Body / Supporting UI: Inter (400, 500)
 
-Manrope and Inter are authoritative. Century Gothic and Candara references in older
-generated asset sources are legacy implementation artifacts and do not define the
-current LuxSync brand standard.
+Manrope and Inter are authoritative. Century Gothic, Candara, Montserrat, Bodoni,
+Didot, and similar legacy declarations do not define the LuxSync website system.
+
+Approved logo exception
+-----------------------
+The primary monogram and horizontal lockup rasters are exact approved artwork and
+are protected from generic regeneration. Their lettering is artwork and does not
+redefine website typography.
 
 Official slogan
 ---------------
@@ -30,15 +39,21 @@ Where Luxury Lives Intelligently
 
 Format guidance
 ---------------
-SVG: preferred for logos, icons, controls, badges, cards, and gradients.
-PNG: compatibility/transparency fallback.
-WebP: preferred for larger raster banners, cards, textures, and illustrations.
+SVG: preferred for icons, controls, badges, cards, gradients, and vector UI.
+PNG: compatibility/transparency fallback and protected exact-logo artwork where used.
+WebP: preferred for larger raster delivery and production scenes.
 
-Notes
------
-The supplied PPTX stores each slide as one flattened image, so separate original
-vectors were not available. The asset pack was rebuilt as vector interpretations
-using the confirmed Plush Drift v2.1 palette.
+Production scenes
+-----------------
+brand/assets/12-scenes contains six text-free scene pairs for website compositing.
+Do not bake website copy, navigation, prices, ratings, buttons, or unapproved logo
+recreations into those scenes.
 
-For production website use, verify text-bearing raster fallbacks visually and prefer
-current SVG or HTML/CSS-rendered text when typography fidelity matters.
+Metadata
+--------
+asset-manifest.csv            Canonical detailed inventory for 97 SVG-based graphics
+asset-manifest.json           Machine-readable library summary
+12-scenes/scene-manifest.csv  Canonical inventory for six production raster scenes
+
+The metadata reconciliation script updates vector dimensions from the actual SVG
+masters so the manifest cannot drift from the generated files.

@@ -12,8 +12,13 @@ on:
       - scripts/normalize-luxury-orbit-fonts.py
       - scripts/render-luxury-orbit-assets.py
       - scripts/regenerate-brand-raster-assets.py
+      - scripts/reconcile-asset-metadata.py
       - .github/workflows/regenerate-brand-raster-assets.yml
   workflow_dispatch:
+
+concurrency:
+  group: luxsync-brand-assets-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -41,6 +46,8 @@ jobs:
           curl -L --fail --retry 3 'https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/Manrope%5Bwght%5D.ttf' -o "$HOME/.local/share/fonts/Manrope.ttf"
           curl -L --fail --retry 3 'https://raw.githubusercontent.com/google/fonts/main/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf' -o "$HOME/.local/share/fonts/Inter.ttf"
           fc-cache -f
+          fc-match Manrope
+          fc-match Inter
 
       - name: Generate Luxury Orbit SVG masters
         run: python3 scripts/generate-luxury-orbit-assets.py
@@ -68,6 +75,9 @@ jobs:
       - name: Render PNG WebP and catalog sheets
         run: python3 scripts/render-luxury-orbit-assets.py
 
+      - name: Reconcile canonical asset metadata
+        run: python3 scripts/reconcile-asset-metadata.py
+
       - name: Validate generated library
         run: |
           test "$(find brand/assets -type f -name '*.svg' | wc -l)" -eq 97
@@ -91,7 +101,7 @@ jobs:
           fi
           git diff --check
 
-      - name: Commit regenerated vector assets
+      - name: Commit regenerated assets and metadata
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -99,10 +109,13 @@ jobs:
             brand/assets/03-icons-website brand/assets/04-icons-social brand/assets/05-palette \
             brand/assets/06-gradients brand/assets/07-components brand/assets/08-cards \
             brand/assets/09-illustrations brand/assets/10-product-cards brand/assets/11-banners \
+            brand/assets/asset-manifest.csv brand/assets/asset-manifest.json \
             scripts/generate-luxury-orbit-assets.py
           if git diff --cached --quiet; then
-            echo 'No generated vector changes were required.'
+            echo 'No generated asset or metadata changes were required.'
             exit 0
           fi
-          git commit -m 'Regenerate Luxury Orbit vector web graphics'
-          git push origin HEAD:${GITHUB_REF_NAME}
+          git commit -m 'Regenerate LuxSync assets and reconcile metadata'
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

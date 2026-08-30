@@ -12,7 +12,7 @@ Define the launch information architecture for LuxSync using the repository as t
 
 Current governing references include `brand/README.md`, `brand/colors.md`, `brand/typography.md`, `brand/voice-and-tone.md`, `website/pages/home.md`, and `website/styles/design-system.md`.
 
-Where older generated assets or guidance conflict, the active **Luxury Orbit** standards and current homepage blueprint govern.
+Where older generated assets or guidance conflict, the authoritative **Plush Drift v2.1** base system, active **Luxury Orbit** web treatment, Manrope/Inter typography contract, and current homepage blueprint govern.
 
 ## Launch Objective
 
@@ -113,21 +113,25 @@ Provide contact, product/compatibility questions, order support, setup guidance,
 
 ## Brand Implementation Rules
 
-### Luxury Orbit colors
+### Base palette — Plush Drift v2.1
 
-- Deep Navy `#0B1D3A`
-- Midnight Blue `#172846`
-- Pale Blush `#F3ECE8`
-- Taupe `#A69A8E`
-- Dusty Rose `#E7B5B8`
-- Soft Powder Blue `#A6B9CE`
-- Rose Gold base `#D6B0A0`, implemented as a restrained metallic gradient
+- Slate Navy `#0D1526`
+- Dark Suede `#172036`
+- Pale Driftwood `#D0BEB0`
+- Warm Taupe Mauve `#9E8B85`
+- Antique Rose Taupe `#967878`
+- Dusty Steel `#7B96B2`
+
+### Luxury Orbit treatment
+
+Use restrained metallic rose gradients, Dusty Steel-derived orbit light, spacious dark composition, soft architectural curves, and premium smart-living imagery. Derived highlight/shadow tints are effects, not replacement base colors.
 
 ### Typography
 
-- Wordmark/editorial: Bodoni Moda / Bodoni MT / Didot / Georgia
-- Headings/navigation/UI: Century Gothic / Montserrat / Arial
-- Body/supporting UI: Candara / Inter / Segoe UI / Arial
+- Headings / display / navigation / CTA labels / graphic UI: **Manrope 500/600**
+- Body / product copy / forms / supporting UI: **Inter 400/500**
+
+Approved exact logo artwork may preserve its own lettering as artwork and does not redefine site typography.
 
 ### Voice
 
@@ -135,15 +139,15 @@ Provide contact, product/compatibility questions, order support, setup guidance,
 
 ### Visual character
 
-Deep architectural navy, warm rose-gold metal, soft powder-blue orbit light, pale blush surfaces, spacious composition, restrained atmospheric glow, and premium smart-living imagery.
+Deep Slate Navy/Dark Suede surfaces, restrained metallic rose detail, Dusty Steel orbit light, Pale Driftwood copy, spacious composition, restrained atmospheric glow, and premium smart-living imagery.
 
-Avoid cyberpunk neon, loud gradients, dense gadget-store grids, generic SaaS blue, excessive glassmorphism, and unnecessary motion.
+Avoid cyberpunk neon, lavender as an unapproved base color, loud gradients, dense gadget-store grids, generic SaaS blue, excessive glassmorphism, and unnecessary motion.
 
 ## Responsive Architecture
 
 - **Desktop:** editorial hero, controlled width, curated grids, restrained commerce utilities.
 - **Tablet:** reduced columns and simplified navigation while preserving hierarchy.
-- **Mobile:** compact navigation, immediate search/cart access, one-column flow, large touch targets, readable text, and thumb-friendly product cards.
+- **Mobile:** compact navigation, immediate search/cart access, one-column flow, large touch targets, readable Manrope/Inter typography, and thumb-friendly product cards.
 
 ## Accessibility Baseline
 
@@ -151,7 +155,7 @@ Target WCAG 2.2 AA practices: semantic headings, keyboard navigation, visible fo
 
 ## Performance Baseline
 
-Prefer SVG for logos/icons, optimized WebP for large raster graphics, responsive images, lazy loading, reserved image dimensions, efficient fonts, restrained effects, and minimal unnecessary JavaScript.
+Prefer approved SVG/raster logos as appropriate, SVG for icons/vector UI, optimized WebP for production scenes, responsive images, lazy loading, reserved image dimensions, efficient font loading, restrained effects, and minimal unnecessary JavaScript.
 
 ## Future Expansion Slots
 

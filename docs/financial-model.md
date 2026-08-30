@@ -1,27 +1,47 @@
 # Financial Model
 
+**Status:** Active planning baseline  
+**Reconciled:** August 30, 2026
+
 ## Initial Targets
 
-Startup Capital:
+Startup Capital:  
 Less than $500
 
-Operating Overhead:
+Operating Overhead:  
 $179.49/month
 
-Gross Margin:
+Month 1 Modeled Gross Margin:  
 60.38%
 
 ## Month 1 Goals
 
-Revenue:
+Revenue:  
 $8,564
 
-Gross Profit:
+Gross Profit:  
 $5,171
 
-Net Profit:
+Implied Gross Margin:  
+60.38%
+
+Net Cash Profit:  
 $4,991.51
+
+## Forecast Interpretation
+
+The 60.38% figure is the **Month 1 modeled gross margin and launch planning reference**, not a promise that every later month or product mix will produce exactly the same margin.
+
+The detailed 3-month table in `docs/business-plan.md` currently implies:
+
+- Month 1: 60.38%
+- Month 2: 60.88%
+- Month 3: 60.71%
+
+Those percentages follow the existing revenue and COGS assumptions.
 
 ## Notes
 
-Update this document as actual revenue data becomes available.
+- Update this document as validated supplier costs, payment fees, shipping economics, returns/refunds, taxes, and actual sales data become available.
+- Forecast values are internal planning assumptions, not achieved performance.
+- Public product pricing and margin claims must not be derived from this file.

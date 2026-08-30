@@ -1,37 +1,45 @@
 LUXSYNC WEB ASSET INVENTORY
-Plush Drift v2.1
+Plush Drift v2.1 base system / Luxury Orbit web treatment
 
-Total logical graphics: 97
-Most graphics are supplied as SVG master, PNG fallback, and WebP fallback.
+Total logical assets: 103
+97 SVG-based graphics with PNG/WebP derivatives
+6 text-free production scenes with PNG/WebP delivery files
 
-01-brand                 8
-02-icons-brand          12
-03-icons-website        14
-04-icons-social          6
-05-palette               8
-06-gradients             4
-07-components           17
-08-cards                13
-09-illustrations         7
-10-product-cards         4
-11-banners               4
-
-The fourth banner is hero-where-luxury-lives-intelligently, added after the original
-96-graphic pack.
-
-Catalog files
--------------
-LuxSync-Asset-Catalog.html       Browser-based visual catalog with links
-LuxSync-master-contact-sheet.png Master visual overview
-01–11 category contact sheets    Labeled previews by asset group
-asset-manifest.csv               Canonical detailed asset inventory
-asset-manifest.json              Machine-readable library metadata
-README.md / README.txt           Palette, typography, paths, and format guidance
+01-brand                  8
+02-icons-brand           12
+03-icons-website         14
+04-icons-social           6
+05-palette                8
+06-gradients              4
+07-components            17
+08-cards                 13
+09-illustrations          7
+10-product-cards          4
+11-banners                4
+12-scenes                 6
 
 Typography authority
 --------------------
-Headlines / Display: Manrope
-Body / UI: Inter
+Headings / Display / Graphic UI: Manrope 500/600
+Body / Supporting UI: Inter 400/500
 
-Legacy Century Gothic and Candara references in older generated assets do not
-override the current LuxSync brand standard.
+Palette authority
+-----------------
+Slate Navy #0D1526
+Dark Suede #172036
+Pale Driftwood #D0BEB0
+Warm Taupe Mauve #9E8B85
+Antique Rose Taupe #967878
+Dusty Steel #7B96B2
+
+Canonical metadata
+------------------
+asset-manifest.csv               97 SVG-based vector graphics
+asset-manifest.json              library summary
+12-scenes/scene-manifest.csv     6 production raster scenes
+00-catalog/SVG-ASSET-LIST.md     generated SVG list
+00-catalog/LuxSync-Asset-Catalog.html generated browser catalog
+
+Official slogan
+---------------
+Where Luxury Lives Intelligently
