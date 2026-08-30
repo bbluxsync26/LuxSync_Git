@@ -49,6 +49,7 @@ GOVERNING_FILES = [
     "docs/architecture/website-information-architecture.md",
     "docs/runbooks/RB-002-GoDaddy-Airo-AI-Builder.md",
     "docs/runbooks/RB-008-Luxury-Orbit-Brand-Asset-Generation.md",
+    "docs/runbooks/RB-009-Repository-Consistency-Validation.md",
     "docs/checklists/CL-001-Airo-First-Pass-Review.md",
     "prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md",
     "docs/master-catalog.md",
@@ -211,6 +212,16 @@ def validate_asset_metadata(errors: list[str]) -> None:
     if len(list(scene_dir.glob("*.webp"))) != 6:
         errors.append("12-scenes: expected 6 WebP scenes")
 
+    catalog = read("brand/assets/00-catalog/LuxSync-Asset-Catalog.html")
+    require(catalog, "Manrope", "brand/assets/00-catalog/LuxSync-Asset-Catalog.html", errors)
+    require(catalog, "Inter", "brand/assets/00-catalog/LuxSync-Asset-Catalog.html", errors)
+    require(catalog, "103 logical assets", "brand/assets/00-catalog/LuxSync-Asset-Catalog.html", errors)
+    for token in ("Century Gothic", "Candara"):
+        if token in catalog:
+            errors.append(
+                f"brand/assets/00-catalog/LuxSync-Asset-Catalog.html: legacy font remains: {token}"
+            )
+
 
 def validate_business_guardrails(errors: list[str]) -> None:
     plan = read("docs/business-plan.md")
@@ -222,6 +233,10 @@ def validate_business_guardrails(errors: list[str]) -> None:
         errors.append(
             "docs/business-plan.md: founder transition threshold must reflect corrected Phase 2 math"
         )
+
+    pricing = read("docs/decisions/DEC-005-senior-service-pricing.md")
+    require(pricing, "Open / Decision Required", "docs/decisions/DEC-005-senior-service-pricing.md", errors)
+    require(pricing, "No senior-service price is currently approved for public display", "docs/decisions/DEC-005-senior-service-pricing.md", errors)
 
     value = read("docs/value-proposition.md")
     for segment in (
@@ -257,9 +272,9 @@ def main() -> int:
     print("- Luxury Orbit web treatment confirmed")
     print("- Manrope/Inter typography confirmed")
     print("- website hero/CTA contract confirmed")
-    print("- asset metadata/dimensions confirmed")
+    print("- asset metadata/dimensions/catalog confirmed")
     print("- protected exact logos confirmed")
-    print("- business guardrails confirmed")
+    print("- business guardrails and open pricing decision confirmed")
     return 0
 
 
