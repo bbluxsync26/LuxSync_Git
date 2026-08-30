@@ -5,9 +5,9 @@ from html import escape
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'brand'/'assets'
 P={'navy':'#0B1D3A','blue':'#172846','blush':'#F3ECE8','taupe':'#A69A8E','rose':'#E7B5B8','powder':'#A6B9CE','gold':'#D6B0A0','ink':'#090E1B'}
-DISPLAY="font-family='Bodoni Moda,Bodoni MT,Didot,Georgia,serif'"
-UI="font-family='Century Gothic,Montserrat,Arial,sans-serif'"
-BODY="font-family='Candara,Inter,Segoe UI,Arial,sans-serif'"
+DISPLAY="font-family='Manrope,Arial,sans-serif'"
+UI="font-family='Manrope,Arial,sans-serif'"
+BODY="font-family='Inter,Arial,sans-serif'"
 DEFS=f'''<defs><linearGradient id="n" x1="0" y1="0" x2="1" y2="1"><stop stop-color="{P['navy']}"/><stop offset="1" stop-color="{P['ink']}"/></linearGradient><linearGradient id="m" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF2EA"/><stop offset=".18" stop-color="#EAC8B9"/><stop offset=".42" stop-color="{P['gold']}"/><stop offset=".64" stop-color="#9C675C"/><stop offset=".82" stop-color="#F2D6C8"/><stop offset="1" stop-color="#7D4E49"/></linearGradient><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F4FAFF"/><stop offset=".45" stop-color="#D7E8FF"/><stop offset="1" stop-color="{P['powder']}"/></linearGradient><radialGradient id="w"><stop stop-color="#F9E3D7" stop-opacity=".95"/><stop offset=".45" stop-color="#E7A27D" stop-opacity=".45"/><stop offset="1" stop-color="#E7A27D" stop-opacity="0"/></radialGradient><filter id="g" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="13" result="q"/><feMerge><feMergeNode in="q"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>'''
 
 def svg(w,h,body,bg=None,aria='LuxSync graphic'):
