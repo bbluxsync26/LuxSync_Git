@@ -7,7 +7,6 @@ on:
       - master
       - brand/luxury-orbit-refresh
       - brand/exact-final-logo
-      - docs/reconcile-source-of-truth
     paths:
       - scripts/generate-luxury-orbit-assets.py
       - scripts/normalize-luxury-orbit-fonts.py
