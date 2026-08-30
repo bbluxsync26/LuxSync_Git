@@ -1,59 +1,76 @@
 LUXSYNC ASSET PACK — QA REPORT
+Updated: 2026-08-30
 
-Source inspection
+Current authority
 -----------------
-All 15 slides of LuxSync_Design_Standards(1).pptx were rendered and inspected
-individually at 1707 × 960. The deck stores each slide as a single flattened PNG;
-there were no separate embedded vector logos, icons, or UI components to extract.
+Base brand system: Plush Drift v2.1
+Active web/graphics treatment: Luxury Orbit
+Official slogan: Where Luxury Lives Intelligently
 
-Color and style
----------------
-All rebuilt assets use the confirmed Plush Drift v2.1 palette from
-LuxSync Palette Options(1).html:
-  #0D1526  Slate Navy
-  #172036  Dark Suede
-  #D0BEB0  Pale Driftwood
-  #9E8B85  Warm Taupe Mauve
-  #967878  Antique Rose Taupe
-  #7B96B2  Dusty Steel
+Authoritative base palette
+--------------------------
+#0D1526  Slate Navy
+#172036  Dark Suede
+#D0BEB0  Pale Driftwood
+#9E8B85  Warm Taupe Mauve
+#967878  Antique Rose Taupe
+#7B96B2  Dusty Steel
 
-The geometry follows the board's guidance: rounded corners, generous breathing
-space, layered dark surfaces, soft rose/steel illumination, and restrained motion.
-
-Brand slogan
-------------
-The official slogan is "Where Luxury Lives Intelligently." It replaces former or
-competing slogan treatments in current brand usage.
+Luxury Orbit may use derived champagne/copper rose-metal highlights and icy-blue
+orbit-light tints for depth. Those are effects, not replacement base colors.
 
 Typography authority
 --------------------
-Headlines / Display: Manrope (500, 600)
-Body / UI: Inter (400, 500)
+Headings / Display / Graphic UI: Manrope 500/600
+Body / Supporting UI: Inter 400/500
 
-Manrope and Inter are the active LuxSync typography standard. Older generated SVG
-sources and raster fallbacks may still contain visual output or metadata from the
-previous Century Gothic/Candara generation pass. Those legacy declarations do not
-override the current standard.
+The current generation pipeline installs Manrope and Inter, normalizes editable SVG
+text before raster rendering, and rejects legacy Century Gothic, Candara, Bodoni,
+Didot, and similar generated system-font declarations.
 
-Inventory verification
-----------------------
-The original asset pack contained 96 logical graphics. A later slogan-standardizing
-change added the hero-where-luxury-lives-intelligently banner set, bringing the
-current logical asset count to 97 and the 11-banners category count to 4.
+Protected exact logo artwork
+-----------------------------
+The approved primary monogram and horizontal lockup rasters are exact approved
+artwork and are protected from generic regeneration. Their SVG wrappers reference
+the approved raster files intentionally.
 
-Most logical graphics are supplied as SVG, PNG, and WebP. The detailed canonical
-inventory is maintained in ../asset-manifest.csv.
+Asset inventory
+---------------
+97 SVG-based logical graphics with PNG/WebP derivatives
+6 text-free production raster scenes with PNG/WebP delivery files
+103 logical assets total
 
-Visual review guidance
-----------------------
-For production website use, verify text-bearing raster assets visually before use.
-Where typography fidelity matters, prefer current SVG sources or render text in
-HTML/CSS using Manrope and Inter.
+Canonical metadata
+------------------
+../asset-manifest.csv              97 SVG-based vector graphics
+../asset-manifest.json             machine-readable library summary
+../12-scenes/scene-manifest.csv    6 production raster scenes
+SVG-ASSET-LIST.md                  generated SVG inventory
 
-Known limitation
-----------------
-Because the supplied deck is flattened, the recreated wordmark and icons are clean
-vector interpretations rather than original source paths. Regenerating all raster
-fallbacks from typography-normalized SVG masters remains a separate asset-production
-operation and should be performed before relying on text-bearing PNG/WebP files as
-brand-authoritative artwork.
+The asset metadata reconciliation process reads actual SVG width/height values and
+updates the CSV so machine-readable dimensions match committed source files.
+
+Production-scene boundary
+-------------------------
+Production scenes are intentionally text-free. They must not contain baked-in:
+- LuxSync website copy
+- navigation
+- prices or ratings
+- buttons or CTAs
+- stock/scarcity claims
+- unapproved logo recreations
+
+Website copy and controls should be native HTML/CSS or approved vector/raster brand
+assets wherever practical.
+
+Release validation
+------------------
+Before relying on the asset library for production:
+1. Confirm exactly 97 SVG masters.
+2. Confirm 97 non-scene PNGs and 97 non-scene WebPs.
+3. Confirm six scene PNGs and six scene WebPs.
+4. Confirm protected exact logo wrappers still reference approved logo rasters.
+5. Confirm editable SVG text uses Manrope/Inter.
+6. Confirm the canonical CSV dimensions match actual SVG dimensions.
+7. Review the master contact sheet and representative light/dark usage.
+8. Run scripts/validate-repository-consistency.py.
