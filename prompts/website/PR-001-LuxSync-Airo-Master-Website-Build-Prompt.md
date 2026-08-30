@@ -1,439 +1,161 @@
 # PR-001 — LuxSync Airo Master Website Build Prompt
 
 **Status:** Draft / Ready for first Airo generation  
-**Date:** 2026-08-29  
-**Purpose:** Generate the LuxSync launch storefront experience in GoDaddy Airo AI Builder while preserving the repository source of truth and the Commerce Plus production-commerce boundary.
-
----
+**Updated:** 2026-08-30  
+**Purpose:** Generate the LuxSync launch storefront in GoDaddy Airo AI Builder while preserving the repository source of truth and Commerce Plus production boundary.
 
 ## Prompt to paste into GoDaddy Airo AI Builder
 
 Build a polished, mobile-first luxury smart-home storefront for **LuxSync LLC**.
 
-This project is a **staging/reference build**. Do not connect live payments, do not connect the production domain, and do not publish as the production LuxSync commerce site during the initial generation pass.
+This is a **staging/reference build**. Do not connect live payments, production DNS, or publish it as the production commerce site during the first generation pass.
 
 The LuxSync GitHub repository is the source of truth. Do not invent a different business model, target audience, visual identity, product strategy, pricing model, technology ecosystem, or company history.
 
 ### Company and positioning
 
-LuxSync is a **luxury smart-home automation and commerce company** that launches with a **retail-first, zero-inventory curated-commerce model**.
+LuxSync is a luxury smart-home automation and commerce company launching with a retail-first, zero-inventory curated-commerce model.
 
-LuxSync helps customers create smarter, safer, more elegant living environments through carefully selected SmartThings-compatible products, curated bundles, thoughtful automation guidance, and a premium customer experience.
+LuxSync helps customers create smarter, safer, more elegant environments through carefully selected SmartThings-compatible products, curated bundles, thoughtful automation guidance, and a premium customer experience.
 
-LuxSync is not a discount electronics retailer, generic DIY marketplace, traditional smart-home installer, or software-first startup.
-
-The experience should feel like a refined lifestyle brand with intelligent technology quietly underneath it.
+LuxSync is not a discount electronics retailer, generic DIY marketplace, traditional on-site installer, or software-first startup. The experience should feel like luxury interior design with intelligent technology quietly underneath it.
 
 ### Official brand language
 
-Company: **LuxSync**
+- Company: **LuxSync**
+- Official slogan: **Where Luxury Lives Intelligently**
+- Homepage hero: **Smart Living. Elevated.**
+- Supporting copy: **Luxury smart-home technology designed for modern living, with curated hardware and thoughtful automation that bring comfort, control, and confidence to every space.**
+- Primary CTA: **Shop Smart Home**
+- Secondary CTA: **Get the ROI Guide**
 
-Official slogan: **Where Luxury Lives Intelligently**
+Do not replace these with older LuxSync slogan, hero, or CTA treatments.
 
-Homepage hero message: **Technology That Feels Like Home**
+### Primary audiences
 
-Homepage supporting copy:
+1. **Short-Term Rental Operators** — remote property awareness, keyless entry, guest experience, and operational efficiency.
+2. **Seniors & Caregivers** — independent-living support, home awareness, leak detection, pathway lighting, and caregiver notifications. Do not make medical claims.
+3. **Smart Office & Property Managers** — centralized oversight of lighting, HVAC, security, and multi-property environments.
+4. **Intentional Parents** — sleep routines, smart nursery environments, household comfort, and safety-focused automation.
+5. **Busy Professionals** — convenience, premium experiences, elegant technology, and simplicity.
 
-**Curated smart-home solutions, premium automation, and elevated living experiences designed to make life simpler.**
+Do not add unsupported target segments.
 
-Primary homepage CTA: **Shop Collections**
+### Navigation
 
-Secondary homepage CTA: **Explore Solutions**
+Primary: Home; Shop; Solutions; Guides; About; Support.
 
-Do not replace the official slogan with older LuxSync slogan treatments.
+Keep Search, Account, and Cart separate and easy to reach. Do not create an oversized top navigation.
 
-### Primary customer segments
+### Homepage sequence
 
-Build the site for these five current LuxSync audiences:
-
-1. **Short-Term Rental Operators** — Airbnb/VRBO hosts and property operators interested in remote property awareness, keyless entry, guest experience, and operational efficiency.
-2. **Seniors & Caregivers** — families seeking independent-living support, home awareness, leak detection, pathway lighting, and caregiver notifications. Do not make medical claims.
-3. **Smart Office & Property Managers** — commercial operators seeking centralized oversight of lighting, HVAC, security, and multi-property environments.
-4. **Intentional Parents** — families focused on sleep routines, smart nursery environments, household comfort, and safety-focused automation.
-5. **Busy Professionals** — customers seeking convenience, premium experiences, elegant technology, and simplicity without unnecessary technical complexity.
-
-Do not add new target segments unless they are represented only as editable placeholders for later approval.
-
-### Launch information architecture
-
-Use this primary navigation:
-
-- Home
-- Shop
-- Solutions
-- Guides
-- About
-- Support
-
-Keep commerce utilities separate and easy to reach:
-
-- Search
-- Account
-- Cart
-
-Do not create an oversized top navigation.
-
-### Home page
-
-Build the homepage in this order:
-
-1. **Hero**
-   - LuxSync brand
-   - Official slogan: Where Luxury Lives Intelligently
-   - Hero message: Technology That Feels Like Home
-   - Supporting copy exactly as provided above
-   - Primary CTA: Shop Collections
-   - Secondary CTA: Explore Solutions
-
-2. **Featured Solutions**
-   - Short-Term Rentals
-   - Seniors & Caregivers
-   - Smart Office & Property Management
-   - Intentional Parents
-   - Busy Professionals
-
-3. **Why LuxSync**
-   - Curated Catalog
-   - SmartThings Compatibility
-   - Simplified Buying
-   - Premium Customer Experience
-
-4. **Product Collections**
-   - Comfort
-   - Security
-   - Energy
-   - Hosting
-   - Curated Bundles
-
-5. **How It Works**
-   - Discover the need
-   - Choose a curated collection or product
-   - Follow guided setup and compatibility guidance
-   - Expand the experience over time
-
-6. **Featured Products / Bundles**
-   - Use editable placeholders if live validated catalog data is unavailable
-   - Do not invent stock levels or verified prices
-
-7. **Lead Magnet / Email Signup**
-   - Reserve space for the STR Smart Home ROI Guide
-   - Provide a tasteful email signup treatment
-
-8. **Footer**
-   - Shop
-   - Solutions
-   - Guides
-   - About
-   - Support / Contact
-   - Privacy and Terms placeholders
+1. Hero with the exact slogan, hero message, supporting copy, and CTAs above.
+2. Featured Solutions for the five approved audiences.
+3. Why LuxSync: Curated Catalog; SmartThings Compatibility; Simplified Buying; Premium Customer Experience.
+4. Product Collections: Comfort; Security; Energy; Hosting; Curated Bundles.
+5. How It Works: Discover; Choose; Set Up; Evolve.
+6. Featured Products/Bundles using validated catalog data or clearly editable placeholders.
+7. STR Smart Home ROI Guide and calm email signup.
+8. Footer with Shop, Solutions, Guides, About, Support/Contact, and legal placeholders.
 
 ### Shop
 
-The Shop landing page should feel curated rather than overwhelming.
+Create a curated Shop landing page with All Products, Curated Bundles, Comfort, Security, Energy, and Hosting.
 
-Create:
+Product families may include smart hubs, locks, lighting, shades, speakers, appliances, security devices, water management, and home entertainment.
 
-- All Products
-- Curated Bundles
-- Comfort
-- Security
-- Energy
-- Hosting
+Bundle concepts include STR Property Automation, Guest Welcome & Keyless Entry, Smart Sleep Nursery, and Senior Independent Safety.
 
-The current LuxSync business model includes product families such as:
-
-- Smart Hubs & Core
-- Smart Locks
-- Smart Lighting & Decorative Lighting
-- Smart Shades
-- Smart Speakers
-- Smart Appliances
-- Security Devices
-- Water Management Systems
-- Home Entertainment Products
-
-Current curated bundle concepts include:
-
-- STR Property Automation
-- Guest Welcome & Keyless Entry
-- Smart Sleep Nursery
-- Senior Independent Safety
-
-Do not expose internal supplier costs, profit margins, overhead, revenue targets, founder compensation, or internal financial projections.
-
-If a specific product price is not supplied from validated catalog data, use an editable placeholder rather than inventing a price.
+Do not invent prices, stock, ratings, reviews, scarcity, supplier relationships, margins, costs, or financial projections.
 
 ### Solutions
 
-Create solution pages for:
+Create pages for the five approved audiences. Each page should cover the need, desired outcome, relevant products/collections, example routines, SmartThings compatibility, and a shop/guidance CTA.
 
-- Short-Term Rentals
-- Seniors & Caregivers
-- Smart Office & Property Management
-- Intentional Parents
-- Busy Professionals
-
-Use this structure on each solution page:
-
-1. Customer need
-2. Desired experience/outcome
-3. Relevant LuxSync collections or products
-4. Example automations or routines
-5. SmartThings compatibility explanation
-6. CTA to shop or get guidance
-
-Do not imply official endorsement or partnership with Samsung, SmartThings, Airbnb, VRBO, or other third parties unless explicitly documented later.
+Do not imply Samsung, SmartThings, Airbnb, VRBO, or other endorsement unless later documented.
 
 ### Guides
 
-Create a Guides / Resources area suitable for:
+Create space for the STR Smart Home ROI Guide, compatibility guidance, SmartThings setup concepts, product-selection guidance, automation ideas, and FAQs.
 
-- STR Smart Home ROI Guide
-- Compatibility guidance
-- SmartThings setup concepts
-- Product selection guidance
-- Automation ideas
-- Frequently asked questions
+Do not present SmartThings templates or LuxSync Grid as currently available.
 
-Leave room for future digital setup guides.
+### About and Support
 
-Do not present future SmartThings templates or LuxSync Grid SaaS features as currently available.
+About should emphasize trusted curation, thoughtful automation, premium design, simplicity, and reliability. Luxury is confidence, not complexity.
 
-### About
+Support should cover product/compatibility questions, order support, setup guidance, FAQ, and general contact without making the site feel service-heavy.
 
-Explain LuxSync through these ideas:
+Do not invent awards, certifications, testimonials, press, customer counts, years in business, or founder facts.
 
-- LuxSync simplifies smart-home technology without sacrificing elegance or quality.
-- Luxury is not complexity. Luxury is confidence.
-- Trusted curation
-- Thoughtful automation
-- Premium design
-- Simplicity
-- Reliability
+### Technology and commerce boundary
 
-Use a confident but restrained brand story. Do not invent awards, years in business, customer counts, press coverage, certifications, or testimonials.
+Samsung SmartThings is the primary launch compatibility standard. Emphasize compatibility before customization, simplicity before complexity, reliability before novelty, and customer experience before technology.
 
-### Support
+GoDaddy Commerce Plus remains the production commerce system of record. Represent storefront UX in staging, but do not connect live payments, alter production DNS, replace Commerce Plus, or create a second unmanaged live catalog.
 
-Create a support/contact area for:
+### Luxury Orbit visual system
 
-- Product and compatibility questions
-- Order support
-- Setup guidance
-- FAQ
-- General contact
-
-Keep support easy to find without making the website feel like a consulting-services site.
-
-### Technology standard
-
-Samsung SmartThings is the primary launch compatibility standard.
-
-Emphasize:
-
-- Compatibility before customization
-- Simplicity before complexity
-- Reliability before novelty
-- Customer experience before technology
-
-Do not imply that LuxSync owns SmartThings or is officially endorsed by Samsung.
-
-### Brand visual system
-
-Use **Plush Drift v2.1**.
+Use **Luxury Orbit**, which replaces the older Plush Drift direction for current website work.
 
 Colors:
 
-- Slate Navy `#0D1526` — primary page background
-- Dark Suede `#172036` — cards and elevated surfaces
-- Pale Driftwood `#D0BEB0` — primary text
-- Warm Taupe Mauve `#9E8B85` — secondary text
-- Antique Rose Taupe `#967878` — decorative / tertiary accent
-- Dusty Steel `#7B96B2` — primary interactive accent
+- Deep Navy `#0B1D3A` — primary dark canvas
+- Midnight Blue `#172846` — elevated surfaces
+- Pale Blush `#F3ECE8` — warm light surfaces and primary light text
+- Taupe `#A69A8E` — secondary neutral
+- Dusty Rose `#E7B5B8` — warm atmospheric accent
+- Soft Powder Blue `#A6B9CE` — restrained orbit/glow accent
+- Rose Gold base `#D6B0A0` — metallic CTA, line, rim, and logo accent using champagne/copper highlights and shadows
 
 Typography:
 
-- **Manrope**, weights 500 and 600, for headings and display text
-- **Inter**, weights 400 and 500, for body copy and UI
+- Wordmark/editorial: `Bodoni Moda`, `Bodoni MT`, Didot, Georgia, serif
+- Headings/navigation/UI: `Century Gothic`, Montserrat, Arial, sans-serif
+- Body/supporting UI: Candara, Inter, `Segoe UI`, Arial, sans-serif
 
-Do not use Century Gothic or Candara as the website typography standard.
+Visual direction:
 
-### Brand voice
+- Deep architectural navy
+- Warm rose-gold metal
+- Soft powder-blue orbit light
+- Pale blush copy and surfaces
+- Premium smart-living/interior imagery
+- Spacious editorial composition
+- Refined rounded dark cards
+- Selective atmospheric glow
+- Minimal organic motion
 
-Use the LuxSync **Intelligent Calm** voice.
+Avoid cyberpunk neon, saturated cyan/magenta, loud gradients, generic SaaS blue, dense gadget-store grids, cartoon UI, excessive glassmorphism, hard glowing borders, flashing animation, aggressive popups, and text baked into photographs when native text is possible.
 
-The copy should be:
+### Voice
 
-- Warm
-- Confident
-- Thoughtful
-- Unhurried
-- Professional
-- Human
-- Refined
-- Approachable
+Use **Intelligent Calm**: warm, confident, thoughtful, unhurried, professional, human, refined, and approachable.
 
-Avoid:
+Avoid hype, fear-based security language, jargon, technical showing-off, urgency, excessive exclamation marks, and unsupported superlatives.
 
-- Hype
-- Aggressive urgency
-- Fear-based security messaging
-- Technical showing-off
-- Corporate jargon
-- Excessive exclamation marks
-- Unsupported superlatives
+### Responsive, accessibility, and performance
 
-Focus on customer outcomes, environments, routines, comfort, confidence, compatibility, and ease of use.
+Design mobile first. Mobile uses compact navigation, accessible search/cart, large touch targets, readable type, scannable sections, and thumb-friendly product cards. Tablet reduces columns; desktop may use wider editorial layouts.
 
-### Brand pillars
+Target WCAG 2.2 AA practices: semantic headings, keyboard access, visible focus, sufficient contrast, labels, meaningful alt text, adequate targets, reduced-motion behavior, and no color-only meaning.
 
-Use these four LuxSync brand pillars as design and storytelling principles:
+Use responsive images, modern formats, lazy loading, stable layouts, efficient font loading, minimal unnecessary JavaScript, and restrained effects.
 
-- **Tactile Luxury**
-- **Intelligent Calm**
-- **Warm Futurism**
-- **Effortless Sophistication**
+### Repository assets
 
-### Visual direction
+Prefer current assets beneath `brand/assets/`, including the brand, website-icon, component, card, illustration, product-card, and banner folders. Prefer SVG for logos/icons and optimized WebP for larger imagery.
 
-The site should feel:
-
-- Calm
-- Architectural
-- Spacious
-- Premium
-- Modern
-- Warm
-- Technologically sophisticated without looking technical
-
-Use:
-
-- Deep navy backgrounds where appropriate
-- Layered dark surfaces
-- Warm neutral text
-- Restrained rose and steel illumination
-- Generous negative space
-- Refined rounded corners
-- High-quality smart-living and interior-design imagery
-- Subtle depth
-- Minimal, organic motion
-
-Avoid:
-
-- Neon/cyberpunk visuals
-- Hard glowing borders
-- Busy gradients
-- Gadget-store grids everywhere
-- Cartoonish interfaces
-- Excessive glassmorphism
-- Flashing animation
-- Aggressive popups
-- Cluttered dashboards on marketing pages
-
-### Responsive behavior
-
-Design mobile first.
-
-Desktop may use editorial layouts and wider imagery.
-
-Tablet should simplify multi-column layouts while preserving hierarchy.
-
-Mobile must use:
-
-- Compact navigation
-- Easy access to search and cart
-- One-column content where appropriate
-- Large touch targets
-- Readable typography
-- Short scannable sections
-- Product cards designed for thumb use
-
-Do not simply shrink the desktop layout.
-
-### Accessibility
-
-Build toward WCAG 2.2 AA practices:
-
-- Semantic headings
-- Keyboard-accessible navigation and controls
-- Visible focus states
-- Sufficient contrast
-- Form labels
-- Meaningful alternative text
-- Adequate touch-target sizes
-- Reduced-motion behavior for decorative animation
-- Do not rely on color alone to communicate meaning
-
-### Performance
-
-Prioritize:
-
-- Responsive images
-- Modern image formats
-- Lazy loading for non-critical media
-- Stable layouts
-- Efficient font loading
-- Minimal unnecessary JavaScript
-- Restrained decorative effects
-
-### Asset usage
-
-When files are uploaded from the LuxSync repository, prefer assets from these actual folders:
-
-- `brand/assets/01-brand/`
-- `brand/assets/02-icons-brand/`
-- `brand/assets/03-icons-website/`
-- `brand/assets/04-icons-social/`
-- `brand/assets/05-palette/`
-- `brand/assets/06-gradients/`
-- `brand/assets/07-components/`
-- `brand/assets/08-cards/`
-- `brand/assets/09-illustrations/`
-- `brand/assets/10-product-cards/`
-- `brand/assets/11-banners/`
-
-Prefer SVG for logos/icons and optimized WebP for larger imagery where appropriate.
-
-If a legacy text-bearing raster graphic visibly conflicts with Manrope/Inter, use the graphic as design reference but render the text natively in Manrope/Inter or use a regenerated asset.
-
-### Commerce boundary for this generation
-
-This initial Airo build is a staging/reference implementation.
-
-Represent the full storefront UX, including catalog browsing, product details, search, account concept, cart, and checkout path, but:
-
-- Do not connect live payments yet.
-- Do not change production DNS.
-- Do not replace the existing Commerce Plus system of record.
-- Do not create a second unmanaged live product catalog.
-
-Use editable placeholder product data where validated commerce data is not yet available.
+The current SVG masters are generated from the repository's Luxury Orbit asset generator. Do not recreate them through an image generator unless a photographic/interior scene is intentionally required.
 
 ### Future roadmap
 
-Architect the site so future additions can be added cleanly:
-
-- SmartThings automation templates
-- LuxSync Grid SaaS dashboard
-- Elite integration / architecture services
-
-Do not advertise these roadmap items as currently available.
+Leave clean expansion points for SmartThings automation templates, LuxSync Grid, and elite architecture services. Do not advertise them as live.
 
 ### Final quality standard
 
-A first-time visitor should quickly understand:
+A first-time visitor should quickly understand that LuxSync is a premium curated smart-home commerce brand; products and bundles are selected to work together; SmartThings compatibility reduces complexity; shopping is intentionally curated; the technology belongs in a beautifully designed home or property; and customers can shop without becoming smart-home experts.
 
-- LuxSync is a premium curated smart-home commerce brand.
-- LuxSync sells products and curated bundles that are selected to work together.
-- SmartThings compatibility reduces complexity.
-- The shopping experience is intentionally curated rather than overwhelming.
-- LuxSync technology belongs in a beautifully designed home or property.
-- The customer can shop confidently without needing to become a smart-home expert.
-
-The final impression should be:
-
-**Sophisticated technology that feels at home, is easy to understand, and is thoughtfully curated.**
-
-Every important design, copy, and commerce decision should reinforce:
+Every important design, content, and commerce decision should reinforce:
 
 **Where Luxury Lives Intelligently.**
