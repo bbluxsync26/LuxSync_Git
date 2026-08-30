@@ -15,8 +15,12 @@ Authoritative Plush Drift v2.1 colors:
 
 The metallic rose and icy-blue orbit treatments may use derived highlight/shadow
 tints, but the six flat base colors above remain the source-of-truth palette.
+
+Commerce rule:
+- Category graphics must not invent prices, ratings, stock claims, or scarcity.
 """
 from pathlib import Path
+import re
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSET_ROOT = ROOT / "brand" / "assets"
@@ -68,9 +72,37 @@ def normalize_text(text: str) -> str:
     return normalized
 
 
+def sanitize_category_card(text: str) -> str:
+    """Remove invented commerce claims from generated category cards."""
+    text = re.sub(
+        r'<text x="90" y="790"[^>]*>.*?</text>',
+        '<text x="90" y="790" font-family=\'Inter,Arial,sans-serif\' '
+        'font-size="32" font-weight="500" fill="#D0BEB0">Curated collection</text>',
+        text,
+    )
+    text = re.sub(
+        r'<text x="90" y="850"[^>]*>.*?</text>',
+        '<text x="90" y="850" font-family=\'Inter,Arial,sans-serif\' '
+        'font-size="28" fill="#9E8B85">Compatibility-first selection</text>',
+        text,
+    )
+    text = re.sub(
+        r'<text x="400" y="980" text-anchor="middle"[^>]*>SHOP CATEGORY</text>',
+        '<text x="400" y="980" text-anchor="middle" '
+        'font-family=\'Inter,Arial,sans-serif\' font-size="32" font-weight="500" '
+        'fill="#0D1526">SHOP CATEGORY</text>',
+        text,
+    )
+    return text
+
+
 def normalize_file(path: Path) -> bool:
     text = path.read_text(encoding="utf-8")
     normalized = normalize_text(text)
+
+    if path.parent.name == "10-product-cards" and path.suffix.lower() == ".svg":
+        normalized = sanitize_category_card(normalized)
+
     if normalized != text:
         path.write_text(normalized, encoding="utf-8")
         return True
@@ -80,8 +112,7 @@ def normalize_file(path: Path) -> bool:
 def main() -> int:
     changed = 0
 
-    # Keep the editable generator source aligned with the final base palette and
-    # approved typography. This makes later direct regeneration safer too.
+    # Keep the editable generator source aligned with approved base colors/fonts.
     if GENERATOR.exists() and normalize_file(GENERATOR):
         changed += 1
 
@@ -105,12 +136,19 @@ def main() -> int:
         if 'font-weight="700"' in text or "font-weight='700'" in text:
             leftovers.append(f"{path.relative_to(ROOT)}: Manrope 700 weight")
 
+        # Production-facing category graphics must not carry fabricated commerce data.
+        if path.parent.name == "10-product-cards" and path.suffix.lower() == ".svg":
+            if re.search(r'>\$\d', text):
+                leftovers.append(f"{path.relative_to(ROOT)}: invented price")
+            if "★★★★★" in text:
+                leftovers.append(f"{path.relative_to(ROOT)}: invented rating")
+
     if leftovers:
         raise RuntimeError("Brand normalization leftovers remain:\n" + "\n".join(leftovers))
 
     print(
         f"Normalized {changed} generator/SVG files to Manrope/Inter, "
-        "Plush Drift v2.1 base colors, and approved display weights"
+        "Plush Drift v2.1 base colors, approved display weights, and safe category copy"
     )
     return 0
 
