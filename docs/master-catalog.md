@@ -3,7 +3,7 @@
 **Status:** Active  
 **Repository:** `bbluxsync26/LuxSync_Git`  
 **Default branch:** `master`  
-**Last updated:** 2026-08-29
+**Last updated:** 2026-08-30
 
 ## Purpose
 
@@ -42,6 +42,7 @@ Official slogan:
 | DOC-004 | 3-Month Cookbook v2.0 | `docs/3-month-cookbook.md` | Active |
 | DOC-005 | Financial Model | `docs/financial-model.md` | Active |
 | DOC-006 | Launch Plan | `docs/launch-plan.md` | Active |
+| DOC-007 | LuxSync Project Runbook | `docs/project-runbook.md` | Active |
 
 ## Brand System
 
@@ -71,7 +72,7 @@ Official slogan:
 |---|---|---|---|
 | RB-002 | GoDaddy Airo AI Builder | `docs/runbooks/RB-002-GoDaddy-Airo-AI-Builder.md` | Active |
 | RB-004 | CI/CD | TBD | Planned |
-| RB-005 | Production Deployment | TBD | Planned |
+| RB-005 | Production Deployment and Domain/DNS | TBD | Planned |
 | RB-006 | Rollback | TBD | Planned |
 | RB-007 | Brand Asset Raster Regeneration | `docs/runbooks/RB-007-Brand-Asset-Raster-Regeneration.md` | Superseded by RB-008 for current graphics |
 | RB-008 | Luxury Orbit Brand Asset Generation | `docs/runbooks/RB-008-Luxury-Orbit-Brand-Asset-Generation.md` | Active |
@@ -80,13 +81,13 @@ Official slogan:
 
 | ID | Artifact | Path | Status |
 |---|---|---|---|
-| CL-001 | Airo First-Pass Review | `docs/checklists/CL-001-Airo-First-Pass-Review.md` | Active |
+| CL-001 | Airo First-Pass Review | `docs/checklists/CL-001-Airo-First-Pass-Review.md` | Active — Luxury Orbit reconciled |
 
 ## Prompt Catalog
 
 | ID | Artifact | Path | Status | Use |
 |---|---|---|---|---|
-| PR-001 | LuxSync Airo Master Website Build Prompt | `prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md` | Draft / Needs Luxury Orbit reconciliation before first generation | Initial Airo staging build |
+| PR-001 | LuxSync Airo Master Website Build Prompt | `prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md` | Draft / Ready for first Airo generation | Initial Airo staging build |
 | PR-002 | Website Design Review Prompt | TBD | Planned | Brand/UX review |
 | PR-003 | Deployment Validation Prompt | TBD | Planned | Pre-production validation |
 | PR-CONTENT-001 | Content Writer | `prompts/content-writer.md` | Active | General LuxSync copy |
@@ -117,13 +118,12 @@ Search | Account | Cart
 
 ## Open Decisions / Validation Items
 
-1. Reconcile PR-001 and any remaining legacy Plush Drift references with Luxury Orbit before the first Airo generation.
-2. Validate live Commerce Plus product catalog and product data before publishing prices/availability.
-3. Resolve conflicting senior-service pricing before public display.
-4. Run first PR-001 generation in Airo AI Builder after visual-prompt reconciliation.
-5. Review Airo output using CL-001 against ARC-001 and current brand standards.
-6. Determine exported source structure after inspecting actual Airo output.
-7. Define staging, production deployment, and rollback runbooks.
+1. Run the first PR-001 generation in Airo AI Builder.
+2. Review Airo output using CL-001 against ARC-001 and the active Luxury Orbit standards.
+3. Validate live Commerce Plus product catalog and product data before publishing prices or availability.
+4. Resolve conflicting senior-service pricing before public display.
+5. Determine exported source structure after inspecting actual Airo output.
+6. Define CI/CD, staging, production deployment/domain-DNS, and rollback runbooks.
 
 ## Maintenance Rules
 
@@ -134,3 +134,10 @@ Search | Account | Cart
 5. Do not store passwords, API keys, payment credentials, or other secrets in the repository.
 6. Review this catalog after material architecture changes and production deployments.
 7. Repository paths in this catalog must correspond to actual committed files.
+
+## Change Log
+
+| Date | Change |
+|---|---|
+| 2026-08-29 | Repository master catalog established. |
+| 2026-08-30 | Added DOC-007 and reconciled PR-001, ARC-001, RB-002, and CL-001 to Luxury Orbit. |
