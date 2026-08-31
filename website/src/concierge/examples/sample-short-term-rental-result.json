@@ -1,0 +1,27 @@
+{
+  "flags": [],
+  "recommended_foundation": {
+    "id": "smartthings_foundation_recommended",
+    "label": "SmartThings Foundation Recommended"
+  },
+  "recommended_experiences": [
+    {"id":"property_pulse","name":"Property Pulse","score":30,"tier":"primary"},
+    {"id":"guest_ready","name":"Guest Ready","score":26,"tier":"primary"},
+    {"id":"energy_intelligence","name":"Energy Intelligence","score":22,"tier":"primary"},
+    {"id":"water_watch","name":"Water Watch","score":18,"tier":"primary"},
+    {"id":"away","name":"Away","score":17,"tier":"primary"},
+    {"id":"turnover","name":"Turnover","score":16,"tier":"primary"},
+    {"id":"climate_intelligence","name":"Climate Intelligence","score":13,"tier":"strong"}
+  ],
+  "optional_experiences": [
+    {"id":"protect","name":"Protect","score":9,"tier":"optional"}
+  ],
+  "implementation_path": {
+    "id":"elevated_living",
+    "label":"Elevated Living",
+    "experience_target":{"min":5,"max":8},
+    "positioning":"Broader connected experience across major spaces"
+  },
+  "next_best_action":{"id":"build_rental_solution","label":"Build My Rental Solution"},
+  "all_scores":{"welcome_home":0,"effortless_departure":4,"goodnight":0,"gentle_morning":0,"intelligent_evening":0,"cinema":0,"entertain":2,"relax":0,"away":17,"protect":9,"water_watch":18,"climate_intelligence":13,"energy_intelligence":22,"night_path":0,"guest_ready":26,"turnover":16,"property_pulse":30,"accessible_living":0,"vacation_mode":0}
+}

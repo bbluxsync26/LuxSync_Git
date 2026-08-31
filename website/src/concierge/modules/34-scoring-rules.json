@@ -1,0 +1,1 @@
+[{"when":{"accessibility_needs":["voice"]},"add":{"accessible_living":3}},{"when":{"accessibility_needs":["entry"]},"add":{"accessible_living":2,"welcome_home":1}},{"when":{"accessibility_needs":["multi_device"]},"add":{"accessible_living":3,"goodnight":1}}]

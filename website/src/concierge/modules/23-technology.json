@@ -1,0 +1,34 @@
+{
+  "stage_id":"technology",
+  "stage_label":"Technology",
+  "progress_label":"Understanding What You Already Have",
+  "questions":[
+    {
+      "id":"technology_profile",
+      "type":"multi_select",
+      "required":true,
+      "prompt":"Tell us what’s already smart.",
+      "options":[
+        {"value":"smartthings","label":"Samsung SmartThings"},{"value":"alexa","label":"Amazon Alexa"},{"value":"google_home","label":"Google Home"},{"value":"apple_home","label":"Apple Home"},{"value":"ring","label":"Ring"},{"value":"philips_hue","label":"Philips Hue"},{"value":"lutron","label":"Lutron"},{"value":"ecobee","label":"Ecobee"},{"value":"nest","label":"Nest"},{"value":"smart_tv","label":"Smart TVs"},{"value":"smart_locks","label":"Smart Locks"},{"value":"cameras","label":"Cameras"},{"value":"smart_lighting","label":"Smart Lighting"},{"value":"smart_thermostats","label":"Smart Thermostats"},{"value":"smart_shades","label":"Smart Shades"},{"value":"sensors","label":"Sensors"},{"value":"matter","label":"Matter Devices"},{"value":"other","label":"Other"},{"value":"nothing_yet","label":"Nothing Yet"},{"value":"unknown_mix","label":"I Have Smart Devices, But I’m Not Sure What Works With What"}
+      ],
+      "exclusivity_rules":[{"value":"nothing_yet","exclusive":true}]
+    },
+    {
+      "id":"smartthings_hub_status",
+      "type":"single_select",
+      "required":false,
+      "show_when":{"technology_profile":["smartthings"]},
+      "prompt":"Do you currently use a SmartThings Hub or hub-enabled Samsung device?",
+      "options":[{"value":"yes","label":"Yes"},{"value":"no","label":"No"},{"value":"not_sure","label":"Not Sure"}]
+    },
+    {
+      "id":"current_setup_health",
+      "type":"single_select",
+      "required":true,
+      "prompt":"How well is your current setup working?",
+      "options":[
+        {"value":"stable","label":"Everything Works Well"},{"value":"mostly_stable","label":"Mostly Works"},{"value":"unreliable","label":"Some Devices Are Unreliable"},{"value":"fragmented","label":"Everything Feels Disconnected"},{"value":"underused","label":"I Barely Use the Smart Features"},{"value":"new","label":"I Am Starting From Scratch"}
+      ]
+    }
+  ]
+}

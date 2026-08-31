@@ -1,0 +1,32 @@
+{
+  "flags": [],
+  "recommended_foundation": {
+    "id": "existing_smartthings_foundation",
+    "label": "Existing SmartThings Foundation"
+  },
+  "recommended_experiences": [
+    {"id":"welcome_home","name":"Welcome Home","score":20,"tier":"primary"},
+    {"id":"cinema","name":"Cinema","score":19,"tier":"primary"},
+    {"id":"goodnight","name":"Goodnight","score":19,"tier":"primary"},
+    {"id":"effortless_departure","name":"Effortless Departure","score":14,"tier":"strong"},
+    {"id":"intelligent_evening","name":"Intelligent Evening","score":14,"tier":"strong"},
+    {"id":"climate_intelligence","name":"Climate Intelligence","score":13,"tier":"strong"},
+    {"id":"night_path","name":"Night Path","score":11,"tier":"strong"}
+  ],
+  "optional_experiences": [
+    {"id":"away","name":"Away","score":9,"tier":"optional"},
+    {"id":"entertain","name":"Entertain","score":9,"tier":"optional"},
+    {"id":"protect","name":"Protect","score":8,"tier":"optional"},
+    {"id":"relax","name":"Relax","score":7,"tier":"optional"},
+    {"id":"gentle_morning","name":"Gentle Morning","score":6,"tier":"optional"},
+    {"id":"property_pulse","name":"Property Pulse","score":6,"tier":"optional"}
+  ],
+  "implementation_path": {
+    "id":"elevated_living",
+    "label":"Elevated Living",
+    "experience_target":{"min":5,"max":8},
+    "positioning":"Broader connected experience across major spaces"
+  },
+  "next_best_action":{"id":"start_phase_1","label":"Start With Phase 1"},
+  "all_scores":{"welcome_home":20,"effortless_departure":14,"goodnight":19,"gentle_morning":6,"intelligent_evening":14,"cinema":19,"entertain":9,"relax":7,"away":9,"protect":8,"water_watch":0,"climate_intelligence":13,"energy_intelligence":3,"night_path":11,"guest_ready":0,"turnover":0,"property_pulse":6,"accessible_living":0,"vacation_mode":0}
+}

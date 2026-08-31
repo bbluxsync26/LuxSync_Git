@@ -1,0 +1,41 @@
+{
+  "stage_id":"intent",
+  "stage_label":"Intent",
+  "progress_label":"Understanding Your Goals",
+  "questions":[
+    {
+      "id":"primary_intent",
+      "type":"single_select",
+      "required":true,
+      "prompt":"What brought you to LuxSync today?",
+      "options":[
+        {"value":"new_smart_home","label":"I want to make my home smarter"},
+        {"value":"optimize_existing","label":"I already have smart devices but want them to work better together"},
+        {"value":"product_guidance","label":"I want help choosing products"},
+        {"value":"str_automation","label":"I want to automate a short-term rental"},
+        {"value":"business_automation","label":"I want to improve a business or office"},
+        {"value":"solve_problem","label":"I have a specific problem I want to solve"},
+        {"value":"exploration","label":"I want to see what is possible"}
+      ]
+    },
+    {
+      "id":"desired_outcomes",
+      "type":"multi_select",
+      "required":true,
+      "prompt":"What would make your space feel more intelligent?",
+      "options":[
+        {"value":"convenience","label":"Make everyday life easier","tags":["convenience"],"base_weight":3},
+        {"value":"arrival","label":"Make arriving home effortless","tags":["arrival"],"base_weight":3},
+        {"value":"comfort","label":"Improve comfort","tags":["comfort"],"base_weight":3},
+        {"value":"awareness","label":"Improve awareness and peace of mind","tags":["awareness"],"base_weight":3},
+        {"value":"energy","label":"Reduce unnecessary energy use","tags":["energy"],"base_weight":3},
+        {"value":"entertainment","label":"Create better entertainment experiences","tags":["entertainment"],"base_weight":3},
+        {"value":"accessibility","label":"Make spaces easier to use","tags":["accessibility"],"base_weight":3},
+        {"value":"guest_experience","label":"Improve guest experiences","tags":["guest_experience"],"base_weight":3},
+        {"value":"remote_management","label":"Manage property remotely","tags":["remote_management"],"base_weight":3},
+        {"value":"integration","label":"Help devices work together","tags":["integration"],"base_weight":3},
+        {"value":"discovery","label":"Surprise me","tags":["discovery"],"base_weight":2}
+      ]
+    }
+  ]
+}
