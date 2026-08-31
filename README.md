@@ -1,417 +1,306 @@
-# LuxSync
-
 <div align="center">
 
-**Intelligent Luxury for the Discerning Home**
+<img src="brand/assets/01-brand/luxsync-horizontal-lockup.png" alt="LuxSync" width="620" />
 
-[![Phase](https://img.shields.io/badge/Phase-Foundation%20%26%20Launch-172036?style=flat-square&labelColor=D0BEB0&color=172036)](#current-phase)
-[![Launch](https://img.shields.io/badge/Launch-6–Day%20Model-1F7A5C?style=flat-square&labelColor=D0BEB0&color=172036)](#our-six-day-launch)
-[![Business Model](https://img.shields.io/badge/Model-Zero–Inventory-7B96B2?style=flat-square&labelColor=D0BEB0&color=172036)](#the-business-model)
-[![Ecosystem](https://img.shields.io/badge/Ecosystem-SmartThings-15B8FF?style=flat-square&labelColor=D0BEB0&color=172036)](#technology-philosophy)
-[![Updated](https://img.shields.io/badge/Updated-August%202026-967878?style=flat-square&labelColor=D0BEB0&color=172036)](#)
+# LuxSync LLC
+
+### Smart Living. Elevated.
+
+**Where Luxury Lives Intelligently**
+
+[![Brand](https://img.shields.io/badge/LuxSync-v3-0D1526?style=for-the-badge&labelColor=172036)](brand/README.md)
+[![Design DNA](https://img.shields.io/badge/Design_DNA-Plush_Drift-967878?style=for-the-badge&labelColor=172036)](brand/brand-architecture.md)
+[![Typography](https://img.shields.io/badge/Type-Manrope_%2B_Inter-D0BEB0?style=for-the-badge&labelColor=172036)](brand/typography.md)
+[![Commerce](https://img.shields.io/badge/Commerce-GoDaddy_Commerce_Plus-7B96B2?style=for-the-badge&labelColor=172036)](docs/decisions/DEC-004-commerce-plus-and-airo-role.md)
+
+**Curated smart-home commerce · Intelligent automation · Premium customer experience**
 
 </div>
 
 ---
 
-## Navigation
-
-**Repository Areas:** [`docs`](#docs) • [`brand`](#brand) • [`content`](#content) • [`prompts`](#prompts) • [`website`](#website)
-
----
-
-## Table of Contents
-
-- [Executive Summary](#executive-summary)
-- [Current Phase](#current-phase)
-- [Our Philosophy](#our-philosophy)
-- [The Value We Deliver](#the-value-we-deliver)
-- [Who We Serve](#who-we-serve)
-- [The Business Model](#the-business-model)
-- [Financial Objectives](#financial-objectives)
-- [How We Compete](#how-we-compete)
-- [Product Portfolio](#product-portfolio)
-- [Our Six-Day Launch](#our-six-day-launch)
-- [Technology & Operations](#technology--operations)
-- [Brand Foundation](#brand-foundation)
-- [Leadership](#leadership)
-- [Repository Guide](#repository-guide)
-- [Our Mission & Vision](#our-mission--vision)
-
----
-
-## Executive Summary
-
-**LuxSync** is a luxury smart-home automation and commerce company positioned at the intersection of premium branding and intelligent home technology.
-
-Rather than launching as a software-first startup, LuxSync prioritizes a curated retail model built around trusted smart-home technology, premium customer experiences, and elegant product selection.
-
-We serve homeowners, short-term rental operators, caregivers, families, and professionals seeking intelligent solutions without complexity. Through carefully selected products, SmartThings-compatible automation, and AI-enabled customer engagement, we help customers create smarter, safer, and more elegant living environments.
-
----
-
-## Current Phase
-
-### Foundation & Launch Preparation
-
-**Status:** Ready for deployment
-
-#### Current Priorities
-
-- ✓ Complete supplier onboarding
-- ✓ Finalize storefront configuration
-- ✓ Deploy AI customer engagement systems
-- ✓ Publish launch content and lead magnets
-- ⟳ Validate fulfillment and checkout workflows
-- ⟳ Execute the six-day launch plan
-
----
-
-## Our Philosophy
-
-The guiding principle behind LuxSync is elegantly simple:
-
-> **Before building software, define the business.**
+> ### ✦ The LuxSync Idea
+> Premium technology should feel integrated into the home, not imposed on it. LuxSync curates smart-home products, bundles, and guidance around compatibility, simplicity, design, and intelligent living.
 >
-> **Before designing the website, understand the customer.**
->
-> **Before selling products, build a brand people trust.**
-
-Every document, asset, prompt, and line of code serves a single purpose:
-
-### What are we selling, who are we serving, and why does it matter?
+> The experience should feel like **premium interior architecture with intelligent technology quietly underneath it**.
 
 ---
 
-## The Value We Deliver
+## ◇ Repository at a Glance
 
-LuxSync exists to **curate the exceptional**.
+| Surface | Purpose | Enter |
+|---|---|---|
+| **Strategy** | Business model, launch, finance, roadmap, decisions | [`docs/`](docs/) |
+| **Brand** | LuxSync v3, Plush Drift DNA, palette, type, voice, assets | [`brand/`](brand/) |
+| **Content** | Approved website copy, FAQs, About, guides | [`content/`](content/) |
+| **Prompts** | Airo build prompts and reusable AI workflows | [`prompts/`](prompts/) |
+| **Website** | IA, page blueprints, design system, source placeholder | [`website/`](website/) |
 
-We help customers create smarter, safer, and more elegant living environments through:
-
-- **Carefully Selected Technology** — Only the finest products that meet our rigorous standards
-- **Thoughtful Automation** — Seamless integration without complexity
-- **Premium Design** — Aesthetics that endure and elevate
-
-In a market crowded with complexity, we provide **clarity** through trusted recommendations, seamless compatibility, and a luxury customer experience.
-
-### Our Promise
-
-**LuxSync curates intelligent luxury for people who value quality, simplicity, security, and timeless design.**
-
-Every product, bundle, and customer interaction reflects our commitment to:
-
-- Quality
-- Sophistication
-- Simplicity
-- Reliability
-- Long-term value
-- Exceptional service
+**Repository source of truth:** [`docs/master-catalog.md`](docs/master-catalog.md)
 
 ---
 
-## Who We Serve
+## ✦ Brand Architecture
 
-LuxSync focuses on five primary customer segments, each with distinct needs and aspirations.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-### 🏠 Short-Term Rental Operators
-Airbnb and VRBO hosts seeking remote property management, keyless entry, guest experiences, and improved ROI.
+### Plush Drift
 
-### 👴 Seniors & Caregivers
-Families seeking independent living support, home safety, leak detection, and caregiver notifications.
+The enduring **design DNA** beneath LuxSync.
 
-### 🏢 Smart Office & Property Managers
-Commercial operators requiring centralized oversight, security management, and multi-property control.
+- Layered dark surfaces
+- Soft concealed backlighting
+- Tactile press feedback
+- Warm/cool balance
+- Restrained metallic polish
+- Calm architectural motion
 
-### 👨‍👩‍👧 Intentional Parents
-Families focused on sleep optimization, smart nursery environments, and safety-focused automation.
+**Governing reference:**  
+[`brand/brand-architecture.md`](brand/brand-architecture.md)
 
-### 💼 Busy Professionals
-Individuals seeking convenience, premium experiences, elegant technology, and simplicity without compromise.
+</td>
+<td width="50%" valign="top">
 
----
+### LuxSync v3
 
-## The Business Model
+The current **visual implementation** of that DNA.
 
-LuxSync operates using a **zero-inventory dropshipping and curated-commerce strategy**, ensuring asset-light operations and disciplined growth.
+- Active asset root: `brand/assets-v3/`
+- Manrope + Inter
+- Approved seven-color palette
+- Protected exact logo artwork
+- Ecommerce-first component system
+- Intelligent Calm voice
 
-### Revenue Streams
+**Governing reference:**  
+[`brand/README.md`](brand/README.md)
 
-#### 🛍️ Curated Product Sales
-Premium smart-home devices selected for quality, design, and compatibility.
+</td>
+</tr>
+</table>
 
-#### 📦 Automation Bundles
-Purpose-built solutions designed around specific customer needs:
-- STR Property Automation Kits
-- Guest Welcome & Keyless Entry Bundles
-- Smart Sleep Nursery Kits
-- Senior Independent Safety Bundles
+### Tactile Illumination
 
-#### 🔄 Subscription-Based Services
-Recurring services associated with senior safety and monitoring solutions.
+Plush Drift controls are designed to feel like **backlit physical controls** rather than flat software rectangles.
 
----
+| State | Visual behavior |
+|---|---|
+| **Rest** | Dark Slate Navy / Dark Suede surface with faint concealed underlight |
+| **Hover** | Underlight brightens and widens slightly |
+| **Focus** | Accessible focus indicator plus restrained illumination |
+| **Press** | Surface compresses inward ~1–2 px, shadow tightens, concealed light becomes more visible |
+| **Release** | Smooth restrained return with reduced-motion support |
 
-## Financial Objectives
+**Preferred underlight:** Dusty Steel `#7B96B2`  
+**Warm alternatives:** Antique Rose Taupe `#967878`, Pale Driftwood `#D0BEB0`  
+**Premium reflected detail:** Champagne Rose Gold Metallic `#D6B0A0` anchor
 
-The LuxSync operating model is designed around **disciplined growth and lean operations**.
-
-### Launch Metrics
-
-| Metric | Target |
-|--------|--------|
-| **Startup Capital** | < $500 |
-| **Time to Market** | 6 Days |
-| **Time to Profitability** | 14 Days |
-| **Monthly Overhead** | $179.49 |
-| **Target Gross Margin** | 60.38% |
-
-### Month 1 Objectives
-
-| Objective | Target |
-|-----------|--------|
-| **Revenue** | $8,564 |
-| **Gross Profit** | $5,171 |
-| **Net Profit** | $4,991.51 |
+> **Not neon. Not arcade glow. Not generic SaaS.**  
+> The light should feel concealed inside a premium architectural control.
 
 ---
 
-## How We Compete
+## ◈ Approved Visual Foundation
 
-### What We Are NOT
+### Palette
 
-- ❌ A discount retailer
-- ❌ A commodity electronics store
-- ❌ A DIY marketplace
-- ❌ A software startup
+| Role | Color | Hex |
+|---|---|---|
+| Primary canvas | **Slate Navy** | `#0D1526` |
+| Elevated surface | **Dark Suede** | `#172036` |
+| Primary light / warm surface | **Pale Driftwood** | `#D0BEB0` |
+| Secondary neutral | **Warm Taupe Mauve** | `#9E8B85` |
+| Warm accent | **Antique Rose Taupe** | `#967878` |
+| Intelligent-light accent | **Dusty Steel** | `#7B96B2` |
+| Premium metallic | **Champagne Rose Gold Metallic** | `#D6B0A0` anchor |
 
-### What We ARE
+Champagne Rose Gold Metallic may use the approved dimensional gradient:
 
-- ✓ A trusted curator
-- ✓ A luxury commerce brand
-- ✓ An intelligent-living advisor
-- ✓ A premium customer experience company
+`#FFF2EA → #EAC8B9 → #D6B0A0 → #9C675C → #F2D6C8 → #7D4E49`
 
-### Competitive Advantages
+The gradient stops create the metallic finish. They are **not additional flat brand colors**.
 
-| Advantage | Benefit |
-|-----------|---------|
-| **Curated Catalog** | Hand-selected products that work together seamlessly |
-| **Luxury Brand** | Premium positioning and customer perception |
-| **Compatibility Standards** | SmartThings-native integration without complexity |
-| **Simplified Buying** | Clear choices without overwhelming selection |
-| **AI-Powered Support** | 24/7 intelligent customer engagement |
-| **Asset-Light Model** | Rapid scaling with minimal overhead |
+### Typography
 
----
+| Role | Typeface | Weights |
+|---|---|---|
+| Headings, display, navigation, buttons, graphic UI | **Manrope** | 500 / 600 |
+| Body, product copy, forms, supporting UI | **Inter** | 400 / 500 |
 
-## Product Portfolio
-
-### 📦 Curated Bundles
-
-| Bundle | Focus |
-|--------|-------|
-| **STR Property Automation** | Complete automation for short-term rentals |
-| **Guest Welcome & Keyless Entry** | Simplified check-in and elevated hospitality |
-| **Smart Sleep Nursery** | Environmental optimization and healthy sleep |
-| **Senior Independent Safety** | Independent living with caregiver awareness |
-
-### 🔧 Standalone Products
-
-- Smart Hubs
-- Smart Locks
-- Smart Lighting & Decorative Lighting
-- Smart Shades
-- Smart Speakers
-- Smart Appliances
-- Security Devices
-- Water Management Systems
-- Home Entertainment Products
-
-All products are selected for reliability, aesthetics, and SmartThings ecosystem compatibility.
+Protected logo lettering is artwork and is not recreated with live type.
 
 ---
 
-## Our Six-Day Launch
+## ◇ What LuxSync Is Building
 
-LuxSync follows a rapid deployment framework focused on speed, validation, and profitability.
+LuxSync is a **retail-first luxury smart-home automation and commerce company** built around a curated, zero-inventory operating model.
 
-### Phase 1: Infrastructure
-Banking setup, tax compliance, storefront deployment, brand implementation.
+The launch experience centers on:
 
-### Phase 2: Supplier Onboarding
-Petra Industries, D&H, CJdropshipping integration, and product mapping.
+- carefully selected SmartThings-compatible products;
+- curated lifestyle and property bundles;
+- guided product discovery;
+- compatibility-first recommendations;
+- thoughtful automation guidance;
+- premium customer support and education.
 
-### Phase 3: AI Customer Experience
-Activation, knowledge base setup, lead capture automation, and CRM integration.
+### Launch Audiences
 
-### Phase 4: Content & Community
-Founder stories, ROI guides, educational content, and community engagement.
-
-### Phase 5: Operational Validation
-Checkout testing, fulfillment verification, and customer journey optimization.
-
-### Phase 6: Public Launch
-Store launch, community outreach, lead generation, and paid traffic testing.
-
----
-
-## Technology & Operations
-
-### Platform & Infrastructure
-
-| Area | Solution |
-|------|----------|
-| **Commerce** | GoDaddy Commerce Plus |
-| **Productivity & CRM** | Microsoft 365 • OneDrive • Outlook |
-| **Banking** | FOUND Business Banking |
-| **AI Engagement** | Beside AI Receptionist |
-| **Smart Home** | Samsung SmartThings |
-
-### Supplier Network
-
-- **Petra Industries** — Premium product distribution
-- **D&H Distributing** — Wholesale fulfillment
-- **CJdropshipping** — Extended catalog access
-
-### Technology Philosophy
-
-LuxSync prioritizes products that work natively within established ecosystems rather than introducing unnecessary complexity. During launch, Samsung SmartThings serves as the primary compatibility standard, ensuring seamless integration across products, bundles, and automation recommendations.
-
-**Core Principles:**
-- Compatibility before customization
-- Simplicity before complexity
-- Reliability before novelty
-- Customer experience before technology
+| Audience | Desired outcome |
+|---|---|
+| **Short-Term Rental Operators** | Remote property control, guest experience, efficiency |
+| **Seniors & Caregivers** | Independent-living support and home awareness |
+| **Smart Office & Property Managers** | Centralized oversight and multi-space control |
+| **Intentional Parents** | Sleep, comfort, routines, and safety-focused automation |
+| **Busy Professionals** | Elegant convenience without unnecessary complexity |
 
 ---
 
-## Brand Foundation
+## ✦ Curated Commerce
 
-### Design System: Plush Drift v2.1
+### Bundle Concepts
 
-The LuxSync visual identity is built on a sophisticated, calming aesthetic that reflects our core values.
+- **STR Property Automation**
+- **Guest Welcome & Keyless Entry**
+- **Smart Sleep Nursery**
+- **Senior Independent Safety**
 
-#### Color Palette
+### Product Families
 
-| Role | Name | Hex | Usage |
-|------|------|-----|-------|
-| **Primary Background** | Slate Navy | `#0D1526` | Page backgrounds, deep surfaces |
-| **Card Surface** | Dark Suede | `#172036` | Cards, containers, elevated surfaces |
-| **Primary Text** | Pale Driftwood | `#D0BEB0` | Main body text, primary content |
-| **Secondary Text** | Warm Taupe Mauve | `#9E8B85` | Secondary information, muted text |
-| **Tertiary Accent** | Antique Rose Taupe | `#967878` | Subtle highlights, secondary accents |
-| **Primary Accent** | Dusty Steel | `#7B96B2` | Interactive elements, key highlights |
-| **Metallic Accent** | Champagne Rose Gold Metallic | `#D6B0A0` anchor | Premium rims, highlights, and signature metallic detail |
+Smart hubs · locks · lighting · shades · speakers · appliances · security · water management · entertainment
 
-Champagne Rose Gold Metallic uses the approved gradient `#FFF2EA → #EAC8B9 → #D6B0A0 → #9C675C → #F2D6C8 → #7D4E49` when metallic depth is required.
+Public prices, stock, availability, shipping promises, and recurring-service pricing must come from validated commerce data. Internal planning assumptions are not storefront claims.
 
-#### Typography System
+---
 
-**Headlines** — Manrope (500, 600 weight)  
-Soft geometry, rounded forms, premium without corporate feel.
+## ◈ Technology Philosophy
 
-**Body & UI** — Inter (400, 500 weight)  
-Comfortable for reading, exceptional screen legibility, clean and unobtrusive.
+| Principle | Meaning |
+|---|---|
+| **Compatibility before customization** | Prefer proven interoperability over unnecessary complexity |
+| **Simplicity before complexity** | Make intelligent living approachable |
+| **Reliability before novelty** | Favor dependable outcomes |
+| **Customer experience before technology** | Technology serves the lifestyle, not the reverse |
 
-```css
-/* Headlines */
-font-family: "Manrope", system-ui, sans-serif;
+**Launch compatibility standard:** Samsung SmartThings  
+**Production commerce system of record:** GoDaddy Commerce Plus
 
-/* Body & UI */
-font-family: "Inter", system-ui, sans-serif;
+Airo AI Builder is used for staging, design exploration, and reviewed generation within the repository-defined architecture. It does not silently redefine the production commerce system.
+
+---
+
+## ✦ Website Direction
+
+```text
+Home | Shop | Solutions | Guides | About | Support
 ```
 
-#### Brand Voice
+Commerce utilities:
 
-Our visual and verbal identity should feel:
+```text
+Search | Account | Cart
+```
 
-✓ Warm  
-✓ Relaxed  
-✓ Intelligent  
-✓ Human  
-✓ Refined  
-✓ Effortless  
+The launch storefront should feel:
 
-#### Design Philosophy
+- premium, warm, architectural, and calm;
+- mobile-first and accessible;
+- curated rather than crowded;
+- tactile rather than flat;
+- intelligently illuminated rather than neon;
+- luxurious without becoming ornamental or difficult to use.
 
-> Where warmth meets intelligence.
->
-> Where luxury feels like home.
+**Website design system:** [`website/styles/design-system.md`](website/styles/design-system.md)  
+**Website architecture:** [`docs/architecture/website-information-architecture.md`](docs/architecture/website-information-architecture.md)  
+**Airo master prompt:** [`prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md`](prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md)
 
 ---
 
-## Leadership
+## ◇ Intelligent Calm
+
+LuxSync communicates with confidence without shouting.
+
+**Warm · Thoughtful · Refined · Human · Unhurried · Professional**
+
+Avoid hype, fear-based selling, excessive urgency, jargon, technical showing-off, and unsupported superlatives.
+
+**Voice reference:** [`brand/voice-and-tone.md`](brand/voice-and-tone.md)
+
+---
+
+## ✦ Leadership
+
+<table>
+<tr>
+<td width="50%" valign="top">
 
 ### Bridgette Beardsley
 **Co-Founder & Chief Technology and Strategy Officer**
 
-Responsible for technology infrastructure, storefront implementation, financial systems, compliance, operational governance, and process design.
+Technology strategy, operating architecture, digital commerce, governance, and intelligent customer experience.
 
-[Read Bridgette's approved leadership biography](docs/leadership/bridgette-beardsley.md).
+[Approved biography →](docs/leadership/bridgette-beardsley.md)
+
+</td>
+<td width="50%" valign="top">
 
 ### Sheldon Bardol
 **Co-Founder & Chief Customer and Operations Officer**
 
-Responsible for supplier relationships, product curation, customer engagement, community development, marketing initiatives, and brand storytelling.
+Customer experience, operations, product curation, supplier relationships, and commercial execution.
 
-[Read Sheldon's approved leadership biography](docs/leadership/sheldon-bardol.md).
+[Approved biography →](docs/leadership/sheldon-bardol.md)
+
+</td>
+</tr>
+</table>
 
 ---
 
-## Repository Guide
+## ◈ Operating Source of Truth
 
-This repository serves as the strategic, operational, creative, and technical foundation for LuxSync.
-
-```
+```text
 LuxSync_Git/
-├── docs/              Business plans, launch strategies, financial models
-├── brand/             Visual identity, style guides, positioning frameworks
-├── content/           Website copy, guides, marketing assets
-├── prompts/           AI workflows, automation instructions, templates
-└── website/           Storefront config, UX design, application code
+├── docs/                 Strategy, decisions, runbooks, financial and launch planning
+├── brand/                Brand architecture, visual standards, identity and assets
+├── content/              Approved website and customer-facing copy
+├── prompts/              Reusable AI and generation prompts
+└── website/              IA, page blueprints, design system and future source code
 ```
 
-### docs
-Business plans, launch strategies, financial models, operating procedures, research, and strategic documentation.
+Key governing references:
 
-### brand
-Brand identity, style guides, visual assets, positioning frameworks, messaging standards, and design systems.
-
-### content
-Website copy, lead magnets, email campaigns, articles, customer guides, and marketing assets.
-
-### prompts
-AI workflows, reusable prompts, automation instructions, operational templates, and content-generation systems.
-
-### website
-Storefront configuration, website architecture, customer journeys, UX planning, design assets, integrations, and application code.
+- [`docs/master-catalog.md`](docs/master-catalog.md) — repository index and precedence
+- [`brand/brand-architecture.md`](brand/brand-architecture.md) — Plush Drift design DNA
+- [`brand/README.md`](brand/README.md) — LuxSync v3 visual system
+- [`brand/colors.md`](brand/colors.md) — approved palette and metallic treatment
+- [`brand/typography.md`](brand/typography.md) — Manrope + Inter
+- [`website/styles/design-system.md`](website/styles/design-system.md) — interaction and UI implementation
 
 ---
 
-## Our Mission & Vision
-
-### Mission
+## ✦ Mission
 
 **To simplify luxury smart living through trusted curation, intelligent automation, and exceptional customer experiences.**
 
 ### Long-Term Vision
 
-LuxSync will evolve from a curated smart-home retailer into a trusted intelligent-living brand that combines:
+LuxSync will grow from curated smart-home commerce into a broader intelligent-living brand spanning:
 
-- Commerce
-- Automation
-- Design
-- Customer education
-- Premium lifestyle experiences
+**Commerce · Automation · Design · Education · Premium lifestyle experiences**
 
-Our goal is to become the **preferred destination** for customers who want technology that feels elegant, effortless, and purposeful.
+Future capabilities such as SmartThings automation templates and LuxSync Grid remain roadmap items until explicitly released.
 
 ---
 
 <div align="center">
 
-**LuxSync LLC**  
-*Where Luxury Lives Intelligently*
+### LuxSync LLC
+
+**Where Luxury Lives Intelligently**
+
+*Plush Drift design DNA · LuxSync v3 visual system · Manrope + Inter*
 
 </div>
