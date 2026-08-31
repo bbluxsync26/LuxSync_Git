@@ -7,9 +7,11 @@ on:
       - master
       - brand/luxury-orbit-refresh
       - brand/exact-final-logo
+      - brand/fix-hero-approved-logo
     paths:
       - scripts/generate-luxury-orbit-assets.py
       - scripts/normalize-luxury-orbit-fonts.py
+      - scripts/apply-approved-logo-artwork.py
       - scripts/render-luxury-orbit-assets.py
       - scripts/regenerate-brand-raster-assets.py
       - scripts/reconcile-asset-metadata.py
@@ -72,6 +74,9 @@ jobs:
           </svg>
           SVG
 
+      - name: Apply approved logo artwork to generated assets
+        run: python3 scripts/apply-approved-logo-artwork.py
+
       - name: Render PNG WebP and catalog sheets
         run: python3 scripts/render-luxury-orbit-assets.py
 
@@ -90,6 +95,8 @@ jobs:
           test -f brand/assets/00-catalog/LuxSync-master-contact-sheet.png
           grep -q 'luxsync-monogram-orb.png' brand/assets/01-brand/luxsync-monogram-orb.svg
           grep -q 'luxsync-horizontal-lockup.png' brand/assets/01-brand/luxsync-horizontal-lockup.svg
+          grep -q '../01-brand/luxsync-monogram-orb.png' brand/assets/11-banners/hero-technology-feels-like-home.svg
+          grep -q '../01-brand/luxsync-monogram-orb.png' brand/assets/11-banners/hero-where-luxury-lives-intelligently.svg
           if grep -RIl --include='*.svg' -E '<text\b' brand/assets \
             | xargs -r grep -nE 'Century Gothic|Candara|Bodoni Moda|Bodoni MT|Didot|Georgia,serif'; then
             echo 'Legacy font declaration remains in a generated SVG.' >&2
@@ -110,7 +117,7 @@ jobs:
             brand/assets/06-gradients brand/assets/07-components brand/assets/08-cards \
             brand/assets/09-illustrations brand/assets/10-product-cards brand/assets/11-banners \
             brand/assets/asset-manifest.csv brand/assets/asset-manifest.json \
-            scripts/generate-luxury-orbit-assets.py
+            scripts/generate-luxury-orbit-assets.py scripts/apply-approved-logo-artwork.py
           if git diff --cached --quiet; then
             echo 'No generated asset or metadata changes were required.'
             exit 0
