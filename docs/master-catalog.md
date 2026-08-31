@@ -50,6 +50,8 @@ Do not redraw, retype, recolor, soften, cartoonize, or regenerate the approved l
 | DOC-007 | LuxSync Project Runbook | `docs/project-runbook.md` | Active |
 | DOC-008 | Bridgette Beardsley Leadership Biography | `docs/leadership/bridgette-beardsley.md` | Active / Approved |
 | DOC-009 | Sheldon Bardol Leadership Biography | `docs/leadership/sheldon-bardol.md` | Active / Approved |
+| CONTENT-001 | About LuxSync Website Copy | `content/about.md` | Active / Approved |
+| CONTENT-002 | LuxSync Frequently Asked Questions | `content/faqs.md` | Active / Approved |
 
 ## Brand System
 
@@ -90,6 +92,8 @@ Do not redraw, retype, recolor, soften, cartoonize, or regenerate the approved l
 | WEB-001 | Homepage Blueprint | `website/pages/home.md` | Active launch baseline |
 | WEB-002 | Website Design System | `website/styles/design-system.md` | Active — LuxSync v3 |
 | WEB-003 | Website Source Area | `website/src/README.md` | Placeholder until first reviewed export |
+| WEB-004 | About Page Blueprint | `website/pages/about.md` | Active design baseline |
+| WEB-005 | FAQ Page Blueprint | `website/pages/faqs.md` | Active design baseline |
 
 ## Runbooks
 
@@ -107,7 +111,7 @@ Do not redraw, retype, recolor, soften, cartoonize, or regenerate the approved l
 
 | ID | Artifact | Path | Status | Use |
 |---|---|---|---|---|
-| PR-001 | LuxSync Airo Master Website Build Prompt | `prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md` | Draft / Requires v3 asset references | Initial Airo staging build |
+| PR-001 | LuxSync Airo Master Website Build Prompt | `prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md` | Draft / Ready for first staging build | Initial Airo staging build |
 | PR-002 | Website Design Review Prompt | TBD | Planned | Brand/UX review |
 | PR-003 | Deployment Validation Prompt | TBD | Planned | Pre-production validation |
 | PR-CONTENT-001 | Content Writer | `prompts/content-writer.md` | Active | General LuxSync copy |
@@ -168,3 +172,4 @@ Search | Account | Cart
 | 2026-08-31 | Added Champagne Rose Gold Metallic as the seventh approved color. |
 | 2026-08-31 | Established LuxSync v3 as the authoritative brand asset system and moved the generated Luxury Orbit library to legacy compatibility status. |
 | 2026-08-31 | Added approved branded leadership biographies and titles for Bridgette Beardsley and Sheldon Bardol. |
+| 2026-08-31 | Incorporated founder biographies, canonical FAQs, and Find My LuxSync Solution into the website architecture, page blueprints, and Airo build controls. |

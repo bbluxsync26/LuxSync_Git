@@ -186,3 +186,4 @@ Asset metadata reconciliation should leave no uncommitted changes when the repos
 | 2026-08-30 | Added DEC-005 to preserve the unresolved senior-pricing conflict as an explicit publication guardrail. |
 | 2026-08-31 | Promoted Champagne Rose Gold Metallic to the seventh approved color and reconciled palette guidance and asset counts. |
 | 2026-08-31 | Added branded website biographies and approved leadership titles for both LuxSync co-founders. |
+| 2026-08-31 | Integrated the approved founder profiles and canonical FAQs into the About, FAQ, homepage, architecture, Airo prompt, and review workflow. |

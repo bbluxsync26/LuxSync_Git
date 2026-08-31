@@ -18,12 +18,12 @@
 - [ ] Primary CTA is `Shop Smart Home`
 - [ ] Secondary CTA is `Get the ROI Guide`
 - [ ] Featured Solutions uses the five approved segments
-- [ ] Why LuxSync, Product Collections, How It Works, featured products, and lead-magnet blocks are present
+- [ ] Why LuxSync, Product Collections, Find My LuxSync Solution, How It Works, featured products, founder preview, FAQ preview, and lead-magnet blocks are present
 - [ ] Featured products do not use invented prices or availability
 
 ## Brand System
 
-### Plush Drift v2.1 base
+### LuxSync v3 palette
 
 - [ ] Slate Navy `#0D1526` anchors primary dark surfaces
 - [ ] Dark Suede `#172036` is used for elevated/card surfaces
@@ -40,13 +40,32 @@
 - [ ] Century Gothic, Candara, Montserrat, Bodoni-family, Didot, and Georgia are not used as website-system fonts
 - [ ] Approved exact logo artwork is preserved rather than re-typeset
 
-### Luxury Orbit treatment
+### LuxSync v3 treatment
 
 - [ ] Champagne Rose Gold Metallic is treated as the seventh approved color and its gradient stops are not misrepresented as additional palette colors
 - [ ] Dusty Steel-derived orbit/glow is soft and atmospheric
 - [ ] Design feels architectural, warm, refined, spacious, and premium
 - [ ] Production photography contains no baked-in website copy, navigation, prices, ratings, or CTAs
 - [ ] No cyberpunk neon, unapproved lavender base treatment, dense gadget-store layout, generic SaaS blue, or excessive glow/motion
+
+## About and Leadership
+
+- [ ] About follows `website/pages/about.md` and `content/about.md`
+- [ ] Bridgette Beardsley's title is exactly `Co-Founder & Chief Technology and Strategy Officer`
+- [ ] Sheldon Bardol's title is exactly `Co-Founder & Chief Customer and Operations Officer`
+- [ ] Compact biographies preserve the approved source meaning
+- [ ] Both founders receive equal visual authority
+- [ ] No invented credentials, founder history, or generated photographic likenesses
+
+## Frequently Asked Questions
+
+- [ ] FAQ page exists at `/guides/faqs`
+- [ ] Questions and answers follow `content/faqs.md`
+- [ ] Homepage shows no more than the six approved FAQ preview questions
+- [ ] Accordion is keyboard operable and exposes expanded state correctly
+- [ ] FAQ content remains available without JavaScript
+- [ ] FAQ structured data matches visibly rendered content
+- [ ] Information routes to `info@luxsync.net`; support routes to `support@luxsync.net`
 
 ## Content Integrity
 
