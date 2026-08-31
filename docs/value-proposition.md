@@ -1,6 +1,10 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="../brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # LuxSync LLC: Value Proposition v2.1
-**A Brand Paradigm Shift: Where Luxury Lives Intelligently**  
-*Smart Living. Elevated.*  
+**A Brand Paradigm Shift: Where Luxury Lives Intelligently**
+*Smart Living. Elevated.*
 *Reconciled: August 30, 2026*
 
 ---
@@ -22,7 +26,7 @@ Neither experience reflects the calm, confidence, and coherence LuxSync wants to
 
 LuxSync competes through **curation, compatibility, simplicity, and experience** rather than technical complexity.
 
-The authoritative **Plush Drift v2.1** brand system provides the visual and verbal foundation. The active **Luxury Orbit** website/graphics treatment adds restrained metallic rose detail, soft orbit lighting, premium photography, and spacious composition without replacing the base palette or typography.
+The authoritative **Plush Drift v2.1** brand system provides the visual and verbal foundation. The active **Crisp Dimensional** website/graphics treatment adds restrained metallic rose detail, soft orbit lighting, premium photography, and spacious composition without replacing the base palette or typography.
 
 LuxSync combines curated SmartThings-compatible hardware with outcome-oriented bundles and clear guidance so customers can create smart environments that feel considered rather than assembled from disconnected gadgets.
 
@@ -116,7 +120,7 @@ Roadmap capabilities must not be described as currently available on the launch 
 - **Official slogan:** Where Luxury Lives Intelligently
 - **Homepage hero:** Smart Living. Elevated.
 - **Base brand system:** Plush Drift v2.1
-- **Active web treatment:** Luxury Orbit
+- **Active web treatment:** Crisp Dimensional
 - **Headings / display / UI:** Manrope 500/600
 - **Body / supporting UI:** Inter 400/500
 - **Voice:** Intelligent Calm

@@ -1,3 +1,7 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # LuxSync
 
 <div align="center">
@@ -302,16 +306,16 @@ The LuxSync visual identity is built on a sophisticated, calming aesthetic that 
 | **Secondary Text** | Warm Taupe Mauve | `#9E8B85` | Secondary information, muted text |
 | **Tertiary Accent** | Antique Rose Taupe | `#967878` | Subtle highlights, secondary accents |
 | **Primary Accent** | Dusty Steel | `#7B96B2` | Interactive elements, key highlights |
-| **Metallic Accent** | Champagne Rose Gold Metallic | `#D6B0A0` anchor | Premium rims, highlights, and signature metallic detail |
+| **Metallic Accent** | Champagne Rose Gold Metallic | Palette-derived treatment | Premium rims, highlights, and signature metallic detail |
 
-Champagne Rose Gold Metallic uses the approved gradient `#FFF2EA → #EAC8B9 → #D6B0A0 → #9C675C → #F2D6C8 → #7D4E49` when metallic depth is required.
+Champagne Rose Gold Metallic uses the approved gradient `#D0BEB0 → #9E8B85 → #D0BEB0 → #967878 → #9E8B85` when metallic depth is required. It introduces no additional flat brand color.
 
 #### Typography System
 
-**Headlines** — Manrope (500, 600 weight)  
+**Headlines** — Manrope (500, 600 weight)
 Soft geometry, rounded forms, premium without corporate feel.
 
-**Body & UI** — Inter (400, 500 weight)  
+**Body & UI** — Inter (400, 500 weight)
 Comfortable for reading, exceptional screen legibility, clean and unobtrusive.
 
 ```css
@@ -326,12 +330,12 @@ font-family: "Inter", system-ui, sans-serif;
 
 Our visual and verbal identity should feel:
 
-✓ Warm  
-✓ Relaxed  
-✓ Intelligent  
-✓ Human  
-✓ Refined  
-✓ Effortless  
+✓ Warm
+✓ Relaxed
+✓ Intelligent
+✓ Human
+✓ Refined
+✓ Effortless
 
 #### Design Philosophy
 
@@ -407,7 +411,7 @@ Our goal is to become the **preferred destination** for customers who want techn
 
 <div align="center">
 
-**LuxSync LLC**  
+**LuxSync LLC**
 *Where Luxury Lives Intelligently*
 
 </div>

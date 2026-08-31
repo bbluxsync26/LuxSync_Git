@@ -1,3 +1,7 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="../../brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # Website Application Source
 
 **Status:** Placeholder / source structure not yet selected
@@ -13,7 +17,7 @@ It does **not** currently imply that a production website application or framewo
 - Accessibility
 - Commerce-first customer journeys
 - Plush Drift v2.1 base design system
-- Luxury Orbit web treatment
+- Crisp Dimensional web treatment
 - Manrope + Inter typography
 - SmartThings-focused launch messaging
 - Maintainable source control

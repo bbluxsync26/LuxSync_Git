@@ -1,10 +1,14 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="../../brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # LuxSync Website Design System
 
-**Status:** Active  
-**Brand system:** LuxSync v3  
-**Primary asset source:** `brand/assets-v3/`
+**Status:** Active
+**Brand system:** LuxSync Brand System 4.0
+**Primary asset source:** `brand/brand-system-v4/`
 
-LuxSync v3 is the active website treatment. It is crisp, architectural, premium, calm, and restrained. The approved logo artwork is immutable and all editable website UI uses Manrope/Inter and the approved palette only.
+LuxSync Brand System 4.0 is the active website treatment. It is crisp, architectural, premium, calm, and restrained. The approved logo artwork is immutable and all editable website UI uses Manrope/Inter and the approved palette only.
 
 ## Approved Colors
 
@@ -14,7 +18,7 @@ LuxSync v3 is the active website treatment. It is crisp, architectural, premium,
 - Warm Taupe Mauve `#9E8B85` — secondary neutral text/details
 - Antique Rose Taupe `#967878` — warm decorative accent
 - Dusty Steel `#7B96B2` — interactive/cool accent
-- Champagne Rose Gold Metallic, `#D6B0A0` anchor — premium metallic accent
+- Champagne Rose Gold Metallic, approved palette-derived treatment — premium metallic accent
 
 No lavender, purple, orange, electric blue, neon blue, or other unapproved brand colors may be introduced into website UI, icons, borders, overlays, or branded graphics.
 
@@ -30,8 +34,8 @@ Natural photography may contain natural scene color.
 
 Reference the protected logo artwork directly:
 
-- `brand/assets/01-brand/luxsync-monogram-orb.png`
-- `brand/assets/01-brand/luxsync-horizontal-lockup.png`
+- `brand/brand-system-v4/01-logos/luxsync-monogram-approved.png`
+- `brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png`
 
 Do not redraw, retype, recolor, soften, cartoonize, or regenerate either logo.
 
@@ -39,14 +43,15 @@ Do not redraw, retype, recolor, soften, cartoonize, or regenerate either logo.
 
 Use:
 
-- `brand/assets-v3/02-ui/buttons-and-ctas.svg`
-- `brand/assets-v3/02-ui/badges.svg`
-- `brand/assets-v3/02-ui/ecommerce-controls.svg`
-- `brand/assets-v3/03-icons/core-line-icons.svg`
-- `brand/assets-v3/04-heroes/hero-smart-living-elevated.svg`
-- `brand/assets-v3/04-heroes/hero-roi-guide.svg`
-- `brand/assets-v3/05-ecommerce/product-card-template.svg`
-- `brand/assets-v3/05-ecommerce/trust-bar.svg`
+- `brand/brand-system-v4/03-ui/buttons-and-ctas.svg`
+- `brand/brand-system-v4/03-ui/badges.svg`
+- `brand/brand-system-v4/03-ui/forms-and-search.svg`
+- `brand/brand-system-v4/03-ui/ecommerce-controls.svg`
+- `brand/brand-system-v4/04-icons/icon-library.svg`
+- `brand/brand-system-v4/05-heroes/home-technology-feels-like-home.svg`
+- `brand/brand-system-v4/05-heroes/roi-guide.svg`
+- `brand/brand-system-v4/06-ecommerce/product-card.svg`
+- `brand/brand-system-v4/06-ecommerce/trust-bar.svg`
 
 ## Component Language
 
@@ -82,7 +87,7 @@ Official slogan:
 
 - Production photography should be text-free wherever practical.
 - Do not bake live prices, ratings, stock, scarcity, navigation, or promotional claims into photographs.
-- Use approved v3 SVG compositions for branded graphics.
+- Use approved Brand System 4.0 SVG compositions for branded graphics.
 - Prefer SVG for vector UI and WebP for production scene imagery.
 
 ## Avoid

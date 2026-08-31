@@ -1,6 +1,10 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="../../brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # RB-002 — GoDaddy Airo AI Builder
 
-**Status:** Active  
+**Status:** Active
 **Last updated:** 2026-08-31
 **Scope:** LuxSync website generation and staging workflow
 
@@ -36,7 +40,7 @@ Review before each Airo build:
 - Repository `master` is current and repository consistency validation passes.
 - PR-001 is the approved draft for the first generation pass.
 - Plush Drift v2.1 is the authoritative base brand system.
-- Luxury Orbit is the active web/graphics treatment.
+- Crisp Dimensional is the active web/graphics treatment.
 - Manrope 500/600 is authoritative for headings/display/UI.
 - Inter 400/500 is authoritative for body/supporting UI.
 - Official slogan is `Where Luxury Lives Intelligently`.
@@ -71,7 +75,7 @@ Reject invented partnerships, awards, reviews, certifications, customer counts, 
 - Warm Taupe Mauve `#9E8B85`
 - Antique Rose Taupe `#967878`
 - Dusty Steel `#7B96B2`
-- Champagne Rose Gold Metallic `#D6B0A0` anchor
+- Champagne Rose Gold Metallic — approved palette-derived treatment
 
 ### Typography
 
@@ -80,17 +84,17 @@ Reject invented partnerships, awards, reviews, certifications, customer counts, 
 
 Approved logo artwork may preserve its exact lettering as artwork; do not infer website fonts from the logo.
 
-### Luxury Orbit character
+### Crisp Dimensional character
 
-Use layered dark surfaces, restrained Champagne Rose Gold Metallic accents, soft Dusty Steel orbit light, Pale Driftwood copy, premium imagery, generous negative space, and minimal organic motion.
+Use layered dark surfaces, restrained Champagne Rose Gold Metallic accents, soft Dusty Steel light accents, Pale Driftwood copy, premium imagery, generous negative space, and minimal organic motion.
 
-Use the approved metallic gradient around the `#D6B0A0` anchor. Metallic highlight/shadow stops and Dusty Steel-derived icy-blue tints are rendering effects, not additional standalone colors.
+Use the approved metallic gradient from approved palette colors. Metallic highlight/shadow stops and Dusty Steel-derived icy-blue tints are rendering effects, not additional standalone colors.
 
 Reject cyberpunk neon, lavender as an unapproved base color, loud gradients, generic SaaS blue, dense gadget-store grids, excessive glassmorphism, and aggressive popups.
 
 ## Step 4 — Load Repository Assets
 
-Prefer current approved assets beneath `brand/assets/`.
+Use current approved assets beneath `brand/brand-system-v4/`. The `brand/assets/` directory contains protected source logos and text-free photography only.
 
 - Preserve the approved exact primary monogram and horizontal lockup.
 - Use SVG for icons/vector UI and optimized WebP for larger raster scenes where supported.

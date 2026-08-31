@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="700" viewBox="0 0 1600 700" role="img" aria-label="LuxSync Technology that feels like home. hero">
+<defs>
+ <linearGradient id="champagne" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D0BEB0"/><stop offset=".28" stop-color="#9E8B85"/><stop offset=".52" stop-color="#D0BEB0"/><stop offset=".75" stop-color="#967878"/><stop offset="1" stop-color="#9E8B85"/></linearGradient>
+ <linearGradient id="steelLight" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#7B96B2" stop-opacity=".15"/><stop offset=".5" stop-color="#D0BEB0" stop-opacity=".92"/><stop offset="1" stop-color="#7B96B2" stop-opacity=".18"/></linearGradient>
+ <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#0D1526" stop-opacity=".96"/><stop offset=".58" stop-color="#0D1526" stop-opacity=".7"/><stop offset="1" stop-color="#0D1526" stop-opacity=".15"/></linearGradient>
+ <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0D1526" flood-opacity=".55"/></filter>
+ <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <style>.display{font-family:Manrope,Arial,sans-serif;font-weight:600}.body{font-family:Inter,Arial,sans-serif}.caps{letter-spacing:2.5px}.light{fill:#D0BEB0}.muted{fill:#9E8B85}.steel{fill:#7B96B2}.card{fill:#172036;stroke:#9E8B85;stroke-opacity:.28}</style>
+</defs><rect width="100%" height="100%" fill="#0D1526"/>
+      <defs><clipPath id="scene"><rect width="1600" height="700"/></clipPath></defs><image width="1600" height="700" preserveAspectRatio="xMidYMid slice" clip-path="url(#scene)" xlink:href="../../assets/12-scenes/home-hero-room.png"/><rect width="1600" height="700" fill="url(#fade)"/>
+      <text x="100" y="142" class="body caps steel" font-size="17">INTELLIGENT LUXURY</text><text x="100" y="245" class="display light" font-size="76">Technology that feels</text><text x="100" y="329" class="display" fill="url(#champagne)" font-size="76">like home.</text><text x="105" y="396" class="body light" font-size="25">Quiet intelligence. Beautifully integrated.</text>
+      <rect x="100" y="458" width="270" height="64" rx="32" fill="#D0BEB0"/><text x="235" y="498" text-anchor="middle" class="display" fill="#0D1526" font-size="16">EXPLORE SOLUTIONS →</text>
+      <image x="1195" y="42" width="330" height="120" preserveAspectRatio="xMidYMid meet" xlink:href="../../assets/01-brand/luxsync-horizontal-lockup.png"/><g transform="translate(1450 610)" stroke="#D0BEB0" opacity=".85" filter="url(#glow)"><path d="M-14 0H14M0 -14V14"/><circle r="2.5" fill="#D0BEB0" stroke="none"/></g></svg>

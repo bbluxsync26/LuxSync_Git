@@ -1,9 +1,13 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="../../brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # LuxSync Launch Website Information Architecture
 
-**Artifact:** ARC-001  
-**Status:** Active / Approved baseline  
+**Artifact:** ARC-001
+**Status:** Active / Approved baseline
 **Last updated:** 2026-08-31
-**Repository:** `bbluxsync26/LuxSync_Git`  
+**Repository:** `bbluxsync26/LuxSync_Git`
 **Governing branch:** `master`
 
 ## Purpose
@@ -12,7 +16,7 @@ Define the launch information architecture for LuxSync using the repository as t
 
 Current governing references include `brand/README.md`, `brand/colors.md`, `brand/typography.md`, `brand/voice-and-tone.md`, `website/pages/home.md`, and `website/styles/design-system.md`.
 
-Where older generated assets or guidance conflict, the authoritative **Plush Drift v2.1** base system, active **Luxury Orbit** web treatment, Manrope/Inter typography contract, and current homepage blueprint govern.
+Where older generated assets or guidance conflict, the authoritative **Plush Drift v2.1** base system, active **Crisp Dimensional** web treatment, Manrope/Inter typography contract, and current homepage blueprint govern.
 
 ## Launch Objective
 
@@ -121,9 +125,9 @@ Provide contact, product/compatibility questions, order support, setup guidance,
 - Warm Taupe Mauve `#9E8B85`
 - Antique Rose Taupe `#967878`
 - Dusty Steel `#7B96B2`
-- Champagne Rose Gold Metallic `#D6B0A0` anchor
+- Champagne Rose Gold Metallic — approved palette-derived treatment
 
-### Luxury Orbit treatment
+### Crisp Dimensional treatment
 
 Use the approved Champagne Rose Gold Metallic gradient, Dusty Steel-derived orbit light, spacious dark composition, soft architectural curves, and premium smart-living imagery. Metallic highlight/shadow stops and orbit tints are rendering effects, not additional standalone colors.
 
@@ -140,7 +144,7 @@ Approved exact logo artwork may preserve its own lettering as artwork and does n
 
 ### Visual character
 
-Deep Slate Navy/Dark Suede surfaces, restrained Champagne Rose Gold Metallic detail, Dusty Steel orbit light, Pale Driftwood copy, spacious composition, restrained atmospheric glow, and premium smart-living imagery.
+Deep Slate Navy/Dark Suede surfaces, restrained Champagne Rose Gold Metallic detail, Dusty Steel light accents, Pale Driftwood copy, spacious composition, restrained atmospheric glow, and premium smart-living imagery.
 
 Avoid cyberpunk neon, lavender as an unapproved base color, loud gradients, dense gadget-store grids, generic SaaS blue, excessive glassmorphism, and unnecessary motion.
 

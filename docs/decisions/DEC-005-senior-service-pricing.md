@@ -1,7 +1,11 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="../../brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # DEC-005 — Senior Service Pricing
 
-**Status:** Open / Decision Required  
-**Date opened:** 2026-08-30  
+**Status:** Open / Decision Required
+**Date opened:** 2026-08-30
 **Scope:** Senior Independent Safety hardware/service pricing
 
 ## Context
@@ -66,5 +70,5 @@ When the pricing model is approved:
 2. Update `docs/business-plan.md` and any affected financial forecast.
 3. Validate/update the Commerce Plus product/service record.
 4. Update customer-facing website/content only from the validated commerce data.
-5. Run `scripts/validate-repository-consistency.py` and update its pricing rule to match the newly approved decision.
+5. Run the current repository and Brand System 4.0 validation workflows after updating the approved decision.
 6. Update `docs/master-catalog.md`.

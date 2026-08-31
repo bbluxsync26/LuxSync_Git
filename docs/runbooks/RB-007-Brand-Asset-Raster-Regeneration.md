@@ -1,7 +1,11 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="../../brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # RB-007 — Brand Asset Raster Regeneration
 
-**Status:** Superseded for current generation; retained for historical traceability  
-**Date:** 2026-08-29  
+**Status:** Superseded for current generation; retained for historical traceability
+**Date:** 2026-08-29
 **Superseded by:** `docs/runbooks/RB-008-Luxury-Orbit-Brand-Asset-Generation.md`
 
 ## Purpose

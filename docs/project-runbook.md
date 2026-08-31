@@ -1,9 +1,13 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="../brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # LuxSync Project Runbook
 
-**Artifact:** DOC-007  
-**Status:** Active  
+**Artifact:** DOC-007
+**Status:** Active
 **Last updated:** 2026-08-31
-**Repository:** `bbluxsync26/LuxSync_Git`  
+**Repository:** `bbluxsync26/LuxSync_Git`
 **Default branch:** `master`
 
 ## Purpose
@@ -44,7 +48,7 @@ The repository is the source of truth. Conversation drafts and external copies b
 | AI architecture and documentation | ChatGPT | Planning, prompting, review, and documentation | Active |
 | Domain/DNS | GoDaddy | Public domain and DNS | Deployment runbook pending |
 | Base brand system | Plush Drift v2.1 | Palette, typography, voice, core design rules | Active / Authoritative |
-| Web visual treatment | Luxury Orbit | Website and web-graphics composition/effects | Active |
+| Web visual treatment | Crisp Dimensional | Website and web-graphics composition/effects | Active |
 | CI/CD | GitHub plus selected GoDaddy deployment path | Build, test, staging, and release | Runbook pending |
 | Repository validation | GitHub Actions + Python validator | Cross-repo consistency gate | Active |
 
@@ -55,7 +59,7 @@ Use the precedence defined in `docs/master-catalog.md`.
 Current implementation tie-breaker:
 
 - Base brand system: **Plush Drift v2.1**
-- Web/graphics treatment: **Luxury Orbit**
+- Web/graphics treatment: **Crisp Dimensional**
 - Official slogan: **Where Luxury Lives Intelligently**
 - Homepage hero: **Smart Living. Elevated.**
 - Primary CTA: **Shop Smart Home**
@@ -64,9 +68,9 @@ Current implementation tie-breaker:
 - Body / supporting UI: **Inter 400/500**
 - Voice: **Intelligent Calm**
 - Approved primary monogram and horizontal lockup: **protected exact artwork**
-- Champagne Rose Gold Metallic: **approved seventh color, `#D6B0A0` anchor with the approved metallic gradient**
+- Champagne Rose Gold Metallic: **approved seventh color, approved palette-derived treatment with the approved metallic gradient**
 
-Luxury Orbit uses the approved Champagne Rose Gold Metallic treatment and does not replace the Plush Drift v2.1 palette or Manrope/Inter typography.
+Crisp Dimensional uses the approved Champagne Rose Gold Metallic treatment and does not replace the Plush Drift v2.1 palette or Manrope/Inter typography.
 
 ## Core Delivery Flow
 
@@ -93,8 +97,9 @@ Luxury Orbit uses the approved Champagne Rose Gold Metallic treatment and does n
 | DEC-005 | Senior Service Pricing | `docs/decisions/DEC-005-senior-service-pricing.md` | Open / Decision Required |
 | RB-002 | GoDaddy Airo AI Builder | `docs/runbooks/RB-002-GoDaddy-Airo-AI-Builder.md` | Active |
 | RB-007 | Brand Asset Raster Regeneration | `docs/runbooks/RB-007-Brand-Asset-Raster-Regeneration.md` | Historical / Superseded |
-| RB-008 | Luxury Orbit Brand Asset Generation | `docs/runbooks/RB-008-Luxury-Orbit-Brand-Asset-Generation.md` | Active |
+| RB-008 | Previous Brand Asset Generation | `docs/runbooks/RB-008-Luxury-Orbit-Brand-Asset-Generation.md` | Historical / Superseded |
 | RB-009 | Repository Consistency Validation | `docs/runbooks/RB-009-Repository-Consistency-Validation.md` | Active |
+| RB-010 | Crisp Brand System 4.0 | `docs/runbooks/RB-010-Crisp-Brand-System-V4.md` | Active / Governing |
 | CL-001 | Airo First-Pass Review | `docs/checklists/CL-001-Airo-First-Pass-Review.md` | Active |
 | PR-001 | Airo Master Website Build Prompt | `prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md` | Ready after consistency gate |
 
@@ -108,7 +113,7 @@ Luxury Orbit uses the approved Champagne Rose Gold Metallic treatment and does n
 - [x] Launch information architecture established
 - [x] Commerce Plus/Airo boundary decided
 - [x] Plush Drift v2.1 base system established
-- [x] Luxury Orbit web treatment established
+- [x] Crisp Dimensional web treatment established
 - [x] Manrope/Inter typography contract established
 - [x] Approved exact primary logo artwork protected
 - [x] PR-001 reconciled to the current brand contract
@@ -149,22 +154,22 @@ From the repository root:
 
 ```bash
 python scripts/reconcile-asset-metadata.py
-python scripts/validate-repository-consistency.py
+python scripts/validate-crisp-brand-v4.py
 ```
 
 Asset metadata reconciliation should leave no uncommitted changes when the repository is clean.
 
 ## Validation and Troubleshooting Log Template
 
-**Date:**  
-**Component:**  
-**Environment:**  
-**Symptom:**  
-**Cause:**  
-**Resolution:**  
-**Validation:**  
-**Related artifact:**  
-**Commit/deployment:**  
+**Date:**
+**Component:**
+**Environment:**
+**Symptom:**
+**Cause:**
+**Resolution:**
+**Validation:**
+**Related artifact:**
+**Commit/deployment:**
 
 ## Decision Log
 
@@ -181,7 +186,7 @@ Asset metadata reconciliation should leave no uncommitted changes when the repos
 | Date | Change |
 |---|---|
 | 2026-08-29 | Initial project runbook created. |
-| 2026-08-30 | Reconciled operational baseline to Plush Drift v2.1 + Luxury Orbit and current website architecture. |
+| 2026-08-30 | Reconciled operational baseline to Plush Drift v2.1 + Crisp Dimensional and current website architecture. |
 | 2026-08-30 | Added Manrope/Inter tie-breaker, protected-logo rules, asset metadata reconciliation, and repository consistency validation. |
 | 2026-08-30 | Added DEC-005 to preserve the unresolved senior-pricing conflict as an explicit publication guardrail. |
 | 2026-08-31 | Promoted Champagne Rose Gold Metallic to the seventh approved color and reconciled palette guidance and asset counts. |

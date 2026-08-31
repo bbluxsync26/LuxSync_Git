@@ -1,6 +1,10 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="../../brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # DEC-004 — Commerce Plus and Airo Role
 
-**Status:** Active  
+**Status:** Active
 **Date:** 2026-08-29
 
 ## Decision

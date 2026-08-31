@@ -1,7 +1,11 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="../../brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # RB-009 — Repository Consistency Validation
 
-**Status:** Active  
-**Repository:** `bbluxsync26/LuxSync_Git`  
+**Status:** Active
+**Repository:** `bbluxsync26/LuxSync_Git`
 **Purpose:** Prevent source-of-truth drift across LuxSync strategy, brand, website, prompts, runbooks, and asset metadata.
 
 ## Governing Contract
@@ -10,7 +14,7 @@ The automated validator enforces the current LuxSync baseline:
 
 - Repository `master` is the source of truth.
 - Plush Drift v2.1 is the authoritative base brand system.
-- Luxury Orbit is the active web/graphics treatment layered on that base.
+- Crisp Dimensional is the active web/graphics treatment layered on that base.
 - Manrope 500/600 is authoritative for headings/display/graphic UI.
 - Inter 400/500 is authoritative for body/supporting UI.
 - Official slogan: `Where Luxury Lives Intelligently`.
@@ -24,9 +28,9 @@ The automated validator enforces the current LuxSync baseline:
 
 ## Automated Files
 
-- `scripts/validate-repository-consistency.py` — cross-repository validation.
-- `scripts/reconcile-asset-metadata.py` — synchronizes asset CSV/JSON/inventory metadata with actual committed assets.
-- `.github/workflows/validate-repository-consistency.yml` — runs validation for pull requests and pushes to `master`.
+- `scripts/validate-crisp-brand-v4.py` — authoritative brand and documentation validation.
+- `scripts/apply-doc-branding.py` — applies the approved LuxSync LLC header to Markdown.
+- `.github/workflows/validate-crisp-brand-v4.yml` — runs validation for pull requests and pushes to `master` or brand branches.
 
 ## What the Validator Checks
 
@@ -35,22 +39,22 @@ The automated validator enforces the current LuxSync baseline:
 - Governing docs reference Manrope and Inter.
 - Official slogan is consistent.
 - Homepage hero and CTAs match the approved launch baseline.
-- `brand/colors.md` contains the seven approved Plush Drift v2.1 colors, including Champagne Rose Gold Metallic anchored at `#D6B0A0`, and does not retain the superseded replacement palette.
+- `brand/colors.md` contains the seven approved Plush Drift v2.1 colors, including Champagne Rose Gold Metallic rendered from approved palette colors, and does not retain the superseded replacement palette.
 
 ### Generated assets
 
 - Generator source uses Manrope/Inter.
-- Generator source does not reintroduce superseded Luxury Orbit replacement base colors.
-- Exactly 98 SVG masters exist.
-- Editable SVG text does not contain forbidden legacy system-font declarations.
-- Protected exact logo wrappers still reference the approved logo rasters.
+- Generator source does not reintroduce superseded Crisp Dimensional replacement base colors.
+- Every v4 SVG master has matching PNG and WebP output.
+- Editable SVG text declares Manrope and Inter.
+- Protected exact logo copies match their sources by SHA-256.
 
-### Asset metadata
+### Asset integrity
 
-- `asset-manifest.json` reports Plush Drift v2.1 + Luxury Orbit + Manrope/Inter.
-- Logical counts remain 104 total assets: 98 SVG-based graphics plus six production scenes.
-- Every `asset-manifest.csv` width/height value matches the actual referenced SVG master.
-- Six scene manifest rows, PNGs, and WebPs exist.
+- No retired `brand/assets-v3` directory remains.
+- Every local SVG image reference resolves.
+- Branded SVG masters use only approved palette values.
+- Every Markdown document carries the approved LuxSync LLC header.
 
 ### Business guardrails
 
@@ -59,33 +63,12 @@ The automated validator enforces the current LuxSync baseline:
 - The value proposition contains all five approved customer segments.
 - `Smart Sleep Nursery` is the standardized nursery bundle name.
 
-## Asset Metadata Reconciliation
-
-Run from repository root:
-
-```bash
-python scripts/reconcile-asset-metadata.py
-```
-
-The script:
-
-1. Loads the 98-row vector CSV manifest.
-2. Confirms each referenced SVG exists.
-3. Reads actual SVG width/height values.
-4. Updates stale CSV dimensions.
-5. Confirms expected category counts.
-6. Confirms the six production scenes.
-7. Rewrites the JSON library summary from the authoritative brand contract.
-8. Rewrites the plain-text asset inventory.
-
-The brand-generation workflow runs metadata reconciliation after SVG normalization/rendering so generated assets and canonical metadata stay synchronized.
-
 ## Repository Validation
 
 Run from repository root:
 
 ```bash
-python scripts/validate-repository-consistency.py
+python scripts/validate-crisp-brand-v4.py
 ```
 
 A non-zero exit means the repository should not be considered release-ready until the reported conflicts are resolved.
@@ -96,9 +79,9 @@ The consistency workflow runs on pull requests targeting `master` and on pushes 
 
 Before merge:
 
-1. Asset metadata reconciliation must produce no uncommitted changes.
-2. Repository consistency validation must pass.
-3. `git diff --check` must pass.
+1. Brand System 4.0 validation must pass.
+2. `git diff --check` must pass.
+3. Rendered contact sheets must be reviewed.
 4. Any intentionally changed governing decision must update the corresponding docs, prompt/runbook/checklist, and master catalog in the same change set.
 
 ## When a Conflict Is Intentional

@@ -1,10 +1,14 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # LuxSync Color System
 
-**Status:** Active / Authoritative  
-**Base brand system:** Plush Drift v2.1  
-**Web visual treatment:** Luxury Orbit
+**Status:** Active / Authoritative
+**Base brand system:** Plush Drift v2.1
+**Web visual treatment:** Crisp Dimensional
 
-Luxury Orbit is the active website and web-graphics treatment. It is built on the **Plush Drift v2.1 seven-color approved palette** rather than replacing it.
+Crisp Dimensional is the active website and web-graphics treatment. It is built on the **Plush Drift v2.1 seven-color approved palette** rather than replacing it.
 
 ## Authoritative Base Colors
 
@@ -16,19 +20,19 @@ Luxury Orbit is the active website and web-graphics treatment. It is built on th
 | Secondary text / neutral | Warm Taupe Mauve | `#9E8B85` |
 | Warm decorative accent | Antique Rose Taupe | `#967878` |
 | Interactive / cool technology accent | Dusty Steel | `#7B96B2` |
-| Premium metallic accent | Champagne Rose Gold Metallic | `#D6B0A0` anchor |
+| Premium metallic accent | Champagne Rose Gold Metallic | Palette-derived treatment |
 
-These seven values are the source of truth for website, graphics, documentation, and generated assets. The first six are flat colors; Champagne Rose Gold Metallic is an approved metallic color anchored at `#D6B0A0`.
+These treatments are the source of truth for website, graphics, documentation, and generated assets. The first six are flat colors; Champagne Rose Gold Metallic is produced only from approved warm palette colors.
 
-## Luxury Orbit Derived Treatments
+## Crisp Dimensional Derived Treatments
 
-Luxury Orbit adds restrained premium treatments without changing the base palette.
+Crisp Dimensional adds restrained premium treatments without changing the base palette.
 
 ### Champagne Rose Gold Metallic Treatment
 
-Champagne Rose Gold Metallic is the seventh approved brand color. Its flat anchor is `#D6B0A0`; use the following approved gradient when metallic depth is required:
+Champagne Rose Gold Metallic is the seventh approved brand treatment. It has no separate flat anchor; use the following approved palette-only gradient when metallic depth is required:
 
-`#FFF2EA → #EAC8B9 → #D6B0A0 → #9C675C → #F2D6C8 → #7D4E49`
+`#D0BEB0 → #9E8B85 → #D0BEB0 → #967878 → #9E8B85`
 
 Use the flat anchor where gradients are unsupported. The highlight and shadow stops render the metallic finish and are not additional standalone palette colors.
 

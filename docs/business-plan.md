@@ -1,7 +1,11 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="../brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # LuxSync LLC: Unified Business Plan v2.1
-**Investor & Operational Strategy Playbook**  
-*Where Luxury Lives Intelligently*  
-*Classification: Confidential / Proprietary*  
+**Investor & Operational Strategy Playbook**
+*Where Luxury Lives Intelligently*
+*Classification: Confidential / Proprietary*
 *Reconciled: August 30, 2026*
 
 ---
@@ -58,7 +62,7 @@ Specific public product names, prices, compatibility, stock, and availability mu
 
 LuxSync uses a **zero-inventory dropship model** to reduce warehouse and inventory risk:
 
-1. **GoDaddy Commerce Plus Storefront:** Launch commerce system of record for catalog, cart, checkout, orders, and storefront operations. Website presentation follows the authoritative Plush Drift v2.1 base system with the Luxury Orbit web treatment.
+1. **GoDaddy Commerce Plus Storefront:** Launch commerce system of record for catalog, cart, checkout, orders, and storefront operations. Website presentation follows the authoritative Plush Drift v2.1 base system with the Crisp Dimensional web treatment.
 2. **FOUND Business Banking:** Business checking and tax-savings workflow used for operating cash management.
 3. **Beside AI Receptionist (214-833-0342):** AI-assisted lead capture and customer engagement, calibrated to the Intelligent Calm voice.
 4. **Petra Industries & D&H Distributing:** Primary and secondary wholesale sourcing/fulfillment candidates.
@@ -137,5 +141,5 @@ Do not present Month 2/Month 3 roadmap capabilities as available during the laun
 3. Public product prices, stock, availability, shipping promises, and recurring-service prices require validated commerce data.
 4. Senior-service pricing remains unresolved until a dedicated pricing decision is committed.
 5. Financial forecasts are internal planning assumptions, not achieved results.
-6. Plush Drift v2.1 is the authoritative base brand system; Luxury Orbit is the active web/graphics treatment.
+6. Plush Drift v2.1 is the authoritative base brand system; Crisp Dimensional is the active web/graphics treatment.
 7. Manrope 500/600 and Inter 400/500 are the authoritative website and graphic-UI fonts.

@@ -1,6 +1,10 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="../../brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # LuxSync Homepage Blueprint
 
-**Status:** Active launch baseline  
+**Status:** Active launch baseline
 **Architecture reference:** `docs/architecture/website-information-architecture.md`
 
 ## 1. Hero
@@ -28,7 +32,7 @@ Luxury smart-home technology designed for modern living, with curated hardware a
 
 ### Visual direction
 
-Use Luxury Orbit as the active web treatment on the Plush Drift v2.1 base system: Slate Navy / Dark Suede surfaces, restrained Champagne Rose Gold Metallic detail anchored at `#D6B0A0`, Dusty Steel orbit light, Pale Driftwood copy, generous negative space, and premium smart-living imagery. Keep the CTA visible above the fold on desktop and mobile.
+Use Crisp Dimensional as the active web treatment on the Plush Drift v2.1 base system: Slate Navy / Dark Suede surfaces, restrained Champagne Rose Gold Metallic detail rendered from approved palette colors, Dusty Steel light accents, Pale Driftwood copy, generous negative space, and premium smart-living imagery. Keep the CTA visible above the fold on desktop and mobile.
 
 ---
 
@@ -162,9 +166,9 @@ Commerce utilities such as Search, Account, and Cart should remain accessible th
 - Warm Taupe Mauve `#9E8B85`
 - Antique Rose Taupe `#967878`
 - Dusty Steel `#7B96B2`
-- Champagne Rose Gold Metallic `#D6B0A0` anchor
+- Champagne Rose Gold Metallic — approved palette-derived treatment
 
-Use the approved Champagne Rose Gold Metallic gradient for metallic depth. Dusty Steel-derived icy orbit highlights may be used sparingly as Luxury Orbit effects.
+Use the approved Champagne Rose Gold Metallic gradient for metallic depth. Dusty Steel-derived icy-blue highlight accents may be used sparingly as Crisp Dimensional effects.
 
 ### Typography
 

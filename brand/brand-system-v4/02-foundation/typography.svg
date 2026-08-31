@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-label="LuxSync typography system">
+<defs>
+ <linearGradient id="champagne" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D0BEB0"/><stop offset=".28" stop-color="#9E8B85"/><stop offset=".52" stop-color="#D0BEB0"/><stop offset=".75" stop-color="#967878"/><stop offset="1" stop-color="#9E8B85"/></linearGradient>
+ <linearGradient id="steelLight" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#7B96B2" stop-opacity=".15"/><stop offset=".5" stop-color="#D0BEB0" stop-opacity=".92"/><stop offset="1" stop-color="#7B96B2" stop-opacity=".18"/></linearGradient>
+ <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#0D1526" stop-opacity=".96"/><stop offset=".58" stop-color="#0D1526" stop-opacity=".7"/><stop offset="1" stop-color="#0D1526" stop-opacity=".15"/></linearGradient>
+ <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0D1526" flood-opacity=".55"/></filter>
+ <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <style>.display{font-family:Manrope,Arial,sans-serif;font-weight:600}.body{font-family:Inter,Arial,sans-serif}.caps{letter-spacing:2.5px}.light{fill:#D0BEB0}.muted{fill:#9E8B85}.steel{fill:#7B96B2}.card{fill:#172036;stroke:#9E8B85;stroke-opacity:.28}</style>
+</defs><rect width="100%" height="100%" fill="#0D1526"/>
+      <text x="80" y="86" class="body caps steel" font-size="16">Editable Brand Typography</text>
+      <text x="80" y="190" class="display light" font-size="72">Manrope 600</text><text x="80" y="240" class="body muted" font-size="19">Display · headings · navigation · calls to action</text>
+      <line x1="80" y1="300" x2="1320" y2="300" stroke="#967878" opacity=".55"/>
+      <text x="80" y="420" class="body light" font-size="58">Inter 400 / 500</text><text x="80" y="470" class="body muted" font-size="19">Body copy · product detail · forms · captions · supporting UI</text>
+      <text x="80" y="590" class="display" fill="url(#champagne)" font-size="43">Quiet intelligence. Beautifully integrated.</text>
+      <text x="80" y="660" class="body light" font-size="18">The approved dimensional logo lettering remains artwork and is never retyped.</text><g transform="translate(1295 610)" stroke="#D0BEB0" opacity=".85" filter="url(#glow)"><path d="M-14 0H14M0 -14V14"/><circle r="2.5" fill="#D0BEB0" stroke="none"/></g></svg>

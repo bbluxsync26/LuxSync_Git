@@ -1,17 +1,21 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # LuxSync Brand Guidelines
 
-**LuxSync LLC**  
-**Brand System v3 — Authoritative Visual System**
+**LuxSync LLC**
+**Brand System 4.0 — Authoritative Visual System**
 
 > Where Luxury Lives Intelligently
 
 ## Direction
 
-LuxSync v3 is the active branding, website, ecommerce, stationery, and marketing system.
+LuxSync Brand System 4.0 is the active branding, website, ecommerce, stationery, and marketing system.
 
 The desired impression is **premium interior design with intelligent technology quietly underneath it**: crisp, architectural, calm, refined, and highly polished.
 
-The previous generated Luxury Orbit library is now legacy compatibility content. New work must use [`assets-v3/`](assets-v3/).
+The previous flat v3 templates and legacy generated graphics are retired. New work must use [`brand-system-v4/`](brand-system-v4/).
 
 ## Approved Palette
 
@@ -23,7 +27,7 @@ Only these colors are approved for branded UI/vector work:
 - Warm Taupe Mauve `#9E8B85`
 - Antique Rose Taupe `#967878`
 - Dusty Steel `#7B96B2`
-- Champagne Rose Gold Metallic, using `#D6B0A0` as the approved metallic anchor
+- Champagne Rose Gold Metallic, rendered only from Pale Driftwood, Warm Taupe Mauve, and Antique Rose Taupe
 
 Do not introduce lavender, purple, orange, electric blue, neon blue, or other unapproved brand colors.
 
@@ -40,24 +44,25 @@ The approved LuxSync logos are artwork, not live typography.
 
 Protected exact masters:
 
-- `assets/01-brand/luxsync-monogram-orb.png`
-- `assets/01-brand/luxsync-horizontal-lockup.png`
+- `brand-system-v4/01-logos/luxsync-monogram-approved.png`
+- `brand-system-v4/01-logos/luxsync-horizontal-approved.png`
 
 They must never be redrawn, retyped, recolored, softened, cartoonized, or regenerated. New compositions reference these files directly.
 
 ## Active Asset Library
 
-Use [`assets-v3/`](assets-v3/):
+Use [`brand-system-v4/`](brand-system-v4/):
 
 - `00-reference/` — authoritative brand board
-- `01-foundation/` — approved palette
-- `02-ui/` — buttons, CTAs, badges, ecommerce controls
-- `03-icons/` — smart-living line icons
-- `04-heroes/` — website hero and ROI-guide compositions
-- `05-ecommerce/` — product-card and trust components
-- `06-stationery/` — business cards, letterhead, invoice
-- `07-marketing/` — social, email, and flyer templates
-- `08-docs/` — manifest and migration guidance
+- `01-logos/` — protected masters, legal lockup, responsive sizes, favicon
+- `02-foundation/` — approved palette and typography
+- `03-ui/` — buttons, CTAs, badges, forms, search, ecommerce controls
+- `04-icons/` — smart-living line icons
+- `05-heroes/` — website, solution, shop, STR, hub, and ROI heroes
+- `06-ecommerce/` — category cards, product card, and trust bar
+- `07-stationery/` — business cards, letterhead, invoice, email signature
+- `08-marketing/` — social, email, flyer, and presentation assets
+- `09-documentation/` — branded document header
 
 ## Legacy Asset Boundary
 
@@ -67,7 +72,7 @@ Do not use legacy generated logo, banner, icon, control, card, product-card, or 
 
 ## Documentation Rule
 
-Durable LuxSync documentation, including Markdown, should identify **LuxSync LLC** and reference the v3 branding system where appropriate.
+Durable LuxSync documentation, including Markdown, must identify **LuxSync LLC** and display the approved horizontal branding header.
 
 ## Brand Voice
 
@@ -75,8 +80,8 @@ Keep **Intelligent Calm**: warm, confident, thoughtful, unhurried, professional,
 
 ## Status
 
-**Brand system:** LuxSync v3  
-**Typography:** Manrope + Inter  
-**Logo treatment:** Protected approved artwork  
-**Status:** Active  
+**Brand system:** LuxSync Brand System 4.0
+**Typography:** Manrope + Inter
+**Logo treatment:** Protected approved artwork
+**Status:** Active
 **Updated:** August 31, 2026

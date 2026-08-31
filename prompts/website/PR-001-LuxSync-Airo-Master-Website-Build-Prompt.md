@@ -1,6 +1,10 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="../../brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # PR-001 — LuxSync Airo Master Website Build Prompt
 
-**Status:** Draft / Ready for first Airo generation after repository consistency validation  
+**Status:** Draft / Ready for first Airo generation after repository consistency validation
 **Updated:** 2026-08-31
 **Purpose:** Generate the LuxSync launch storefront in GoDaddy Airo AI Builder while preserving the repository source of truth and Commerce Plus production boundary.
 
@@ -94,9 +98,9 @@ Samsung SmartThings is the primary launch compatibility standard. Emphasize comp
 
 GoDaddy Commerce Plus remains the production commerce system of record. Represent storefront UX in staging, but do not connect live payments, alter production DNS, replace Commerce Plus, or create a second unmanaged live catalog.
 
-### Brand system and Luxury Orbit treatment
+### Brand system and Crisp Dimensional treatment
 
-Use **Plush Drift v2.1** as the authoritative base brand system and **Luxury Orbit** as the active website/web-graphics treatment.
+Use **Plush Drift v2.1** as the authoritative base brand system and **Crisp Dimensional** as the active website/web-graphics treatment.
 
 Base colors:
 
@@ -106,9 +110,9 @@ Base colors:
 - Warm Taupe Mauve `#9E8B85`
 - Antique Rose Taupe `#967878`
 - Dusty Steel `#7B96B2`
-- Champagne Rose Gold Metallic `#D6B0A0` anchor
+- Champagne Rose Gold Metallic — approved palette-derived treatment
 
-Use the approved Champagne Rose Gold Metallic gradient for restrained metallic depth and Dusty Steel-derived icy orbit highlights for cool illumination. The metallic highlight/shadow stops and orbit tints are rendering effects, not additional standalone palette colors.
+Use the approved Champagne Rose Gold Metallic gradient for restrained metallic depth and Dusty Steel-derived icy-blue highlight accents for cool illumination. The metallic highlight/shadow stops and orbit tints are rendering effects, not additional standalone palette colors.
 
 Typography:
 
@@ -123,7 +127,7 @@ Visual direction:
 
 - Layered Slate Navy / Dark Suede surfaces
 - Restrained Champagne Rose Gold Metallic detail
-- Soft Dusty Steel orbit light
+- Soft Dusty Steel light accents
 - Pale Driftwood copy
 - Premium smart-living/interior imagery
 - Spacious editorial composition
@@ -149,7 +153,7 @@ Use responsive images, modern formats, lazy loading, stable layouts, efficient f
 
 ### Repository assets
 
-Prefer current approved assets beneath `brand/assets/`.
+Use current approved assets beneath `brand/brand-system-v4/`. Use `brand/assets/` only as the protected source for exact logos and text-free photography when a v4 composition references it.
 
 - Use protected approved primary logo artwork exactly as supplied.
 - Prefer SVG for icons/vector UI and optimized WebP for larger scene imagery.

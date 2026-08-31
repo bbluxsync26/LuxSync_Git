@@ -1,6 +1,10 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="../../brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # CL-001 — Airo First-Pass Review
 
-**Status:** Active  
+**Status:** Active
 **Updated:** 2026-08-31
 **Use:** Immediately after the first PR-001 generation in Airo AI Builder
 
@@ -31,7 +35,7 @@
 - [ ] Warm Taupe Mauve `#9E8B85` supports secondary information
 - [ ] Antique Rose Taupe `#967878` provides restrained warm accent
 - [ ] Dusty Steel `#7B96B2` provides interaction/orbit-light emphasis
-- [ ] Champagne Rose Gold Metallic uses the `#D6B0A0` anchor and approved metallic gradient for premium emphasis
+- [ ] Champagne Rose Gold Metallic uses the approved palette-derived treatment and approved metallic gradient for premium emphasis
 
 ### Typography
 
@@ -40,7 +44,7 @@
 - [ ] Century Gothic, Candara, Montserrat, Bodoni-family, Didot, and Georgia are not used as website-system fonts
 - [ ] Approved exact logo artwork is preserved rather than re-typeset
 
-### Luxury Orbit treatment
+### Crisp Dimensional treatment
 
 - [ ] Champagne Rose Gold Metallic is treated as the seventh approved color and its gradient stops are not misrepresented as additional palette colors
 - [ ] Dusty Steel-derived orbit/glow is soft and atmospheric
@@ -91,16 +95,16 @@
 
 **Major issues:**
 
-- 
-- 
-- 
+-
+-
+-
 
 **Approved sections:**
 
-- 
-- 
-- 
+-
+-
+-
 
 **Next Airo prompt/edit:**
 
-- 
+-

@@ -1,8 +1,12 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # LuxSync Typography
 
-**Status:** Active / Authoritative  
-**Base brand system:** Plush Drift v2.1  
-**Web visual treatment:** Luxury Orbit
+**Status:** Active / Authoritative
+**Base brand system:** Plush Drift v2.1
+**Web visual treatment:** Crisp Dimensional
 
 ## Typography Contract
 
@@ -45,16 +49,16 @@ The approved LuxSync logo/monogram files are artwork. Their exact visual letteri
 
 Do not recreate, re-typeset, or modify protected exact logo artwork merely to force live-text typography into the logo.
 
-## Luxury Orbit Styling
+## Crisp Dimensional Styling
 
-Luxury Orbit may use spacing, tracking, scale, metallic treatment, orbit lighting, and editorial composition to create a luxury character, but typography remains Manrope + Inter.
+Crisp Dimensional may use spacing, tracking, scale, metallic treatment, orbit lighting, and editorial composition to create a luxury character, but typography remains Manrope + Inter.
 
 Use typography that feels airy, refined, calm, and highly legible. Avoid dense all-caps body copy and excessive letter spacing.
 
 ## Generation and Raster Rules
 
-- `scripts/generate-luxury-orbit-assets.py` must emit Manrope/Inter for editable text.
-- `scripts/normalize-luxury-orbit-fonts.py` is the enforcement layer for generated SVGs.
+- `scripts/generate-crisp-brand-v4.py` must emit Manrope/Inter for editable text.
+- `scripts/validate-crisp-brand-v4.py` is the enforcement layer for generated SVGs.
 - Build runners must install Manrope and Inter before raster rendering.
 - Generated SVGs must fail validation if legacy Century Gothic, Candara, Bodoni-family, Didot, or Georgia system declarations remain in editable text.
 - Where copy can be HTML/CSS instead of baked into imagery, prefer semantic HTML/CSS.

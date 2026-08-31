@@ -1,15 +1,19 @@
-# RB-008 — Luxury Orbit Brand Asset Generation
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="../../brand/brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
 
-**Status:** Active  
-**Repository:** `bbluxsync26/LuxSync_Git`  
-**Base brand system:** Plush Drift v2.1  
-**Web visual treatment:** Luxury Orbit
+# RB-008 — Crisp Dimensional Brand Asset Generation
+
+**Status:** Historical / Superseded by RB-010
+**Repository:** `bbluxsync26/LuxSync_Git`
+**Base brand system:** Plush Drift v2.1
+**Web visual treatment:** Crisp Dimensional
 
 ## Purpose
 
 Generate and maintain the current LuxSync vector/UI graphics library while preserving authoritative brand rules and protected approved logo artwork.
 
-RB-008 is the current generation runbook. It incorporates the typography/raster integrity controls originally documented in RB-007.
+RB-008 documents the retired generator architecture preserved on the dated backup branch. **Do not use these commands for current work.** RB-010 governs Brand System 4.0.
 
 ## Authoritative Rules
 
@@ -28,9 +32,9 @@ Generated editable SVG text must not use Century Gothic, Candara, Montserrat, Bo
 - Warm Taupe Mauve `#9E8B85`
 - Antique Rose Taupe `#967878`
 - Dusty Steel `#7B96B2`
-- Champagne Rose Gold Metallic `#D6B0A0` anchor
+- Champagne Rose Gold Metallic — approved palette-derived treatment
 
-Champagne Rose Gold Metallic is the seventh approved color. Its metallic rendering uses the approved light-to-dark gradient around the `#D6B0A0` anchor. Dusty Steel-derived icy orbit highlights remain rendering effects.
+Champagne Rose Gold Metallic is the seventh approved color. Its metallic rendering uses the approved light-to-dark gradient from approved palette colors. Dusty Steel-derived icy-blue highlight accents remain rendering effects.
 
 Do not combine Dusty Steel and Antique Rose Taupe into a lavender-looking overlay. The approved cool gradient is `dusty-steel-mist`, which stays within Slate Navy, Pale Driftwood, and Dusty Steel.
 
@@ -117,4 +121,4 @@ Before release:
 
 ## Relationship to RB-007
 
-RB-007 records the original typography-wide raster-regeneration process and remains useful historical traceability. For the current Luxury Orbit generation pipeline, **RB-008 governs** and carries forward the Manrope/Inter safeguards.
+RB-007 records the original typography-wide raster-regeneration process and remains useful historical traceability. For the current Crisp Dimensional generation pipeline, **RB-008 governs** and carries forward the Manrope/Inter safeguards.

@@ -1,10 +1,14 @@
+<!-- LUXSYNC-BRAND-HEADER:START -->
+<p align="center"><img src="../brand-system-v4/01-logos/luxsync-horizontal-approved.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="620"></p>
+<!-- LUXSYNC-BRAND-HEADER:END -->
+
 # LuxSync Legacy Web Asset Library
 
 **Status: Legacy / Compatibility Only**
 
 > LuxSync LLC · Where Luxury Lives Intelligently
 
-The active visual asset system is now [`../assets-v3/`](../assets-v3/).
+The active visual asset system is now [`../brand-system-v4/`](../brand-system-v4/).
 
 This legacy directory is retained only for:
 
@@ -19,7 +23,7 @@ Do **not** use the legacy generated logos, banners, icons, controls, cards, or p
 - `01-brand/luxsync-monogram-orb.png`
 - `01-brand/luxsync-horizontal-lockup.png`
 
-These are immutable approved artwork. They may be referenced by v3 compositions but must never be redrawn, retyped, recolored, softened, cartoonized, or regenerated.
+These are immutable approved artwork. They may be referenced by v4 compositions but must never be redrawn, retyped, recolored, softened, cartoonized, or regenerated.
 
 ## Curated scene photography retained here
 
@@ -32,10 +36,10 @@ These are immutable approved artwork. They may be referenced by v3 compositions 
 
 ## Approved palette compatibility
 
-The retained assets remain governed by the approved LuxSync palette, including **Champagne Rose Gold Metallic** with `#D6B0A0` as the metallic anchor.
+The retained assets remain governed by the approved LuxSync palette, including the palette-derived **Champagne Rose Gold Metallic** treatment.
 
 ## Active system
 
-Use [`../assets-v3/README.md`](../assets-v3/README.md) and [`../assets-v3/08-docs/MIGRATION.md`](../assets-v3/08-docs/MIGRATION.md) for all new branding, website, ecommerce, stationery, and marketing work.
+Use [`../brand-system-v4/README.md`](../brand-system-v4/README.md) and [`../../docs/runbooks/RB-010-Crisp-Brand-System-V4.md`](../../docs/runbooks/RB-010-Crisp-Brand-System-V4.md) for all new branding, website, ecommerce, stationery, and marketing work.
 
-The old generation scripts are historical tooling and do not define v3 artwork.
+The retired generation scripts are preserved on the backup branch and do not define v4 artwork.
