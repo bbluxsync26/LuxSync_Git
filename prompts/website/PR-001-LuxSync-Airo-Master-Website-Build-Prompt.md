@@ -1,7 +1,7 @@
 # PR-001 — LuxSync Airo Master Website Build Prompt
 
 **Status:** Draft / Ready for first Airo generation after repository consistency validation  
-**Updated:** 2026-08-30  
+**Updated:** 2026-08-31
 **Purpose:** Generate the LuxSync launch storefront in GoDaddy Airo AI Builder while preserving the repository source of truth and Commerce Plus production boundary.
 
 ## Prompt to paste into GoDaddy Airo AI Builder
@@ -106,8 +106,9 @@ Base colors:
 - Warm Taupe Mauve `#9E8B85`
 - Antique Rose Taupe `#967878`
 - Dusty Steel `#7B96B2`
+- Champagne Rose Gold Metallic `#D6B0A0` anchor
 
-Luxury Orbit may use restrained metallic rose gradients and Dusty Steel-derived icy orbit highlights for depth. Treat those as visual effects, not replacement base colors.
+Use the approved Champagne Rose Gold Metallic gradient for restrained metallic depth and Dusty Steel-derived icy orbit highlights for cool illumination. The metallic highlight/shadow stops and orbit tints are rendering effects, not additional standalone palette colors.
 
 Typography:
 
@@ -121,7 +122,7 @@ Approved exact LuxSync logo artwork may retain its exact visual lettering as art
 Visual direction:
 
 - Layered Slate Navy / Dark Suede surfaces
-- Restrained warm metallic rose detail
+- Restrained Champagne Rose Gold Metallic detail
 - Soft Dusty Steel orbit light
 - Pale Driftwood copy
 - Premium smart-living/interior imagery

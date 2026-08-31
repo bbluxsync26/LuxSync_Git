@@ -21,8 +21,9 @@ Luxury Orbit does not replace the Plush Drift base palette or the Manrope/Inter 
 - Warm Taupe Mauve `#9E8B85`
 - Antique Rose Taupe `#967878`
 - Dusty Steel `#7B96B2`
+- Champagne Rose Gold Metallic `#D6B0A0` anchor
 
-Derived highlight and shadow tints may be used for metallic rose and orbit-light effects, but the six colors above remain the base palette.
+Champagne Rose Gold Metallic is the seventh approved color. Its approved metallic rendering uses lighter champagne and deeper copper/rose stops around the `#D6B0A0` anchor. Dusty Steel-derived highlight and shadow tints may be used for orbit-light effects.
 
 See [colors.md](colors.md) for implementation details.
 
@@ -39,9 +40,9 @@ See [typography.md](typography.md) for implementation details.
 
 ## Asset Library
 
-The library contains **103 logical assets**:
+The library contains **104 logical assets**:
 
-- **97 SVG-based graphics**, each with generated PNG and WebP siblings
+- **98 SVG-based graphics**, each with generated PNG and WebP siblings
 - **6 production raster scenes**, each supplied as optimized PNG and WebP
 
 Assets live under [assets/](assets/):
@@ -85,4 +86,4 @@ Keep **Intelligent Calm**: warm, confident, thoughtful, unhurried, professional,
 **Web visual treatment:** Luxury Orbit  
 **Typography:** Manrope + Inter  
 **Status:** Active  
-**Updated:** August 30, 2026
+**Updated:** August 31, 2026

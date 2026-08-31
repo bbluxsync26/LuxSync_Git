@@ -2,7 +2,7 @@
 
 **Artifact:** DOC-007  
 **Status:** Active  
-**Last updated:** 2026-08-30  
+**Last updated:** 2026-08-31
 **Repository:** `bbluxsync26/LuxSync_Git`  
 **Default branch:** `master`
 
@@ -64,8 +64,9 @@ Current implementation tie-breaker:
 - Body / supporting UI: **Inter 400/500**
 - Voice: **Intelligent Calm**
 - Approved primary monogram and horizontal lockup: **protected exact artwork**
+- Champagne Rose Gold Metallic: **approved seventh color, `#D6B0A0` anchor with the approved metallic gradient**
 
-Luxury Orbit does not replace the Plush Drift v2.1 base palette or Manrope/Inter typography.
+Luxury Orbit uses the approved Champagne Rose Gold Metallic treatment and does not replace the Plush Drift v2.1 palette or Manrope/Inter typography.
 
 ## Core Delivery Flow
 
@@ -183,3 +184,4 @@ Asset metadata reconciliation should leave no uncommitted changes when the repos
 | 2026-08-30 | Reconciled operational baseline to Plush Drift v2.1 + Luxury Orbit and current website architecture. |
 | 2026-08-30 | Added Manrope/Inter tie-breaker, protected-logo rules, asset metadata reconciliation, and repository consistency validation. |
 | 2026-08-30 | Added DEC-005 to preserve the unresolved senior-pricing conflict as an explicit publication guardrail. |
+| 2026-08-31 | Promoted Champagne Rose Gold Metallic to the seventh approved color and reconciled palette guidance and asset counts. |

@@ -4,7 +4,8 @@ from html import escape
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'brand'/'assets'
-P={'navy':'#0D1526','blue':'#172036','blush':'#D0BEB0','taupe':'#9E8B85','rose':'#967878','powder':'#7B96B2','gold':'#D6B0A0','ink':'#090E1B'}
+CHAMPAGNE_ROSE_GOLD = '#D6B0A0'
+P={'navy':'#0D1526','blue':'#172036','blush':'#D0BEB0','taupe':'#9E8B85','rose':'#967878','powder':'#7B96B2','gold':CHAMPAGNE_ROSE_GOLD,'ink':'#090E1B'}
 DISPLAY="font-family='Manrope,Arial,sans-serif'"
 UI="font-family='Manrope,Arial,sans-serif'"
 BODY="font-family='Inter,Arial,sans-serif'"
@@ -55,14 +56,16 @@ for n,g in {'facebook':'f','instagram':'◎','linkedin':'in','pinterest':'p','x'
     body=f'<circle cx="256" cy="256" r="202" fill="url(#n)" stroke="url(#m)" stroke-width="17"/><text x="256" y="320" text-anchor="middle" {UI} font-size="170" font-weight="600" fill="url(#m)">{g}</text>'
     write(f'04-icons-social/{n}.svg',svg(512,512,body))
 
-# 05 palette — labels are the official Plush Drift v2.1 color names.
-swatches={'antique-rose-taupe':('ANTIQUE ROSE TAUPE',P['rose']),'dark-suede':('DARK SUEDE',P['blue']),'dusty-steel':('DUSTY STEEL',P['powder']),'pale-driftwood':('PALE DRIFTWOOD',P['blush']),'slate-navy':('SLATE NAVY',P['navy']),'warm-taupe-mauve':('WARM TAUPE MAUVE',P['taupe'])}
-for n,(t,c) in swatches.items():
-    write(f'05-palette/{n}.svg',svg(720,480,f'<rect x="34" y="34" width="652" height="410" rx="44" fill="{c}"/><rect x="34" y="320" width="652" height="124" fill="{P["blush"]}"/><text x="70" y="370" {UI} font-size="34" fill="{P["navy"]}">{t}</text><text x="70" y="414" {BODY} font-size="28" fill="{P["navy"]}">{c}</text>'))
+# 05 palette — labels are the seven official Plush Drift v2.1 color names.
+swatches={'antique-rose-taupe':('ANTIQUE ROSE TAUPE',P['rose'],P['rose']),'champagne-rose-gold-metallic':('CHAMPAGNE ROSE GOLD METALLIC',P['gold'],'url(#m)'),'dark-suede':('DARK SUEDE',P['blue'],P['blue']),'dusty-steel':('DUSTY STEEL',P['powder'],P['powder']),'pale-driftwood':('PALE DRIFTWOOD',P['blush'],P['blush']),'slate-navy':('SLATE NAVY',P['navy'],P['navy']),'warm-taupe-mauve':('WARM TAUPE MAUVE',P['taupe'],P['taupe'])}
+for n,(t,c,fill) in swatches.items():
+    fs=30 if 'METALLIC' in t else 34
+    write(f'05-palette/{n}.svg',svg(720,480,f'<rect x="34" y="34" width="652" height="410" rx="44" fill="{fill}"/><rect x="34" y="320" width="652" height="124" fill="{P["blush"]}"/><text x="70" y="370" {UI} font-size="{fs}" fill="{P["navy"]}">{t}</text><text x="70" y="414" {BODY} font-size="28" fill="{P["navy"]}">{c}</text>'))
 x=40; body=''
-for t,c in [('SLATE NAVY',P['navy']),('DARK SUEDE',P['blue']),('PALE DRIFTWOOD',P['blush']),('WARM TAUPE MAUVE',P['taupe']),('ANTIQUE ROSE TAUPE',P['rose']),('DUSTY STEEL',P['powder'])]:
-    body+=f'<rect x="{x}" y="45" width="240" height="160" rx="32" fill="{c}"/><text x="{x+120}" y="252" text-anchor="middle" {UI} font-size="21" fill="{P["navy"]}">{t}</text><text x="{x+120}" y="282" text-anchor="middle" {BODY} font-size="19" fill="{P["navy"]}">{c}</text>';x+=258
-write('05-palette/plush-drift-palette-strip.svg',svg(1600,330,body,bg='#FFFFFF'))
+for t,c,fill in [('SLATE NAVY',P['navy'],P['navy']),('DARK SUEDE',P['blue'],P['blue']),('PALE DRIFTWOOD',P['blush'],P['blush']),('WARM TAUPE MAUVE',P['taupe'],P['taupe']),('ANTIQUE ROSE TAUPE',P['rose'],P['rose']),('DUSTY STEEL',P['powder'],P['powder']),('CHAMPAGNE ROSE GOLD METALLIC',P['gold'],'url(#m)')]:
+    fs=15 if 'METALLIC' in t else 20
+    body+=f'<rect x="{x}" y="45" width="240" height="160" rx="32" fill="{fill}"/><text x="{x+120}" y="252" text-anchor="middle" {UI} font-size="{fs}" fill="{P["navy"]}">{t}</text><text x="{x+120}" y="282" text-anchor="middle" {BODY} font-size="19" fill="{P["navy"]}">{c}</text>';x+=272
+write('05-palette/plush-drift-palette-strip.svg',svg(1960,330,body,bg='#FFFFFF'))
 write('05-palette/suede-texture-tile.svg',svg(900,900,f'<rect width="900" height="900" fill="url(#n)"/><path d="M0 780C250 610 480 910 900 620" fill="none" stroke="url(#m)" stroke-width="14" opacity=".22"/>'))
 
 # 06 gradients

@@ -12,9 +12,11 @@ Authoritative Plush Drift v2.1 colors:
 - Warm Taupe Mauve #9E8B85
 - Antique Rose Taupe #967878
 - Dusty Steel #7B96B2
+- Champagne Rose Gold Metallic #D6B0A0 (anchor)
 
-The metallic rose and icy-blue orbit treatments may use derived highlight/shadow
-tints, but the six flat base colors above remain the source-of-truth palette.
+Champagne Rose Gold Metallic uses the approved #D6B0A0 anchor with lighter
+champagne and deeper copper/rose stops for metallic depth. Icy-blue orbit
+treatments may use derived highlight/shadow tints from Dusty Steel.
 
 Commerce rule:
 - Category graphics must not invent prices, ratings, stock claims, or scarcity.
@@ -153,7 +155,7 @@ def main() -> int:
 
     print(
         f"Normalized {changed} generator/SVG files to Manrope/Inter, "
-        "Plush Drift v2.1 base colors, approved display weights, XML-safe text, "
+        "the seven Plush Drift v2.1 colors, approved display weights, XML-safe text, "
         "and safe category copy"
     )
     return 0

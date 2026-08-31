@@ -3,8 +3,8 @@ Plush Drift v2.1 base system / Luxury Orbit web treatment
 
 Contents
 --------
-103 logical assets across 12 categories:
-- 97 SVG-based graphics with PNG/WebP derivatives
+104 logical assets across 12 categories:
+- 98 SVG-based graphics with PNG/WebP derivatives
 - 6 text-free production raster scenes with PNG/WebP delivery files
 
 Primary base palette
@@ -15,9 +15,10 @@ Pale Driftwood    #D0BEB0  — primary light text / warm light surface
 Warm Taupe Mauve  #9E8B85  — secondary text / neutral
 Antique Rose      #967878  — decorative / tertiary
 Dusty Steel       #7B96B2  — CTA / interaction / orbit-light anchor
+Champagne Rose Gold Metallic #D6B0A0 — premium metallic anchor
 
-Luxury Orbit may add restrained metallic rose and icy-blue highlight/shadow tints,
-but those are derived effects rather than replacement base colors.
+Champagne Rose Gold Metallic uses its approved light-to-dark metallic gradient.
+Luxury Orbit may add restrained Dusty Steel-derived icy-blue highlight/shadow tints.
 
 Typography
 ----------
@@ -51,7 +52,7 @@ recreations into those scenes.
 
 Metadata
 --------
-asset-manifest.csv            Canonical detailed inventory for 97 SVG-based graphics
+asset-manifest.csv            Canonical detailed inventory for 98 SVG-based graphics
 asset-manifest.json           Machine-readable library summary
 12-scenes/scene-manifest.csv  Canonical inventory for six production raster scenes
 

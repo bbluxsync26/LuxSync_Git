@@ -3,7 +3,7 @@
 **Status:** Active  
 **Repository:** `bbluxsync26/LuxSync_Git`  
 **Default branch:** `master`  
-**Last updated:** 2026-08-30
+**Last updated:** 2026-08-31
 
 ## Purpose
 
@@ -34,8 +34,9 @@ When current LuxSync files disagree, apply these rules:
 - **Primary CTA:** Shop Smart Home
 - **Secondary CTA:** Get the ROI Guide
 - **Protected exact logo artwork:** the approved primary monogram and horizontal lockup remain exact artwork and are not re-typeset merely to enforce live-text typography
+- **Approved metallic color:** Champagne Rose Gold Metallic uses the `#D6B0A0` anchor and approved light-to-dark metallic gradient
 
-Luxury Orbit may add restrained metallic rose and Dusty Steel-derived orbit-light treatments, but it does not replace the Plush Drift base palette or Manrope/Inter typography.
+Luxury Orbit uses the approved Champagne Rose Gold Metallic treatment and may add restrained Dusty Steel-derived orbit light without replacing the Plush Drift palette or Manrope/Inter typography.
 
 ## Core Strategy Documents
 
@@ -57,8 +58,8 @@ Luxury Orbit may add restrained metallic rose and Dusty Steel-derived orbit-ligh
 | BRAND-002 | Color System | `brand/colors.md` | Active — Plush Drift v2.1 base palette |
 | BRAND-003 | Typography | `brand/typography.md` | Active — Manrope + Inter |
 | BRAND-004 | Voice & Tone | `brand/voice-and-tone.md` | Active — Intelligent Calm |
-| BRAND-005 | Asset Library | `brand/assets/` | Active — 103 logical assets |
-| BRAND-006 | Vector Asset CSV | `brand/assets/asset-manifest.csv` | Active — 97 SVG-based graphics |
+| BRAND-005 | Asset Library | `brand/assets/` | Active — 104 logical assets |
+| BRAND-006 | Vector Asset CSV | `brand/assets/asset-manifest.csv` | Active — 98 SVG-based graphics |
 | BRAND-007 | Asset JSON Summary | `brand/assets/asset-manifest.json` | Active |
 | BRAND-008 | Production Scene Manifest | `brand/assets/12-scenes/scene-manifest.csv` | Active — 6 text-free scenes |
 
@@ -167,3 +168,4 @@ Search | Account | Cart
 | 2026-08-30 | Added DOC-007 and website/Airo architecture artifacts. |
 | 2026-08-30 | Reconciled Plush Drift v2.1, Luxury Orbit, Manrope/Inter, asset counts, business-plan math, and repository consistency automation. |
 | 2026-08-30 | Added DEC-005 to preserve unresolved senior-service pricing as an explicit publication guardrail. |
+| 2026-08-31 | Added Champagne Rose Gold Metallic as the seventh approved color and reconciled palette inventory counts. |

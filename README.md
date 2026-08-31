@@ -302,6 +302,9 @@ The LuxSync visual identity is built on a sophisticated, calming aesthetic that 
 | **Secondary Text** | Warm Taupe Mauve | `#9E8B85` | Secondary information, muted text |
 | **Tertiary Accent** | Antique Rose Taupe | `#967878` | Subtle highlights, secondary accents |
 | **Primary Accent** | Dusty Steel | `#7B96B2` | Interactive elements, key highlights |
+| **Metallic Accent** | Champagne Rose Gold Metallic | `#D6B0A0` anchor | Premium rims, highlights, and signature metallic detail |
+
+Champagne Rose Gold Metallic uses the approved gradient `#FFF2EA → #EAC8B9 → #D6B0A0 → #9C675C → #F2D6C8 → #7D4E49` when metallic depth is required.
 
 #### Typography System
 

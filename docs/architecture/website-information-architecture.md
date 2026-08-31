@@ -2,7 +2,7 @@
 
 **Artifact:** ARC-001  
 **Status:** Active / Approved baseline  
-**Last updated:** 2026-08-30  
+**Last updated:** 2026-08-31
 **Repository:** `bbluxsync26/LuxSync_Git`  
 **Governing branch:** `master`
 
@@ -121,10 +121,11 @@ Provide contact, product/compatibility questions, order support, setup guidance,
 - Warm Taupe Mauve `#9E8B85`
 - Antique Rose Taupe `#967878`
 - Dusty Steel `#7B96B2`
+- Champagne Rose Gold Metallic `#D6B0A0` anchor
 
 ### Luxury Orbit treatment
 
-Use restrained metallic rose gradients, Dusty Steel-derived orbit light, spacious dark composition, soft architectural curves, and premium smart-living imagery. Derived highlight/shadow tints are effects, not replacement base colors.
+Use the approved Champagne Rose Gold Metallic gradient, Dusty Steel-derived orbit light, spacious dark composition, soft architectural curves, and premium smart-living imagery. Metallic highlight/shadow stops and orbit tints are rendering effects, not additional standalone colors.
 
 ### Typography
 
@@ -139,7 +140,7 @@ Approved exact logo artwork may preserve its own lettering as artwork and does n
 
 ### Visual character
 
-Deep Slate Navy/Dark Suede surfaces, restrained metallic rose detail, Dusty Steel orbit light, Pale Driftwood copy, spacious composition, restrained atmospheric glow, and premium smart-living imagery.
+Deep Slate Navy/Dark Suede surfaces, restrained Champagne Rose Gold Metallic detail, Dusty Steel orbit light, Pale Driftwood copy, spacious composition, restrained atmospheric glow, and premium smart-living imagery.
 
 Avoid cyberpunk neon, lavender as an unapproved base color, loud gradients, dense gadget-store grids, generic SaaS blue, excessive glassmorphism, and unnecessary motion.
 

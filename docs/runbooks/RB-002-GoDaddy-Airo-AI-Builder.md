@@ -1,7 +1,7 @@
 # RB-002 — GoDaddy Airo AI Builder
 
 **Status:** Active  
-**Last updated:** 2026-08-30  
+**Last updated:** 2026-08-31
 **Scope:** LuxSync website generation and staging workflow
 
 ## Purpose
@@ -71,6 +71,7 @@ Reject invented partnerships, awards, reviews, certifications, customer counts, 
 - Warm Taupe Mauve `#9E8B85`
 - Antique Rose Taupe `#967878`
 - Dusty Steel `#7B96B2`
+- Champagne Rose Gold Metallic `#D6B0A0` anchor
 
 ### Typography
 
@@ -81,9 +82,9 @@ Approved logo artwork may preserve its exact lettering as artwork; do not infer 
 
 ### Luxury Orbit character
 
-Use layered dark surfaces, restrained warm metallic rose accents, soft Dusty Steel orbit light, Pale Driftwood copy, premium imagery, generous negative space, and minimal organic motion.
+Use layered dark surfaces, restrained Champagne Rose Gold Metallic accents, soft Dusty Steel orbit light, Pale Driftwood copy, premium imagery, generous negative space, and minimal organic motion.
 
-Derived rose-metal or icy-blue highlight tints are effects, not replacement base colors.
+Use the approved metallic gradient around the `#D6B0A0` anchor. Metallic highlight/shadow stops and Dusty Steel-derived icy-blue tints are rendering effects, not additional standalone colors.
 
 Reject cyberpunk neon, lavender as an unapproved base color, loud gradients, generic SaaS blue, dense gadget-store grids, excessive glassmorphism, and aggressive popups.
 

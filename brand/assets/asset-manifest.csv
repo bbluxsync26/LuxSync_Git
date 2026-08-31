@@ -45,7 +45,8 @@ category,name,description,transparent,width,height,formats,svg
 05-palette,warm-taupe-mauve,Warm Taupe Mauve color swatch,false,720,480,svg-png-webp,05-palette/warm-taupe-mauve.svg
 05-palette,antique-rose-taupe,Antique Rose Taupe color swatch,false,720,480,svg-png-webp,05-palette/antique-rose-taupe.svg
 05-palette,dusty-steel,Dusty Steel color swatch,false,720,480,svg-png-webp,05-palette/dusty-steel.svg
-05-palette,plush-drift-palette-strip,All six signature tones,false,1600,330,svg-png-webp,05-palette/plush-drift-palette-strip.svg
+05-palette,champagne-rose-gold-metallic,Champagne Rose Gold Metallic gradient swatch,false,720,480,svg-png-webp,05-palette/champagne-rose-gold-metallic.svg
+05-palette,plush-drift-palette-strip,All seven approved colors,false,1960,330,svg-png-webp,05-palette/plush-drift-palette-strip.svg
 05-palette,suede-texture-tile,Seamless-feel suede background tile,false,900,900,svg-png-webp,05-palette/suede-texture-tile.svg
 06-gradients,navy-drift,Navy Drift — primary full-bleed background,false,1600,900,svg-png-webp,06-gradients/navy-drift.svg
 06-gradients,rose-drift,Rose Drift — hero glow and CTA halo,false,1600,900,svg-png-webp,06-gradients/rose-drift.svg

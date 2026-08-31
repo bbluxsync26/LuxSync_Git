@@ -4,7 +4,7 @@
 **Base brand system:** Plush Drift v2.1  
 **Web visual treatment:** Luxury Orbit
 
-Luxury Orbit is the active website and web-graphics treatment. It is built on the **Plush Drift v2.1 six-color base palette** rather than replacing it.
+Luxury Orbit is the active website and web-graphics treatment. It is built on the **Plush Drift v2.1 seven-color approved palette** rather than replacing it.
 
 ## Authoritative Base Colors
 
@@ -16,18 +16,21 @@ Luxury Orbit is the active website and web-graphics treatment. It is built on th
 | Secondary text / neutral | Warm Taupe Mauve | `#9E8B85` |
 | Warm decorative accent | Antique Rose Taupe | `#967878` |
 | Interactive / cool technology accent | Dusty Steel | `#7B96B2` |
+| Premium metallic accent | Champagne Rose Gold Metallic | `#D6B0A0` anchor |
 
-These six values are the source-of-truth flat colors for website, graphics, documentation, and generated assets.
+These seven values are the source of truth for website, graphics, documentation, and generated assets. The first six are flat colors; Champagne Rose Gold Metallic is an approved metallic color anchored at `#D6B0A0`.
 
 ## Luxury Orbit Derived Treatments
 
 Luxury Orbit adds restrained premium treatments without changing the base palette.
 
-### Metallic Rose Treatment
+### Champagne Rose Gold Metallic Treatment
 
-Rose-gold/champagne effects may use derived highlight and shadow stops for metallic depth. The generator currently uses a reference around `#D6B0A0` with lighter champagne and deeper copper/rose stops.
+Champagne Rose Gold Metallic is the seventh approved brand color. Its flat anchor is `#D6B0A0`; use the following approved gradient when metallic depth is required:
 
-This metallic family is a **derived treatment**, not a seventh base brand color.
+`#FFF2EA → #EAC8B9 → #D6B0A0 → #9C675C → #F2D6C8 → #7D4E49`
+
+Use the flat anchor where gradients are unsupported. The highlight and shadow stops render the metallic finish and are not additional standalone palette colors.
 
 ### Orbit / Cool-Light Treatment
 
@@ -52,7 +55,7 @@ See `brand/typography.md` for the complete typography contract.
 - Warm Taupe Mauve supports secondary information.
 - Antique Rose Taupe provides warm decorative emphasis.
 - Dusty Steel carries interactive emphasis and the cool intelligent-light cue.
-- Metallic rose treatments are restrained premium accents, not dominant flat UI colors.
+- Champagne Rose Gold Metallic provides restrained premium emphasis and should not dominate large UI surfaces.
 - Avoid electric cyan, saturated magenta, lavender drift, or cyberpunk neon as new base colors.
 - Use gradients and glows selectively so the interface stays calm, premium, and readable.
 
