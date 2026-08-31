@@ -34,7 +34,7 @@ Use the flat anchor where gradients are unsupported. The highlight and shadow st
 
 ### Orbit / Cool-Light Treatment
 
-Dusty Steel `#7B96B2` is the source color for the cool orbit/glow signature. Derived icy-blue highlight tints may be used inside gradients and light effects when necessary for depth.
+Dusty Steel `#7B96B2` is the source color for the cool orbit/glow signature. Do not derive brighter icy-blue or electric-blue tints. Branded blue accents must remain Dusty Steel `#7B96B2` or the approved Brushed Dusty Steel metallic treatment.
 
 The effect must remain soft and atmospheric rather than neon.
 
