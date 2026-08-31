@@ -1,0 +1,1 @@
+[{"id":"arrival_bundle_bonus","condition":{"count_selected":{"field":"arrival_preferences","gte":3,"exclude":["nothing"]}},"add":{"welcome_home":5}}]

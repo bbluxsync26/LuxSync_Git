@@ -1,0 +1,17 @@
+{
+  "stage_id":"priorities",
+  "stage_label":"Priorities",
+  "progress_label":"Prioritizing What Matters Most",
+  "questions":[
+    {"id":"priority_rank","type":"ranked_select","required":true,"prompt":"If LuxSync could improve three things first, what matters most?","source":"inferred_goal_candidates","max_rank":3},
+    {
+      "id":"implementation_preference",
+      "type":"single_select",
+      "required":true,
+      "prompt":"How would you like to approach your smart-living plan?",
+      "options":[
+        {"value":"focused","label":"Start Focused"},{"value":"phased","label":"Build in Phases"},{"value":"comprehensive","label":"Transform the Space"},{"value":"ideal","label":"Show Me the Possibilities"},{"value":"guided","label":"I’m Not Sure"}
+      ]
+    }
+  ]
+}

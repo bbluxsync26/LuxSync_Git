@@ -1,0 +1,21 @@
+[
+  {"id":"welcome_home","name":"Welcome Home","category":"routine"},
+  {"id":"effortless_departure","name":"Effortless Departure","category":"routine"},
+  {"id":"goodnight","name":"Goodnight","category":"routine"},
+  {"id":"gentle_morning","name":"Gentle Morning","category":"routine"},
+  {"id":"intelligent_evening","name":"Intelligent Evening","category":"ambience"},
+  {"id":"cinema","name":"Cinema","category":"entertainment"},
+  {"id":"entertain","name":"Entertain","category":"entertainment"},
+  {"id":"relax","name":"Relax","category":"ambience"},
+  {"id":"away","name":"Away","category":"property_state"},
+  {"id":"protect","name":"Protect","category":"property_awareness"},
+  {"id":"water_watch","name":"Water Watch","category":"property_awareness"},
+  {"id":"climate_intelligence","name":"Climate Intelligence","category":"comfort"},
+  {"id":"energy_intelligence","name":"Energy Intelligence","category":"efficiency"},
+  {"id":"night_path","name":"Night Path","category":"lighting"},
+  {"id":"guest_ready","name":"Guest Ready","category":"str"},
+  {"id":"turnover","name":"Turnover","category":"str"},
+  {"id":"property_pulse","name":"Property Pulse","category":"property_awareness"},
+  {"id":"accessible_living","name":"Accessible Living","category":"accessibility"},
+  {"id":"vacation_mode","name":"Vacation Mode","category":"property_state"}
+]

@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://luxsync.net/schemas/concierge-engine-config.schema.json",
+  "title": "LuxSync Concierge Engine Config",
+  "type": "object",
+  "required": [
+    "meta",
+    "constants",
+    "experience_catalog",
+    "questionnaire",
+    "scoring",
+    "compatibility",
+    "foundation_logic",
+    "implementation_paths",
+    "roadmap",
+    "consultation_triggers",
+    "cta_logic",
+    "routing",
+    "blueprint_schema"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "product",
+        "config_version",
+        "schema_version",
+        "rules_engine"
+      ]
+    },
+    "constants": {
+      "type": "object"
+    },
+    "experience_catalog": {
+      "type": "array",
+      "minItems": 1
+    },
+    "questionnaire": {
+      "type": "array",
+      "minItems": 1
+    },
+    "scoring": {
+      "type": "object"
+    },
+    "compatibility": {
+      "type": "object"
+    },
+    "foundation_logic": {
+      "type": "object"
+    },
+    "implementation_paths": {
+      "type": "object"
+    },
+    "implementation_path_rules": {
+      "type": "array"
+    },
+    "roadmap": {
+      "type": "object"
+    },
+    "consultation_triggers": {
+      "type": "array"
+    },
+    "cta_logic": {
+      "type": "array"
+    },
+    "routing": {
+      "type": "object"
+    },
+    "blueprint_schema": {
+      "type": "object"
+    },
+    "state_models": {
+      "type": "object"
+    },
+    "analytics_events": {
+      "type": "array"
+    }
+  }
+}

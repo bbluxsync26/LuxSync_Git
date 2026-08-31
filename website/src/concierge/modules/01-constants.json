@@ -1,0 +1,23 @@
+{
+  "priority_multipliers": {
+    "priority_1": 1.5,
+    "priority_2": 1.3,
+    "priority_3": 1.15
+  },
+  "recommendation_thresholds": {
+    "primary": 15,
+    "strong": 10,
+    "optional": 6,
+    "suppress_below": 1
+  },
+  "minimum_recommended_experiences": 3,
+  "minimum_profile_completeness_for_blueprint": 70,
+  "square_footage_bands": [
+    {"id":"lt_1000","min":0,"max":999},
+    {"id":"1000_1999","min":1000,"max":1999},
+    {"id":"2000_2999","min":2000,"max":2999},
+    {"id":"3000_4999","min":3000,"max":4999},
+    {"id":"5000_plus","min":5000,"max":null},
+    {"id":"unknown","min":null,"max":null}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "stage_id": "welcome",
+  "stage_label": "Welcome",
+  "progress_label": "Beginning Your Blueprint",
+  "questions": [
+    {
+      "id": "entry_action",
+      "type": "single_select",
+      "required": true,
+      "prompt": "Let’s design how your space lives.",
+      "options": [
+        {"value":"begin_blueprint","label":"Begin My Blueprint"},
+        {"value":"know_what_i_need","label":"I Already Know What I Need"}
+      ]
+    }
+  ]
+}
