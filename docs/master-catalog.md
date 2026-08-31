@@ -48,6 +48,8 @@ Do not redraw, retype, recolor, soften, cartoonize, or regenerate the approved l
 | DOC-005 | Financial Model | `docs/financial-model.md` | Active planning baseline |
 | DOC-006 | Launch Plan | `docs/launch-plan.md` | Active |
 | DOC-007 | LuxSync Project Runbook | `docs/project-runbook.md` | Active |
+| DOC-008 | Bridgette Beardsley Leadership Biography | `docs/leadership/bridgette-beardsley.md` | Active / Approved |
+| DOC-009 | Sheldon Bardol Leadership Biography | `docs/leadership/sheldon-bardol.md` | Active / Approved |
 
 ## Brand System
 
@@ -165,3 +167,4 @@ Search | Account | Cart
 | 2026-08-30 | Reconciled website/Airo architecture and operating baseline. |
 | 2026-08-31 | Added Champagne Rose Gold Metallic as the seventh approved color. |
 | 2026-08-31 | Established LuxSync v3 as the authoritative brand asset system and moved the generated Luxury Orbit library to legacy compatibility status. |
+| 2026-08-31 | Added approved branded leadership biographies and titles for Bridgette Beardsley and Sheldon Bardol. |
