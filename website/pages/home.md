@@ -182,7 +182,18 @@ The full Contact form branches dynamically and shares Property Profile fields wi
 
 ## 11. Lead Magnet and Email Signup
 
-Reserve a premium content block for the **STR Smart Home ROI Guide** when ready.
+Feature the **LuxSync ROI Guide Library** with direct paths for Commercial & Care Environments, Short-Term Rentals, and Residential Living. The supporting homepage CTA remains **Get the ROI Guide** and should open the guide library so visitors can choose the audience-specific edition that fits them.
+
+At minimum, surface cards for:
+
+- Commercial Offices
+- Nursing Homes
+- Senior Living Communities
+- STR Owners, Operators, and Managers
+- Residential Homeowners
+- Busy Professionals
+- Intentional Parents and Families
+- Seniors, Caregivers, and Aging in Place
 
 Provide an email signup with calm, benefit-led copy rather than urgency. Marketing consent must remain separate from support/contact submissions.
 

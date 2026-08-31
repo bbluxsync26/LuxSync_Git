@@ -60,7 +60,7 @@ Required sequence:
 8. **Meet the Founders** — compact approved profiles for Bridgette Beardsley and Sheldon Bardol
 9. **FAQ Preview** — six canonical questions with a View All FAQs link
 10. **Contact / Support Gateway**
-11. **Lead Magnet / Email Signup** — STR Smart Home ROI Guide when ready
+11. **ROI Guide Library / Optional Email Download** — audience-specific guides for commercial, care, STR, and residential visitors
 12. **Footer**
 
 ## Find My LuxSync Solution
@@ -121,7 +121,22 @@ Do not imply third-party endorsement, make medical claims, expose unresolved pri
 
 ## Guides
 
-Launch content includes the STR Smart Home ROI Guide, compatibility guidance, SmartThings setup concepts, product-selection guidance, automation ideas, FAQ content, and future Experience-specific setup guidance.
+The Guides landing page follows `website/pages/guides.md` and presents the LuxSync ROI Guide Library before compatibility, setup, product-selection, automation, and FAQ content.
+
+Launch ROI guides are:
+
+- Commercial Offices
+- Nursing Homes
+- Senior Living Communities
+- STR Owners
+- STR Operators
+- STR Managers
+- Residential Homeowners
+- Busy Professionals
+- Intentional Parents and Families
+- Seniors, Caregivers, and Aging in Place
+
+All ROI guides use the shared methodology in `content/guides/roi/README.md`. They require customer inputs or clearly labeled scenarios and must not promise savings, payback, revenue, occupancy, retention, labor reduction, insurance outcomes, or incident prevention.
 
 The FAQ page follows `website/pages/faqs.md` and `content/faqs.md`.
 
