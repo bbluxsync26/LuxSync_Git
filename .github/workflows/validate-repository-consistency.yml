@@ -25,18 +25,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Reconcile metadata in check mode
-        run: |
-          cp brand/assets/asset-manifest.csv /tmp/asset-manifest.csv.before
-          cp brand/assets/asset-manifest.json /tmp/asset-manifest.json.before
-          cp brand/assets/00-catalog/ASSET-INVENTORY.txt /tmp/asset-inventory.before
-          python scripts/reconcile-asset-metadata.py
-          diff -u /tmp/asset-manifest.csv.before brand/assets/asset-manifest.csv
-          diff -u /tmp/asset-manifest.json.before brand/assets/asset-manifest.json
-          diff -u /tmp/asset-inventory.before brand/assets/00-catalog/ASSET-INVENTORY.txt
-
-      - name: Validate source-of-truth consistency
-        run: python scripts/validate-repository-consistency.py
+      - name: Validate LuxSync v3 source of truth
+        run: python scripts/validate-brand-v3.py
 
       - name: Validate whitespace
         run: git diff --check
