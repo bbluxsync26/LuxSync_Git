@@ -4,6 +4,8 @@
 **Content source:** `content/contact.md`  
 **Shared data contract:** LuxSync Property Profile used by `website/src/concierge/`
 
+**Official slogan:** **Where Luxury Lives Intelligently**
+
 ## 1. Purpose
 
 Create a dedicated Contact page that acts as an intelligent routing surface for support, product information, consultations, general questions, and business/partnership inquiries.

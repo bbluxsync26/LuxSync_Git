@@ -50,6 +50,7 @@ The repository is the source of truth. Conversation drafts and external copies b
 | Concierge | `website/src/concierge/` | Rules-based guided recommendation engine | Active / v1 |
 | Product planning | `content/product-catalog.md` | Product families, bundles, Experience concepts | Active / canonical planning catalog |
 | Contact | `website/pages/contact.md` | Adaptive customer-intent routing | Active design baseline |
+| ROI Guide Library | `content/guides/roi/` + `website/pages/guides.md` | Audience-specific ROI education and measurement worksheets | Active |
 | CI/CD | GitHub plus selected GoDaddy deployment path | Build/test/staging/release | Runbook pending |
 | Repository validation | GitHub Actions + Python validator | Cross-repo consistency gate | Active |
 

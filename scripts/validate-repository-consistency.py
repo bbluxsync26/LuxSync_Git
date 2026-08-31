@@ -37,6 +37,17 @@ REQUIRED_FILES = [
     "content/faqs.md",
     "content/contact.md",
     "content/product-catalog.md",
+    "content/guides/roi/README.md",
+    "content/guides/roi/commercial-offices.md",
+    "content/guides/roi/nursing-homes.md",
+    "content/guides/roi/senior-living-communities.md",
+    "content/guides/roi/str-owners.md",
+    "content/guides/roi/str-operators.md",
+    "content/guides/roi/str-managers.md",
+    "content/guides/roi/residential-homeowners.md",
+    "content/guides/roi/residential-busy-professionals.md",
+    "content/guides/roi/residential-intentional-parents.md",
+    "content/guides/roi/residential-seniors-caregivers.md",
     "prompts/content-writer.md",
     "prompts/product-descriptions.md",
     "prompts/email-writer.md",
@@ -45,6 +56,7 @@ REQUIRED_FILES = [
     "website/pages/about.md",
     "website/pages/faqs.md",
     "website/pages/contact.md",
+    "website/pages/guides.md",
     "website/styles/design-system.md",
     "website/src/concierge/README.md",
 ]
@@ -112,7 +124,9 @@ def validate_brand_language(errors: list[str]) -> None:
             errors.append(f"{path.relative_to(ROOT)}: retired hero phrase remains")
         # Catch the old two-line graphic treatment even when punctuation/case differs.
         upper = text.upper()
-        if "SMART LIVING." in upper and "ELEVATED." in upper:
+        retired_start = "SMART " + "LIVING."
+        retired_end = "ELE" + "VATED."
+        if retired_start in upper and retired_end in upper:
             errors.append(f"{path.relative_to(ROOT)}: retired split hero treatment remains")
 
 
@@ -252,6 +266,43 @@ def validate_typography_and_palette(errors: list[str]) -> None:
         require(design, token, "website/styles/design-system.md", errors)
 
 
+def validate_roi_guides(errors: list[str]) -> None:
+    guide_files = {
+        "commercial-offices.md": "Commercial Offices",
+        "nursing-homes.md": "Nursing Homes",
+        "senior-living-communities.md": "Senior Living Communities",
+        "str-owners.md": "STR Owners",
+        "str-operators.md": "STR Operators",
+        "str-managers.md": "STR Managers",
+        "residential-homeowners.md": "Residential Homeowners",
+        "residential-busy-professionals.md": "Busy Professionals",
+        "residential-intentional-parents.md": "Intentional Parents",
+        "residential-seniors-caregivers.md": "Seniors, Caregivers",
+    }
+    guide_root = "content/guides/roi"
+    for filename, audience in guide_files.items():
+        rel = f"{guide_root}/{filename}"
+        text = read(rel)
+        for token in (OFFICIAL_SLOGAN, audience, "ROI"):
+            require(text, token, rel, errors)
+        if "Boundary" not in text and "Boundaries" not in text:
+            errors.append(f"{rel}: missing limitations/safety boundary section")
+
+    for rel in (
+        "content/guides/roi/README.md",
+        "website/pages/guides.md",
+        "docs/master-catalog.md",
+        "docs/architecture/website-information-architecture.md",
+    ):
+        text = read(rel)
+        for token in ("Commercial Offices", "Nursing Homes", "Senior Living Communities", "STR Owners", "STR Operators", "STR Managers", "Seniors, Caregivers"):
+            require(text, token, rel, errors)
+
+    index = read("content/guides/roi/README.md")
+    for token in ("Annual verified benefit", "Simple ROI", "Payback period in months", "Do not promise a specific ROI"):
+        require(index, token, "content/guides/roi/README.md", errors)
+
+
 def main() -> int:
     errors: list[str] = []
     validate_required_files(errors)
@@ -270,6 +321,7 @@ def main() -> int:
     validate_concierge(errors)
     validate_product_catalog(errors)
     validate_typography_and_palette(errors)
+    validate_roi_guides(errors)
 
     if errors:
         print("LuxSync repository validation FAILED:")

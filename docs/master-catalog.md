@@ -70,13 +70,29 @@ Approved colors:
 | DOC-005 | Financial Model | `docs/financial-model.md` | Active planning baseline |
 | DOC-006 | Launch Plan | `docs/launch-plan.md` | Active |
 | DOC-007 | LuxSync Project Runbook | `docs/project-runbook.md` | Active |
-| DOC-008 | Bridgette Beardsley Leadership Biography | `docs/leadership/bridgette-beardsley.md` | Active / Approved |
-| DOC-009 | Sheldon Bardol Leadership Biography | `docs/leadership/sheldon-bardol.md` | Active / Approved |
+| DOC-008 | Bridgette Beardsley — Co-Founder & Chief Technology and Strategy Officer | `docs/leadership/bridgette-beardsley.md` | Active / Approved |
+| DOC-009 | Sheldon Bardol — Co-Founder & Chief Customer and Operations Officer | `docs/leadership/sheldon-bardol.md` | Active / Approved |
 | CONTENT-001 | About LuxSync Website Copy | `content/about.md` | Active / Approved |
 | CONTENT-002 | LuxSync Frequently Asked Questions | `content/faqs.md` | Active / Approved |
 | CONTENT-003 | Contact Page Content | `content/contact.md` | Active / Approved |
 | CONTENT-004 | Product & Solution Catalog | `content/product-catalog.md` | Active / Canonical planning catalog |
 | CONTENT-005 | Homepage Content | `content/homepage.md` | Active / Reconciled |
+| CONTENT-006 | ROI Guide Library Index and Methodology | `content/guides/roi/README.md` | Active / Customer education |
+
+## ROI Guide Library
+
+| ID | Audience | Path | Status |
+|---|---|---|---|
+| GUIDE-ROI-001 | Commercial Offices | `content/guides/roi/commercial-offices.md` | Active |
+| GUIDE-ROI-002 | Nursing Homes | `content/guides/roi/nursing-homes.md` | Active / Non-clinical guardrails |
+| GUIDE-ROI-003 | Senior Living Communities | `content/guides/roi/senior-living-communities.md` | Active / Non-clinical guardrails |
+| GUIDE-ROI-004 | STR Owners | `content/guides/roi/str-owners.md` | Active |
+| GUIDE-ROI-005 | STR Operators | `content/guides/roi/str-operators.md` | Active |
+| GUIDE-ROI-006 | STR Managers | `content/guides/roi/str-managers.md` | Active |
+| GUIDE-ROI-007 | Residential Homeowners | `content/guides/roi/residential-homeowners.md` | Active |
+| GUIDE-ROI-008 | Busy Professionals | `content/guides/roi/residential-busy-professionals.md` | Active |
+| GUIDE-ROI-009 | Intentional Parents and Families | `content/guides/roi/residential-intentional-parents.md` | Active |
+| GUIDE-ROI-010 | Seniors, Caregivers, and Aging in Place | `content/guides/roi/residential-seniors-caregivers.md` | Active / Non-medical guardrails |
 
 ## Brand System
 
@@ -105,6 +121,7 @@ Approved colors:
 | WEB-005 | FAQ Page Blueprint | `website/pages/faqs.md` | Active |
 | WEB-006 | Contact Page Blueprint | `website/pages/contact.md` | Active / Adaptive form |
 | WEB-007 | Intelligent Living Concierge Engine | `website/src/concierge/` | Active / v1 engine |
+| WEB-008 | ROI Guides Library Page Blueprint | `website/pages/guides.md` | Active |
 
 ### Shared Property Profile Contract
 
@@ -237,6 +254,7 @@ Do not publish or invent:
 8. Stable Concierge field and Experience IDs should not be changed casually after production launch.
 9. Product-catalog changes should be mapped to relevant LuxSync Experiences and validated commerce data before public sale claims.
 10. Run repository consistency validation after major cross-cutting changes.
+11. ROI examples must use customer inputs or clearly labeled scenarios; never publish promised returns, invented benchmarks, or unvalidated savings percentages.
 
 ## Change Log
 
@@ -250,3 +268,4 @@ Do not publish or invent:
 | 2026-08-31 | Added the canonical Product & Solution Catalog with Concierge-linked Experience concepts. |
 | 2026-08-31 | Reconciled all active reusable prompts around current founder facts, company facts, Contact routing, Concierge/Blueprint terminology, and commerce guardrails. |
 | 2026-08-31 | Established **Where Luxury Lives Intelligently** as the sole approved public slogan/hero line and retired alternate slogan/hero treatments. |
+| 2026-08-31 | Added ten audience-specific ROI Guides, a shared measurement standard, and the ROI Guides website library blueprint. |

@@ -39,7 +39,7 @@ Luxury smart-home technology designed for modern living, with curated hardware a
 - Featured Products & Bundles
 - Meet the Founders
 - Frequently Asked Questions
-- STR Smart Home ROI Guide / Email Signup
+- Audience-Specific ROI Guide Library / Optional Email Download
 - Contact / Support Pathways
 - Footer
 
@@ -62,5 +62,6 @@ Source: `docs/architecture/intelligent-living-concierge.md` and `website/src/con
 - Do not invent ratings, reviews, partnerships, certifications, customer counts, or scarcity.
 - Do not present SmartThings templates, LuxSync Grid, or other roadmap products as live before release.
 - Route support to `support@luxsync.net` and general information/consultations to `info@luxsync.net`.
+- Route **Get the ROI Guide** to the library at `content/guides/roi/README.md`, where visitors choose the guide that matches their role or household.
 
 This file follows `website/pages/home.md`; if the two conflict, the website blueprint governs.
