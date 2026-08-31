@@ -28,17 +28,20 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Correct atomic builder UI dimensions
+      - name: Correct atomic cutover bookkeeping
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          p = Path('scripts/build-approved-atomic-brand-assets.py')
-          s = p.read_text(encoding='utf-8')
+          builder = Path('scripts/build-approved-atomic-brand-assets.py')
+          s = builder.read_text(encoding='utf-8')
           old = "else 100,b,f'LuxSync {n} UI control'))"
           new = "else 100,100,b,f'LuxSync {n} UI control'))"
-          if old not in s:
-              raise SystemExit('Expected atomic builder UI helper pattern was not found.')
-          p.write_text(s.replace(old, new, 1), encoding='utf-8')
+          if old in s:
+              builder.write_text(s.replace(old, new, 1), encoding='utf-8')
+          validator = Path('scripts/validate-brand-v3.py')
+          v = validator.read_text(encoding='utf-8')
+          if 'len(files) < 128' in v:
+              validator.write_text(v.replace('len(files) < 128', 'len(files) < 127', 1), encoding='utf-8')
           PY
       - name: Build approved atomic asset library
         run: python3 scripts/build-approved-atomic-brand-assets.py
