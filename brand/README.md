@@ -13,6 +13,8 @@ The desired impression is **premium interior design with intelligent technology 
 
 The previous generated Luxury Orbit library is now legacy compatibility content. New work must use [`assets-v3/`](assets-v3/).
 
+The enduring design DNA beneath v3 is documented in [`brand-architecture.md`](brand-architecture.md). That file governs Plush Drift principles such as layered dark surfaces, tactile illumination, softened luxury, restrained metallic polish, and calm physical interaction behavior.
+
 ## Approved Palette
 
 Only these colors are approved for branded UI/vector work:
@@ -52,6 +54,8 @@ The effect should resemble premium architectural controls with concealed lightin
 - reduced-motion preferences must be respected.
 
 This is **tactile illumination**, not neon. Avoid hard glowing outlines, arcade lighting, exaggerated bloom, flashing effects, or color-only state communication. Contrast, focus indication, and control affordance must remain accessible without relying on the glow.
+
+For the full interaction/material architecture, use `brand/brand-architecture.md` as the governing reference.
 
 ## Logo Rule
 
@@ -95,6 +99,7 @@ Keep **Intelligent Calm**: warm, confident, thoughtful, unhurried, professional,
 ## Status
 
 **Brand system:** LuxSync v3  
+**Design DNA:** Plush Drift  
 **Typography:** Manrope + Inter  
 **Logo treatment:** Protected approved artwork  
 **Interaction language:** Plush Drift tactile illumination  
