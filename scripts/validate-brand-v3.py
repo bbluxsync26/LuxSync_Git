@@ -80,7 +80,7 @@ if manifest_path.exists():
     if "Brushed Dusty Steel" not in manifest.get("metallic_blue", ""):
         errors.append("asset manifest must identify Brushed Dusty Steel as the approved metallic blue")
     files = manifest.get("files", [])
-    if not isinstance(files, list) or len(files) < 128:
+    if not isinstance(files, list) or len(files) < 127:
         errors.append("asset manifest does not enumerate the complete atomic library")
 
 for rel in ["brand/README.md", "brand/assets/README.md", "brand/colors.md"]:

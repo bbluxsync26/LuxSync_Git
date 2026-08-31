@@ -8,16 +8,16 @@
     "brand/source-logo/LuxSync_Logo_Orb.png"
   ],
   "approved_palette": {
-    "slate-navy": "#0D1526",
-    "dark-suede": "#172036",
-    "pale-driftwood": "#D0BEB0",
-    "warm-taupe-mauve": "#9E8B85",
-    "antique-rose-taupe": "#967878",
-    "dusty-steel": "#7B96B2",
-    "champagne-rose-gold-anchor": "#D6B0A0"
+    "navy": "#0D1526",
+    "suede": "#172036",
+    "drift": "#D0BEB0",
+    "taupe": "#9E8B85",
+    "rose": "#967878",
+    "steel": "#7B96B2",
+    "champagne": "#D6B0A0"
   },
-  "metallic_blue": "Brushed Dusty Steel based on #7B96B2",
-  "asset_count": 128,
+  "metallic_blue": "Brushed Dusty Steel based on #7B96B2 using approved palette colors only",
+  "asset_count": 127,
   "files": [
     "01-logos/LuxSync_Logo_Horizontal_Combo.svg",
     "01-logos/LuxSync_Logo_Horizontal_Final.svg",
@@ -134,7 +134,6 @@
     "09-stationery/business-card-front.svg",
     "09-stationery/invoice-note.svg",
     "09-stationery/letterhead.svg",
-    "10-source-sheets/icon-sheet.webp",
     "11-marketing/homepage-luxury-smart-home.svg",
     "11-marketing/roi-guide-promo.svg",
     "12-palette/antique-rose-taupe.svg",

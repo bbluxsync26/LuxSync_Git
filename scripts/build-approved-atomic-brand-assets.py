@@ -120,7 +120,7 @@ ui['accent-line-star']=f'<path d="M5 50h290" stroke="url(#steel)" stroke-width="
 ui['accent-brushed-steel']=f'<rect x="5" y="35" width="290" height="30" rx="15" fill="url(#steel)"/>'
 for n,b in ui.items():
     if b.startswith('<svg'): write(f'04-ui-controls/{n}.svg',b)
-    else: write(f'04-ui-controls/{n}.svg',svg(340 if n in ('search-bar','pagination') else 300 if n.startswith('accent') or n=='slider' else 220 if n in ('select-dropdown-open','sort-dropdown') else 140 if n in ('filter-button','badge-new') else 120 if n.startswith('toggle') else 100,b,f'LuxSync {n} UI control'))
+    else: write(f'04-ui-controls/{n}.svg',svg(340 if n in ('search-bar','pagination') else 300 if n.startswith('accent') or n=='slider' else 220 if n in ('select-dropdown-open','sort-dropdown') else 140 if n in ('filter-button','badge-new') else 120 if n.startswith('toggle') else 100,100,b,f'LuxSync {n} UI control'))
 
 # Dividers and accents: 44 standalone objects.
 def divider(body,label,w=800,h=80): return svg(w,h,body,label)

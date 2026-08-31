@@ -1,3 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="310" height="60" viewBox="0 0 310 60" role="img" aria-label="LuxSync Brushed Dusty Steel metallic sample">
-  <image href="../10-source-sheets/brand-board.webp" x="-905" y="-220" width="1448" height="1086" preserveAspectRatio="none"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="240" viewBox="0 0 600 240" role="img" aria-label="LuxSync Brushed Dusty Steel metallic sample"><defs>
+<linearGradient id="steel" x1="0" x2="1"><stop offset="0" stop-color="#172036"/><stop offset=".28" stop-color="#7B96B2"/><stop offset=".5" stop-color="#D0BEB0"/><stop offset=".72" stop-color="#7B96B2"/><stop offset="1" stop-color="#172036"/></linearGradient>
+<linearGradient id="rose" x1="0" x2="1"><stop offset="0" stop-color="#967878"/><stop offset=".28" stop-color="#D6B0A0"/><stop offset=".5" stop-color="#D0BEB0"/><stop offset=".72" stop-color="#D6B0A0"/><stop offset="1" stop-color="#967878"/></linearGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#7B96B2" stop-opacity=".44"/><stop offset="1" stop-color="#0D1526" stop-opacity="0"/></radialGradient>
+</defs><rect width="600" height="240" fill="url(#steel)"/></svg>
