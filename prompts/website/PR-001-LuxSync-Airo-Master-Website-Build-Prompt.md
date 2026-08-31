@@ -143,6 +143,27 @@ Visual direction:
 - Selective atmospheric glow
 - Minimal organic motion
 
+#### Plush Drift tactile illumination
+
+Carry forward the Plush Drift tactile interaction language into LuxSync v3. Interactive controls should feel like premium **backlit physical controls**, not ordinary flat SaaS buttons.
+
+For buttons, selectable cards, product/recommendation tiles, navigation controls, and other actionable surfaces:
+
+- place a darker Slate Navy or Dark Suede foreground surface over a softer illuminated layer;
+- use Dusty Steel as the preferred cool underlight;
+- Antique Rose Taupe or a restrained Pale Driftwood lift may be used for warmer contextual underlighting;
+- Champagne Rose Gold Metallic may appear only as a subtle reflected edge or premium accent, not the dominant glow;
+- at rest, keep the underlight faint and localized;
+- on hover, brighten and widen the concealed underlight slightly;
+- on keyboard focus, preserve a clear accessible focus indicator in addition to any glow;
+- on press/active, make the foreground surface visually compress or move inward about 1–2 px, tighten the outer shadow, and modestly brighten the underlight so the user gets the impression of physically pressing a backlit control;
+- on release, return smoothly with short, calm easing;
+- honor reduced-motion preferences and never require motion or glow to understand control state.
+
+Use this effect strongly on interactive controls and much more subtly on static cards or containers. Do not turn every box into a glowing object.
+
+The effect must remain elegant and restrained. Avoid neon halos, hard glowing borders, flashing, arcade lighting, exaggerated bloom, aggressive scaling, or color-only interaction feedback.
+
 Avoid cyberpunk neon, unapproved lavender/cyan/magenta base colors, loud gradients, generic SaaS blue, dense gadget-store grids, cartoon UI, excessive glassmorphism, hard glowing borders, flashing animation, aggressive popups, and text baked into photographs when native text is possible.
 
 ### Voice
@@ -177,6 +198,8 @@ Leave clean expansion points for SmartThings automation templates, LuxSync Grid,
 
 A first-time visitor should quickly understand that LuxSync is a premium curated smart-home commerce brand; products and bundles are selected to work together; SmartThings compatibility reduces complexity; shopping is intentionally curated; the technology belongs in a beautifully designed home or property; Bridgette Beardsley and Sheldon Bardol are the accountable co-founders; and customers can find clear answers or a guided recommendation without becoming smart-home experts.
 
-Every important design, content, and commerce decision should reinforce:
+The interface should also feel distinctly LuxSync in motion: dark, composed surfaces with soft concealed illumination that responds as though the user is touching premium physical controls.
+
+Every important design, content, interaction, and commerce decision should reinforce:
 
 **Where Luxury Lives Intelligently.**
