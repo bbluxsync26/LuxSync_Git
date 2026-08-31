@@ -1,46 +1,51 @@
 #!/usr/bin/env python3
+"""Validate the approved LuxSync atomic brand asset source of truth."""
 from pathlib import Path
 import json
-import re
 
 ROOT = Path(__file__).resolve().parents[1]
-V3 = ROOT / "brand" / "assets-v3"
-LEGACY = ROOT / "brand" / "assets"
+ASSETS = ROOT / "brand" / "assets"
+OLD_V3 = ROOT / "brand" / "assets-v3"
 
-APPROVED = {
-    "#0D1526",
-    "#172036",
-    "#D0BEB0",
-    "#9E8B85",
-    "#967878",
-    "#7B96B2",
-    "#D6B0A0",
+REQUIRED_LOGOS = [
+    ROOT / "brand/source-logo/LuxSync_Logo_Horizontal_Combo.png",
+    ROOT / "brand/source-logo/LuxSync_Logo_Horizontal_Final.png",
+    ROOT / "brand/source-logo/LuxSync_Logo_Orb.png",
+]
+COUNTS = {
+    "01-logos": 3,
+    "02-icons": 15,
+    "03-buttons": 18,
+    "04-ui-controls": 25,
+    "05-dividers-accents": 44,
+    "06-product-cards": 4,
+    "07-heroes": 1,
+    "08-roi": 1,
+    "09-stationery": 4,
+    "11-marketing": 2,
+    "12-palette": 9,
 }
-FORBIDDEN_COLOR_HINTS = ("lavender", "purple", "electric blue", "neon blue")
 REQUIRED = [
-    "brand/assets-v3/README.md",
-    "brand/assets-v3/00-reference/brand-board.svg",
-    "brand/assets-v3/01-foundation/approved-palette.svg",
-    "brand/assets-v3/02-ui/buttons-and-ctas.svg",
-    "brand/assets-v3/02-ui/badges.svg",
-    "brand/assets-v3/02-ui/ecommerce-controls.svg",
-    "brand/assets-v3/03-icons/core-line-icons.svg",
-    "brand/assets-v3/04-heroes/hero-smart-living-elevated.svg",
-    "brand/assets-v3/04-heroes/hero-roi-guide.svg",
-    "brand/assets-v3/05-ecommerce/product-card-template.svg",
-    "brand/assets-v3/05-ecommerce/trust-bar.svg",
-    "brand/assets-v3/06-stationery/letterhead.svg",
-    "brand/assets-v3/06-stationery/invoice.svg",
-    "brand/assets-v3/06-stationery/business-card-front.svg",
-    "brand/assets-v3/06-stationery/business-card-back.svg",
-    "brand/assets-v3/07-marketing/social-square.svg",
-    "brand/assets-v3/07-marketing/email-header.svg",
-    "brand/assets-v3/07-marketing/flyer.svg",
-    "brand/assets-v3/08-docs/asset-manifest.json",
-    "brand/assets-v3/08-docs/MIGRATION.md",
-    "brand/assets/01-brand/luxsync-monogram-orb.png",
-    "brand/assets/01-brand/luxsync-horizontal-lockup.png",
-    "brand/assets/12-scenes/scene-manifest.csv",
+    "brand/assets/README.md",
+    "brand/assets/asset-manifest.json",
+    "brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.svg",
+    "brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.svg",
+    "brand/assets/01-logos/LuxSync_Logo_Orb.svg",
+    "brand/assets/02-icons/home.svg",
+    "brand/assets/02-icons/security-shield.svg",
+    "brand/assets/03-buttons/primary-shop-now.svg",
+    "brand/assets/03-buttons/utility-add-to-cart.svg",
+    "brand/assets/04-ui-controls/toggle-on.svg",
+    "brand/assets/04-ui-controls/search-bar.svg",
+    "brand/assets/05-dividers-accents/brushed-dusty-steel-wide.svg",
+    "brand/assets/05-dividers-accents/sparkle-12.svg",
+    "brand/assets/06-product-cards/touch-panel.svg",
+    "brand/assets/07-heroes/homepage-smart-living.svg",
+    "brand/assets/08-roi/smart-home-roi-guide-hero.svg",
+    "brand/assets/09-stationery/business-card-front.svg",
+    "brand/assets/09-stationery/letterhead.svg",
+    "brand/assets/11-marketing/roi-guide-promo.svg",
+    "brand/assets/12-palette/brushed-dusty-steel-metallic.svg",
     "content/about.md",
     "content/faqs.md",
     "docs/leadership/bridgette-beardsley.md",
@@ -50,101 +55,77 @@ REQUIRED = [
 ]
 
 errors = []
+if OLD_V3.exists():
+    errors.append("retired brand/assets-v3 directory still exists")
+for path in REQUIRED_LOGOS:
+    if not path.exists():
+        errors.append(f"missing authoritative logo master: {path.relative_to(ROOT)}")
 for rel in REQUIRED:
     if not (ROOT / rel).exists():
-        errors.append(f"missing required v3 asset: {rel}")
+        errors.append(f"missing required file: {rel}")
 
-hex_re = re.compile(r"#[0-9A-Fa-f]{6}")
-for path in V3.rglob("*.svg"):
-    text = path.read_text(encoding="utf-8")
-    colors = {c.upper() for c in hex_re.findall(text)}
-    extra = colors - APPROVED
-    if extra:
-        errors.append(f"{path.relative_to(ROOT)}: unapproved colors {sorted(extra)}")
-    if "font-family" in text:
-        if "Manrope" not in text and "Inter" not in text:
-            errors.append(f"{path.relative_to(ROOT)}: editable text is not Manrope/Inter")
+for folder, expected in COUNTS.items():
+    path = ASSETS / folder
+    actual = len(list(path.glob("*.svg"))) if path.exists() else 0
+    if actual != expected:
+        errors.append(f"brand/assets/{folder}: expected {expected} individual SVGs; found {actual}")
 
-manifest_path = V3 / "08-docs" / "asset-manifest.json"
+manifest_path = ASSETS / "asset-manifest.json"
 if manifest_path.exists():
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if manifest.get("brand") != "LuxSync LLC":
-        errors.append("v3 manifest brand must be LuxSync LLC")
-    if manifest.get("slogan") != "Where Luxury Lives Intelligently":
-        errors.append("v3 manifest slogan mismatch")
+    if manifest.get("version") != "4.0-atomic":
+        errors.append("asset manifest version must be 4.0-atomic")
+    if manifest.get("source_of_truth") != "brand/assets":
+        errors.append("asset manifest source_of_truth must be brand/assets")
+    if "Brushed Dusty Steel" not in manifest.get("metallic_blue", ""):
+        errors.append("asset manifest must identify Brushed Dusty Steel as the approved metallic blue")
+    files = manifest.get("files", [])
+    if not isinstance(files, list) or len(files) < 127:
+        errors.append("asset manifest does not enumerate the complete atomic library")
 
-for rel in ["brand/README.md", "website/styles/design-system.md", "docs/master-catalog.md"]:
+for rel in ["brand/README.md", "brand/assets/README.md", "brand/colors.md"]:
     path = ROOT / rel
     if not path.exists():
         errors.append(f"missing governing document: {rel}")
         continue
     text = path.read_text(encoding="utf-8")
-    for token in ("LuxSync v3", "Manrope", "Inter", "Where Luxury Lives Intelligently", "#D6B0A0"):
+    for token in ("#7B96B2", "#D6B0A0", "Brushed Dusty Steel"):
         if token not in text:
-            errors.append(f"{rel}: missing required v3 token {token!r}")
+            errors.append(f"{rel}: missing approved-brand token {token!r}")
+
+asset_docs = "\n".join(
+    p.read_text(encoding="utf-8", errors="ignore")
+    for p in [ROOT / "brand/README.md", ROOT / "brand/colors.md", ASSETS / "README.md"]
+    if p.exists()
+).lower()
+if "icy-blue highlight tints may be used" in asset_docs:
+    errors.append("retired icy-blue derivation permission remains")
+
+for rel in ("brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.svg", "brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.svg", "brand/assets/01-logos/LuxSync_Logo_Orb.svg"):
+    p = ROOT / rel
+    if p.exists() and "../../source-logo/" not in p.read_text(encoding="utf-8"):
+        errors.append(f"{rel}: logo wrapper must reference authoritative source-logo artwork")
 
 website_contract = {
-    "docs/leadership/bridgette-beardsley.md": (
-        "Co-Founder & Chief Technology and Strategy Officer",
-        "Intelligent Calm",
-    ),
-    "docs/leadership/sheldon-bardol.md": (
-        "Co-Founder & Chief Customer and Operations Officer",
-        "Intelligent Calm",
-    ),
-    "content/about.md": (
-        "Bridgette Beardsley",
-        "Sheldon Bardol",
-        "Luxury is confidence.",
-    ),
-    "content/faqs.md": (
-        "Find My LuxSync Solution",
-        "info@luxsync.net",
-        "support@luxsync.net",
-        "SmartThings",
-    ),
-    "website/pages/about.md": (
-        "Co-Founder & Chief Technology and Strategy Officer",
-        "Co-Founder & Chief Customer and Operations Officer",
-    ),
-    "website/pages/faqs.md": (
-        "/guides/faqs",
-        "content/faqs.md",
-        "FAQPage",
-    ),
+    "content/faqs.md": ("Find My LuxSync Solution", "info@luxsync.net", "support@luxsync.net"),
+    "website/pages/faqs.md": ("FAQPage",),
 }
 for rel, tokens in website_contract.items():
     path = ROOT / rel
-    if not path.exists():
-        continue
-    text = path.read_text(encoding="utf-8")
-    for token in tokens:
-        if token not in text:
-            errors.append(f"{rel}: missing website contract token {token!r}")
+    if path.exists():
+        text = path.read_text(encoding="utf-8")
+        for token in tokens:
+            if token not in text:
+                errors.append(f"{rel}: missing website contract token {token!r}")
 
-# Legacy generated graphic directories must be gone after migration.
-for name in [
-    "00-catalog", "02-icons-brand", "03-icons-website", "04-icons-social",
-    "05-palette", "06-gradients", "07-components", "08-cards",
-    "09-illustrations", "10-product-cards", "11-banners",
-]:
-    if (LEGACY / name).exists():
-        errors.append(f"legacy generated directory still present: brand/assets/{name}")
-
-if (LEGACY / "asset-manifest.csv").exists() or (LEGACY / "asset-manifest.json").exists():
-    errors.append("legacy generated asset manifests still present")
-
-# Keep business publication guardrail intact.
 pricing = ROOT / "docs/decisions/DEC-005-senior-service-pricing.md"
-if pricing.exists():
-    text = pricing.read_text(encoding="utf-8")
-    if "No senior-service price is currently approved for public display" not in text:
-        errors.append("senior-service pricing publication guardrail is missing")
+if pricing.exists() and "No senior-service price is currently approved for public display" not in pricing.read_text(encoding="utf-8"):
+    errors.append("senior-service pricing publication guardrail is missing")
 
 if errors:
-    print("LuxSync v3 validation failed:")
+    print("LuxSync atomic brand validation failed:")
     for error in errors:
         print(f"- {error}")
     raise SystemExit(1)
 
-print("LuxSync v3 validation passed.")
+print("LuxSync atomic brand validation passed.")

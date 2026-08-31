@@ -25,7 +25,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Validate LuxSync v3 source of truth
+      - name: Validate approved LuxSync atomic brand source of truth
         run: python scripts/validate-brand-v3.py
 
       - name: Validate whitespace

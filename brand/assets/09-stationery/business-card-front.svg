@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="600" viewBox="0 0 1050 600" role="img" aria-label="LuxSync business-card-front"><defs>
+<linearGradient id="steel" x1="0" x2="1"><stop offset="0" stop-color="#172036"/><stop offset=".28" stop-color="#7B96B2"/><stop offset=".5" stop-color="#D0BEB0"/><stop offset=".72" stop-color="#7B96B2"/><stop offset="1" stop-color="#172036"/></linearGradient>
+<linearGradient id="rose" x1="0" x2="1"><stop offset="0" stop-color="#967878"/><stop offset=".28" stop-color="#D6B0A0"/><stop offset=".5" stop-color="#D0BEB0"/><stop offset=".72" stop-color="#D6B0A0"/><stop offset="1" stop-color="#967878"/></linearGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#7B96B2" stop-opacity=".44"/><stop offset="1" stop-color="#0D1526" stop-opacity="0"/></radialGradient>
+</defs><rect width="1050" height="600" fill="#0D1526"/><image href="../01-logos/LuxSync_Logo_Horizontal_Final.svg" x="120" y="95" width="810" height="300" preserveAspectRatio="xMidYMid meet"/><text x="525" y="500" text-anchor="middle" font-family="Manrope,Arial,sans-serif" font-size="22" font-weight="600" fill="#7B96B2">luxsync.net</text></svg>
