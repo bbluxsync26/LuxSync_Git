@@ -79,7 +79,12 @@ The workflow performs this sequence:
 
 A local environment must provide Python 3, Inkscape, ImageMagick, Manrope, and Inter.
 
-Run the same logical sequence as CI. Do not skip normalization before rendering.
+Run the same logical sequence as CI. Do not skip normalization before rendering:
+
+```bash
+python3 scripts/regenerate-brand-raster-assets.py
+python3 scripts/validate-repository-consistency.py
+```
 
 ## SVG and Image-Generation Boundary
 
