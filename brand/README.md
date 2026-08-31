@@ -1,19 +1,21 @@
 # LuxSync Brand Guidelines
 
-**Plush Drift v2.1 — Authoritative Brand System**  
-**Luxury Orbit — Active Web Visual Treatment**
+**LuxSync LLC**  
+**Brand System v3 — Authoritative Visual System**
 
 > Where Luxury Lives Intelligently
 
 ## Direction
 
-Luxury Orbit is the active website and web-graphics direction layered on the authoritative **Plush Drift v2.1** brand system. It combines architectural navy, warm metallic rose, restrained Dusty Steel orbit light, tactile dark surfaces, and calm premium smart-living photography.
+LuxSync v3 is the active branding, website, ecommerce, stationery, and marketing system.
 
-The desired impression is **luxury interior design with intelligent technology quietly underneath it**.
+The desired impression is **premium interior design with intelligent technology quietly underneath it**: crisp, architectural, calm, refined, and highly polished.
 
-Luxury Orbit does not replace the Plush Drift base palette or the Manrope/Inter typography contract.
+The previous generated Luxury Orbit library is now legacy compatibility content. New work must use [`assets-v3/`](assets-v3/).
 
-## Authoritative Plush Drift v2.1 Palette
+## Approved Palette
+
+Only these colors are approved for branded UI/vector work:
 
 - Slate Navy `#0D1526`
 - Dark Suede `#172036`
@@ -21,60 +23,51 @@ Luxury Orbit does not replace the Plush Drift base palette or the Manrope/Inter 
 - Warm Taupe Mauve `#9E8B85`
 - Antique Rose Taupe `#967878`
 - Dusty Steel `#7B96B2`
-- Champagne Rose Gold Metallic `#D6B0A0` anchor
+- Champagne Rose Gold Metallic, using `#D6B0A0` as the approved metallic anchor
 
-Champagne Rose Gold Metallic is the seventh approved color. Its approved metallic rendering uses lighter champagne and deeper copper/rose stops around the `#D6B0A0` anchor. Dusty Steel-derived highlight and shadow tints may be used for orbit-light effects.
+Do not introduce lavender, purple, orange, electric blue, neon blue, or other unapproved brand colors.
 
-See [colors.md](colors.md) for implementation details.
+Natural photography may contain natural scene color. Branded overlays, controls, borders, icons, typography, and accents must use the approved palette.
 
 ## Typography
 
-- **Manrope 500/600** — headings, display text, navigation, CTA labels, and graphic UI
-- **Inter 400/500** — body copy, controls, forms, product descriptions, and supporting UI
+- **Manrope 500/600** — headings, navigation, CTA labels, buttons, badges, and graphic UI
+- **Inter 400/500** — body copy, forms, captions, product descriptions, and supporting UI
 
-Do not use Century Gothic, Candara, Montserrat, Bodoni-family, Didot, Georgia, or other legacy font declarations as current LuxSync website-system typography.
+## Logo Rule
 
-Approved logo artwork may preserve its exact visual lettering as artwork. Logo artwork does not redefine the website typography system.
+The approved LuxSync logos are artwork, not live typography.
 
-See [typography.md](typography.md) for implementation details.
+Protected exact masters:
 
-## Asset Library
+- `assets/01-brand/luxsync-monogram-orb.png`
+- `assets/01-brand/luxsync-horizontal-lockup.png`
 
-The library contains **104 logical assets**:
+They must never be redrawn, retyped, recolored, softened, cartoonized, or regenerated. New compositions reference these files directly.
 
-- **98 SVG-based graphics**, each with generated PNG and WebP siblings
-- **6 production raster scenes**, each supplied as optimized PNG and WebP
+## Active Asset Library
 
-Assets live under [assets/](assets/):
+Use [`assets-v3/`](assets-v3/):
 
-- `01-brand/` logos and brand marks
-- `02-icons-brand/` decorative and brand-principle icons
-- `03-icons-website/` functional web icons
-- `04-icons-social/` social icons
-- `05-palette/` palette and texture tiles
-- `06-gradients/` atmospheric backgrounds
-- `07-components/` buttons, badges, controls, trust components
-- `08-cards/` brand and content cards
-- `09-illustrations/` smart-home and visual-system illustrations
-- `10-product-cards/` commerce category cards
-- `11-banners/` vector hero, shop, and guide treatments
-- `12-scenes/` production smart-living photography for website compositing
+- `00-reference/` — authoritative brand board
+- `01-foundation/` — approved palette
+- `02-ui/` — buttons, CTAs, badges, ecommerce controls
+- `03-icons/` — smart-living line icons
+- `04-heroes/` — website hero and ROI-guide compositions
+- `05-ecommerce/` — product-card and trust components
+- `06-stationery/` — business cards, letterhead, invoice
+- `07-marketing/` — social, email, and flyer templates
+- `08-docs/` — manifest and migration guidance
 
-## Generator Boundary
+## Legacy Asset Boundary
 
-The vector/UI generation path is:
+`assets/` remains only for protected logo masters, curated text-free scene photography, and temporary compatibility while old references are migrated.
 
-```text
-scripts/generate-luxury-orbit-assets.py
-scripts/normalize-luxury-orbit-fonts.py
-scripts/render-luxury-orbit-assets.py
-```
+Do not use legacy generated logo, banner, icon, control, card, product-card, or palette assets in new work.
 
-The normalization step enforces Manrope/Inter and the Plush Drift v2.1 base palette before raster rendering.
+## Documentation Rule
 
-The approved primary monogram and horizontal lockup are protected exact artwork and must be preserved by the generation pipeline unless a later explicit logo decision replaces them.
-
-SVG files do not need to be sent through an image generator. Photographic scenes are intentionally raster assets and should contain no baked-in website copy, navigation, buttons, or unapproved logo recreations. Render those elements natively in HTML/CSS or use approved vector/raster brand assets.
+Durable LuxSync documentation, including Markdown, should identify **LuxSync LLC** and reference the v3 branding system where appropriate.
 
 ## Brand Voice
 
@@ -82,8 +75,8 @@ Keep **Intelligent Calm**: warm, confident, thoughtful, unhurried, professional,
 
 ## Status
 
-**Brand system:** Plush Drift v2.1  
-**Web visual treatment:** Luxury Orbit  
+**Brand system:** LuxSync v3  
 **Typography:** Manrope + Inter  
+**Logo treatment:** Protected approved artwork  
 **Status:** Active  
 **Updated:** August 31, 2026
