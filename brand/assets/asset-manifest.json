@@ -17,7 +17,7 @@
     "champagne-rose-gold-anchor": "#D6B0A0"
   },
   "metallic_blue": "Brushed Dusty Steel based on #7B96B2",
-  "asset_count": 127,
+  "asset_count": 128,
   "files": [
     "01-logos/LuxSync_Logo_Horizontal_Combo.svg",
     "01-logos/LuxSync_Logo_Horizontal_Final.svg",
@@ -134,6 +134,7 @@
     "09-stationery/business-card-front.svg",
     "09-stationery/invoice-note.svg",
     "09-stationery/letterhead.svg",
+    "10-source-sheets/icon-sheet.webp",
     "11-marketing/homepage-luxury-smart-home.svg",
     "11-marketing/roi-guide-promo.svg",
     "12-palette/antique-rose-taupe.svg",
