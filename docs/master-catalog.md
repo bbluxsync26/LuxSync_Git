@@ -26,6 +26,8 @@ The repository is the LuxSync source of truth. Conversation drafts or external c
 When current LuxSync files disagree, apply these rules:
 
 - **Authoritative visual system:** LuxSync v3
+- **Enduring design DNA:** Plush Drift
+- **Brand architecture:** `brand/brand-architecture.md`
 - **Active asset root:** `brand/assets-v3/`
 - **Headings / navigation / buttons / graphic UI:** Manrope 500/600
 - **Body / supporting UI:** Inter 400/500
@@ -34,6 +36,7 @@ When current LuxSync files disagree, apply these rules:
 - **Protected exact logo artwork:** approved monogram and horizontal lockup remain immutable artwork
 - **Approved colors only:** Slate Navy, Dark Suede, Pale Driftwood, Warm Taupe Mauve, Antique Rose Taupe, Dusty Steel, Champagne Rose Gold Metallic
 - **Champagne Rose Gold Metallic:** `#D6B0A0` anchor with approved metallic rendering
+- **Interaction language:** Plush Drift tactile illumination using layered dark surfaces, concealed soft backlighting, and restrained physical press feedback
 
 Do not redraw, retype, recolor, soften, cartoonize, or regenerate the approved logo artwork.
 
@@ -67,6 +70,7 @@ Do not redraw, retype, recolor, soften, cartoonize, or regenerate the approved l
 | BRAND-008 | v3 Migration Guide | `brand/assets-v3/08-docs/MIGRATION.md` | Active |
 | BRAND-009 | Legacy Asset Library | `brand/assets/` | Legacy / Compatibility only |
 | BRAND-010 | Production Scene Manifest | `brand/assets/12-scenes/scene-manifest.csv` | Retained source photography |
+| BRAND-011 | Brand Architecture / Plush Drift Design DNA | `brand/brand-architecture.md` | Active / Authoritative |
 
 ## v3 Asset Groups
 
@@ -136,6 +140,7 @@ The previous Luxury Orbit generators remain historical tooling for the legacy `b
 - Samsung SmartThings remains the primary launch compatibility standard
 - Mobile-first, accessible, performant experience
 - LuxSync v3 visual system
+- Plush Drift design DNA and tactile illumination
 - Manrope + Inter typography
 - Intelligent Calm voice
 - Approved logo artwork referenced directly, never regenerated
@@ -162,6 +167,7 @@ Search | Account | Cart
 6. New visual assets must use `brand/assets-v3/`.
 7. Never recreate protected logo artwork.
 8. Branded vector/UI work may use only the approved palette.
+9. Future visual-system versions must preserve Plush Drift design DNA unless an explicit brand-architecture decision supersedes it.
 
 ## Change Log
 
@@ -173,3 +179,4 @@ Search | Account | Cart
 | 2026-08-31 | Established LuxSync v3 as the authoritative brand asset system and moved the generated Luxury Orbit library to legacy compatibility status. |
 | 2026-08-31 | Added approved branded leadership biographies and titles for Bridgette Beardsley and Sheldon Bardol. |
 | 2026-08-31 | Incorporated founder biographies, canonical FAQs, and Find My LuxSync Solution into the website architecture, page blueprints, and Airo build controls. |
+| 2026-08-31 | Added BRAND-011 to define Plush Drift as the enduring design DNA and tactile-illumination architecture beneath LuxSync v3. |

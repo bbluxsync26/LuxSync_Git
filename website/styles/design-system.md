@@ -60,6 +60,69 @@ Use:
 - clear focus states and large touch targets
 - native HTML/CSS text wherever practical
 
+## Plush Drift Tactile Illumination
+
+LuxSync v3 carries forward Plush Drift's physical, backlit interaction language. Buttons, cards, selectable product tiles, recommendation choices, navigation controls, and other actionable surfaces should feel like refined architectural controls rather than flat software rectangles.
+
+### Layering
+
+Build the component as a darker foreground surface above a softer illuminated layer:
+
+- foreground: Slate Navy or Dark Suede;
+- primary cool underlight: Dusty Steel;
+- optional warm underlight: Antique Rose Taupe or a very restrained Pale Driftwood lift;
+- Champagne Rose Gold Metallic may appear as a subtle reflected edge or premium accent, never as the dominant halo.
+
+The softer color should read as **light coming from behind or beneath the darker surface**.
+
+### Interaction states
+
+**Rest**
+- Keep the dark surface visually dominant.
+- Use only a faint narrow halo/underlight and a soft dimensional shadow.
+
+**Hover**
+- Increase underlight brightness and spread slightly.
+- Preserve text contrast and dark-surface dominance.
+- Avoid abrupt scaling or exaggerated lift.
+
+**Keyboard focus**
+- Use an unmistakable accessible focus indicator in addition to any backlight increase.
+- Never rely on glow alone to indicate focus.
+
+**Pressed / active**
+- Move or visually compress the foreground surface inward by approximately `1px–2px`.
+- Tighten/reduce the outer shadow to make the control feel physically depressed.
+- Increase the underlight modestly, as though pressing the surface exposes more concealed light.
+- Do not create a flash or neon burst.
+
+**Release**
+- Return smoothly with restrained easing.
+- Keep transitions short and calm.
+
+### Suggested implementation behavior
+
+Use native CSS effects where practical, such as layered pseudo-elements, `box-shadow`, `transform`, and opacity transitions. Favor GPU-light, low-cost interactions over complex JavaScript animation.
+
+A typical implementation may use:
+
+- `transform: translateY(1px)` or equivalent on active state;
+- slightly reduced shadow offset/blur on active state;
+- increased pseudo-element glow opacity on hover/focus/active;
+- transition durations roughly in the `120ms–220ms` range with a calm ease-out curve.
+
+These are implementation targets, not permission to sacrifice responsiveness or accessibility.
+
+### Accessibility and restraint
+
+- Preserve WCAG contrast on the actual foreground surface.
+- Do not communicate state through glow/color alone.
+- Honor `prefers-reduced-motion` and reduce or remove positional press animation when requested.
+- Keep glow soft, atmospheric, and localized.
+- Avoid hard luminous outlines, arcade/neon effects, excessive bloom, glassmorphism overload, or glowing every static card on the page.
+
+Use tactile illumination most strongly on **interactive controls**. Static containers may use much subtler backlighting for layered depth.
+
 ## Hero Language
 
 Preferred visual treatment:
@@ -93,7 +156,11 @@ Official slogan:
 - lavender/purple drift
 - orange/copper drift outside the approved metallic treatment
 - loud electric gradients
-- dense gadget-store grids
 - generic SaaS blue
-- excessive animation
+- dense gadget-store grids
+- cartoon UI
+- excessive glassmorphism
+- hard glowing borders
+- flashing animation
+- flat controls that ignore the approved tactile backlighting language
 - text baked into photography when it can be rendered natively
