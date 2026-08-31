@@ -40,4 +40,4 @@ Bridgette Beardsley is the Co-Founder and visionary behind LuxSync. Drawing on m
 
 ---
 
-<p align="center"><em>Smart Living. Elevated.</em></p>
+<p align="center"><em>Where Luxury Lives Intelligently</em></p>

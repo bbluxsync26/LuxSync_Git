@@ -1,122 +1,120 @@
 # RB-009 — Repository Consistency Validation
 
-**Status:** Active  
-**Repository:** `bbluxsync26/LuxSync_Git`  
-**Purpose:** Prevent source-of-truth drift across LuxSync strategy, brand, website, prompts, runbooks, and asset metadata.
+**Status:** Active / Reconciled  
+**Last updated:** 2026-08-31
 
-## Governing Contract
+## Purpose
 
-The automated validator enforces the current LuxSync baseline:
+Prevent cross-repository drift after changes to LuxSync brand language, founder facts, website architecture, Contact routing, product/solution terminology, and the Intelligent Living Concierge.
 
-- Repository `master` is the source of truth.
-- Plush Drift v2.1 is the authoritative base brand system.
-- Luxury Orbit is the active web/graphics treatment layered on that base.
-- Manrope 500/600 is authoritative for headings/display/graphic UI.
-- Inter 400/500 is authoritative for body/supporting UI.
-- Official slogan: `Where Luxury Lives Intelligently`.
-- Homepage hero: `Smart Living. Elevated.`.
-- Primary CTA: `Shop Smart Home`.
-- Secondary CTA: `Get the ROI Guide`.
-- GoDaddy Commerce Plus remains the launch commerce system of record.
-- Samsung SmartThings is the primary launch compatibility standard.
-- Protected exact logo artwork must remain protected.
-- Senior-service pricing remains unresolved until a dedicated pricing decision is committed.
+The validator is:
 
-## Automated Files
+`scripts/validate-repository-consistency.py`
 
-- `scripts/validate-repository-consistency.py` — cross-repository validation.
-- `scripts/reconcile-asset-metadata.py` — synchronizes asset CSV/JSON/inventory metadata with actual committed assets.
-- `.github/workflows/validate-repository-consistency.yml` — runs validation for pull requests and pushes to `master`.
-
-## What the Validator Checks
-
-### Brand and website contract
-
-- Governing docs reference Manrope and Inter.
-- Official slogan is consistent.
-- Homepage hero and CTAs match the approved launch baseline.
-- `brand/colors.md` contains the seven approved Plush Drift v2.1 colors, including Champagne Rose Gold Metallic anchored at `#D6B0A0`, and does not retain the superseded replacement palette.
-
-### Generated assets
-
-- Generator source uses Manrope/Inter.
-- Generator source does not reintroduce superseded Luxury Orbit replacement base colors.
-- Exactly 98 SVG masters exist.
-- Editable SVG text does not contain forbidden legacy system-font declarations.
-- Protected exact logo wrappers still reference the approved logo rasters.
-
-### Asset metadata
-
-- `asset-manifest.json` reports Plush Drift v2.1 + Luxury Orbit + Manrope/Inter.
-- Logical counts remain 104 total assets: 98 SVG-based graphics plus six production scenes.
-- Every `asset-manifest.csv` width/height value matches the actual referenced SVG master.
-- Six scene manifest rows, PNGs, and WebPs exist.
-
-### Business guardrails
-
-- Senior-service pricing is explicitly marked unresolved.
-- The corrected Phase 2 founder-transition threshold is documented.
-- The value proposition contains all five approved customer segments.
-- `Smart Sleep Nursery` is the standardized nursery bundle name.
-
-## Asset Metadata Reconciliation
-
-Run from repository root:
-
-```bash
-python scripts/reconcile-asset-metadata.py
-```
-
-The script:
-
-1. Loads the 98-row vector CSV manifest.
-2. Confirms each referenced SVG exists.
-3. Reads actual SVG width/height values.
-4. Updates stale CSV dimensions.
-5. Confirms expected category counts.
-6. Confirms the six production scenes.
-7. Rewrites the JSON library summary from the authoritative brand contract.
-8. Rewrites the plain-text asset inventory.
-
-The brand-generation workflow runs metadata reconciliation after SVG normalization/rendering so generated assets and canonical metadata stay synchronized.
-
-## Repository Validation
-
-Run from repository root:
+Run it from the repository root:
 
 ```bash
 python scripts/validate-repository-consistency.py
 ```
 
-A non-zero exit means the repository should not be considered release-ready until the reported conflicts are resolved.
+A non-zero exit code blocks the consistency gate.
 
-## Pull Request Gate
+## Current Contracts Enforced
 
-The consistency workflow runs on pull requests targeting `master` and on pushes to `master`.
+### Brand language
 
-Before merge:
+- sole public slogan / hero line is **Where Luxury Lives Intelligently**
+- retired alternate hero/slogan wording must not remain in text, scripts, or SVG source
+- primary homepage CTA is **Find My LuxSync Solution**
+- secondary homepage CTA is **Shop Smart Home**
 
-1. Asset metadata reconciliation must produce no uncommitted changes.
-2. Repository consistency validation must pass.
-3. `git diff --check` must pass.
-4. Any intentionally changed governing decision must update the corresponding docs, prompt/runbook/checklist, and master catalog in the same change set.
+### Founder identities
 
-## When a Conflict Is Intentional
+- Bridgette Beardsley — **Co-Founder & Chief Technology and Strategy Officer**
+- Sheldon Bardol — **Co-Founder & Chief Customer and Operations Officer**
 
-Do not weaken the validator just to make a new design or business change pass.
+### Contact
 
-Instead:
+Required routing:
 
-1. Commit the new explicit decision or authoritative brand/business document.
-2. Update dependent architecture, prompts, runbooks, checklists, and metadata.
-3. Update the validator to represent the newly approved source-of-truth contract.
-4. Run validation again.
+- `support@luxsync.net` for existing product/order/setup/troubleshooting support
+- `info@luxsync.net` for product information, consultations, general questions, and business/partnership inquiries
+
+The Contact blueprint must preserve the adaptive Support / Product Information / Consultation / General Question / Business-Partnership branches and the shared Property Profile fields.
+
+### Concierge
+
+Required names:
+
+- **Find My LuxSync Solution**
+- **LuxSync Intelligent Living Concierge**
+- **My LuxSync Blueprint**
+
+The architecture must preserve the Lifestyle → Experience → Intelligence → Technology model and implementation paths:
+
+- Essential Intelligence
+- Elevated Living
+- Complete LuxSync Experience
+
+Concierge JSON modules under `website/src/concierge/modules/` must parse successfully.
+
+### Product catalog
+
+`content/product-catalog.md` must preserve the distinction between physical products, curated bundles, and LuxSync Experience / solution concepts.
+
+Planning concepts must not silently become live commerce claims.
+
+### Typography and palette
+
+The active website design system must contain Manrope, Inter, and the approved LuxSync palette including Champagne Rose Gold Metallic anchor `#D6B0A0`.
+
+## Required Source Files
+
+The validator verifies existence of current core architecture, page blueprints, Contact content, Product & Solution Catalog, founder bios, reusable prompts, Airo prompt/runbook/checklist, design system, and Concierge source.
+
+If a governing file is intentionally renamed, update the validator and Master Catalog in the same commit.
+
+## When to Run
+
+Run validation:
+
+1. before an Airo staging generation;
+2. after changing a slogan, founder fact, title, email route, product family, Experience name, Contact branch, or Concierge field contract;
+3. after a broad prompt/document reconciliation;
+4. before merging a website-generation/export branch;
+5. before a release candidate is treated as production-ready.
+
+## Retired Language Rule
+
+Historical provenance may be preserved in Git history, but the current working tree should not contain retired public slogan/hero copy that could be consumed accidentally by generators.
+
+If historical documentation must discuss a retired phrase, refer to it generically as `retired hero language` rather than reproducing the exact phrase.
+
+## Failure Handling
+
+When validation fails:
+
+1. read every reported path;
+2. determine which current artifact is authoritative using `docs/master-catalog.md`;
+3. update dependent files together;
+4. rerun validation;
+5. do not weaken the validator merely to make a contradiction pass.
+
+## GitHub Actions
+
+The repository consistency workflow may invoke this validator automatically. A passing workflow means the encoded source-of-truth checks passed; it does not replace functional, accessibility, commerce, or visual QA.
 
 ## Completion Criteria
 
-The repository consistency cycle is complete when:
+The consistency gate passes when:
 
-- automated validation passes,
-- no canonical metadata changes are left uncommitted,
-- intentional decision changes are documented,
-- and `docs/master-catalog.md` reflects the resulting durable artifacts.
+- all required files exist;
+- governing docs contain the official slogan;
+- retired hero/slogan treatment is absent from the working tree;
+- homepage CTAs match current architecture;
+- founder titles are exact;
+- Contact branches and email routing are intact;
+- Concierge/Blueprint naming and implementation-path contracts are intact;
+- Product & Solution Catalog has required distinctions;
+- Concierge module JSON parses;
+- design-system typography/palette contracts are intact.

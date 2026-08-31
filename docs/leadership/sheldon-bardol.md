@@ -40,4 +40,4 @@ Sheldon Bardol is the Co-Founder and Chief Customer and Operations Officer of Lu
 
 ---
 
-<p align="center"><em>Smart Living. Elevated.</em></p>
+<p align="center"><em>Where Luxury Lives Intelligently</em></p>

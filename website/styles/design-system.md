@@ -1,24 +1,30 @@
 # LuxSync Website Design System
 
-**Status:** Active  
+**Status:** Active / Reconciled  
 **Brand system:** LuxSync v3  
-**Primary asset source:** `brand/assets-v3/`
+**Design DNA:** Plush Drift
 
-LuxSync v3 is the active website treatment. It is crisp, architectural, premium, calm, and restrained. The approved logo artwork is immutable and all editable website UI uses Manrope/Inter and the approved palette only.
+LuxSync v3 is the active website treatment: crisp, architectural, premium, calm, restrained, and tactile. Approved logo artwork is immutable; editable UI uses Manrope/Inter and the approved palette.
+
+## Official Brand Language
+
+**Sole approved public slogan / hero line:**
+
+# Where Luxury Lives Intelligently
+
+Do not use or regenerate retired alternate slogan/hero treatments.
 
 ## Approved Colors
 
 - Slate Navy `#0D1526` — primary dark background
 - Dark Suede `#172036` — elevated dark surfaces
 - Pale Driftwood `#D0BEB0` — primary light text / warm light surface
-- Warm Taupe Mauve `#9E8B85` — secondary neutral text/details
-- Antique Rose Taupe `#967878` — warm decorative accent
+- Warm Taupe Mauve `#9E8B85` — secondary neutral
+- Antique Rose Taupe `#967878` — warm accent
 - Dusty Steel `#7B96B2` — interactive/cool accent
-- Champagne Rose Gold Metallic, `#D6B0A0` anchor — premium metallic accent
+- Champagne Rose Gold Metallic `#D6B0A0` anchor — premium metallic accent
 
-No lavender, purple, orange, electric blue, neon blue, or other unapproved brand colors may be introduced into website UI, icons, borders, overlays, or branded graphics.
-
-Natural photography may contain natural scene color.
+No lavender, purple, orange, electric blue, neon blue, or other unapproved brand colors may be introduced into branded website UI. Natural photography may contain natural scene color.
 
 ## Typography
 
@@ -26,27 +32,11 @@ Natural photography may contain natural scene color.
 - **Body / product copy / forms / supporting UI:** Inter 400/500
 - **Logo lettering:** protected artwork only, never recreated with a font
 
-## Approved Logo Masters
+Do not use Montserrat, Century Gothic, Candara, Bodoni-family, Didot, or Georgia as website-system fonts.
 
-Reference the protected logo artwork directly:
+## Approved Logo Treatment
 
-- `brand/assets/01-brand/luxsync-monogram-orb.png`
-- `brand/assets/01-brand/luxsync-horizontal-lockup.png`
-
-Do not redraw, retype, recolor, soften, cartoonize, or regenerate either logo.
-
-## Active Website Assets
-
-Use:
-
-- `brand/assets-v3/02-ui/buttons-and-ctas.svg`
-- `brand/assets-v3/02-ui/badges.svg`
-- `brand/assets-v3/02-ui/ecommerce-controls.svg`
-- `brand/assets-v3/03-icons/core-line-icons.svg`
-- `brand/assets-v3/04-heroes/hero-smart-living-elevated.svg`
-- `brand/assets-v3/04-heroes/hero-roi-guide.svg`
-- `brand/assets-v3/05-ecommerce/product-card-template.svg`
-- `brand/assets-v3/05-ecommerce/trust-bar.svg`
+Reference protected logo artwork directly. Do not redraw, retype, recolor, soften, cartoonize, or regenerate the logo.
 
 ## Component Language
 
@@ -54,7 +44,7 @@ Use:
 - Pale Driftwood primary copy
 - Antique Rose Taupe detail and borders
 - Dusty Steel controls and selected cool accents
-- Champagne Rose Gold only as a metallic premium accent
+- Champagne Rose Gold only as restrained premium metallic detail
 - generous spacing and editorial negative space
 - refined rounded corners
 - clear focus states and large touch targets
@@ -62,105 +52,155 @@ Use:
 
 ## Plush Drift Tactile Illumination
 
-LuxSync v3 carries forward Plush Drift's physical, backlit interaction language. Buttons, cards, selectable product tiles, recommendation choices, navigation controls, and other actionable surfaces should feel like refined architectural controls rather than flat software rectangles.
+Buttons, cards, Concierge choices, Contact-form intent cards, product tiles, navigation controls, and other actionable surfaces should feel like refined architectural controls rather than flat software rectangles.
 
 ### Layering
 
-Build the component as a darker foreground surface above a softer illuminated layer:
+Build a darker foreground surface above a softer illuminated layer:
 
-- foreground: Slate Navy or Dark Suede;
-- primary cool underlight: Dusty Steel;
-- optional warm underlight: Antique Rose Taupe or a very restrained Pale Driftwood lift;
-- Champagne Rose Gold Metallic may appear as a subtle reflected edge or premium accent, never as the dominant halo.
+- foreground: Slate Navy or Dark Suede
+- primary cool underlight: Dusty Steel
+- optional warm underlight: Antique Rose Taupe or restrained Pale Driftwood
+- Champagne Rose Gold Metallic: subtle reflected edge/premium accent only
 
-The softer color should read as **light coming from behind or beneath the darker surface**.
-
-### Interaction states
+### States
 
 **Rest**
-- Keep the dark surface visually dominant.
-- Use only a faint narrow halo/underlight and a soft dimensional shadow.
+- dark surface remains dominant
+- faint localized underlight
 
 **Hover**
-- Increase underlight brightness and spread slightly.
-- Preserve text contrast and dark-surface dominance.
-- Avoid abrupt scaling or exaggerated lift.
+- modestly increase underlight brightness/spread
+- avoid aggressive scaling
 
 **Keyboard focus**
-- Use an unmistakable accessible focus indicator in addition to any backlight increase.
-- Never rely on glow alone to indicate focus.
+- explicit accessible focus indicator in addition to illumination
+- never rely on glow alone
 
 **Pressed / active**
-- Move or visually compress the foreground surface inward by approximately `1px–2px`.
-- Tighten/reduce the outer shadow to make the control feel physically depressed.
-- Increase the underlight modestly, as though pressing the surface exposes more concealed light.
-- Do not create a flash or neon burst.
+- visually compress/move foreground inward approximately 1–2 px
+- tighten outer shadow
+- modestly increase concealed underlight
 
 **Release**
-- Return smoothly with restrained easing.
-- Keep transitions short and calm.
+- short, calm easing back to rest
 
-### Suggested implementation behavior
+### Accessibility
 
-Use native CSS effects where practical, such as layered pseudo-elements, `box-shadow`, `transform`, and opacity transitions. Favor GPU-light, low-cost interactions over complex JavaScript animation.
+- preserve WCAG contrast on the foreground surface
+- do not communicate state through color/glow alone
+- honor `prefers-reduced-motion`
+- avoid hard luminous borders, neon effects, excessive bloom, flashing, or glowing every static card
 
-A typical implementation may use:
+## Concierge Components
 
-- `transform: translateY(1px)` or equivalent on active state;
-- slightly reduced shadow offset/blur on active state;
-- increased pseudo-element glow opacity on hover/focus/active;
-- transition durations roughly in the `120ms–220ms` range with a calm ease-out curve.
+The **LuxSync Intelligent Living Concierge** is a flagship interaction surface.
 
-These are implementation targets, not permission to sacrifice responsiveness or accessibility.
+Use:
 
-### Accessibility and restraint
+- large outcome-oriented selectable cards
+- progressive disclosure rather than long forms
+- descriptive progress states such as `Understanding Your Space`, `Designing Your Experience`, and `Creating Your Blueprint`
+- strong selected states with accessible non-color cues
+- comfortable touch targets
+- clear Back / Continue behavior without data loss
+- Blueprint reveal cards that explain `Why LuxSync Chose This`
 
-- Preserve WCAG contrast on the actual foreground surface.
-- Do not communicate state through glow/color alone.
-- Honor `prefers-reduced-motion` and reduce or remove positional press animation when requested.
-- Keep glow soft, atmospheric, and localized.
-- Avoid hard luminous outlines, arcade/neon effects, excessive bloom, glassmorphism overload, or glowing every static card on the page.
+The Concierge must not visually resemble a cheap online quiz.
 
-Use tactile illumination most strongly on **interactive controls**. Static containers may use much subtler backlighting for layered depth.
+## My LuxSync Blueprint
 
-## Hero Language
+Blueprint visual hierarchy:
 
-Preferred visual treatment:
+1. Your Space
+2. What Matters Most
+3. Intelligent Living Profile
+4. Recommended LuxSync Experiences
+5. Foundation / compatibility context
+6. Implementation path
+7. Phased roadmap
+8. Technology behind the experience
+9. Next best action
 
-- premium interior or architectural photography
-- dark refined field with warm light
-- controlled branded overlays from the approved palette
-- editorial negative space for native copy
-- approved logo artwork only
+Recommended paths use:
 
-Approved hero line:
+- Essential Intelligence
+- Elevated Living
+- Complete LuxSync Experience
 
-**Smart Living. Elevated.**
+## Adaptive Contact Components
 
-Official slogan:
+The dedicated Contact page uses the same premium card language as the Concierge.
 
-**Where Luxury Lives Intelligently**
+Initial intent cards:
+
+- Support
+- Product Information
+- Consultation
+- General Question
+- Business / Partnership
+- Other
+
+Reveal approximately 3–6 relevant fields at a time. Do not render a wall of every possible field.
+
+Use the same visual treatment for shared Property Profile selections such as property type and square-footage ranges.
+
+Conditional changes and validation errors must be accessible to assistive technologies.
+
+## Forms
+
+- persistent visible labels
+- clear required/optional state
+- helpful, non-punitive validation copy
+- large inputs and controls on mobile
+- Not Sure option where exact property measurements are unnecessary
+- marketing consent separate and optional
+- no full street-address requirement for initial Contact/Concierge discovery
+
+## Hero Treatment
+
+Use:
+
+- approved logo artwork
+- **Where Luxury Lives Intelligently** as the public hero line
+- premium interior / architectural imagery or approved branded composition
+- restrained dark field and warm/cool lighting
+- native text rather than baked-in copy when practical
+- primary CTA: **Find My LuxSync Solution**
+- secondary CTA: **Shop Smart Home**
+
+Do not use assets that embed retired slogan/hero copy.
+
+## Product and Solution Cards
+
+Differentiate clearly between:
+
+- validated live product
+- validated bundle
+- planning product family
+- LuxSync Experience / solution concept
+
+Do not make a solution concept look purchasable unless a validated commerce item exists.
 
 ## Image Rules
 
-- Production photography should be text-free wherever practical.
-- Do not bake live prices, ratings, stock, scarcity, navigation, or promotional claims into photographs.
-- Use approved v3 SVG compositions for branded graphics.
-- Prefer SVG for vector UI and WebP for production scene imagery.
+- production photography should be text-free where practical
+- do not bake live prices, ratings, stock, scarcity, navigation, or promotional claims into photographs
+- prefer SVG for vector UI and WebP for production scene imagery
+- retired slogan artwork must not be reused
 
 ## Avoid
 
-- cartoonized or softened logo treatments
 - regenerated logo lettering
 - cyberpunk neon
 - lavender/purple drift
-- orange/copper drift outside the approved metallic treatment
-- loud electric gradients
 - generic SaaS blue
 - dense gadget-store grids
 - cartoon UI
 - excessive glassmorphism
 - hard glowing borders
 - flashing animation
-- flat controls that ignore the approved tactile backlighting language
-- text baked into photography when it can be rendered natively
+- flat controls that ignore tactile backlighting
+- text baked into photography when it can be native
+- novelty-quiz styling for the Concierge
+- bureaucratic ticket-system styling for Contact
