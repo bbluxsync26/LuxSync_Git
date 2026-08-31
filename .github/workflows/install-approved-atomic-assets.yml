@@ -5,9 +5,8 @@ on:
     branches:
       - brand/atomic-cutover-final
     paths:
-      - '.atomic-installer/**'
       - 'scripts/build-approved-atomic-brand-assets.py'
-      - 'scripts/expand-atomic-source-archive.py'
+      - 'scripts/validate-brand-v3.py'
       - '.github/workflows/install-approved-atomic-assets.yml'
 
 permissions:
@@ -29,8 +28,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Expand approved source sheet archive
-        run: python3 scripts/expand-atomic-source-archive.py
       - name: Build approved atomic asset library
         run: python3 scripts/build-approved-atomic-brand-assets.py
       - name: Validate hard cutover
@@ -40,13 +37,17 @@ jobs:
           test -f brand/source-logo/LuxSync_Logo_Horizontal_Combo.png
           test -f brand/source-logo/LuxSync_Logo_Horizontal_Final.png
           test -f brand/source-logo/LuxSync_Logo_Orb.png
+          test "$(find brand/assets/01-logos -type f -name '*.svg' | wc -l)" -eq 3
           test "$(find brand/assets/02-icons -type f -name '*.svg' | wc -l)" -eq 15
           test "$(find brand/assets/03-buttons -type f -name '*.svg' | wc -l)" -eq 18
           test "$(find brand/assets/04-ui-controls -type f -name '*.svg' | wc -l)" -eq 25
           test "$(find brand/assets/05-dividers-accents -type f -name '*.svg' | wc -l)" -eq 44
           test "$(find brand/assets/06-product-cards -type f -name '*.svg' | wc -l)" -eq 4
+          test "$(find brand/assets/07-heroes -type f -name '*.svg' | wc -l)" -eq 1
+          test "$(find brand/assets/08-roi -type f -name '*.svg' | wc -l)" -eq 1
           test "$(find brand/assets/09-stationery -type f -name '*.svg' | wc -l)" -eq 4
-          test "$(find brand/assets/10-source-sheets -type f -name '*.webp' | wc -l)" -eq 9
+          test "$(find brand/assets/11-marketing -type f -name '*.svg' | wc -l)" -eq 2
+          test "$(find brand/assets/12-palette -type f -name '*.svg' | wc -l)" -eq 9
           grep -q 'Brushed Dusty Steel' brand/assets/README.md
           grep -q 'LuxSync_Logo_Orb.png' brand/assets/README.md
           if grep -RIn --include='*.md' --include='*.svg' -E 'icy-blue highlight tints may be used' brand/assets brand/README.md brand/colors.md; then exit 1; fi
