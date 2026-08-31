@@ -18,25 +18,24 @@ The repository is the LuxSync source of truth. Conversation drafts or external c
 3. Current business and operating plans
 4. Current website/content documents
 5. Current prompts
-6. Generated asset metadata and exports
-7. Historical bootstrap scripts or superseded files
+6. Active asset metadata and exports
+7. Historical/superseded generators and legacy graphics
 
 ## Current Brand Tie-Breaker
 
 When current LuxSync files disagree, apply these rules:
 
-- **Base brand system:** Plush Drift v2.1
-- **Active web/graphics treatment:** Luxury Orbit
-- **Headings / display / navigation / graphic UI:** Manrope 500/600
+- **Authoritative visual system:** LuxSync v3
+- **Active asset root:** `brand/assets-v3/`
+- **Headings / navigation / buttons / graphic UI:** Manrope 500/600
 - **Body / supporting UI:** Inter 400/500
 - **Official slogan:** Where Luxury Lives Intelligently
 - **Homepage hero:** Smart Living. Elevated.
-- **Primary CTA:** Shop Smart Home
-- **Secondary CTA:** Get the ROI Guide
-- **Protected exact logo artwork:** the approved primary monogram and horizontal lockup remain exact artwork and are not re-typeset merely to enforce live-text typography
-- **Approved metallic color:** Champagne Rose Gold Metallic uses the `#D6B0A0` anchor and approved light-to-dark metallic gradient
+- **Protected exact logo artwork:** approved monogram and horizontal lockup remain immutable artwork
+- **Approved colors only:** Slate Navy, Dark Suede, Pale Driftwood, Warm Taupe Mauve, Antique Rose Taupe, Dusty Steel, Champagne Rose Gold Metallic
+- **Champagne Rose Gold Metallic:** `#D6B0A0` anchor with approved metallic rendering
 
-Luxury Orbit uses the approved Champagne Rose Gold Metallic treatment and may add restrained Dusty Steel-derived orbit light without replacing the Plush Drift palette or Manrope/Inter typography.
+Do not redraw, retype, recolor, soften, cartoonize, or regenerate the approved logo artwork.
 
 ## Core Strategy Documents
 
@@ -54,16 +53,32 @@ Luxury Orbit uses the approved Champagne Rose Gold Metallic treatment and may ad
 
 | ID | Artifact | Path | Status |
 |---|---|---|---|
-| BRAND-001 | Brand Guidelines | `brand/README.md` | Active — Plush Drift v2.1 + Luxury Orbit |
-| BRAND-002 | Color System | `brand/colors.md` | Active — Plush Drift v2.1 base palette |
+| BRAND-001 | Brand Guidelines | `brand/README.md` | Active — LuxSync v3 |
+| BRAND-002 | Color System | `brand/colors.md` | Active — approved seven-color palette |
 | BRAND-003 | Typography | `brand/typography.md` | Active — Manrope + Inter |
 | BRAND-004 | Voice & Tone | `brand/voice-and-tone.md` | Active — Intelligent Calm |
-| BRAND-005 | Asset Library | `brand/assets/` | Active — 104 logical assets |
-| BRAND-006 | Vector Asset CSV | `brand/assets/asset-manifest.csv` | Active — 98 SVG-based graphics |
-| BRAND-007 | Asset JSON Summary | `brand/assets/asset-manifest.json` | Active |
-| BRAND-008 | Production Scene Manifest | `brand/assets/12-scenes/scene-manifest.csv` | Active — 6 text-free scenes |
+| BRAND-005 | v3 Asset System | `brand/assets-v3/` | Active / Authoritative |
+| BRAND-006 | v3 Brand Board | `brand/assets-v3/00-reference/brand-board.svg` | Active reference |
+| BRAND-007 | v3 Asset Manifest | `brand/assets-v3/08-docs/asset-manifest.json` | Active |
+| BRAND-008 | v3 Migration Guide | `brand/assets-v3/08-docs/MIGRATION.md` | Active |
+| BRAND-009 | Legacy Asset Library | `brand/assets/` | Legacy / Compatibility only |
+| BRAND-010 | Production Scene Manifest | `brand/assets/12-scenes/scene-manifest.csv` | Retained source photography |
 
-## Architecture and Decisions
+## v3 Asset Groups
+
+| Area | Path | Purpose |
+|---|---|---|
+| Reference | `brand/assets-v3/00-reference/` | authoritative brand board |
+| Foundation | `brand/assets-v3/01-foundation/` | approved palette |
+| UI | `brand/assets-v3/02-ui/` | buttons, CTAs, badges, ecommerce controls |
+| Icons | `brand/assets-v3/03-icons/` | smart-living line icons |
+| Heroes | `brand/assets-v3/04-heroes/` | homepage and ROI-guide hero compositions |
+| Ecommerce | `brand/assets-v3/05-ecommerce/` | product-card and trust components |
+| Stationery | `brand/assets-v3/06-stationery/` | business cards, letterhead, invoice |
+| Marketing | `brand/assets-v3/07-marketing/` | social, email, flyer templates |
+| Docs | `brand/assets-v3/08-docs/` | manifest and migration policy |
+
+## Architecture and Website
 
 | ID | Artifact | Path | Status |
 |---|---|---|---|
@@ -71,7 +86,7 @@ Luxury Orbit uses the approved Champagne Rose Gold Metallic treatment and may ad
 | DEC-004 | Commerce Plus and Airo Role | `docs/decisions/DEC-004-commerce-plus-and-airo-role.md` | Active |
 | DEC-005 | Senior Service Pricing | `docs/decisions/DEC-005-senior-service-pricing.md` | Open / Decision Required |
 | WEB-001 | Homepage Blueprint | `website/pages/home.md` | Active launch baseline |
-| WEB-002 | Website Design System | `website/styles/design-system.md` | Active — Plush Drift + Luxury Orbit |
+| WEB-002 | Website Design System | `website/styles/design-system.md` | Active — LuxSync v3 |
 | WEB-003 | Website Source Area | `website/src/README.md` | Placeholder until first reviewed export |
 
 ## Runbooks
@@ -83,20 +98,14 @@ Luxury Orbit uses the approved Champagne Rose Gold Metallic treatment and may ad
 | RB-005 | Production Deployment and Domain/DNS | TBD | Planned |
 | RB-006 | Rollback | TBD | Planned |
 | RB-007 | Brand Asset Raster Regeneration | `docs/runbooks/RB-007-Brand-Asset-Raster-Regeneration.md` | Superseded / Historical |
-| RB-008 | Luxury Orbit Brand Asset Generation | `docs/runbooks/RB-008-Luxury-Orbit-Brand-Asset-Generation.md` | Active |
+| RB-008 | Luxury Orbit Brand Asset Generation | `docs/runbooks/RB-008-Luxury-Orbit-Brand-Asset-Generation.md` | Superseded / Historical |
 | RB-009 | Repository Consistency Validation | `docs/runbooks/RB-009-Repository-Consistency-Validation.md` | Active |
-
-## Checklists
-
-| ID | Artifact | Path | Status |
-|---|---|---|---|
-| CL-001 | Airo First-Pass Review | `docs/checklists/CL-001-Airo-First-Pass-Review.md` | Active / Reconciled |
 
 ## Prompt Catalog
 
 | ID | Artifact | Path | Status | Use |
 |---|---|---|---|---|
-| PR-001 | LuxSync Airo Master Website Build Prompt | `prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md` | Draft / Ready after consistency gate | Initial Airo staging build |
+| PR-001 | LuxSync Airo Master Website Build Prompt | `prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md` | Draft / Requires v3 asset references | Initial Airo staging build |
 | PR-002 | Website Design Review Prompt | TBD | Planned | Brand/UX review |
 | PR-003 | Deployment Validation Prompt | TBD | Planned | Pre-production validation |
 | PR-CONTENT-001 | Content Writer | `prompts/content-writer.md` | Active | General LuxSync copy |
@@ -105,27 +114,25 @@ Luxury Orbit uses the approved Champagne Rose Gold Metallic treatment and may ad
 
 ## Automation and Validation
 
-| Artifact | Path | Purpose |
+The previous Luxury Orbit generators remain historical tooling for the legacy `brand/assets/` library. They do **not** define LuxSync v3.
+
+| Artifact | Path | Status |
 |---|---|---|
-| Brand Generator | `scripts/generate-luxury-orbit-assets.py` | Generate editable SVG-based graphics |
-| Brand Normalizer | `scripts/normalize-luxury-orbit-fonts.py` | Enforce Manrope/Inter, base palette, and safe generated copy |
-| Brand Renderer | `scripts/render-luxury-orbit-assets.py` | Render PNG/WebP derivatives and contact sheets while preserving approved logos |
-| Asset Metadata Reconciler | `scripts/reconcile-asset-metadata.py` | Synchronize CSV/JSON/inventory/catalog metadata to committed assets |
-| Repository Validator | `scripts/validate-repository-consistency.py` | Validate cross-repository source-of-truth consistency |
-| Brand Generation Workflow | `.github/workflows/regenerate-brand-raster-assets.yml` | Generate/normalize/render/validate brand assets |
-| Consistency Workflow | `.github/workflows/validate-repository-consistency.yml` | Gate pull requests and master on repository consistency |
+| Legacy Brand Generator | `scripts/generate-luxury-orbit-assets.py` | Historical / legacy assets only |
+| Legacy Brand Renderer | `scripts/render-luxury-orbit-assets.py` | Historical / legacy assets only |
+| Repository Validator | `scripts/validate-repository-consistency.py` | Active; update for v3 as needed |
+| Consistency Workflow | `.github/workflows/validate-repository-consistency.yml` | Active |
 
 ## Launch Website Direction
 
 - Commerce-first luxury smart-home storefront
 - GoDaddy Commerce Plus remains production commerce system of record
-- Airo AI Builder is used for staging/reference generation and code/design exploration
-- Samsung SmartThings is the primary launch compatibility standard
+- Samsung SmartThings remains the primary launch compatibility standard
 - Mobile-first, accessible, performant experience
-- Plush Drift v2.1 base brand system
-- Luxury Orbit web/graphics treatment
+- LuxSync v3 visual system
 - Manrope + Inter typography
 - Intelligent Calm voice
+- Approved logo artwork referenced directly, never regenerated
 
 Primary launch navigation:
 
@@ -139,33 +146,22 @@ Commerce utilities:
 Search | Account | Cart
 ```
 
-## Open Decisions / Validation Items
-
-1. **DEC-005:** Select and approve one senior-service pricing model before public display.
-2. Validate live Commerce Plus product catalog and product data before publishing prices or availability.
-3. Run the repository consistency gate and confirm canonical asset metadata is clean.
-4. Run the first PR-001 generation in Airo AI Builder.
-5. Review Airo output using CL-001 against ARC-001 and the authoritative brand contract.
-6. Determine exported source structure after inspecting actual Airo output.
-7. Define CI/CD, staging, production deployment/domain-DNS, and rollback runbooks.
-
 ## Maintenance Rules
 
 1. Add an entry when a reusable prompt, runbook, architecture document, checklist, decision, or validation procedure becomes durable.
 2. Mark work-in-progress artifacts `Draft`.
-3. Mark the exact prompt/version used in production `Final / Used`.
-4. Preserve superseded material where traceability matters.
-5. Do not store passwords, API keys, payment credentials, private tokens, or other secrets in the repository.
-6. Review this catalog after material architecture, brand, business-model, or production-deployment changes.
-7. Repository paths in this catalog must correspond to actual committed files.
-8. When an intentional decision changes a validator-enforced rule, update the governing document and validator in the same change set.
+3. Preserve superseded material where traceability matters, but clearly mark it legacy.
+4. Do not store passwords, API keys, payment credentials, private tokens, or other secrets in the repository.
+5. Repository paths in this catalog must correspond to actual committed files.
+6. New visual assets must use `brand/assets-v3/`.
+7. Never recreate protected logo artwork.
+8. Branded vector/UI work may use only the approved palette.
 
 ## Change Log
 
 | Date | Change |
 |---|---|
 | 2026-08-29 | Repository master catalog established. |
-| 2026-08-30 | Added DOC-007 and website/Airo architecture artifacts. |
-| 2026-08-30 | Reconciled Plush Drift v2.1, Luxury Orbit, Manrope/Inter, asset counts, business-plan math, and repository consistency automation. |
-| 2026-08-30 | Added DEC-005 to preserve unresolved senior-service pricing as an explicit publication guardrail. |
-| 2026-08-31 | Added Champagne Rose Gold Metallic as the seventh approved color and reconciled palette inventory counts. |
+| 2026-08-30 | Reconciled website/Airo architecture and operating baseline. |
+| 2026-08-31 | Added Champagne Rose Gold Metallic as the seventh approved color. |
+| 2026-08-31 | Established LuxSync v3 as the authoritative brand asset system and moved the generated Luxury Orbit library to legacy compatibility status. |
