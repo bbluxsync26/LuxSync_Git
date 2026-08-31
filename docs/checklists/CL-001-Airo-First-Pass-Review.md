@@ -40,6 +40,20 @@
 - [ ] Century Gothic, Candara, Montserrat, Bodoni-family, Didot, and Georgia are not used as website-system fonts
 - [ ] Approved exact logo artwork is preserved rather than re-typeset
 
+### Plush Drift tactile illumination
+
+- [ ] Interactive buttons, cards, and selectable tiles use darker Slate Navy/Dark Suede foreground surfaces over restrained softer underlighting
+- [ ] Dusty Steel is the preferred cool underlight; Antique Rose Taupe/Pale Driftwood are used only where a warmer treatment is appropriate
+- [ ] Champagne Rose Gold Metallic appears only as a restrained reflected edge/premium accent, not the dominant halo
+- [ ] Rest state keeps underlighting faint and localized
+- [ ] Hover state brightens and widens underlighting slightly without becoming neon
+- [ ] Keyboard focus includes a clear accessible focus indicator in addition to any glow
+- [ ] Pressed/active state visually compresses or moves the foreground inward by approximately 1–2 px, tightens the shadow, and modestly brightens the concealed underlight
+- [ ] Release returns smoothly with restrained easing
+- [ ] Reduced-motion preference is honored
+- [ ] Static cards use much subtler backlighting than actionable controls
+- [ ] No hard glowing outlines, arcade/neon halos, flashing, exaggerated bloom, or glow-only state communication
+
 ### LuxSync v3 treatment
 
 - [ ] Champagne Rose Gold Metallic is treated as the seventh approved color and its gradient stops are not misrepresented as additional palette colors
