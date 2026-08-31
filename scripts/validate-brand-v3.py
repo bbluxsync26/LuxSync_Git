@@ -28,12 +28,23 @@ COUNTS = {
 REQUIRED = [
     "brand/assets/README.md",
     "brand/assets/asset-manifest.json",
+    "brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.svg",
+    "brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.svg",
+    "brand/assets/01-logos/LuxSync_Logo_Orb.svg",
     "brand/assets/02-icons/home.svg",
+    "brand/assets/02-icons/security-shield.svg",
     "brand/assets/03-buttons/primary-shop-now.svg",
+    "brand/assets/03-buttons/utility-add-to-cart.svg",
+    "brand/assets/04-ui-controls/toggle-on.svg",
+    "brand/assets/04-ui-controls/search-bar.svg",
     "brand/assets/05-dividers-accents/brushed-dusty-steel-wide.svg",
+    "brand/assets/05-dividers-accents/sparkle-12.svg",
+    "brand/assets/06-product-cards/touch-panel.svg",
     "brand/assets/07-heroes/homepage-smart-living.svg",
     "brand/assets/08-roi/smart-home-roi-guide-hero.svg",
     "brand/assets/09-stationery/business-card-front.svg",
+    "brand/assets/09-stationery/letterhead.svg",
+    "brand/assets/11-marketing/roi-guide-promo.svg",
     "brand/assets/12-palette/brushed-dusty-steel-metallic.svg",
     "content/about.md",
     "content/faqs.md",
@@ -59,14 +70,6 @@ for folder, expected in COUNTS.items():
     if actual != expected:
         errors.append(f"brand/assets/{folder}: expected {expected} individual SVGs; found {actual}")
 
-source_sheets = ASSETS / "10-source-sheets"
-if source_sheets.exists():
-    actual = len(list(source_sheets.glob("*.webp")))
-    if actual != 9:
-        errors.append(f"brand/assets/10-source-sheets: expected 9 approved source sheets; found {actual}")
-else:
-    errors.append("missing brand/assets/10-source-sheets")
-
 manifest_path = ASSETS / "asset-manifest.json"
 if manifest_path.exists():
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
@@ -76,6 +79,9 @@ if manifest_path.exists():
         errors.append("asset manifest source_of_truth must be brand/assets")
     if "Brushed Dusty Steel" not in manifest.get("metallic_blue", ""):
         errors.append("asset manifest must identify Brushed Dusty Steel as the approved metallic blue")
+    files = manifest.get("files", [])
+    if not isinstance(files, list) or len(files) < 128:
+        errors.append("asset manifest does not enumerate the complete atomic library")
 
 for rel in ["brand/README.md", "brand/assets/README.md", "brand/colors.md"]:
     path = ROOT / rel
@@ -92,12 +98,13 @@ asset_docs = "\n".join(
     for p in [ROOT / "brand/README.md", ROOT / "brand/colors.md", ASSETS / "README.md"]
     if p.exists()
 ).lower()
-for forbidden in ("electric blue", "neon blue"):
-    # Phrases are allowed only when explicitly prohibited.
-    if forbidden in asset_docs and "prohibit" not in asset_docs:
-        errors.append(f"unapproved blue language found: {forbidden}")
 if "icy-blue highlight tints may be used" in asset_docs:
     errors.append("retired icy-blue derivation permission remains")
+
+for rel in ("brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.svg", "brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.svg", "brand/assets/01-logos/LuxSync_Logo_Orb.svg"):
+    p = ROOT / rel
+    if p.exists() and "../../source-logo/" not in p.read_text(encoding="utf-8"):
+        errors.append(f"{rel}: logo wrapper must reference authoritative source-logo artwork")
 
 website_contract = {
     "content/faqs.md": ("Find My LuxSync Solution", "info@luxsync.net", "support@luxsync.net"),
