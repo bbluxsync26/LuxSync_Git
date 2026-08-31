@@ -1,0 +1,162 @@
+name: Install finished LuxSync raster assets
+
+on:
+  push:
+    branches:
+      - fix/finished-raster-assets
+    paths:
+      - '.asset-payload/READY'
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reconstruct approved finished asset payload
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64, zipfile, shutil
+          root=Path('.')
+          chunks=sorted((root/'.asset-payload').glob('chunk-*.txt'))
+          if not chunks:
+              raise SystemExit('No asset chunks found')
+          data=''.join(p.read_text(encoding='utf-8').strip() for p in chunks)
+          zpath=root/'.asset-payload'/'finished-assets.zip'
+          zpath.write_bytes(base64.b64decode(data))
+          out=root/'.asset-payload'/'unpacked'
+          if out.exists(): shutil.rmtree(out)
+          out.mkdir()
+          with zipfile.ZipFile(zpath) as z:
+              z.extractall(out)
+          print('Reconstructed', len(list((out/'brand/assets').rglob('*.webp'))), 'finished WebP assets')
+          PY
+      - name: Replace placeholder SVG library with finished assets
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import shutil, json
+          root=Path('.')
+          assets=root/'brand/assets'
+          unpack=root/'.asset-payload/unpacked/brand/assets'
+          if not unpack.exists():
+              raise SystemExit('Finished asset payload is missing brand/assets')
+          if assets.exists(): shutil.rmtree(assets)
+          shutil.copytree(unpack, assets)
+          logos=assets/'01-logos'
+          logos.mkdir(parents=True, exist_ok=True)
+          for name in ['LuxSync_Logo_Horizontal_Combo.png','LuxSync_Logo_Horizontal_Final.png','LuxSync_Logo_Orb.png']:
+              src=root/'brand/source-logo'/name
+              if not src.exists(): raise SystemExit(f'Missing authoritative logo: {src}')
+              shutil.copy2(src, logos/name)
+          readme='''# LuxSync Finished Production Asset Library\n\n**Status:** Active / Authoritative\n\nThis directory contains the approved finished LuxSync artwork as individual website-ready files. These are the actual approved raster exports, not reconstructed SVG approximations.\n\n## Authoritative logos\nThe immutable logo masters remain in `brand/source-logo/` and are duplicated in `01-logos/` only for convenient website consumption. Never redraw, recolor, soften, regenerate, or re-typeset them.\n\n## Production formats\n- Logos: PNG from the exact approved source masters\n- Website graphics: WebP individual exports\n- Branding board: `brand/source-logo/LuxSync_Branding_Board.png`\n\n## Approved visual system\nUse the approved palette, Champagne Rose Gold Metallic, and Brushed Dusty Steel metallic treatment. Icons use the approved blush + blue combination. No electric blue, neon blue, lavender, purple, or other new color may be introduced without explicit approval.\n\n## Asset groups\n- `01-logos/`\n- `02-icons/`\n- `03-buttons/`\n- `04-ui-controls/`\n- `05-dividers-accents/`\n- `06-product-cards/`\n- `07-heroes/`\n- `08-roi/`\n- `09-stationery/`\n- `11-marketing/`\n- `12-palette/`\n\nEditable website text remains Manrope + Inter.\n'''
+          (assets/'README.md').write_text(readme,encoding='utf-8')
+          groups={}
+          for d in sorted(p for p in assets.iterdir() if p.is_dir()):
+              groups[d.name]=sorted(p.name for p in d.iterdir() if p.is_file())
+          files=sorted(str(p.relative_to(root)).replace('\\','/') for p in assets.rglob('*') if p.is_file())
+          manifest={
+            'version':'5.0-finished-raster',
+            'status':'approved',
+            'source_of_truth':'brand/assets',
+            'branding_board':'brand/source-logo/LuxSync_Branding_Board.png',
+            'authoritative_logos':[
+              'brand/source-logo/LuxSync_Logo_Horizontal_Combo.png',
+              'brand/source-logo/LuxSync_Logo_Horizontal_Final.png',
+              'brand/source-logo/LuxSync_Logo_Orb.png'],
+            'metallic_blue':'Brushed Dusty Steel',
+            'production_formats':{'logos':'PNG','graphics':'WebP'},
+            'groups':groups,
+            'asset_count':len(files),
+            'files':files}
+          (assets/'asset-manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
+          PY
+      - name: Reconcile active documentation
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          root=Path('.')
+          brand=root/'brand/README.md'
+          brand.write_text('''# LuxSync Brand System\n\n**Status:** Active / Authoritative\n\nThe production visual asset source is `brand/assets/`, containing the finished approved individual WebP graphics plus exact PNG logo masters.\n\n## Immutable source artwork\n- `brand/source-logo/LuxSync_Logo_Horizontal_Combo.png`\n- `brand/source-logo/LuxSync_Logo_Horizontal_Final.png`\n- `brand/source-logo/LuxSync_Logo_Orb.png`\n- `brand/source-logo/LuxSync_Branding_Board.png`\n\nDo not redraw, recolor, soften, regenerate, or re-typeset the logos.\n\n## Colors\nSlate Navy `#0D1526`; Dark Suede `#172036`; Pale Driftwood `#D0BEB0`; Warm Taupe Mauve `#9E8B85`; Antique Rose Taupe `#967878`; Dusty Steel `#7B96B2`; Champagne Rose Gold Metallic anchored at `#D6B0A0`. Brushed Dusty Steel is the approved metallic-blue treatment. No new color may be introduced without explicit approval.\n\n## Typography\nManrope for headings/UI and Inter for body/supporting text. Logo lettering is protected artwork only.\n''',encoding='utf-8')
+          paths=[root/'README.md',root/'docs/master-catalog.md',root/'website/styles/design-system.md']
+          for p in paths:
+              if not p.exists(): continue
+              s=p.read_text(encoding='utf-8')
+              s=s.replace('LuxSync v3','LuxSync finished production system')
+              s=s.replace('brand/assets-v3/','brand/assets/')
+              s=s.replace('individual SVG','individual WebP')
+              s=s.replace('SVG compositions','finished WebP graphics')
+              s=s.replace('Prefer SVG for vector UI and WebP for production scene imagery.','Use the finished WebP production graphics for branded visual objects; render live text and interaction states natively in HTML/CSS where practical.')
+              s=s.replace('brand/assets/01-brand/luxsync-horizontal-lockup.png','brand/source-logo/LuxSync_Logo_Horizontal_Final.png')
+              s=s.replace('brand/assets/01-brand/luxsync-monogram-orb.png','brand/source-logo/LuxSync_Logo_Orb.png')
+              # Replace known atomic SVG extensions with WebP in docs.
+              import re
+              s=re.sub(r'(brand/assets/[A-Za-z0-9_./-]+)\.svg',r'\1.webp',s)
+              p.write_text(s,encoding='utf-8')
+          PY
+      - name: Replace validator with finished-asset checks
+        run: |
+          cat > scripts/validate-brand-v3.py <<'PY'
+          #!/usr/bin/env python3
+          from pathlib import Path
+          import json
+          ROOT=Path(__file__).resolve().parents[1]
+          A=ROOT/'brand/assets'
+          expected={'01-logos':3,'02-icons':15,'03-buttons':18,'04-ui-controls':25,'05-dividers-accents':44,'06-product-cards':4,'07-heroes':1,'08-roi':1,'09-stationery':4,'11-marketing':1,'12-palette':8}
+          errors=[]
+          if (ROOT/'brand/assets-v3').exists(): errors.append('retired brand/assets-v3 still exists')
+          if list(A.rglob('*.svg')): errors.append('placeholder SVG files remain in production asset library')
+          for d,n in expected.items():
+              ext='*.png' if d=='01-logos' else '*.webp'
+              got=len(list((A/d).glob(ext))) if (A/d).exists() else 0
+              if got!=n: errors.append(f'{d}: expected {n} finished files, found {got}')
+          for name in ['LuxSync_Logo_Horizontal_Combo.png','LuxSync_Logo_Horizontal_Final.png','LuxSync_Logo_Orb.png','LuxSync_Branding_Board.png']:
+              if not (ROOT/'brand/source-logo'/name).exists(): errors.append(f'missing approved source artwork: {name}')
+          m=A/'asset-manifest.json'
+          if not m.exists(): errors.append('missing finished asset manifest')
+          else:
+              data=json.loads(m.read_text())
+              if data.get('version')!='5.0-finished-raster': errors.append('wrong manifest version')
+              if data.get('metallic_blue')!='Brushed Dusty Steel': errors.append('Brushed Dusty Steel not locked')
+          for p in [ROOT/'brand/README.md',A/'README.md',ROOT/'website/styles/design-system.md',ROOT/'docs/master-catalog.md']:
+              if p.exists():
+                  s=p.read_text(encoding='utf-8').lower()
+                  if 'brand/assets-v3/' in s: errors.append(f'stale assets-v3 path in {p.relative_to(ROOT)}')
+          if errors:
+              print('Finished LuxSync asset validation failed:')
+              for e in errors: print('-',e)
+              raise SystemExit(1)
+          print('Finished LuxSync asset validation passed.')
+          PY
+      - name: Remove obsolete generators and one-time migration files
+        run: |
+          rm -f .noop
+          rm -f scripts/build-approved-atomic-brand-assets.py
+          rm -f .github/workflows/install-approved-atomic-assets.yml
+          rm -rf .asset-payload
+          rm -f .github/workflows/install-finished-raster-assets.yml
+      - name: Validate finished production assets
+        run: |
+          python3 scripts/validate-brand-v3.py
+          git diff --check
+          test -z "$(find brand/assets -type f -name '*.svg' -print -quit)"
+          test "$(find brand/assets/02-icons -type f -name '*.webp' | wc -l)" -eq 15
+          test "$(find brand/assets/03-buttons -type f -name '*.webp' | wc -l)" -eq 18
+          test "$(find brand/assets/04-ui-controls -type f -name '*.webp' | wc -l)" -eq 25
+          test "$(find brand/assets/05-dividers-accents -type f -name '*.webp' | wc -l)" -eq 44
+      - name: Commit finished production asset replacement
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Replace placeholder SVGs with finished approved LuxSync assets'
+          git push origin HEAD:${GITHUB_REF_NAME}
