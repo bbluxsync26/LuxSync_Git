@@ -28,7 +28,7 @@ Luxury smart-home technology designed for modern living, with curated hardware a
 
 ### Visual direction
 
-Use Luxury Orbit as the active web treatment on the Plush Drift v2.1 base system: Slate Navy / Dark Suede surfaces, restrained Champagne Rose Gold Metallic detail anchored at `#D6B0A0`, Dusty Steel orbit light, Pale Driftwood copy, generous negative space, and premium smart-living imagery. Keep the CTA visible above the fold on desktop and mobile.
+Use LuxSync v3: Slate Navy / Dark Suede surfaces, restrained Champagne Rose Gold Metallic detail anchored at `#D6B0A0`, Dusty Steel interaction accents, Pale Driftwood copy, generous negative space, and premium smart-living imagery. Use current assets beneath `brand/assets-v3/`. Keep the CTA visible above the fold on desktop and mobile.
 
 ---
 
@@ -75,7 +75,19 @@ Primary section CTA: **Shop Collections**
 
 ---
 
-## 5. How It Works
+## 5. Find My LuxSync Solution
+
+Introduce LuxSync's signature outcome-first recommendation experience before asking visitors to compare products.
+
+- Heading: **Your space. Your priorities. Your intelligent solution.**
+- Body: **Tell us how you want your space to feel and function. We will translate those goals into compatible products, thoughtful bundles, automation possibilities, and a phased path you can grow over time.**
+- Primary CTA: **Find My LuxSync Solution**
+
+Use a premium guided-path visual rather than a novelty quiz treatment. Do not imply that unreleased products or automation templates are currently available.
+
+---
+
+## 6. How It Works
 
 Use a concise four-step flow:
 
@@ -88,7 +100,7 @@ Do not position LuxSync as an on-site installation company unless a future repos
 
 ---
 
-## 6. Featured Products and Bundles
+## 7. Featured Products and Bundles
 
 Display a restrained set of validated products or bundles.
 
@@ -101,7 +113,29 @@ Rules:
 
 ---
 
-## 7. Lead Magnet and Email Signup
+## 8. Meet the Founders
+
+Use a compact, balanced introduction to LuxSync leadership.
+
+- **Bridgette Beardsley — Co-Founder & Chief Technology and Strategy Officer**
+- **Sheldon Bardol — Co-Founder & Chief Customer and Operations Officer**
+
+Use the Compact Biographies from `docs/leadership/`. Keep both profiles equal in visual weight and link to the About page. Do not invent credentials, portraits, or founder history.
+
+---
+
+## 9. Frequently Asked Questions
+
+Show the six-question preview defined in `website/pages/faqs.md`, using shortened answers from `content/faqs.md` without changing their meaning.
+
+- Section CTA: **View All FAQs**
+- Secondary path: **Contact LuxSync**
+
+Use accessible accordions and keep the section calm and concise.
+
+---
+
+## 10. Lead Magnet and Email Signup
 
 Reserve a premium content block for the **STR Smart Home ROI Guide** when ready.
 
@@ -109,7 +143,7 @@ Provide an email signup with calm, benefit-led copy rather than urgency.
 
 ---
 
-## 8. Footer
+## 11. Footer
 
 Include:
 
@@ -164,7 +198,7 @@ Commerce utilities such as Search, Account, and Cart should remain accessible th
 - Dusty Steel `#7B96B2`
 - Champagne Rose Gold Metallic `#D6B0A0` anchor
 
-Use the approved Champagne Rose Gold Metallic gradient for metallic depth. Dusty Steel-derived icy orbit highlights may be used sparingly as Luxury Orbit effects.
+Use Champagne Rose Gold Metallic sparingly for premium detail and Dusty Steel for clear interactive states. Do not use legacy generated Luxury Orbit graphics in new website work.
 
 ### Typography
 
@@ -188,3 +222,5 @@ The homepage succeeds when a new visitor can quickly understand:
 3. Why compatibility and curation matter.
 4. How to begin shopping.
 5. How to learn more or get support.
+6. Who leads LuxSync and why the company exists.
+7. Where to get trusted answers before making a decision.

@@ -12,7 +12,7 @@ Define the launch information architecture for LuxSync using the repository as t
 
 Current governing references include `brand/README.md`, `brand/colors.md`, `brand/typography.md`, `brand/voice-and-tone.md`, `website/pages/home.md`, and `website/styles/design-system.md`.
 
-Where older generated assets or guidance conflict, the authoritative **Plush Drift v2.1** base system, active **Luxury Orbit** web treatment, Manrope/Inter typography contract, and current homepage blueprint govern.
+Where older generated assets or guidance conflict, the authoritative **LuxSync v3** system, active `brand/assets-v3/` library, Manrope/Inter typography contract, and current page blueprints govern.
 
 ## Launch Objective
 
@@ -51,10 +51,13 @@ Required sequence:
 2. **Featured Solutions** — Short-Term Rentals; Seniors & Caregivers; Smart Office & Property Management; Intentional Parents; Busy Professionals
 3. **Why LuxSync** — Curated Catalog; SmartThings Compatibility; Simplified Buying; Premium Customer Experience
 4. **Product Collections** — Comfort; Security; Energy; Hosting; Curated Bundles
-5. **How It Works** — Discover; Choose; Set Up; Evolve
-6. **Featured Products / Bundles** — validated commerce data only; editable placeholders during design
-7. **Lead Magnet / Email Signup** — STR Smart Home ROI Guide when ready
-8. **Footer** — Shop; Solutions; Guides; About; Support/Contact; legal placeholders
+5. **Find My LuxSync Solution** — signature outcome-first guided recommendation experience
+6. **How It Works** — Discover; Choose; Set Up; Evolve
+7. **Featured Products / Bundles** — validated commerce data only; editable placeholders during design
+8. **Meet the Founders** — compact approved profiles for Bridgette Beardsley and Sheldon Bardol
+9. **FAQ Preview** — six canonical questions with a View All FAQs link
+10. **Lead Magnet / Email Signup** — STR Smart Home ROI Guide when ready
+11. **Footer** — Shop; Solutions; Guides; About; Support/Contact; legal placeholders
 
 ## Shop
 
@@ -91,19 +94,28 @@ Do not imply third-party endorsement, make medical claims, expose unresolved pri
 
 ## Guides
 
-Launch content includes the STR Smart Home ROI Guide, compatibility guidance, SmartThings setup concepts, product-selection guidance, automation ideas, and FAQs.
+Launch content includes the STR Smart Home ROI Guide, compatibility guidance, SmartThings setup concepts, product-selection guidance, automation ideas, and the canonical FAQ page at `/guides/faqs`.
+
+The FAQ page follows `website/pages/faqs.md` and uses the approved answers in `content/faqs.md`. It must remain accessible without JavaScript, support stable question links, and route customers calmly to Find My LuxSync Solution, shopping, information, or support.
 
 Future SmartThings templates and LuxSync Grid documentation appear only after those products are released.
 
 ## About
 
-Explain LuxSync through trusted curation, thoughtful automation, premium design, simplicity, and reliability. Luxury is confidence, not complexity.
+Follow `website/pages/about.md` and `content/about.md`. Explain LuxSync through trusted curation, thoughtful automation, premium design, simplicity, and reliability. Luxury is confidence, not complexity.
+
+The leadership section must use equal visual authority and the exact approved profiles:
+
+- **Bridgette Beardsley — Co-Founder & Chief Technology and Strategy Officer**
+- **Sheldon Bardol — Co-Founder & Chief Customer and Operations Officer**
+
+Full biography sources are `docs/leadership/bridgette-beardsley.md` and `docs/leadership/sheldon-bardol.md`.
 
 Do not invent founder facts, awards, years in business, certifications, testimonials, press, or customer counts.
 
 ## Support
 
-Provide contact, product/compatibility questions, order support, setup guidance, and FAQs without making the site feel service-heavy.
+Provide contact, product/compatibility questions, order support, setup guidance, and FAQs without making the site feel service-heavy. Route general information to `info@luxsync.net` and support for existing orders/products to `support@luxsync.net`.
 
 ## Commerce Utilities
 
@@ -113,7 +125,7 @@ Provide contact, product/compatibility questions, order support, setup guidance,
 
 ## Brand Implementation Rules
 
-### Base palette — Plush Drift v2.1
+### LuxSync v3 palette
 
 - Slate Navy `#0D1526`
 - Dark Suede `#172036`
@@ -123,9 +135,9 @@ Provide contact, product/compatibility questions, order support, setup guidance,
 - Dusty Steel `#7B96B2`
 - Champagne Rose Gold Metallic `#D6B0A0` anchor
 
-### Luxury Orbit treatment
+### LuxSync v3 treatment
 
-Use the approved Champagne Rose Gold Metallic gradient, Dusty Steel-derived orbit light, spacious dark composition, soft architectural curves, and premium smart-living imagery. Metallic highlight/shadow stops and orbit tints are rendering effects, not additional standalone colors.
+Use crisp architectural composition, spacious dark surfaces, restrained Champagne Rose Gold Metallic detail, Dusty Steel interaction accents, and premium smart-living imagery. New website graphics must come from `brand/assets-v3/`; legacy generated graphics are not current design sources.
 
 ### Typography
 
@@ -140,7 +152,7 @@ Approved exact logo artwork may preserve its own lettering as artwork and does n
 
 ### Visual character
 
-Deep Slate Navy/Dark Suede surfaces, restrained Champagne Rose Gold Metallic detail, Dusty Steel orbit light, Pale Driftwood copy, spacious composition, restrained atmospheric glow, and premium smart-living imagery.
+Deep Slate Navy/Dark Suede surfaces, restrained Champagne Rose Gold Metallic detail, Dusty Steel interaction states, Pale Driftwood copy, spacious composition, controlled lighting, and premium smart-living imagery.
 
 Avoid cyberpunk neon, lavender as an unapproved base color, loud gradients, dense gadget-store grids, generic SaaS blue, excessive glassmorphism, and unnecessary motion.
 

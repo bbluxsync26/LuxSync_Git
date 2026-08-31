@@ -23,7 +23,12 @@ Review before each Airo build:
 9. `website/pages/home.md`
 10. `website/styles/design-system.md`
 11. `prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md`
-12. `docs/runbooks/RB-008-Luxury-Orbit-Brand-Asset-Generation.md`
+12. `website/pages/about.md`
+13. `website/pages/faqs.md`
+14. `content/about.md`
+15. `content/faqs.md`
+16. `docs/leadership/bridgette-beardsley.md`
+17. `docs/leadership/sheldon-bardol.md`
 
 ## Product Distinction
 
@@ -35,8 +40,8 @@ Review before each Airo build:
 
 - Repository `master` is current and repository consistency validation passes.
 - PR-001 is the approved draft for the first generation pass.
-- Plush Drift v2.1 is the authoritative base brand system.
-- Luxury Orbit is the active web/graphics treatment.
+- LuxSync v3 is the authoritative brand and website system.
+- `brand/assets-v3/` is the active visual asset root.
 - Manrope 500/600 is authoritative for headings/display/UI.
 - Inter 400/500 is authoritative for body/supporting UI.
 - Official slogan is `Where Luxury Lives Intelligently`.
@@ -57,13 +62,13 @@ Review before each Airo build:
 
 Before cosmetic edits, verify Home, Shop, Solutions, Guides, About, Support, Search, Account, and Cart.
 
-Confirm the hero, slogan, calls to action, five approved audiences, product collections, and future-product guardrails match ARC-001 and the homepage blueprint.
+Confirm the hero, slogan, calls to action, five approved audiences, product collections, founder profiles, canonical FAQ content, and future-product guardrails match ARC-001 and the page blueprints.
 
 Reject invented partnerships, awards, reviews, certifications, customer counts, prices, availability, financial data, or supplier claims.
 
 ## Step 3 — Brand Calibration
 
-### Base palette — Plush Drift v2.1
+### LuxSync v3 palette
 
 - Slate Navy `#0D1526`
 - Dark Suede `#172036`
@@ -80,9 +85,9 @@ Reject invented partnerships, awards, reviews, certifications, customer counts, 
 
 Approved logo artwork may preserve its exact lettering as artwork; do not infer website fonts from the logo.
 
-### Luxury Orbit character
+### LuxSync v3 character
 
-Use layered dark surfaces, restrained Champagne Rose Gold Metallic accents, soft Dusty Steel orbit light, Pale Driftwood copy, premium imagery, generous negative space, and minimal organic motion.
+Use crisp layered dark surfaces, restrained Champagne Rose Gold Metallic accents, clear Dusty Steel interaction states, Pale Driftwood copy, premium imagery, generous negative space, and minimal organic motion.
 
 Use the approved metallic gradient around the `#D6B0A0` anchor. Metallic highlight/shadow stops and Dusty Steel-derived icy-blue tints are rendering effects, not additional standalone colors.
 
@@ -90,12 +95,13 @@ Reject cyberpunk neon, lavender as an unapproved base color, loud gradients, gen
 
 ## Step 4 — Load Repository Assets
 
-Prefer current approved assets beneath `brand/assets/`.
+Use current approved website assets beneath `brand/assets-v3/`.
 
 - Preserve the approved exact primary monogram and horizontal lockup.
+- Keep the protected logo masters under `brand/assets/01-brand/` unchanged.
 - Use SVG for icons/vector UI and optimized WebP for larger raster scenes where supported.
 - Production scenes under `12-scenes/` are text-free backgrounds intended for native website copy and approved branding overlays.
-- Follow RB-008 when generated assets change.
+- Do not reintroduce retired generated graphics from the legacy asset library.
 
 ## Step 5 — Commerce Representation
 
@@ -114,6 +120,8 @@ Validate semantic headings, keyboard access, visible focus, contrast, alt text, 
 ## Step 8 — Content Review
 
 Every claim must trace to repository-supported content. Reject unsupported awards, certifications, testimonials, savings, compatibility, supplier relationships, endorsements, or medical outcomes.
+
+Verify the About page uses the exact approved founder names, titles, and Compact Biographies. Verify FAQ answers preserve `content/faqs.md`, and confirm `info@luxsync.net` and `support@luxsync.net` route to the correct customer intent.
 
 ## Step 9 — Export and Repository Review
 

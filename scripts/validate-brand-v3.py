@@ -41,6 +41,12 @@ REQUIRED = [
     "brand/assets/01-brand/luxsync-monogram-orb.png",
     "brand/assets/01-brand/luxsync-horizontal-lockup.png",
     "brand/assets/12-scenes/scene-manifest.csv",
+    "content/about.md",
+    "content/faqs.md",
+    "docs/leadership/bridgette-beardsley.md",
+    "docs/leadership/sheldon-bardol.md",
+    "website/pages/about.md",
+    "website/pages/faqs.md",
 ]
 
 errors = []
@@ -76,6 +82,45 @@ for rel in ["brand/README.md", "website/styles/design-system.md", "docs/master-c
     for token in ("LuxSync v3", "Manrope", "Inter", "Where Luxury Lives Intelligently", "#D6B0A0"):
         if token not in text:
             errors.append(f"{rel}: missing required v3 token {token!r}")
+
+website_contract = {
+    "docs/leadership/bridgette-beardsley.md": (
+        "Co-Founder & Chief Technology and Strategy Officer",
+        "Intelligent Calm",
+    ),
+    "docs/leadership/sheldon-bardol.md": (
+        "Co-Founder & Chief Customer and Operations Officer",
+        "Intelligent Calm",
+    ),
+    "content/about.md": (
+        "Bridgette Beardsley",
+        "Sheldon Bardol",
+        "Luxury is confidence.",
+    ),
+    "content/faqs.md": (
+        "Find My LuxSync Solution",
+        "info@luxsync.net",
+        "support@luxsync.net",
+        "SmartThings",
+    ),
+    "website/pages/about.md": (
+        "Co-Founder & Chief Technology and Strategy Officer",
+        "Co-Founder & Chief Customer and Operations Officer",
+    ),
+    "website/pages/faqs.md": (
+        "/guides/faqs",
+        "content/faqs.md",
+        "FAQPage",
+    ),
+}
+for rel, tokens in website_contract.items():
+    path = ROOT / rel
+    if not path.exists():
+        continue
+    text = path.read_text(encoding="utf-8")
+    for token in tokens:
+        if token not in text:
+            errors.append(f"{rel}: missing website contract token {token!r}")
 
 # Legacy generated graphic directories must be gone after migration.
 for name in [

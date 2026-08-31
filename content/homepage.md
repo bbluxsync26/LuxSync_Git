@@ -29,9 +29,12 @@ Luxury smart-home technology designed for modern living, with curated hardware a
 
 - Featured Solutions
 - Why LuxSync
+- Find My LuxSync Solution
 - Product Collections
 - How It Works
 - Featured Products & Bundles
+- Meet the Founders
+- Frequently Asked Questions
 - STR Smart Home ROI Guide / Email Signup
 - Footer
 

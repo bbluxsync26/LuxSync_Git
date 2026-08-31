@@ -53,10 +53,13 @@ Keep Search, Account, and Cart separate and easy to reach. Do not create an over
 2. Featured Solutions for the five approved audiences.
 3. Why LuxSync: Curated Catalog; SmartThings Compatibility; Simplified Buying; Premium Customer Experience.
 4. Product Collections: Comfort; Security; Energy; Hosting; Curated Bundles.
-5. How It Works: Discover; Choose; Set Up; Evolve.
-6. Featured Products/Bundles using validated catalog data or clearly editable placeholders.
-7. STR Smart Home ROI Guide and calm email signup.
-8. Footer with Shop, Solutions, Guides, About, Support/Contact, and legal placeholders.
+5. Find My LuxSync Solution: a premium outcome-first guided recommendation path.
+6. How It Works: Discover; Choose; Set Up; Evolve.
+7. Featured Products/Bundles using validated catalog data or clearly editable placeholders.
+8. Meet the Founders using the approved compact biographies and exact titles.
+9. Frequently Asked Questions preview using the six approved homepage questions.
+10. STR Smart Home ROI Guide and calm email signup.
+11. Footer with Shop, Solutions, Guides, About, Support/Contact, and legal placeholders.
 
 ### Shop
 
@@ -76,15 +79,24 @@ Do not imply Samsung, SmartThings, Airbnb, VRBO, or other endorsement unless lat
 
 ### Guides
 
-Create space for the STR Smart Home ROI Guide, compatibility guidance, SmartThings setup concepts, product-selection guidance, automation ideas, and FAQs.
+Create space for the STR Smart Home ROI Guide, compatibility guidance, SmartThings setup concepts, product-selection guidance, automation ideas, and a dedicated FAQ page at `/guides/faqs`.
+
+Build the FAQ page from `content/faqs.md` and `website/pages/faqs.md`. Use the approved categories, accessible accordion behavior, stable question links, optional lightweight search, FAQPage structured data limited to visibly rendered answers, and calm pathways to Find My LuxSync Solution, shopping, information, or support. Do not invent or materially rewrite FAQ answers.
 
 Do not present SmartThings templates or LuxSync Grid as currently available.
 
 ### About and Support
 
-About should emphasize trusted curation, thoughtful automation, premium design, simplicity, and reliability. Luxury is confidence, not complexity.
+About must follow `content/about.md` and `website/pages/about.md`. Emphasize trusted curation, thoughtful automation, premium design, simplicity, and reliability. Luxury is confidence, not complexity.
 
-Support should cover product/compatibility questions, order support, setup guidance, FAQ, and general contact without making the site feel service-heavy.
+Use these exact leadership identities and the approved Compact Biographies from `docs/leadership/`:
+
+- **Bridgette Beardsley — Co-Founder & Chief Technology and Strategy Officer**
+- **Sheldon Bardol — Co-Founder & Chief Customer and Operations Officer**
+
+Give both profiles equal visual authority. Do not generate photographic likenesses; use approved portraits only when supplied, otherwise use a refined branded placeholder or monogram treatment.
+
+Support should cover product/compatibility questions, order support, setup guidance, FAQ, and general contact without making the site feel service-heavy. Route general information to `info@luxsync.net` and existing-order/product support to `support@luxsync.net`.
 
 Do not invent awards, certifications, testimonials, press, customer counts, years in business, or founder facts.
 
@@ -94,9 +106,9 @@ Samsung SmartThings is the primary launch compatibility standard. Emphasize comp
 
 GoDaddy Commerce Plus remains the production commerce system of record. Represent storefront UX in staging, but do not connect live payments, alter production DNS, replace Commerce Plus, or create a second unmanaged live catalog.
 
-### Brand system and Luxury Orbit treatment
+### LuxSync v3 brand system
 
-Use **Plush Drift v2.1** as the authoritative base brand system and **Luxury Orbit** as the active website/web-graphics treatment.
+Use **LuxSync v3** as the authoritative website, ecommerce, and branded-graphics system. New visual work must use `brand/assets-v3/`. The prior generated Luxury Orbit library is legacy compatibility content and must not be used for new website design.
 
 Base colors:
 
@@ -108,7 +120,7 @@ Base colors:
 - Dusty Steel `#7B96B2`
 - Champagne Rose Gold Metallic `#D6B0A0` anchor
 
-Use the approved Champagne Rose Gold Metallic gradient for restrained metallic depth and Dusty Steel-derived icy orbit highlights for cool illumination. The metallic highlight/shadow stops and orbit tints are rendering effects, not additional standalone palette colors.
+Use Champagne Rose Gold Metallic sparingly for premium detail and Dusty Steel for clear interactive states. Keep effects controlled, crisp, and architectural.
 
 Typography:
 
@@ -123,7 +135,7 @@ Visual direction:
 
 - Layered Slate Navy / Dark Suede surfaces
 - Restrained Champagne Rose Gold Metallic detail
-- Soft Dusty Steel orbit light
+- Clear Dusty Steel interaction accents
 - Pale Driftwood copy
 - Premium smart-living/interior imagery
 - Spacious editorial composition
@@ -149,12 +161,13 @@ Use responsive images, modern formats, lazy loading, stable layouts, efficient f
 
 ### Repository assets
 
-Prefer current approved assets beneath `brand/assets/`.
+Use current approved website assets beneath `brand/assets-v3/`.
 
 - Use protected approved primary logo artwork exactly as supplied.
+- Logo masters remain under `brand/assets/01-brand/` and are immutable artwork.
 - Prefer SVG for icons/vector UI and optimized WebP for larger scene imagery.
 - Production scenes under `brand/assets/12-scenes/` are text-free backgrounds intended for native HTML/CSS copy and approved branding overlays.
-- Do not recreate repository SVG assets through an image generator.
+- Do not use retired generated graphics or recreate repository SVG assets through an image generator.
 
 ### Future roadmap
 
@@ -162,7 +175,7 @@ Leave clean expansion points for SmartThings automation templates, LuxSync Grid,
 
 ### Final quality standard
 
-A first-time visitor should quickly understand that LuxSync is a premium curated smart-home commerce brand; products and bundles are selected to work together; SmartThings compatibility reduces complexity; shopping is intentionally curated; the technology belongs in a beautifully designed home or property; and customers can shop without becoming smart-home experts.
+A first-time visitor should quickly understand that LuxSync is a premium curated smart-home commerce brand; products and bundles are selected to work together; SmartThings compatibility reduces complexity; shopping is intentionally curated; the technology belongs in a beautifully designed home or property; Bridgette Beardsley and Sheldon Bardol are the accountable co-founders; and customers can find clear answers or a guided recommendation without becoming smart-home experts.
 
 Every important design, content, and commerce decision should reinforce:
 
