@@ -38,6 +38,28 @@ Dusty Steel `#7B96B2` is the source color for the cool orbit/glow signature. Der
 
 The effect must remain soft and atmospheric rather than neon.
 
+## Plush Drift Tactile Illumination
+
+The Plush Drift aesthetic includes a tactile backlighting behavior for buttons, cards, selectable tiles, and similar controls.
+
+Use a dark Slate Navy or Dark Suede foreground surface above a softer approved-color underlight. The underlight should feel concealed beneath the control rather than painted onto its face.
+
+Preferred illumination hierarchy:
+
+1. **Dusty Steel** — primary cool interaction/backlight color.
+2. **Antique Rose Taupe** — warm luxury underlight for selected contexts.
+3. **Pale Driftwood** — very soft luminous edge or ambient lift.
+4. **Champagne Rose Gold Metallic** — restrained reflected edge or premium accent only, not the dominant halo.
+
+Interaction behavior:
+
+- **Rest:** faint, narrow underglow with clear dark-surface separation.
+- **Hover/focus:** glow brightens and widens slightly while remaining controlled.
+- **Pressed/active:** foreground surface visually compresses inward by about 1–2 px; outer shadow tightens; underlighting brightens modestly to suggest a physical backlit control being pressed.
+- **Release:** return smoothly with calm easing.
+
+Do not use neon bloom, hard luminous borders, flashing light, excessive glass effects, or color-only state communication. Accessibility and contrast take priority over decorative glow.
+
 ## Typography Relationship
 
 Color treatments never redefine typography. The authoritative LuxSync type system remains:
@@ -56,11 +78,12 @@ See `brand/typography.md` for the complete typography contract.
 - Antique Rose Taupe provides warm decorative emphasis.
 - Dusty Steel carries interactive emphasis and the cool intelligent-light cue.
 - Champagne Rose Gold Metallic provides restrained premium emphasis and should not dominate large UI surfaces.
+- Tactile backlighting should create depth beneath darker controls rather than flattening the control into a glowing shape.
 - Avoid electric cyan, saturated magenta, lavender drift, or cyberpunk neon as new base colors.
 - Use gradients and glows selectively so the interface stays calm, premium, and readable.
 
 ## Accessibility
 
-Derived metallic and glow treatments do not replace accessible text/background contrast. Interactive states must remain understandable without relying on glow or color alone.
+Derived metallic, glow, and tactile-illumination treatments do not replace accessible text/background contrast. Interactive states must remain understandable without relying on glow or color alone. Honor reduced-motion preferences for press/release animation.
 
 **Official slogan:** Where Luxury Lives Intelligently
