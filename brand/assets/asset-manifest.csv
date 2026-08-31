@@ -49,7 +49,7 @@ category,name,description,transparent,width,height,formats,svg
 05-palette,suede-texture-tile,Seamless-feel suede background tile,false,900,900,svg-png-webp,05-palette/suede-texture-tile.svg
 06-gradients,navy-drift,Navy Drift — primary full-bleed background,false,1600,900,svg-png-webp,06-gradients/navy-drift.svg
 06-gradients,rose-drift,Rose Drift — hero glow and CTA halo,false,1600,900,svg-png-webp,06-gradients/rose-drift.svg
-06-gradients,lavender-mist,Lavender Mist — decorative overlay,false,1600,900,svg-png-webp,06-gradients/lavender-mist.svg
+06-gradients,dusty-steel-mist,Dusty Steel Mist — cool decorative overlay,false,1600,900,svg-png-webp,06-gradients/dusty-steel-mist.svg
 06-gradients,warm-veil,Warm Veil — reading comfort backdrop,false,1600,900,svg-png-webp,06-gradients/warm-veil.svg
 07-components,button-primary,EXPLORE THE COLLECTION button,true,1000,360,svg-png-webp,07-components/button-primary.svg
 07-components,button-secondary,VIEW THE GUIDE button,true,1000,360,svg-png-webp,07-components/button-secondary.svg

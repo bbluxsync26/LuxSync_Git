@@ -64,7 +64,7 @@ These SVGs are generated directly by `scripts/generate-luxury-orbit-assets.py`; 
 - `05-palette/warm-taupe-mauve.svg`
 ## 06-gradients
 
-- `06-gradients/lavender-mist.svg`
+- `06-gradients/dusty-steel-mist.svg`
 - `06-gradients/navy-drift.svg`
 - `06-gradients/rose-drift.svg`
 - `06-gradients/warm-veil.svg`
