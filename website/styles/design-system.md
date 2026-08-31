@@ -1,56 +1,74 @@
 # LuxSync Website Design System
 
 **Status:** Active  
-**Base brand system:** Plush Drift v2.1  
-**Active web treatment:** Luxury Orbit
+**Brand system:** LuxSync v3  
+**Primary asset source:** `brand/assets-v3/`
 
-Luxury Orbit is the active website treatment layered on the authoritative Plush Drift v2.1 design system. It adds atmospheric orbit light, restrained metallic rose detail, premium photography, and spacious editorial composition without replacing the base palette or typography.
+LuxSync v3 is the active website treatment. It is crisp, architectural, premium, calm, and restrained. The approved logo artwork is immutable and all editable website UI uses Manrope/Inter and the approved palette only.
 
-## Base Colors
+## Approved Colors
 
 - Slate Navy `#0D1526` — primary dark background
 - Dark Suede `#172036` — elevated dark surfaces
 - Pale Driftwood `#D0BEB0` — primary light text / warm light surface
 - Warm Taupe Mauve `#9E8B85` — secondary neutral text/details
 - Antique Rose Taupe `#967878` — warm decorative accent
-- Dusty Steel `#7B96B2` — interactive and orbit/glow accent
-- Champagne Rose Gold Metallic `#D6B0A0` anchor — premium metallic accent
+- Dusty Steel `#7B96B2` — interactive/cool accent
+- Champagne Rose Gold Metallic, `#D6B0A0` anchor — premium metallic accent
 
-### Derived Luxury Orbit Treatments
+No lavender, purple, orange, electric blue, neon blue, or other unapproved brand colors may be introduced into website UI, icons, borders, overlays, or branded graphics.
 
-- Champagne Rose Gold Metallic is an approved brand color anchored at `#D6B0A0`; its metallic rendering may use the approved champagne/copper highlight and shadow stops.
-- Icy-blue highlight tints may be derived from Dusty Steel for restrained orbit illumination.
-- Metallic gradient stops and Dusty Steel highlight tints are rendering effects, not additional standalone palette colors.
+Natural photography may contain natural scene color.
 
 ## Typography
 
 - **Headings / display / navigation / CTA labels / graphic UI:** Manrope 500/600
 - **Body / product copy / forms / supporting UI:** Inter 400/500
+- **Logo lettering:** protected artwork only, never recreated with a font
 
-Approved logo artwork may preserve exact custom lettering as artwork. Logo appearance does not redefine website typography.
+## Approved Logo Masters
 
-Do not use Century Gothic, Candara, Montserrat, Bodoni-family, Didot, or Georgia as LuxSync website-system fonts.
+Reference the protected logo artwork directly:
+
+- `brand/assets/01-brand/luxsync-monogram-orb.png`
+- `brand/assets/01-brand/luxsync-horizontal-lockup.png`
+
+Do not redraw, retype, recolor, soften, cartoonize, or regenerate either logo.
+
+## Active Website Assets
+
+Use:
+
+- `brand/assets-v3/02-ui/buttons-and-ctas.svg`
+- `brand/assets-v3/02-ui/badges.svg`
+- `brand/assets-v3/02-ui/ecommerce-controls.svg`
+- `brand/assets-v3/03-icons/core-line-icons.svg`
+- `brand/assets-v3/04-heroes/hero-smart-living-elevated.svg`
+- `brand/assets-v3/04-heroes/hero-roi-guide.svg`
+- `brand/assets-v3/05-ecommerce/product-card-template.svg`
+- `brand/assets-v3/05-ecommerce/trust-bar.svg`
 
 ## Component Language
 
-- Dark rounded cards on Slate Navy / Dark Suede
-- Restrained rose-metal rims and premium accents
+- Slate Navy / Dark Suede foundations
 - Pale Driftwood primary copy
-- Dusty Steel orbit/glow used sparingly
-- Generous spacing and breathing room
-- Soft architectural curves and wave dividers
-- Clear focus states and large touch targets
-- Native HTML/CSS text wherever practical
+- Antique Rose Taupe detail and borders
+- Dusty Steel controls and selected cool accents
+- Champagne Rose Gold only as a metallic premium accent
+- generous spacing and editorial negative space
+- refined rounded corners
+- clear focus states and large touch targets
+- native HTML/CSS text wherever practical
 
 ## Hero Language
 
 Preferred visual treatment:
 
-- Dark luxury interior or architectural field
-- Warm edge lighting
-- Restrained metallic rose emphasis
-- Quiet Dusty Steel orbit/light signature
-- Editorial negative space for native copy
+- premium interior or architectural photography
+- dark refined field with warm light
+- controlled branded overlays from the approved palette
+- editorial negative space for native copy
+- approved logo artwork only
 
 Approved hero line:
 
@@ -62,18 +80,20 @@ Official slogan:
 
 ## Image Rules
 
-- Production photography should be text-free.
-- Do not bake navigation, prices, ratings, CTA labels, or promotional claims into photographs.
-- Use approved brand assets for logos and native HTML/CSS for website text.
+- Production photography should be text-free wherever practical.
+- Do not bake live prices, ratings, stock, scarcity, navigation, or promotional claims into photographs.
+- Use approved v3 SVG compositions for branded graphics.
 - Prefer SVG for vector UI and WebP for production scene imagery.
 
 ## Avoid
 
-- Cyberpunk neon
-- Lavender as an unapproved base palette color
-- Loud electric gradients
-- Overly glossy glassmorphism
-- Dense gadget-store grids
-- Flat generic SaaS blue
-- Excessive animation
-- Text baked into photographic images when it can be rendered natively
+- cartoonized or softened logo treatments
+- regenerated logo lettering
+- cyberpunk neon
+- lavender/purple drift
+- orange/copper drift outside the approved metallic treatment
+- loud electric gradients
+- dense gadget-store grids
+- generic SaaS blue
+- excessive animation
+- text baked into photography when it can be rendered natively

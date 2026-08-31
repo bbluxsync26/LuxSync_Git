@@ -1,129 +1,20 @@
-name: Generate LuxSync Luxury Orbit assets
-# Primary monogram and horizontal lockup rasters are exact approved artwork and must be preserved.
+name: Legacy LuxSync asset regeneration
+
+# Historical workflow retained for rollback/reference only.
+# LuxSync v3 is authoritative and must never be overwritten by this workflow.
 
 on:
-  push:
-    branches:
-      - master
-      - brand/luxury-orbit-refresh
-      - brand/exact-final-logo
-      - brand/fix-hero-approved-logo
-      - 'fix/**'
-    paths:
-      - scripts/generate-luxury-orbit-assets.py
-      - scripts/normalize-luxury-orbit-fonts.py
-      - scripts/apply-approved-logo-artwork.py
-      - scripts/render-luxury-orbit-assets.py
-      - scripts/regenerate-brand-raster-assets.py
-      - scripts/reconcile-asset-metadata.py
-      - .github/workflows/regenerate-brand-raster-assets.yml
   workflow_dispatch:
 
-concurrency:
-  group: luxsync-brand-assets-${{ github.ref }}
-  cancel-in-progress: true
-
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  regenerate:
-    if: github.actor != 'github-actions[bot]'
+  legacy-notice:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Check out branch
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          persist-credentials: true
-
-      - name: Install rendering tools
+      - name: Legacy workflow notice
         run: |
-          sudo apt-get update
-          sudo apt-get install -y inkscape imagemagick python3-pil fontconfig curl
-
-      - name: Install authoritative LuxSync fonts
-        run: |
-          mkdir -p "$HOME/.local/share/fonts"
-          curl -L --fail --retry 3 'https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/Manrope%5Bwght%5D.ttf' -o "$HOME/.local/share/fonts/Manrope.ttf"
-          curl -L --fail --retry 3 'https://raw.githubusercontent.com/google/fonts/main/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf' -o "$HOME/.local/share/fonts/Inter.ttf"
-          fc-cache -f
-          fc-match Manrope
-          fc-match Inter
-
-      - name: Generate Luxury Orbit SVG masters
-        run: python3 scripts/generate-luxury-orbit-assets.py
-
-      - name: Normalize typography and brand rules
-        run: python3 scripts/normalize-luxury-orbit-fonts.py
-
-      - name: Restore exact approved primary logo wrappers
-        run: |
-          test -s brand/assets/01-brand/luxsync-monogram-orb.png
-          test -s brand/assets/01-brand/luxsync-horizontal-lockup.png
-
-          cat > brand/assets/01-brand/luxsync-monogram-orb.svg <<'SVG'
-          <svg xmlns="http://www.w3.org/2000/svg" width="860" height="584" viewBox="0 0 860 584" role="img" aria-label="LuxSync LS orbit monogram">
-            <image href="luxsync-monogram-orb.png" x="0" y="0" width="860" height="584" preserveAspectRatio="xMidYMid meet"/>
-          </svg>
-          SVG
-
-          cat > brand/assets/01-brand/luxsync-horizontal-lockup.svg <<'SVG'
-          <svg xmlns="http://www.w3.org/2000/svg" width="1513" height="389" viewBox="0 0 1513 389" role="img" aria-label="LuxSync horizontal logo lockup">
-            <image href="luxsync-horizontal-lockup.png" x="0" y="0" width="1513" height="389" preserveAspectRatio="xMidYMid meet"/>
-          </svg>
-          SVG
-
-      - name: Apply approved logo artwork to generated assets
-        run: python3 scripts/apply-approved-logo-artwork.py
-
-      - name: Render PNG WebP and catalog sheets
-        run: python3 scripts/render-luxury-orbit-assets.py
-
-      - name: Reconcile canonical asset metadata
-        run: python3 scripts/reconcile-asset-metadata.py
-
-      - name: Validate generated library
-        run: |
-          test "$(find brand/assets -type f -name '*.svg' | wc -l)" -eq 98
-          test "$(find brand/assets -type f -name '*.webp' ! -path '*/12-scenes/*' | wc -l)" -eq 98
-          test "$(find brand/assets -type f -name '*.png' ! -path '*/12-scenes/*' | grep -v '/00-catalog/' | wc -l)" -eq 98
-          test "$(find brand/assets/12-scenes -type f -name '*.png' | wc -l)" -eq 6
-          test "$(find brand/assets/12-scenes -type f -name '*.webp' | wc -l)" -eq 6
-          test -f brand/assets/12-scenes/scene-manifest.csv
-          test -f brand/assets/00-catalog/SVG-ASSET-LIST.md
-          test -f brand/assets/00-catalog/LuxSync-master-contact-sheet.png
-          grep -q 'luxsync-monogram-orb.png' brand/assets/01-brand/luxsync-monogram-orb.svg
-          grep -q 'luxsync-horizontal-lockup.png' brand/assets/01-brand/luxsync-horizontal-lockup.svg
-          grep -q '../01-brand/luxsync-monogram-orb.png' brand/assets/11-banners/hero-technology-feels-like-home.svg
-          grep -q '../01-brand/luxsync-monogram-orb.png' brand/assets/11-banners/hero-where-luxury-lives-intelligently.svg
-          if grep -RIl --include='*.svg' -E '<text\b' brand/assets \
-            | xargs -r grep -nE 'Century Gothic|Candara|Bodoni Moda|Bodoni MT|Didot|Georgia,serif'; then
-            echo 'Legacy font declaration remains in a generated SVG.' >&2
-            exit 1
-          fi
-          if grep -nE 'Century Gothic|Candara|Bodoni Moda|Bodoni MT|Didot|Georgia,serif' scripts/generate-luxury-orbit-assets.py; then
-            echo 'Legacy font declaration remains in the editable generator source.' >&2
-            exit 1
-          fi
-          git diff --check
-
-      - name: Commit regenerated assets and metadata
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add brand/assets/00-catalog brand/assets/01-brand brand/assets/02-icons-brand \
-            brand/assets/03-icons-website brand/assets/04-icons-social brand/assets/05-palette \
-            brand/assets/06-gradients brand/assets/07-components brand/assets/08-cards \
-            brand/assets/09-illustrations brand/assets/10-product-cards brand/assets/11-banners \
-            brand/assets/asset-manifest.csv brand/assets/asset-manifest.json \
-            scripts/generate-luxury-orbit-assets.py scripts/apply-approved-logo-artwork.py
-          if git diff --cached --quiet; then
-            echo 'No generated asset or metadata changes were required.'
-            exit 0
-          fi
-          git commit -m 'Regenerate LuxSync assets and reconcile metadata'
-          git fetch origin "${GITHUB_REF_NAME}"
-          git rebase "origin/${GITHUB_REF_NAME}"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          echo 'The generated Luxury Orbit asset system is retired.'
+          echo 'Use brand/assets-v3 for current LuxSync branding and website graphics.'
+          echo 'Protected logos remain in brand/assets/01-brand and must not be regenerated.'
