@@ -344,14 +344,18 @@ Our visual and verbal identity should feel:
 ## Leadership
 
 ### Bridgette Beardsley
-**Co-Founder & Technology Lead**
+**Co-Founder & Chief Technology and Strategy Officer**
 
 Responsible for technology infrastructure, storefront implementation, financial systems, compliance, operational governance, and process design.
 
+[Read Bridgette's approved leadership biography](docs/leadership/bridgette-beardsley.md).
+
 ### Sheldon Bardol
-**Co-Founder & Operations Lead**
+**Co-Founder & Chief Customer and Operations Officer**
 
 Responsible for supplier relationships, product curation, customer engagement, community development, marketing initiatives, and brand storytelling.
+
+[Read Sheldon's approved leadership biography](docs/leadership/sheldon-bardol.md).
 
 ---
 
