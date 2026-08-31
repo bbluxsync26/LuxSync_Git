@@ -30,6 +30,10 @@ These are immutable approved artwork. They may be referenced by v3 compositions 
 - `12-scenes/dashboard-tablet-scene.webp`
 - `12-scenes/mobile-automation-scene.webp`
 
+## Approved palette compatibility
+
+The retained assets remain governed by the approved LuxSync palette, including **Champagne Rose Gold Metallic** with `#D6B0A0` as the metallic anchor.
+
 ## Active system
 
 Use [`../assets-v3/README.md`](../assets-v3/README.md) and [`../assets-v3/08-docs/MIGRATION.md`](../assets-v3/08-docs/MIGRATION.md) for all new branding, website, ecommerce, stationery, and marketing work.
