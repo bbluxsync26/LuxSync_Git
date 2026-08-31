@@ -1,0 +1,56 @@
+name: Install approved LuxSync atomic assets
+
+on:
+  push:
+    branches:
+      - brand/atomic-cutover-final
+    paths:
+      - '.atomic-installer/**'
+      - 'scripts/build-approved-atomic-brand-assets.py'
+      - '.github/workflows/install-approved-atomic-assets.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: luxsync-approved-atomic-assets-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  install:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build approved atomic asset library
+        run: python3 scripts/build-approved-atomic-brand-assets.py
+      - name: Validate hard cutover
+        run: |
+          test -d brand/assets
+          test ! -e brand/assets-v3
+          test -f brand/source-logo/LuxSync_Logo_Horizontal_Combo.png
+          test -f brand/source-logo/LuxSync_Logo_Horizontal_Final.png
+          test -f brand/source-logo/LuxSync_Logo_Orb.png
+          test $(find brand/assets/02-icons -type f -name '*.svg' | wc -l) -eq 15
+          test $(find brand/assets/03-buttons -type f -name '*.svg' | wc -l) -eq 18
+          test $(find brand/assets/04-ui-controls -type f -name '*.svg' | wc -l) -eq 25
+          test $(find brand/assets/05-dividers-accents -type f -name '*.svg' | wc -l) -eq 44
+          test $(find brand/assets/06-product-cards -type f -name '*.svg' | wc -l) -eq 4
+          test $(find brand/assets/09-stationery -type f -name '*.svg' | wc -l) -eq 4
+          grep -q 'Brushed Dusty Steel' brand/assets/README.md
+          grep -q 'LuxSync_Logo_Orb.png' brand/assets/README.md
+          if grep -RIn --include='*.md' --include='*.svg' -E 'electric blue|icy-blue highlight tints may be used' brand/assets brand/README.md; then exit 1; fi
+          git diff --check
+      - name: Commit atomic cutover
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Install approved LuxSync atomic asset library'
+          git push origin HEAD:${GITHUB_REF_NAME}
