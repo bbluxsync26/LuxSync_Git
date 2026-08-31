@@ -31,6 +31,8 @@ Generated editable SVG text must not use Century Gothic, Candara, Montserrat, Bo
 
 Derived rose-metal and icy orbit highlights are allowed as effects. They do not replace the six base colors.
 
+Do not combine Dusty Steel and Antique Rose Taupe into a lavender-looking overlay. The approved cool gradient is `dusty-steel-mist`, which stays within Slate Navy, Pale Driftwood, and Dusty Steel.
+
 ### Protected approved logos
 
 The exact approved primary logo rasters are protected and must not be regenerated from the generic SVG generator:
@@ -77,7 +79,12 @@ The workflow performs this sequence:
 
 A local environment must provide Python 3, Inkscape, ImageMagick, Manrope, and Inter.
 
-Run the same logical sequence as CI. Do not skip normalization before rendering.
+Run the same logical sequence as CI. Do not skip normalization before rendering:
+
+```bash
+python3 scripts/regenerate-brand-raster-assets.py
+python3 scripts/validate-repository-consistency.py
+```
 
 ## SVG and Image-Generation Boundary
 
@@ -101,9 +108,11 @@ Before release:
 8. Verify Manrope/Inter in editable generated text.
 9. Verify no forbidden legacy system-font declarations remain in generated SVGs or the editable generator source.
 10. Verify Plush Drift v2.1 base colors remain authoritative.
-11. Verify protected exact logo wrappers still reference the approved logo rasters.
-12. Review representative assets visually on light and dark backgrounds.
-13. Run repository consistency validation before release.
+11. Verify the palette swatches use all six official color names and no retired aliases.
+12. Verify `lavender-mist` is absent and `dusty-steel-mist` is present.
+13. Verify protected exact logo wrappers still reference the approved logo rasters.
+14. Review representative assets visually on light and dark backgrounds.
+15. Run repository consistency validation before release.
 
 ## Relationship to RB-007
 

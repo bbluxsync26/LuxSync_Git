@@ -15,14 +15,15 @@ HERO = "Smart Living. Elevated."
 PRIMARY_CTA = "Shop Smart Home"
 SECONDARY_CTA = "Get the ROI Guide"
 
-BASE_COLORS = {
-    "#0D1526",
-    "#172036",
-    "#D0BEB0",
-    "#9E8B85",
-    "#967878",
-    "#7B96B2",
+BASE_COLOR_NAMES = {
+    "Slate Navy": "#0D1526",
+    "Dark Suede": "#172036",
+    "Pale Driftwood": "#D0BEB0",
+    "Warm Taupe Mauve": "#9E8B85",
+    "Antique Rose Taupe": "#967878",
+    "Dusty Steel": "#7B96B2",
 }
+BASE_COLORS = set(BASE_COLOR_NAMES.values())
 LEGACY_BASE_COLORS = {
     "#0B1D3A",
     "#172846",
@@ -105,7 +106,8 @@ def validate_governing_docs(errors: list[str]) -> None:
     require(src_readme, "Placeholder", "website/src/README.md", errors)
 
     colors = read("brand/colors.md")
-    for color in BASE_COLORS:
+    for name, color in BASE_COLOR_NAMES.items():
+        require(colors, name, "brand/colors.md", errors)
         require(colors, color, "brand/colors.md", errors)
     for color in LEGACY_BASE_COLORS:
         if color in colors:
@@ -129,6 +131,15 @@ def validate_generator_and_svgs(errors: list[str]) -> None:
         if color in generator:
             errors.append(f"scripts/generate-luxury-orbit-assets.py: legacy base color {color}")
 
+    if "lavender-mist" in generator:
+        errors.append("scripts/generate-luxury-orbit-assets.py: retired lavender-mist recipe remains")
+    require(
+        generator,
+        "dusty-steel-mist",
+        "scripts/generate-luxury-orbit-assets.py",
+        errors,
+    )
+
     svgs = [
         path
         for path in ASSET_ROOT.rglob("*.svg")
@@ -136,6 +147,31 @@ def validate_generator_and_svgs(errors: list[str]) -> None:
     ]
     if len(svgs) != 97:
         errors.append(f"brand/assets: expected 97 SVG masters; found {len(svgs)}")
+
+    retired_assets = list(ASSET_ROOT.rglob("lavender-mist.*"))
+    for path in retired_assets:
+        errors.append(f"{path.relative_to(ROOT)}: retired lavender asset remains")
+
+    palette_labels = {
+        "slate-navy.svg": "SLATE NAVY",
+        "dark-suede.svg": "DARK SUEDE",
+        "pale-driftwood.svg": "PALE DRIFTWOOD",
+        "warm-taupe-mauve.svg": "WARM TAUPE MAUVE",
+        "antique-rose-taupe.svg": "ANTIQUE ROSE TAUPE",
+        "dusty-steel.svg": "DUSTY STEEL",
+    }
+    for filename, label in palette_labels.items():
+        rel = f"brand/assets/05-palette/{filename}"
+        require(read(rel), label, rel, errors)
+
+    palette_strip = read("brand/assets/05-palette/plush-drift-palette-strip.svg")
+    for label in palette_labels.values():
+        require(
+            palette_strip,
+            label,
+            "brand/assets/05-palette/plush-drift-palette-strip.svg",
+            errors,
+        )
 
     for svg in svgs:
         text = svg.read_text(encoding="utf-8")
@@ -189,6 +225,11 @@ def validate_asset_metadata(errors: list[str]) -> None:
         rows = list(csv.DictReader(handle))
     if len(rows) != 97:
         errors.append(f"asset-manifest.csv: expected 97 rows; found {len(rows)}")
+    row_names = {row.get("name", "") for row in rows}
+    if "lavender-mist" in row_names:
+        errors.append("asset-manifest.csv: retired lavender-mist row remains")
+    if "dusty-steel-mist" not in row_names:
+        errors.append("asset-manifest.csv: dusty-steel-mist row is missing")
     for row in rows:
         rel = row.get("svg", "")
         svg = ASSET_ROOT / rel
@@ -221,6 +262,12 @@ def validate_asset_metadata(errors: list[str]) -> None:
             errors.append(
                 f"brand/assets/00-catalog/LuxSync-Asset-Catalog.html: legacy font remains: {token}"
             )
+
+    svg_list = read("brand/assets/00-catalog/SVG-ASSET-LIST.md")
+    if "lavender-mist" in svg_list or "lavender-mist" in catalog:
+        errors.append("asset catalogs: retired lavender-mist reference remains")
+    require(svg_list, "dusty-steel-mist", "brand/assets/00-catalog/SVG-ASSET-LIST.md", errors)
+    require(catalog, "dusty-steel-mist", "brand/assets/00-catalog/LuxSync-Asset-Catalog.html", errors)
 
 
 def validate_business_guardrails(errors: list[str]) -> None:
@@ -271,6 +318,7 @@ def main() -> int:
     print("- Plush Drift v2.1 base palette confirmed")
     print("- Luxury Orbit web treatment confirmed")
     print("- Manrope/Inter typography confirmed")
+    print("- official palette names and no lavender-mist artifact confirmed")
     print("- website hero/CTA contract confirmed")
     print("- asset metadata/dimensions/catalog confirmed")
     print("- protected exact logos confirmed")

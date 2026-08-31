@@ -8,6 +8,7 @@ on:
       - brand/luxury-orbit-refresh
       - brand/exact-final-logo
       - brand/fix-hero-approved-logo
+      - 'fix/**'
     paths:
       - scripts/generate-luxury-orbit-assets.py
       - scripts/normalize-luxury-orbit-fonts.py

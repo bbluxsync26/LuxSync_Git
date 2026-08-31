@@ -55,18 +55,20 @@ for n,g in {'facebook':'f','instagram':'◎','linkedin':'in','pinterest':'p','x'
     body=f'<circle cx="256" cy="256" r="202" fill="url(#n)" stroke="url(#m)" stroke-width="17"/><text x="256" y="320" text-anchor="middle" {UI} font-size="170" font-weight="600" fill="url(#m)">{g}</text>'
     write(f'04-icons-social/{n}.svg',svg(512,512,body))
 
-# 05 palette
-swatches={'antique-rose-taupe':('DUSTY ROSE',P['rose']),'dark-suede':('MIDNIGHT BLUE',P['blue']),'dusty-steel':('SOFT POWDER BLUE',P['powder']),'pale-driftwood':('PALE BLUSH',P['blush']),'slate-navy':('DEEP NAVY',P['navy']),'warm-taupe-mauve':('TAUPE',P['taupe'])}
+# 05 palette — labels are the official Plush Drift v2.1 color names.
+swatches={'antique-rose-taupe':('ANTIQUE ROSE TAUPE',P['rose']),'dark-suede':('DARK SUEDE',P['blue']),'dusty-steel':('DUSTY STEEL',P['powder']),'pale-driftwood':('PALE DRIFTWOOD',P['blush']),'slate-navy':('SLATE NAVY',P['navy']),'warm-taupe-mauve':('WARM TAUPE MAUVE',P['taupe'])}
 for n,(t,c) in swatches.items():
     write(f'05-palette/{n}.svg',svg(720,480,f'<rect x="34" y="34" width="652" height="410" rx="44" fill="{c}"/><rect x="34" y="320" width="652" height="124" fill="{P["blush"]}"/><text x="70" y="370" {UI} font-size="34" fill="{P["navy"]}">{t}</text><text x="70" y="414" {BODY} font-size="28" fill="{P["navy"]}">{c}</text>'))
 x=40; body=''
-for t,c in [('DEEP NAVY',P['navy']),('MIDNIGHT BLUE',P['blue']),('PALE BLUSH',P['blush']),('TAUPE',P['taupe']),('DUSTY ROSE',P['rose']),('POWDER BLUE',P['powder'])]:
+for t,c in [('SLATE NAVY',P['navy']),('DARK SUEDE',P['blue']),('PALE DRIFTWOOD',P['blush']),('WARM TAUPE MAUVE',P['taupe']),('ANTIQUE ROSE TAUPE',P['rose']),('DUSTY STEEL',P['powder'])]:
     body+=f'<rect x="{x}" y="45" width="240" height="160" rx="32" fill="{c}"/><text x="{x+120}" y="252" text-anchor="middle" {UI} font-size="21" fill="{P["navy"]}">{t}</text><text x="{x+120}" y="282" text-anchor="middle" {BODY} font-size="19" fill="{P["navy"]}">{c}</text>';x+=258
 write('05-palette/plush-drift-palette-strip.svg',svg(1600,330,body,bg='#FFFFFF'))
 write('05-palette/suede-texture-tile.svg',svg(900,900,f'<rect width="900" height="900" fill="url(#n)"/><path d="M0 780C250 610 480 910 900 620" fill="none" stroke="url(#m)" stroke-width="14" opacity=".22"/>'))
 
 # 06 gradients
-for n,body in {'navy-drift':f'<rect width="1600" height="900" fill="url(#n)"/><circle cx="1250" cy="260" r="330" fill="url(#w)" opacity=".18"/>','rose-drift':f'<rect width="1600" height="900" fill="{P["blush"]}"/><circle cx="1120" cy="430" r="390" fill="url(#w)" opacity=".6"/><path d="M-80 760C300 400 700 950 1660 370" fill="none" stroke="url(#m)" stroke-width="24" opacity=".3"/>','warm-veil':f'<rect width="1600" height="900" fill="{P["blush"]}"/><circle cx="520" cy="470" r="620" fill="{P["rose"]}" opacity=".22"/>','lavender-mist':f'<rect width="1600" height="900" fill="#EDF3FB"/><circle cx="1080" cy="420" r="560" fill="{P["powder"]}" opacity=".44"/><circle cx="620" cy="590" r="390" fill="{P["rose"]}" opacity=".2"/>'}.items():write(f'06-gradients/{n}.svg',svg(1600,900,body))
+# Keep Dusty Steel and Antique Rose Taupe in separate effects; blending them creates
+# an unintended lavender cast that is outside the approved base system.
+for n,body in {'navy-drift':f'<rect width="1600" height="900" fill="url(#n)"/><circle cx="1250" cy="260" r="330" fill="url(#w)" opacity=".18"/>','rose-drift':f'<rect width="1600" height="900" fill="{P["blush"]}"/><circle cx="1120" cy="430" r="390" fill="url(#w)" opacity=".6"/><path d="M-80 760C300 400 700 950 1660 370" fill="none" stroke="url(#m)" stroke-width="24" opacity=".3"/>','warm-veil':f'<rect width="1600" height="900" fill="{P["blush"]}"/><circle cx="520" cy="470" r="620" fill="{P["rose"]}" opacity=".22"/>','dusty-steel-mist':f'<rect width="1600" height="900" fill="{P["navy"]}"/><circle cx="1120" cy="380" r="560" fill="{P["powder"]}" opacity=".34"/><path d="M-80 760C300 400 700 950 1660 370" fill="none" stroke="{P["blush"]}" stroke-width="18" opacity=".14"/>'}.items():write(f'06-gradients/{n}.svg',svg(1600,900,body))
 
 # 07 components
 components=['badge-curated','badge-host-ready','badge-luxsync-pick','badge-no-subscription','button-outline','button-primary','button-secondary','notification-card','pagination','quantity-selector','quote-card','scene-tag','search-field','sort-control','toggle-off','toggle-on','trust-bar']

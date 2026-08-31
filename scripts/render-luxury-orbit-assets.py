@@ -95,6 +95,28 @@ def rebuild_catalog(svgs: list[Path]) -> None:
     master.save(CATALOG / "LuxSync-master-contact-sheet.png", optimize=True)
 
 
+def write_svg_list(svgs: list[Path]) -> None:
+    lines = [
+        "# LuxSync Luxury Orbit SVG Asset List",
+        "",
+        f"Generated SVG masters: **{len(svgs)}**",
+        "",
+        "These SVGs are generated directly by `scripts/generate-luxury-orbit-assets.py`; they do **not** need to be sent through an image generator.",
+        "",
+    ]
+    current = None
+    for svg in svgs:
+        rel = svg.relative_to(ASSET_ROOT)
+        category = rel.parts[0]
+        if category != current:
+            current = category
+            lines.extend([f"## {category}", ""])
+        lines.append(f"- `{rel.as_posix()}`")
+    (CATALOG / "SVG-ASSET-LIST.md").write_text(
+        "\n".join(lines) + "\n", encoding="utf-8"
+    )
+
+
 def main() -> int:
     svgs = sorted(p for p in ASSET_ROOT.rglob("*.svg") if "00-catalog" not in p.parts)
     for index, svg in enumerate(svgs, 1):
@@ -105,6 +127,7 @@ def main() -> int:
         print(f"[{index}/{len(svgs)}] {svg.relative_to(ROOT)}")
         render(svg)
     rebuild_catalog(svgs)
+    write_svg_list(svgs)
     print(f"Rendered normalized SVG masters while preserving {len(PROTECTED_EXACT_LOGOS)} exact approved logo rasters")
     return 0
 
