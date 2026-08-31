@@ -55,7 +55,7 @@ for n,g in {'facebook':'f','instagram':'◎','linkedin':'in','pinterest':'p','x'
     body=f'<circle cx="256" cy="256" r="202" fill="url(#n)" stroke="url(#m)" stroke-width="17"/><text x="256" y="320" text-anchor="middle" {UI} font-size="170" font-weight="600" fill="url(#m)">{g}</text>'
     write(f'04-icons-social/{n}.svg',svg(512,512,body))
 
-# 05 palette
+# 05 palette — labels are the official Plush Drift v2.1 color names.
 swatches={'antique-rose-taupe':('ANTIQUE ROSE TAUPE',P['rose']),'dark-suede':('DARK SUEDE',P['blue']),'dusty-steel':('DUSTY STEEL',P['powder']),'pale-driftwood':('PALE DRIFTWOOD',P['blush']),'slate-navy':('SLATE NAVY',P['navy']),'warm-taupe-mauve':('WARM TAUPE MAUVE',P['taupe'])}
 for n,(t,c) in swatches.items():
     write(f'05-palette/{n}.svg',svg(720,480,f'<rect x="34" y="34" width="652" height="410" rx="44" fill="{c}"/><rect x="34" y="320" width="652" height="124" fill="{P["blush"]}"/><text x="70" y="370" {UI} font-size="34" fill="{P["navy"]}">{t}</text><text x="70" y="414" {BODY} font-size="28" fill="{P["navy"]}">{c}</text>'))
