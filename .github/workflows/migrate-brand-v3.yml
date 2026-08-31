@@ -1,0 +1,52 @@
+name: Apply LuxSync v3 brand migration
+
+on:
+  push:
+    branches:
+      - brand/2026-complete-refresh
+    paths:
+      - brand/assets-v3/**
+      - scripts/migrate-brand-v3.py
+      - .github/workflows/migrate-brand-v3.yml
+  workflow_dispatch:
+
+concurrency:
+  group: luxsync-brand-v3-migration-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Apply v3 migration and palette normalization
+        run: python3 scripts/migrate-brand-v3.py
+
+      - name: Validate v3 structure
+        run: python3 scripts/validate-brand-v3.py
+
+      - name: Validate whitespace
+        run: git diff --check
+
+      - name: Commit migration results
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A brand/assets brand/assets-v3
+          if git diff --cached --quiet; then
+            echo 'No migration changes required.'
+            exit 0
+          fi
+          git commit -m 'Apply LuxSync v3 asset migration'
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
