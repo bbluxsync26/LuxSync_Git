@@ -34,6 +34,25 @@ Natural photography may contain natural scene color. Branded overlays, controls,
 - **Manrope 500/600** — headings, navigation, CTA labels, buttons, badges, and graphic UI
 - **Inter 400/500** — body copy, forms, captions, product descriptions, and supporting UI
 
+## Plush Drift Tactile Illumination
+
+LuxSync v3 preserves the tactile depth language that originated in Plush Drift. Buttons, cards, selectable tiles, and similar controls may use **soft backlighting beneath a darker foreground surface** so the interface feels physically illuminated rather than flat.
+
+The effect should resemble premium architectural controls with concealed lighting:
+
+- the visible control surface remains primarily Slate Navy or Dark Suede;
+- a softer approved brand tone may appear as a restrained underglow, halo, or backlit layer behind the darker surface;
+- Dusty Steel is the preferred cool intelligent-light source;
+- Antique Rose Taupe and Pale Driftwood may create warmer ambient underlighting where appropriate;
+- Champagne Rose Gold Metallic may be used as a very restrained premium edge or reflected accent, never as the dominant glow;
+- at rest, illumination is faint and controlled;
+- on hover or keyboard focus, the underlighting may brighten and widen slightly;
+- on active/pressed state, the darker foreground surface should visually compress or move inward by approximately 1–2 px while its outer shadow tightens and the underlighting becomes modestly brighter;
+- on release, the surface returns smoothly using restrained easing;
+- reduced-motion preferences must be respected.
+
+This is **tactile illumination**, not neon. Avoid hard glowing outlines, arcade lighting, exaggerated bloom, flashing effects, or color-only state communication. Contrast, focus indication, and control affordance must remain accessible without relying on the glow.
+
 ## Logo Rule
 
 The approved LuxSync logos are artwork, not live typography.
@@ -78,5 +97,6 @@ Keep **Intelligent Calm**: warm, confident, thoughtful, unhurried, professional,
 **Brand system:** LuxSync v3  
 **Typography:** Manrope + Inter  
 **Logo treatment:** Protected approved artwork  
+**Interaction language:** Plush Drift tactile illumination  
 **Status:** Active  
 **Updated:** August 31, 2026
