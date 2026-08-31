@@ -4,6 +4,9 @@
 The Luxury Orbit generator may create layout scaffolding, but any asset that displays
 an LS brand mark must reference the approved monogram raster instead of re-drawing
 letters/orbits with live SVG text and ellipses.
+
+Champagne Rose Gold Metallic is an approved brand color anchored at #D6B0A0;
+the ``m`` gradient below is its canonical metallic rendering.
 """
 from pathlib import Path
 

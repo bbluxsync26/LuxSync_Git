@@ -22,6 +22,7 @@ BASE_COLOR_NAMES = {
     "Warm Taupe Mauve": "#9E8B85",
     "Antique Rose Taupe": "#967878",
     "Dusty Steel": "#7B96B2",
+    "Champagne Rose Gold Metallic": "#D6B0A0",
 }
 BASE_COLORS = set(BASE_COLOR_NAMES.values())
 LEGACY_BASE_COLORS = {
@@ -45,6 +46,23 @@ GOVERNING_FILES = [
     "brand/README.md",
     "brand/colors.md",
     "brand/typography.md",
+    "website/styles/design-system.md",
+    "website/pages/home.md",
+    "docs/architecture/website-information-architecture.md",
+    "docs/runbooks/RB-002-GoDaddy-Airo-AI-Builder.md",
+    "docs/runbooks/RB-008-Luxury-Orbit-Brand-Asset-Generation.md",
+    "docs/runbooks/RB-009-Repository-Consistency-Validation.md",
+    "docs/checklists/CL-001-Airo-First-Pass-Review.md",
+    "prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md",
+    "docs/master-catalog.md",
+    "docs/project-runbook.md",
+]
+
+PALETTE_GOVERNING_FILES = [
+    "README.md",
+    "brand/README.md",
+    "brand/colors.md",
+    "brand/assets/README.md",
     "website/styles/design-system.md",
     "website/pages/home.md",
     "docs/architecture/website-information-architecture.md",
@@ -117,6 +135,11 @@ def validate_governing_docs(errors: list[str]) -> None:
     require(typography, "Manrope", "brand/typography.md", errors)
     require(typography, "Inter", "brand/typography.md", errors)
 
+    for rel in PALETTE_GOVERNING_FILES:
+        text = read(rel)
+        require(text, "Champagne Rose Gold Metallic", rel, errors)
+        require(text, "#D6B0A0", rel, errors)
+
 
 def validate_generator_and_svgs(errors: list[str]) -> None:
     generator = read("scripts/generate-luxury-orbit-assets.py")
@@ -145,8 +168,8 @@ def validate_generator_and_svgs(errors: list[str]) -> None:
         for path in ASSET_ROOT.rglob("*.svg")
         if "00-catalog" not in path.parts and "12-scenes" not in path.parts
     ]
-    if len(svgs) != 97:
-        errors.append(f"brand/assets: expected 97 SVG masters; found {len(svgs)}")
+    if len(svgs) != 98:
+        errors.append(f"brand/assets: expected 98 SVG masters; found {len(svgs)}")
 
     retired_assets = list(ASSET_ROOT.rglob("lavender-mist.*"))
     for path in retired_assets:
@@ -159,6 +182,7 @@ def validate_generator_and_svgs(errors: list[str]) -> None:
         "warm-taupe-mauve.svg": "WARM TAUPE MAUVE",
         "antique-rose-taupe.svg": "ANTIQUE ROSE TAUPE",
         "dusty-steel.svg": "DUSTY STEEL",
+        "champagne-rose-gold-metallic.svg": "CHAMPAGNE ROSE GOLD METALLIC",
     }
     for filename, label in palette_labels.items():
         rel = f"brand/assets/05-palette/{filename}"
@@ -212,24 +236,42 @@ def validate_asset_metadata(errors: list[str]) -> None:
     if palette != BASE_COLORS:
         errors.append(f"asset-manifest.json: base palette mismatch: {sorted(palette)}")
 
+    metallic = data.get("palette_treatments", {}).get(
+        "champagne_rose_gold_metallic", {}
+    )
+    if metallic.get("anchor") != "#D6B0A0":
+        errors.append("asset-manifest.json: Champagne Rose Gold Metallic anchor mismatch")
+    expected_metallic_stops = [
+        "#FFF2EA",
+        "#EAC8B9",
+        "#D6B0A0",
+        "#9C675C",
+        "#F2D6C8",
+        "#7D4E49",
+    ]
+    if metallic.get("gradient_stops") != expected_metallic_stops:
+        errors.append("asset-manifest.json: Champagne Rose Gold Metallic gradient mismatch")
+
     inventory = data.get("inventory", {})
-    if inventory.get("logical_asset_count") != 103:
-        errors.append("asset-manifest.json: logical_asset_count must be 103")
-    if inventory.get("svg_master_count") != 97:
-        errors.append("asset-manifest.json: svg_master_count must be 97")
+    if inventory.get("logical_asset_count") != 104:
+        errors.append("asset-manifest.json: logical_asset_count must be 104")
+    if inventory.get("svg_master_count") != 98:
+        errors.append("asset-manifest.json: svg_master_count must be 98")
     if inventory.get("production_scene_count") != 6:
         errors.append("asset-manifest.json: production_scene_count must be 6")
 
     csv_path = ASSET_ROOT / "asset-manifest.csv"
     with csv_path.open(newline="", encoding="utf-8-sig") as handle:
         rows = list(csv.DictReader(handle))
-    if len(rows) != 97:
-        errors.append(f"asset-manifest.csv: expected 97 rows; found {len(rows)}")
+    if len(rows) != 98:
+        errors.append(f"asset-manifest.csv: expected 98 rows; found {len(rows)}")
     row_names = {row.get("name", "") for row in rows}
     if "lavender-mist" in row_names:
         errors.append("asset-manifest.csv: retired lavender-mist row remains")
     if "dusty-steel-mist" not in row_names:
         errors.append("asset-manifest.csv: dusty-steel-mist row is missing")
+    if "champagne-rose-gold-metallic" not in row_names:
+        errors.append("asset-manifest.csv: Champagne Rose Gold Metallic swatch is missing")
     for row in rows:
         rel = row.get("svg", "")
         svg = ASSET_ROOT / rel
@@ -256,7 +298,8 @@ def validate_asset_metadata(errors: list[str]) -> None:
     catalog = read("brand/assets/00-catalog/LuxSync-Asset-Catalog.html")
     require(catalog, "Manrope", "brand/assets/00-catalog/LuxSync-Asset-Catalog.html", errors)
     require(catalog, "Inter", "brand/assets/00-catalog/LuxSync-Asset-Catalog.html", errors)
-    require(catalog, "103 logical assets", "brand/assets/00-catalog/LuxSync-Asset-Catalog.html", errors)
+    require(catalog, "104 logical assets", "brand/assets/00-catalog/LuxSync-Asset-Catalog.html", errors)
+    require(catalog, "Champagne Rose Gold Metallic", "brand/assets/00-catalog/LuxSync-Asset-Catalog.html", errors)
     for token in ("Century Gothic", "Candara"):
         if token in catalog:
             errors.append(
@@ -315,7 +358,7 @@ def main() -> int:
         return 1
 
     print("LuxSync repository consistency validation PASSED.")
-    print("- Plush Drift v2.1 base palette confirmed")
+    print("- seven-color Plush Drift v2.1 palette confirmed")
     print("- Luxury Orbit web treatment confirmed")
     print("- Manrope/Inter typography confirmed")
     print("- official palette names and no lavender-mist artifact confirmed")

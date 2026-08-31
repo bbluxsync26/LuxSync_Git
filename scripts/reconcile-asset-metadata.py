@@ -23,6 +23,7 @@ BASE_PALETTE = {
     "warm_taupe_mauve": "#9E8B85",
     "antique_rose_taupe": "#967878",
     "dusty_steel": "#7B96B2",
+    "champagne_rose_gold_metallic": "#D6B0A0",
 }
 
 EXPECTED_VECTOR_COUNTS = {
@@ -30,7 +31,7 @@ EXPECTED_VECTOR_COUNTS = {
     "02-icons-brand": 12,
     "03-icons-website": 14,
     "04-icons-social": 6,
-    "05-palette": 8,
+    "05-palette": 9,
     "06-gradients": 4,
     "07-components": 17,
     "08-cards": 13,
@@ -61,8 +62,8 @@ def reconcile_csv() -> tuple[int, list[dict[str, str]]]:
         rows = list(reader)
         fieldnames = reader.fieldnames
 
-    if len(rows) != 97:
-        raise RuntimeError(f"Expected 97 vector manifest rows; found {len(rows)}")
+    if len(rows) != 98:
+        raise RuntimeError(f"Expected 98 vector manifest rows; found {len(rows)}")
 
     seen: set[str] = set()
     counts: dict[str, int] = {}
@@ -135,12 +136,25 @@ def validate_scenes() -> list[dict[str, str]]:
 
 def write_json_summary() -> None:
     data = {
-        "schema_version": 3,
+        "schema_version": 4,
         "library": "LuxSync Brand Asset Library",
         "brand_system": "Plush Drift v2.1",
         "web_visual_direction": "Luxury Orbit",
         "official_slogan": "Where Luxury Lives Intelligently",
         "palette": BASE_PALETTE,
+        "palette_treatments": {
+            "champagne_rose_gold_metallic": {
+                "anchor": "#D6B0A0",
+                "gradient_stops": [
+                    "#FFF2EA",
+                    "#EAC8B9",
+                    "#D6B0A0",
+                    "#9C675C",
+                    "#F2D6C8",
+                    "#7D4E49",
+                ],
+            }
+        },
         "fonts": {
             "headlines_display": {"family": "Manrope", "weights": [500, 600]},
             "body_ui": {"family": "Inter", "weights": [400, 500]},
@@ -148,17 +162,17 @@ def write_json_summary() -> None:
         "inventory": {
             "vector_manifest": "asset-manifest.csv",
             "scene_manifest": "12-scenes/scene-manifest.csv",
-            "logical_asset_count": 103,
-            "svg_master_count": 97,
+            "logical_asset_count": 104,
+            "svg_master_count": 98,
             "production_scene_count": SCENE_COUNT,
             "categories": {**EXPECTED_VECTOR_COUNTS, "12-scenes": SCENE_COUNT},
         },
         "implementation_notes": [
-            "asset-manifest.csv is the detailed inventory for the 97 SVG-based vector graphics and its dimensions are reconciled from the actual SVG masters.",
+            "asset-manifest.csv is the detailed inventory for the 98 SVG-based vector graphics and its dimensions are reconciled from the actual SVG masters.",
             "12-scenes/scene-manifest.csv is the detailed inventory for the six production raster scenes.",
             "Manrope and Inter are the authoritative typography system for current LuxSync web graphics.",
-            "Plush Drift v2.1 supplies the six authoritative base colors; Luxury Orbit is the active web/graphics treatment layered on that base.",
-            "The 97 SVG-based graphics are generated in-repository and do not require image generation.",
+            "Plush Drift v2.1 supplies seven authoritative colors, including Champagne Rose Gold Metallic anchored at #D6B0A0; Luxury Orbit is the active web/graphics treatment layered on that base.",
+            "The 98 SVG-based graphics are generated in-repository and do not require image generation.",
             "The six production scenes are text-free raster assets intended for composition beneath native HTML/CSS and approved branding.",
             "Do not bake prices, ratings, stock claims, navigation, CTAs, or promotional copy into production scene photography.",
             "The approved primary monogram and horizontal lockup rasters are protected exact artwork and must not be replaced by generic regeneration.",
@@ -172,8 +186,8 @@ def write_inventory() -> None:
         "LUXSYNC WEB ASSET INVENTORY",
         "Plush Drift v2.1 base system / Luxury Orbit web treatment",
         "",
-        "Total logical assets: 103",
-        "97 SVG-based graphics with PNG/WebP derivatives",
+        "Total logical assets: 104",
+        "98 SVG-based graphics with PNG/WebP derivatives",
         "6 text-free production scenes with PNG/WebP delivery files",
         "",
     ]
@@ -196,10 +210,11 @@ def write_inventory() -> None:
             "Warm Taupe Mauve #9E8B85",
             "Antique Rose Taupe #967878",
             "Dusty Steel #7B96B2",
+            "Champagne Rose Gold Metallic #D6B0A0 (anchor)",
             "",
             "Canonical metadata",
             "------------------",
-            "asset-manifest.csv               97 SVG-based vector graphics",
+            "asset-manifest.csv               98 SVG-based vector graphics",
             "asset-manifest.json              library summary",
             "12-scenes/scene-manifest.csv     6 production raster scenes",
             "00-catalog/SVG-ASSET-LIST.md     generated SVG list",
@@ -279,7 +294,7 @@ def write_catalog(vector_rows: list[dict[str, str]], scene_rows: list[dict[str, 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>LuxSync Web Asset Catalog</title>
 <style>
-:root{{--navy:#0D1526;--suede:#172036;--cream:#D0BEB0;--taupe:#9E8B85;--rose:#967878;--steel:#7B96B2}}
+:root{{--navy:#0D1526;--suede:#172036;--cream:#D0BEB0;--taupe:#9E8B85;--rose:#967878;--steel:#7B96B2;--champagne:#D6B0A0}}
 *{{box-sizing:border-box}}
 body{{margin:0;background:var(--navy);color:var(--cream);font-family:Inter,system-ui,sans-serif;background-image:linear-gradient(145deg,rgba(150,120,120,.08),transparent 32%)}}
 header{{padding:54px max(28px,6vw);border-bottom:1px solid rgba(123,150,178,.22)}}
@@ -302,8 +317,8 @@ footer{{padding:30px max(28px,6vw);color:var(--taupe);border-top:1px solid rgba(
 <body>
 <header>
 <h1>LuxSync Web Asset Catalog</h1>
-<p class="lead">103 logical assets: 97 SVG-based graphics plus six text-free production scenes. Plush Drift v2.1 is the authoritative base system, Luxury Orbit is the active web treatment, and Manrope + Inter are the governing fonts.</p>
-<div class="palette"><i style="background:#0D1526" title="Slate Navy #0D1526"></i><i style="background:#172036" title="Dark Suede #172036"></i><i style="background:#D0BEB0" title="Pale Driftwood #D0BEB0"></i><i style="background:#9E8B85" title="Warm Taupe Mauve #9E8B85"></i><i style="background:#967878" title="Antique Rose Taupe #967878"></i><i style="background:#7B96B2" title="Dusty Steel #7B96B2"></i></div>
+<p class="lead">104 logical assets: 98 SVG-based graphics plus six text-free production scenes. Plush Drift v2.1 is the authoritative base system, Luxury Orbit is the active web treatment, and Manrope + Inter are the governing fonts.</p>
+<div class="palette"><i style="background:#0D1526" title="Slate Navy #0D1526"></i><i style="background:#172036" title="Dark Suede #172036"></i><i style="background:#D0BEB0" title="Pale Driftwood #D0BEB0"></i><i style="background:#9E8B85" title="Warm Taupe Mauve #9E8B85"></i><i style="background:#967878" title="Antique Rose Taupe #967878"></i><i style="background:#7B96B2" title="Dusty Steel #7B96B2"></i><i style="background:linear-gradient(135deg,#FFF2EA,#EAC8B9 24%,#D6B0A0 48%,#9C675C 68%,#F2D6C8 84%,#7D4E49)" title="Champagne Rose Gold Metallic #D6B0A0 anchor"></i></div>
 </header>
 <main>{''.join(sections)}</main>
 <footer>LuxSync · Where Luxury Lives Intelligently · Catalog generated from canonical repository metadata.</footer>
@@ -320,7 +335,7 @@ def main() -> int:
     write_inventory()
     write_catalog(vector_rows, scene_rows)
     print(
-        f"Asset metadata reconciled: 97 vector rows, {changed} dimension row(s) updated, "
+        f"Asset metadata reconciled: 98 vector rows, {changed} dimension row(s) updated, "
         f"{SCENE_COUNT} production scenes validated, browser catalog refreshed."
     )
     return 0

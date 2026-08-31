@@ -14,12 +14,13 @@ Luxury Orbit is the active website treatment layered on the authoritative Plush 
 - Warm Taupe Mauve `#9E8B85` — secondary neutral text/details
 - Antique Rose Taupe `#967878` — warm decorative accent
 - Dusty Steel `#7B96B2` — interactive and orbit/glow accent
+- Champagne Rose Gold Metallic `#D6B0A0` anchor — premium metallic accent
 
 ### Derived Luxury Orbit Treatments
 
-- Rose-metal gradients may use derived champagne/copper highlight and shadow stops around `#D6B0A0`.
+- Champagne Rose Gold Metallic is an approved brand color anchored at `#D6B0A0`; its metallic rendering may use the approved champagne/copper highlight and shadow stops.
 - Icy-blue highlight tints may be derived from Dusty Steel for restrained orbit illumination.
-- Derived treatments are effects, not replacement base colors.
+- Metallic gradient stops and Dusty Steel highlight tints are rendering effects, not additional standalone palette colors.
 
 ## Typography
 

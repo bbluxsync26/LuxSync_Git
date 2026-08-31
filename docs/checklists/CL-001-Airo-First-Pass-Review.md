@@ -1,7 +1,7 @@
 # CL-001 — Airo First-Pass Review
 
 **Status:** Active  
-**Updated:** 2026-08-30  
+**Updated:** 2026-08-31
 **Use:** Immediately after the first PR-001 generation in Airo AI Builder
 
 ## Structure
@@ -31,6 +31,7 @@
 - [ ] Warm Taupe Mauve `#9E8B85` supports secondary information
 - [ ] Antique Rose Taupe `#967878` provides restrained warm accent
 - [ ] Dusty Steel `#7B96B2` provides interaction/orbit-light emphasis
+- [ ] Champagne Rose Gold Metallic uses the `#D6B0A0` anchor and approved metallic gradient for premium emphasis
 
 ### Typography
 
@@ -41,7 +42,7 @@
 
 ### Luxury Orbit treatment
 
-- [ ] Metallic rose effects are restrained derived treatments rather than replacement base colors
+- [ ] Champagne Rose Gold Metallic is treated as the seventh approved color and its gradient stops are not misrepresented as additional palette colors
 - [ ] Dusty Steel-derived orbit/glow is soft and atmospheric
 - [ ] Design feels architectural, warm, refined, spacious, and premium
 - [ ] Production photography contains no baked-in website copy, navigation, prices, ratings, or CTAs

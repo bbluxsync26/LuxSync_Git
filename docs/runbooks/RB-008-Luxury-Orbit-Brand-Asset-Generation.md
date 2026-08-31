@@ -28,8 +28,9 @@ Generated editable SVG text must not use Century Gothic, Candara, Montserrat, Bo
 - Warm Taupe Mauve `#9E8B85`
 - Antique Rose Taupe `#967878`
 - Dusty Steel `#7B96B2`
+- Champagne Rose Gold Metallic `#D6B0A0` anchor
 
-Derived rose-metal and icy orbit highlights are allowed as effects. They do not replace the six base colors.
+Champagne Rose Gold Metallic is the seventh approved color. Its metallic rendering uses the approved light-to-dark gradient around the `#D6B0A0` anchor. Dusty Steel-derived icy orbit highlights remain rendering effects.
 
 Do not combine Dusty Steel and Antique Rose Taupe into a lavender-looking overlay. The approved cool gradient is `dusty-steel-mist`, which stays within Slate Navy, Pale Driftwood, and Dusty Steel.
 
@@ -44,7 +45,7 @@ Their SVG wrappers intentionally reference the approved raster artwork. A new ex
 
 ## Source Files
 
-- `scripts/generate-luxury-orbit-assets.py` — generates the 97 SVG-based graphics.
+- `scripts/generate-luxury-orbit-assets.py` — generates the 98 SVG-based graphics.
 - `scripts/normalize-luxury-orbit-fonts.py` — enforces Manrope/Inter, Plush Drift base colors, safe category copy, and generation rules.
 - `scripts/render-luxury-orbit-assets.py` — renders normalized SVGs to PNG/WebP and rebuilds contact sheets while preserving protected exact logo rasters.
 - `scripts/regenerate-brand-raster-assets.py` — compatibility/orchestration entrypoint where retained.
@@ -54,9 +55,9 @@ Their SVG wrappers intentionally reference the approved raster artwork. A new ex
 
 Current logical library:
 
-- 97 SVG-based graphics with PNG/WebP derivatives
+- 98 SVG-based graphics with PNG/WebP derivatives
 - 6 text-free production scene raster pairs in `brand/assets/12-scenes/`
-- Total logical assets: 103
+- Total logical assets: 104
 
 Production scenes are curated raster assets and are not recreated by the SVG generator.
 
@@ -98,8 +99,8 @@ Render website copy and controls natively in HTML/CSS or use approved vector/ras
 
 Before release:
 
-1. Confirm exactly 97 generated SVG masters.
-2. Confirm 97 non-scene PNG derivatives and 97 non-scene WebP derivatives.
+1. Confirm exactly 98 generated SVG masters.
+2. Confirm 98 non-scene PNG derivatives and 98 non-scene WebP derivatives.
 3. Confirm 6 production-scene PNGs and 6 production-scene WebPs.
 4. Confirm `brand/assets/12-scenes/scene-manifest.csv` exists.
 5. Confirm `brand/assets/00-catalog/SVG-ASSET-LIST.md` exists.
@@ -108,7 +109,7 @@ Before release:
 8. Verify Manrope/Inter in editable generated text.
 9. Verify no forbidden legacy system-font declarations remain in generated SVGs or the editable generator source.
 10. Verify Plush Drift v2.1 base colors remain authoritative.
-11. Verify the palette swatches use all six official color names and no retired aliases.
+11. Verify the palette swatches use all seven official color names, including Champagne Rose Gold Metallic, and no retired aliases.
 12. Verify `lavender-mist` is absent and `dusty-steel-mist` is present.
 13. Verify protected exact logo wrappers still reference the approved logo rasters.
 14. Review representative assets visually on light and dark backgrounds.

@@ -35,20 +35,20 @@ The automated validator enforces the current LuxSync baseline:
 - Governing docs reference Manrope and Inter.
 - Official slogan is consistent.
 - Homepage hero and CTAs match the approved launch baseline.
-- `brand/colors.md` contains the six Plush Drift v2.1 base colors and does not retain the superseded replacement palette as base colors.
+- `brand/colors.md` contains the seven approved Plush Drift v2.1 colors, including Champagne Rose Gold Metallic anchored at `#D6B0A0`, and does not retain the superseded replacement palette.
 
 ### Generated assets
 
 - Generator source uses Manrope/Inter.
 - Generator source does not reintroduce superseded Luxury Orbit replacement base colors.
-- Exactly 97 SVG masters exist.
+- Exactly 98 SVG masters exist.
 - Editable SVG text does not contain forbidden legacy system-font declarations.
 - Protected exact logo wrappers still reference the approved logo rasters.
 
 ### Asset metadata
 
 - `asset-manifest.json` reports Plush Drift v2.1 + Luxury Orbit + Manrope/Inter.
-- Logical counts remain 103 total assets: 97 SVG-based graphics plus six production scenes.
+- Logical counts remain 104 total assets: 98 SVG-based graphics plus six production scenes.
 - Every `asset-manifest.csv` width/height value matches the actual referenced SVG master.
 - Six scene manifest rows, PNGs, and WebPs exist.
 
@@ -69,7 +69,7 @@ python scripts/reconcile-asset-metadata.py
 
 The script:
 
-1. Loads the 97-row vector CSV manifest.
+1. Loads the 98-row vector CSV manifest.
 2. Confirms each referenced SVG exists.
 3. Reads actual SVG width/height values.
 4. Updates stale CSV dimensions.

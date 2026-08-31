@@ -1,5 +1,5 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "library": "LuxSync Brand Asset Library",
   "brand_system": "Plush Drift v2.1",
   "web_visual_direction": "Luxury Orbit",
@@ -10,7 +10,21 @@
     "pale_driftwood": "#D0BEB0",
     "warm_taupe_mauve": "#9E8B85",
     "antique_rose_taupe": "#967878",
-    "dusty_steel": "#7B96B2"
+    "dusty_steel": "#7B96B2",
+    "champagne_rose_gold_metallic": "#D6B0A0"
+  },
+  "palette_treatments": {
+    "champagne_rose_gold_metallic": {
+      "anchor": "#D6B0A0",
+      "gradient_stops": [
+        "#FFF2EA",
+        "#EAC8B9",
+        "#D6B0A0",
+        "#9C675C",
+        "#F2D6C8",
+        "#7D4E49"
+      ]
+    }
   },
   "fonts": {
     "headlines_display": {
@@ -31,15 +45,15 @@
   "inventory": {
     "vector_manifest": "asset-manifest.csv",
     "scene_manifest": "12-scenes/scene-manifest.csv",
-    "logical_asset_count": 103,
-    "svg_master_count": 97,
+    "logical_asset_count": 104,
+    "svg_master_count": 98,
     "production_scene_count": 6,
     "categories": {
       "01-brand": 8,
       "02-icons-brand": 12,
       "03-icons-website": 14,
       "04-icons-social": 6,
-      "05-palette": 8,
+      "05-palette": 9,
       "06-gradients": 4,
       "07-components": 17,
       "08-cards": 13,
@@ -50,11 +64,11 @@
     }
   },
   "implementation_notes": [
-    "asset-manifest.csv is the detailed inventory for the 97 SVG-based vector graphics and its dimensions are reconciled from the actual SVG masters.",
+    "asset-manifest.csv is the detailed inventory for the 98 SVG-based vector graphics and its dimensions are reconciled from the actual SVG masters.",
     "12-scenes/scene-manifest.csv is the detailed inventory for the six production raster scenes.",
     "Manrope and Inter are the authoritative typography system for current LuxSync web graphics.",
-    "Plush Drift v2.1 supplies the six authoritative base colors; Luxury Orbit is the active web/graphics treatment layered on that base.",
-    "The 97 SVG-based graphics are generated in-repository and do not require image generation.",
+    "Plush Drift v2.1 supplies seven authoritative colors, including Champagne Rose Gold Metallic anchored at #D6B0A0; Luxury Orbit is the active web/graphics treatment layered on that base.",
+    "The 98 SVG-based graphics are generated in-repository and do not require image generation.",
     "The six production scenes are text-free raster assets intended for composition beneath native HTML/CSS and approved branding.",
     "Do not bake prices, ratings, stock claims, navigation, CTAs, or promotional copy into production scene photography.",
     "The approved primary monogram and horizontal lockup rasters are protected exact artwork and must not be replaced by generic regeneration."

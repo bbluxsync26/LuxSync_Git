@@ -86,9 +86,9 @@ jobs:
 
       - name: Validate generated library
         run: |
-          test "$(find brand/assets -type f -name '*.svg' | wc -l)" -eq 97
-          test "$(find brand/assets -type f -name '*.webp' ! -path '*/12-scenes/*' | wc -l)" -eq 97
-          test "$(find brand/assets -type f -name '*.png' ! -path '*/12-scenes/*' | grep -v '/00-catalog/' | wc -l)" -eq 97
+          test "$(find brand/assets -type f -name '*.svg' | wc -l)" -eq 98
+          test "$(find brand/assets -type f -name '*.webp' ! -path '*/12-scenes/*' | wc -l)" -eq 98
+          test "$(find brand/assets -type f -name '*.png' ! -path '*/12-scenes/*' | grep -v '/00-catalog/' | wc -l)" -eq 98
           test "$(find brand/assets/12-scenes -type f -name '*.png' | wc -l)" -eq 6
           test "$(find brand/assets/12-scenes -type f -name '*.webp' | wc -l)" -eq 6
           test -f brand/assets/12-scenes/scene-manifest.csv

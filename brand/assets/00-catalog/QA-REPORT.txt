@@ -1,5 +1,5 @@
 LUXSYNC ASSET PACK — QA REPORT
-Updated: 2026-08-30
+Updated: 2026-08-31
 
 Current authority
 -----------------
@@ -15,9 +15,11 @@ Authoritative base palette
 #9E8B85  Warm Taupe Mauve
 #967878  Antique Rose Taupe
 #7B96B2  Dusty Steel
+#D6B0A0  Champagne Rose Gold Metallic (anchor)
 
-Luxury Orbit may use derived champagne/copper rose-metal highlights and icy-blue
-orbit-light tints for depth. Those are effects, not replacement base colors.
+Champagne Rose Gold Metallic is the seventh approved color. Its approved metallic
+rendering is #FFF2EA -> #EAC8B9 -> #D6B0A0 -> #9C675C -> #F2D6C8 -> #7D4E49.
+Icy-blue orbit-light tints may still be used as depth effects, not replacement colors.
 
 Typography authority
 --------------------
@@ -36,13 +38,13 @@ the approved raster files intentionally.
 
 Asset inventory
 ---------------
-97 SVG-based logical graphics with PNG/WebP derivatives
+98 SVG-based logical graphics with PNG/WebP derivatives
 6 text-free production raster scenes with PNG/WebP delivery files
-103 logical assets total
+104 logical assets total
 
 Canonical metadata
 ------------------
-../asset-manifest.csv              97 SVG-based vector graphics
+../asset-manifest.csv              98 SVG-based vector graphics
 ../asset-manifest.json             machine-readable library summary
 ../12-scenes/scene-manifest.csv    6 production raster scenes
 SVG-ASSET-LIST.md                  generated SVG inventory
@@ -66,8 +68,8 @@ assets wherever practical.
 Release validation
 ------------------
 Before relying on the asset library for production:
-1. Confirm exactly 97 SVG masters.
-2. Confirm 97 non-scene PNGs and 97 non-scene WebPs.
+1. Confirm exactly 98 SVG masters.
+2. Confirm 98 non-scene PNGs and 98 non-scene WebPs.
 3. Confirm six scene PNGs and six scene WebPs.
 4. Confirm protected exact logo wrappers still reference approved logo rasters.
 5. Confirm editable SVG text uses Manrope/Inter.

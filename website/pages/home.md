@@ -28,7 +28,7 @@ Luxury smart-home technology designed for modern living, with curated hardware a
 
 ### Visual direction
 
-Use Luxury Orbit as the active web treatment on the Plush Drift v2.1 base system: Slate Navy / Dark Suede surfaces, restrained metallic rose detail, Dusty Steel orbit light, Pale Driftwood copy, generous negative space, and premium smart-living imagery. Keep the CTA visible above the fold on desktop and mobile.
+Use Luxury Orbit as the active web treatment on the Plush Drift v2.1 base system: Slate Navy / Dark Suede surfaces, restrained Champagne Rose Gold Metallic detail anchored at `#D6B0A0`, Dusty Steel orbit light, Pale Driftwood copy, generous negative space, and premium smart-living imagery. Keep the CTA visible above the fold on desktop and mobile.
 
 ---
 
@@ -162,8 +162,9 @@ Commerce utilities such as Search, Account, and Cart should remain accessible th
 - Warm Taupe Mauve `#9E8B85`
 - Antique Rose Taupe `#967878`
 - Dusty Steel `#7B96B2`
+- Champagne Rose Gold Metallic `#D6B0A0` anchor
 
-Derived metallic rose and icy orbit highlights may be used sparingly as Luxury Orbit effects.
+Use the approved Champagne Rose Gold Metallic gradient for metallic depth. Dusty Steel-derived icy orbit highlights may be used sparingly as Luxury Orbit effects.
 
 ### Typography
 

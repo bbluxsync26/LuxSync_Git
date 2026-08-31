@@ -1,6 +1,6 @@
 # LuxSync Luxury Orbit SVG Asset List
 
-Generated SVG masters: **97**
+Generated SVG masters: **98**
 
 These SVGs are generated directly by `scripts/generate-luxury-orbit-assets.py`; they do **not** need to be sent through an image generator.
 
@@ -55,6 +55,7 @@ These SVGs are generated directly by `scripts/generate-luxury-orbit-assets.py`; 
 ## 05-palette
 
 - `05-palette/antique-rose-taupe.svg`
+- `05-palette/champagne-rose-gold-metallic.svg`
 - `05-palette/dark-suede.svg`
 - `05-palette/dusty-steel.svg`
 - `05-palette/pale-driftwood.svg`
