@@ -6,6 +6,7 @@ on:
       - fix/clean-triple-format-assets
     paths:
       - 'scripts/generate-clean-production-assets.py'
+      - 'scripts/patch-clean-asset-references.py'
   workflow_dispatch:
 
 permissions:
@@ -32,6 +33,9 @@ jobs:
       - name: Rebuild atomic triple-format library
         run: python scripts/generate-clean-production-assets.py
 
+      - name: Cut over active repository references
+        run: python scripts/patch-clean-asset-references.py
+
       - name: Validate generated format parity
         shell: bash
         run: |
@@ -53,6 +57,9 @@ jobs:
           print(f"Validated {len(manifest['assets'])} clean assets in SVG + PNG + WebP")
           PY
 
+      - name: Run production asset validator
+        run: python scripts/validate-production-brand.py
+
       - name: Commit rebuilt production library
         shell: bash
         run: |
@@ -60,5 +67,9 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A
           git diff --cached --check
-          git commit -m 'Rebuild clean atomic LuxSync asset library'
-          git push origin fix/clean-triple-format-assets
+          if git diff --cached --quiet; then
+            echo 'No generated changes to commit.'
+          else
+            git commit -m 'Finalize clean atomic LuxSync asset cutover'
+            git push origin fix/clean-triple-format-assets
+          fi
