@@ -25,6 +25,11 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
       - name: Validate production brand library
         run: python scripts/validate-production-brand.py
 
@@ -35,6 +40,12 @@ jobs:
         run: |
           node website/src/concierge/assemble-engine.mjs
           git diff --exit-code -- website/src/concierge/luxsync-concierge-engine.v1.json
+
+      - name: Build production website
+        run: node site/build.mjs
+
+      - name: Validate production website
+        run: node site/test.mjs
 
       - name: Validate whitespace
         run: git diff --check
