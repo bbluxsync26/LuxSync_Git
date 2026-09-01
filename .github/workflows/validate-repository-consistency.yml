@@ -25,8 +25,16 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Validate approved LuxSync atomic brand source of truth
-        run: python scripts/validate-brand-v3.py
+      - name: Validate production brand library
+        run: python scripts/validate-production-brand.py
+
+      - name: Validate repository source of truth
+        run: python scripts/validate-repository-consistency.py
+
+      - name: Verify Concierge production engine is current
+        run: |
+          node website/src/concierge/assemble-engine.mjs
+          git diff --exit-code -- website/src/concierge/luxsync-concierge-engine.v1.json
 
       - name: Validate whitespace
         run: git diff --check
