@@ -3,7 +3,7 @@
 **Status:** Active
 **Repository:** `bbluxsync26/LuxSync_Git`
 **Default branch:** `master`
-**Last updated:** 2026-08-31
+**Last updated:** 2026-09-01
 
 ## Purpose
 
@@ -48,6 +48,7 @@ For merchandising specifically, `content/product-catalog.md` governs current pro
 - **Primary launch compatibility standard:** Samsung SmartThings
 - **Production commerce system of record:** GoDaddy Commerce Plus
 - **Protected logo artwork:** approved logo masters remain immutable artwork
+- **Account experience principle:** every customer receives the same high-care, VIP-level welcome and service experience
 
 Approved colors:
 
@@ -122,6 +123,7 @@ Approved colors:
 | WEB-006 | Contact Page Blueprint | `website/pages/contact.md` | Active / Adaptive form |
 | WEB-007 | Intelligent Living Concierge Engine | `website/src/concierge/` | Active / v1 engine |
 | WEB-008 | ROI Guides Library Page Blueprint | `website/pages/guides.md` | Active |
+| WEB-009 | VIP Account Access / Login Blueprint | `website/pages/account-login.md` | Active / Pre-build UX baseline |
 
 ### Shared Property Profile Contract
 
@@ -168,6 +170,21 @@ Concierge-linked Experience concepts include Welcome Home, Effortless Departure,
 
 An Experience is not automatically a live SKU. Exact live products and bundles require validated Commerce Plus/manufacturer data.
 
+## Account Experience
+
+LuxSync account access is a high-care customer experience, not a generic utility form.
+
+Governing blueprint: `website/pages/account-login.md`.
+
+Key principles:
+
+- every ordinary customer receives the same VIP-level welcome and service treatment;
+- use Plush Drift tactile illumination for login card, fields, and primary CTA;
+- keep authentication calm, private, and friction-light;
+- do not invent identity providers, social login, MFA, session policy, or account capabilities that the production platform does not support;
+- GoDaddy Commerce Plus remains the current production commerce/account authority unless a later architecture decision changes it;
+- the final approved LuxSync logo baseline must be used as immutable artwork when it is confirmed.
+
 ## Runbooks and Checklists
 
 | ID | Artifact | Path | Status |
@@ -190,7 +207,7 @@ An Experience is not automatically a live SKU. Exact live products and bundles r
 | PR-PRODUCT-001 | LuxSync Product Description | `prompts/product-descriptions.md` | Active / Reconciled | Product/bundle/Experience copy |
 | PR-EMAIL-001 | LuxSync Email Writer | `prompts/email-writer.md` | Active / Reconciled | Customer/marketing email copy |
 
-All active prompts must inherit current company facts, exact founder titles, the sole approved slogan, Concierge/Blueprint naming, product-catalog guardrails, and Contact routing.
+All active prompts must inherit current company facts, exact founder titles, the sole approved slogan, Concierge/Blueprint naming, product-catalog guardrails, Contact routing, and the VIP account-access experience when account pages are generated.
 
 ## Launch Website Direction
 
@@ -203,6 +220,7 @@ All active prompts must inherit current company facts, exact founder titles, the
 - Manrope + Inter typography
 - Intelligent Calm voice
 - Approved logo artwork referenced directly, never regenerated
+- Account/login experience should feel like private, premium service while remaining simple and accessible
 
 Primary launch navigation:
 
@@ -239,6 +257,7 @@ Do not publish or invent:
 - medical claims
 - claims that convenience/security-related smart-home products replace life-safety systems, emergency services, or professional monitoring
 - unreleased SmartThings automation templates, LuxSync Grid, saved Blueprint functionality, or roadmap services as live
+- unsupported authentication providers, social logins, verification methods, or account features
 
 ## Maintenance Rules
 
@@ -253,6 +272,7 @@ Do not publish or invent:
 9. Product-catalog changes should be mapped to relevant LuxSync Experiences and validated commerce data before public sale claims.
 10. Run repository consistency validation after major cross-cutting changes.
 11. ROI examples must use customer inputs or clearly labeled scenarios; never publish promised returns, invented benchmarks, or unvalidated savings percentages.
+12. Account/authentication UX must remain subordinate to the capabilities and security requirements of the selected production account platform.
 
 ## Change Log
 
@@ -267,6 +287,7 @@ Do not publish or invent:
 | 2026-08-31 | Reconciled all active reusable prompts around current founder facts, company facts, Contact routing, Concierge/Blueprint terminology, and commerce guardrails. |
 | 2026-08-31 | Established **Where Luxury Lives Intelligently** as the sole approved public slogan/hero line and retired alternate slogan/hero treatments. |
 | 2026-08-31 | Added ten audience-specific ROI Guides, a shared measurement standard, and the ROI Guides website library blueprint. |
+| 2026-09-01 | Added the VIP Account Access / Login blueprint and made VIP-level welcome/service an account-experience requirement. |
 
 ## Production Completion Baseline
 
