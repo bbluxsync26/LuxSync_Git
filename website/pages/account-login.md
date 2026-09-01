@@ -78,15 +78,15 @@ Use a 58/42 desktop split at wide viewports. The layout may relax toward 55/45 b
 
 Contains, in order:
 
-1. approved Horizontal Combo logo near the upper-left safe zone;
-2. optional eyebrow: `MEMBER ACCESS`;
-3. headline: **Welcome Back**;
-4. support line: **Your LuxSync experience is ready.**;
-5. supporting copy: `Sign in to continue to your orders, saved preferences, curated recommendations, and LuxSync support.`;
-6. subtle trust/service cue;
-7. text-free ambient visual from `brand/assets/10-auth/login-vip-hero.svg`.
+1. approved LuxSync logo artwork;
+2. restrained architectural smart-living visual or abstract Plush Drift illumination graphic;
+3. optional eyebrow: `MEMBER ACCESS`;
+4. headline: **Welcome Back**;
+5. support line: **Your LuxSync experience is ready.**;
+6. supporting copy: `Sign in to continue to your orders, saved preferences, curated recommendations, and LuxSync support.`;
+7. optional small trust/service cue.
 
-The ambient visual remains behind live HTML text. Do not bake welcome copy, authentication fields, or mutable account claims into the background graphic.
+Use `website/assets/auth/login-vip-hero.svg` as a text-free ambient layer behind live HTML content. Do not bake welcome copy, authentication fields, customer data, or mutable account claims into the background graphic.
 
 #### Zone B — account access card
 
@@ -285,7 +285,7 @@ Order:
 - form controls: minimum 44px touch target, preferably 48–52px;
 - no split-screen treatment;
 - no horizontally scrolling decorative art;
-- ambient background uses `brand/assets/10-auth/login-vip-hero-mobile.svg`;
+- ambient background uses `website/assets/auth/login-vip-hero-mobile.svg`;
 - Orb logo should remain comfortably separated from the card so it reads as brand, not field decoration.
 
 ### Keyboard and viewport
@@ -364,7 +364,7 @@ Do not invent personalized values or saved-state capabilities.
 
 ## Production Graphic Mini-Library
 
-The approved auth graphics live under `brand/assets/10-auth/`.
+The approved auth graphics live under `website/assets/auth/`.
 
 ### Production-approved ambient graphics
 
@@ -383,7 +383,7 @@ The approved auth graphics live under `brand/assets/10-auth/`.
 | `auth-input-states.svg` | input-state visual reference | reference only; build live semantic controls |
 | `auth-button-states.svg` | button-state visual reference | reference only; build live semantic controls |
 
-The auth asset manifest is `brand/assets/10-auth/manifest.json`.
+The auth asset manifest is `website/assets/auth/manifest.json`.
 
 ## Exact Logo Placement
 
