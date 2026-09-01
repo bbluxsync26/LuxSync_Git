@@ -1,0 +1,3070 @@
+{
+  "meta": {
+    "product": "LuxSync Intelligent Living Concierge",
+    "entry_point": "Find My LuxSync Solution",
+    "output_name": "My LuxSync Blueprint",
+    "brand_theme": "Intelligent Luxury",
+    "brand_promise": "Where Luxury Lives Intelligently",
+    "config_version": "1.0.0",
+    "schema_version": "1.0.0",
+    "rules_engine": "deterministic_weighted",
+    "default_locale": "en-US"
+  },
+  "constants": {
+    "priority_multipliers": {
+      "priority_1": 1.5,
+      "priority_2": 1.3,
+      "priority_3": 1.15
+    },
+    "recommendation_thresholds": {
+      "primary": 15,
+      "strong": 10,
+      "optional": 6,
+      "suppress_below": 1
+    },
+    "minimum_recommended_experiences": 3,
+    "minimum_profile_completeness_for_blueprint": 70,
+    "square_footage_bands": [
+      {
+        "id": "lt_1000",
+        "min": 0,
+        "max": 999
+      },
+      {
+        "id": "1000_1999",
+        "min": 1000,
+        "max": 1999
+      },
+      {
+        "id": "2000_2999",
+        "min": 2000,
+        "max": 2999
+      },
+      {
+        "id": "3000_4999",
+        "min": 3000,
+        "max": 4999
+      },
+      {
+        "id": "5000_plus",
+        "min": 5000,
+        "max": null
+      },
+      {
+        "id": "unknown",
+        "min": null,
+        "max": null
+      }
+    ]
+  },
+  "experience_catalog": [
+    {
+      "id": "welcome_home",
+      "name": "Welcome Home",
+      "category": "routine"
+    },
+    {
+      "id": "effortless_departure",
+      "name": "Effortless Departure",
+      "category": "routine"
+    },
+    {
+      "id": "goodnight",
+      "name": "Goodnight",
+      "category": "routine"
+    },
+    {
+      "id": "gentle_morning",
+      "name": "Gentle Morning",
+      "category": "routine"
+    },
+    {
+      "id": "intelligent_evening",
+      "name": "Intelligent Evening",
+      "category": "ambience"
+    },
+    {
+      "id": "cinema",
+      "name": "Cinema",
+      "category": "entertainment"
+    },
+    {
+      "id": "entertain",
+      "name": "Entertain",
+      "category": "entertainment"
+    },
+    {
+      "id": "relax",
+      "name": "Relax",
+      "category": "ambience"
+    },
+    {
+      "id": "away",
+      "name": "Away",
+      "category": "property_state"
+    },
+    {
+      "id": "protect",
+      "name": "Protect",
+      "category": "property_awareness"
+    },
+    {
+      "id": "water_watch",
+      "name": "Water Watch",
+      "category": "property_awareness"
+    },
+    {
+      "id": "climate_intelligence",
+      "name": "Climate Intelligence",
+      "category": "comfort"
+    },
+    {
+      "id": "energy_intelligence",
+      "name": "Energy Intelligence",
+      "category": "efficiency"
+    },
+    {
+      "id": "night_path",
+      "name": "Night Path",
+      "category": "lighting"
+    },
+    {
+      "id": "guest_ready",
+      "name": "Guest Ready",
+      "category": "str"
+    },
+    {
+      "id": "turnover",
+      "name": "Turnover",
+      "category": "str"
+    },
+    {
+      "id": "property_pulse",
+      "name": "Property Pulse",
+      "category": "property_awareness"
+    },
+    {
+      "id": "accessible_living",
+      "name": "Accessible Living",
+      "category": "accessibility"
+    },
+    {
+      "id": "vacation_mode",
+      "name": "Vacation Mode",
+      "category": "property_state"
+    }
+  ],
+  "questionnaire": [
+    {
+      "stage_id": "welcome",
+      "stage_label": "Welcome",
+      "progress_label": "Beginning Your Blueprint",
+      "questions": [
+        {
+          "id": "entry_action",
+          "type": "single_select",
+          "required": true,
+          "prompt": "Let’s design how your space lives.",
+          "options": [
+            {
+              "value": "begin_blueprint",
+              "label": "Begin My Blueprint"
+            },
+            {
+              "value": "know_what_i_need",
+              "label": "I Already Know What I Need"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage_id": "intent",
+      "stage_label": "Intent",
+      "progress_label": "Understanding Your Goals",
+      "questions": [
+        {
+          "id": "primary_intent",
+          "type": "single_select",
+          "required": true,
+          "prompt": "What brought you to LuxSync today?",
+          "options": [
+            {
+              "value": "new_smart_home",
+              "label": "I want to make my home smarter"
+            },
+            {
+              "value": "optimize_existing",
+              "label": "I already have smart devices but want them to work better together"
+            },
+            {
+              "value": "product_guidance",
+              "label": "I want help choosing products"
+            },
+            {
+              "value": "str_automation",
+              "label": "I want to automate a short-term rental"
+            },
+            {
+              "value": "business_automation",
+              "label": "I want to improve a business or office"
+            },
+            {
+              "value": "solve_problem",
+              "label": "I have a specific problem I want to solve"
+            },
+            {
+              "value": "exploration",
+              "label": "I want to see what is possible"
+            }
+          ]
+        },
+        {
+          "id": "desired_outcomes",
+          "type": "multi_select",
+          "required": true,
+          "prompt": "What would make your space feel more intelligent?",
+          "options": [
+            {
+              "value": "convenience",
+              "label": "Make everyday life easier",
+              "tags": [
+                "convenience"
+              ],
+              "base_weight": 3
+            },
+            {
+              "value": "arrival",
+              "label": "Make arriving home effortless",
+              "tags": [
+                "arrival"
+              ],
+              "base_weight": 3
+            },
+            {
+              "value": "comfort",
+              "label": "Improve comfort",
+              "tags": [
+                "comfort"
+              ],
+              "base_weight": 3
+            },
+            {
+              "value": "awareness",
+              "label": "Improve awareness and peace of mind",
+              "tags": [
+                "awareness"
+              ],
+              "base_weight": 3
+            },
+            {
+              "value": "energy",
+              "label": "Reduce unnecessary energy use",
+              "tags": [
+                "energy"
+              ],
+              "base_weight": 3
+            },
+            {
+              "value": "entertainment",
+              "label": "Create better entertainment experiences",
+              "tags": [
+                "entertainment"
+              ],
+              "base_weight": 3
+            },
+            {
+              "value": "accessibility",
+              "label": "Make spaces easier to use",
+              "tags": [
+                "accessibility"
+              ],
+              "base_weight": 3
+            },
+            {
+              "value": "guest_experience",
+              "label": "Improve guest experiences",
+              "tags": [
+                "guest_experience"
+              ],
+              "base_weight": 3
+            },
+            {
+              "value": "remote_management",
+              "label": "Manage property remotely",
+              "tags": [
+                "remote_management"
+              ],
+              "base_weight": 3
+            },
+            {
+              "value": "integration",
+              "label": "Help devices work together",
+              "tags": [
+                "integration"
+              ],
+              "base_weight": 3
+            },
+            {
+              "value": "discovery",
+              "label": "Surprise me",
+              "tags": [
+                "discovery"
+              ],
+              "base_weight": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage_id": "property",
+      "stage_label": "Property",
+      "progress_label": "Understanding Your Space",
+      "questions": [
+        {
+          "id": "property_type",
+          "type": "single_select",
+          "required": true,
+          "prompt": "What type of space are we designing?",
+          "options": [
+            {
+              "value": "private_residence",
+              "label": "Private Residence"
+            },
+            {
+              "value": "short_term_rental",
+              "label": "Short-Term Rental"
+            },
+            {
+              "value": "business",
+              "label": "Business / Commercial"
+            },
+            {
+              "value": "other",
+              "label": "Other"
+            }
+          ]
+        },
+        {
+          "id": "residence_type",
+          "type": "single_select",
+          "required": true,
+          "show_when": {
+            "property_type": [
+              "private_residence"
+            ]
+          },
+          "prompt": "What type of residence?",
+          "options": [
+            {
+              "value": "single_family",
+              "label": "Single-Family Home"
+            },
+            {
+              "value": "townhome",
+              "label": "Townhome"
+            },
+            {
+              "value": "condominium",
+              "label": "Condominium"
+            },
+            {
+              "value": "apartment",
+              "label": "Apartment"
+            },
+            {
+              "value": "vacation_home",
+              "label": "Vacation Home"
+            },
+            {
+              "value": "new_construction",
+              "label": "New Construction"
+            },
+            {
+              "value": "other",
+              "label": "Other"
+            }
+          ]
+        },
+        {
+          "id": "str_property_type",
+          "type": "single_select",
+          "required": true,
+          "show_when": {
+            "property_type": [
+              "short_term_rental"
+            ]
+          },
+          "prompt": "Tell us about the rental property.",
+          "options": [
+            {
+              "value": "entire_home",
+              "label": "Entire Home"
+            },
+            {
+              "value": "condo",
+              "label": "Condo"
+            },
+            {
+              "value": "apartment",
+              "label": "Apartment"
+            },
+            {
+              "value": "townhome",
+              "label": "Townhome"
+            },
+            {
+              "value": "guest_house",
+              "label": "Guest House"
+            },
+            {
+              "value": "multi_unit",
+              "label": "Multi-Unit Property"
+            },
+            {
+              "value": "other",
+              "label": "Other"
+            }
+          ]
+        },
+        {
+          "id": "business_type",
+          "type": "single_select",
+          "required": true,
+          "show_when": {
+            "property_type": [
+              "business"
+            ]
+          },
+          "prompt": "What type of business or commercial space?",
+          "options": [
+            {
+              "value": "office",
+              "label": "Office"
+            },
+            {
+              "value": "retail",
+              "label": "Retail"
+            },
+            {
+              "value": "hospitality",
+              "label": "Hospitality"
+            },
+            {
+              "value": "professional_services",
+              "label": "Professional Services"
+            },
+            {
+              "value": "medical_healthcare",
+              "label": "Medical / Healthcare Office"
+            },
+            {
+              "value": "property_management",
+              "label": "Property Management"
+            },
+            {
+              "value": "multi_family",
+              "label": "Multi-Family"
+            },
+            {
+              "value": "restaurant",
+              "label": "Restaurant"
+            },
+            {
+              "value": "studio",
+              "label": "Studio"
+            },
+            {
+              "value": "other",
+              "label": "Other"
+            }
+          ]
+        },
+        {
+          "id": "property_description",
+          "type": "text",
+          "required": true,
+          "show_when": {
+            "property_type": [
+              "other"
+            ]
+          },
+          "prompt": "Tell us about the space."
+        },
+        {
+          "id": "square_feet_exact",
+          "type": "number",
+          "required": false,
+          "prompt": "Approximate square footage",
+          "validation": {
+            "min": 1,
+            "max": 1000000
+          }
+        },
+        {
+          "id": "square_feet_band",
+          "type": "single_select",
+          "required": false,
+          "prompt": "Or choose a range",
+          "options": [
+            {
+              "value": "lt_1000",
+              "label": "Under 1,000 sq. ft."
+            },
+            {
+              "value": "1000_1999",
+              "label": "1,000–1,999 sq. ft."
+            },
+            {
+              "value": "2000_2999",
+              "label": "2,000–2,999 sq. ft."
+            },
+            {
+              "value": "3000_4999",
+              "label": "3,000–4,999 sq. ft."
+            },
+            {
+              "value": "5000_plus",
+              "label": "5,000+ sq. ft."
+            },
+            {
+              "value": "unknown",
+              "label": "Not Sure"
+            }
+          ]
+        },
+        {
+          "id": "levels",
+          "type": "single_select",
+          "required": false,
+          "show_when": {
+            "property_type": [
+              "private_residence",
+              "short_term_rental"
+            ]
+          },
+          "prompt": "How many levels?",
+          "options": [
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3_plus",
+              "label": "3+"
+            },
+            {
+              "value": "unknown",
+              "label": "Not Sure"
+            }
+          ]
+        },
+        {
+          "id": "scope",
+          "type": "single_select",
+          "required": false,
+          "show_when": {
+            "property_type": [
+              "private_residence"
+            ]
+          },
+          "prompt": "Are you looking at the whole property or specific areas?",
+          "options": [
+            {
+              "value": "whole_home",
+              "label": "Whole Property"
+            },
+            {
+              "value": "specific_rooms",
+              "label": "Specific Rooms"
+            },
+            {
+              "value": "both",
+              "label": "Both"
+            }
+          ]
+        },
+        {
+          "id": "priority_rooms",
+          "type": "multi_select",
+          "required": false,
+          "show_when": {
+            "scope": [
+              "specific_rooms",
+              "both"
+            ]
+          },
+          "prompt": "Where should we focus first?",
+          "options": [
+            {
+              "value": "entry",
+              "label": "Entry"
+            },
+            {
+              "value": "living_room",
+              "label": "Living Room"
+            },
+            {
+              "value": "kitchen",
+              "label": "Kitchen"
+            },
+            {
+              "value": "dining",
+              "label": "Dining"
+            },
+            {
+              "value": "primary_bedroom",
+              "label": "Primary Bedroom"
+            },
+            {
+              "value": "guest_bedroom",
+              "label": "Guest Bedroom"
+            },
+            {
+              "value": "bathroom",
+              "label": "Bathroom"
+            },
+            {
+              "value": "home_office",
+              "label": "Home Office"
+            },
+            {
+              "value": "media_room",
+              "label": "Media Room"
+            },
+            {
+              "value": "hallways",
+              "label": "Hallways"
+            },
+            {
+              "value": "garage",
+              "label": "Garage"
+            },
+            {
+              "value": "patio",
+              "label": "Patio"
+            },
+            {
+              "value": "outdoor",
+              "label": "Outdoor Areas"
+            }
+          ]
+        },
+        {
+          "id": "str_unit_count",
+          "type": "number",
+          "required": true,
+          "show_when": {
+            "property_type": [
+              "short_term_rental"
+            ]
+          },
+          "prompt": "How many rental units are involved?",
+          "validation": {
+            "min": 1,
+            "max": 10000
+          }
+        },
+        {
+          "id": "str_booking_platforms",
+          "type": "multi_select",
+          "required": false,
+          "show_when": {
+            "property_type": [
+              "short_term_rental"
+            ]
+          },
+          "prompt": "How do guests typically book?",
+          "options": [
+            {
+              "value": "airbnb",
+              "label": "Airbnb"
+            },
+            {
+              "value": "vrbo",
+              "label": "Vrbo"
+            },
+            {
+              "value": "direct",
+              "label": "Direct Booking"
+            },
+            {
+              "value": "multiple",
+              "label": "Multiple Platforms"
+            },
+            {
+              "value": "not_listed",
+              "label": "Not Listed Yet"
+            },
+            {
+              "value": "other",
+              "label": "Other"
+            }
+          ]
+        },
+        {
+          "id": "str_remote_management",
+          "type": "single_select",
+          "required": false,
+          "show_when": {
+            "property_type": [
+              "short_term_rental"
+            ]
+          },
+          "prompt": "Do you manage the property remotely?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "value": "sometimes",
+              "label": "Sometimes"
+            },
+            {
+              "value": "no",
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "id": "str_goals",
+          "type": "multi_select",
+          "required": false,
+          "show_when": {
+            "property_type": [
+              "short_term_rental"
+            ]
+          },
+          "prompt": "What are you most interested in improving?",
+          "options": [
+            {
+              "value": "guest_entry",
+              "label": "Guest Entry"
+            },
+            {
+              "value": "smart_locks",
+              "label": "Smart Locks"
+            },
+            {
+              "value": "climate",
+              "label": "Climate Control"
+            },
+            {
+              "value": "lighting",
+              "label": "Lighting"
+            },
+            {
+              "value": "energy",
+              "label": "Energy Management"
+            },
+            {
+              "value": "leak_awareness",
+              "label": "Leak Awareness"
+            },
+            {
+              "value": "noise_awareness",
+              "label": "Noise Awareness"
+            },
+            {
+              "value": "property_status",
+              "label": "Property Status"
+            },
+            {
+              "value": "turnovers",
+              "label": "Turnovers"
+            },
+            {
+              "value": "guest_comfort",
+              "label": "Guest Comfort"
+            },
+            {
+              "value": "cleaner_coordination",
+              "label": "Cleaner Coordination"
+            },
+            {
+              "value": "remote_troubleshooting",
+              "label": "Remote Troubleshooting"
+            },
+            {
+              "value": "other",
+              "label": "Other"
+            }
+          ]
+        },
+        {
+          "id": "business_location_count",
+          "type": "number",
+          "required": false,
+          "show_when": {
+            "property_type": [
+              "business"
+            ]
+          },
+          "prompt": "How many locations are involved?",
+          "validation": {
+            "min": 1,
+            "max": 10000
+          }
+        },
+        {
+          "id": "business_goals",
+          "type": "multi_select",
+          "required": false,
+          "show_when": {
+            "property_type": [
+              "business"
+            ]
+          },
+          "prompt": "What would you most like to improve?",
+          "options": [
+            {
+              "value": "lighting",
+              "label": "Lighting"
+            },
+            {
+              "value": "comfort",
+              "label": "Comfort"
+            },
+            {
+              "value": "energy",
+              "label": "Energy Usage"
+            },
+            {
+              "value": "access",
+              "label": "Access"
+            },
+            {
+              "value": "shared_space",
+              "label": "Shared-Space Experience"
+            },
+            {
+              "value": "meeting_spaces",
+              "label": "Meeting Spaces"
+            },
+            {
+              "value": "remote_awareness",
+              "label": "Remote Property Awareness"
+            },
+            {
+              "value": "opening_closing",
+              "label": "Opening and Closing Routines"
+            },
+            {
+              "value": "occupancy",
+              "label": "Occupancy-Driven Automation"
+            },
+            {
+              "value": "entertainment_displays",
+              "label": "Entertainment or Displays"
+            },
+            {
+              "value": "other",
+              "label": "Other"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage_id": "technology",
+      "stage_label": "Technology",
+      "progress_label": "Understanding What You Already Have",
+      "questions": [
+        {
+          "id": "technology_profile",
+          "type": "multi_select",
+          "required": true,
+          "prompt": "Tell us what’s already smart.",
+          "options": [
+            {
+              "value": "smartthings",
+              "label": "Samsung SmartThings"
+            },
+            {
+              "value": "alexa",
+              "label": "Amazon Alexa"
+            },
+            {
+              "value": "google_home",
+              "label": "Google Home"
+            },
+            {
+              "value": "apple_home",
+              "label": "Apple Home"
+            },
+            {
+              "value": "ring",
+              "label": "Ring"
+            },
+            {
+              "value": "philips_hue",
+              "label": "Philips Hue"
+            },
+            {
+              "value": "lutron",
+              "label": "Lutron"
+            },
+            {
+              "value": "ecobee",
+              "label": "Ecobee"
+            },
+            {
+              "value": "nest",
+              "label": "Nest"
+            },
+            {
+              "value": "smart_tv",
+              "label": "Smart TVs"
+            },
+            {
+              "value": "smart_locks",
+              "label": "Smart Locks"
+            },
+            {
+              "value": "cameras",
+              "label": "Cameras"
+            },
+            {
+              "value": "smart_lighting",
+              "label": "Smart Lighting"
+            },
+            {
+              "value": "smart_thermostats",
+              "label": "Smart Thermostats"
+            },
+            {
+              "value": "smart_shades",
+              "label": "Smart Shades"
+            },
+            {
+              "value": "sensors",
+              "label": "Sensors"
+            },
+            {
+              "value": "matter",
+              "label": "Matter Devices"
+            },
+            {
+              "value": "other",
+              "label": "Other"
+            },
+            {
+              "value": "nothing_yet",
+              "label": "Nothing Yet"
+            },
+            {
+              "value": "unknown_mix",
+              "label": "I Have Smart Devices, But I’m Not Sure What Works With What"
+            }
+          ],
+          "exclusivity_rules": [
+            {
+              "value": "nothing_yet",
+              "exclusive": true
+            }
+          ]
+        },
+        {
+          "id": "smartthings_hub_status",
+          "type": "single_select",
+          "required": false,
+          "show_when": {
+            "technology_profile": [
+              "smartthings"
+            ]
+          },
+          "prompt": "Do you currently use a SmartThings Hub or hub-enabled Samsung device?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "value": "no",
+              "label": "No"
+            },
+            {
+              "value": "not_sure",
+              "label": "Not Sure"
+            }
+          ]
+        },
+        {
+          "id": "current_setup_health",
+          "type": "single_select",
+          "required": true,
+          "prompt": "How well is your current setup working?",
+          "options": [
+            {
+              "value": "stable",
+              "label": "Everything Works Well"
+            },
+            {
+              "value": "mostly_stable",
+              "label": "Mostly Works"
+            },
+            {
+              "value": "unreliable",
+              "label": "Some Devices Are Unreliable"
+            },
+            {
+              "value": "fragmented",
+              "label": "Everything Feels Disconnected"
+            },
+            {
+              "value": "underused",
+              "label": "I Barely Use the Smart Features"
+            },
+            {
+              "value": "new",
+              "label": "I Am Starting From Scratch"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage_id": "lifestyle",
+      "stage_label": "Lifestyle",
+      "progress_label": "Designing Your Experience",
+      "questions": [
+        {
+          "id": "arrival_preferences",
+          "type": "multi_select",
+          "required": false,
+          "prompt": "When you arrive, what would you love to happen automatically?",
+          "options": [
+            {
+              "value": "entry_lighting",
+              "label": "Entry Lighting Activates"
+            },
+            {
+              "value": "interior_lighting",
+              "label": "Interior Lights Adjust"
+            },
+            {
+              "value": "climate",
+              "label": "Climate Adjusts"
+            },
+            {
+              "value": "exterior_lighting",
+              "label": "Exterior Lights Activate"
+            },
+            {
+              "value": "entry_systems",
+              "label": "Selected Entry Systems Respond Appropriately"
+            },
+            {
+              "value": "entertainment",
+              "label": "Music or Entertainment Becomes Available"
+            },
+            {
+              "value": "exit_away",
+              "label": "The Property Exits Away Mode"
+            },
+            {
+              "value": "design_for_me",
+              "label": "I Want LuxSync to Design It"
+            },
+            {
+              "value": "nothing",
+              "label": "Nothing"
+            }
+          ]
+        },
+        {
+          "id": "departure_preferences",
+          "type": "multi_select",
+          "required": false,
+          "prompt": "When everyone leaves, what should the property take care of?",
+          "options": [
+            {
+              "value": "lights_off",
+              "label": "Turn Off Unnecessary Lights"
+            },
+            {
+              "value": "climate",
+              "label": "Adjust Temperature"
+            },
+            {
+              "value": "entry_check",
+              "label": "Check Selected Entry Devices"
+            },
+            {
+              "value": "electronics_off",
+              "label": "Shut Down Selected Electronics"
+            },
+            {
+              "value": "away_mode",
+              "label": "Enter Away Mode"
+            },
+            {
+              "value": "awareness",
+              "label": "Increase Property Awareness"
+            },
+            {
+              "value": "energy",
+              "label": "Reduce Energy Usage"
+            },
+            {
+              "value": "design_for_me",
+              "label": "Design It for Me"
+            },
+            {
+              "value": "nothing",
+              "label": "Nothing"
+            }
+          ]
+        },
+        {
+          "id": "evening_preferences",
+          "type": "multi_select",
+          "required": false,
+          "prompt": "What should your space feel like as the day winds down?",
+          "options": [
+            {
+              "value": "warmer_lighting",
+              "label": "Warmer, Softer Lighting"
+            },
+            {
+              "value": "dim_lighting",
+              "label": "Lower Lighting Automatically"
+            },
+            {
+              "value": "climate",
+              "label": "Adjust Temperature"
+            },
+            {
+              "value": "entertainment",
+              "label": "Prepare Entertainment Spaces"
+            },
+            {
+              "value": "quiet_devices",
+              "label": "Quiet Selected Devices"
+            },
+            {
+              "value": "shades",
+              "label": "Coordinate Shades"
+            },
+            {
+              "value": "relax",
+              "label": "Create a Relaxing Atmosphere"
+            },
+            {
+              "value": "surprise",
+              "label": "Surprise Me"
+            },
+            {
+              "value": "nothing",
+              "label": "Nothing"
+            }
+          ]
+        },
+        {
+          "id": "bedtime_preferences",
+          "type": "multi_select",
+          "required": false,
+          "prompt": "What would make bedtime more effortless?",
+          "options": [
+            {
+              "value": "lights_off",
+              "label": "Turn Selected Lights Off"
+            },
+            {
+              "value": "night_lighting",
+              "label": "Leave Night Lighting Where Needed"
+            },
+            {
+              "value": "climate",
+              "label": "Adjust Temperature"
+            },
+            {
+              "value": "entry_status",
+              "label": "Check Doors or Entry Status"
+            },
+            {
+              "value": "devices_off",
+              "label": "Turn Selected Devices Off"
+            },
+            {
+              "value": "overnight_state",
+              "label": "Prepare the Home for Overnight"
+            },
+            {
+              "value": "one_command",
+              "label": "One Button or Command for Everything"
+            },
+            {
+              "value": "nothing",
+              "label": "Nothing"
+            }
+          ]
+        },
+        {
+          "id": "morning_preferences",
+          "type": "multi_select",
+          "required": false,
+          "prompt": "How would you like your space to wake up?",
+          "options": [
+            {
+              "value": "gradual_lighting",
+              "label": "Gradual Lighting"
+            },
+            {
+              "value": "shades",
+              "label": "Shades Open"
+            },
+            {
+              "value": "climate",
+              "label": "Temperature Adjusts"
+            },
+            {
+              "value": "audio",
+              "label": "Selected Entertainment or Audio"
+            },
+            {
+              "value": "information",
+              "label": "Morning Information"
+            },
+            {
+              "value": "kitchen",
+              "label": "Kitchen Preparation Routines"
+            },
+            {
+              "value": "none",
+              "label": "I Prefer No Morning Automation"
+            }
+          ]
+        },
+        {
+          "id": "entertainment_preferences",
+          "type": "multi_select",
+          "required": false,
+          "show_when_any": {
+            "desired_outcomes": [
+              "entertainment"
+            ],
+            "arrival_preferences": [
+              "entertainment"
+            ],
+            "evening_preferences": [
+              "entertainment"
+            ]
+          },
+          "prompt": "How do you enjoy entertainment at home?",
+          "options": [
+            {
+              "value": "movies",
+              "label": "Movies"
+            },
+            {
+              "value": "television",
+              "label": "Television"
+            },
+            {
+              "value": "music",
+              "label": "Music"
+            },
+            {
+              "value": "gaming",
+              "label": "Gaming"
+            },
+            {
+              "value": "guests",
+              "label": "Entertaining Guests"
+            },
+            {
+              "value": "outdoor",
+              "label": "Outdoor Entertainment"
+            },
+            {
+              "value": "reading_relaxation",
+              "label": "Reading and Relaxation"
+            },
+            {
+              "value": "one_touch",
+              "label": "I Want One-Touch Scenes"
+            }
+          ]
+        },
+        {
+          "id": "pain_points",
+          "type": "multi_select",
+          "required": true,
+          "prompt": "What frustrates you about your space today?",
+          "options": [
+            {
+              "value": "too_many_apps",
+              "label": "Too Many Apps"
+            },
+            {
+              "value": "devices_disconnected",
+              "label": "Devices Do Not Work Together"
+            },
+            {
+              "value": "forgetting_lights",
+              "label": "Forgetting Lights"
+            },
+            {
+              "value": "thermostat_adjustments",
+              "label": "Constant Thermostat Adjustments"
+            },
+            {
+              "value": "checking_locks",
+              "label": "Checking Locks"
+            },
+            {
+              "value": "dark_hallways",
+              "label": "Dark Hallways at Night"
+            },
+            {
+              "value": "guest_access",
+              "label": "Managing Guest Access"
+            },
+            {
+              "value": "remote_rental",
+              "label": "Managing a Rental Remotely"
+            },
+            {
+              "value": "leak_concern",
+              "label": "Concern About Leaks"
+            },
+            {
+              "value": "wifi_reliability",
+              "label": "Wi-Fi or Device Reliability"
+            },
+            {
+              "value": "too_many_remotes",
+              "label": "Too Many Remotes"
+            },
+            {
+              "value": "repetitive_routines",
+              "label": "Repetitive Routines"
+            },
+            {
+              "value": "energy_waste",
+              "label": "Energy Waste"
+            },
+            {
+              "value": "dont_know_where_to_start",
+              "label": "I Do Not Know Where to Start"
+            },
+            {
+              "value": "other",
+              "label": "Other"
+            }
+          ]
+        },
+        {
+          "id": "accessibility_needs",
+          "type": "multi_select",
+          "required": false,
+          "show_when": {
+            "desired_outcomes": [
+              "accessibility"
+            ]
+          },
+          "prompt": "Which everyday activities would you like technology to make easier?",
+          "options": [
+            {
+              "value": "lighting",
+              "label": "Lighting Control"
+            },
+            {
+              "value": "night_navigation",
+              "label": "Nighttime Navigation"
+            },
+            {
+              "value": "temperature",
+              "label": "Temperature Control"
+            },
+            {
+              "value": "voice",
+              "label": "Voice Control"
+            },
+            {
+              "value": "entry",
+              "label": "Entry"
+            },
+            {
+              "value": "reminders",
+              "label": "Reminders"
+            },
+            {
+              "value": "switch_reach",
+              "label": "Reaching Switches or Controls"
+            },
+            {
+              "value": "multi_device",
+              "label": "Managing Several Devices at Once"
+            },
+            {
+              "value": "other",
+              "label": "Other"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage_id": "priorities",
+      "stage_label": "Priorities",
+      "progress_label": "Prioritizing What Matters Most",
+      "questions": [
+        {
+          "id": "priority_rank",
+          "type": "ranked_select",
+          "required": true,
+          "prompt": "If LuxSync could improve three things first, what matters most?",
+          "source": "inferred_goal_candidates",
+          "max_rank": 3
+        },
+        {
+          "id": "implementation_preference",
+          "type": "single_select",
+          "required": true,
+          "prompt": "How would you like to approach your smart-living plan?",
+          "options": [
+            {
+              "value": "focused",
+              "label": "Start Focused"
+            },
+            {
+              "value": "phased",
+              "label": "Build in Phases"
+            },
+            {
+              "value": "comprehensive",
+              "label": "Transform the Space"
+            },
+            {
+              "value": "ideal",
+              "label": "Show Me the Possibilities"
+            },
+            {
+              "value": "guided",
+              "label": "I’m Not Sure"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scoring": {
+    "rules": [
+      {
+        "when": {
+          "desired_outcomes": [
+            "arrival"
+          ]
+        },
+        "add": {
+          "welcome_home": 5
+        }
+      },
+      {
+        "when": {
+          "desired_outcomes": [
+            "convenience"
+          ]
+        },
+        "add": {
+          "welcome_home": 2,
+          "effortless_departure": 3,
+          "goodnight": 2
+        }
+      },
+      {
+        "when": {
+          "desired_outcomes": [
+            "comfort"
+          ]
+        },
+        "add": {
+          "climate_intelligence": 4,
+          "intelligent_evening": 3,
+          "relax": 2
+        }
+      },
+      {
+        "when": {
+          "desired_outcomes": [
+            "awareness"
+          ]
+        },
+        "add": {
+          "protect": 4,
+          "property_pulse": 3,
+          "away": 2
+        }
+      },
+      {
+        "when": {
+          "desired_outcomes": [
+            "energy"
+          ]
+        },
+        "add": {
+          "energy_intelligence": 5,
+          "climate_intelligence": 2,
+          "away": 2
+        }
+      },
+      {
+        "when": {
+          "desired_outcomes": [
+            "entertainment"
+          ]
+        },
+        "add": {
+          "cinema": 4,
+          "entertain": 3,
+          "intelligent_evening": 1
+        }
+      },
+      {
+        "when": {
+          "desired_outcomes": [
+            "accessibility"
+          ]
+        },
+        "add": {
+          "accessible_living": 5,
+          "night_path": 3
+        }
+      },
+      {
+        "when": {
+          "desired_outcomes": [
+            "guest_experience"
+          ]
+        },
+        "add": {
+          "guest_ready": 5,
+          "entertain": 2
+        }
+      },
+      {
+        "when": {
+          "desired_outcomes": [
+            "remote_management"
+          ]
+        },
+        "add": {
+          "property_pulse": 5,
+          "away": 3,
+          "protect": 3,
+          "water_watch": 2
+        }
+      },
+      {
+        "when": {
+          "desired_outcomes": [
+            "integration"
+          ]
+        },
+        "flags": [
+          "compatibility_review_candidate"
+        ],
+        "add": {
+          "welcome_home": 1,
+          "goodnight": 1
+        }
+      },
+      {
+        "when": {
+          "residence_type": [
+            "vacation_home"
+          ]
+        },
+        "add": {
+          "vacation_mode": 5,
+          "property_pulse": 4,
+          "water_watch": 3,
+          "away": 3
+        }
+      },
+      {
+        "when": {
+          "residence_type": [
+            "new_construction"
+          ]
+        },
+        "flags": [
+          "consultation_optional",
+          "new_construction"
+        ]
+      },
+      {
+        "when": {
+          "property_type": [
+            "short_term_rental"
+          ]
+        },
+        "add": {
+          "guest_ready": 6,
+          "property_pulse": 5,
+          "turnover": 5,
+          "climate_intelligence": 3,
+          "energy_intelligence": 3,
+          "water_watch": 3
+        }
+      },
+      {
+        "when": {
+          "str_remote_management": [
+            "yes",
+            "sometimes"
+          ]
+        },
+        "add": {
+          "property_pulse": 4,
+          "away": 2,
+          "water_watch": 2
+        }
+      },
+      {
+        "when": {
+          "str_goals": [
+            "guest_entry"
+          ]
+        },
+        "add": {
+          "guest_ready": 4
+        }
+      },
+      {
+        "when": {
+          "str_goals": [
+            "smart_locks"
+          ]
+        },
+        "add": {
+          "guest_ready": 3,
+          "protect": 2
+        }
+      },
+      {
+        "when": {
+          "str_goals": [
+            "climate"
+          ]
+        },
+        "add": {
+          "climate_intelligence": 4
+        }
+      },
+      {
+        "when": {
+          "str_goals": [
+            "lighting"
+          ]
+        },
+        "add": {
+          "guest_ready": 2,
+          "intelligent_evening": 1
+        }
+      },
+      {
+        "when": {
+          "str_goals": [
+            "energy"
+          ]
+        },
+        "add": {
+          "energy_intelligence": 4
+        }
+      },
+      {
+        "when": {
+          "str_goals": [
+            "leak_awareness"
+          ]
+        },
+        "add": {
+          "water_watch": 5
+        }
+      },
+      {
+        "when": {
+          "str_goals": [
+            "property_status"
+          ]
+        },
+        "add": {
+          "property_pulse": 5
+        }
+      },
+      {
+        "when": {
+          "str_goals": [
+            "turnovers"
+          ]
+        },
+        "add": {
+          "turnover": 5
+        }
+      },
+      {
+        "when": {
+          "str_goals": [
+            "cleaner_coordination"
+          ]
+        },
+        "add": {
+          "turnover": 4
+        }
+      },
+      {
+        "when": {
+          "str_goals": [
+            "guest_comfort"
+          ]
+        },
+        "add": {
+          "guest_ready": 3,
+          "climate_intelligence": 2
+        }
+      },
+      {
+        "when": {
+          "property_type": [
+            "business"
+          ]
+        },
+        "add": {
+          "energy_intelligence": 4,
+          "climate_intelligence": 3,
+          "effortless_departure": 2,
+          "property_pulse": 3
+        }
+      },
+      {
+        "when": {
+          "business_goals": [
+            "energy"
+          ]
+        },
+        "add": {
+          "energy_intelligence": 4
+        }
+      },
+      {
+        "when": {
+          "business_goals": [
+            "comfort"
+          ]
+        },
+        "add": {
+          "climate_intelligence": 4
+        }
+      },
+      {
+        "when": {
+          "business_goals": [
+            "opening_closing"
+          ]
+        },
+        "add": {
+          "effortless_departure": 3,
+          "welcome_home": 2
+        }
+      },
+      {
+        "when": {
+          "business_goals": [
+            "remote_awareness"
+          ]
+        },
+        "add": {
+          "property_pulse": 5
+        }
+      },
+      {
+        "when": {
+          "levels": [
+            "2",
+            "3_plus"
+          ]
+        },
+        "add": {
+          "night_path": 2,
+          "climate_intelligence": 1
+        }
+      },
+      {
+        "when_numeric": {
+          "square_feet_exact": {
+            "gte": 5000
+          }
+        },
+        "flags": [
+          "large_property",
+          "consultation_optional",
+          "network_review",
+          "zone_planning"
+        ]
+      },
+      {
+        "when_band": {
+          "square_feet_band": [
+            "5000_plus"
+          ]
+        },
+        "flags": [
+          "large_property",
+          "consultation_optional",
+          "network_review",
+          "zone_planning"
+        ]
+      },
+      {
+        "when_numeric": {
+          "business_location_count": {
+            "gt": 1
+          }
+        },
+        "flags": [
+          "multiple_properties",
+          "consultation_optional"
+        ]
+      },
+      {
+        "when_numeric": {
+          "str_unit_count": {
+            "gt": 1
+          }
+        },
+        "flags": [
+          "complex_str_portfolio",
+          "consultation_optional"
+        ]
+      },
+      {
+        "when": {
+          "current_setup_health": [
+            "fragmented"
+          ]
+        },
+        "flags": [
+          "compatibility_review_candidate",
+          "existing_environment_review"
+        ],
+        "adjustments": {
+          "foundation": "compatibility_review"
+        }
+      },
+      {
+        "when": {
+          "current_setup_health": [
+            "unreliable"
+          ]
+        },
+        "flags": [
+          "compatibility_review_candidate",
+          "existing_environment_review"
+        ]
+      },
+      {
+        "when": {
+          "current_setup_health": [
+            "underused"
+          ]
+        },
+        "flags": [
+          "automation_cleanup_candidate"
+        ]
+      },
+      {
+        "when": {
+          "technology_profile": [
+            "nothing_yet"
+          ]
+        },
+        "adjustments": {
+          "foundation": "smartthings_foundation_recommended"
+        }
+      },
+      {
+        "when": {
+          "technology_profile": [
+            "smartthings"
+          ]
+        },
+        "adjustments": {
+          "foundation": "existing_smartthings_foundation"
+        }
+      },
+      {
+        "when": {
+          "smartthings_hub_status": [
+            "not_sure"
+          ]
+        },
+        "flags": [
+          "hub_verification_required"
+        ]
+      },
+      {
+        "when": {
+          "technology_profile": [
+            "unknown_mix"
+          ]
+        },
+        "flags": [
+          "compatibility_review_candidate"
+        ],
+        "adjustments": {
+          "foundation": "compatibility_review"
+        }
+      },
+      {
+        "when": {
+          "arrival_preferences": [
+            "entry_lighting"
+          ]
+        },
+        "add": {
+          "welcome_home": 3
+        }
+      },
+      {
+        "when": {
+          "arrival_preferences": [
+            "interior_lighting"
+          ]
+        },
+        "add": {
+          "welcome_home": 3
+        }
+      },
+      {
+        "when": {
+          "arrival_preferences": [
+            "climate"
+          ]
+        },
+        "add": {
+          "welcome_home": 2,
+          "climate_intelligence": 2
+        }
+      },
+      {
+        "when": {
+          "arrival_preferences": [
+            "exterior_lighting"
+          ]
+        },
+        "add": {
+          "welcome_home": 2
+        }
+      },
+      {
+        "when": {
+          "arrival_preferences": [
+            "entry_systems"
+          ]
+        },
+        "add": {
+          "welcome_home": 3,
+          "protect": 1
+        }
+      },
+      {
+        "when": {
+          "arrival_preferences": [
+            "entertainment"
+          ]
+        },
+        "add": {
+          "welcome_home": 2,
+          "cinema": 1,
+          "entertain": 1
+        }
+      },
+      {
+        "when": {
+          "arrival_preferences": [
+            "exit_away"
+          ]
+        },
+        "add": {
+          "welcome_home": 3,
+          "away": 1
+        }
+      },
+      {
+        "when": {
+          "departure_preferences": [
+            "lights_off"
+          ]
+        },
+        "add": {
+          "effortless_departure": 3,
+          "energy_intelligence": 2
+        }
+      },
+      {
+        "when": {
+          "departure_preferences": [
+            "climate"
+          ]
+        },
+        "add": {
+          "effortless_departure": 2,
+          "climate_intelligence": 2,
+          "energy_intelligence": 1
+        }
+      },
+      {
+        "when": {
+          "departure_preferences": [
+            "entry_check"
+          ]
+        },
+        "add": {
+          "effortless_departure": 3,
+          "protect": 2
+        }
+      },
+      {
+        "when": {
+          "departure_preferences": [
+            "electronics_off"
+          ]
+        },
+        "add": {
+          "effortless_departure": 3,
+          "energy_intelligence": 1
+        }
+      },
+      {
+        "when": {
+          "departure_preferences": [
+            "away_mode"
+          ]
+        },
+        "add": {
+          "away": 4,
+          "effortless_departure": 2
+        }
+      },
+      {
+        "when": {
+          "departure_preferences": [
+            "awareness"
+          ]
+        },
+        "add": {
+          "property_pulse": 3,
+          "protect": 2,
+          "away": 2
+        }
+      },
+      {
+        "when": {
+          "departure_preferences": [
+            "energy"
+          ]
+        },
+        "add": {
+          "energy_intelligence": 4,
+          "away": 2
+        }
+      },
+      {
+        "when": {
+          "evening_preferences": [
+            "warmer_lighting"
+          ]
+        },
+        "add": {
+          "intelligent_evening": 3,
+          "relax": 1
+        }
+      },
+      {
+        "when": {
+          "evening_preferences": [
+            "dim_lighting"
+          ]
+        },
+        "add": {
+          "intelligent_evening": 3
+        }
+      },
+      {
+        "when": {
+          "evening_preferences": [
+            "climate"
+          ]
+        },
+        "add": {
+          "climate_intelligence": 2,
+          "intelligent_evening": 1
+        }
+      },
+      {
+        "when": {
+          "evening_preferences": [
+            "entertainment"
+          ]
+        },
+        "add": {
+          "cinema": 2,
+          "entertain": 2,
+          "intelligent_evening": 2
+        }
+      },
+      {
+        "when": {
+          "evening_preferences": [
+            "quiet_devices"
+          ]
+        },
+        "add": {
+          "intelligent_evening": 2,
+          "relax": 1
+        }
+      },
+      {
+        "when": {
+          "evening_preferences": [
+            "shades"
+          ]
+        },
+        "add": {
+          "intelligent_evening": 2
+        }
+      },
+      {
+        "when": {
+          "evening_preferences": [
+            "relax"
+          ]
+        },
+        "add": {
+          "relax": 4,
+          "intelligent_evening": 2
+        }
+      },
+      {
+        "when": {
+          "bedtime_preferences": [
+            "lights_off"
+          ]
+        },
+        "add": {
+          "goodnight": 3
+        }
+      },
+      {
+        "when": {
+          "bedtime_preferences": [
+            "night_lighting"
+          ]
+        },
+        "add": {
+          "night_path": 4,
+          "goodnight": 1
+        }
+      },
+      {
+        "when": {
+          "bedtime_preferences": [
+            "climate"
+          ]
+        },
+        "add": {
+          "goodnight": 2,
+          "climate_intelligence": 2
+        }
+      },
+      {
+        "when": {
+          "bedtime_preferences": [
+            "entry_status"
+          ]
+        },
+        "add": {
+          "goodnight": 3,
+          "protect": 2
+        }
+      },
+      {
+        "when": {
+          "bedtime_preferences": [
+            "devices_off"
+          ]
+        },
+        "add": {
+          "goodnight": 3,
+          "energy_intelligence": 1
+        }
+      },
+      {
+        "when": {
+          "bedtime_preferences": [
+            "overnight_state"
+          ]
+        },
+        "add": {
+          "goodnight": 4
+        }
+      },
+      {
+        "when": {
+          "bedtime_preferences": [
+            "one_command"
+          ]
+        },
+        "add": {
+          "goodnight": 5
+        }
+      },
+      {
+        "when": {
+          "morning_preferences": [
+            "gradual_lighting"
+          ]
+        },
+        "add": {
+          "gentle_morning": 4
+        }
+      },
+      {
+        "when": {
+          "morning_preferences": [
+            "shades"
+          ]
+        },
+        "add": {
+          "gentle_morning": 3
+        }
+      },
+      {
+        "when": {
+          "morning_preferences": [
+            "climate"
+          ]
+        },
+        "add": {
+          "gentle_morning": 2,
+          "climate_intelligence": 2
+        }
+      },
+      {
+        "when": {
+          "morning_preferences": [
+            "audio"
+          ]
+        },
+        "add": {
+          "gentle_morning": 2
+        }
+      },
+      {
+        "when": {
+          "morning_preferences": [
+            "information"
+          ]
+        },
+        "add": {
+          "gentle_morning": 2
+        }
+      },
+      {
+        "when": {
+          "morning_preferences": [
+            "kitchen"
+          ]
+        },
+        "add": {
+          "gentle_morning": 2
+        }
+      },
+      {
+        "when": {
+          "entertainment_preferences": [
+            "movies"
+          ]
+        },
+        "add": {
+          "cinema": 4
+        }
+      },
+      {
+        "when": {
+          "entertainment_preferences": [
+            "television"
+          ]
+        },
+        "add": {
+          "cinema": 3
+        }
+      },
+      {
+        "when": {
+          "entertainment_preferences": [
+            "music"
+          ]
+        },
+        "add": {
+          "entertain": 2,
+          "relax": 1
+        }
+      },
+      {
+        "when": {
+          "entertainment_preferences": [
+            "gaming"
+          ]
+        },
+        "add": {
+          "cinema": 2
+        }
+      },
+      {
+        "when": {
+          "entertainment_preferences": [
+            "guests"
+          ]
+        },
+        "add": {
+          "entertain": 4
+        }
+      },
+      {
+        "when": {
+          "entertainment_preferences": [
+            "outdoor"
+          ]
+        },
+        "add": {
+          "entertain": 3
+        }
+      },
+      {
+        "when": {
+          "entertainment_preferences": [
+            "reading_relaxation"
+          ]
+        },
+        "add": {
+          "relax": 4
+        }
+      },
+      {
+        "when": {
+          "entertainment_preferences": [
+            "one_touch"
+          ]
+        },
+        "add": {
+          "cinema": 3,
+          "entertain": 2
+        }
+      },
+      {
+        "when": {
+          "pain_points": [
+            "too_many_apps"
+          ]
+        },
+        "flags": [
+          "compatibility_review_candidate"
+        ],
+        "add": {
+          "welcome_home": 1,
+          "goodnight": 1
+        }
+      },
+      {
+        "when": {
+          "pain_points": [
+            "devices_disconnected"
+          ]
+        },
+        "flags": [
+          "compatibility_review_candidate"
+        ],
+        "add": {
+          "welcome_home": 1,
+          "goodnight": 1
+        }
+      },
+      {
+        "when": {
+          "pain_points": [
+            "forgetting_lights"
+          ]
+        },
+        "add": {
+          "effortless_departure": 4,
+          "energy_intelligence": 3
+        }
+      },
+      {
+        "when": {
+          "pain_points": [
+            "thermostat_adjustments"
+          ]
+        },
+        "add": {
+          "climate_intelligence": 5
+        }
+      },
+      {
+        "when": {
+          "pain_points": [
+            "checking_locks"
+          ]
+        },
+        "add": {
+          "protect": 4,
+          "goodnight": 2,
+          "effortless_departure": 2
+        }
+      },
+      {
+        "when": {
+          "pain_points": [
+            "dark_hallways"
+          ]
+        },
+        "add": {
+          "night_path": 5
+        }
+      },
+      {
+        "when": {
+          "pain_points": [
+            "guest_access"
+          ]
+        },
+        "add": {
+          "guest_ready": 5
+        }
+      },
+      {
+        "when": {
+          "pain_points": [
+            "remote_rental"
+          ]
+        },
+        "add": {
+          "property_pulse": 5,
+          "guest_ready": 3,
+          "turnover": 2
+        }
+      },
+      {
+        "when": {
+          "pain_points": [
+            "leak_concern"
+          ]
+        },
+        "add": {
+          "water_watch": 6
+        }
+      },
+      {
+        "when": {
+          "pain_points": [
+            "wifi_reliability"
+          ]
+        },
+        "flags": [
+          "network_review"
+        ]
+      },
+      {
+        "when": {
+          "pain_points": [
+            "too_many_remotes"
+          ]
+        },
+        "add": {
+          "cinema": 3,
+          "entertain": 2
+        }
+      },
+      {
+        "when": {
+          "pain_points": [
+            "repetitive_routines"
+          ]
+        },
+        "add": {
+          "welcome_home": 2,
+          "effortless_departure": 4,
+          "goodnight": 3
+        }
+      },
+      {
+        "when": {
+          "pain_points": [
+            "energy_waste"
+          ]
+        },
+        "add": {
+          "energy_intelligence": 5
+        }
+      },
+      {
+        "when": {
+          "pain_points": [
+            "dont_know_where_to_start"
+          ]
+        },
+        "flags": [
+          "guided_start"
+        ],
+        "adjustments": {
+          "implementation_preference_default": "guided"
+        }
+      },
+      {
+        "when": {
+          "accessibility_needs": [
+            "lighting"
+          ]
+        },
+        "add": {
+          "accessible_living": 3
+        }
+      },
+      {
+        "when": {
+          "accessibility_needs": [
+            "night_navigation"
+          ]
+        },
+        "add": {
+          "night_path": 5,
+          "accessible_living": 2
+        }
+      },
+      {
+        "when": {
+          "accessibility_needs": [
+            "temperature"
+          ]
+        },
+        "add": {
+          "climate_intelligence": 3,
+          "accessible_living": 2
+        }
+      },
+      {
+        "when": {
+          "accessibility_needs": [
+            "voice"
+          ]
+        },
+        "add": {
+          "accessible_living": 3
+        }
+      },
+      {
+        "when": {
+          "accessibility_needs": [
+            "entry"
+          ]
+        },
+        "add": {
+          "accessible_living": 2,
+          "welcome_home": 1
+        }
+      },
+      {
+        "when": {
+          "accessibility_needs": [
+            "multi_device"
+          ]
+        },
+        "add": {
+          "accessible_living": 3,
+          "goodnight": 1
+        }
+      }
+    ],
+    "context_bonuses": [
+      {
+        "id": "arrival_bundle_bonus",
+        "condition": {
+          "count_selected": {
+            "field": "arrival_preferences",
+            "gte": 3,
+            "exclude": [
+              "nothing"
+            ]
+          }
+        },
+        "add": {
+          "welcome_home": 5
+        }
+      }
+    ]
+  },
+  "compatibility": {
+    "statuses": [
+      {
+        "id": "verified",
+        "label": "Verified Compatible"
+      },
+      {
+        "id": "requirements",
+        "label": "Compatible With Requirements"
+      },
+      {
+        "id": "review",
+        "label": "Compatibility Review Recommended"
+      },
+      {
+        "id": "not_recommended",
+        "label": "Not Recommended"
+      }
+    ],
+    "device_reuse_labels": [
+      {
+        "id": "keep",
+        "label": "Keep"
+      },
+      {
+        "id": "reuse",
+        "label": "Reuse"
+      },
+      {
+        "id": "verify",
+        "label": "Verify"
+      },
+      {
+        "id": "replace_if_needed",
+        "label": "Replace Only If Needed"
+      }
+    ],
+    "principles": {
+      "recommend_device_categories_before_exact_products": true,
+      "matter_is_not_full_feature_parity_guarantee": true,
+      "prefer_reuse_of_compatible_existing_equipment": true,
+      "never_hide_uncertainty": true
+    }
+  },
+  "foundation_logic": {
+    "priority_order": [
+      {
+        "if": {
+          "current_setup_health": [
+            "fragmented"
+          ],
+          "or_technology_profile": [
+            "unknown_mix"
+          ]
+        },
+        "foundation": "compatibility_review",
+        "label": "Compatibility Review"
+      },
+      {
+        "if_technology_profile_contains": [
+          "smartthings"
+        ],
+        "foundation": "existing_smartthings_foundation",
+        "label": "Existing SmartThings Foundation"
+      },
+      {
+        "if_technology_profile_contains": [
+          "nothing_yet"
+        ],
+        "foundation": "smartthings_foundation_recommended",
+        "label": "SmartThings Foundation Recommended"
+      }
+    ],
+    "default": {
+      "foundation": "light_foundation",
+      "label": "Light Foundation"
+    }
+  },
+  "implementation_paths": {
+    "essential_intelligence": {
+      "label": "Essential Intelligence",
+      "experience_target": {
+        "min": 2,
+        "max": 4
+      },
+      "positioning": "Highest-impact starting point"
+    },
+    "elevated_living": {
+      "label": "Elevated Living",
+      "experience_target": {
+        "min": 5,
+        "max": 8
+      },
+      "positioning": "Broader connected experience across major spaces"
+    },
+    "complete_luxsync": {
+      "label": "Complete LuxSync Experience",
+      "experience_target": {
+        "min": 8,
+        "max": null
+      },
+      "positioning": "Comprehensive implementation of the customer’s Blueprint"
+    }
+  },
+  "implementation_path_rules": [
+    {
+      "if": {
+        "implementation_preference": [
+          "focused"
+        ]
+      },
+      "path": "essential_intelligence"
+    },
+    {
+      "if": {
+        "implementation_preference": [
+          "comprehensive",
+          "ideal"
+        ]
+      },
+      "path": "complete_luxsync"
+    },
+    {
+      "if": {
+        "implementation_preference": [
+          "phased"
+        ]
+      },
+      "path": "elevated_living"
+    },
+    {
+      "if_flag": "large_property",
+      "minimum_path": "elevated_living"
+    }
+  ],
+  "roadmap": {
+    "phase_1": {
+      "label": "Foundation & Highest-Value Experiences",
+      "prioritize": [
+        "ecosystem",
+        "compatibility",
+        "connectivity",
+        "priority_1",
+        "highest_friction_pain_point"
+      ]
+    },
+    "phase_2": {
+      "label": "Everyday Intelligence",
+      "prefer_experiences": [
+        "welcome_home",
+        "effortless_departure",
+        "goodnight",
+        "climate_intelligence",
+        "energy_intelligence"
+      ]
+    },
+    "phase_3": {
+      "label": "Elevated Experiences",
+      "prefer_experiences": [
+        "cinema",
+        "entertain",
+        "intelligent_evening",
+        "relax",
+        "property_pulse",
+        "vacation_mode"
+      ]
+    }
+  },
+  "consultation_triggers": [
+    {
+      "id": "large_property",
+      "type": "optional"
+    },
+    {
+      "id": "multiple_properties",
+      "type": "optional"
+    },
+    {
+      "id": "complex_str_portfolio",
+      "type": "prominent"
+    },
+    {
+      "id": "compatibility_review_candidate",
+      "type": "optional"
+    },
+    {
+      "id": "new_construction",
+      "type": "optional"
+    },
+    {
+      "id": "network_review",
+      "type": "optional"
+    },
+    {
+      "id": "zone_planning",
+      "type": "optional"
+    },
+    {
+      "id": "custom_design_requested",
+      "type": "prominent"
+    },
+    {
+      "id": "high_automation_complexity",
+      "type": "prominent"
+    }
+  ],
+  "cta_logic": [
+    {
+      "priority": 100,
+      "when": {
+        "property_type": [
+          "short_term_rental"
+        ]
+      },
+      "cta": {
+        "id": "build_rental_solution",
+        "label": "Build My Rental Solution"
+      }
+    },
+    {
+      "priority": 90,
+      "when_flag": "compatibility_review_candidate",
+      "cta": {
+        "id": "review_compatibility",
+        "label": "Review My Compatibility"
+      }
+    },
+    {
+      "priority": 80,
+      "when_any_flag": [
+        "large_property",
+        "complex_str_portfolio",
+        "new_construction"
+      ],
+      "cta": {
+        "id": "request_consultation",
+        "label": "Request a LuxSync Consultation"
+      }
+    },
+    {
+      "priority": 70,
+      "when": {
+        "implementation_preference": [
+          "focused",
+          "phased"
+        ]
+      },
+      "cta": {
+        "id": "start_phase_1",
+        "label": "Start With Phase 1"
+      }
+    },
+    {
+      "priority": 60,
+      "when": {
+        "primary_intent": [
+          "exploration"
+        ]
+      },
+      "cta": {
+        "id": "save_blueprint",
+        "label": "Save My Blueprint"
+      }
+    },
+    {
+      "priority": 10,
+      "default": true,
+      "cta": {
+        "id": "build_solution",
+        "label": "Build My Solution"
+      }
+    }
+  ],
+  "routing": {
+    "support": "support@luxsync.net",
+    "general": "info@luxsync.net",
+    "consultation": "info@luxsync.net"
+  },
+  "blueprint_schema": {
+    "required": [
+      "blueprint_id",
+      "created_at",
+      "config_version",
+      "property_summary",
+      "customer_priorities",
+      "recommended_foundation",
+      "recommended_experiences",
+      "implementation_path",
+      "next_best_action"
+    ],
+    "properties": {
+      "blueprint_id": {
+        "type": "string"
+      },
+      "blueprint_name": {
+        "type": "string",
+        "default": "My LuxSync Blueprint"
+      },
+      "created_at": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "config_version": {
+        "type": "string"
+      },
+      "property_summary": {
+        "type": "object"
+      },
+      "square_footage": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "existing_ecosystem": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "technology_summary": {
+        "type": "object"
+      },
+      "customer_priorities": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "pain_points": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "recommended_foundation": {
+        "type": "object"
+      },
+      "recommended_experiences": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "optional_experiences": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "implementation_path": {
+        "type": "object"
+      },
+      "roadmap": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "recommended_device_categories": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "existing_devices_to_reuse": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "compatibility_notes": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "consultation_recommendation": {
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "supporting_guides": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "next_best_action": {
+        "type": "object"
+      },
+      "profile_completeness": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 100
+      },
+      "recommendation_precision": {
+        "type": "string",
+        "enum": [
+          "high",
+          "moderate",
+          "review"
+        ]
+      }
+    }
+  },
+  "state_models": {
+    "private_residence": [
+      "HOME",
+      "AWAY",
+      "ARRIVING",
+      "EVENING",
+      "SLEEP",
+      "VACATION",
+      "ENTERTAINING",
+      "MOVIE",
+      "FOCUS",
+      "RELAX"
+    ],
+    "short_term_rental": [
+      "VACANT",
+      "PREPARING",
+      "GUEST_READY",
+      "OCCUPIED",
+      "CHECKOUT",
+      "TURNOVER",
+      "MAINTENANCE",
+      "OWNER_STAY"
+    ],
+    "business": [
+      "OPENING",
+      "OPEN",
+      "OCCUPIED",
+      "AFTER_HOURS",
+      "CLOSING",
+      "CLOSED",
+      "EVENT",
+      "MAINTENANCE"
+    ]
+  },
+  "analytics_events": [
+    "concierge_started",
+    "stage_completed",
+    "concierge_abandoned",
+    "concierge_completed",
+    "blueprint_generated",
+    "blueprint_saved",
+    "consultation_requested",
+    "phase_1_started",
+    "product_clicked",
+    "compatibility_review_requested",
+    "support_requested"
+  ]
+}

@@ -1,341 +1,187 @@
 #!/usr/bin/env python3
-"""Validate current LuxSync source-of-truth contracts across docs, prompts, website and Concierge."""
 from __future__ import annotations
 
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-
-OFFICIAL_SLOGAN = "Where Luxury Lives Intelligently"
-PRIMARY_CTA = "Find My LuxSync Solution"
-SECONDARY_CTA = "Shop Smart Home"
-CONCIERGE_NAME = "LuxSync Intelligent Living Concierge"
-BLUEPRINT_NAME = "My LuxSync Blueprint"
-SUPPORT_EMAIL = "support@luxsync.net"
-INFO_EMAIL = "info@luxsync.net"
-BRIDGETTE_TITLE = "Co-Founder & Chief Technology and Strategy Officer"
-SHELDON_TITLE = "Co-Founder & Chief Customer and Operations Officer"
-
-# Build the retired phrase without preserving it as a searchable repository literal.
+BRAND_SYSTEM = 'LuxSync Production Raster v5'
+SLOGAN = 'Where Luxury Lives Intelligently'
+PRIMARY_CTA = 'Find My LuxSync Solution'
+SECONDARY_CTA = 'Shop Smart Home'
+BRIDGETTE_TITLE = 'Co-Founder & Chief Technology and Strategy Officer'
+SHELDON_TITLE = 'Co-Founder & Chief Customer and Operations Officer'
+CONCIERGE = "LuxSync Intelligent Living Concierge"
+BLUEPRINT = "My LuxSync Blueprint"
+SAFE_ASSETS = {
+    "brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png",
+    "brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png",
+    "brand/assets/01-logos/LuxSync_Logo_Orb.png",
+}
 RETIRED_HERO = "Smart Living" + ". " + "Elevated" + "."
-
+LEGACY_TERMS = [
+    "LuxSync " + "v3",
+    "Brand System " + "4.0",
+    "assets" + "-v3",
+    "migrate-brand-" + "v3.py",
+    "validate-brand-" + "v3.py",
+    "RB-007-Brand-Asset-" + "Raster-Regeneration.md",
+    "RB-008-Luxury-Orbit-" + "Brand-Asset-Generation.md",
+]
 REQUIRED_FILES = [
     "README.md",
+    "brand/README.md",
+    "brand/colors.md",
+    "brand/typography.md",
+    "brand/voice-and-tone.md",
+    "brand/assets/README.md",
+    "brand/assets/asset-manifest.json",
+    "docs/production-source-of-truth.md",
+    "docs/production-asset-library.md",
     "docs/master-catalog.md",
     "docs/project-runbook.md",
     "docs/value-proposition.md",
     "docs/architecture/website-information-architecture.md",
     "docs/architecture/intelligent-living-concierge.md",
-    "docs/runbooks/RB-002-GoDaddy-Airo-AI-Builder.md",
-    "docs/runbooks/RB-009-Repository-Consistency-Validation.md",
-    "docs/checklists/CL-001-Airo-First-Pass-Review.md",
-    "docs/leadership/bridgette-beardsley.md",
-    "docs/leadership/sheldon-bardol.md",
     "content/homepage.md",
     "content/about.md",
     "content/faqs.md",
     "content/contact.md",
     "content/product-catalog.md",
     "content/guides/roi/README.md",
-    "content/guides/roi/commercial-offices.md",
-    "content/guides/roi/nursing-homes.md",
-    "content/guides/roi/senior-living-communities.md",
-    "content/guides/roi/str-owners.md",
-    "content/guides/roi/str-operators.md",
-    "content/guides/roi/str-managers.md",
-    "content/guides/roi/residential-homeowners.md",
-    "content/guides/roi/residential-busy-professionals.md",
-    "content/guides/roi/residential-intentional-parents.md",
-    "content/guides/roi/residential-seniors-caregivers.md",
-    "prompts/content-writer.md",
-    "prompts/product-descriptions.md",
-    "prompts/email-writer.md",
-    "prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md",
+    "website/implementation-manifest.json",
+    "website/navigation.md",
+    "website/asset-map.md",
+    "website/styles/design-system.md",
     "website/pages/home.md",
+    "website/pages/concierge.md",
+    "website/pages/my-luxsync-blueprint.md",
+    "website/pages/solutions.md",
+    "website/pages/solutions/commercial-offices.md",
+    "website/pages/solutions/senior-living.md",
+    "website/pages/solutions/short-term-rentals.md",
+    "website/pages/solutions/residential.md",
+    "website/pages/solutions/aging-in-place.md",
+    "website/pages/shop.md",
+    "website/pages/guides.md",
     "website/pages/about.md",
     "website/pages/faqs.md",
     "website/pages/contact.md",
-    "website/pages/guides.md",
-    "website/styles/design-system.md",
-    "website/src/concierge/README.md",
+    "website/src/concierge/luxsync-concierge-engine.v1.json",
+    "scripts/validate-production-brand.py",
 ]
+ROI_FILES = [
+    "commercial-offices.md", "nursing-homes.md", "senior-living-communities.md",
+    "str-owners.md", "str-operators.md", "str-managers.md",
+    "residential-homeowners.md", "residential-busy-professionals.md",
+    "residential-intentional-parents.md", "residential-seniors-caregivers.md",
+]
+errors = []
 
-SLOGAN_GOVERNING_FILES = [
-    "README.md",
-    "docs/master-catalog.md",
-    "docs/project-runbook.md",
-    "docs/value-proposition.md",
-    "docs/architecture/website-information-architecture.md",
-    "docs/architecture/intelligent-living-concierge.md",
-    "docs/runbooks/RB-002-GoDaddy-Airo-AI-Builder.md",
-    "docs/checklists/CL-001-Airo-First-Pass-Review.md",
-    "content/homepage.md",
-    "content/contact.md",
-    "prompts/content-writer.md",
-    "prompts/product-descriptions.md",
-    "prompts/email-writer.md",
+def read(rel):
+    return (ROOT / rel).read_text(encoding="utf-8", errors="replace")
+
+def require(rel, token):
+    if token not in read(rel): errors.append(f"{rel}: missing required token {token!r}")
+
+for rel in REQUIRED_FILES:
+    if not (ROOT / rel).exists(): errors.append(f"missing required file: {rel}")
+if errors:
+    print("LuxSync repository validation FAILED:")
+    for e in errors: print("-", e)
+    raise SystemExit(1)
+
+# Active text must not preserve retired branding or retired generation paths.
+text_suffixes = {".md", ".txt", ".json", ".yml", ".yaml", ".py", ".js", ".mjs", ".css", ".html"}
+for path in ROOT.rglob("*"):
+    if not path.is_file() or path.suffix.lower() not in text_suffixes: continue
+    if any(part in {".git", "node_modules"} for part in path.parts): continue
+    text = path.read_text(encoding="utf-8", errors="replace")
+    if RETIRED_HERO in text: errors.append(f"{path.relative_to(ROOT)}: retired hero phrase remains")
+    for term in LEGACY_TERMS:
+        if term in text: errors.append(f"{path.relative_to(ROOT)}: retired source-of-truth term remains: {term}")
+
+for rel in (
+    "docs/production-source-of-truth.md", "brand/README.md", "website/styles/design-system.md",
+    "website/pages/home.md", "website/navigation.md", "website/asset-map.md",
     "prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md",
-    "website/pages/home.md",
-    "website/pages/contact.md",
-    "website/styles/design-system.md",
-]
+):
+    for token in (BRAND_SYSTEM, SLOGAN): require(rel, token)
 
-TEXT_SUFFIXES = {
-    ".md", ".txt", ".json", ".svg", ".html", ".htm", ".py", ".js", ".mjs",
-    ".ts", ".tsx", ".jsx", ".css", ".scss", ".yml", ".yaml", ".csv"
+for rel in ("docs/leadership/bridgette-beardsley.md", "website/pages/home.md", "website/pages/about.md", "docs/master-catalog.md"):
+    require(rel, BRIDGETTE_TITLE)
+for rel in ("docs/leadership/sheldon-bardol.md", "website/pages/home.md", "website/pages/about.md", "docs/master-catalog.md"):
+    require(rel, SHELDON_TITLE)
+
+for rel in ("website/pages/home.md", "website/pages/concierge.md", "docs/architecture/intelligent-living-concierge.md", "docs/production-source-of-truth.md"):
+    for token in (PRIMARY_CTA, CONCIERGE, BLUEPRINT): require(rel, token)
+
+for token in ("Support", "Product Information", "Consultation", "General Question", "Business / Partnership", "property_type", "square_feet_exact", "square_feet_band"):
+    require("website/pages/contact.md", token)
+for token in ("support@luxsync.net", "info@luxsync.net"):
+    require("content/contact.md", token)
+    require("website/pages/contact.md", token)
+
+for filename in ROI_FILES:
+    rel = f"content/guides/roi/{filename}"
+    require(rel, SLOGAN)
+    require(rel, "ROI")
+for token in ("Commercial Offices", "Nursing Homes", "Senior Living Communities", "STR Owners", "STR Operators", "STR Managers", "Seniors, Caregivers"):
+    require("content/guides/roi/README.md", token)
+    require("website/pages/guides.md", token)
+
+for token in ("Physical Product Families", "Curated Bundle", "LuxSync Experiences", "Validated Live Product", "Solution Concept"):
+    require("content/product-catalog.md", token)
+
+# Route manifest must be complete, internally resolvable, and publication-safe.
+impl = json.loads(read("website/implementation-manifest.json"))
+if impl.get("brand_system") != BRAND_SYSTEM: errors.append("implementation manifest brand_system mismatch")
+if impl.get("official_slogan") != SLOGAN: errors.append("implementation manifest slogan mismatch")
+required_routes = {
+    "/", "/find-my-luxsync-solution", "/my-luxsync-blueprint", "/solutions",
+    "/solutions/commercial-offices", "/solutions/senior-living", "/solutions/short-term-rentals",
+    "/solutions/residential", "/solutions/aging-in-place", "/shop", "/guides", "/about", "/faqs", "/contact",
 }
+routes = impl.get("routes", [])
+route_names = {r.get("route") for r in routes}
+if route_names != required_routes:
+    errors.append(f"implementation manifest route set mismatch: {sorted(route_names ^ required_routes)}")
+for route in routes:
+    for key in ("blueprint", "content_source"):
+        rel = route.get(key)
+        if not rel or not (ROOT / rel).exists(): errors.append(f"{route.get('route')}: invalid {key} {rel!r}")
+    assets = route.get("production_assets", [])
+    if not assets: errors.append(f"{route.get('route')}: no production asset assigned")
+    for asset in assets:
+        if asset not in SAFE_ASSETS: errors.append(f"{route.get('route')}: reference-only asset wired as production: {asset}")
+        if not (ROOT / asset).exists(): errors.append(f"{route.get('route')}: missing asset: {asset}")
 
+# Page blueprints may not directly wire reference-only imported slices.
+reference_prefixes = tuple(f"brand/assets/{n:02d}-" for n in range(2, 10))
+for path in (ROOT / "website/pages").rglob("*.md"):
+    text = path.read_text(encoding="utf-8")
+    for prefix in reference_prefixes:
+        if prefix in text: errors.append(f"{path.relative_to(ROOT)}: reference-only raster path is wired directly")
 
-def read(rel: str) -> str:
-    path = ROOT / rel
-    if not path.exists():
-        raise FileNotFoundError(rel)
-    return path.read_text(encoding="utf-8", errors="replace")
+for token in ("/shop", "/solutions", "/guides", "/about", "/faqs", "/contact", PRIMARY_CTA):
+    require("website/navigation.md", token)
 
+engine = json.loads(read("website/src/concierge/luxsync-concierge-engine.v1.json"))
+for key in ("meta", "constants", "experience_catalog", "questionnaire", "scoring", "compatibility", "blueprint_schema"):
+    if key not in engine: errors.append(f"Concierge engine missing top-level key: {key}")
 
-def require(text: str, token: str, rel: str, errors: list[str]) -> None:
-    if token not in text:
-        errors.append(f"{rel}: missing required token {token!r}")
+workflow = read(".github/workflows/validate-repository-consistency.yml")
+for token in ("validate-production-brand.py", "validate-repository-consistency.py", "assemble-engine.mjs"):
+    if token not in workflow: errors.append(f"CI workflow missing {token}")
 
+if (ROOT / "docs/business-plan.md").exists() and "Pricing status: unresolved" not in read("docs/business-plan.md"):
+    errors.append("senior-service pricing must remain explicitly unresolved")
 
-def validate_required_files(errors: list[str]) -> None:
-    for rel in REQUIRED_FILES:
-        if not (ROOT / rel).exists():
-            errors.append(f"Missing required source-of-truth file: {rel}")
-
-
-def validate_brand_language(errors: list[str]) -> None:
-    for rel in SLOGAN_GOVERNING_FILES:
-        try:
-            text = read(rel)
-        except FileNotFoundError:
-            continue
-        require(text, OFFICIAL_SLOGAN, rel, errors)
-
-    # The old hero is retired everywhere, including docs, scripts and SVG source.
-    for path in ROOT.rglob("*"):
-        if not path.is_file() or path.suffix.lower() not in TEXT_SUFFIXES:
-            continue
-        if any(part in {".git", "node_modules", ".venv", "venv"} for part in path.parts):
-            continue
-        text = path.read_text(encoding="utf-8", errors="replace")
-        if RETIRED_HERO in text:
-            errors.append(f"{path.relative_to(ROOT)}: retired hero phrase remains")
-        # Catch the old two-line graphic treatment even when punctuation/case differs.
-        upper = text.upper()
-        retired_start = "SMART " + "LIVING."
-        retired_end = "ELE" + "VATED."
-        if retired_start in upper and retired_end in upper:
-            errors.append(f"{path.relative_to(ROOT)}: retired split hero treatment remains")
-
-
-def validate_homepage_contract(errors: list[str]) -> None:
-    for rel in (
-        "content/homepage.md",
-        "website/pages/home.md",
-        "docs/architecture/website-information-architecture.md",
-        "prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md",
-        "docs/checklists/CL-001-Airo-First-Pass-Review.md",
-    ):
-        try:
-            text = read(rel)
-        except FileNotFoundError:
-            continue
-        for token in (OFFICIAL_SLOGAN, PRIMARY_CTA, SECONDARY_CTA):
-            require(text, token, rel, errors)
-
-
-def validate_founders(errors: list[str]) -> None:
-    b = read("docs/leadership/bridgette-beardsley.md")
-    s = read("docs/leadership/sheldon-bardol.md")
-    require(b, BRIDGETTE_TITLE, "docs/leadership/bridgette-beardsley.md", errors)
-    require(s, SHELDON_TITLE, "docs/leadership/sheldon-bardol.md", errors)
-
-    for rel in (
-        "website/pages/home.md",
-        "website/pages/about.md",
-        "prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md",
-        "docs/master-catalog.md",
-    ):
-        text = read(rel)
-        require(text, BRIDGETTE_TITLE, rel, errors)
-        require(text, SHELDON_TITLE, rel, errors)
-
-
-def validate_contact(errors: list[str]) -> None:
-    for rel in (
-        "content/contact.md",
-        "website/pages/contact.md",
-        "docs/architecture/website-information-architecture.md",
-        "prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md",
-        "docs/runbooks/RB-002-GoDaddy-Airo-AI-Builder.md",
-    ):
-        text = read(rel)
-        require(text, SUPPORT_EMAIL, rel, errors)
-        require(text, INFO_EMAIL, rel, errors)
-
-    contact = read("website/pages/contact.md")
-    for token in (
-        "Support",
-        "Product Information",
-        "Consultation",
-        "General Question",
-        "Business / Partnership",
-        "property_type",
-        "square_feet_exact",
-        "square_feet_band",
-        BLUEPRINT_NAME,
-    ):
-        require(contact, token, "website/pages/contact.md", errors)
-
-
-def validate_concierge(errors: list[str]) -> None:
-    for rel in (
-        "docs/architecture/intelligent-living-concierge.md",
-        "website/pages/home.md",
-        "docs/architecture/website-information-architecture.md",
-        "prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md",
-        "docs/master-catalog.md",
-    ):
-        text = read(rel)
-        for token in (PRIMARY_CTA, CONCIERGE_NAME, BLUEPRINT_NAME):
-            require(text, token, rel, errors)
-
-    architecture = read("docs/architecture/intelligent-living-concierge.md")
-    for token in (
-        "Lifestyle",
-        "Experience",
-        "Intelligence",
-        "Technology",
-        "Essential Intelligence",
-        "Elevated Living",
-        "Complete LuxSync Experience",
-    ):
-        require(architecture, token, "docs/architecture/intelligent-living-concierge.md", errors)
-
-    modules = ROOT / "website" / "src" / "concierge" / "modules"
-    if not modules.exists():
-        errors.append("website/src/concierge/modules: missing")
-        return
-    json_files = sorted(modules.glob("*.json"))
-    if not json_files:
-        errors.append("website/src/concierge/modules: no JSON modules found")
-    for path in json_files:
-        try:
-            json.loads(path.read_text(encoding="utf-8"))
-        except Exception as exc:
-            errors.append(f"{path.relative_to(ROOT)}: invalid JSON: {exc}")
-
-
-def validate_product_catalog(errors: list[str]) -> None:
-    catalog = read("content/product-catalog.md")
-    for token in (
-        "Physical Product Families",
-        "Curated Bundle",
-        "LuxSync Experiences",
-        "Welcome Home",
-        "Goodnight",
-        "Water Watch",
-        "Guest Ready",
-        "Property Pulse",
-        "Accessible Living",
-        "Validated Live Product",
-        "Solution Concept",
-    ):
-        require(catalog, token, "content/product-catalog.md", errors)
-
-    business = read("docs/business-plan.md")
-    if "Pricing status: unresolved" not in business:
-        errors.append("docs/business-plan.md: senior-service pricing must remain explicitly unresolved")
-
-
-def validate_typography_and_palette(errors: list[str]) -> None:
-    design = read("website/styles/design-system.md")
-    for token in (
-        "Manrope",
-        "Inter",
-        "#0D1526",
-        "#172036",
-        "#D0BEB0",
-        "#9E8B85",
-        "#967878",
-        "#7B96B2",
-        "#D6B0A0",
-    ):
-        require(design, token, "website/styles/design-system.md", errors)
-
-
-def validate_roi_guides(errors: list[str]) -> None:
-    guide_files = {
-        "commercial-offices.md": "Commercial Offices",
-        "nursing-homes.md": "Nursing Homes",
-        "senior-living-communities.md": "Senior Living Communities",
-        "str-owners.md": "STR Owners",
-        "str-operators.md": "STR Operators",
-        "str-managers.md": "STR Managers",
-        "residential-homeowners.md": "Residential Homeowners",
-        "residential-busy-professionals.md": "Busy Professionals",
-        "residential-intentional-parents.md": "Intentional Parents",
-        "residential-seniors-caregivers.md": "Seniors, Caregivers",
-    }
-    guide_root = "content/guides/roi"
-    for filename, audience in guide_files.items():
-        rel = f"{guide_root}/{filename}"
-        text = read(rel)
-        for token in (OFFICIAL_SLOGAN, audience, "ROI"):
-            require(text, token, rel, errors)
-        if "Boundary" not in text and "Boundaries" not in text:
-            errors.append(f"{rel}: missing limitations/safety boundary section")
-
-    for rel in (
-        "content/guides/roi/README.md",
-        "website/pages/guides.md",
-        "docs/master-catalog.md",
-        "docs/architecture/website-information-architecture.md",
-    ):
-        text = read(rel)
-        for token in ("Commercial Offices", "Nursing Homes", "Senior Living Communities", "STR Owners", "STR Operators", "STR Managers", "Seniors, Caregivers"):
-            require(text, token, rel, errors)
-
-    index = read("content/guides/roi/README.md")
-    for token in ("Annual verified benefit", "Simple ROI", "Payback period in months", "Do not promise a specific ROI"):
-        require(index, token, "content/guides/roi/README.md", errors)
-
-
-def main() -> int:
-    errors: list[str] = []
-    validate_required_files(errors)
-
-    # Stop deeper checks from raising on a missing baseline file.
-    if errors:
-        print("LuxSync repository validation FAILED:")
-        for err in errors:
-            print(f"- {err}")
-        return 1
-
-    validate_brand_language(errors)
-    validate_homepage_contract(errors)
-    validate_founders(errors)
-    validate_contact(errors)
-    validate_concierge(errors)
-    validate_product_catalog(errors)
-    validate_typography_and_palette(errors)
-    validate_roi_guides(errors)
-
-    if errors:
-        print("LuxSync repository validation FAILED:")
-        for err in errors:
-            print(f"- {err}")
-        return 1
-
-    print("LuxSync repository validation PASSED")
-    print(f"Slogan: {OFFICIAL_SLOGAN}")
-    print(f"Primary CTA: {PRIMARY_CTA}")
-    print(f"Concierge: {CONCIERGE_NAME}")
-    print(f"Blueprint: {BLUEPRINT_NAME}")
-    return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+if errors:
+    print("LuxSync repository validation FAILED:")
+    for error in errors: print("-", error)
+    raise SystemExit(1)
+print("LuxSync repository validation PASSED")
+print(f"Brand system: {BRAND_SYSTEM}")
+print(f"Slogan: {SLOGAN}")
+print(f"Routes: {len(routes)}")

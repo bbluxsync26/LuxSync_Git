@@ -68,4 +68,3 @@ Measure:
 Automation should make responsibilities clearer, not remove local accountability. LuxSync does not guarantee labor reductions, operating capacity, reviews, revenue, or incident prevention. Validate guest privacy, access controls, camera/noise-device rules, and local law for every property.
 
 **Next step:** Request an STR operations consultation at `info@luxsync.net`.
-

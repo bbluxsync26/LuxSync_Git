@@ -2,7 +2,7 @@
 
 **Status:** Active website design baseline
 **Company:** LuxSync LLC
-**Brand system:** LuxSync v3
+**Brand system:** LuxSync Production Raster v5
 **Content source:** `content/about.md`
 **Leadership sources:** `docs/leadership/bridgette-beardsley.md` and `docs/leadership/sheldon-bardol.md`
 
@@ -94,3 +94,7 @@ Close the story with three commitments:
 - Do not invent degrees, certifications, awards, employment history, customer counts, or years in business.
 - Do not expose internal transition plans, salaries, forecasts, supplier terms, or unreleased product claims.
 - Preserve Intelligent Calm: personal, confident, thoughtful, and unhurried.
+
+## Production Visual Assignment
+
+Use the exact horizontal LuxSync logo and a live balanced founder layout. Use founder copy from `docs/leadership/`. Do not invent portraits or use generated founder identities. If approved founder portraits are not supplied, use elegant non-person placeholder treatments rather than synthetic people. See `website/asset-map.md`.

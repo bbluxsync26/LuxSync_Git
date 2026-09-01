@@ -1,6 +1,6 @@
 # DEC-004 — Commerce Plus and Airo Role
 
-**Status:** Active  
+**Status:** Active
 **Date:** 2026-08-29
 
 ## Decision

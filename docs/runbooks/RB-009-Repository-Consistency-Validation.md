@@ -1,6 +1,6 @@
 # RB-009 — Repository Consistency Validation
 
-**Status:** Active / Reconciled  
+**Status:** Active / Reconciled
 **Last updated:** 2026-08-31
 
 ## Purpose

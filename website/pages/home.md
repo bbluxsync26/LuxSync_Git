@@ -1,7 +1,7 @@
 # LuxSync Homepage Blueprint
 
-**Status:** Active launch baseline  
-**Architecture reference:** `docs/architecture/website-information-architecture.md`  
+**Status:** Active launch baseline
+**Architecture reference:** `docs/architecture/website-information-architecture.md`
 **Concierge reference:** `docs/architecture/intelligent-living-concierge.md`
 
 ## 1. Hero
@@ -28,7 +28,7 @@ Luxury smart-home technology designed for modern living, with curated hardware a
 
 ### Visual direction
 
-Use LuxSync v3: Slate Navy / Dark Suede surfaces, restrained Champagne Rose Gold Metallic detail anchored at `#D6B0A0`, Dusty Steel interaction accents, Pale Driftwood copy, generous negative space, and premium smart-living imagery. Use current approved assets. Keep the primary and secondary CTAs visible above the fold on desktop and mobile.
+Use LuxSync Production Raster v5: Slate Navy / Dark Suede surfaces, restrained Champagne Rose Gold Metallic detail anchored at `#D6B0A0`, Dusty Steel interaction accents, Pale Driftwood copy, generous negative space, and premium smart-living imagery. Use current approved assets. Keep the primary and secondary CTAs visible above the fold on desktop and mobile.
 
 ---
 
@@ -288,3 +288,7 @@ The homepage succeeds when a new visitor can quickly understand:
 6. Why compatibility and curation matter.
 7. How to shop, ask a question, request a consultation, or get support.
 8. Who leads LuxSync and why the company exists.
+
+## Production Visual Assignment
+
+Use `brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png` in a live editorial hero composed with Slate Navy / Dark Suede, Pale Driftwood copy, Dusty Steel interaction cues and restrained Champagne Rose Gold detail. Build solution, Concierge, founder, FAQ, ROI and commerce cards live in HTML/CSS. Imported raster composites and board slices are reference-only. See `website/asset-map.md`.

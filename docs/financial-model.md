@@ -1,31 +1,31 @@
 # Financial Model
 
-**Status:** Active planning baseline  
+**Status:** Active planning baseline
 **Reconciled:** August 30, 2026
 
 ## Initial Targets
 
-Startup Capital:  
+Startup Capital:
 Less than $500
 
-Operating Overhead:  
+Operating Overhead:
 $179.49/month
 
-Month 1 Modeled Gross Margin:  
+Month 1 Modeled Gross Margin:
 60.38%
 
 ## Month 1 Goals
 
-Revenue:  
+Revenue:
 $8,564
 
-Gross Profit:  
+Gross Profit:
 $5,171
 
-Implied Gross Margin:  
+Implied Gross Margin:
 60.38%
 
-Net Cash Profit:  
+Net Cash Profit:
 $4,991.51
 
 ## Forecast Interpretation

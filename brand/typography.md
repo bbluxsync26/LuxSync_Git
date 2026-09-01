@@ -1,7 +1,7 @@
 # LuxSync Typography
 
-**Status:** Active / Authoritative  
-**Base brand system:** Plush Drift v2.1  
+**Status:** Active / Authoritative
+**Base brand system:** Plush Drift v2.1
 **Web visual treatment:** Luxury Orbit
 
 ## Typography Contract

@@ -1,7 +1,7 @@
 {
-  "version": "5.0-production-raster",
+  "version": "5.1-production-source-of-truth",
   "source_of_truth": "brand/assets",
-  "source_package": "incoming/luxsync_production_graphics_atomic_pack.zip",
+  "source_package": "one-time verified import; source ZIP removed after installation",
   "official_slogan": "Where Luxury Lives Intelligently",
   "metallic_blue": "Brushed Dusty Steel",
   "files": [
@@ -10,700 +10,813 @@
       "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
       "width": 2172,
       "height": 724,
-      "bytes": 1356367
+      "bytes": 1356367,
+      "publication_status": "production-approved"
     },
     {
       "path": "brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png",
       "sha256": "c24c0bfb040896dc88d4bebe1c0d54c4c0c507acc7576e95910f3e39f40f74c4",
       "width": 2172,
       "height": 724,
-      "bytes": 1258016
+      "bytes": 1258016,
+      "publication_status": "production-approved"
     },
     {
       "path": "brand/assets/01-logos/LuxSync_Logo_Orb.png",
       "sha256": "873a6d3692b0e4fba8cdac405c23a3d7e9cd7cfb2302bb78e068c6a4dc605be1",
       "width": 1254,
       "height": 1254,
-      "bytes": 1184931
+      "bytes": 1184931,
+      "publication_status": "production-approved"
     },
     {
       "path": "brand/assets/02-icons/icon_01.png",
       "sha256": "8baedbc78b7c7610ed9ca0f2c2d7a4686cfce30ae23e16b67ce62b49bb2dfd0a",
       "width": 290,
       "height": 362,
-      "bytes": 116143
+      "bytes": 116143,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/02-icons/icon_02.png",
       "sha256": "2047828a2d9f040f3a631e5458686326b5a648c35949d503a33ee0d6615c832d",
       "width": 289,
       "height": 362,
-      "bytes": 115717
+      "bytes": 115717,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/02-icons/icon_03.png",
       "sha256": "c96850cc20e3d51ad6f598f1edb14123e5b7bf2aef7679a04e85a45fc8421fc8",
       "width": 290,
       "height": 362,
-      "bytes": 153785
+      "bytes": 153785,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/02-icons/icon_04.png",
       "sha256": "fae986d72fb6382f4856b4c791e689ef3bca81e7a624c4dbcd21384c1c08ec4e",
       "width": 289,
       "height": 362,
-      "bytes": 116290
+      "bytes": 116290,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/02-icons/icon_05.png",
       "sha256": "5879e6dca48761c9837bc0f770e213a9cf0c889ef6415c4bb5f24e4a508a0e8c",
       "width": 290,
       "height": 362,
-      "bytes": 108228
+      "bytes": 108228,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/02-icons/icon_06.png",
       "sha256": "a5d381e3a8302d0bf0b95a378d5a22287fb5048150cab5e908c66185208e1251",
       "width": 290,
       "height": 362,
-      "bytes": 125115
+      "bytes": 125115,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/02-icons/icon_07.png",
       "sha256": "3da82360a8ac1e144d778086af28fc8e6e78146b1b2125e1bbc421813a1b9dfa",
       "width": 289,
       "height": 362,
-      "bytes": 127100
+      "bytes": 127100,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/02-icons/icon_08.png",
       "sha256": "8de9b73942cd0364d726e207d3d06d9161ad2675856df2788505e342f76e69cc",
       "width": 290,
       "height": 362,
-      "bytes": 135963
+      "bytes": 135963,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/02-icons/icon_09.png",
       "sha256": "220d44eb3cbdb54c4061b34daaa280952398e23131dd28b7e81c13c3916525f0",
       "width": 289,
       "height": 362,
-      "bytes": 120319
+      "bytes": 120319,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/02-icons/icon_10.png",
       "sha256": "644dd75fb1c9f46f7ba09ad563eaa52d0266432f92a85dedbeb7d4c09e70b048",
       "width": 290,
       "height": 362,
-      "bytes": 133125
+      "bytes": 133125,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/02-icons/icon_11.png",
       "sha256": "c6ae7145428f51875e820e0ce627babcbc892ee29e60d350f60a503123bf0d55",
       "width": 290,
       "height": 362,
-      "bytes": 108821
+      "bytes": 108821,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/02-icons/icon_12.png",
       "sha256": "137f59c0fc8359886ab82665d51ba5594decc3dde4ad86e3e0efe429efcc6f6b",
       "width": 289,
       "height": 362,
-      "bytes": 109458
+      "bytes": 109458,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/02-icons/icon_13.png",
       "sha256": "292952f01bbdc9b3582e47f6309c5793afc08bbb545cfca1662f5a0b829ae445",
       "width": 290,
       "height": 362,
-      "bytes": 128275
+      "bytes": 128275,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/02-icons/icon_14.png",
       "sha256": "ece1753b92d17d906e2f0dc44a8069e999fb8754ca570423f9015a804017a984",
       "width": 289,
       "height": 362,
-      "bytes": 103975
+      "bytes": 103975,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/02-icons/icon_15.png",
       "sha256": "306956e98d68361ed4b5553337c8f866c11e5c30d40c6ddc0071321ff0f9f46f",
       "width": 290,
       "height": 362,
-      "bytes": 108484
+      "bytes": 108484,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_01.png",
       "sha256": "08eb57cda672184f937f24bbc10fff7c3c86e928923a0be35c7496b91a80563e",
       "width": 241,
       "height": 362,
-      "bytes": 109820
+      "bytes": 109820,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_02.png",
       "sha256": "38845d115f233f19b40de7086a108fed20ad42e11cd51ba7b9a283413b849056",
       "width": 242,
       "height": 362,
-      "bytes": 100545
+      "bytes": 100545,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_03.png",
       "sha256": "2cce9528ab9a2daccde8d2d42a3ea35aaf66793e12d0d30363a37479b0e3685f",
       "width": 241,
       "height": 362,
-      "bytes": 109305
+      "bytes": 109305,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_04.png",
       "sha256": "bd7d479a0776a8afea48993b213d7dfb3691e60f7d85b07a3a4210eb2de07234",
       "width": 241,
       "height": 362,
-      "bytes": 98229
+      "bytes": 98229,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_05.png",
       "sha256": "d8bd0a3a14c99428f8958869af41007cc1cf82b8241b44836b55318b157c273d",
       "width": 242,
       "height": 362,
-      "bytes": 112206
+      "bytes": 112206,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_06.png",
       "sha256": "bfc7ee7a272be217a2b4c07368bfe2f8f36f270f4cde30ef3382f5fb2bd0a27d",
       "width": 241,
       "height": 362,
-      "bytes": 91345
+      "bytes": 91345,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_07.png",
       "sha256": "25fd85916bc8784edd6499ff7ffcee787ec358618681232ecbff1be6057cca24",
       "width": 241,
       "height": 362,
-      "bytes": 99278
+      "bytes": 99278,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_08.png",
       "sha256": "6be7e9e00ee8a9c809fb308b602d8db3714892f487b26eb479a3888ef4c726a6",
       "width": 242,
       "height": 362,
-      "bytes": 109363
+      "bytes": 109363,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_09.png",
       "sha256": "0bd1c8fc96c4e19f7731a0bc3b258fe462309a4cbdcb0df1bcff8b8d6b98bb2b",
       "width": 241,
       "height": 362,
-      "bytes": 102889
+      "bytes": 102889,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_10.png",
       "sha256": "79d02873a7125cf3522eb5789fa35c247df9538c12f82b0fca97fa09905f4e0b",
       "width": 241,
       "height": 362,
-      "bytes": 100042
+      "bytes": 100042,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_11.png",
       "sha256": "6eaedcdd6b74b6f8e9408ff372263e91a6b6f11fd89203fe89ddb60ed292e85a",
       "width": 242,
       "height": 362,
-      "bytes": 108504
+      "bytes": 108504,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_12.png",
       "sha256": "9f7e467fc79cb33cd2f1a1b4ffd93a1b9095a9ada4d35cf946d83ed335742c1a",
       "width": 241,
       "height": 362,
-      "bytes": 77397
+      "bytes": 77397,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_13.png",
       "sha256": "d107ffd2bd49e2881402cedfc122629092b427ec1471e541becd8ae49410fb71",
       "width": 241,
       "height": 362,
-      "bytes": 93977
+      "bytes": 93977,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_14.png",
       "sha256": "20fb9534e2233ed9d0639d4b16c576354d6a68b2faf25e94bfdeb9cf93a9ebe6",
       "width": 242,
       "height": 362,
-      "bytes": 98592
+      "bytes": 98592,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_15.png",
       "sha256": "9ca651a3f9dd49f03e46e83699ec74563af10a8c7be75a0695d2df9f876ea111",
       "width": 241,
       "height": 362,
-      "bytes": 95279
+      "bytes": 95279,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_16.png",
       "sha256": "b60a0bbfe162e517b51141270237ce68de896780eccb53b3a490c148c73c9604",
       "width": 241,
       "height": 362,
-      "bytes": 95079
+      "bytes": 95079,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_17.png",
       "sha256": "ffd49585380bf6bb68bc3c5ceacc01a47de0af5c92f9f5adb34e2ff31c555338",
       "width": 242,
       "height": 362,
-      "bytes": 102979
+      "bytes": 102979,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/03-buttons/button_18.png",
       "sha256": "fabd50c7817a7d23811c91f0d9db116c5c8dbdba9be447d177545d0c5a8b3ff6",
       "width": 241,
       "height": 362,
-      "bytes": 88608
+      "bytes": 88608,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_01.png",
       "sha256": "c37ea7c6dea7bd94f3672a2f8bec9c16b034fb5faea95f6578b62969408964c4",
       "width": 290,
       "height": 217,
-      "bytes": 95997
+      "bytes": 95997,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_02.png",
       "sha256": "41c7a71eb88870528519bcee5e30465fcc1f521ac92ebdcfb0ae6a61b5fbab06",
       "width": 289,
       "height": 217,
-      "bytes": 71156
+      "bytes": 71156,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_03.png",
       "sha256": "ca90e68451bc6b3ff398ba96cac4aa59c3c0bc73253169625cdef0b1ec1253d9",
       "width": 290,
       "height": 217,
-      "bytes": 74263
+      "bytes": 74263,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_04.png",
       "sha256": "a4b92de1b43db7e96eecf57def5ae2025c810d70a348870bbaab3f15628c1057",
       "width": 289,
       "height": 217,
-      "bytes": 72415
+      "bytes": 72415,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_05.png",
       "sha256": "28a63cac25b89967f41d9ac97189856d17556653589450a45eb6db6ed13282fb",
       "width": 290,
       "height": 217,
-      "bytes": 81373
+      "bytes": 81373,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_06.png",
       "sha256": "134ba392167b47b43ffdbfca706d695e6b6923d8a69699f3f8ece14ee2cc923d",
       "width": 290,
       "height": 217,
-      "bytes": 71847
+      "bytes": 71847,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_07.png",
       "sha256": "5cdbe482d48aff94bc3cd29c81a70e12aebb75962049258c7cee0e916cf6fca3",
       "width": 289,
       "height": 217,
-      "bytes": 71149
+      "bytes": 71149,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_08.png",
       "sha256": "b8d3e1016180943b16bd26dec92aff27938ba6d5077060fa69c62b3346c223ff",
       "width": 290,
       "height": 217,
-      "bytes": 63248
+      "bytes": 63248,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_09.png",
       "sha256": "c91fa147434856ad06f6f4becec8c025bcb6ca4fa954e31a5a7c98d4fe5bf257",
       "width": 289,
       "height": 217,
-      "bytes": 65459
+      "bytes": 65459,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_10.png",
       "sha256": "7c9ec8543fb705006fd695108f7272af9b05b9e24d1310d9fc4a318984abadac",
       "width": 290,
       "height": 217,
-      "bytes": 64842
+      "bytes": 64842,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_11.png",
       "sha256": "daa7f19e385143a0dd9c89a19326f269a136161b231a994e45598681c74c73cc",
       "width": 290,
       "height": 218,
-      "bytes": 84226
+      "bytes": 84226,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_12.png",
       "sha256": "19d007fc7c684cc5c266a57da848d35ad21ef2a943079a504c18a29d9c0258d0",
       "width": 289,
       "height": 218,
-      "bytes": 71462
+      "bytes": 71462,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_13.png",
       "sha256": "df6ac623f738d7a27aee8d45436d3c42dbe1c98b5708d5c580220789d3d413bb",
       "width": 290,
       "height": 218,
-      "bytes": 80466
+      "bytes": 80466,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_14.png",
       "sha256": "12138b17171908cee4203a359e1e8e53602bc334dd574145c77d0f44152ca95a",
       "width": 289,
       "height": 218,
-      "bytes": 69995
+      "bytes": 69995,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_15.png",
       "sha256": "efe1854524795c07ea64176f0fa0a6962de03a4b315623196e1d37175baa2bf4",
       "width": 290,
       "height": 218,
-      "bytes": 58281
+      "bytes": 58281,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_16.png",
       "sha256": "d58cc4ca50abc72f908e61f670cab89fb50008a551c6a724f7af80facaa5bc8a",
       "width": 290,
       "height": 217,
-      "bytes": 77534
+      "bytes": 77534,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_17.png",
       "sha256": "9b50b2d60c47f24c70e227f9e3588d5dbc4b9abb3dff51c8f5e0eacecc73c3e5",
       "width": 289,
       "height": 217,
-      "bytes": 81109
+      "bytes": 81109,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_18.png",
       "sha256": "f28df860a5b1cd3dac7485b39a1e383d38fbf34d97eec91371615cd9372f21a2",
       "width": 290,
       "height": 217,
-      "bytes": 75840
+      "bytes": 75840,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_19.png",
       "sha256": "77d2214e6ae813a3718d6cfca5fa85eb6ff308c96ab8c93b04a4f7ccbb9b70e4",
       "width": 289,
       "height": 217,
-      "bytes": 79250
+      "bytes": 79250,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_20.png",
       "sha256": "603efebfb3b6132fb45f106167e822b09e644187b5b2998de39170702e243f60",
       "width": 290,
       "height": 217,
-      "bytes": 72434
+      "bytes": 72434,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_21.png",
       "sha256": "45def44bef65cbddfb26feeb2d84ac8b4620c4357d2863bcfee818b062fcdb03",
       "width": 290,
       "height": 217,
-      "bytes": 73612
+      "bytes": 73612,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_22.png",
       "sha256": "581243f28d9d93c3a1ae75f4f851701eadfa6048df56289bbe4af5c0bf1f51d7",
       "width": 289,
       "height": 217,
-      "bytes": 71029
+      "bytes": 71029,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_23.png",
       "sha256": "a79ad312a9a6719ad8675f17b801176fa91d216cd37f0dbc412b7161c7105bdf",
       "width": 290,
       "height": 217,
-      "bytes": 75132
+      "bytes": 75132,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_24.png",
       "sha256": "678704a80f8f949e30c74ded05708dd44734e5ffe4d1de656a31e63b37e86f3f",
       "width": 289,
       "height": 217,
-      "bytes": 68405
+      "bytes": 68405,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/04-ui-controls/ui_control_25.png",
       "sha256": "5296138d48085f13ae14a5483337c7ccd2bcf6e63f4b71d766d360607a4ebda4",
       "width": 290,
       "height": 217,
-      "bytes": 65317
+      "bytes": 65317,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_01.png",
       "sha256": "baec662a00b593b1c6b262669fd0551ddc4baea1d4045af6cbc6fc5459c81876",
       "width": 241,
       "height": 272,
-      "bytes": 83580
+      "bytes": 83580,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_02.png",
       "sha256": "43444d7422169a079ba33654958ccb0ba669f1e1cddb629032c952df97c2ed8b",
       "width": 242,
       "height": 272,
-      "bytes": 80703
+      "bytes": 80703,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_03.png",
       "sha256": "036ded9f66e372682a4f28dd460a607071078ef519bae663b1e8956630bdce75",
       "width": 241,
       "height": 272,
-      "bytes": 80850
+      "bytes": 80850,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_04.png",
       "sha256": "f37de4bb60921bd553f1252d022ae35ec304fd7dbee50d3449050e325a07ab7d",
       "width": 241,
       "height": 272,
-      "bytes": 77405
+      "bytes": 77405,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_05.png",
       "sha256": "5fbb8f98de028d4df4db7981d0cdcb29507f2c45128913096d5b71db0406bd23",
       "width": 242,
       "height": 272,
-      "bytes": 69577
+      "bytes": 69577,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_06.png",
       "sha256": "762469634d8c073f2232fc7800354a49a2aafd3823d0dd48ebb1a6cab75ad3ce",
       "width": 241,
       "height": 272,
-      "bytes": 65965
+      "bytes": 65965,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_07.png",
       "sha256": "733a2aacb59764ef997ecf916226cc4f39f4b3f6ec8178c415eeda26dfd918c9",
       "width": 241,
       "height": 271,
-      "bytes": 62666
+      "bytes": 62666,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_08.png",
       "sha256": "e382b6c186342dd16b71492f9c4c7e72adabd85dab332f586c087f87e981040a",
       "width": 242,
       "height": 271,
-      "bytes": 72036
+      "bytes": 72036,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_09.png",
       "sha256": "75a42d6cf7db085ebf4e299e007ce5c753d79edf33c1c61a27b560df08b8a4d8",
       "width": 241,
       "height": 271,
-      "bytes": 61411
+      "bytes": 61411,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_10.png",
       "sha256": "e6834f410d7bf024d32e99661a291ea702bf5a1afbdd05663f1830590a291928",
       "width": 241,
       "height": 271,
-      "bytes": 69776
+      "bytes": 69776,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_11.png",
       "sha256": "45c86eb7a2fe5341cd4f9bd2b7fd837ca66e19bc24f76dca4c97736fe8ca73ff",
       "width": 242,
       "height": 271,
-      "bytes": 65561
+      "bytes": 65561,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_12.png",
       "sha256": "37076d03b6bba14931f6e0363fdbd4d9c1a8984382f0f0ecbf59f207ab481b1f",
       "width": 241,
       "height": 271,
-      "bytes": 64379
+      "bytes": 64379,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_13.png",
       "sha256": "2941df47535794aa8537af0b64e83e88e6ca5d6ddca484ac1f1ec93a8d18f2d6",
       "width": 241,
       "height": 271,
-      "bytes": 70549
+      "bytes": 70549,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_14.png",
       "sha256": "e29fac1e5c92bdc03adb86babe9697657667c202ff58abffb00785c99be8a80c",
       "width": 242,
       "height": 271,
-      "bytes": 73970
+      "bytes": 73970,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_15.png",
       "sha256": "a1b064f50adcb77ff89bc7381797018d936fb5022155f04d2d4eab46f114bd32",
       "width": 241,
       "height": 271,
-      "bytes": 65843
+      "bytes": 65843,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_16.png",
       "sha256": "e763261339e6eebca068007a0585de01b32747a9dec3843f0d05a99f7a959264",
       "width": 241,
       "height": 271,
-      "bytes": 68678
+      "bytes": 68678,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_17.png",
       "sha256": "2fcfa1567fc39cce82da4cbbb2f105157e72e6ef68521f78ced64b0b1fa10bdc",
       "width": 242,
       "height": 271,
-      "bytes": 81906
+      "bytes": 81906,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_18.png",
       "sha256": "2e481022225f7c02df022ef6801613846352c1b3a7c8a7761fae6e52b6d16408",
       "width": 241,
       "height": 271,
-      "bytes": 78042
+      "bytes": 78042,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_19.png",
       "sha256": "0f86581244a89e9944da198100050e196d3b5083e7521af2a55ff246ba945ae9",
       "width": 241,
       "height": 272,
-      "bytes": 75406
+      "bytes": 75406,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_20.png",
       "sha256": "38cbacf5677c1c27ce992ee9feaada233d4ee42b2ed4c1f989716f34ec859cd7",
       "width": 242,
       "height": 272,
-      "bytes": 72049
+      "bytes": 72049,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_21.png",
       "sha256": "ea82395ba25943a75a85e619aec0df33d0d4e8f2a646a1d0e57d956d5e7129f2",
       "width": 241,
       "height": 272,
-      "bytes": 69318
+      "bytes": 69318,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_22.png",
       "sha256": "7de00d1adb3317a7198ed7b8a6c9c45e5d3c4b1e3eb5220c7aacb0df3c19f3f6",
       "width": 241,
       "height": 272,
-      "bytes": 71726
+      "bytes": 71726,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_23.png",
       "sha256": "43c31694b6d0186459fdea0d5cf5beed5676772096b0cf2c1ef710e850f43dab",
       "width": 242,
       "height": 272,
-      "bytes": 76249
+      "bytes": 76249,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/05-dividers-accents/divider_accent_24.png",
       "sha256": "9a0283adbc7c674af3b257027ab02979b966821754ac8440d892a16cb68490dd",
       "width": 241,
       "height": 272,
-      "bytes": 75313
+      "bytes": 75313,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/06-product-cards/product_card_01.png",
       "sha256": "d840f94f3d8261fc0edf15c34b26530770f92c4071f6a5a8bb25b71b3c0e2aaf",
       "width": 724,
       "height": 543,
-      "bytes": 540528
+      "bytes": 540528,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/06-product-cards/product_card_02.png",
       "sha256": "79745887bd9329924cf885a1df86050779f71079df840c47e4a233c59fe8e678",
       "width": 724,
       "height": 543,
-      "bytes": 497722
+      "bytes": 497722,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/06-product-cards/product_card_03.png",
       "sha256": "7bb0a384b2c3dd55509921d30a01a64778984c701476134b890ac0fca2013bbc",
       "width": 724,
       "height": 543,
-      "bytes": 508416
+      "bytes": 508416,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/06-product-cards/product_card_04.png",
       "sha256": "5634e9bfe4a3faca9983085819612095fb961bde35aadc564d6e75e9cff9e5cb",
       "width": 724,
       "height": 543,
-      "bytes": 510149
+      "bytes": 510149,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/07-heroes/home_intelligent_luxury_living.png",
       "sha256": "9e3ab9ecce5977769ad34904e9e216fd475864d18177acd04502518ffc561aef",
       "width": 1448,
       "height": 1086,
-      "bytes": 2024282
+      "bytes": 2024282,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/07-heroes/home_luxury_smart_home_showcase.png",
       "sha256": "d9abff53c9c54a62c39bb63ac2c9cba16f9c86d673fb8fa8a00bd6d80cc2ecfb",
       "width": 1672,
       "height": 941,
-      "bytes": 1844828
+      "bytes": 1844828,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/07-heroes/home_smart_living_showcase.png",
       "sha256": "f6b3ada9af28fcee516c4db42f6fd4515a685d56f3299b2a76218b3596931de3",
       "width": 1672,
       "height": 941,
-      "bytes": 2124878
+      "bytes": 2124878,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/07-heroes/roi_guide_hero.png",
       "sha256": "0e947ec9f071f2051c86d4e2a686fc35554390dc68624cdb90954cc64d91d1d6",
       "width": 1055,
       "height": 1491,
-      "bytes": 2157412
+      "bytes": 2157412,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/08-sections/concierge_journey_infographic.png",
       "sha256": "b870b332429a6d0487ea17f18b44f4842a0692951dcc0a71cb90cdd053ea6bf4",
       "width": 1448,
       "height": 1086,
-      "bytes": 1730328
+      "bytes": 1730328,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/08-sections/faq_concierge_banner.png",
       "sha256": "f8d83bfe87b3a9369e04fbb71b1f0808cf0620f60a7ebc29da34e7d9bb45d080",
       "width": 1672,
       "height": 941,
-      "bytes": 2054842
+      "bytes": 2054842,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/08-sections/meet_the_founders.png",
       "sha256": "3464c0b7ea190f1dd2b7e9698c45e55698f01112a0d3556286f982ac6414e45c",
       "width": 1672,
       "height": 941,
-      "bytes": 2021164
+      "bytes": 2021164,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/09-stationery/stationery_01.png",
       "sha256": "66946a0127c9946dd80ad34c4ea1e54d8cbce777e5ce41fbb3c032f6b957c53c",
       "width": 724,
       "height": 543,
-      "bytes": 595806
+      "bytes": 595806,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/09-stationery/stationery_02.png",
       "sha256": "176480f06a1ab5264c87fc00dbb4baa2ac6bf02972155d1ceaa52c3e2461a200",
       "width": 724,
       "height": 543,
-      "bytes": 514937
+      "bytes": 514937,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/09-stationery/stationery_03.png",
       "sha256": "45022e819570eb4164b7d8732e8f0cc7c1bd20fdff001f2f18225b1c68e446cc",
       "width": 724,
       "height": 543,
-      "bytes": 511105
+      "bytes": 511105,
+      "publication_status": "reference-only"
     },
     {
       "path": "brand/assets/09-stationery/stationery_04.png",
       "sha256": "6ba7d209f55c5a47ca717b1595c31cd7892c33b8bea1a1b4bf5bcc07489189d0",
       "width": 724,
       "height": 543,
-      "bytes": 493473
+      "bytes": 493473,
+      "publication_status": "reference-only"
     }
-  ]
+  ],
+  "brand_system": "LuxSync Production Raster v5",
+  "publication_policy": "Only the three exact logo copies in 01-logos are approved for direct publication from this raster library. Folders 02 through 09 are design-reference exports and must not be published directly because visual QA found baked/generated text, generated logo approximations, or board-crop artifacts. Build production UI with live HTML/CSS, the exact logo masters, and validated commerce/manufacturer imagery.",
+  "status_by_folder": {
+    "01-logos": "production-approved",
+    "02-icons": "reference-only",
+    "03-buttons": "reference-only",
+    "04-ui-controls": "reference-only",
+    "05-dividers-accents": "reference-only",
+    "06-product-cards": "reference-only",
+    "07-heroes": "reference-only",
+    "08-sections": "reference-only",
+    "09-stationery": "reference-only"
+  }
 }

@@ -1,9 +1,9 @@
 # LuxSync Launch Website Information Architecture
 
-**Artifact:** ARC-001  
-**Status:** Active / Approved baseline  
-**Last updated:** 2026-08-31  
-**Repository:** `bbluxsync26/LuxSync_Git`  
+**Artifact:** ARC-001
+**Status:** Active / Approved baseline
+**Last updated:** 2026-08-31
+**Repository:** `bbluxsync26/LuxSync_Git`
 **Governing branch:** `master`
 
 ## Purpose
@@ -12,7 +12,7 @@ Define the launch information architecture for LuxSync using the repository as t
 
 Governing references include `brand/README.md`, `brand/colors.md`, `brand/typography.md`, `brand/voice-and-tone.md`, `website/styles/design-system.md`, `website/pages/home.md`, `website/pages/contact.md`, `content/product-catalog.md`, and `docs/architecture/intelligent-living-concierge.md`.
 
-Where older generated assets or guidance conflict, **LuxSync v3**, Plush Drift design DNA, the current approved asset library, Manrope/Inter typography, and current page/architecture blueprints govern.
+Where older generated assets or guidance conflict, **LuxSync Production Raster v5**, Plush Drift design DNA, the current approved asset library, Manrope/Inter typography, and current page/architecture blueprints govern.
 
 ## Launch Objective
 
@@ -220,7 +220,7 @@ Approved exact logo artwork may preserve its own lettering as artwork and does n
 
 ### Visual character
 
-Use LuxSync v3 with Plush Drift tactile illumination: deep Slate Navy/Dark Suede surfaces, restrained Champagne Rose Gold Metallic detail, Dusty Steel interaction states, Pale Driftwood copy, spacious composition, controlled lighting, and premium imagery.
+Use LuxSync Production Raster v5 with Plush Drift tactile illumination: deep Slate Navy/Dark Suede surfaces, restrained Champagne Rose Gold Metallic detail, Dusty Steel interaction states, Pale Driftwood copy, spacious composition, controlled lighting, and premium imagery.
 
 Avoid cyberpunk neon, unapproved lavender/purple base treatments, loud gradients, dense gadget-store grids, generic SaaS blue, excessive glassmorphism, and unnecessary motion.
 
@@ -256,3 +256,9 @@ A first-time visitor should quickly answer:
 - How do I shop?
 - How do I ask a question or request a consultation?
 - How do I get support?
+
+## Production Route Baseline
+
+The authoritative route/blueprint matrix is `website/implementation-manifest.json`. Navigation is governed by `website/navigation.md`, and production visual usage is governed by `website/asset-map.md`.
+
+Required launch routes include Home, Concierge, My LuxSync Blueprint, Solutions hub, Commercial Offices, Senior Living, Short-Term Rentals, Residential, Aging in Place, Shop, Guides, About, FAQs and Contact.

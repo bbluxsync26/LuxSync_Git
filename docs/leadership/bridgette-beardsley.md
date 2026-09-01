@@ -10,9 +10,9 @@
 
 ## Co-Founder & Chief Technology and Strategy Officer
 
-**LuxSync LLC**  
-**Leadership profile:** Approved for website and company materials  
-**Brand system:** LuxSync v3  
+**LuxSync LLC**
+**Leadership profile:** Approved for website and company materials
+**Brand system:** LuxSync Production Raster v5
 **Voice:** Intelligent Calm
 
 ## Website Biography
@@ -34,7 +34,7 @@ Bridgette Beardsley is the Co-Founder and visionary behind LuxSync. Drawing on m
 - Use the protected LuxSync logo artwork without redrawing, retyping, recoloring, or regenerating it.
 - Set headings and title treatments in Manrope 500/600.
 - Set biography and supporting copy in Inter 400/500.
-- Use only the approved LuxSync v3 palette for branded text, rules, backgrounds, and accents.
+- Use only the approved LuxSync Production Raster v5 palette for branded text, rules, backgrounds, and accents.
 - Champagne Rose Gold Metallic may be used as a restrained premium accent with `#D6B0A0` as its anchor.
 - Keep the presentation spacious, refined, warm, and confident.
 

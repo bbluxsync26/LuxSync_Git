@@ -1,7 +1,7 @@
 # DEC-005 — Senior Service Pricing
 
-**Status:** Open / Decision Required  
-**Date opened:** 2026-08-30  
+**Status:** Open / Decision Required
+**Date opened:** 2026-08-30
 **Scope:** Senior Independent Safety hardware/service pricing
 
 ## Context

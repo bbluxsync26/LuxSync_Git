@@ -1,7 +1,7 @@
 # LuxSync Color System
 
-**Status:** Active / Authoritative  
-**Base brand system:** Plush Drift v2.1  
+**Status:** Active / Authoritative
+**Base brand system:** Plush Drift v2.1
 **Web visual treatment:** Luxury Orbit
 
 Luxury Orbit is the active website and web-graphics treatment. It is built on the **Plush Drift v2.1 seven-color approved palette** rather than replacing it.

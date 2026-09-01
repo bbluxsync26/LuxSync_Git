@@ -1,7 +1,7 @@
 # LuxSync LLC: Unified Business Plan v2.1
-**Investor & Operational Strategy Playbook**  
-*Where Luxury Lives Intelligently*  
-*Classification: Confidential / Proprietary*  
+**Investor & Operational Strategy Playbook**
+*Where Luxury Lives Intelligently*
+*Classification: Confidential / Proprietary*
 *Reconciled: August 30, 2026*
 
 ---

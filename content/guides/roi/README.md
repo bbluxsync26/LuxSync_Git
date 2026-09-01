@@ -73,4 +73,3 @@ Each guide should be offered as an accessible web page and downloadable branded 
 Primary CTA: **Find My LuxSync Solution**
 Consultation CTA: **Request a Consultation**
 Information contact: `info@luxsync.net`
-

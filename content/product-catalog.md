@@ -1,9 +1,9 @@
 # LuxSync Product & Solution Catalog
 
-**Status:** Active planning catalog / customer-facing publication requires validated Commerce Plus data  
-**Last updated:** 2026-08-31  
-**Commerce system of record:** GoDaddy Commerce Plus  
-**Primary compatibility standard:** Samsung SmartThings  
+**Status:** Active planning catalog / customer-facing publication requires validated Commerce Plus data
+**Last updated:** 2026-08-31
+**Commerce system of record:** GoDaddy Commerce Plus
+**Primary compatibility standard:** Samsung SmartThings
 **Official slogan:** **Where Luxury Lives Intelligently**
 
 ## Purpose
@@ -325,3 +325,7 @@ When products or bundles are added:
 6. Confirm subscription and installation requirements.
 7. Update the Concierge product mapping without changing stable Experience IDs unnecessarily.
 8. Update `docs/master-catalog.md` when the change is durable.
+
+## Website Display Contract
+
+The shop implementation is `website/pages/shop.md`. Product and collection surfaces are built live. The imported files under `brand/assets/06-product-cards/` are reference-only and must not supply product names, prices, ratings, inventory or imagery for live commerce.

@@ -2,7 +2,7 @@
 
 **Status:** Active / Approved website content
 **Company:** LuxSync LLC
-**Brand system:** LuxSync v3
+**Brand system:** LuxSync Production Raster v5
 **Voice:** Intelligent Calm
 **Website blueprint:** `website/pages/faqs.md`
 

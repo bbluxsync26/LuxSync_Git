@@ -1,7 +1,7 @@
 # LuxSync Contact Page Blueprint
 
-**Status:** Active design baseline  
-**Content source:** `content/contact.md`  
+**Status:** Active design baseline
+**Content source:** `content/contact.md`
 **Shared data contract:** LuxSync Property Profile used by `website/src/concierge/`
 
 **Official slogan:** **Where Luxury Lives Intelligently**
@@ -378,7 +378,7 @@ The customer should not need to re-enter information already supplied during the
 
 ## 18. Visual Direction
 
-Use LuxSync v3 and Plush Drift tactile illumination.
+Use LuxSync Production Raster v5 and Plush Drift tactile illumination.
 
 The experience should feel calm, spacious, premium, and intelligent. Use Slate Navy / Dark Suede surfaces, Pale Driftwood copy, Dusty Steel interaction accents, and restrained Champagne Rose Gold Metallic detail.
 
@@ -391,3 +391,7 @@ Heading: **Thank You**
 Message: **Your message has been received. A LuxSync team member will review your request and respond using the contact information you provided.**
 
 Do not promise an unapproved response-time SLA.
+
+## Production Visual Assignment
+
+Use the exact LuxSync orb plus live adaptive intent cards and forms. Support hours, response times and service promises must remain live copy only when explicitly approved. Do not bake contact information into imagery. See `website/asset-map.md`.

@@ -1,25 +1,28 @@
-# LuxSync Production Raster Asset Library
+# LuxSync Production Visual Library
 
-**Status:** Active / Production  
-**Source of truth:** `brand/assets/`  
-**Manifest:** `brand/assets/asset-manifest.json`
+**Status:** Active / Authoritative
+**Brand system:** LuxSync Production Raster v5
 
-The production graphics library was installed from the reviewed raster package and replaces the retired placeholder SVG reconstructions.
+## Publication-safe assets
 
-## Production folders
+The three protected logo masters under `brand/source-logo/` and their byte-identical copies under `brand/assets/01-logos/` are approved for direct use.
 
-- `brand/assets/01-logos/` — 3 exact copies of the immutable approved logo masters
-- `brand/assets/02-icons/` — 15 finished individual icon graphics
-- `brand/assets/03-buttons/` — 18 finished CTA/button graphics
-- `brand/assets/04-ui-controls/` — 25 finished UI-reference graphics
-- `brand/assets/05-dividers-accents/` — 24 finished metallic dividers and accents
-- `brand/assets/06-product-cards/` — 4 finished smart-home product-card graphics
-- `brand/assets/07-heroes/` — 4 approved hero graphics
-- `brand/assets/08-sections/` — 3 Concierge / FAQ / founders section graphics
-- `brand/assets/09-stationery/` — 4 finished stationery graphics
+All other raster files currently under `brand/assets/02-icons/` through `brand/assets/09-stationery/` are retained as **reference-only design material**. A visual QA pass identified baked/generated text, generated logo approximations, or board-crop artifacts in that import. They must not be used as public UI, live product cards, founder information, support information, or claims.
 
-The authoritative logo masters remain in `brand/source-logo/` and must never be redrawn, recolored, regenerated, or re-typeset.
+## Production visual strategy
 
-The approved public slogan is **Where Luxury Lives Intelligently**. Brushed Dusty Steel remains the sole approved metallic-blue treatment, with Champagne Rose Gold Metallic anchored at `#D6B0A0`.
+The launch website should compose its visual language live:
 
-Live interactive controls should be implemented with accessible HTML/CSS using the visual system as reference rather than embedding interaction logic in raster images.
+- exact LuxSync logo artwork;
+- Slate Navy and Dark Suede architectural fields;
+- Pale Driftwood copy;
+- Dusty Steel interaction states;
+- restrained Champagne Rose Gold premium detail;
+- Manrope/Inter live typography;
+- CSS-built cards, controls, dividers, forms and responsive layouts;
+- validated product/manufacturer imagery only when tied to a validated commerce item;
+- clean text-free editorial photography only when it has been explicitly approved.
+
+This avoids baking prices, availability, founder identities, support hours, slogans or other mutable information into image files.
+
+See `website/asset-map.md` for the route-by-route visual assignment and `brand/assets/asset-manifest.json` for publication status.

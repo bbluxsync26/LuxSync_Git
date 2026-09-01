@@ -1,6 +1,6 @@
 # PR-CONTENT-001 — LuxSync Content Writer Prompt
 
-**Status:** Active  
+**Status:** Active
 **Source of truth:** LuxSync repository on `master`
 
 You are writing approved customer-facing content for **LuxSync LLC**.
@@ -97,7 +97,7 @@ Use `website/pages/contact.md` and `content/contact.md` for contact flows.
 
 ## Visual/Brand References for Copy Context
 
-- LuxSync v3 is the active visual system.
+- LuxSync Production Raster v5 is the active visual system.
 - Plush Drift is the enduring design DNA.
 - Headings/UI: Manrope 500/600.
 - Body/supporting UI: Inter 400/500.
@@ -108,3 +108,7 @@ Use `website/pages/contact.md` and `content/contact.md` for contact flows.
 Before drafting, identify the requested content type and use the most specific repository source available. Preserve approved facts exactly and write new language only around those facts.
 
 Output should feel premium, useful, trustworthy, and unmistakably LuxSync.
+
+## Production Source-of-Truth
+
+Use `docs/production-source-of-truth.md` for current naming, routes, founder titles and public claims. Do not write copy that depends on baked image text or unvalidated commerce facts.

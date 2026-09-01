@@ -1,11 +1,11 @@
 # LuxSync Intelligent Living Concierge Architecture
 
-**Artifact:** ARC-002  
-**Status:** Active / Flagship experience  
-**Entry point:** **Find My LuxSync Solution**  
-**Guided experience:** **LuxSync Intelligent Living Concierge**  
-**Output:** **My LuxSync Blueprint**  
-**Engine source:** `website/src/concierge/`  
+**Artifact:** ARC-002
+**Status:** Active / Flagship experience
+**Entry point:** **Find My LuxSync Solution**
+**Guided experience:** **LuxSync Intelligent Living Concierge**
+**Output:** **My LuxSync Blueprint**
+**Engine source:** `website/src/concierge/`
 **Official slogan:** **Where Luxury Lives Intelligently**
 
 ## Product Principle
@@ -151,3 +151,13 @@ The experience succeeds when a visitor arrives thinking:
 and leaves thinking:
 
 **This is how I want my space to live.**
+
+## Production Implementation Handoff
+
+- Page blueprint: `website/pages/concierge.md`
+- Result blueprint: `website/pages/my-luxsync-blueprint.md`
+- Engine modules: `website/src/concierge/modules/`
+- Generated production configuration: `website/src/concierge/luxsync-concierge-engine.v1.json`
+- Field dictionary: `website/src/concierge/luxsync-concierge-engine-field-map.md`
+
+The generated configuration is rebuilt and checked in CI so implementation cannot drift from the tracked modules.

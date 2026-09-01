@@ -1,9 +1,9 @@
 # LuxSync Project Runbook
 
-**Artifact:** DOC-007  
-**Status:** Active / Reconciled  
-**Last updated:** 2026-08-31  
-**Repository:** `bbluxsync26/LuxSync_Git`  
+**Artifact:** DOC-007
+**Status:** Active / Reconciled
+**Last updated:** 2026-08-31
+**Repository:** `bbluxsync26/LuxSync_Git`
 **Default branch:** `master`
 
 ## Purpose
@@ -45,7 +45,7 @@ The repository is the source of truth. Conversation drafts and external copies b
 | Website generation | GoDaddy Airo AI Builder | Staging/reference design and code generation | Governed by PR-001 |
 | Optimization | GoDaddy Airo Plus | SEO/content/marketing/accessibility assistance where supported | Supporting only |
 | Domain/DNS | GoDaddy | Public domain and DNS | Deployment runbook pending |
-| Visual system | LuxSync v3 | Current website/brand implementation | Active / authoritative |
+| Visual system | LuxSync Production Raster v5 | Current website/brand implementation | Active / authoritative |
 | Design DNA | Plush Drift | Tactile illumination and enduring interaction language | Active / authoritative |
 | Concierge | `website/src/concierge/` | Rules-based guided recommendation engine | Active / v1 |
 | Product planning | `content/product-catalog.md` | Product families, bundles, Experience concepts | Active / canonical planning catalog |
@@ -60,7 +60,7 @@ Use `docs/master-catalog.md` for precedence.
 
 Current implementation rules:
 
-- Visual system: **LuxSync v3**
+- Visual system: **LuxSync Production Raster v5**
 - Design DNA: **Plush Drift**
 - Sole approved public slogan / hero line: **Where Luxury Lives Intelligently**
 - Primary homepage CTA: **Find My LuxSync Solution**
@@ -110,7 +110,6 @@ Retired visual systems, generators, hero language, and slogan treatments do not 
 | CONTENT-003 | Contact Content | `content/contact.md` | Active |
 | CONTENT-004 | Product & Solution Catalog | `content/product-catalog.md` | Active |
 | RB-002 | GoDaddy Airo AI Builder | `docs/runbooks/RB-002-GoDaddy-Airo-AI-Builder.md` | Active |
-| RB-008 | Prior Luxury Orbit asset generation | `docs/runbooks/RB-008-Luxury-Orbit-Brand-Asset-Generation.md` | Historical / Superseded |
 | RB-009 | Repository Consistency Validation | `docs/runbooks/RB-009-Repository-Consistency-Validation.md` | Active |
 | CL-001 | Airo First-Pass Review | `docs/checklists/CL-001-Airo-First-Pass-Review.md` | Active |
 | PR-001 | Airo Master Website Build Prompt | `prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md` | Active / Reconciled |
@@ -123,7 +122,7 @@ Retired visual systems, generators, hero language, and slogan treatments do not 
 - [x] Master Catalog and project runbook established
 - [x] Launch information architecture established
 - [x] Commerce Plus/Airo boundary established
-- [x] LuxSync v3 / Plush Drift governance established
+- [x] LuxSync Production Raster v5 / Plush Drift governance established
 - [x] Manrope/Inter typography contract established
 - [x] Approved logo artwork protected
 - [x] Founder biographies and exact leadership titles established
@@ -176,15 +175,15 @@ The validation should verify current source-of-truth files, sole slogan usage, f
 
 ## Validation / Troubleshooting Log Template
 
-**Date:**  
-**Component:**  
-**Environment:**  
-**Symptom:**  
-**Cause:**  
-**Resolution:**  
-**Validation:**  
-**Related artifact:**  
-**Commit/deployment:**  
+**Date:**
+**Component:**
+**Environment:**
+**Symptom:**
+**Cause:**
+**Resolution:**
+**Validation:**
+**Related artifact:**
+**Commit/deployment:**
 
 ## Decision Log
 
@@ -205,7 +204,11 @@ The validation should verify current source-of-truth files, sole slogan usage, f
 |---|---|
 | 2026-08-29 | Initial project runbook created. |
 | 2026-08-30 | Reconciled commerce/Airo architecture and pricing guardrails. |
-| 2026-08-31 | Established current LuxSync v3 / Plush Drift / Manrope + Inter governance. |
+| 2026-08-31 | Established current LuxSync Production Raster v5 / Plush Drift / Manrope + Inter governance. |
 | 2026-08-31 | Added approved founder profiles and canonical FAQs. |
 | 2026-08-31 | Added Intelligent Living Concierge, My LuxSync Blueprint, adaptive Contact, shared Property Profile, and Product & Solution Catalog. |
 | 2026-08-31 | Reconciled reusable prompts and retired alternate slogan/hero treatments in favor of Where Luxury Lives Intelligently. |
+
+## Production Source-of-Truth Handoff
+
+The current website source-of-truth baseline is `LuxSync Production Raster v5` with the implementation manifest at `website/implementation-manifest.json`. Use `docs/production-source-of-truth.md` as the first operational reference and `website/asset-map.md` for visual publication rules.

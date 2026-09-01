@@ -1,6 +1,6 @@
 # Homepage
 
-**Status:** Active content baseline  
+**Status:** Active content baseline
 **Website blueprint:** `website/pages/home.md`
 
 ## Brand

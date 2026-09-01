@@ -22,7 +22,7 @@
 | Surface | Purpose | Enter |
 |---|---|---|
 | **Strategy** | Business model, launch, finance, roadmap, decisions | [`docs/`](docs/) |
-| **Brand** | LuxSync v3, Plush Drift DNA, palette, type, voice, assets | [`brand/`](brand/) |
+| **Brand** | LuxSync Production Raster v5, Plush Drift DNA, palette, type, voice, assets | [`brand/`](brand/) |
 | **Content** | Approved website copy, FAQs, Contact, product/solution catalog | [`content/`](content/) |
 | **Prompts** | Airo build prompt and reusable AI workflows | [`prompts/`](prompts/) |
 | **Website** | IA, page blueprints, design system, Concierge engine | [`website/`](website/) |
@@ -34,7 +34,7 @@
 ## ✦ Brand Contract
 
 - **Sole approved public slogan / hero line:** **Where Luxury Lives Intelligently**
-- **Visual system:** LuxSync v3
+- **Visual system:** LuxSync Production Raster v5
 - **Design DNA:** Plush Drift
 - **Voice:** Intelligent Calm
 - **Headings / navigation / CTA / graphic UI:** Manrope 500/600
@@ -74,7 +74,7 @@ The governing model is:
 
 Rather than requiring customers to begin with device models and protocols, the Concierge learns about the property, approximate square footage, existing technology, routines, goals, frustrations, and priorities. The engine then recommends LuxSync Experiences, a foundation, compatibility context, an implementation path, and a phased roadmap.
 
-**Architecture:** [`docs/architecture/intelligent-living-concierge.md`](docs/architecture/intelligent-living-concierge.md)  
+**Architecture:** [`docs/architecture/intelligent-living-concierge.md`](docs/architecture/intelligent-living-concierge.md)
 **Engine:** [`website/src/concierge/`](website/src/concierge/)
 
 ### Launch Experience Concepts
@@ -170,8 +170,8 @@ Homepage action hierarchy:
 
 The launch storefront should feel premium, warm, architectural, calm, mobile-first, accessible, curated rather than crowded, and tactile rather than flat.
 
-**Website design system:** [`website/styles/design-system.md`](website/styles/design-system.md)  
-**Website architecture:** [`docs/architecture/website-information-architecture.md`](docs/architecture/website-information-architecture.md)  
+**Website design system:** [`website/styles/design-system.md`](website/styles/design-system.md)
+**Website architecture:** [`docs/architecture/website-information-architecture.md`](docs/architecture/website-information-architecture.md)
 **Airo master prompt:** [`prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md`](prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md)
 
 ---
@@ -200,6 +200,6 @@ Future capabilities such as saved Blueprints, downloadable SmartThings automatio
 
 **Where Luxury Lives Intelligently**
 
-*Plush Drift design DNA · LuxSync v3 visual system · Manrope + Inter*
+*Plush Drift design DNA · LuxSync Production Raster v5 visual system · Manrope + Inter*
 
 </div>

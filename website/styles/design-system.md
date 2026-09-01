@@ -1,6 +1,6 @@
 # LuxSync Website Design System
 
-**Status:** Active / Reconciled  
+**Status:** Active / Reconciled
 **Brand system:** LuxSync Production Raster v5
 **Design DNA:** Plush Drift
 

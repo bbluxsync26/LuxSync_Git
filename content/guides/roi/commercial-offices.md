@@ -64,4 +64,3 @@ Choose one floor, department, or site where the baseline is clear. Prioritize tw
 Results depend on building systems, occupancy, climate, tariffs, operating practices, device compatibility, and adoption. LuxSync does not guarantee savings or operational outcomes. Access, security-related, and property-awareness technology does not replace code-required systems, professional monitoring, or emergency services.
 
 **Next step:** **Find My LuxSync Solution** or request an office consultation at `info@luxsync.net`.
-
