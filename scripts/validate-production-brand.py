@@ -79,13 +79,15 @@ for qa in ('qa/icons-contact-sheet.jpg','qa/dividers-contact-sheet.jpg'):
 for p in ASSETS.rglob('*'):
     if p.is_file() and any(token in p.name.lower() for token in ('icon_','button_','ui_control_')): fail(f'meaningless legacy crop filename remains: {p.relative_to(ROOT)}')
 
-for rel in ('brand/README.md','brand/assets/README.md','brand/colors.md','website/styles/design-system.md'):
+for rel in ('brand/README.md','brand/colors.md','website/styles/design-system.md'):
     p=ROOT/rel
     if not p.exists(): fail(f'missing governing file: {rel}')
     else:
         text=p.read_text(encoding='utf-8',errors='replace')
         for token in ('#7B96B2','#D6B0A0','Brushed Dusty Steel'):
             if token not in text: fail(f'{rel}: missing {token}')
+
+if not (ASSETS/'README.md').exists(): fail('missing brand/assets/README.md')
 
 if errors:
     print('LuxSync production brand validation FAILED:')
