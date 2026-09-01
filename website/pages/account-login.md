@@ -16,7 +16,7 @@ The experience must remain simple, secure, accessible, commerce-oriented, and vi
 
 ## Non-Negotiable Brand Rules
 
-1. Use **only** the approved logo masters in `brand/assets/01-logos/`.
+1. Use **only** the approved logo masters in `brand/assets/logos/png/`.
 2. Never redraw, retype, recolor, regenerate, simplify, or reinterpret the LuxSync logo.
 3. Desktop/header brand use: `brand/assets/logos/png/luxsync-horizontal-combo.png`.
 4. Alternate extended horizontal use: `brand/assets/logos/png/luxsync-horizontal.png`.

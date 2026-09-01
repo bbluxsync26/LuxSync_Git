@@ -190,7 +190,7 @@ Governing artifacts:
 Key principles:
 
 - every ordinary customer receives the same VIP-level welcome and service treatment;
-- use only the three approved immutable logo masters under `brand/assets/01-logos/`;
+- use only the three approved immutable logo masters under `brand/assets/logos/png/`;
 - use Plush Drift tactile illumination for login card, fields, and primary CTA;
 - keep authentication calm, private, and friction-light;
 - Dusty Steel is the preferred cool concealed underlight;

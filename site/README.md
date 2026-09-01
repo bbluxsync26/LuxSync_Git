@@ -34,4 +34,4 @@ The Concierge stores in-progress answers and the generated Blueprint in browser 
 
 ## Brand guardrails
 
-The build uses only the approved palette and exact protected logo assets. Imported raster boards/crops outside `brand/assets/01-logos/` remain reference-only and are not wired into the live site.
+The build uses only the approved palette and exact protected logo assets. Imported raster boards/crops outside `brand/assets/logos/png/` remain reference-only and are not wired into the live site.
