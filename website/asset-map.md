@@ -11,7 +11,7 @@
 - Live UI: HTML/CSS using `website/styles/design-system.md`
 - VIP account interaction tokens: `website/styles/account-access-tokens.css`
 
-Do not publish direct raster assets from `brand/assets/02-icons/` through `brand/assets/09-stationery/`. Those files remain reference-only after visual QA. The dedicated auth mini-library under `brand/assets/10-auth/` has its own explicit publication status in `brand/assets/10-auth/manifest.json`.
+Do not publish direct raster assets from `brand/assets/02-icons/` through `brand/assets/09-stationery/`. Those files remain reference-only after visual QA. The dedicated auth vector mini-library lives under `website/assets/auth/` and has explicit publication status in `website/assets/auth/manifest.json`.
 
 ## Route visual assignments
 
@@ -45,18 +45,18 @@ No generated, retyped, redrawn, recolored, or substitute logo is allowed in the 
 
 ### Production-approved auth atmosphere
 
-- `brand/assets/10-auth/login-vip-hero.svg` — desktop welcome-zone background
-- `brand/assets/10-auth/login-vip-hero-mobile.svg` — mobile background
-- `brand/assets/10-auth/member-access-ambient.svg` — reusable concealed orbit/underlight layer
-- `brand/assets/10-auth/account-welcome-banner.svg` — post-login welcome base
+- `website/assets/auth/login-vip-hero.svg` — desktop welcome-zone background
+- `website/assets/auth/login-vip-hero-mobile.svg` — mobile background
+- `website/assets/auth/member-access-ambient.svg` — reusable concealed orbit/underlight layer
+- `website/assets/auth/account-welcome-banner.svg` — post-login welcome base
 
 These assets remain text-free so all authentication, customer, and status copy stays live and accessible.
 
 ### Auth design references
 
-- `brand/assets/10-auth/auth-card-reference.svg`
-- `brand/assets/10-auth/auth-input-states.svg`
-- `brand/assets/10-auth/auth-button-states.svg`
+- `website/assets/auth/auth-card-reference.svg`
+- `website/assets/auth/auth-input-states.svg`
+- `website/assets/auth/auth-button-states.svg`
 
 These are reference-only. Do not publish them as functional UI. Implement their geometry, focus, hover, press, and reduced-motion behavior with semantic HTML/CSS using `website/styles/account-access-tokens.css`.
 
