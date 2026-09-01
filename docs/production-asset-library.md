@@ -14,6 +14,8 @@ Every reusable production graphic has three corresponding files with the same se
 2. transparent PNG where appropriate
 3. WebP
 
+The current clean production library contains **31 approved atomic assets and 93 format-specific production files**.
+
 The current clean production families are:
 
 - `brand/assets/logos/`
