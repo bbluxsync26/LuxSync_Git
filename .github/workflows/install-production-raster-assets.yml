@@ -1,0 +1,157 @@
+name: Install LuxSync production raster assets
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/install-production-raster-assets.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install finished production assets from uploaded ZIP
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, json, shutil, struct, zipfile
+
+          root = Path.cwd()
+          zip_path = root / 'incoming' / 'luxsync_production_graphics_atomic_pack.zip'
+          if not zip_path.exists():
+              raise SystemExit('uploaded production ZIP not found')
+
+          tmp = root / '.production-raster-install'
+          if tmp.exists():
+              shutil.rmtree(tmp)
+          tmp.mkdir()
+          with zipfile.ZipFile(zip_path) as zf:
+              zf.extractall(tmp)
+
+          expected = {
+              'website/icons': 15,
+              'website/buttons': 18,
+              'website/ui-controls': 25,
+              'website/dividers-accents': 24,
+              'website/product-cards': 4,
+              'website/heroes': 4,
+              'website/sections': 3,
+              'print/stationery': 4,
+          }
+          for rel, minimum in expected.items():
+              p = tmp / rel
+              files = list(p.glob('*.png')) if p.exists() else []
+              if len(files) < minimum:
+                  raise SystemExit(f'{rel}: expected at least {minimum} PNG files; found {len(files)}')
+
+          def png_dims(path):
+              data = path.read_bytes()
+              if not data.startswith(b'\x89PNG\r\n\x1a\n'):
+                  raise SystemExit(f'not a valid PNG signature: {path}')
+              if data[12:16] != b'IHDR':
+                  raise SystemExit(f'PNG missing IHDR: {path}')
+              return struct.unpack('>II', data[16:24])
+
+          for rel in expected:
+              for p in (tmp / rel).glob('*.png'):
+                  w, h = png_dims(p)
+                  if w < 32 or h < 32:
+                      raise SystemExit(f'implausibly small production image: {p} = {w}x{h}')
+
+          assets = root / 'brand' / 'assets'
+          if assets.exists():
+              shutil.rmtree(assets)
+          mappings = {
+              'website/icons': '02-icons',
+              'website/buttons': '03-buttons',
+              'website/ui-controls': '04-ui-controls',
+              'website/dividers-accents': '05-dividers-accents',
+              'website/product-cards': '06-product-cards',
+              'website/heroes': '07-heroes',
+              'website/sections': '08-sections',
+              'print/stationery': '09-stationery',
+          }
+          for src_rel, dst_name in mappings.items():
+              dst = assets / dst_name
+              dst.mkdir(parents=True, exist_ok=True)
+              for src in sorted((tmp / src_rel).glob('*.png')):
+                  shutil.copy2(src, dst / src.name)
+
+          logo_dst = assets / '01-logos'
+          logo_dst.mkdir(parents=True, exist_ok=True)
+          for name in ('LuxSync_Logo_Horizontal_Combo.png','LuxSync_Logo_Horizontal_Final.png','LuxSync_Logo_Orb.png'):
+              src = root / 'brand' / 'source-logo' / name
+              if not src.exists():
+                  raise SystemExit(f'missing authoritative logo master: {src}')
+              shutil.copy2(src, logo_dst / name)
+
+          ref_src = tmp / 'brand' / 'reference-boards'
+          ref_dst = root / 'brand' / 'reference-boards'
+          if ref_dst.exists():
+              shutil.rmtree(ref_dst)
+          if ref_src.exists():
+              shutil.copytree(ref_src, ref_dst)
+
+          files = []
+          for p in sorted(assets.rglob('*')):
+              if p.is_file() and p.suffix.lower() == '.png':
+                  w, h = png_dims(p)
+                  files.append({
+                      'path': p.relative_to(root).as_posix(),
+                      'sha256': hashlib.sha256(p.read_bytes()).hexdigest(),
+                      'width': w,
+                      'height': h,
+                      'bytes': p.stat().st_size,
+                  })
+          manifest = {
+              'version': '5.0-production-raster',
+              'source_of_truth': 'brand/assets',
+              'source_package': 'incoming/luxsync_production_graphics_atomic_pack.zip',
+              'official_slogan': 'Where Luxury Lives Intelligently',
+              'metallic_blue': 'Brushed Dusty Steel',
+              'files': files,
+          }
+          (assets / 'asset-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
+          (assets / 'README.md').write_text('''# LuxSync Production Asset Library\n\n**Status:** Active / Production\n\nThis directory contains the finished raster production graphics. The retired placeholder SVG reconstructions are removed.\n\n- `01-logos/` exact copies of the immutable approved logo masters\n- `02-icons/` finished individual icon graphics\n- `03-buttons/` finished CTA/button graphics\n- `04-ui-controls/` finished UI-reference graphics\n- `05-dividers-accents/` finished metallic dividers and accents\n- `06-product-cards/` finished smart-home product-card graphics\n- `07-heroes/` approved hero graphics\n- `08-sections/` Concierge, FAQ, and founders section graphics\n- `09-stationery/` finished stationery graphics\n\nApproved palette: Slate Navy `#0D1526`, Dark Suede `#172036`, Pale Driftwood `#D0BEB0`, Warm Taupe Mauve `#9E8B85`, Antique Rose Taupe `#967878`, Dusty Steel `#7B96B2`, Champagne Rose Gold Metallic anchor `#D6B0A0`.\n\n**Brushed Dusty Steel** is the sole approved metallic-blue treatment.\n''', encoding='utf-8')
+
+          brand_readme = root / 'brand' / 'README.md'
+          text = brand_readme.read_text(encoding='utf-8')
+          text = text.replace('## Atomic asset rule\nEvery reusable graphic object is an individual file under `brand/assets/`.', '## Production asset rule\nEvery reusable finished graphic object is an individual PNG under `brand/assets/`. Placeholder SVG reconstructions are retired and prohibited.')
+          brand_readme.write_text(text, encoding='utf-8')
+
+          design = root / 'website' / 'styles' / 'design-system.md'
+          text = design.read_text(encoding='utf-8')
+          text = text.replace('**Brand system:** LuxSync v3', '**Brand system:** LuxSync Production Raster v5')
+          text = text.replace('LuxSync v3 is the active website treatment:', 'LuxSync Production Raster v5 is the active website treatment:')
+          text = text.replace('- prefer SVG for vector UI and WebP for production scene imagery', '- use the approved finished PNG/WebP graphics for branded visual assets; build live interactive UI with accessible HTML/CSS rather than baking interaction into image files')
+          design.write_text(text, encoding='utf-8')
+
+          validator = root / 'scripts' / 'validate-brand-v3.py'
+          validator.write_text('''#!/usr/bin/env python3\nfrom pathlib import Path\nimport json, struct\nROOT = Path(__file__).resolve().parents[1]\nASSETS = ROOT / "brand/assets"\nerrors = []\nrequired_logos = ["LuxSync_Logo_Horizontal_Combo.png","LuxSync_Logo_Horizontal_Final.png","LuxSync_Logo_Orb.png"]\nfor name in required_logos:\n    src = ROOT / "brand/source-logo" / name\n    dst = ASSETS / "01-logos" / name\n    if not src.exists(): errors.append(f"missing authoritative logo master: {name}")\n    if not dst.exists(): errors.append(f"missing production logo copy: {name}")\n    elif src.read_bytes() != dst.read_bytes(): errors.append(f"production logo differs from authoritative master: {name}")\nexpected = {"01-logos":3,"02-icons":15,"03-buttons":18,"04-ui-controls":25,"05-dividers-accents":24,"06-product-cards":4,"07-heroes":4,"08-sections":3,"09-stationery":4}\nfor folder, count in expected.items():\n    p = ASSETS / folder\n    actual = len(list(p.glob("*.png"))) if p.exists() else 0\n    if actual != count: errors.append(f"brand/assets/{folder}: expected {count} PNGs; found {actual}")\nif list(ASSETS.rglob("*.svg")): errors.append("placeholder SVG files remain under brand/assets")\nfor p in ASSETS.rglob("*.png"):\n    data = p.read_bytes()\n    if not data.startswith(b"\\x89PNG\\r\\n\\x1a\\n") or data[12:16] != b"IHDR": errors.append(f"invalid PNG: {p.relative_to(ROOT)}")\nmanifest_path = ASSETS / "asset-manifest.json"\nif not manifest_path.exists(): errors.append("missing production asset manifest")\nelse:\n    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))\n    if manifest.get("version") != "5.0-production-raster": errors.append("manifest version must be 5.0-production-raster")\n    if manifest.get("source_of_truth") != "brand/assets": errors.append("manifest source_of_truth must be brand/assets")\nfor rel in ["brand/README.md","brand/assets/README.md","brand/colors.md"]:\n    p = ROOT / rel\n    if not p.exists(): errors.append(f"missing governing document: {rel}")\n    else:\n        t = p.read_text(encoding="utf-8")\n        for token in ("#7B96B2","#D6B0A0","Brushed Dusty Steel"):\n            if token not in t: errors.append(f"{rel}: missing {token}")\nfor rel,tokens in {"content/faqs.md":("Find My LuxSync Solution","info@luxsync.net","support@luxsync.net"),"website/pages/faqs.md":("FAQPage",)}.items():\n    p = ROOT / rel\n    if p.exists():\n        text = p.read_text(encoding="utf-8")\n        for token in tokens:\n            if token not in text: errors.append(f"{rel}: missing website contract token {token!r}")\nif errors:\n    print("LuxSync production asset validation failed:")\n    for e in errors: print("-", e)\n    raise SystemExit(1)\nprint("LuxSync production asset validation passed.")\n''', encoding='utf-8')
+
+          shutil.rmtree(tmp)
+          zip_path.unlink()
+          workflow = root / '.github' / 'workflows' / 'install-production-raster-assets.yml'
+          if workflow.exists():
+              workflow.unlink()
+          PY
+
+      - name: Validate production asset installation
+        run: python scripts/validate-brand-v3.py
+
+      - name: Commit production asset cutover
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git diff --cached --check
+          git commit -m 'Install finished LuxSync production raster asset library'
+          git push origin master
