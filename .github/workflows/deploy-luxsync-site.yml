@@ -1,16 +1,22 @@
-name: Build and deploy LuxSync website
+name: Build LuxSync production release
 
 on:
   push:
     branches:
       - master
   workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Publish this validated build to GoDaddy production'
+        required: true
+        type: boolean
+        default: false
 
 permissions:
   contents: read
 
 concurrency:
-  group: luxsync-production-site
+  group: luxsync-production-release
   cancel-in-progress: false
 
 env:
@@ -19,7 +25,8 @@ env:
   LUXSYNC_SITE_URL: ${{ vars.LUXSYNC_SITE_URL }}
 
 jobs:
-  build-and-deploy:
+  build-release:
+    name: Build validated production candidate
     runs-on: ubuntu-latest
 
     steps:
@@ -53,16 +60,29 @@ jobs:
       - name: Validate production website
         run: node site/test.mjs
 
-      - name: Package validated website
+      - name: Package validated production candidate
         uses: actions/upload-artifact@v4
         with:
-          name: luxsync-site
+          name: luxsync-production-candidate
           path: site/dist/
           if-no-files-found: error
           retention-days: 30
 
-      - name: Detect GoDaddy FTP deployment configuration
-        id: hosting
+  publish:
+    name: Publish to GoDaddy production
+    needs: build-release
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish == true }}
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Download validated production candidate
+        uses: actions/download-artifact@v4
+        with:
+          name: luxsync-production-candidate
+          path: site/dist/
+
+      - name: Require complete GoDaddy deployment configuration
         shell: bash
         env:
           FTP_URL: ${{ secrets.GODADDY_FTP_URL }}
@@ -70,21 +90,17 @@ jobs:
           FTP_PASSWORD: ${{ secrets.GODADDY_FTP_PASSWORD }}
           REMOTE_DIR: ${{ secrets.GODADDY_REMOTE_DIR }}
         run: |
-          if [[ -n "$FTP_URL" && -n "$FTP_USER" && -n "$FTP_PASSWORD" && -n "$REMOTE_DIR" ]]; then
-            echo "ready=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "GoDaddy FTP/FTPS credentials are not fully configured. The validated release artifact is available for manual or platform-supported publishing."
+          if [[ -z "$FTP_URL" || -z "$FTP_USER" || -z "$FTP_PASSWORD" || -z "$REMOTE_DIR" ]]; then
+            echo 'Production publish requested, but GoDaddy deployment configuration is incomplete.'
+            exit 1
           fi
 
       - name: Install FTP deployment client
-        if: steps.hosting.outputs.ready == 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y lftp
 
-      - name: Deploy validated site to GoDaddy
-        if: steps.hosting.outputs.ready == 'true'
+      - name: Publish validated site to GoDaddy
         shell: bash
         env:
           FTP_URL: ${{ secrets.GODADDY_FTP_URL }}
