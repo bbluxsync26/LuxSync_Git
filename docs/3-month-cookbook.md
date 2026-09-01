@@ -1,99 +1,137 @@
-# LuxSync LLC: 3-Month Cookbook v2.0
-**Operational Execution Manual: From Rapid Retail Launch to SaaS Recurring Cash Flow**
-*Where Luxury Lives Intelligently*
-*Classification: Confidential / Founder Reference*
+# LuxSync LLC: Conditional 3-Month Operating Roadmap
 
----
+**Status:** Active planning guide — gated roadmap, not a public launch commitment  
+**Official slogan:** **Where Luxury Lives Intelligently**  
+**Commerce system of record:** GoDaddy Commerce Plus  
+**Primary launch compatibility standard:** Samsung SmartThings  
+**Last reconciled:** 2026-09-01
 
-## 1. Operating Context & Revenue Stack
-This cookbook is the week-by-week recipe for launching LuxSync LLC using our **6-Day Rapid Launch Playbook**. By bypassing initial custom software development, we focus entirely on high-velocity retail sales to fund future software and platform expansions.
+## Purpose
 
-The business scales through four progressively stacked layers:
-1.  **Layer 1 (Month 1 - Retail Velocity):** Selling unbundled standalone hardware and high-margin aesthetic accessories (AOV: $120–$550 | 60.4% blended gross margin).
-2.  **Layer 2 (Month 2 - App Templates):** Launching pre-built SmartThings automation templates as 100%-margin digital multipliers ($99–$299/template | Target: 40% attachment rate).
-3.  **Layer 3 (Month 3 - SaaS Subscriptions):** Launching the **LuxSync Grid** SaaS dashboard ($39/property/month | 92% gross margin) for multi-property remote management.
-4.  **Layer 4 (Ongoing - Elite Services):** Custom integration consultations and bespoke whole-home luxury architecture ($1,500–$15,000+).
+This document organizes the first twelve weeks of LuxSync operations without presenting unreleased products, services, dates, pricing, subscriptions, or capabilities as available.
 
----
+Month 1 is the approved commerce-first launch baseline. Month 2 and Month 3 are conditional planning horizons. A roadmap item may move into production only after its release gate is satisfied and the decision is recorded in the repository.
 
-## 2. Month 1: Curation, Launch & Market Validation
-*Revenue Target: $8,564 | Net Profit Target: $4,991.51 | Sales Goal: 15–20 Hardware & Accent Sales*
+## Non-Negotiable Launch Boundaries
 
-### **Week 1 — Storefront Activation & AI Integration**
-*   **Sheldon's Tasks:**
-    *   Submit dealer applications to **Petra Industries** and **D&H Distributing**. Set up **CJdropshipping** access.
-    *   Activate the Beside AI business phone line at **214-833-0342** (High Priority).
-    *   Calibrate Beside’s script to represent the "Intelligent Calm" tone (warm, confident, unhurried).
-    *   Launch organic community accounts on BiggerPockets, Reddit, and caregiver forums.
-*   **Bridgette's Tasks:**
-    *   Link FOUND Business Checking and Tax Savings accounts to GoDaddy.
-    *   Deploy Plush Drift v2.1 CSS styling to GoDaddy: Slate Navy background, Dark Suede elevated cards, and 12.5pt corner radius constraints.
-    *   Upload unbundled standalone SKUs and themed bundles to storefront.
-    *   Register on the Samsung SmartThings Developer Center.
-*   **Daily Routine (Both co-founders - 2 Hours Each While Employed):**
-    *   *Morning (30 min):* Monitor overnight orders, review Beside AI call logs, and follow up with leads.
-    *   *Lunch (30 min):* Engage in community forums (BiggerPockets, r/AirBnB) to build value-first trust.
-    *   *Evening (1 hour):* Sheldon: Outreach and supplier logistics. Bridgette: Store optimization and SmartThings template design.
+- Launch with curated physical product families and validated bundles supported by GoDaddy Commerce Plus.
+- Publish exact products, prices, stock, shipping, compatibility, ratings, and availability only from validated commerce and manufacturer data.
+- Use Samsung SmartThings as the primary launch compatibility standard.
+- Provide self-service guidance and remote consultation; do not promise traditional on-site installation.
+- Keep downloadable SmartThings automation templates, LuxSync Grid, saved Blueprint functionality, advanced AI enhancements, and elite/custom service packages in roadmap status until formally released.
+- Do not describe convenience or property-awareness technology as a replacement for life-safety systems, emergency services, medical care, or professional monitoring.
 
-### **Week 2 — Lead Magnet Funnel & Content Build**
-*   **Sheldon's Tasks:**
-    *   Finalize and design the "STR Smart Home ROI Guide" PDF lead magnet.
-    *   Post the first high-value, non-promotional smart home ROI analysis on BiggerPockets.
-    *   Pitch unbundled hardware solutions directly to active hosts via private messages (10/day).
-*   **Bridgette's Tasks:**
-    *   Code the automated email delivery system on GoDaddy for the lead-magnet funnel.
-    *   Complete the "Zero-Support Digital Setup Guide" PDF for customers.
-    *   Optimize GoDaddy page descriptions to focus on outcome-based benefits rather than technical specs.
+## Operating Model
 
-### **Week 3 — Target Advertising & Margin Optimization**
-*   **Sheldon's Tasks:**
-    *   Deploy a $100 targeted ad campaign on Meta/Instagram targeting regional STR hosts and senior caregivers.
-    *   Collect written reviews from early-adopter customers.
-*   **Bridgette's Tasks:**
-    *   Implement an A/B test on standalone product markups to maximize cash margins.
-    *   Finalize the first 3 SmartThings templates (Guest Welcome Flow, Energy Saver Mode, Senior Safety Assist) for Month 2 launch.
+The first twelve weeks use three controlled horizons:
 
-### **Week 4 — Month 1 Close & Gateway Analysis**
-*   **Both Founders:** Perform Month 1 performance audit against our $4,991.51 profit target.
-*   **Decision Gate 1:** If conversion is under 1%, Bridgette redesigns product listing layouts. If AOV is under $200, Sheldon alters the checkout recommendations to prioritize higher-margin aesthetic accents.
+1. **Launch and learn:** establish the commerce storefront, guided discovery, customer routing, support, and measurement.
+2. **Validate future offers:** test demand and operational feasibility without selling unreleased capabilities.
+3. **Release only through gates:** approve, document, validate, and then publish one capability at a time.
 
----
+## Weeks 1–4 — Commerce-First Launch
 
-## 3. Month 2: The Digital Multiplier (App Layer Launch)
-*Revenue Target: $15,261 | Net Profit Target: $9,111.51 | Goal: 40%+ App Template Attachment Rate*
+### Week 1 — Production Readiness
 
-### **Week 5 — SmartThings Template Marketplace Go-Live**
-*   Launch the pre-built SmartThings templates on our store:
-    *   *Guest Welcome Flow ($99):* Coordinates lighting warm-up, HVAC comfort, and smart deadbolt check-in sequences.
-    *   *Energy Saver Mode ($149):* Occupancy-based automatic shutdown of climate and non-essential appliances.
-    *   *Senior Safety Assist ($199):* Real-time path nightlights, leak alerts, and non-intrusive activity status push notifications.
-*   Email our Month 1 buyers with a 20% "loyalty upgrade" coupon for these templates.
+**Bridgette Beardsley — Co-Founder & Chief Technology and Strategy Officer**
 
-### **Weeks 6–8 — Upsell Automation & SaaS Beta**
-*   Integrate direct template upsells within every hardware checkout flow.
-*   Sheldon scales B2B outreach to 20 messages/day, targeting multi-property operators.
-*   Bridgette builds the prototype of **LuxSync Grid**, our multi-unit dashboard. Onboard 3 beta users for free testing.
+- Confirm the production candidate is generated from governed repository sources.
+- Verify brand, accessibility, responsive behavior, Concierge logic, Contact routing, privacy language, analytics boundaries, and release rollback steps.
+- Confirm that no roadmap capability is presented as live.
 
----
+**Sheldon Bardol — Co-Founder & Chief Customer and Operations Officer**
 
-## 4. Month 3: SaaS Launch & Recurring Cash Flow
-*Revenue Target: $25,158 | Net Profit Target: $15,094.51 | Goal: Onboard 18+ Recurring Subscribers*
+- Validate product-family organization, supplier information, order-support procedures, customer-response workflows, and launch communications.
+- Confirm that published commerce facts match GoDaddy Commerce Plus and validated manufacturer data.
 
-### **Week 9 — LuxSync Grid Official Launch**
-*   Activate the **LuxSync Grid SaaS Dashboard ($39/property/month)**. Features: multi-property monitoring, automated guest syncing with Airbnb/VRBO calendars, leak alerts, and energy tracking.
-*   Introduce the early-adopter "First Month Free" offer to our full email subscriber list.
+**Exit gate**
 
-### **Weeks 10–12 — Portfolio Scale & Founder Exit Preparation**
-*   Sheldon launches targeted outreach to property management firms to pitch bulk portfolio licensing.
-*   Bridgette deploys automated monthly recurring billing via Stripe/FOUND.
-*   **Decision Gate 3:** Review cumulative YTD profits. If cumulative net profit exceeds $28,000, trigger **Phase 1 of our Pooled-Profit Transition Model** to transition Sheldon to full-time status.
+- Repository validation and production-candidate build pass.
+- Commerce, contact, privacy, support, and rollback checks are complete.
+- Both founders approve the release candidate.
 
----
+### Week 2 — Guided Discovery and Customer Education
 
-## Appendix: Tool & Resource Directory
-*   **Storefront & Checkout:** GoDaddy Commerce Plus ($37/month)
-*   **Business Voice & AI Receptionist:** Beside AI Phone Line at 214-833-0342 ($300/year / ~$29.99/mo)
-*   **Business Banking & Tax Vault:** FOUND Business Checking ($0/month)
-*   **Productivity & Admin Workspace:** Microsoft 365 + Copilot ($60/month, 2 seats)
-*   **Core Smart OS:** Samsung SmartThings Developer Center (Free/Open-Source)
-*   **Fulfillment Centers:** Petra Industries (Primary), D&H Distributing (Secondary), CJdropshipping (Tertiary)
+- Validate the **Find My LuxSync Solution** journey and **My LuxSync Blueprint** handoff.
+- Publish only approved FAQs, guides, product families, and solution concepts.
+- Review early inquiries for unclear compatibility, terminology, or routing.
+- Keep marketing consent separate from the required privacy acknowledgment.
+
+### Week 3 — Operational Stabilization
+
+- Review orders, support requests, consultation requests, form-routing accuracy, and unresolved customer questions.
+- Correct content or process friction through the governed repository workflow.
+- Validate supplier, shipping, return, and compatibility information before publishing changes.
+- Collect customer feedback only with appropriate consent; do not invent testimonials or ratings.
+
+### Week 4 — Launch Review
+
+Assess:
+
+- storefront and checkout reliability;
+- Contact and support routing;
+- Concierge completion and consultation handoff;
+- product-family interest;
+- support volume and response quality;
+- validated order and margin information;
+- roadmap demand signals.
+
+Record decisions, owners, evidence, and follow-up dates. Financial projections remain planning scenarios, not customer-facing claims or guaranteed results.
+
+## Weeks 5–8 — Conditional Validation Horizon
+
+### SmartThings Automation Template Gate
+
+Templates remain unreleased unless all conditions below are met:
+
+- an explicit release decision is committed;
+- supported automation scope and delivery format are defined;
+- compatibility and customer instructions are validated;
+- support, refund, licensing, privacy, and intellectual-property requirements are approved;
+- exact pricing is approved and configured in the commerce system of record;
+- end-to-end customer acceptance testing passes.
+
+Before that gate, LuxSync may research demand and prototype internally but must not advertise templates as available, attach them to checkout, accept payment, or promise a launch date.
+
+### LuxSync Grid Discovery Gate
+
+LuxSync Grid remains a roadmap concept. Discovery may include problem interviews, privacy analysis, security architecture, platform feasibility, and controlled prototypes that do not imply a live customer service.
+
+Do not publish subscription pricing, availability, integrations, trial offers, subscriber targets, or feature promises until a formal release decision and production-readiness review are complete.
+
+## Weeks 9–12 — Conditional Release Readiness
+
+A future digital capability or service may enter release readiness only after:
+
+1. the product owner and operational owner are named;
+2. customer value and supported scope are documented;
+3. security, privacy, legal, accessibility, support, and commerce requirements are resolved;
+4. validated pricing and fulfillment are configured;
+5. production monitoring, incident response, rollback, and customer communication are ready;
+6. repository documentation, prompts, content, website, FAQs, and tests are reconciled;
+7. both founders approve release.
+
+If any gate remains open, continue discovery or defer the capability. Do not convert a planning date into a public commitment.
+
+## Future Service Boundary
+
+Custom consultations, advanced architecture, managed services, and other high-touch offerings remain future possibilities. At launch, LuxSync provides curated commerce, intelligent discovery, self-service guidance, and remote customer support. Any expansion into a paid service must have an approved scope, delivery model, capacity plan, pricing decision, terms, and support model before publication.
+
+## Weekly Control Rhythm
+
+- Review validated commerce and customer-service data.
+- Log decisions and unresolved risks.
+- Reconcile source documents before changing the production site.
+- Run repository consistency validation and the production-candidate build.
+- Publish only after the applicable release gate is satisfied.
+- Preserve a rollback path for every production change.
+
+## Governing References
+
+- `docs/production-source-of-truth.md`
+- `docs/master-catalog.md`
+- `docs/business-plan.md`
+- `docs/value-proposition.md`
+- `content/product-catalog.md`
+- `content/faqs.md`
+- `docs/runbooks/RB-010-Website-Build-and-Deployment.md`

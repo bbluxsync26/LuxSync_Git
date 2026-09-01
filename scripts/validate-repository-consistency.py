@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -68,6 +69,8 @@ REQUIRED_FILES = [
     "website/pages/faqs.md",
     "website/pages/contact.md",
     "website/src/concierge/luxsync-concierge-engine.v1.json",
+    "site/source-content.mjs",
+    "site/src/app.js",
     "scripts/validate-production-brand.py",
 ]
 ROI_FILES = [
@@ -132,6 +135,48 @@ for token in ("Commercial Offices", "Nursing Homes", "Senior Living Communities"
 
 for token in ("Physical Product Families", "Curated Bundle", "LuxSync Experiences", "Validated Live Product", "Solution Concept"):
     require("content/product-catalog.md", token)
+
+# Markdown HTML image references must be portable and resolve inside the repository.
+for path in ROOT.rglob("*.md"):
+    if any(part in {".git", "node_modules"} for part in path.parts):
+        continue
+    text = path.read_text(encoding="utf-8", errors="replace")
+    for src in re.findall(r'<img\\s+[^>]*src=["\\\']([^"\\\']+)["\\\']', text, flags=re.IGNORECASE):
+        if src.startswith(("http://", "https://", "data:", "/")):
+            continue
+        if "\\\\" in src:
+            errors.append(f"{path.relative_to(ROOT)}: nonportable backslash in image source: {src}")
+            continue
+        target = (path.parent / src).resolve()
+        try:
+            target.relative_to(ROOT.resolve())
+        except ValueError:
+            errors.append(f"{path.relative_to(ROOT)}: image source escapes repository: {src}")
+            continue
+        if not target.exists():
+            errors.append(f"{path.relative_to(ROOT)}: broken image source: {src}")
+
+# Active roadmap documents must preserve launch/release boundaries.
+for token in (
+    "gated roadmap, not a public launch commitment",
+    "Templates remain unreleased unless",
+    "LuxSync Grid remains a roadmap concept",
+    "do not promise traditional on-site installation",
+):
+    require("docs/3-month-cookbook.md", token)
+for forbidden in ("Official Launch", "Marketplace Go-Live", "$39/property/month"):
+    if forbidden in read("docs/3-month-cookbook.md"):
+        errors.append(f"docs/3-month-cookbook.md: roadmap capability is presented as live: {forbidden}")
+
+# Production site must consume governed sources and implement the full Property Profile branches.
+for token in ("readGovernedContent", "HOME.supportingCopy", "LEADERSHIP.bridgette", "catalog"):
+    require("site/build.mjs", token)
+for token in (
+    "square_feet_exact", "residence_type", "str_property_type", "rental_units",
+    "booking_platform", "remote_management_status", "desired_automation",
+    "business_type", "number_of_locations", "property_description",
+):
+    require("site/src/app.js", token)
 
 # Route manifest must be complete, internally resolvable, and publication-safe.
 impl = json.loads(read("website/implementation-manifest.json"))
