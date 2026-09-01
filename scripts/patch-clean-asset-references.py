@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
 
+# One-time source cutover helper for the clean triple-format production library.
 ROOT=Path(__file__).resolve().parents[1]
 TEXT_SUFFIXES={'.md','.txt','.json','.py','.js','.mjs','.yml','.yaml','.html','.css'}
 
