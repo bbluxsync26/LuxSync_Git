@@ -2,6 +2,7 @@
 
 **Status:** Active / Authoritative
 **Brand system:** LuxSync Production Raster v5
+**Production asset library:** 6.0 clean atomic triple-format
 **Design DNA:** Plush Drift
 **Voice:** Intelligent Calm
 
@@ -29,13 +30,32 @@ The only authoritative logo masters are:
 
 Never redraw, retype, recolor, soften, regenerate, or approximate them.
 
-## Publication rule
+## Production asset rule
 
-The exact logo copies in `brand/assets/01-logos/` are production-approved. Other imported raster slices under `brand/assets/` remain reference-only after visual QA. Live website UI must be implemented with HTML/CSS and approved brand tokens rather than flattened board crops.
+The deployable library is `brand/assets/` and contains three matching formats for each reusable asset:
+
+- SVG
+- transparent PNG
+- WebP
+
+Canonical production families:
+
+- `brand/assets/logos/`
+- `brand/assets/icons/`
+- `brand/assets/dividers/`
+
+The clean icons and dividers are true atomic vector artwork with semantic names. The previous numbered grid-sliced folders were retired because individual files could contain neighboring board fragments, labels or clipped artwork.
+
+Interactive buttons, forms, cards, navigation, toggles and product UI are implemented in HTML/CSS rather than flattened image screenshots.
+
+Logo PNGs remain byte-identical to the protected source masters. Logo SVG files are fidelity containers around the exact master artwork and do not retype or reinterpret the wordmark.
+
+Visual QA contact sheets are stored under `brand/assets/qa/` and are not deployable site assets.
 
 Canonical implementation references:
 
 - `docs/production-source-of-truth.md`
+- `docs/production-asset-library.md`
 - `website/asset-map.md`
 - `website/implementation-manifest.json`
 - `website/styles/design-system.md`
