@@ -1,0 +1,64 @@
+name: Rebuild clean LuxSync assets
+
+on:
+  push:
+    branches:
+      - fix/clean-triple-format-assets
+    paths:
+      - 'scripts/generate-clean-production-assets.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repair branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/clean-triple-format-assets
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install rendering dependencies
+        run: python -m pip install --disable-pip-version-check pillow cairosvg
+
+      - name: Rebuild atomic triple-format library
+        run: python scripts/generate-clean-production-assets.py
+
+      - name: Validate generated format parity
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          root=Path('brand/assets')
+          manifest=json.loads((root/'asset-manifest.json').read_text())
+          assert manifest['version']=='6.0-clean-atomic-triple-format'
+          for asset in manifest['assets']:
+              for fmt in ('svg','png','webp'):
+                  p=root/asset['files'][fmt]['path']
+                  assert p.exists() and p.stat().st_size>0, p
+              assert asset['qa_status']=='passed'
+          bad=[]
+          for folder in ('01-logos','02-icons','03-buttons','04-ui-controls','05-dividers-accents','06-product-cards','07-heroes','08-sections','09-stationery'):
+              if (root/folder).exists(): bad.append(folder)
+          assert not bad, bad
+          print(f"Validated {len(manifest['assets'])} clean assets in SVG + PNG + WebP")
+          PY
+
+      - name: Commit rebuilt production library
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git diff --cached --check
+          git commit -m 'Rebuild clean atomic LuxSync asset library'
+          git push origin fix/clean-triple-format-assets
