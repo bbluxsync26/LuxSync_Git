@@ -1,0 +1,66 @@
+name: Stage LuxSync website
+
+on:
+  push:
+    branches:
+      - staging
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: luxsync-staging-site
+  cancel-in-progress: true
+
+env:
+  LUXSYNC_COMMERCE_URL: ${{ vars.LUXSYNC_STAGING_COMMERCE_URL }}
+  LUXSYNC_CONTACT_ENDPOINT: ${{ vars.LUXSYNC_STAGING_CONTACT_ENDPOINT }}
+  LUXSYNC_SITE_URL: ${{ vars.LUXSYNC_STAGING_SITE_URL }}
+
+jobs:
+  stage:
+    name: Build validated staging candidate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Validate production brand library
+        run: python scripts/validate-production-brand.py
+
+      - name: Validate repository source of truth
+        run: python scripts/validate-repository-consistency.py
+
+      - name: Verify Concierge production engine is current
+        run: |
+          node website/src/concierge/assemble-engine.mjs
+          git diff --exit-code -- website/src/concierge/luxsync-concierge-engine.v1.json
+
+      - name: Build staging website
+        run: node site/build.mjs
+
+      - name: Validate staging website
+        run: node site/test.mjs
+
+      - name: Package staging candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: luxsync-staging
+          path: site/dist/
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Confirm staging-only release gate
+        run: echo 'Staging artifact created. No production publishing step exists in this workflow.'
