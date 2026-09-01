@@ -34,17 +34,17 @@
   },
   "visual_assets": {
     "production_approved": [
-      "brand/assets/10-auth/login-vip-hero.svg",
-      "brand/assets/10-auth/login-vip-hero-mobile.svg",
-      "brand/assets/10-auth/member-access-ambient.svg",
-      "brand/assets/10-auth/account-welcome-banner.svg"
+      "website/assets/auth/login-vip-hero.svg",
+      "website/assets/auth/login-vip-hero-mobile.svg",
+      "website/assets/auth/member-access-ambient.svg",
+      "website/assets/auth/account-welcome-banner.svg"
     ],
     "reference_only": [
-      "brand/assets/10-auth/auth-card-reference.svg",
-      "brand/assets/10-auth/auth-input-states.svg",
-      "brand/assets/10-auth/auth-button-states.svg"
+      "website/assets/auth/auth-card-reference.svg",
+      "website/assets/auth/auth-input-states.svg",
+      "website/assets/auth/auth-button-states.svg"
     ],
-    "manifest": "brand/assets/10-auth/manifest.json"
+    "manifest": "website/assets/auth/manifest.json"
   },
   "styles": {
     "global_design_system": "website/styles/design-system.md",
