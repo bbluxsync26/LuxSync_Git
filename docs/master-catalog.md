@@ -105,10 +105,10 @@ Approved colors:
 | BRAND-003 | Typography | `brand/typography.md` | Active — Manrope + Inter |
 | BRAND-004 | Voice & Tone | `brand/voice-and-tone.md` | Active — Intelligent Calm |
 | BRAND-005 | Brand Architecture / Plush Drift DNA | `brand/brand-architecture.md` | Active / Authoritative |
-| BRAND-006 | Approved Asset Library | `brand/assets/` and current approved asset metadata | Active as governed by brand docs |
+| BRAND-006 | Approved Raster Asset Library | `brand/assets/` and current approved asset metadata | Active as governed by brand docs |
 | BRAND-007 | Prior/generated visual libraries | legacy/historical locations | Superseded unless explicitly retained |
-| BRAND-008 | VIP Account Access Asset Mini-Library | `brand/assets/10-auth/` | Active / Mixed publication status per manifest |
-| BRAND-009 | VIP Account Access Asset Manifest | `brand/assets/10-auth/manifest.json` | Active / Authoritative for auth assets |
+| BRAND-008 | VIP Account Access Vector Mini-Library | `website/assets/auth/` | Active / Mixed publication status per manifest |
+| BRAND-009 | VIP Account Access Asset Manifest | `website/assets/auth/manifest.json` | Active / Authoritative for auth vectors |
 
 ## Architecture and Website
 
@@ -184,7 +184,7 @@ Governing artifacts:
 - `website/pages/account-login.md`
 - `website/account-access-manifest.json`
 - `website/styles/account-access-tokens.css`
-- `brand/assets/10-auth/manifest.json`
+- `website/assets/auth/manifest.json`
 - `docs/checklists/CL-002-Account-Access-Review.md`
 
 Key principles:
@@ -290,7 +290,7 @@ Do not publish or invent:
 10. Run repository consistency validation after major cross-cutting changes.
 11. ROI examples must use customer inputs or clearly labeled scenarios; never publish promised returns, invented benchmarks, or unvalidated savings percentages.
 12. Account/authentication UX must remain subordinate to the capabilities and security requirements of the selected production account platform.
-13. Auth asset publication status is governed by `brand/assets/10-auth/manifest.json`; reference diagrams are never functional UI.
+13. Auth asset publication status is governed by `website/assets/auth/manifest.json`; reference diagrams are never functional UI.
 
 ## Change Log
 
@@ -307,7 +307,7 @@ Do not publish or invent:
 | 2026-08-31 | Added ten audience-specific ROI Guides, a shared measurement standard, and the ROI Guides website library blueprint. |
 | 2026-09-01 | Added the VIP Account Access / Login blueprint and made VIP-level welcome/service an account-experience requirement. |
 | 2026-09-01 | Reconciled the three-month roadmap and six-day launch plan, connected production output to governed content sources, completed adaptive Contact property branching, and strengthened repository/site regression checks. |
-| 2026-09-01 | Promoted VIP Account Access to a production-ready visual/interaction package with exact approved-logo mapping, dedicated ambient assets, interaction tokens, implementation manifest, and CL-002 review gate. |
+| 2026-09-01 | Promoted VIP Account Access to a production-ready visual/interaction package with exact approved-logo mapping, dedicated ambient vectors, interaction tokens, implementation manifest, and CL-002 review gate. |
 
 ## Production Completion Baseline
 
@@ -323,7 +323,7 @@ Canonical website implementation references:
 - `website/navigation.md`
 - `website/pages/`
 - `website/styles/account-access-tokens.css`
-- `brand/assets/10-auth/manifest.json`
+- `website/assets/auth/manifest.json`
 - `website/src/concierge/luxsync-concierge-engine.v1.json`
 
-The imported non-logo raster slices are reference-only and must not be published directly. Auth assets may be published only when their current manifest explicitly marks them `production-approved`.
+The imported non-logo raster slices are reference-only and must not be published directly. Auth vectors may be published only when their current website asset manifest explicitly marks them `production-approved`.
