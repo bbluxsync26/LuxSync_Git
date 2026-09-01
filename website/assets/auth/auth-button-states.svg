@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620" fill="none">
+  <title>LuxSync authentication button state reference</title>
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFF2EA"/>
+      <stop offset="0.2" stop-color="#EAC8B9"/>
+      <stop offset="0.45" stop-color="#D6B0A0"/>
+      <stop offset="0.7" stop-color="#9C675C"/>
+      <stop offset="0.86" stop-color="#F2D6C8"/>
+      <stop offset="1" stop-color="#7D4E49"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-80%" width="160%" height="260%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+    <style>
+      .display { font-family: Manrope, Inter, sans-serif; fill: #D0BEB0; }
+      .body { font-family: Inter, sans-serif; fill: #9E8B85; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="620" rx="30" fill="#0D1526"/>
+  <text class="display" x="72" y="84" font-size="34" font-weight="600">Auth Button States</text>
+  <text class="body" x="72" y="118" font-size="16">Plush Drift tactile illumination: concealed light, restrained metallic detail, calm press compression.</text>
+
+  <g transform="translate(72 210)">
+    <text class="display" y="0" font-size="15" font-weight="600">REST</text>
+    <rect x="12" y="64" width="236" height="70" rx="15" fill="#7B96B2" fill-opacity="0.08" filter="url(#softGlow)"/>
+    <rect y="54" width="260" height="70" rx="15" fill="#172036" stroke="url(#metal)" stroke-opacity="0.48"/>
+    <text class="display" x="130" y="97" text-anchor="middle" font-size="17" font-weight="600">Sign In</text>
+  </g>
+
+  <g transform="translate(344 210)">
+    <text class="display" y="0" font-size="15" font-weight="600">HOVER</text>
+    <rect x="-4" y="52" width="268" height="94" rx="24" fill="#7B96B2" fill-opacity="0.15" filter="url(#softGlow)"/>
+    <rect y="50" width="260" height="70" rx="15" fill="#172036" stroke="url(#metal)" stroke-opacity="0.74"/>
+    <text class="display" x="130" y="93" text-anchor="middle" font-size="17" font-weight="600">Sign In</text>
+  </g>
+
+  <g transform="translate(616 210)">
+    <text class="display" y="0" font-size="15" font-weight="600">FOCUS</text>
+    <rect x="-5" y="49" width="270" height="80" rx="20" fill="#7B96B2" fill-opacity="0.10" filter="url(#softGlow)"/>
+    <rect x="-5" y="49" width="270" height="80" rx="20" stroke="#7B96B2" stroke-opacity="0.44" stroke-width="3"/>
+    <rect y="54" width="260" height="70" rx="15" fill="#172036" stroke="url(#metal)" stroke-opacity="0.58"/>
+    <text class="display" x="130" y="97" text-anchor="middle" font-size="17" font-weight="600">Sign In</text>
+  </g>
+
+  <g transform="translate(888 212)">
+    <text class="display" y="0" font-size="15" font-weight="600">PRESS</text>
+    <rect x="6" y="66" width="248" height="62" rx="18" fill="#7B96B2" fill-opacity="0.16" filter="url(#softGlow)"/>
+    <rect y="58" width="260" height="68" rx="15" fill="#172036" stroke="url(#metal)" stroke-opacity="0.66"/>
+    <text class="display" x="130" y="100" text-anchor="middle" font-size="17" font-weight="600">Sign In</text>
+    <text class="body" x="130" y="158" text-anchor="middle" font-size="12">1–2px inward compression</text>
+  </g>
+
+  <g transform="translate(1160 210)" opacity="0.46">
+    <text class="display" y="0" font-size="15" font-weight="600">DISABLED</text>
+    <rect y="54" width="180" height="70" rx="15" fill="#172036" stroke="#D0BEB0" stroke-opacity="0.14"/>
+    <text class="display" x="90" y="97" text-anchor="middle" font-size="17" font-weight="600">Sign In</text>
+  </g>
+
+  <path d="M72 440H1328" stroke="#D0BEB0" stroke-opacity="0.08"/>
+  <text class="body" x="72" y="486" font-size="14">Release: return smoothly in ~140–220ms. Reduced motion: remove physical travel but retain visible focus/pressed differentiation.</text>
+  <text class="body" x="72" y="520" font-size="14">Do not use neon, bounce, scale-up hover, flashing, or glow as the only interaction cue.</text>
+</svg>
