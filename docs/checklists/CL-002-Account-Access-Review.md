@@ -103,7 +103,7 @@
 
 ## Auth Graphics
 
-- [ ] Production ambient graphics come only from production-approved entries in `brand/assets/10-auth/manifest.json`.
+- [ ] Production ambient graphics come only from production-approved entries in `website/assets/auth/manifest.json`.
 - [ ] `login-vip-hero.svg` remains behind live HTML copy.
 - [ ] `login-vip-hero-mobile.svg` is used only as ambient/decorative mobile art.
 - [ ] `member-access-ambient.svg` remains decorative and non-interactive.
