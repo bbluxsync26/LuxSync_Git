@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="640">
+  <img src="../../brand/assets/logos/png/luxsync-horizontal-combo.png" alt="LuxSync LLC — Where Luxury Lives Intelligently" width="640">
 </p>
 
 <p align="center"><strong>Where Luxury Lives Intelligently</strong></p>

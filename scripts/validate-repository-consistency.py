@@ -15,9 +15,9 @@ SHELDON_TITLE = 'Co-Founder & Chief Customer and Operations Officer'
 CONCIERGE = "LuxSync Intelligent Living Concierge"
 BLUEPRINT = "My LuxSync Blueprint"
 SAFE_ASSETS = {
-    "brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png",
-    "brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png",
-    "brand/assets/01-logos/LuxSync_Logo_Orb.png",
+    "brand/assets/logos/png/luxsync-horizontal-combo.png",
+    "brand/assets/logos/png/luxsync-horizontal.png",
+    "brand/assets/logos/png/luxsync-orb.png",
 }
 AUTH_PRODUCTION_ASSETS = {
     "website/assets/auth/login-vip-hero.svg",
@@ -272,8 +272,6 @@ for rel in AUTH_REFERENCE_ASSETS:
 
 if (ROOT / "brand/assets/10-auth").exists():
     errors.append("brand/assets/10-auth must not exist; auth SVGs belong under website/assets/auth")
-if list((ROOT / "brand/assets").rglob("*.svg")):
-    errors.append("brand/assets must remain SVG-free for the Production Raster validator")
 
 for rel in (
     "website/pages/account-login.md",
@@ -289,7 +287,7 @@ for rel in (
 
 for token in (
     "Welcome Back", "VIP", "Plush Drift", "GoDaddy Commerce Plus",
-    "LuxSync_Logo_Horizontal_Combo.png", "LuxSync_Logo_Horizontal_Final.png", "LuxSync_Logo_Orb.png",
+    "luxsync-horizontal-combo.png", "luxsync-horizontal.png", "luxsync-orb.png",
     "website/assets/auth/manifest.json",
 ):
     require("website/pages/account-login.md", token)

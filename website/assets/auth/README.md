@@ -13,9 +13,9 @@ No logo is recreated in this folder.
 
 Use only the production-approved masters:
 
-- `../../../brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png`
-- `../../../brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png`
-- `../../../brand/assets/01-logos/LuxSync_Logo_Orb.png`
+- `../../../brand/assets/logos/png/luxsync-horizontal-combo.png`
+- `../../../brand/assets/logos/png/luxsync-horizontal.png`
+- `../../../brand/assets/logos/png/luxsync-orb.png`
 
 The auth graphics are designed to sit behind or beside those exact logo files.
 

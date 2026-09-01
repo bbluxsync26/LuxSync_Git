@@ -522,9 +522,9 @@ Reference-only diagrams such as auth card/input/button state boards must not be 
 
 Use **only** the approved LuxSync logo masters:
 
-- Desktop primary: `brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png`
-- Extended horizontal alternate: `brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png`
-- Compact/mobile: `brand/assets/01-logos/LuxSync_Logo_Orb.png`
+- Desktop primary: `brand/assets/logos/png/luxsync-horizontal-combo.png`
+- Extended horizontal alternate: `brand/assets/logos/png/luxsync-horizontal.png`
+- Compact/mobile: `brand/assets/logos/png/luxsync-orb.png`
 
 These are immutable brand masters.
 
@@ -635,7 +635,7 @@ Rules:
 - use exact protected logo artwork directly;
 - build buttons, cards, forms, icons, dividers, navigation, Concierge UI, Contact UI, and auth UI as live HTML/CSS;
 - use production-approved account vectors only from `website/assets/auth/manifest.json`;
-- do not publish reference-only imported raster composites under `brand/assets/02-icons/` through `brand/assets/09-stationery/`;
+- do not publish reference-only imported raster composites under the retired numbered grid-sliced asset folders;
 - do not restore graphics with retired slogan or generated logo approximations;
 - use validated commerce/manufacturer imagery for real products when available;
 - do not bake mutable support, customer, account, product, pricing, founder, or availability information into decorative graphics.
@@ -734,7 +734,7 @@ Before generating the website, read and obey the current versions of:
 14. `website/assets/auth/manifest.json`
 15. `brand/README.md`
 16. `brand/assets/README.md`
-17. `brand/assets/01-logos/`
+17. `brand/assets/logos/png/`
 
 If any instruction in older generated material conflicts with these current sources, the current source-of-truth documents win.
 

@@ -291,4 +291,4 @@ The homepage succeeds when a new visitor can quickly understand:
 
 ## Production Visual Assignment
 
-Use `brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png` in a live editorial hero composed with Slate Navy / Dark Suede, Pale Driftwood copy, Dusty Steel interaction cues and restrained Champagne Rose Gold detail. Build solution, Concierge, founder, FAQ, ROI and commerce cards live in HTML/CSS. Imported raster composites and board slices are reference-only. See `website/asset-map.md`.
+Use `brand/assets/logos/png/luxsync-horizontal-combo.png` in a live editorial hero composed with Slate Navy / Dark Suede, Pale Driftwood copy, Dusty Steel interaction cues and restrained Champagne Rose Gold detail. Build solution, Concierge, founder, FAQ, ROI and commerce cards live in HTML/CSS. Imported raster composites and board slices are reference-only. See `website/asset-map.md`.

@@ -59,7 +59,7 @@ GoDaddy Commerce Plus remains the current production commerce/account authority 
 
 ## Visual contract
 
-Use exact logo masters plus live HTML/CSS for the active site. The imported raster slices outside `brand/assets/01-logos/` are reference-only except for assets explicitly marked `production-approved` in a current asset manifest.
+Use exact logo masters plus live HTML/CSS for the active site. The imported raster slices are governed by `brand/assets/asset-manifest.json`; only entries marked approved and QA-passed are production-safe.
 
 For account access, production-approved ambient graphics are governed by `website/assets/auth/manifest.json`. Authentication copy, customer data, fields, buttons and state messaging remain live HTML/CSS.
 
@@ -77,7 +77,7 @@ Primary references:
 
 Locked account visual rules:
 
-- only the three approved logos under `brand/assets/01-logos/` may be used;
+- only the three approved logos under `brand/assets/logos/png/` may be used;
 - desktop uses a calm welcome/auth two-zone composition;
 - mobile collapses to one column and prefers the approved Orb logo;
 - Plush Drift tactile illumination governs card, input and button interaction states;
