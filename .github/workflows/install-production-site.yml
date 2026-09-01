@@ -1,0 +1,41 @@
+name: Install LuxSync production site source
+
+on:
+  push:
+    branches:
+      - website/build-production-site
+    paths:
+      - '.github/workflows/install-production-site.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out implementation branch
+        uses: actions/checkout@v4
+        with:
+          ref: website/build-production-site
+          fetch-depth: 0
+
+      - name: Install production site source
+        run: python scripts/install-production-site.py
+
+      - name: Build and validate generated website
+        run: |
+          node site/build.mjs
+          node site/test.mjs
+
+      - name: Commit production site source
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          rm -f scripts/install-production-site.py
+          rm -rf scripts/site_bundle
+          git add -A
+          git diff --cached --check
+          git commit -m 'Build LuxSync production website implementation'
+          git push origin website/build-production-site
