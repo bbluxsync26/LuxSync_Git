@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="420" viewBox="0 0 1600 420" fill="none">
+  <title>LuxSync post-login welcome banner ambient background</title>
+  <defs>
+    <linearGradient id="bg" x1="76" y1="32" x2="1542" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#172036"/>
+      <stop offset="0.55" stop-color="#0D1526"/>
+      <stop offset="1" stop-color="#111B30"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFF2EA"/>
+      <stop offset="0.22" stop-color="#EAC8B9"/>
+      <stop offset="0.48" stop-color="#D6B0A0"/>
+      <stop offset="0.72" stop-color="#9C675C"/>
+      <stop offset="0.86" stop-color="#F2D6C8"/>
+      <stop offset="1" stop-color="#7D4E49"/>
+    </linearGradient>
+    <radialGradient id="steel" cx="0" cy="0" r="1" gradientTransform="translate(1284 338) rotate(-164) scale(540 260)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7B96B2" stop-opacity="0.23"/>
+      <stop offset="0.54" stop-color="#7B96B2" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#7B96B2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-50" y="-80" width="1700" height="580" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+  </defs>
+
+  <rect x="1" y="1" width="1598" height="418" rx="34" fill="url(#bg)" stroke="#D0BEB0" stroke-opacity="0.08" stroke-width="2"/>
+  <rect x="1" y="1" width="1598" height="418" rx="34" fill="url(#steel)"/>
+
+  <g filter="url(#blur)" opacity="0.30">
+    <path d="M874 356C1118 154 1390 110 1662 182" stroke="#7B96B2" stroke-width="18" stroke-linecap="round"/>
+    <path d="M1004 418C1220 228 1432 202 1640 244" stroke="#D6B0A0" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <path d="M874 356C1118 154 1390 110 1662 182" stroke="#7B96B2" stroke-opacity="0.56" stroke-width="3" stroke-linecap="round"/>
+  <path d="M1004 418C1220 228 1432 202 1640 244" stroke="url(#metal)" stroke-opacity="0.72" stroke-width="2.4" stroke-linecap="round"/>
+
+  <path d="M90 330H622" stroke="#D0BEB0" stroke-opacity="0.10"/>
+  <path d="M725 84L730 114L760 119L730 124L725 154L720 124L690 119L720 114L725 84Z" fill="url(#metal)" opacity="0.88"/>
+  <path d="M1446 92L1450 116L1474 120L1450 124L1446 148L1442 124L1418 120L1442 116L1446 92Z" fill="url(#metal)" opacity="0.70"/>
+</svg>

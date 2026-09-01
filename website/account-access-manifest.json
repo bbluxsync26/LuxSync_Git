@@ -1,0 +1,84 @@
+{
+  "version": "1.0",
+  "status": "production-ready-visual-spec-auth-integration-pending",
+  "experience": "VIP Account Access",
+  "primary_route": "/account/login",
+  "brand_system": "LuxSync Production Raster v5",
+  "design_dna": "Plush Drift tactile illumination",
+  "typography": {
+    "display": "Manrope 500/600",
+    "body_ui": "Inter 400/500"
+  },
+  "approved_logos": {
+    "desktop_primary": "brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png",
+    "horizontal_alternate": "brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png",
+    "compact_mobile": "brand/assets/01-logos/LuxSync_Logo_Orb.png"
+  },
+  "route_family": [
+    "/account/login",
+    "/account/create",
+    "/account/forgot-password",
+    "/account/reset-password",
+    "/account/verify",
+    "/account/verification-code",
+    "/account/locked",
+    "/account/welcome"
+  ],
+  "routes_are_final": false,
+  "platform_boundary": {
+    "commerce_account_authority": "GoDaddy Commerce Plus",
+    "custom_credential_backend_approved": false,
+    "social_login_providers_approved": [],
+    "mfa_method_approved": null,
+    "passkey_implementation_approved": false
+  },
+  "visual_assets": {
+    "production_approved": [
+      "website/assets/auth/login-vip-hero.svg",
+      "website/assets/auth/login-vip-hero-mobile.svg",
+      "website/assets/auth/member-access-ambient.svg",
+      "website/assets/auth/account-welcome-banner.svg"
+    ],
+    "reference_only": [
+      "website/assets/auth/auth-card-reference.svg",
+      "website/assets/auth/auth-input-states.svg",
+      "website/assets/auth/auth-button-states.svg"
+    ],
+    "manifest": "website/assets/auth/manifest.json"
+  },
+  "styles": {
+    "global_design_system": "website/styles/design-system.md",
+    "auth_tokens": "website/styles/account-access-tokens.css"
+  },
+  "layout": {
+    "desktop_split": "58/42 preferred; 55/45 acceptable at narrower desktop widths",
+    "auth_card_width": "clamp(360px, 32vw, 480px)",
+    "mobile_breakpoint": "767px",
+    "mobile_columns": 1
+  },
+  "copy": {
+    "eyebrow": "MEMBER ACCESS",
+    "headline": "Welcome Back",
+    "support_line": "Your LuxSync experience is ready.",
+    "primary_action": "Sign In",
+    "create_account": "Create Your LuxSync Account",
+    "forgot_password": "Forgot Password?",
+    "official_slogan": "Where Luxury Lives Intelligently"
+  },
+  "interaction": {
+    "rest": "faint concealed underlight",
+    "hover": "underlight widens and brightens modestly",
+    "focus": "visible focus ring plus restrained Dusty Steel illumination",
+    "press": "1-2px visual compression with tighter shadow and stronger concealed light",
+    "release": "140-220ms calm easing",
+    "reduced_motion": "remove physical travel while retaining non-motion state differentiation"
+  },
+  "publication_guardrails": [
+    "Use only approved LuxSync logo masters.",
+    "Do not bake mutable authentication copy into ambient graphics.",
+    "Do not invent authentication providers, MFA methods, passkeys, or social logins.",
+    "Do not collect or process credentials in static prototype code.",
+    "Keep production ambient graphics text-free and use live HTML/CSS for form content.",
+    "Do not communicate state through glow, motion, or color alone."
+  ]
+}

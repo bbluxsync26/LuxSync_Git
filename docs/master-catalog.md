@@ -48,6 +48,7 @@ For merchandising specifically, `content/product-catalog.md` governs current pro
 - **Primary launch compatibility standard:** Samsung SmartThings
 - **Production commerce system of record:** GoDaddy Commerce Plus
 - **Protected logo artwork:** approved logo masters remain immutable artwork
+- **Approved logo paths:** `brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png`, `brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png`, `brand/assets/01-logos/LuxSync_Logo_Orb.png`
 - **Account experience principle:** every customer receives the same high-care, VIP-level welcome and service experience
 
 Approved colors:
@@ -104,8 +105,10 @@ Approved colors:
 | BRAND-003 | Typography | `brand/typography.md` | Active — Manrope + Inter |
 | BRAND-004 | Voice & Tone | `brand/voice-and-tone.md` | Active — Intelligent Calm |
 | BRAND-005 | Brand Architecture / Plush Drift DNA | `brand/brand-architecture.md` | Active / Authoritative |
-| BRAND-006 | Approved Asset Library | `brand/assets/` and current approved asset metadata | Active as governed by brand docs |
+| BRAND-006 | Approved Raster Asset Library | `brand/assets/` and current approved asset metadata | Active as governed by brand docs |
 | BRAND-007 | Prior/generated visual libraries | legacy/historical locations | Superseded unless explicitly retained |
+| BRAND-008 | VIP Account Access Vector Mini-Library | `website/assets/auth/` | Active / Mixed publication status per manifest |
+| BRAND-009 | VIP Account Access Asset Manifest | `website/assets/auth/manifest.json` | Active / Authoritative for auth vectors |
 
 ## Architecture and Website
 
@@ -123,7 +126,9 @@ Approved colors:
 | WEB-006 | Contact Page Blueprint | `website/pages/contact.md` | Active / Adaptive form |
 | WEB-007 | Intelligent Living Concierge Engine | `website/src/concierge/` | Active / v1 engine |
 | WEB-008 | ROI Guides Library Page Blueprint | `website/pages/guides.md` | Active |
-| WEB-009 | VIP Account Access / Login Blueprint | `website/pages/account-login.md` | Active / Pre-build UX baseline |
+| WEB-009 | VIP Account Access / Login Production Specification | `website/pages/account-login.md` | Active / Production-ready visual baseline; auth integration pending |
+| WEB-010 | VIP Account Access Implementation Manifest | `website/account-access-manifest.json` | Active |
+| WEB-011 | VIP Account Access Interaction Tokens | `website/styles/account-access-tokens.css` | Active / Implementation reference |
 
 ### Shared Property Profile Contract
 
@@ -174,16 +179,26 @@ An Experience is not automatically a live SKU. Exact live products and bundles r
 
 LuxSync account access is a high-care customer experience, not a generic utility form.
 
-Governing blueprint: `website/pages/account-login.md`.
+Governing artifacts:
+
+- `website/pages/account-login.md`
+- `website/account-access-manifest.json`
+- `website/styles/account-access-tokens.css`
+- `website/assets/auth/manifest.json`
+- `docs/checklists/CL-002-Account-Access-Review.md`
 
 Key principles:
 
 - every ordinary customer receives the same VIP-level welcome and service treatment;
+- use only the three approved immutable logo masters under `brand/assets/01-logos/`;
 - use Plush Drift tactile illumination for login card, fields, and primary CTA;
 - keep authentication calm, private, and friction-light;
-- do not invent identity providers, social login, MFA, session policy, or account capabilities that the production platform does not support;
+- Dusty Steel is the preferred cool concealed underlight;
+- Champagne Rose Gold is restrained premium reflected detail;
+- production ambient auth graphics remain text-free and live authentication content is semantic HTML/CSS;
+- do not invent identity providers, social login, MFA, passkeys, session policy, or account capabilities that the production platform does not support;
 - GoDaddy Commerce Plus remains the current production commerce/account authority unless a later architecture decision changes it;
-- the final approved LuxSync logo baseline must be used as immutable artwork when it is confirmed.
+- preferred UX route family begins at `/account/login`, but final production routing must follow the supported account integration.
 
 ## Runbooks and Checklists
 
@@ -195,6 +210,7 @@ Key principles:
 | RB-006 | Rollback | TBD | Planned |
 | RB-009 | Repository Consistency Validation | `docs/runbooks/RB-009-Repository-Consistency-Validation.md` | Active |
 | CL-001 | Airo First-Pass Review | `docs/checklists/CL-001-Airo-First-Pass-Review.md` | Active |
+| CL-002 | VIP Account Access Review | `docs/checklists/CL-002-Account-Access-Review.md` | Active |
 
 ## Prompt Catalog
 
@@ -257,7 +273,8 @@ Do not publish or invent:
 - medical claims
 - claims that convenience/security-related smart-home products replace life-safety systems, emergency services, or professional monitoring
 - unreleased SmartThings automation templates, LuxSync Grid, saved Blueprint functionality, or roadmap services as live
-- unsupported authentication providers, social logins, verification methods, or account features
+- unsupported authentication providers, social logins, verification methods, passkeys, session behaviors, or account features
+- real customer credentials or authentication secrets in static prototypes or repository content
 
 ## Maintenance Rules
 
@@ -273,6 +290,7 @@ Do not publish or invent:
 10. Run repository consistency validation after major cross-cutting changes.
 11. ROI examples must use customer inputs or clearly labeled scenarios; never publish promised returns, invented benchmarks, or unvalidated savings percentages.
 12. Account/authentication UX must remain subordinate to the capabilities and security requirements of the selected production account platform.
+13. Auth asset publication status is governed by `website/assets/auth/manifest.json`; reference diagrams are never functional UI.
 
 ## Change Log
 
@@ -289,6 +307,7 @@ Do not publish or invent:
 | 2026-08-31 | Added ten audience-specific ROI Guides, a shared measurement standard, and the ROI Guides website library blueprint. |
 | 2026-09-01 | Added the VIP Account Access / Login blueprint and made VIP-level welcome/service an account-experience requirement. |
 | 2026-09-01 | Reconciled the three-month roadmap and six-day launch plan, connected production output to governed content sources, completed adaptive Contact property branching, and strengthened repository/site regression checks. |
+| 2026-09-01 | Promoted VIP Account Access to a production-ready visual/interaction package with exact approved-logo mapping, dedicated ambient vectors, interaction tokens, implementation manifest, and CL-002 review gate. |
 
 ## Production Completion Baseline
 
@@ -299,9 +318,12 @@ Canonical website implementation references:
 
 - `docs/production-source-of-truth.md`
 - `website/implementation-manifest.json`
+- `website/account-access-manifest.json`
 - `website/asset-map.md`
 - `website/navigation.md`
 - `website/pages/`
+- `website/styles/account-access-tokens.css`
+- `website/assets/auth/manifest.json`
 - `website/src/concierge/luxsync-concierge-engine.v1.json`
 
-The imported non-logo raster slices are reference-only and must not be published directly.
+The imported non-logo raster slices are reference-only and must not be published directly. Auth vectors may be published only when their current website asset manifest explicitly marks them `production-approved`.

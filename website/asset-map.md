@@ -9,8 +9,9 @@
 - Alternate horizontal mark: `brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png`
 - Compact/orb mark: `brand/assets/01-logos/LuxSync_Logo_Orb.png`
 - Live UI: HTML/CSS using `website/styles/design-system.md`
+- VIP account interaction tokens: `website/styles/account-access-tokens.css`
 
-Do not publish direct raster assets from `brand/assets/02-icons/` through `brand/assets/09-stationery/`. Those files remain reference-only after visual QA.
+Do not publish direct raster assets from `brand/assets/02-icons/` through `brand/assets/09-stationery/`. Those files remain reference-only after visual QA. The dedicated auth vector mini-library lives under `website/assets/auth/` and has explicit publication status in `website/assets/auth/manifest.json`.
 
 ## Route visual assignments
 
@@ -30,6 +31,34 @@ Do not publish direct raster assets from `brand/assets/02-icons/` through `brand
 | `/about` | `website/pages/about.md` | Horizontal Combo logo + live founder profile layout; real approved portraits only if supplied |
 | `/faqs` | `website/pages/faqs.md` | Orb logo + live FAQ search/accordion composition |
 | `/contact` | `website/pages/contact.md` | Orb logo + live adaptive intent cards and form |
+| `/account/login` route family | `website/pages/account-login.md` | Horizontal Combo on desktop, Orb on compact/mobile, production-approved auth ambient SVGs, live semantic HTML/CSS controls |
+
+## VIP Account Access Asset Assignment
+
+### Approved logo placement
+
+- Desktop account welcome/header: `brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png`
+- Extended horizontal use where space supports it: `brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png`
+- Compact/mobile account access: `brand/assets/01-logos/LuxSync_Logo_Orb.png`
+
+No generated, retyped, redrawn, recolored, or substitute logo is allowed in the account experience.
+
+### Production-approved auth atmosphere
+
+- `website/assets/auth/login-vip-hero.svg` — desktop welcome-zone background
+- `website/assets/auth/login-vip-hero-mobile.svg` — mobile background
+- `website/assets/auth/member-access-ambient.svg` — reusable concealed orbit/underlight layer
+- `website/assets/auth/account-welcome-banner.svg` — post-login welcome base
+
+These assets remain text-free so all authentication, customer, and status copy stays live and accessible.
+
+### Auth design references
+
+- `website/assets/auth/auth-card-reference.svg`
+- `website/assets/auth/auth-input-states.svg`
+- `website/assets/auth/auth-button-states.svg`
+
+These are reference-only. Do not publish them as functional UI. Implement their geometry, focus, hover, press, and reduced-motion behavior with semantic HTML/CSS using `website/styles/account-access-tokens.css`.
 
 ## Reference-only material
 
@@ -37,6 +66,6 @@ The imported composites under `brand/assets/07-heroes/` and `brand/assets/08-sec
 
 ## Rule for future clean imagery
 
-A new image becomes production-safe only when it is text-free where practical, contains no regenerated LuxSync logo, contains no mutable commerce/support claims, uses approved visual language, and is explicitly added to the manifest with `publication_status: production-approved`.
+A new image becomes production-safe only when it is text-free where practical, contains no regenerated LuxSync logo, contains no mutable commerce/support/authentication claims, uses approved visual language, and is explicitly added to the relevant manifest with `publication_status: production-approved`.
 
 **Official slogan:** Where Luxury Lives Intelligently
