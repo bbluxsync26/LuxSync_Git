@@ -19,6 +19,17 @@ SAFE_ASSETS = {
     "brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png",
     "brand/assets/01-logos/LuxSync_Logo_Orb.png",
 }
+AUTH_PRODUCTION_ASSETS = {
+    "website/assets/auth/login-vip-hero.svg",
+    "website/assets/auth/login-vip-hero-mobile.svg",
+    "website/assets/auth/member-access-ambient.svg",
+    "website/assets/auth/account-welcome-banner.svg",
+}
+AUTH_REFERENCE_ASSETS = {
+    "website/assets/auth/auth-card-reference.svg",
+    "website/assets/auth/auth-input-states.svg",
+    "website/assets/auth/auth-button-states.svg",
+}
 RETIRED_HERO = "Smart Living" + ". " + "Elevated" + "."
 LEGACY_TERMS = [
     "LuxSync " + "v3",
@@ -44,6 +55,7 @@ REQUIRED_FILES = [
     "docs/value-proposition.md",
     "docs/architecture/website-information-architecture.md",
     "docs/architecture/intelligent-living-concierge.md",
+    "docs/checklists/CL-002-Account-Access-Review.md",
     "content/homepage.md",
     "content/about.md",
     "content/faqs.md",
@@ -51,9 +63,11 @@ REQUIRED_FILES = [
     "content/product-catalog.md",
     "content/guides/roi/README.md",
     "website/implementation-manifest.json",
+    "website/account-access-manifest.json",
     "website/navigation.md",
     "website/asset-map.md",
     "website/styles/design-system.md",
+    "website/styles/account-access-tokens.css",
     "website/pages/home.md",
     "website/pages/concierge.md",
     "website/pages/my-luxsync-blueprint.md",
@@ -68,6 +82,9 @@ REQUIRED_FILES = [
     "website/pages/about.md",
     "website/pages/faqs.md",
     "website/pages/contact.md",
+    "website/pages/account-login.md",
+    "website/assets/auth/README.md",
+    "website/assets/auth/manifest.json",
     "website/src/concierge/luxsync-concierge-engine.v1.json",
     "site/source-content.mjs",
     "site/src/app.js",
@@ -89,6 +106,8 @@ def require(rel, token):
 
 for rel in REQUIRED_FILES:
     if not (ROOT / rel).exists(): errors.append(f"missing required file: {rel}")
+for rel in AUTH_PRODUCTION_ASSETS | AUTH_REFERENCE_ASSETS:
+    if not (ROOT / rel).exists(): errors.append(f"missing VIP account asset: {rel}")
 if errors:
     print("LuxSync repository validation FAILED:")
     for e in errors: print("-", e)
@@ -141,10 +160,10 @@ for path in ROOT.rglob("*.md"):
     if any(part in {".git", "node_modules"} for part in path.parts):
         continue
     text = path.read_text(encoding="utf-8", errors="replace")
-    for src in re.findall(r'<img\\s+[^>]*src=["\\\']([^"\\\']+)["\\\']', text, flags=re.IGNORECASE):
+    for src in re.findall(r'<img\s+[^>]*src=["\']([^"\']+)["\']', text, flags=re.IGNORECASE):
         if src.startswith(("http://", "https://", "data:", "/")):
             continue
-        if "\\\\" in src:
+        if "\\" in src:
             errors.append(f"{path.relative_to(ROOT)}: nonportable backslash in image source: {src}")
             continue
         target = (path.parent / src).resolve()
@@ -201,6 +220,85 @@ for route in routes:
         if asset not in SAFE_ASSETS: errors.append(f"{route.get('route')}: reference-only asset wired as production: {asset}")
         if not (ROOT / asset).exists(): errors.append(f"{route.get('route')}: missing asset: {asset}")
 
+# VIP account source-of-truth package.
+auth = json.loads(read("website/account-access-manifest.json"))
+if auth.get("brand_system") != BRAND_SYSTEM:
+    errors.append("account-access manifest brand_system mismatch")
+if auth.get("primary_route") != "/account/login":
+    errors.append("account-access manifest primary_route must be /account/login")
+if set(auth.get("approved_logos", {}).values()) != SAFE_ASSETS:
+    errors.append("account-access manifest approved logo set mismatch")
+platform = auth.get("platform_boundary", {})
+if platform.get("commerce_account_authority") != "GoDaddy Commerce Plus":
+    errors.append("account-access manifest commerce/account authority mismatch")
+if platform.get("custom_credential_backend_approved") is not False:
+    errors.append("account-access manifest must not approve a custom credential backend")
+if platform.get("social_login_providers_approved") != []:
+    errors.append("account-access manifest must not invent social-login providers")
+if platform.get("passkey_implementation_approved") is not False:
+    errors.append("account-access manifest must not invent passkey support")
+if "/account/login" not in auth.get("route_family", []):
+    errors.append("account-access manifest route family missing /account/login")
+visual = auth.get("visual_assets", {})
+if set(visual.get("production_approved", [])) != AUTH_PRODUCTION_ASSETS:
+    errors.append("account-access production asset set mismatch")
+if set(visual.get("reference_only", [])) != AUTH_REFERENCE_ASSETS:
+    errors.append("account-access reference asset set mismatch")
+if visual.get("manifest") != "website/assets/auth/manifest.json":
+    errors.append("account-access asset manifest path mismatch")
+
+asset_manifest = json.loads(read("website/assets/auth/manifest.json"))
+manifest_items = asset_manifest.get("assets", [])
+manifest_map = {item.get("path"): item for item in manifest_items}
+if set(manifest_map) != AUTH_PRODUCTION_ASSETS | AUTH_REFERENCE_ASSETS:
+    errors.append("VIP auth asset manifest file set mismatch")
+for rel in AUTH_PRODUCTION_ASSETS:
+    item = manifest_map.get(rel, {})
+    if item.get("publication_status") != "production-approved":
+        errors.append(f"{rel}: production ambient asset must be production-approved")
+    if item.get("text_free") is not True:
+        errors.append(f"{rel}: production ambient asset must be text-free")
+    svg = read(rel)
+    if "<text" in svg:
+        errors.append(f"{rel}: production ambient asset contains live-looking text")
+for rel in AUTH_REFERENCE_ASSETS:
+    item = manifest_map.get(rel, {})
+    if item.get("publication_status") != "reference-only":
+        errors.append(f"{rel}: auth design reference must remain reference-only")
+    svg = read(rel)
+    for family in ("Manrope", "Inter"):
+        if family not in svg:
+            errors.append(f"{rel}: auth design reference missing {family}")
+
+if (ROOT / "brand/assets/10-auth").exists():
+    errors.append("brand/assets/10-auth must not exist; auth SVGs belong under website/assets/auth")
+if list((ROOT / "brand/assets").rglob("*.svg")):
+    errors.append("brand/assets must remain SVG-free for the Production Raster validator")
+
+for rel in (
+    "website/pages/account-login.md",
+    "website/account-access-manifest.json",
+    "website/asset-map.md",
+    "website/navigation.md",
+    "docs/production-source-of-truth.md",
+    "docs/master-catalog.md",
+    "docs/checklists/CL-002-Account-Access-Review.md",
+):
+    if "brand/assets/10-auth" in read(rel):
+        errors.append(f"{rel}: obsolete auth asset path remains")
+
+for token in (
+    "Welcome Back", "VIP", "Plush Drift", "GoDaddy Commerce Plus",
+    "LuxSync_Logo_Horizontal_Combo.png", "LuxSync_Logo_Horizontal_Final.png", "LuxSync_Logo_Orb.png",
+    "website/assets/auth/manifest.json",
+):
+    require("website/pages/account-login.md", token)
+for token in (
+    "--auth-canvas", "--auth-surface", "--auth-underlight", "--auth-metal",
+    "translateY(2px)", "prefers-reduced-motion", "Manrope", "Inter",
+):
+    require("website/styles/account-access-tokens.css", token)
+
 # Page blueprints may not directly wire reference-only imported slices.
 reference_prefixes = tuple(f"brand/assets/{n:02d}-" for n in range(2, 10))
 for path in (ROOT / "website/pages").rglob("*.md"):
@@ -230,3 +328,4 @@ print("LuxSync repository validation PASSED")
 print(f"Brand system: {BRAND_SYSTEM}")
 print(f"Slogan: {SLOGAN}")
 print(f"Routes: {len(routes)}")
+print(f"VIP auth assets: {len(AUTH_PRODUCTION_ASSETS)} production + {len(AUTH_REFERENCE_ASSETS)} reference")
