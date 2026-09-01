@@ -20,7 +20,7 @@ npm test
 
 `site/dist/` is generated output and is not committed.
 
-The build copies the exact protected LuxSync logo masters, the tracked Concierge engine, FAQ content derived from `content/faqs.md`, and the approved planning catalog structure into a deployable static site.
+The build copies the exact protected LuxSync logo masters and tracked Concierge engine. It derives the homepage contract from `content/homepage.md`, the planning catalog from `content/product-catalog.md`, founder names/titles/biographies from `docs/leadership/`, and FAQs from `content/faqs.md`. `site/source-content.mjs` is the governed-source adapter; production page code must not create a competing copy of those facts.
 
 ## Runtime Integrations
 
@@ -50,7 +50,11 @@ The repository consistency workflow must run:
 4. Website build and site validation.
 5. Whitespace validation.
 
-The website test validates all governed routes, exact logo equality, approved palette usage, retired-slogan absence, and the absence of active placeholder/reference SVG wiring.
+The website test validates all governed routes, exact logo equality, approved palette usage, retired-slogan absence, governed homepage and leadership content, exact catalog derivation, the adaptive Property Profile field contract, and the absence of active placeholder/reference SVG wiring.
+
+## Source-Control Gate
+
+The private repository's current plan does not enforce required status checks on `master`. Until branch protection is available, routine changes must use pull requests and the repository validation plus production-candidate workflows must be green before merge. Material launch, commerce, privacy, roadmap, and customer-data changes require founder review. An exceptional direct push must be followed immediately by verification of the same workflows.
 
 ## Production Deployment
 

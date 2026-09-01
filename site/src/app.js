@@ -402,8 +402,58 @@ function selectField(id, label, options, required = true) {
   return `<div class="field"><label for="${id}">${escapeHtml(label)}${required ? '<span class="required-mark" aria-hidden="true">*</span>' : ''}</label><select id="${id}" name="${id}"${required ? ' required' : ''}><option value="">Choose one</option>${options.map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`).join('')}</select></div>`;
 }
 
+const propertyTypeOptions = ['Private Residence', 'Short-Term Rental', 'Business / Commercial Property', 'Other'];
+const squareFootageOptions = ['Under 1,000 sq. ft.', '1,000–1,999 sq. ft.', '2,000–2,999 sq. ft.', '3,000–4,999 sq. ft.', '5,000+ sq. ft.', 'Not Sure'];
+
+function checkboxGroup(name, legend, options) {
+  return `<fieldset class="field"><legend>${escapeHtml(legend)}</legend><div class="choice-grid">${options.map((option) => `<label class="check-row"><input type="checkbox" name="${name}" value="${escapeHtml(option)}"><span>${escapeHtml(option)}</span></label>`).join('')}</div></fieldset>`;
+}
+
+function propertyTypeFields(propertyType) {
+  if (propertyType === 'Private Residence') {
+    return `<div class="field-row">${selectField('residence_type', 'Residence type', ['Single-Family Home', 'Apartment', 'Condominium', 'Townhome', 'Vacation Home', 'New Construction', 'Other'], false)}<div class="field"><label for="residence_levels">Number of levels</label><input id="residence_levels" name="residence_levels" type="number" min="1" step="1" inputmode="numeric"></div></div>`;
+  }
+  if (propertyType === 'Short-Term Rental') {
+    return `<div class="field-row">${selectField('str_property_type', 'Short-term rental property type', ['Single-Family Home', 'Apartment', 'Condominium', 'Townhome', 'Vacation Home', 'Multi-Unit Property', 'Other'], false)}<div class="field"><label for="rental_units">Number of rental units</label><input id="rental_units" name="rental_units" type="number" min="1" step="1" inputmode="numeric"></div></div><div class="field-row">${selectField('booking_platform', 'Booking platform', ['Airbnb', 'Vrbo', 'Both or Multiple', 'Direct Booking', 'Other', 'Not Yet Listed'], false)}${selectField('remote_management_status', 'Remote-management status', ['Managed On Site', 'Managed Remotely', 'Hybrid', 'Not Sure'], false)}</div>${checkboxGroup('desired_automation', 'Desired automation areas', ['Guest Entry', 'Smart Locks', 'Lighting', 'Climate', 'Energy', 'Noise Awareness', 'Water / Leak Awareness', 'Occupancy Awareness', 'Turnover', 'Property Monitoring', 'Guest Experience', 'Other'])}`;
+  }
+  if (propertyType === 'Business / Commercial Property') {
+    return `<div class="field-row">${selectField('business_type', 'Business type', ['Office', 'Retail', 'Hospitality', 'Professional Services', 'Medical / Healthcare Office', 'Property Management', 'Multi-Family', 'Restaurant', 'Studio', 'Other'], false)}<div class="field"><label for="number_of_locations">Number of locations</label><input id="number_of_locations" name="number_of_locations" type="number" min="1" step="1" inputmode="numeric"></div></div>`;
+  }
+  if (propertyType === 'Other') {
+    return `<div class="field"><label for="property_description">Describe the property</label><textarea id="property_description" name="property_description"></textarea></div>`;
+  }
+  return '<small>Select a property type to reveal only the relevant profile questions.</small>';
+}
+
 function propertyFields() {
-  return `<section class="form-section"><h3>Property Profile</h3><div class="field-row">${selectField('property_type', 'Property type', ['Private Residence', 'Short-Term Rental', 'Business / Commercial Property', 'Other'], false)}${selectField('square_feet_band', 'Approximate square footage', ['Under 1,000 sq. ft.', '1,000–1,999 sq. ft.', '2,000–2,999 sq. ft.', '3,000–4,999 sq. ft.', '5,000+ sq. ft.', 'Not Sure'], false)}</div><div class="field-row"><div class="field"><label for="city">City</label><input id="city" name="city" autocomplete="address-level2"></div><div class="field"><label for="state">State</label><input id="state" name="state" autocomplete="address-level1"></div></div><small>An estimate is always acceptable. A street address is not required for an initial inquiry.</small></section>`;
+  return `<section class="form-section"><h3>Property Profile</h3><div class="field-row">${selectField('property_type', 'Property type', propertyTypeOptions, false)}<div class="field"><label for="square_feet_exact">Approximate square footage</label><input id="square_feet_exact" name="square_feet_exact" type="number" min="1" step="1" inputmode="numeric"><small>An estimate is acceptable.</small></div></div><div class="field-row">${selectField('square_feet_band', 'Square-footage range', squareFootageOptions, false)}<div class="field"><label for="city">City</label><input id="city" name="city" autocomplete="address-level2"></div></div><div class="field-row"><div class="field"><label for="state">State</label><input id="state" name="state" autocomplete="address-level1"></div></div><div id="property-type-details" aria-live="polite"></div><small>A street address is not required for an initial inquiry.</small></section>`;
+}
+
+function initPropertyProfile(form) {
+  if (!form) return;
+  const propertyType = qs('#property_type', form);
+  const details = qs('#property-type-details', form);
+  if (!propertyType || !details) return;
+
+  const update = () => {
+    details.innerHTML = propertyTypeFields(propertyType.value);
+  };
+
+  propertyType.addEventListener('change', update);
+
+  try {
+    const fromBlueprint = new URLSearchParams(location.search).get('source') === 'blueprint';
+    const blueprint = fromBlueprint ? JSON.parse(localStorage.getItem('luxsyncBlueprint') || 'null') : null;
+    if (blueprint?.profile) {
+      propertyType.value = blueprint.profile.property_type || '';
+      const band = qs('#square_feet_band', form);
+      if (band) band.value = blueprint.profile.square_feet_band || '';
+    }
+  } catch {
+    // Ignore malformed or unavailable local Blueprint context.
+  }
+
+  update();
 }
 
 function branchFields(intent) {
@@ -429,7 +479,10 @@ function branchFields(intent) {
 }
 
 function serializeForm(form) {
-  const data = Object.fromEntries(new FormData(form).entries());
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+  const desiredAutomation = formData.getAll('desired_automation');
+  if (desiredAutomation.length) data.desired_automation = desiredAutomation;
   data.marketing_consent = Boolean(qs('[name="marketing_consent"]', form)?.checked);
   data.privacy_acknowledgment = Boolean(qs('[name="privacy_acknowledgment"]', form)?.checked);
   let blueprint = null;
@@ -475,6 +528,7 @@ function initContact() {
       });
     });
     const form = qs('#contact-form', root);
+    initPropertyProfile(form);
     form?.addEventListener('submit', async (event) => {
       event.preventDefault();
       const error = qs('#contact-error', root);

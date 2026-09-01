@@ -67,9 +67,9 @@ Approved colors:
 | DOC-001 | Project Overview / Operating Baseline | `README.md` | Active |
 | DOC-002 | Unified Business Plan | `docs/business-plan.md` | Active / planning |
 | DOC-003 | Value Proposition | `docs/value-proposition.md` | Active / reconciled |
-| DOC-004 | 3-Month Cookbook | `docs/3-month-cookbook.md` | Active roadmap |
+| DOC-004 | Conditional 3-Month Operating Roadmap | `docs/3-month-cookbook.md` | Active / gated roadmap |
 | DOC-005 | Financial Model | `docs/financial-model.md` | Active planning baseline |
-| DOC-006 | Launch Plan | `docs/launch-plan.md` | Active |
+| DOC-006 | Six-Day Launch Plan | `docs/launch-plan.md` | Active / gated production checklist |
 | DOC-007 | LuxSync Project Runbook | `docs/project-runbook.md` | Active |
 | DOC-008 | Bridgette Beardsley — Co-Founder & Chief Technology and Strategy Officer | `docs/leadership/bridgette-beardsley.md` | Active / Approved |
 | DOC-009 | Sheldon Bardol — Co-Founder & Chief Customer and Operations Officer | `docs/leadership/sheldon-bardol.md` | Active / Approved |
@@ -288,6 +288,7 @@ Do not publish or invent:
 | 2026-08-31 | Established **Where Luxury Lives Intelligently** as the sole approved public slogan/hero line and retired alternate slogan/hero treatments. |
 | 2026-08-31 | Added ten audience-specific ROI Guides, a shared measurement standard, and the ROI Guides website library blueprint. |
 | 2026-09-01 | Added the VIP Account Access / Login blueprint and made VIP-level welcome/service an account-experience requirement. |
+| 2026-09-01 | Reconciled the three-month roadmap and six-day launch plan, connected production output to governed content sources, completed adaptive Contact property branching, and strengthened repository/site regression checks. |
 
 ## Production Completion Baseline
 

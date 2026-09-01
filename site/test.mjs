@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { readGovernedContent } from './source-content.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
@@ -10,6 +11,7 @@ const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'website', 'implemen
 const approvedColors = new Set(['#0D1526', '#172036', '#D0BEB0', '#9E8B85', '#967878', '#7B96B2', '#D6B0A0']);
 const retired = 'Smart Living' + '. ' + 'Elevated' + '.';
 const errors = [];
+const governed = readGovernedContent(ROOT);
 
 function hash(file) {
   return crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
@@ -26,6 +28,36 @@ for (const item of manifest.routes) {
     if (/brand\/assets\/(?!01-logos)/.test(html)) errors.push(`${item.route}: reference-only brand asset wired directly`);
     if (/\.svg(?:["'?#]|$)/i.test(html)) errors.push(`${item.route}: SVG asset reference remains active`);
   }
+}
+
+const homeHtml = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
+const aboutHtml = fs.readFileSync(path.join(DIST, 'about', 'index.html'), 'utf8');
+for (const [label, value] of Object.entries(governed.homepage)) {
+  if (!homeHtml.includes(value)) errors.push(`Homepage does not match governed ${label}`);
+}
+const escapeExpectedHtml = (value) => String(value)
+  .replaceAll('&', '&amp;')
+  .replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;')
+  .replaceAll('"', '&quot;');
+for (const leader of Object.values(governed.leadership)) {
+  for (const value of [leader.name, leader.role, leader.compactBiography]) {
+    if (!aboutHtml.includes(escapeExpectedHtml(value))) {
+      errors.push(`About page does not match governed leadership source: ${value.slice(0, 60)}`);
+    }
+  }
+}
+const builtCatalog = JSON.parse(fs.readFileSync(path.join(DIST, 'data', 'catalog.json'), 'utf8'));
+if (JSON.stringify(builtCatalog) !== JSON.stringify(governed.catalog)) {
+  errors.push('Built catalog differs from content/product-catalog.md');
+}
+const builtApp = fs.readFileSync(path.join(DIST, 'app.js'), 'utf8');
+for (const fieldId of [
+  'square_feet_exact', 'residence_type', 'str_property_type', 'rental_units',
+  'booking_platform', 'remote_management_status', 'desired_automation',
+  'business_type', 'number_of_locations', 'property_description'
+]) {
+  if (!builtApp.includes(fieldId)) errors.push(`Adaptive Contact implementation missing ${fieldId}`);
 }
 
 const css = fs.readFileSync(path.join(DIST, 'styles.css'), 'utf8');
