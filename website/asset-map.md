@@ -2,55 +2,92 @@
 
 **Status:** Active / Authoritative
 **Brand system:** LuxSync Production Raster v5
+**Production asset library:** 6.0 clean atomic triple-format
 
 ## Production-safe visual primitives
+
+### Exact logos
 
 - Primary horizontal mark: `brand/assets/logos/png/luxsync-horizontal-combo.png`
 - Alternate horizontal mark: `brand/assets/logos/png/luxsync-horizontal.png`
 - Compact/orb mark: `brand/assets/logos/png/luxsync-orb.png`
-- Live UI: HTML/CSS using `website/styles/design-system.md`
+
+Matching SVG fidelity-container and WebP variants live beside the PNG families under `brand/assets/logos/`.
+
+### Clean semantic icons
+
+Production SVG icons live under `brand/assets/icons/svg/`, with matching PNG and WebP variants.
+
+Approved icon IDs:
+
+- `security-shield-check`
+- `lighting-bulb`
+- `climate-thermostat`
+- `music-note`
+- `shades-window`
+- `smart-lock`
+- `concierge-bell`
+- `installation-tools`
+- `support-headset`
+- `automation-home-gear`
+- `energy-bolt`
+- `camera`
+- `faq-chat`
+- `phone`
+- `calendar`
+- `location-pin`
+
+Use SVG by default for website UI illustration. PNG and WebP are fallback/delivery formats, not alternative designs.
+
+### Dividers and accents
+
+Production SVG dividers and ornaments live under `brand/assets/dividers/svg/`, with matching PNG and WebP variants. These include steel, rose, dual, sparkle, diamond, orbit, badge underline and corner treatments.
+
+### Live UI
+
+- General UI: HTML/CSS using `website/styles/design-system.md`
 - VIP account interaction tokens: `website/styles/account-access-tokens.css`
 
-Do not publish direct raster assets from `brand/assets/02-icons/` through `brand/assets/09-stationery/`. Those files remain reference-only after visual QA. The dedicated auth vector mini-library lives under `website/assets/auth/` and has explicit publication status in `website/assets/auth/manifest.json`.
+Buttons, forms, toggles, navigation, product cards and other interactive controls must remain live HTML/CSS rather than screenshots.
 
 ## Route visual assignments
 
 | Route | Blueprint | Production visual assignment |
 |---|---|---|
-| `/` | `website/pages/home.md` | Horizontal Combo logo + live editorial Plush Drift hero; product/solution cards built live |
-| `/find-my-luxsync-solution` | `website/pages/concierge.md` | Orb or Horizontal Combo logo + live Concierge cards/progress UI |
-| `/my-luxsync-blueprint` | `website/pages/my-luxsync-blueprint.md` | Horizontal Combo logo + live Blueprint hierarchy/cards |
-| `/solutions` | `website/pages/solutions.md` | Horizontal Combo logo + live audience pathway cards |
-| `/solutions/commercial-offices` | `website/pages/solutions/commercial-offices.md` | Horizontal Combo logo + live architectural office composition |
-| `/solutions/senior-living` | `website/pages/solutions/senior-living.md` | Horizontal Combo logo + live calm accessible-living composition |
-| `/solutions/short-term-rentals` | `website/pages/solutions/short-term-rentals.md` | Horizontal Combo logo + live hosting/property composition |
-| `/solutions/residential` | `website/pages/solutions/residential.md` | Horizontal Combo logo + live residential intelligent-living composition |
-| `/solutions/aging-in-place` | `website/pages/solutions/aging-in-place.md` | Horizontal Combo logo + live accessible-living composition |
-| `/shop` and collection routes | `website/pages/shop.md` | Horizontal Combo logo + validated commerce/manufacturer product imagery only |
-| `/guides` | `website/pages/guides.md` | Horizontal Combo logo + live ROI editorial card system |
+| `/` | `website/pages/home.md` | Horizontal Combo logo + clean icon/divider library + live editorial Plush Drift hero |
+| `/find-my-luxsync-solution` | `website/pages/concierge.md` | Orb or Horizontal Combo logo + Concierge/automation icons + live cards/progress UI |
+| `/my-luxsync-blueprint` | `website/pages/my-luxsync-blueprint.md` | Horizontal Combo logo + clean semantic capability icons + live Blueprint hierarchy/cards |
+| `/solutions` | `website/pages/solutions.md` | Horizontal Combo logo + clean audience/capability icons + live pathway cards |
+| `/solutions/commercial-offices` | `website/pages/solutions/commercial-offices.md` | Horizontal Combo logo + automation, energy, climate, access and lighting icons |
+| `/solutions/senior-living` | `website/pages/solutions/senior-living.md` | Horizontal Combo logo + lighting, automation, support and awareness-oriented icons |
+| `/solutions/short-term-rentals` | `website/pages/solutions/short-term-rentals.md` | Horizontal Combo logo + lock, climate, energy, camera and automation icons |
+| `/solutions/residential` | `website/pages/solutions/residential.md` | Horizontal Combo logo + lighting, climate, entertainment and automation icons |
+| `/solutions/aging-in-place` | `website/pages/solutions/aging-in-place.md` | Horizontal Combo logo + lighting, support, automation and entry icons |
+| `/shop` and collection routes | `website/pages/shop.md` | Horizontal Combo logo + clean category icons + validated commerce/manufacturer product imagery only |
+| `/guides` | `website/pages/guides.md` | Horizontal Combo logo + energy, security, climate and automation icons + live ROI card system |
 | `/about` | `website/pages/about.md` | Horizontal Combo logo + live founder profile layout; real approved portraits only if supplied |
-| `/faqs` | `website/pages/faqs.md` | Orb logo + live FAQ search/accordion composition |
-| `/contact` | `website/pages/contact.md` | Orb logo + live adaptive intent cards and form |
-| `/account/login` route family | `website/pages/account-login.md` | Horizontal Combo on desktop, Orb on compact/mobile, production-approved auth ambient SVGs, live semantic HTML/CSS controls |
+| `/faqs` | `website/pages/faqs.md` | Orb logo + `faq-chat` icon + live FAQ search/accordion composition |
+| `/contact` | `website/pages/contact.md` | Orb logo + support, phone, calendar, location and Concierge icons + live adaptive form |
+| `/account/login` route family | `website/pages/account-login.md` | Horizontal Combo on desktop, Orb on compact/mobile, production-approved auth ambient SVGs and semantic controls |
 
 ## VIP Account Access Asset Assignment
 
 ### Approved logo placement
 
 - Desktop account welcome/header: `brand/assets/logos/png/luxsync-horizontal-combo.png`
-- Extended horizontal use where space supports it: `brand/assets/logos/png/luxsync-horizontal.png`
+- Extended horizontal use: `brand/assets/logos/png/luxsync-horizontal.png`
 - Compact/mobile account access: `brand/assets/logos/png/luxsync-orb.png`
 
-No generated, retyped, redrawn, recolored, or substitute logo is allowed in the account experience.
+No generated, retyped, redrawn, recolored or substitute logo is allowed.
 
 ### Production-approved auth atmosphere
 
-- `website/assets/auth/login-vip-hero.svg` — desktop welcome-zone background
-- `website/assets/auth/login-vip-hero-mobile.svg` — mobile background
-- `website/assets/auth/member-access-ambient.svg` — reusable concealed orbit/underlight layer
-- `website/assets/auth/account-welcome-banner.svg` — post-login welcome base
+- `website/assets/auth/login-vip-hero.svg`
+- `website/assets/auth/login-vip-hero-mobile.svg`
+- `website/assets/auth/member-access-ambient.svg`
+- `website/assets/auth/account-welcome-banner.svg`
 
-These assets remain text-free so all authentication, customer, and status copy stays live and accessible.
+These remain text-free so authentication and status copy stays live and accessible.
 
 ### Auth design references
 
@@ -58,14 +95,14 @@ These assets remain text-free so all authentication, customer, and status copy s
 - `website/assets/auth/auth-input-states.svg`
 - `website/assets/auth/auth-button-states.svg`
 
-These are reference-only. Do not publish them as functional UI. Implement their geometry, focus, hover, press, and reduced-motion behavior with semantic HTML/CSS using `website/styles/account-access-tokens.css`.
+These are reference-only and should be implemented as live semantic HTML/CSS.
 
-## Reference-only material
+## Retired assets
 
-The imported composites under `brand/assets/07-heroes/` and `brand/assets/08-sections/`, plus the cropped icon/button/control/divider/product-card files, may inform spacing, lighting and mood only. They must not be placed on live pages because they contain or may contain baked/generated text, generated logo approximations, mutable claims, or crop artifacts.
+The previous numbered grid-sliced production folders were retired. They must not be restored or referenced by the website. Their crops were not atomic and could include neighboring icons, board fragments, labels or clipping.
 
-## Rule for future clean imagery
+## Rule for future imagery
 
-A new image becomes production-safe only when it is text-free where practical, contains no regenerated LuxSync logo, contains no mutable commerce/support/authentication claims, uses approved visual language, and is explicitly added to the relevant manifest with `publication_status: production-approved`.
+A new production image must be cleanly isolated, contain no regenerated LuxSync logo or mutable business claim, use the approved visual language, and be entered in the production manifest with matching SVG/PNG/WebP where applicable and `qa_status: passed`.
 
 **Official slogan:** Where Luxury Lives Intelligently
