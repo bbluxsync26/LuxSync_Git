@@ -15,9 +15,9 @@ SHELDON_TITLE = 'Co-Founder & Chief Customer and Operations Officer'
 CONCIERGE = "LuxSync Intelligent Living Concierge"
 BLUEPRINT = "My LuxSync Blueprint"
 SAFE_ASSETS = {
-    "brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png",
-    "brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png",
-    "brand/assets/01-logos/LuxSync_Logo_Orb.png",
+    "brand/assets/logos/png/luxsync-horizontal-combo.png",
+    "brand/assets/logos/png/luxsync-horizontal.png",
+    "brand/assets/logos/png/luxsync-orb.png",
 }
 AUTH_PRODUCTION_ASSETS = {
     "website/assets/auth/login-vip-hero.svg",

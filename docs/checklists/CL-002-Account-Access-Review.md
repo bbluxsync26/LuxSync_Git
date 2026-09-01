@@ -5,8 +5,8 @@
 
 ## Approved Brand Assets
 
-- [ ] Desktop uses `brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png` where a horizontal mark is appropriate.
-- [ ] Mobile/compact account access uses `brand/assets/01-logos/LuxSync_Logo_Orb.png` where appropriate.
+- [ ] Desktop uses `brand/assets/logos/png/luxsync-horizontal-combo.png` where a horizontal mark is appropriate.
+- [ ] Mobile/compact account access uses `brand/assets/logos/png/luxsync-orb.png` where appropriate.
 - [ ] `LuxSync_Logo_Horizontal_Final.png` is used only when the extended horizontal composition fits the available space.
 - [ ] No logo has been redrawn, retyped, recolored, regenerated, simplified, or substituted.
 - [ ] No AI-generated logo appears anywhere in the auth experience.

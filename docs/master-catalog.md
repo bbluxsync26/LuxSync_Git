@@ -48,7 +48,7 @@ For merchandising specifically, `content/product-catalog.md` governs current pro
 - **Primary launch compatibility standard:** Samsung SmartThings
 - **Production commerce system of record:** GoDaddy Commerce Plus
 - **Protected logo artwork:** approved logo masters remain immutable artwork
-- **Approved logo paths:** `brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png`, `brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png`, `brand/assets/01-logos/LuxSync_Logo_Orb.png`
+- **Approved logo paths:** `brand/assets/logos/png/luxsync-horizontal-combo.png`, `brand/assets/logos/png/luxsync-horizontal.png`, `brand/assets/logos/png/luxsync-orb.png`
 - **Account experience principle:** every customer receives the same high-care, VIP-level welcome and service experience
 
 Approved colors:

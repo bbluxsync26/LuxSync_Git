@@ -5,9 +5,9 @@
 
 ## Production-safe visual primitives
 
-- Primary horizontal mark: `brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png`
-- Alternate horizontal mark: `brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png`
-- Compact/orb mark: `brand/assets/01-logos/LuxSync_Logo_Orb.png`
+- Primary horizontal mark: `brand/assets/logos/png/luxsync-horizontal-combo.png`
+- Alternate horizontal mark: `brand/assets/logos/png/luxsync-horizontal.png`
+- Compact/orb mark: `brand/assets/logos/png/luxsync-orb.png`
 - Live UI: HTML/CSS using `website/styles/design-system.md`
 - VIP account interaction tokens: `website/styles/account-access-tokens.css`
 
@@ -37,9 +37,9 @@ Do not publish direct raster assets from `brand/assets/02-icons/` through `brand
 
 ### Approved logo placement
 
-- Desktop account welcome/header: `brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png`
-- Extended horizontal use where space supports it: `brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png`
-- Compact/mobile account access: `brand/assets/01-logos/LuxSync_Logo_Orb.png`
+- Desktop account welcome/header: `brand/assets/logos/png/luxsync-horizontal-combo.png`
+- Extended horizontal use where space supports it: `brand/assets/logos/png/luxsync-horizontal.png`
+- Compact/mobile account access: `brand/assets/logos/png/luxsync-orb.png`
 
 No generated, retyped, redrawn, recolored, or substitute logo is allowed in the account experience.
 

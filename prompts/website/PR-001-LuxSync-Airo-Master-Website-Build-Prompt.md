@@ -522,9 +522,9 @@ Reference-only diagrams such as auth card/input/button state boards must not be 
 
 Use **only** the approved LuxSync logo masters:
 
-- Desktop primary: `brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png`
-- Extended horizontal alternate: `brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png`
-- Compact/mobile: `brand/assets/01-logos/LuxSync_Logo_Orb.png`
+- Desktop primary: `brand/assets/logos/png/luxsync-horizontal-combo.png`
+- Extended horizontal alternate: `brand/assets/logos/png/luxsync-horizontal.png`
+- Compact/mobile: `brand/assets/logos/png/luxsync-orb.png`
 
 These are immutable brand masters.
 

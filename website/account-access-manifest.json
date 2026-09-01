@@ -10,9 +10,9 @@
     "body_ui": "Inter 400/500"
   },
   "approved_logos": {
-    "desktop_primary": "brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png",
-    "horizontal_alternate": "brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png",
-    "compact_mobile": "brand/assets/01-logos/LuxSync_Logo_Orb.png"
+    "desktop_primary": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+    "horizontal_alternate": "brand/assets/logos/png/luxsync-horizontal.png",
+    "compact_mobile": "brand/assets/logos/png/luxsync-orb.png"
   },
   "route_family": [
     "/account/login",

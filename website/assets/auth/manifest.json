@@ -4,9 +4,9 @@
   "brand_system": "LuxSync Production Raster v5",
   "design_dna": "Plush Drift tactile illumination",
   "approved_logo_sources": [
-    "brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png",
-    "brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png",
-    "brand/assets/01-logos/LuxSync_Logo_Orb.png"
+    "brand/assets/logos/png/luxsync-horizontal-combo.png",
+    "brand/assets/logos/png/luxsync-horizontal.png",
+    "brand/assets/logos/png/luxsync-orb.png"
   ],
   "assets": [
     {

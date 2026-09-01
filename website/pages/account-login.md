@@ -18,9 +18,9 @@ The experience must remain simple, secure, accessible, commerce-oriented, and vi
 
 1. Use **only** the approved logo masters in `brand/assets/01-logos/`.
 2. Never redraw, retype, recolor, regenerate, simplify, or reinterpret the LuxSync logo.
-3. Desktop/header brand use: `brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png`.
-4. Alternate extended horizontal use: `brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png`.
-5. Compact/mobile/account emblem use: `brand/assets/01-logos/LuxSync_Logo_Orb.png`.
+3. Desktop/header brand use: `brand/assets/logos/png/luxsync-horizontal-combo.png`.
+4. Alternate extended horizontal use: `brand/assets/logos/png/luxsync-horizontal.png`.
+5. Compact/mobile/account emblem use: `brand/assets/logos/png/luxsync-orb.png`.
 6. Live headings and controls use Manrope 500/600.
 7. Live body, helper, form, and supporting copy use Inter 400/500.
 8. Decorative metallic and illumination effects must never replace accessible contrast, focus, labels, or state text.
@@ -389,9 +389,9 @@ The auth asset manifest is `website/assets/auth/manifest.json`.
 
 | Context | Approved asset | Rule |
 |---|---|---|
-| Desktop welcome/header | `brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png` | primary desktop lockup |
-| Extended marketing/auth email visual | `brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png` | only where horizontal space supports it |
-| Mobile / compact auth | `brand/assets/01-logos/LuxSync_Logo_Orb.png` | compact brand mark |
+| Desktop welcome/header | `brand/assets/logos/png/luxsync-horizontal-combo.png` | primary desktop lockup |
+| Extended marketing/auth email visual | `brand/assets/logos/png/luxsync-horizontal.png` | only where horizontal space supports it |
+| Mobile / compact auth | `brand/assets/logos/png/luxsync-orb.png` | compact brand mark |
 
 Never generate a logo inside an auth background, illustration, icon set, or AI image. Place the approved file directly.
 

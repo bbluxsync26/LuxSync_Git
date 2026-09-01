@@ -27,7 +27,7 @@ Implementation paths remain **Essential Intelligence**, **Elevated Living**, and
 
 ## Visual assignment
 
-Use `brand/assets/01-logos/LuxSync_Logo_Orb.png` or the exact horizontal master with live HTML/CSS cards, progress states and accessible controls. Do not publish flattened Concierge screenshots or imported raster composites.
+Use `brand/assets/logos/png/luxsync-orb.png` or the exact horizontal master with live HTML/CSS cards, progress states and accessible controls. Do not publish flattened Concierge screenshots or imported raster composites.
 
 Primary CTA: **Build My LuxSync Blueprint**. Preserve Back/Continue behavior, answers and accessible focus states. Do not present the experience as a novelty quiz.
 
