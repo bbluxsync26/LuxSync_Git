@@ -15,5 +15,5 @@ Slate Navy `#0D1526`; Dark Suede `#172036`; Pale Driftwood `#D0BEB0`; Warm Taupe
 ## Typography
 Use Manrope for headings/UI and Inter for body/supporting text. Logo lettering remains protected artwork only.
 
-## Atomic asset rule
-Every reusable graphic object is an individual file under `brand/assets/`.
+## Production asset rule
+Every reusable finished graphic object is an individual PNG under `brand/assets/`. Placeholder SVG reconstructions are retired and prohibited.

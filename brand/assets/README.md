@@ -1,18 +1,19 @@
-# LuxSync Atomic Brand Asset Library
+# LuxSync Production Asset Library
 
-**Status:** Approved production source of truth
+**Status:** Active / Production
 
-This is the only active LuxSync graphics library. Every reusable website, ecommerce, stationery, and marketing object is an individual SVG file.
+This directory contains the finished raster production graphics. The retired placeholder SVG reconstructions are removed.
 
-## Authoritative logos
-The only authoritative masters are `brand/source-logo/LuxSync_Logo_Horizontal_Combo.png`, `brand/source-logo/LuxSync_Logo_Horizontal_Final.png`, and `brand/source-logo/LuxSync_Logo_Orb.png`. The wrappers in `01-logos/` reference those files exactly. Never redraw, recolor, soften, regenerate, or re-typeset the logo artwork.
+- `01-logos/` exact copies of the immutable approved logo masters
+- `02-icons/` finished individual icon graphics
+- `03-buttons/` finished CTA/button graphics
+- `04-ui-controls/` finished UI-reference graphics
+- `05-dividers-accents/` finished metallic dividers and accents
+- `06-product-cards/` finished smart-home product-card graphics
+- `07-heroes/` approved hero graphics
+- `08-sections/` Concierge, FAQ, and founders section graphics
+- `09-stationery/` finished stationery graphics
 
-## Approved palette
-Slate Navy `#0D1526`; Dark Suede `#172036`; Pale Driftwood `#D0BEB0`; Warm Taupe Mauve `#9E8B85`; Antique Rose Taupe `#967878`; Dusty Steel `#7B96B2`; Champagne Rose Gold Metallic anchored at `#D6B0A0`.
+Approved palette: Slate Navy `#0D1526`, Dark Suede `#172036`, Pale Driftwood `#D0BEB0`, Warm Taupe Mauve `#9E8B85`, Antique Rose Taupe `#967878`, Dusty Steel `#7B96B2`, Champagne Rose Gold Metallic anchor `#D6B0A0`.
 
-**Brushed Dusty Steel** is the approved metallic-blue treatment and is built only from approved palette colors. Electric blue and other unapproved blues are prohibited. Any future new color requires explicit approval before use.
-
-## Atomic groups
-`01-logos/`, `02-icons/`, `03-buttons/`, `04-ui-controls/`, `05-dividers-accents/`, `06-product-cards/`, `07-heroes/`, `08-roi/`, `09-stationery/`, `11-marketing/`, `12-palette/`.
-
-Editable website text uses Manrope + Inter.
+**Brushed Dusty Steel** is the sole approved metallic-blue treatment.

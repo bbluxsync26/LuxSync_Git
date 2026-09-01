@@ -1,10 +1,10 @@
 # LuxSync Website Design System
 
 **Status:** Active / Reconciled  
-**Brand system:** LuxSync v3  
+**Brand system:** LuxSync Production Raster v5
 **Design DNA:** Plush Drift
 
-LuxSync v3 is the active website treatment: crisp, architectural, premium, calm, restrained, and tactile. Approved logo artwork is immutable; editable UI uses Manrope/Inter and the approved palette.
+LuxSync Production Raster v5 is the active website treatment: crisp, architectural, premium, calm, restrained, and tactile. Approved logo artwork is immutable; editable UI uses Manrope/Inter and the approved palette.
 
 ## Official Brand Language
 
@@ -186,7 +186,7 @@ Do not make a solution concept look purchasable unless a validated commerce item
 
 - production photography should be text-free where practical
 - do not bake live prices, ratings, stock, scarcity, navigation, or promotional claims into photographs
-- prefer SVG for vector UI and WebP for production scene imagery
+- use the approved finished PNG/WebP graphics for branded visual assets; build live interactive UI with accessible HTML/CSS rather than baking interaction into image files
 - retired slogan artwork must not be reused
 
 ## Avoid
