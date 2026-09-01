@@ -43,9 +43,12 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # The Actions token cannot alter workflow files. Restore them for this push;
+          # ChatGPT will update/remove those two files separately through the GitHub connector.
+          git checkout HEAD -- .github/workflows/validate-repository-consistency.yml .github/workflows/complete-production-source-of-truth.yml
           git add -A
           git diff --cached --check
           git commit -m 'Complete LuxSync website production source of truth'
           git push origin website/production-completion
 
-# Final production completion pass with whitespace normalization.
+# Production completion pass; workflow-file changes are finalized separately.
