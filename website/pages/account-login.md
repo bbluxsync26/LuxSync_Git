@@ -1,36 +1,50 @@
-# LuxSync Account Access Blueprint
+# LuxSync Account Access — Production Specification
 
-**Status:** Active / Pre-build UX baseline  
+**Status:** Active / Production-ready visual and interaction baseline  
 **Experience:** VIP Account Access  
-**Brand:** LuxSync Production Raster v5 with Plush Drift tactile illumination  
+**Brand:** LuxSync Production Raster v5 with Plush Drift design DNA  
 **Typography:** Manrope + Inter  
-**Official slogan:** Where Luxury Lives Intelligently
+**Official slogan:** Where Luxury Lives Intelligently  
+**Implementation manifest:** `website/account-access-manifest.json`  
+**Interaction tokens:** `website/styles/account-access-tokens.css`
 
 ## Purpose
 
 The LuxSync login and account-access experience must feel like entry into a private luxury service environment, not a generic authentication form. Every customer should feel recognized, welcomed, and important from the first account interaction.
 
-The account experience must remain simple, secure, accessible, and commerce-oriented while carrying the Plush Drift design DNA: layered dark surfaces, concealed light, tactile controls, restrained metallic detail, and Intelligent Calm voice.
+The experience must remain simple, secure, accessible, commerce-oriented, and visually consistent with Plush Drift: layered dark surfaces, concealed light, tactile controls, restrained metallic detail, and Intelligent Calm voice.
 
-## Primary Experience Principle
+## Non-Negotiable Brand Rules
+
+1. Use **only** the approved logo masters in `brand/assets/01-logos/`.
+2. Never redraw, retype, recolor, regenerate, simplify, or reinterpret the LuxSync logo.
+3. Desktop/header brand use: `brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png`.
+4. Alternate extended horizontal use: `brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png`.
+5. Compact/mobile/account emblem use: `brand/assets/01-logos/LuxSync_Logo_Orb.png`.
+6. Live headings and controls use Manrope 500/600.
+7. Live body, helper, form, and supporting copy use Inter 400/500.
+8. Decorative metallic and illumination effects must never replace accessible contrast, focus, labels, or state text.
+
+## Experience Principle
 
 **Every LuxSync customer is treated like a VIP.**
 
-VIP does not mean flashy, exclusive in a socially exclusionary way, or overloaded with luxury language. It means:
+VIP means:
 
 - the interface feels considered and personal;
 - the customer is welcomed rather than processed;
 - access is calm, clear, and friction-light;
-- assistance is easy to find;
+- assistance is always easy to find;
 - account information feels private and well cared for;
-- the visual environment communicates polish, trust, and attention.
+- every ordinary customer receives the same high-care experience.
 
-## Recommended Page Route
+VIP does **not** mean artificial status tiers, velvet-rope language, scarcity, or implying that some ordinary customers matter less.
 
-Primary route: `/account/login`
+## Route Architecture
 
-Related account states should remain visually consistent:
+Preferred route family:
 
+- `/account/login`
 - `/account/create`
 - `/account/forgot-password`
 - `/account/reset-password`
@@ -39,247 +53,305 @@ Related account states should remain visually consistent:
 - `/account/locked`
 - `/account/welcome`
 
-Do not assume these exact production routes until the actual Commerce Plus/account implementation is confirmed. Preserve them as UX blueprint routes/placeholders.
+These are UX route targets. Final production route names must follow the actual GoDaddy Commerce Plus/account implementation or a later approved identity architecture decision.
 
-## Desktop Layout
+## Desktop Architectural Drawing
 
-Use a balanced two-zone composition.
+### Overall canvas
 
-### Welcome / VIP atmosphere zone
+- Full viewport minimum height: `100svh` where supported.
+- Content max width: `1440px` visual composition, with the auth card constrained independently.
+- Base canvas: Slate Navy `#0D1526`.
+- Elevated surfaces: Dark Suede `#172036`.
+- Primary light copy: Pale Driftwood `#D0BEB0`.
+- Soft secondary copy: Warm Taupe Mauve `#9E8B85`.
+- Interactive concealed light: Dusty Steel `#7B96B2`.
+- Premium micro-detail: Champagne Rose Gold Metallic anchored at `#D6B0A0`.
 
-Approximately 52–58% of the desktop width.
+### Two-zone composition
 
-Contains:
+Use a 58/42 desktop split at wide viewports. The layout may relax toward 55/45 between 1024px and 1279px.
 
-1. approved LuxSync logo artwork;
-2. restrained architectural smart-living visual or abstract Plush Drift illumination graphic;
-3. warm welcome statement;
-4. short value message;
-5. optional small trust/service cue.
+#### Zone A — VIP welcome atmosphere
 
-Suggested hierarchy:
+**Placement:** left side, approximately 52–58% width.
 
-**Welcome Back**
+Contains, in order:
 
-**Your LuxSync experience is ready.**
+1. approved Horizontal Combo logo near the upper-left safe zone;
+2. optional eyebrow: `MEMBER ACCESS`;
+3. headline: **Welcome Back**;
+4. support line: **Your LuxSync experience is ready.**;
+5. supporting copy: `Sign in to continue to your orders, saved preferences, curated recommendations, and LuxSync support.`;
+6. subtle trust/service cue;
+7. text-free ambient visual from `brand/assets/10-auth/login-vip-hero.svg`.
 
-Supporting copy:
+The ambient visual remains behind live HTML text. Do not bake welcome copy, authentication fields, or mutable account claims into the background graphic.
 
-`Sign in to continue to your orders, saved preferences, curated recommendations, and LuxSync support.`
+#### Zone B — account access card
 
-Optional eyebrow:
+**Placement:** right side, vertically centered, visually anchored slightly inside the right half rather than against the browser edge.
 
-`PRIVATE MEMBER ACCESS`
+Recommended card geometry:
 
-Avoid overly formal club language, velvet-rope language, status tiers, or claims that imply some normal customers are less valued.
+- width: `clamp(360px, 32vw, 480px)`;
+- minimum interior padding: `32px` desktop;
+- corner radius: `22–26px`;
+- border: restrained Dusty Steel / Pale Driftwood blend;
+- concealed underlight behind the card, not a hard glowing outline;
+- card should float 20–32px above its optical background plane.
 
-### Account-access zone
+Card content order:
 
-Approximately 42–48% of the desktop width.
+1. `Member Login`
+2. `Access your LuxSync account.`
+3. Email address field
+4. Password field with accessible show/hide control
+5. Remember-me option only when supported by the real platform
+6. `Forgot Password?`
+7. Primary `Sign In` action
+8. `Create Your LuxSync Account`
+9. Support pathway
+10. optional security/trust text only when factually supported
 
-Use a vertically centered elevated access card with generous breathing room.
+Do not invent Apple, Google, Microsoft, passkey, biometric, SSO, MFA, or social-login options unless the production account platform actually supports them.
 
-The card should include:
+## VIP Welcome Messaging
 
-- Email address
-- Password
-- Show/hide password control
-- Remember me option where appropriate
-- Primary `Sign In` CTA
-- `Forgot password?`
-- `Create your LuxSync account`
-- clear Support pathway
+### Preferred login copy
 
-If third-party sign-in is later supported by the actual account platform, add it only after implementation validation. Do not invent social-login providers in the design baseline.
+**Eyebrow:** `MEMBER ACCESS`  
+**Headline:** `Welcome Back`  
+**Support line:** `Your LuxSync experience is ready.`
 
-## Mobile Layout
+Preferred helper copy:
 
-Use a single-column experience.
-
-Priority order:
-
-1. compact approved logo
-2. `Welcome Back`
-3. short VIP-oriented supporting copy
-4. login card
-5. account creation / password support
-6. customer-support pathway
-7. restrained visual atmosphere below or behind the main card
-
-Do not force a split-screen composition onto mobile.
-
-The form must fit comfortably without horizontal scrolling or oversized decorative elements.
-
-## Plush Drift Tactile Illumination
-
-The login page is a flagship use case for Plush Drift tactile illumination.
-
-### Login card
-
-- Dark Suede surface over a Slate Navy field.
-- Very soft Pale Driftwood / Warm Taupe Mauve atmospheric lift behind the card.
-- Optional restrained Champagne Rose Gold reflected edge detail.
-- Card should appear elevated and softly backlit, not glassy or neon.
-
-### Input fields
-
-Rest:
-
-- Dark surface
-- readable Pale Driftwood/Inter text
-- subtle border or inset depth
-
-Focus:
-
-- Dusty Steel concealed underlight becomes slightly more visible
-- accessible focus outline remains clearly identifiable
-- field may lift optically but should not jump or resize
-
-Valid/success:
-
-- communicate with icon/text as well as color
-- keep the overall palette restrained
-
-Error:
-
-- use accessible error messaging and iconography
-- never rely only on red/color
-- do not use aggressive flashing or shake animation
-
-### Primary Sign In button
-
-Rest:
-
-- dark premium foreground surface
-- faint concealed Dusty Steel underlight
-- optional metallic micro-highlight at edge or icon
-
-Hover:
-
-- underlight expands and brightens modestly
-- no dramatic scale-up
-
-Pressed:
-
-- surface compresses visually inward approximately 1–2 px
-- outer shadow tightens
-- concealed light becomes slightly stronger
-- release returns smoothly
-
-Keyboard focus:
-
-- clear focus indicator plus restrained illumination
-
-Reduced motion:
-
-- remove physical travel if needed
-- retain non-motion focus/pressed differentiation
-
-## Metallic Integration
-
-Champagne Rose Gold Metallic is used as jewelry, not wallpaper.
-
-Approved uses:
-
-- tiny divider accent
-- fine edge reflection
-- small member-access emblem
-- micro-icon detail
-- restrained headline ornament
-
-Do not use metallic gradients as large text fills, full form backgrounds, or dominant button fills.
-
-## Dedicated Login Visual Asset Set
-
-Create an account-access mini-library under the active production asset system.
-
-Recommended assets:
-
-1. `login-vip-hero.webp` — text-free premium background / atmosphere image
-2. `login-vip-hero-mobile.webp` — mobile-safe crop or alternate composition
-3. `member-access-ambient.svg` — restrained abstract underlight/orbit composition
-4. `account-access-emblem.svg` — optional small metallic/Dusty Steel decorative mark, not a new logo
-5. `auth-card-reference.svg` — visual reference for backlit account card states
-6. `auth-input-states.svg` — rest/focus/error/success field treatment reference
-7. `auth-button-states.svg` — rest/hover/focus/pressed button treatment reference
-8. `account-welcome-banner.svg` — reusable post-login welcome banner treatment
-
-Do not create alternate LuxSync logos for the auth experience. Use the canonical approved logo artwork once the final baseline is confirmed.
-
-## VIP Language System
-
-Preferred phrases:
-
-- `Welcome Back`
-- `Your LuxSync experience is ready.`
 - `Welcome to your LuxSync account.`
 - `Your home. Your preferences. Your LuxSync.`
 - `Need assistance? LuxSync Support is here.`
 
-Use `Member Access` sparingly as an eyebrow or utility label. The customer should feel personally valued without the interface sounding like a private club.
+Use the official slogan as a brand signature where compositionally appropriate:
+
+**Where Luxury Lives Intelligently**
 
 Avoid:
 
 - `Elite members only`
 - `Exclusive access` unless a genuinely restricted feature exists
-- invented loyalty status
-- artificial scarcity
-- status hierarchy among ordinary customers
+- invented loyalty/status terminology
+- scarcity or urgency language
+- exaggerated security claims
 
-## Create Account Experience
+## Input Architecture and States
 
-The account-creation page should feel like a warm invitation.
+All fields use live semantic HTML labels. Placeholder text never substitutes for a visible or programmatically associated label.
 
-Suggested heading:
+### Default
 
-**Create Your LuxSync Account**
+- Dark Suede inset field.
+- Low-contrast border visible against the card.
+- Pale Driftwood input text.
+- Warm Taupe Mauve placeholder/help text.
+- No bright halo.
 
-Suggested support line:
+### Hover
 
-`Save preferences, follow orders, revisit recommendations, and keep your LuxSync experience connected.`
+- Border becomes slightly clearer.
+- Concealed Dusty Steel underlight may become visible at low intensity.
+- No size shift.
 
-Do not require unnecessary profile information at account creation. Collect only what the production commerce/account system actually needs.
+### Focus
 
-## Password Recovery
+- Visible WCAG-oriented focus ring.
+- Dusty Steel underlight brightens modestly.
+- Fine Champagne Rose Gold reflection may appear along one edge.
+- No large bloom or animation that competes with typing.
 
-Password recovery should be calm and reassuring.
+### Filled / valid
 
-Suggested heading:
+- Preserve normal text contrast.
+- Optional check/status icon plus readable text where validation feedback is needed.
+- Never communicate success through color alone.
 
-**Reset Your Access**
+### Error
 
-Suggested support line:
+- Accessible error text linked to the field.
+- Error icon or textual cue in addition to color.
+- No shake animation.
+- No flashing red border.
+- Error state must remain legible in reduced-motion and high-contrast contexts.
+
+### Disabled
+
+- Reduced contrast while retaining legibility.
+- No illumination response.
+- Cursor and semantics must accurately communicate disabled state.
+
+## Button Architecture and States
+
+### Primary Sign In
+
+Rest:
+
+- dark premium foreground surface;
+- restrained Champagne Rose Gold edge/reflection;
+- faint Dusty Steel concealed light behind the button;
+- readable Pale Driftwood label.
+
+Hover:
+
+- concealed light widens slightly;
+- shadow lifts subtly;
+- border/reflection becomes a little clearer;
+- do not scale the button up.
+
+Focus:
+
+- visible focus ring plus restrained illumination;
+- keyboard focus must be at least as clear as mouse hover.
+
+Pressed:
+
+- visual compression of approximately `1–2px`;
+- outer shadow tightens;
+- underlight becomes slightly brighter and more concentrated;
+- the interaction should feel like pressing a softly backlit architectural control.
+
+Release:
+
+- return smoothly over approximately `140–220ms`;
+- use calm easing;
+- avoid spring/bounce effects.
+
+Disabled:
+
+- lower contrast;
+- no glow expansion;
+- no metallic emphasis;
+- retain readable label where possible.
+
+## Plush Drift Tactile Illumination
+
+The auth experience is a flagship expression of Plush Drift tactile illumination.
+
+### Layer stack
+
+1. Slate Navy environmental field.
+2. Text-free ambient orbit/architectural layer.
+3. low-opacity warm/cool atmospheric wash.
+4. Dark Suede foreground card or control.
+5. concealed Dusty Steel underlight.
+6. restrained Champagne Rose Gold reflected edge.
+7. live content and accessible focus/state layer.
+
+### Intensity guidance
+
+- Rest: barely perceptible illumination.
+- Hover: +10–20% perceived light.
+- Focus: +20–30% perceived light plus clear focus ring.
+- Press: narrower, brighter concealed light with 1–2px compression.
+- Success: calm, brief confirmation, not celebratory fireworks.
+
+### Prohibited effects
+
+- neon tubes
+- cyberpunk cyan/magenta glow
+- flashing
+- pulsing authentication fields
+- exaggerated bloom
+- hard glowing outlines around every card
+- animation used as the only state cue
+
+## Mobile Architectural Drawing
+
+### Breakpoint behavior
+
+At `<= 767px`, collapse to a single-column experience.
+
+Order:
+
+1. approved Orb logo
+2. `Welcome Back`
+3. short support line
+4. login card
+5. password recovery / account creation links
+6. support pathway
+7. optional ambient art behind or below the primary content
+
+### Mobile geometry
+
+- horizontal page padding: `20–24px`;
+- card width: `100%` with a practical max of `440px`;
+- form controls: minimum 44px touch target, preferably 48–52px;
+- no split-screen treatment;
+- no horizontally scrolling decorative art;
+- ambient background uses `brand/assets/10-auth/login-vip-hero-mobile.svg`;
+- Orb logo should remain comfortably separated from the card so it reads as brand, not field decoration.
+
+### Keyboard and viewport
+
+- page must remain usable with the software keyboard open;
+- primary action must not be trapped below an inaccessible fixed viewport;
+- use `100dvh`/`100svh` carefully and allow vertical scrolling;
+- preserve password-manager and autofill behavior.
+
+## Account Flow Architecture
+
+### Login
+
+`Email → Password → Sign In → authenticated destination`
+
+On authentication failure, retain the entered email where security policy permits and show a calm, field-associated message.
+
+### Forgot password
+
+Heading: **Reset Your Access**
+
+Support line:
 
 `Enter the email associated with your LuxSync account and we’ll help you restore access.`
 
-Success state:
+Submit confirmation:
 
 **Check Your Email**
 
 `If an account matches that address, you’ll receive the next step shortly.`
 
-Use security-safe wording that does not unnecessarily reveal whether an email address has an account.
+This wording avoids unnecessarily disclosing account existence.
 
-## Verification / Two-Step Access
+### Create account
 
-If verification is required by the production platform:
+Heading: **Create Your LuxSync Account**
 
-- use six clearly readable code positions or the platform-native control;
-- support paste/autofill where available;
-- preserve keyboard usability;
-- provide resend guidance;
-- avoid countdown pressure language;
-- use the same tactile illumination language as other auth controls.
+Support line:
 
-## Post-Login Welcome
+`Save preferences, follow orders, revisit recommendations, and keep your LuxSync experience connected.`
 
-The first authenticated screen should continue the VIP feeling rather than abruptly dropping into generic ecommerce UI.
+Collect only fields required by the actual production account/commerce platform. Do not add demographic or property-profile questions to the credential-creation step merely for marketing convenience.
 
-Recommended welcome area:
+### Verification / two-step access
+
+Only display if the production account platform requires or supports it.
+
+- Prefer platform-native verification controls.
+- Six-code visual treatment is acceptable when technically appropriate.
+- Support paste/autofill.
+- Provide resend guidance.
+- Do not use pressure language or aggressive countdown animation.
+
+### Locked / recovery-required
+
+- Explain the next safe action clearly.
+- Provide Support path.
+- Do not expose internal security rules or account-enumeration details.
+
+### Post-login welcome
+
+Heading:
 
 **Welcome Back, [First Name]**
 
-Supporting modules may include, when supported by real data:
+Only show modules supported by real account data, such as:
 
 - Orders
 - Saved products
@@ -288,42 +360,106 @@ Supporting modules may include, when supported by real data:
 - Support
 - Account preferences
 
-Do not invent personalization data that the real platform cannot provide.
+Do not invent personalized values or saved-state capabilities.
 
-## Accessibility and Security UX
+## Production Graphic Mini-Library
 
-- WCAG 2.2 AA-oriented contrast and interaction patterns
-- semantic labels, not placeholder-only fields
-- full keyboard operation
-- visible focus
-- touch targets sized for mobile use
-- password manager/autofill compatibility
-- show/hide password control with accessible label
-- errors linked to relevant fields
-- reduced-motion support
-- no authentication state communicated by glow/color alone
-- no sensitive information baked into decorative graphics
+The approved auth graphics live under `brand/assets/10-auth/`.
 
-## Commerce / Implementation Boundary
+### Production-approved ambient graphics
+
+| Asset | Purpose | Placement |
+|---|---|---|
+| `login-vip-hero.svg` | text-free desktop VIP atmosphere | Zone A background / ambient layer |
+| `login-vip-hero-mobile.svg` | text-free mobile ambient treatment | mobile page background / lower atmosphere |
+| `member-access-ambient.svg` | reusable abstract underlight/orbit layer | behind login card, recovery card, verification card |
+| `account-welcome-banner.svg` | text-free post-login banner base | authenticated account welcome area |
+
+### Design-reference graphics
+
+| Asset | Purpose | Publication rule |
+|---|---|---|
+| `auth-card-reference.svg` | login card geometry and illumination reference | reference only; build live HTML/CSS |
+| `auth-input-states.svg` | input-state visual reference | reference only; build live semantic controls |
+| `auth-button-states.svg` | button-state visual reference | reference only; build live semantic controls |
+
+The auth asset manifest is `brand/assets/10-auth/manifest.json`.
+
+## Exact Logo Placement
+
+| Context | Approved asset | Rule |
+|---|---|---|
+| Desktop welcome/header | `brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png` | primary desktop lockup |
+| Extended marketing/auth email visual | `brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png` | only where horizontal space supports it |
+| Mobile / compact auth | `brand/assets/01-logos/LuxSync_Logo_Orb.png` | compact brand mark |
+
+Never generate a logo inside an auth background, illustration, icon set, or AI image. Place the approved file directly.
+
+## CSS / Token Contract
+
+Use `website/styles/account-access-tokens.css` for the implementation-level values and interaction timing. That file complements, not replaces, `website/styles/design-system.md`.
+
+Core variables include:
+
+- `--auth-canvas`
+- `--auth-surface`
+- `--auth-text`
+- `--auth-muted`
+- `--auth-underlight`
+- `--auth-metal`
+- `--auth-radius-card`
+- `--auth-radius-control`
+- `--auth-focus-ring`
+- `--auth-motion-fast`
+- `--auth-motion-standard`
+
+## Security / Platform Boundary
 
 GoDaddy Commerce Plus remains the current production commerce/account authority unless a later repository decision changes it.
 
-This blueprint defines UX and visual behavior. It does not select an authentication provider, identity platform, password policy, MFA mechanism, session policy, social login provider, or customer-data architecture.
+This specification defines visual behavior, page architecture, responsive behavior, copy, interaction states, and production-safe brand assets. It does **not** define:
 
-Those choices must follow the actual production platform and security implementation.
+- authentication provider;
+- password storage;
+- password policy;
+- MFA method;
+- social-login provider;
+- passkey implementation;
+- session/token policy;
+- customer identity database;
+- authorization rules.
+
+Do not build a custom credential backend merely to reproduce the design. Adapt the real production account component or redirect/delegated login flow to this visual system once the supported integration contract is known.
+
+## Accessibility Requirements
+
+- WCAG 2.2 AA-oriented contrast and interaction patterns.
+- Semantic labels and instructions.
+- Full keyboard operation.
+- Visible keyboard focus.
+- Touch targets at least 44px.
+- Password manager/autofill compatibility.
+- Accessible show/hide-password labeling.
+- Field errors connected programmatically to fields.
+- Reduced-motion support.
+- No authentication state communicated by glow, animation, or color alone.
+- Decorative SVGs use empty alt / `aria-hidden` when placed as atmosphere.
+- Logo images use meaningful LuxSync alt text where they communicate brand identity.
 
 ## Acceptance Criteria
 
 The account-access experience passes LuxSync review when:
 
-- the customer is welcomed, not merely presented with a form;
-- the page feels visually related to the storefront but quieter and more private;
-- Plush Drift tactile illumination is visible on card/input/button interaction states;
-- Champagne Rose Gold is restrained;
-- Manrope + Inter are used correctly;
-- the approved logo is not regenerated or altered;
-- mobile remains simple and fast;
-- password/account recovery is calm and security-safe;
-- accessibility does not depend on glow, motion, or color;
-- no unsupported authentication capabilities are invented;
-- every ordinary LuxSync customer receives the same high-care, VIP-level experience.
+- every customer is welcomed with a VIP-quality experience;
+- the approved logo masters are used directly and exclusively;
+- Manrope and Inter are used correctly;
+- desktop uses a calm two-zone composition;
+- mobile collapses cleanly to one column;
+- card, input, and button states visibly express Plush Drift tactile illumination;
+- Champagne Rose Gold remains restrained;
+- password recovery uses security-safe copy;
+- unsupported authentication providers or features are not invented;
+- accessibility remains complete without glow or motion;
+- text-free ambient graphics stay behind live HTML/CSS content;
+- the account integration preserves Commerce Plus/security boundaries;
+- the visual result matches the approved LuxSync VIP login direction rather than a generic SaaS login template.
