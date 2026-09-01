@@ -44,3 +44,5 @@ jobs:
           git diff --cached --check
           git commit -m 'Complete LuxSync website production source of truth'
           git push origin website/production-completion
+
+# Retry after design-system governance correction.
