@@ -61,7 +61,7 @@ GoDaddy Commerce Plus remains the current production commerce/account authority 
 
 Use exact logo masters plus live HTML/CSS for the active site. The imported raster slices outside `brand/assets/01-logos/` are reference-only except for assets explicitly marked `production-approved` in a current asset manifest.
 
-For account access, production-approved ambient graphics are governed by `brand/assets/10-auth/manifest.json`. Authentication copy, customer data, fields, buttons and state messaging remain live HTML/CSS.
+For account access, production-approved ambient graphics are governed by `website/assets/auth/manifest.json`. Authentication copy, customer data, fields, buttons and state messaging remain live HTML/CSS.
 
 Do not publish generated logo approximations, baked support hours, fake founder identities, retired copy, board-crop fragments, customer-specific auth text baked into graphics, or reference-only control diagrams.
 
@@ -72,7 +72,7 @@ Primary references:
 - `website/pages/account-login.md`
 - `website/account-access-manifest.json`
 - `website/styles/account-access-tokens.css`
-- `brand/assets/10-auth/manifest.json`
+- `website/assets/auth/manifest.json`
 - `docs/checklists/CL-002-Account-Access-Review.md`
 
 Locked account visual rules:
@@ -102,7 +102,7 @@ For account/login implementation, additionally use:
 6. `website/account-access-manifest.json`
 7. `website/pages/account-login.md`
 8. `website/styles/account-access-tokens.css`
-9. `brand/assets/10-auth/manifest.json`
+9. `website/assets/auth/manifest.json`
 10. `docs/checklists/CL-002-Account-Access-Review.md`
 
 The Concierge implementation source is `website/src/concierge/`, including the generated `luxsync-concierge-engine.v1.json` configuration.
