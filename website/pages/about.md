@@ -28,7 +28,7 @@ Keep this page personal and credible without turning it into a résumé wall or 
 - Primary CTA: **Find My LuxSync Solution**
 - Secondary CTA: **Explore Smart Home**
 
-Use a spacious Slate Navy or Dark Suede composition with Pale Driftwood copy, restrained Champagne Rose Gold Metallic detail, and an approved v3 architectural or smart-living visual.
+Use a spacious Slate Navy or Dark Suede composition with Pale Driftwood copy, restrained Champagne Rose Gold Metallic detail, and a **production-approved architectural or smart-living visual** governed by `website/asset-map.md` and the current asset manifests.
 
 ### 2. Our Point of View
 
@@ -98,3 +98,5 @@ Close the story with three commitments:
 ## Production Visual Assignment
 
 Use the exact horizontal LuxSync logo and a live balanced founder layout. Use founder copy from `docs/leadership/`. Do not invent portraits or use generated founder identities. If approved founder portraits are not supplied, use elegant non-person placeholder treatments rather than synthetic people. See `website/asset-map.md`.
+
+**Official slogan:** Where Luxury Lives Intelligently

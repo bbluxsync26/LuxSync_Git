@@ -24,7 +24,7 @@ LuxSync is organized in layers:
 5. **Current visual implementation** — LuxSync Production Raster v5 and `brand/assets/`.
 6. **Protected identity artwork** — approved LuxSync logo masters, preserved exactly and not reconstructed from live type.
 
-LuxSync Production Raster v5 is therefore the current implementation of the brand, while **Plush Drift is the enduring interaction and material design language underneath it**.
+LuxSync Production Raster v5 is the current implementation of the brand, while **Plush Drift is the enduring interaction and material design language underneath it**.
 
 ## Plush Drift Design DNA
 
@@ -113,7 +113,7 @@ Champagne Rose Gold Metallic is a premium material treatment. It may appear as a
 
 It is **not the primary backlight color** and should not become a broad rose-gold halo.
 
-Approved metallic rendering follows the gradient defined in `brand/colors.md`.
+Approved metallic rendering follows the treatment defined in `brand/colors.md`.
 
 ## Layered Surface Model
 
@@ -194,11 +194,11 @@ Avoid:
 
 ## Relationship to LuxSync Production Raster v5
 
-LuxSync Production Raster v5 is the current authoritative visual and asset implementation. New production design work uses `brand/assets/`.
+LuxSync Production Raster v5 is the current authoritative visual and asset implementation. New production design work uses `brand/assets/` according to publication status in the current manifests and `website/asset-map.md`.
 
-The v3 system should preserve the Plush Drift DNA described here even as individual assets, logo baselines, component drawings, or marketing compositions are refined.
+**Production Raster v5 must preserve the Plush Drift DNA described here** even as individual assets, logo mappings, component drawings, photography, or marketing compositions are refined.
 
-A future LuxSync v4 may alter execution details without losing the core principles of **layered dark surfaces, tactile illumination, intelligent calm, softened luxury, and restrained metallic polish** unless an explicit brand architecture decision changes them.
+A future approved LuxSync visual-system generation may alter execution details without losing the core principles of **layered dark surfaces, tactile illumination, Intelligent Calm, softened luxury, and restrained metallic polish** unless an explicit brand-architecture decision changes them.
 
 ## Related Authoritative Files
 
@@ -206,7 +206,9 @@ A future LuxSync v4 may alter execution details without losing the core principl
 - `brand/colors.md` — authoritative palette and metallic treatment
 - `brand/typography.md` — Manrope/Inter typography contract
 - `brand/voice-and-tone.md` — Intelligent Calm voice
+- `docs/production-source-of-truth.md` — production precedence and locked website identity
 - `website/styles/design-system.md` — website implementation rules
+- `website/asset-map.md` — production asset mapping
 - `prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md` — staging-generation instructions
 - `docs/checklists/CL-001-Airo-First-Pass-Review.md` — implementation review gate
 
