@@ -1,7 +1,7 @@
 # LuxSync Contact Page Content
 
-**Status:** Active / Approved baseline  
-**Website blueprint:** `website/pages/contact.md`  
+**Status:** Active / Approved baseline
+**Website blueprint:** `website/pages/contact.md`
 **Official slogan:** **Where Luxury Lives Intelligently**
 
 ## Page Header

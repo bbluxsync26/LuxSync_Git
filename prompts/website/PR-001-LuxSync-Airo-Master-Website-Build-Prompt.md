@@ -1,7 +1,7 @@
 # PR-001 — LuxSync Airo Master Website Build Prompt
 
-**Status:** Active / Reconciled for staging generation  
-**Updated:** 2026-08-31  
+**Status:** Active / Reconciled for staging generation
+**Updated:** 2026-08-31
 **Purpose:** Generate the LuxSync launch storefront in GoDaddy Airo AI Builder while preserving the repository source of truth, the Intelligent Living Concierge architecture, and the Commerce Plus production boundary.
 
 ## Prompt to paste into GoDaddy Airo AI Builder
@@ -337,9 +337,9 @@ Samsung SmartThings is the primary launch compatibility standard. Emphasize comp
 
 GoDaddy Commerce Plus remains the production commerce system of record. Represent storefront UX in staging, but do not connect live payments, alter production DNS, replace Commerce Plus, or create a second unmanaged live catalog.
 
-## LuxSync v3 Brand System
+## LuxSync Production Raster v5 Brand System
 
-Use **LuxSync v3** as the authoritative visual system and **Plush Drift** as the enduring design DNA.
+Use **LuxSync Production Raster v5** as the authoritative visual system and **Plush Drift** as the enduring design DNA.
 
 Approved colors:
 
@@ -415,3 +415,15 @@ A first-time visitor should quickly understand that LuxSync is a premium curated
 Every important design, content, interaction, and commerce decision should reinforce:
 
 **Where Luxury Lives Intelligently.**
+
+## Mandatory Production Source-of-Truth Inputs
+
+Before generating the website, read and obey:
+
+- `docs/production-source-of-truth.md`
+- `website/implementation-manifest.json`
+- `website/navigation.md`
+- `website/asset-map.md`
+- `website/styles/design-system.md`
+
+Use **Where Luxury Lives Intelligently** as the sole public slogan. Use the exact protected logo files. Build buttons, cards, forms, icons, dividers, Concierge UI and Contact UI as live HTML/CSS. Do not publish the reference-only raster composites, generated logo approximations, baked founder/support information or board-crop fragments under `brand/assets/02-icons/` through `brand/assets/09-stationery/`.

@@ -2,7 +2,7 @@
 
 **Status:** Active / Approved website content
 **Company:** LuxSync LLC
-**Brand system:** LuxSync v3
+**Brand system:** LuxSync Production Raster v5
 **Website blueprint:** `website/pages/about.md`
 
 ## Our Story

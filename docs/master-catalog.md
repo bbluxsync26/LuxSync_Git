@@ -1,8 +1,8 @@
 # LuxSync Master Catalog
 
-**Status:** Active  
-**Repository:** `bbluxsync26/LuxSync_Git`  
-**Default branch:** `master`  
+**Status:** Active
+**Repository:** `bbluxsync26/LuxSync_Git`
+**Default branch:** `master`
 **Last updated:** 2026-08-31
 
 ## Purpose
@@ -28,7 +28,7 @@ For merchandising specifically, `content/product-catalog.md` governs current pro
 
 ## Current Brand and Product Tie-Breakers
 
-- **Authoritative visual system:** LuxSync v3
+- **Authoritative visual system:** LuxSync Production Raster v5
 - **Enduring design DNA:** Plush Drift
 - **Brand architecture:** `brand/brand-architecture.md`
 - **Headings / navigation / buttons / graphic UI:** Manrope 500/600
@@ -98,7 +98,7 @@ Approved colors:
 
 | ID | Artifact | Path | Status |
 |---|---|---|---|
-| BRAND-001 | Brand Guidelines | `brand/README.md` | Active — LuxSync v3 |
+| BRAND-001 | Brand Guidelines | `brand/README.md` | Active — LuxSync Production Raster v5 |
 | BRAND-002 | Color System | `brand/colors.md` | Active |
 | BRAND-003 | Typography | `brand/typography.md` | Active — Manrope + Inter |
 | BRAND-004 | Voice & Tone | `brand/voice-and-tone.md` | Active — Intelligent Calm |
@@ -176,8 +176,6 @@ An Experience is not automatically a live SKU. Exact live products and bundles r
 | RB-004 | CI/CD | TBD | Planned |
 | RB-005 | Production Deployment and Domain/DNS | TBD | Planned |
 | RB-006 | Rollback | TBD | Planned |
-| RB-007 | Brand Asset Raster Regeneration | `docs/runbooks/RB-007-Brand-Asset-Raster-Regeneration.md` | Historical / Superseded |
-| RB-008 | Prior Luxury Orbit Asset Generation | `docs/runbooks/RB-008-Luxury-Orbit-Brand-Asset-Generation.md` | Historical / Superseded |
 | RB-009 | Repository Consistency Validation | `docs/runbooks/RB-009-Repository-Consistency-Validation.md` | Active |
 | CL-001 | Airo First-Pass Review | `docs/checklists/CL-001-Airo-First-Pass-Review.md` | Active |
 
@@ -201,7 +199,7 @@ All active prompts must inherit current company facts, exact founder titles, the
 - GoDaddy Commerce Plus remains production commerce authority
 - Samsung SmartThings remains the primary launch compatibility standard
 - Mobile-first, accessible, performant experience
-- LuxSync v3 visual system with Plush Drift design DNA
+- LuxSync Production Raster v5 visual system with Plush Drift design DNA
 - Manrope + Inter typography
 - Intelligent Calm voice
 - Approved logo artwork referenced directly, never regenerated
@@ -262,10 +260,26 @@ Do not publish or invent:
 |---|---|
 | 2026-08-29 | Repository master catalog established. |
 | 2026-08-30 | Reconciled website/Airo architecture and operating baseline. |
-| 2026-08-31 | Added approved seven-color palette, Manrope/Inter contract, founder biographies, FAQs, and LuxSync v3 / Plush Drift governance. |
+| 2026-08-31 | Added approved seven-color palette, Manrope/Inter contract, founder biographies, FAQs, and LuxSync Production Raster v5 / Plush Drift governance. |
 | 2026-08-31 | Added the Intelligent Living Concierge engine and My LuxSync Blueprint architecture as flagship product artifacts. |
 | 2026-08-31 | Added the dedicated adaptive Contact page and shared Property Profile contract. |
 | 2026-08-31 | Added the canonical Product & Solution Catalog with Concierge-linked Experience concepts. |
 | 2026-08-31 | Reconciled all active reusable prompts around current founder facts, company facts, Contact routing, Concierge/Blueprint terminology, and commerce guardrails. |
 | 2026-08-31 | Established **Where Luxury Lives Intelligently** as the sole approved public slogan/hero line and retired alternate slogan/hero treatments. |
 | 2026-08-31 | Added ten audience-specific ROI Guides, a shared measurement standard, and the ROI Guides website library blueprint. |
+
+## Production Completion Baseline
+
+**Authoritative visual system:** LuxSync Production Raster v5
+**Official slogan:** Where Luxury Lives Intelligently
+
+Canonical website implementation references:
+
+- `docs/production-source-of-truth.md`
+- `website/implementation-manifest.json`
+- `website/asset-map.md`
+- `website/navigation.md`
+- `website/pages/`
+- `website/src/concierge/luxsync-concierge-engine.v1.json`
+
+The imported non-logo raster slices are reference-only and must not be published directly.

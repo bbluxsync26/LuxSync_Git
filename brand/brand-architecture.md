@@ -1,10 +1,10 @@
 # LuxSync Brand Architecture
 
-**Status:** Active / Authoritative  
-**Company:** LuxSync LLC  
-**Current visual system:** LuxSync v3  
-**Design DNA:** Plush Drift  
-**Typography:** Manrope + Inter  
+**Status:** Active / Authoritative
+**Company:** LuxSync LLC
+**Current visual system:** LuxSync Production Raster v5
+**Design DNA:** Plush Drift
+**Typography:** Manrope + Inter
 **Official slogan:** Where Luxury Lives Intelligently
 
 ## Purpose
@@ -21,10 +21,10 @@ LuxSync is organized in layers:
 2. **Plush Drift design DNA** — tactile depth, softened luxury, concealed illumination, layered dark surfaces, warm/cool balance, and quiet physicality.
 3. **Authoritative palette** — Slate Navy, Dark Suede, Pale Driftwood, Warm Taupe Mauve, Antique Rose Taupe, Dusty Steel, and Champagne Rose Gold Metallic.
 4. **Typography** — Manrope 500/600 for headings/display/navigation/controls and Inter 400/500 for body/supporting UI.
-5. **Current visual implementation** — LuxSync v3 and `brand/assets-v3/`.
+5. **Current visual implementation** — LuxSync Production Raster v5 and `brand/assets/`.
 6. **Protected identity artwork** — approved LuxSync logo masters, preserved exactly and not reconstructed from live type.
 
-LuxSync v3 is therefore the current implementation of the brand, while **Plush Drift is the enduring interaction and material design language underneath it**.
+LuxSync Production Raster v5 is therefore the current implementation of the brand, while **Plush Drift is the enduring interaction and material design language underneath it**.
 
 ## Plush Drift Design DNA
 
@@ -192,9 +192,9 @@ Avoid:
 - flat controls with no tactile hierarchy;
 - excessive animation.
 
-## Relationship to LuxSync v3
+## Relationship to LuxSync Production Raster v5
 
-LuxSync v3 is the current authoritative visual and asset implementation. New production design work uses `brand/assets-v3/`.
+LuxSync Production Raster v5 is the current authoritative visual and asset implementation. New production design work uses `brand/assets/`.
 
 The v3 system should preserve the Plush Drift DNA described here even as individual assets, logo baselines, component drawings, or marketing compositions are refined.
 

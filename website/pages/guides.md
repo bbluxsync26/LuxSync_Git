@@ -136,7 +136,7 @@ Use canonical copy from `content/guides/roi/`. Do not generate independent ROI c
 
 ## 10. Visual Direction
 
-Use LuxSync v3 and Plush Drift tactile illumination:
+Use LuxSync Production Raster v5 and Plush Drift tactile illumination:
 
 - Slate Navy and Dark Suede foundations;
 - Pale Driftwood primary copy;
@@ -168,3 +168,6 @@ The page succeeds when visitors can:
 5. open every guide without a mandatory email gate;
 6. continue to Find My LuxSync Solution or request a consultation.
 
+## Production Visual Assignment
+
+Use the exact horizontal LuxSync logo plus live editorial ROI guide cards. Audience names, formulas, limitations and download actions remain native text. Do not publish a flattened generated ROI cover as the authoritative content source. See `website/asset-map.md`.

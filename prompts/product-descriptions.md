@@ -1,6 +1,6 @@
 # PR-PRODUCT-001 — LuxSync Product Description Prompt
 
-**Status:** Active  
+**Status:** Active
 **Canonical catalog:** `content/product-catalog.md`
 
 Write product, bundle, collection, or solution-copy for **LuxSync LLC**.

@@ -62,4 +62,3 @@ Track:
 LuxSync does not guarantee owner retention, portfolio growth, reviews, labor savings, or management margin. Any capacity or retention value must be linked to actual operating and customer evidence. Security-related and property-awareness products do not replace emergency response, professional monitoring, code-required systems, or local property support.
 
 **Next step:** Request an STR management consultation at `info@luxsync.net`.
-

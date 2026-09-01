@@ -1,7 +1,7 @@
 # RB-002 — GoDaddy Airo AI Builder
 
-**Status:** Active / Reconciled  
-**Last updated:** 2026-08-31  
+**Status:** Active / Reconciled
+**Last updated:** 2026-08-31
 **Scope:** LuxSync website generation and staging workflow
 
 ## Purpose
@@ -48,7 +48,7 @@ Review before each Airo build:
 - Repository `master` is current.
 - Repository consistency validation passes.
 - PR-001 is current and reconciled.
-- LuxSync v3 is the authoritative visual system.
+- LuxSync Production Raster v5 is the authoritative visual system.
 - Plush Drift is the enduring design DNA.
 - Manrope 500/600 is authoritative for headings/display/UI.
 - Inter 400/500 is authoritative for body/supporting UI.
@@ -155,7 +155,7 @@ Typography:
 
 Preserve approved logo artwork exactly. Do not infer website fonts from logo art.
 
-Use LuxSync v3 with restrained Plush Drift tactile illumination. Reject cyberpunk neon, unapproved lavender/purple base treatment, generic SaaS blue, dense gadget-store grids, excessive glassmorphism, aggressive popups, or retired slogan graphics.
+Use LuxSync Production Raster v5 with restrained Plush Drift tactile illumination. Reject cyberpunk neon, unapproved lavender/purple base treatment, generic SaaS blue, dense gadget-store grids, excessive glassmorphism, aggressive popups, or retired slogan graphics.
 
 ## Step 7 — Commerce Representation
 
@@ -214,3 +214,16 @@ Record prompt version, Airo project name, date, deviations, approved/rejected sc
 ## Completion Criteria
 
 A generation cycle is complete when CL-001 has been executed; structure, Concierge, Contact, catalog, brand, content, responsive behavior, accessibility, and commerce boundaries have been reviewed; and exported source, if any, has been captured for repository review.
+
+## Production Input Set
+
+Before generating or revising the site, load these authoritative inputs in order:
+
+1. `docs/production-source-of-truth.md`
+2. `website/implementation-manifest.json`
+3. `website/navigation.md`
+4. `website/asset-map.md`
+5. page blueprints under `website/pages/`
+6. approved copy under `content/`
+
+Use exact logo masters and live HTML/CSS. Do not import reference-only raster composites as public UI.

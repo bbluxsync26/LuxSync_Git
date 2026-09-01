@@ -69,4 +69,3 @@ Good pilot candidates may include:
 LuxSync solutions are not medical devices, nurse-call systems, fall-detection guarantees, clinical monitoring, emergency response, professional security monitoring, or substitutes for required staffing and life-safety systems. No automation should delay or replace clinical judgment, resident support, emergency procedures, or mandated equipment.
 
 **Next step:** Request a nursing-home discovery consultation at `info@luxsync.net`.
-

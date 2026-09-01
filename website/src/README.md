@@ -32,3 +32,7 @@ When Airo or another approved builder exports source:
 4. Confirm Commerce Plus remains the production commerce system of record unless a later decision changes it.
 5. Review the generated experience using ARC-001 and CL-001.
 6. Only then establish the production source structure beneath `website/`.
+
+## Production Website Handoff
+
+The route contract is `website/implementation-manifest.json`; navigation is `website/navigation.md`; visual publication rules are `website/asset-map.md`. The Concierge engine under `website/src/concierge/` is the primary executable website source currently tracked in this repository.

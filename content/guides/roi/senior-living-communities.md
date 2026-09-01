@@ -69,4 +69,3 @@ Potential pilots:
 LuxSync provides convenience, accessibility, and property-awareness concepts. It does not provide clinical monitoring, emergency response, guaranteed fall detection, nurse-call replacement, professional security monitoring, or a substitute for required care, staffing, or life-safety systems.
 
 **Next step:** Request a senior-living consultation at `info@luxsync.net`.
-

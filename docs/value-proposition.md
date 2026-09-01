@@ -1,6 +1,6 @@
 # LuxSync LLC: Value Proposition
 
-**Where Luxury Lives Intelligently**  
+**Where Luxury Lives Intelligently**
 *Reconciled: August 31, 2026*
 
 ## 1. The Smart-Home Problem
@@ -42,7 +42,7 @@ The experience should feel:
 
 ## 4. Brand System
 
-- **Authoritative visual system:** LuxSync v3
+- **Authoritative visual system:** LuxSync Production Raster v5
 - **Enduring design DNA:** Plush Drift
 - **Official slogan / hero line:** Where Luxury Lives Intelligently
 - **Headings / UI:** Manrope 500/600
@@ -154,7 +154,7 @@ The Contact page shares Property Profile concepts with the Concierge so customer
 ## 11. Brand Implementation Contract
 
 - **Official slogan / hero line:** Where Luxury Lives Intelligently
-- **Visual system:** LuxSync v3
+- **Visual system:** LuxSync Production Raster v5
 - **Design DNA:** Plush Drift
 - **Headings / display / UI:** Manrope 500/600
 - **Body / supporting UI:** Inter 400/500
@@ -164,3 +164,7 @@ The Contact page shares Property Profile concepts with the Concierge so customer
 - **Output:** My LuxSync Blueprint
 
 The goal is an intelligent-living experience that feels elegant, understandable, personalized, and intentionally curated rather than technically overwhelming.
+
+## Production Website Handoff
+
+Website implementation is governed by `LuxSync Production Raster v5`, `docs/production-source-of-truth.md`, and `website/implementation-manifest.json`. The official public slogan remains **Where Luxury Lives Intelligently**.

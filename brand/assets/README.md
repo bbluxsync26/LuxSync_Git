@@ -1,19 +1,33 @@
-# LuxSync Production Asset Library
+# LuxSync Raster Asset Library
 
-**Status:** Active / Production
+**Status:** Active source library
+**Brand system:** LuxSync Production Raster v5
 
-This directory contains the finished raster production graphics. The retired placeholder SVG reconstructions are removed.
+This folder preserves the verified raster import and the exact approved logo copies. Publication status is intentionally explicit so generated composites and board slices cannot accidentally become live website artwork.
 
-- `01-logos/` exact copies of the immutable approved logo masters
-- `02-icons/` finished individual icon graphics
-- `03-buttons/` finished CTA/button graphics
-- `04-ui-controls/` finished UI-reference graphics
-- `05-dividers-accents/` finished metallic dividers and accents
-- `06-product-cards/` finished smart-home product-card graphics
-- `07-heroes/` approved hero graphics
-- `08-sections/` Concierge, FAQ, and founders section graphics
-- `09-stationery/` finished stationery graphics
+## Production-approved
 
-Approved palette: Slate Navy `#0D1526`, Dark Suede `#172036`, Pale Driftwood `#D0BEB0`, Warm Taupe Mauve `#9E8B85`, Antique Rose Taupe `#967878`, Dusty Steel `#7B96B2`, Champagne Rose Gold Metallic anchor `#D6B0A0`.
+Only these files may be published directly from this library:
 
-**Brushed Dusty Steel** is the sole approved metallic-blue treatment.
+- `01-logos/LuxSync_Logo_Horizontal_Combo.png`
+- `01-logos/LuxSync_Logo_Horizontal_Final.png`
+- `01-logos/LuxSync_Logo_Orb.png`
+
+They are byte-identical copies of the immutable masters under `brand/source-logo/`.
+
+## Reference-only
+
+Folders `02-icons/` through `09-stationery/` are **design-reference exports only**. Visual QA found that some files contain baked/generated copy, generated logo approximations, or board-crop artifacts. They are useful for style direction, but they must not be shipped as website UI, product data, founder information, support information, or public claims.
+
+Production implementation must use:
+
+1. exact protected logo masters;
+2. live HTML/CSS for headings, buttons, forms, icons, cards, dividers, navigation, Concierge and Contact interactions;
+3. validated commerce/manufacturer imagery for real products when available;
+4. approved text-free photography only when a clean production image is available.
+
+**Official slogan:** Where Luxury Lives Intelligently
+**Metallic blue:** Brushed Dusty Steel `#7B96B2`
+**Premium metallic anchor:** Champagne Rose Gold `#D6B0A0`
+
+See `website/asset-map.md` for the route-by-route publication map.

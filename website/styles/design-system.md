@@ -1,6 +1,6 @@
 # LuxSync Website Design System
 
-**Status:** Active / Reconciled  
+**Status:** Active / Reconciled
 **Brand system:** LuxSync Production Raster v5
 **Design DNA:** Plush Drift
 
@@ -23,6 +23,8 @@ Do not use or regenerate retired alternate slogan/hero treatments.
 - Antique Rose Taupe `#967878` — warm accent
 - Dusty Steel `#7B96B2` — interactive/cool accent
 - Champagne Rose Gold Metallic `#D6B0A0` anchor — premium metallic accent
+
+**Brushed Dusty Steel** is the only approved metallic-blue treatment and remains anchored to Dusty Steel `#7B96B2`.
 
 No lavender, purple, orange, electric blue, neon blue, or other unapproved brand colors may be introduced into branded website UI. Natural photography may contain natural scene color.
 

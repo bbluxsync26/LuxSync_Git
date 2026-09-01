@@ -2,7 +2,7 @@
 
 **Status:** Active website design baseline
 **Company:** LuxSync LLC
-**Brand system:** LuxSync v3
+**Brand system:** LuxSync Production Raster v5
 **Canonical content:** `content/faqs.md`
 
 ## Page Goal
@@ -105,7 +105,7 @@ Use short answers from the canonical content and link to **View All FAQs**.
 
 ## Visual and Brand Treatment
 
-- Use LuxSync v3 assets and the approved seven-color palette only.
+- Use LuxSync Production Raster v5 assets and the approved seven-color palette only.
 - Manrope 500/600 for questions, filters, and headings.
 - Inter 400/500 for answers and supporting text.
 - Use Champagne Rose Gold Metallic sparingly for selected dividers or expanded-state detail.
@@ -118,3 +118,7 @@ Use short answers from the canonical content and link to **View All FAQs**.
 - Do not invent compatibility, product availability, service coverage, shipping, return, warranty, subscription, or response-time claims.
 - Do not present roadmap products as live.
 - Do not make medical, emergency-monitoring, third-party endorsement, or universal compatibility claims.
+
+## Production Visual Assignment
+
+Use the exact LuxSync orb plus live FAQ search, category navigation and accessible accordions. Do not publish raster artwork containing baked support hours or generated copy. See `website/asset-map.md`.

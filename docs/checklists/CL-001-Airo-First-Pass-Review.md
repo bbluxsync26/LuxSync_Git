@@ -1,7 +1,7 @@
 # CL-001 — Airo First-Pass Review
 
-**Status:** Active / Reconciled  
-**Updated:** 2026-08-31  
+**Status:** Active / Reconciled
+**Updated:** 2026-08-31
 **Use:** Immediately after a PR-001 generation in Airo AI Builder
 
 ## Structure
@@ -175,16 +175,27 @@
 
 **Major issues:**
 
-- 
-- 
-- 
+-
+-
+-
 
 **Approved sections:**
 
-- 
-- 
-- 
+-
+-
+-
 
 **Next Airo prompt/edit:**
 
-- 
+-
+
+## Production Source-of-Truth Checks
+
+- Every required route in `website/implementation-manifest.json` exists.
+- Header/footer match `website/navigation.md`.
+- Only production-approved assets from `website/asset-map.md` are published.
+- No generated logo approximations, baked support hours, fake founder identities or raster product-card fragments appear.
+- Concierge uses the tracked production engine configuration.
+- My LuxSync Blueprint recommends experiences before products.
+- Commerce facts come from validated data.
+- Contact begins with the approved adaptive intent branches.
