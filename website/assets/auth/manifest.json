@@ -1,0 +1,70 @@
+{
+  "version": "1.0",
+  "experience": "VIP Account Access",
+  "brand_system": "LuxSync Production Raster v5",
+  "design_dna": "Plush Drift tactile illumination",
+  "approved_logo_sources": [
+    "brand/assets/01-logos/LuxSync_Logo_Horizontal_Combo.png",
+    "brand/assets/01-logos/LuxSync_Logo_Horizontal_Final.png",
+    "brand/assets/01-logos/LuxSync_Logo_Orb.png"
+  ],
+  "assets": [
+    {
+      "path": "website/assets/auth/login-vip-hero.svg",
+      "type": "ambient-background",
+      "publication_status": "production-approved",
+      "text_free": true,
+      "recommended_context": "desktop login welcome zone"
+    },
+    {
+      "path": "website/assets/auth/login-vip-hero-mobile.svg",
+      "type": "ambient-background",
+      "publication_status": "production-approved",
+      "text_free": true,
+      "recommended_context": "mobile login background"
+    },
+    {
+      "path": "website/assets/auth/member-access-ambient.svg",
+      "type": "decorative-underlight",
+      "publication_status": "production-approved",
+      "text_free": true,
+      "recommended_context": "behind auth card and recovery/verification panels"
+    },
+    {
+      "path": "website/assets/auth/account-welcome-banner.svg",
+      "type": "ambient-banner",
+      "publication_status": "production-approved",
+      "text_free": true,
+      "recommended_context": "post-login welcome area"
+    },
+    {
+      "path": "website/assets/auth/auth-card-reference.svg",
+      "type": "design-reference",
+      "publication_status": "reference-only",
+      "text_free": false,
+      "recommended_context": "developer/design reference for card geometry"
+    },
+    {
+      "path": "website/assets/auth/auth-input-states.svg",
+      "type": "design-reference",
+      "publication_status": "reference-only",
+      "text_free": false,
+      "recommended_context": "developer/design reference for field states"
+    },
+    {
+      "path": "website/assets/auth/auth-button-states.svg",
+      "type": "design-reference",
+      "publication_status": "reference-only",
+      "text_free": false,
+      "recommended_context": "developer/design reference for button states"
+    }
+  ],
+  "rules": [
+    "Never recreate or embed a substitute LuxSync logo in auth graphics.",
+    "Production ambient assets remain text-free; render authentication copy live.",
+    "Use Manrope and Inter for reference labels where text is necessary.",
+    "Do not encode customer data, credentials, verification codes, account status, or mutable commerce claims in graphics.",
+    "Dusty Steel is the preferred cool underlight and Champagne Rose Gold is restrained metallic detail.",
+    "No neon, flashing, hard glowing borders, or glow-only state communication."
+  ]
+}
