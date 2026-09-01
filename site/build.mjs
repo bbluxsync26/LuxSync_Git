@@ -6,7 +6,7 @@ import { readGovernedContent } from './source-content.mjs';
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
 const DIST = path.join(HERE, 'dist');
-const BRAND = path.join(ROOT, 'brand', 'assets', '01-logos');
+const BRAND = path.join(ROOT, 'brand', 'assets', 'logos', 'png');
 const ENGINE = path.join(ROOT, 'website', 'src', 'concierge', 'luxsync-concierge-engine.v1.json');
 const FAQ_SOURCE = path.join(ROOT, 'content', 'faqs.md');
 const MANIFEST = JSON.parse(fs.readFileSync(path.join(ROOT, 'website', 'implementation-manifest.json'), 'utf8'));
@@ -112,11 +112,11 @@ function header(activeRoute) {
     const active = activeRoute === href || (href !== '/' && activeRoute.startsWith(href));
     return `<a class="nav-link${active ? ' is-active' : ''}" href="${href}"${active ? ' aria-current="page"' : ''}>${label}</a>`;
   }).join('');
-  return `<header class="site-header"><div class="header-inner"><a class="brand-link" href="/" aria-label="LuxSync home"><img src="/assets/LuxSync_Logo_Horizontal_Combo.png" alt="LuxSync"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Menu</span></button><nav id="main-nav" class="main-nav" aria-label="Primary navigation">${links}<a class="button button-small" href="/find-my-luxsync-solution/">${escapeHtml(HOME.primaryCta)}</a></nav></div></header>`;
+  return `<header class="site-header"><div class="header-inner"><a class="brand-link" href="/" aria-label="LuxSync home"><img src="/assets/luxsync-horizontal-combo.png" alt="LuxSync"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Menu</span></button><nav id="main-nav" class="main-nav" aria-label="Primary navigation">${links}<a class="button button-small" href="/find-my-luxsync-solution/">${escapeHtml(HOME.primaryCta)}</a></nav></div></header>`;
 }
 
 function footer() {
-  return `<footer class="site-footer"><div class="footer-grid"><div><img class="footer-logo" src="/assets/LuxSync_Logo_Horizontal_Combo.png" alt="LuxSync"><p class="footer-slogan">${SLOGAN}</p><p>Curated smart-living guidance built around comfort, control, compatibility, and confidence.</p></div><div><h2>Explore</h2><a href="/solutions/">Solutions</a><a href="/shop/">Shop</a><a href="/guides/">Guides</a><a href="/about/">About</a></div><div><h2>Help</h2><a href="/contact/?intent=support">Get Support</a><a href="/faqs/">FAQs</a><a href="mailto:support@luxsync.net">support@luxsync.net</a><a href="mailto:info@luxsync.net">info@luxsync.net</a></div><div><h2>Policies</h2><span class="footer-muted">Privacy policy pending publication</span><span class="footer-muted">Terms pending publication</span></div></div><div class="footer-bottom"><span>© ${new Date().getFullYear()} LuxSync LLC</span><span>${SLOGAN}</span></div></footer>`;
+  return `<footer class="site-footer"><div class="footer-grid"><div><img class="footer-logo" src="/assets/luxsync-horizontal-combo.png" alt="LuxSync"><p class="footer-slogan">${SLOGAN}</p><p>Curated smart-living guidance built around comfort, control, compatibility, and confidence.</p></div><div><h2>Explore</h2><a href="/solutions/">Solutions</a><a href="/shop/">Shop</a><a href="/guides/">Guides</a><a href="/about/">About</a></div><div><h2>Help</h2><a href="/contact/?intent=support">Get Support</a><a href="/faqs/">FAQs</a><a href="mailto:support@luxsync.net">support@luxsync.net</a><a href="mailto:info@luxsync.net">info@luxsync.net</a></div><div><h2>Policies</h2><span class="footer-muted">Privacy policy pending publication</span><span class="footer-muted">Terms pending publication</span></div></div><div class="footer-bottom"><span>© ${new Date().getFullYear()} LuxSync LLC</span><span>${SLOGAN}</span></div></footer>`;
 }
 
 function shell({ route, title, description, main, bodyClass = '' }) {
@@ -145,7 +145,7 @@ function shell({ route, title, description, main, bodyClass = '' }) {
 </html>`;
 }
 
-const hero = `<section class="hero"><div class="hero-aura" aria-hidden="true"></div><div class="hero-inner"><div class="hero-copy"><p class="eyebrow">Intelligent living, curated</p><h1>${SLOGAN}</h1><p class="hero-lede">${escapeHtml(HOME.supportingCopy)}</p><div class="button-row"><a class="button" href="/find-my-luxsync-solution/">${escapeHtml(HOME.primaryCta)}</a><a class="button button-secondary" href="/shop/">${escapeHtml(HOME.secondaryCta)}</a><a class="text-link" href="/guides/">${escapeHtml(HOME.supportingCta)} →</a></div></div><div class="hero-visual" aria-label="LuxSync intelligent living concept"><div class="orbital-shell"><img src="/assets/LuxSync_Logo_Orb.png" alt=""><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="orbit orbit-three"></span></div><div class="hero-stat"><span>Outcome first</span><strong>Lifestyle → Experience → Intelligence → Technology</strong></div></div></div></section>`;
+const hero = `<section class="hero"><div class="hero-aura" aria-hidden="true"></div><div class="hero-inner"><div class="hero-copy"><p class="eyebrow">Intelligent living, curated</p><h1>${SLOGAN}</h1><p class="hero-lede">${escapeHtml(HOME.supportingCopy)}</p><div class="button-row"><a class="button" href="/find-my-luxsync-solution/">${escapeHtml(HOME.primaryCta)}</a><a class="button button-secondary" href="/shop/">${escapeHtml(HOME.secondaryCta)}</a><a class="text-link" href="/guides/">${escapeHtml(HOME.supportingCta)} →</a></div></div><div class="hero-visual" aria-label="LuxSync intelligent living concept"><div class="orbital-shell"><img src="/assets/luxsync-orb.png" alt=""><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="orbit orbit-three"></span></div><div class="hero-stat"><span>Outcome first</span><strong>Lifestyle → Experience → Intelligence → Technology</strong></div></div></div></section>`;
 
 function homePage() {
   const featured = [
@@ -255,7 +255,7 @@ fs.mkdirSync(DIST, { recursive: true });
 fs.mkdirSync(path.join(DIST, 'assets'), { recursive: true });
 fs.mkdirSync(path.join(DIST, 'data'), { recursive: true });
 
-for (const file of ['LuxSync_Logo_Horizontal_Combo.png', 'LuxSync_Logo_Horizontal_Final.png', 'LuxSync_Logo_Orb.png']) {
+for (const file of ['luxsync-horizontal-combo.png', 'luxsync-horizontal.png', 'luxsync-orb.png']) {
   fs.copyFileSync(path.join(BRAND, file), path.join(DIST, 'assets', file));
 }
 fs.copyFileSync(ENGINE, path.join(DIST, 'data', 'luxsync-concierge-engine.v1.json'));
