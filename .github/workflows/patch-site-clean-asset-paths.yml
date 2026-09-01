@@ -1,0 +1,50 @@
+name: Patch site clean asset paths
+
+on:
+  push:
+    branches:
+      - fix/clean-triple-format-assets
+    paths:
+      - '.github/workflows/patch-site-clean-asset-paths.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/clean-triple-format-assets
+          fetch-depth: 0
+      - name: Patch production site logo paths
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          files=[Path('site/build.mjs'),Path('site/test.mjs'),Path('site/src/app.js'),Path('site/README.md')]
+          replacements={
+            "path.join(ROOT, 'brand', 'assets', '01-logos')":"path.join(ROOT, 'brand', 'assets', 'logos', 'png')",
+            'LuxSync_Logo_Horizontal_Combo.png':'luxsync-horizontal-combo.png',
+            'LuxSync_Logo_Horizontal_Final.png':'luxsync-horizontal.png',
+            'LuxSync_Logo_Orb.png':'luxsync-orb.png',
+          }
+          for p in files:
+            if not p.exists(): continue
+            text=p.read_text(encoding='utf-8')
+            for old,new in replacements.items(): text=text.replace(old,new)
+            p.write_text(text,encoding='utf-8')
+          PY
+      - name: Verify site build
+        run: |
+          node site/build.mjs
+          node site/test.mjs
+      - name: Commit patch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          rm -f .github/workflows/patch-site-clean-asset-paths.yml
+          git add -A
+          git diff --cached --check
+          git commit -m 'Wire production site to clean asset library'
+          git push origin fix/clean-triple-format-assets
