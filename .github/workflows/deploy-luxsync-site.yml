@@ -1,0 +1,96 @@
+name: Build and deploy LuxSync website
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: luxsync-production-site
+  cancel-in-progress: false
+
+env:
+  LUXSYNC_COMMERCE_URL: ${{ vars.LUXSYNC_COMMERCE_URL }}
+  LUXSYNC_CONTACT_ENDPOINT: ${{ vars.LUXSYNC_CONTACT_ENDPOINT }}
+  LUXSYNC_SITE_URL: ${{ vars.LUXSYNC_SITE_URL }}
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Validate production brand library
+        run: python scripts/validate-production-brand.py
+
+      - name: Validate repository source of truth
+        run: python scripts/validate-repository-consistency.py
+
+      - name: Verify Concierge production engine is current
+        run: |
+          node website/src/concierge/assemble-engine.mjs
+          git diff --exit-code -- website/src/concierge/luxsync-concierge-engine.v1.json
+
+      - name: Build production website
+        run: node site/build.mjs
+
+      - name: Validate production website
+        run: node site/test.mjs
+
+      - name: Package validated website
+        uses: actions/upload-artifact@v4
+        with:
+          name: luxsync-site
+          path: site/dist/
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Detect GoDaddy FTP deployment configuration
+        id: hosting
+        shell: bash
+        env:
+          FTP_URL: ${{ secrets.GODADDY_FTP_URL }}
+          FTP_USER: ${{ secrets.GODADDY_FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.GODADDY_FTP_PASSWORD }}
+          REMOTE_DIR: ${{ secrets.GODADDY_REMOTE_DIR }}
+        run: |
+          if [[ -n "$FTP_URL" && -n "$FTP_USER" && -n "$FTP_PASSWORD" && -n "$REMOTE_DIR" ]]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "GoDaddy FTP/FTPS credentials are not fully configured. The validated release artifact is available for manual or platform-supported publishing."
+          fi
+
+      - name: Install FTP deployment client
+        if: steps.hosting.outputs.ready == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+
+      - name: Deploy validated site to GoDaddy
+        if: steps.hosting.outputs.ready == 'true'
+        shell: bash
+        env:
+          FTP_URL: ${{ secrets.GODADDY_FTP_URL }}
+          FTP_USER: ${{ secrets.GODADDY_FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.GODADDY_FTP_PASSWORD }}
+          REMOTE_DIR: ${{ secrets.GODADDY_REMOTE_DIR }}
+        run: |
+          lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_URL" -e "set ssl:verify-certificate yes; mirror -R --delete --verbose site/dist/ \"$REMOTE_DIR\"; bye"
