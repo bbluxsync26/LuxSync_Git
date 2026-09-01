@@ -2,7 +2,7 @@
 
 **Status:** Active / Pre-build UX baseline  
 **Experience:** VIP Account Access  
-**Brand:** LuxSync v3 with Plush Drift tactile illumination  
+**Brand:** LuxSync Production Raster v5 with Plush Drift tactile illumination  
 **Typography:** Manrope + Inter  
 **Official slogan:** Where Luxury Lives Intelligently
 
@@ -191,7 +191,7 @@ Do not use metallic gradients as large text fills, full form backgrounds, or dom
 
 ## Dedicated Login Visual Asset Set
 
-Create an account-access mini-library under the active v3 asset system.
+Create an account-access mini-library under the active production asset system.
 
 Recommended assets:
 
