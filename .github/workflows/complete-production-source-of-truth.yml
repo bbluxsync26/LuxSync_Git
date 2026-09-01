@@ -48,4 +48,4 @@ jobs:
           git commit -m 'Complete LuxSync website production source of truth'
           git push origin website/production-completion
 
-# Final production completion pass.
+# Final production completion pass with whitespace normalization.
