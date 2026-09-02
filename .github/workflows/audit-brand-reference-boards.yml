@@ -1,0 +1,40 @@
+name: Build LuxSync reference-board audit previews
+
+on:
+  push:
+    branches:
+      - feature/brand-board-visual-audit
+    paths:
+      - '.github/workflows/audit-brand-reference-boards.yml'
+      - 'scripts/build-brand-board-audit-previews.py'
+      - 'brand/reference-boards/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install preview dependency
+        run: python -m pip install pillow
+
+      - name: Build reference-board previews
+        run: python scripts/build-brand-board-audit-previews.py
+
+      - name: Upload audit previews
+        uses: actions/upload-artifact@v4
+        with:
+          name: brand-board-audit-previews
+          path: brand/audit/tmp-board-previews/
+          if-no-files-found: error
+          retention-days: 1
