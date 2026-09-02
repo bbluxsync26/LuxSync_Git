@@ -104,7 +104,11 @@
       "icons": 16,
       "dividers": 12
     },
-    "formats": ["svg", "png", "webp"],
+    "formats": [
+      "svg",
+      "png",
+      "webp"
+    ],
     "qa_requirement": "Each inherited asset record must remain production_status=approved and qa_status=passed in brand/assets/asset-manifest.json.",
     "idempotence_rule": "Do not rebuild these 31 assets unless their master, hash, approval source or QA status becomes invalid."
   },
@@ -118,45 +122,67 @@
   "approval_family_dispositions": [
     {
       "board": "approved_brand_board.png",
-      "classification": ["protected-logo", "approval-board-only-reference", "marketing-art"],
+      "classification": [
+        "protected-logo",
+        "approval-board-only-reference",
+        "marketing-art"
+      ],
       "current_disposition": "Protected logos already validated. Remaining non-logo board elements require element-level visual inventory before new masters are created.",
       "wave": "wave1-and-wave2"
     },
     {
       "board": "icons_board.png",
-      "classification": ["true-vector"],
+      "classification": [
+        "true-vector"
+      ],
       "current_disposition": "16 clean semantic icons already exist in the validated atomic delivery layer and are skipped unless later visual audit finds a board element not represented.",
       "wave": "wave1",
       "state": "complete-pending-board-coverage-crosscheck"
     },
     {
       "board": "dividers_board.png",
-      "classification": ["true-vector"],
+      "classification": [
+        "true-vector"
+      ],
       "current_disposition": "12 clean divider/ornament assets already exist in the validated atomic delivery layer and are skipped unless later visual audit finds a board element not represented.",
       "wave": "wave1",
       "state": "complete-pending-board-coverage-crosscheck"
     },
     {
       "board": "buttons_board.png",
-      "classification": ["semantic-live-ui-reference", "production-technique-variant"],
+      "classification": [
+        "semantic-live-ui-reference",
+        "production-technique-variant"
+      ],
       "current_disposition": "Do not restore flattened website buttons. Preserve approved appearance as brand reference and extract only genuinely reusable non-UI artwork or channel-neutral marketing components after visual inventory.",
       "wave": "wave1-and-wave2"
     },
     {
       "board": "ui_controls_board.png",
-      "classification": ["semantic-live-ui-reference"],
+      "classification": [
+        "semantic-live-ui-reference"
+      ],
       "current_disposition": "Live controls remain semantic UI; approval board remains durable brand evidence. Any non-UI artwork must be isolated only after visual inventory.",
       "wave": "wave1-and-wave2"
     },
     {
       "board": "product_cards_board.png",
-      "classification": ["semantic-live-ui-reference", "composition-template", "marketing-art"],
+      "classification": [
+        "semantic-live-ui-reference",
+        "composition-template",
+        "marketing-art"
+      ],
       "current_disposition": "Do not restore flattened commerce cards as live UI. Preserve/rebuild approved reusable marketing compositions or decorative components after visual inventory.",
       "wave": "wave2"
     },
     {
       "board": "stationery_board.png",
-      "classification": ["composition-template", "true-vector", "raster-origin", "production-technique-variant"],
+      "classification": [
+        "composition-template",
+        "true-vector",
+        "raster-origin",
+        "production-technique-variant"
+      ],
       "current_disposition": "Stationery is part of the omnichannel brand and must be rebuilt/preserved as print-capable templates/components after element-level visual inventory.",
       "wave": "wave3"
     }
@@ -168,5 +194,134 @@
     "Auth production-approved ambient SVGs lack omnichannel PNG/WebP derivative records.",
     "The current repository includes stale pre-migration logo paths in active text/reference files; Phase 0 self-healing repairs them."
   ],
-  "next_checkpoint": "Complete deterministic Phase 0 repairs and perform element-level visual inventory from brand/reference-boards before creating any new board-derived master artwork."
+  "next_checkpoint": "Complete deterministic Phase 0 repairs and perform element-level visual inventory from brand/reference-boards before creating any new board-derived master artwork.",
+  "generated_derivative_batches": {
+    "account-access-ambient": {
+      "renderer": "browser-svg-to-raster",
+      "approval_manifest": "website/assets/auth/manifest.json",
+      "source_commit": "f5f3cd0d424076a81d48ed3ecf685daa7d5d6550",
+      "qa_contact_sheet": "brand/audit/qa/account-access-derivatives.jpg",
+      "qa_contact_sheet_sha256": "45b3cc43ad9963dc38bbcdbe1038fa2e330ed5899177c58f2becfb7e70f83ca8",
+      "qa_status": "passed",
+      "assets": [
+        {
+          "id": "login-vip-hero",
+          "source": "website/assets/auth/login-vip-hero.svg",
+          "source_sha256": "c0b396ebd926943072bf1f29172a574a065830b8502b9632d467b4fe75d74033",
+          "master_type": "true-vector-svg",
+          "publication_status": "production-approved",
+          "text_free": true,
+          "width": 1600,
+          "height": 1000,
+          "transparency": false,
+          "alpha_extrema": [
+            255,
+            255
+          ],
+          "files": {
+            "png": {
+              "path": "brand/exports/digital/account-access/png/login-vip-hero.png",
+              "bytes": 362528,
+              "sha256": "13d13110a01209cf6552f9e9d292fa9f310bb55ff7e27d7b27755b8862dc2c24"
+            },
+            "webp": {
+              "path": "brand/exports/digital/account-access/webp/login-vip-hero.webp",
+              "bytes": 283596,
+              "sha256": "a8d4e020372f543ec773ec6f27d418d103e45a2c60d897f090dcb4ef5dee2b2d",
+              "lossless": true
+            }
+          },
+          "qa_status": "passed"
+        },
+        {
+          "id": "login-vip-hero-mobile",
+          "source": "website/assets/auth/login-vip-hero-mobile.svg",
+          "source_sha256": "7c08c83029d32e251580a4cf0c543a71e7c49741cbfd11feb26ae537678028ea",
+          "master_type": "true-vector-svg",
+          "publication_status": "production-approved",
+          "text_free": true,
+          "width": 900,
+          "height": 1200,
+          "transparency": false,
+          "alpha_extrema": [
+            255,
+            255
+          ],
+          "files": {
+            "png": {
+              "path": "brand/exports/digital/account-access/png/login-vip-hero-mobile.png",
+              "bytes": 242018,
+              "sha256": "af46471a5eb78793e12acb60eae691beda8ef44629e8786ec295601dac6ec725"
+            },
+            "webp": {
+              "path": "brand/exports/digital/account-access/webp/login-vip-hero-mobile.webp",
+              "bytes": 182552,
+              "sha256": "5c6f6347b9c08d6ea80760fbee2c1cad1e4069aa41d9e71fd4fd23a5ad09f128",
+              "lossless": true
+            }
+          },
+          "qa_status": "passed"
+        },
+        {
+          "id": "member-access-ambient",
+          "source": "website/assets/auth/member-access-ambient.svg",
+          "source_sha256": "96083a97c262d39c2f4f22769abf7eb0de66684a0e0a63afcf2c8e28ca227e55",
+          "master_type": "true-vector-svg",
+          "publication_status": "production-approved",
+          "text_free": true,
+          "width": 1000,
+          "height": 1000,
+          "transparency": true,
+          "alpha_extrema": [
+            0,
+            227
+          ],
+          "files": {
+            "png": {
+              "path": "brand/exports/digital/account-access/png/member-access-ambient.png",
+              "bytes": 566503,
+              "sha256": "cd37efe42cda059276716938c50abb7edd6197ddda94678356e1dc15fc42402c"
+            },
+            "webp": {
+              "path": "brand/exports/digital/account-access/webp/member-access-ambient.webp",
+              "bytes": 410424,
+              "sha256": "3f94853890df9f27a8c92c55ddfc5070bc244ea17b692979ae40ca54fe77f68c",
+              "lossless": true
+            }
+          },
+          "qa_status": "passed"
+        },
+        {
+          "id": "account-welcome-banner",
+          "source": "website/assets/auth/account-welcome-banner.svg",
+          "source_sha256": "9aa8951577aecff44432415104debdf7e0bbd653fc7b6ef26c06b8629ae4ddde",
+          "master_type": "true-vector-svg",
+          "publication_status": "production-approved",
+          "text_free": true,
+          "width": 1600,
+          "height": 420,
+          "transparency": true,
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "files": {
+            "png": {
+              "path": "brand/exports/digital/account-access/png/account-welcome-banner.png",
+              "bytes": 369909,
+              "sha256": "894094044db329e2ae108ab44cb8a839b99946125e6b071ff1ccc6b6f2f5d5ab"
+            },
+            "webp": {
+              "path": "brand/exports/digital/account-access/webp/account-welcome-banner.webp",
+              "bytes": 242996,
+              "sha256": "7b1f445f1a3725ad678534a7dc671df9e165f5a82c16bec5dfdd47bc126995a5",
+              "lossless": true
+            }
+          },
+          "qa_status": "passed"
+        }
+      ]
+    }
+  },
+  "last_derivative_render_source_commit": "f5f3cd0d424076a81d48ed3ecf685daa7d5d6550"
 }
