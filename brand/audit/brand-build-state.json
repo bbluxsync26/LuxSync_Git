@@ -6,34 +6,38 @@
   "source_branch_at_start": "master",
   "audited_master_commit": "c568a8092724e1f1328a7b2c3707af3c31ed83ce",
   "working_branch": "feature/brand-omnichannel-phase0",
-  "overall_state": "in_progress",
-  "current_phase": "phase0",
+  "overall_state": "phase0-validated-wave1-ready-with-execution-exception",
+  "current_phase": "wave1",
+  "last_validation": {
+    "workflow": "Validate LuxSync repository consistency",
+    "run_id": 33621905461,
+    "result": "success",
+    "validated_head": "3d167ad48392c91a6381e167a37af596cd0c0810"
+  },
   "phases": {
     "phase0": {
       "name": "Audit and State Detection",
-      "state": "inventory_complete",
+      "state": "complete-validated",
       "completed_checks": [
         "current master refreshed",
-        "seven reference boards inventoried",
+        "seven reference boards inventoried and protected by repository validation",
         "protected logo masters inventoried",
         "production logo PNG identity verified against protected masters by Git blob SHA",
         "current brand/assets delivery library inventoried",
         "existing brand/assets QA evidence inventoried",
         "VIP account-access asset manifest inventoried",
-        "missing omnichannel state/audit layer detected",
-        "stale pre-migration active logo references detected",
-        "current clean 31-asset digital delivery layer adopted for idempotent reuse"
+        "omnichannel manifest and restart/audit state established",
+        "stale active pre-migration logo paths repaired",
+        "brand/assets reclassified as the validated digital delivery layer of a wider omnichannel brand system",
+        "PR-BRAND-001 and omnichannel governance artifacts added to the Master Catalog",
+        "current clean 31-asset digital delivery layer adopted for idempotent reuse",
+        "repository consistency CI passed after Phase 0 repairs"
       ],
-      "remaining_checks": [
-        "commit deterministic Phase 0 documentation/path repairs",
-        "run repository validation",
-        "merge Phase 0 branch after green CI",
-        "perform element-level visual coverage audit against all reference boards when board pixels are available to the execution environment"
-      ]
+      "remaining_checks": []
     },
     "wave1": {
       "name": "Website-Critical Omnichannel Brand Set",
-      "state": "not_started",
+      "state": "ready-blocked-only-on-board-pixel-access-for-new-board-derived-masters",
       "already_validated_inputs": [
         "3 protected logo PNG masters and current SVG/WebP delivery variants",
         "16 clean semantic icon assets in SVG/PNG/WebP",
@@ -62,11 +66,12 @@
     "protected_reference_board_count": 7,
     "protected_logo_master_count": 3
   },
-  "safe_repairs_detected": [
-    "brand/typography.md references retired brand/assets/01-logos path",
-    "website/assets/auth/auth-card-reference.svg references retired brand/assets/01-logos path",
-    "docs/master-catalog.md does not yet catalog PR-BRAND-001 and omnichannel audit artifacts",
-    "brand governance still describes brand/assets primarily as the sole deployable website-style library rather than the validated digital delivery layer of a wider omnichannel system"
+  "self_healed": [
+    "brand/typography.md retired logo delivery path",
+    "website/assets/auth/auth-card-reference.svg retired logo delivery path",
+    "docs/master-catalog.md missing PR-BRAND-001 and omnichannel governance records",
+    "brand governance website-only/digital-only scope ambiguity",
+    "repository validation did not previously protect the seven reference boards or PR-BRAND-001 state files"
   ],
   "execution_constraints": [
     "The current GitHub connector exposes reference-board metadata but not binary pixels for direct visual inspection.",
@@ -74,5 +79,5 @@
     "Do not infer or recreate unseen board-derived artwork from filenames or old crop numbering."
   ],
   "human_decision_required": false,
-  "next_checkpoint": "Finish and validate deterministic Phase 0 repairs, then begin Wave 1 element-level board coverage audit when the execution environment can visually inspect brand/reference-boards."
+  "next_checkpoint": "Wave 1 Checkpoint 1: visually inspect every element on brand/reference-boards, map each to an existing validated asset or a missing master, then create only missing faithful masters and justified derivatives. Skip the 31 already validated atomic assets unless a direct visual crosscheck invalidates one."
 }
