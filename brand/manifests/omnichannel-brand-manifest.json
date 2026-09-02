@@ -1,7 +1,7 @@
 {
-  "version": "1.0-phase0",
+  "version": "1.1-wave1",
   "brand": "LuxSync",
-  "status": "phase0-inventory-complete-with-exceptions",
+  "status": "wave1-in-progress",
   "audited_commit": "c568a8092724e1f1328a7b2c3707af3c31ed83ce",
   "official_slogan": "Where Luxury Lives Intelligently",
   "design_dna": "Plush Drift",
@@ -117,7 +117,10 @@
     "production_approved_text_free_svg_count": 4,
     "reference_only_svg_count": 3,
     "status": "adopted-as-related-wave1-input",
-    "gap": "Production-approved auth SVGs do not yet have omnichannel PNG/WebP derivative records."
+    "gap": "closed: four production-approved account ambient SVG masters now have governed PNG/WebP derivative records",
+    "derivative_batch": "account-access-ambient",
+    "derivative_asset_count": 4,
+    "derivative_file_count": 8
   },
   "approval_family_dispositions": [
     {
@@ -190,16 +193,14 @@
   "known_omnichannel_gaps": [
     "Element-level visual inventory of non-logo approval-board artwork is not yet committed.",
     "Most validated atomic assets have digital SVG/PNG/WebP only and do not yet have justified PDF/EPS/TIFF/specialty production variants.",
-    "Stationery, merchandise, apparel, signage, email and broader marketing export families are not yet built as a complete omnichannel delivery package.",
-    "Auth production-approved ambient SVGs lack omnichannel PNG/WebP derivative records.",
-    "The current repository includes stale pre-migration logo paths in active text/reference files; Phase 0 self-healing repairs them."
+    "Stationery, merchandise, apparel, signage, email and broader marketing export families are not yet built as a complete omnichannel delivery package."
   ],
-  "next_checkpoint": "Complete deterministic Phase 0 repairs and perform element-level visual inventory from brand/reference-boards before creating any new board-derived master artwork.",
+  "next_checkpoint": "Wave 1 Checkpoint 1: visually inspect every element on brand/reference-boards, map each to an existing validated asset or a missing master, and create only missing faithful masters/justified derivatives. The account-access ambient digital derivative batch is complete and must be skipped unless its source or QA evidence changes.",
   "generated_derivative_batches": {
     "account-access-ambient": {
       "renderer": "browser-svg-to-raster",
       "approval_manifest": "website/assets/auth/manifest.json",
-      "source_commit": "f5f3cd0d424076a81d48ed3ecf685daa7d5d6550",
+      "source_commit": "a7bf46d2a76a5f7a2f04c1bc4c4c900b221243f8",
       "qa_contact_sheet": "brand/audit/qa/account-access-derivatives.jpg",
       "qa_contact_sheet_sha256": "45b3cc43ad9963dc38bbcdbe1038fa2e330ed5899177c58f2becfb7e70f83ca8",
       "qa_status": "passed",
@@ -323,5 +324,5 @@
       ]
     }
   },
-  "last_derivative_render_source_commit": "f5f3cd0d424076a81d48ed3ecf685daa7d5d6550"
+  "last_derivative_render_source_commit": "a7bf46d2a76a5f7a2f04c1bc4c4c900b221243f8"
 }

@@ -81,6 +81,20 @@ Build approved reusable social, email, presentation, video-overlay, campaign, pr
 
 Build print-capable stationery, business-card, merchandise, apparel, mug, signage, embroidery, screen-print, engraving, vinyl and metallic-production assets from verified masters. Provide PDF/EPS/TIFF/other specialty outputs only where technically meaningful.
 
+## Wave 1 derivative checkpoint
+
+Completed and QA-passed on `feature/brand-omnichannel-wave1`:
+
+- Four production-approved account-access ambient SVG masters were rendered to PNG.
+- The same four masters were rendered to lossless WebP.
+- Source, PNG, WebP, dimensions, transparency and QA hashes are recorded in the omnichannel manifest.
+- A QA contact sheet is stored at `brand/audit/qa/account-access-derivatives.jpg`.
+- `scripts/render-brand-digital-derivatives.py` skips derivatives whose source and output hashes remain valid.
+- `scripts/validate-brand-derivatives.py` enforces the batch in standard repository CI.
+- `.github/workflows/build-brand-derivatives.yml` performs deterministic derivative generation only on brand feature branches and commits only governed derivative outputs.
+
+This closes the account-access PNG/WebP gap. The next unfinished Wave 1 checkpoint remains the element-level visual audit of the seven approval boards.
+
 ## Current execution constraint
 
 The repository connector provides file metadata for the PNG approval boards but does not expose their binary pixels for direct inspection in this execution environment. The connected creative preview service also rejected the authenticated GitHub raw host in this session. Therefore this run will **not** fabricate an element-level board inventory from filenames, historical crop numbering or assumptions.
