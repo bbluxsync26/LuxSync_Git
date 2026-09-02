@@ -33,7 +33,7 @@
     <rect x="185" y="101" width="530" height="848" rx="29" stroke="url(#metal)" stroke-opacity="0.12"/>
   </g>
 
-  <image href="../../../brand/assets/01-logos/LuxSync_Logo_Orb.png" x="374" y="145" width="152" height="152" preserveAspectRatio="xMidYMid meet"/>
+  <image href="../../../brand/assets/logos/png/luxsync-orb.png" x="374" y="145" width="152" height="152" preserveAspectRatio="xMidYMid meet"/>
 
   <text class="display" x="450" y="340" text-anchor="middle" font-size="34" font-weight="600">Member Login</text>
   <text class="body muted" x="450" y="378" text-anchor="middle" font-size="17">Access your LuxSync account.</text>
