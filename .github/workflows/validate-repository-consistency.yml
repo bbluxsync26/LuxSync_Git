@@ -33,6 +33,9 @@ jobs:
       - name: Validate production brand library
         run: python scripts/validate-production-brand.py
 
+      - name: Validate omnichannel brand derivatives
+        run: python scripts/validate-brand-derivatives.py
+
       - name: Validate repository source of truth
         run: python scripts/validate-repository-consistency.py
 
