@@ -49,7 +49,7 @@ Authoritative logo sources:
 - `brand/source-logo/LuxSync_Logo_Horizontal_Final.png`
 - `brand/source-logo/LuxSync_Logo_Orb.png`
 
-Production-approved copies are mapped under `brand/assets/01-logos/` and `website/asset-map.md`.
+Production-approved PNG delivery copies are mapped under `brand/assets/logos/png/` and `website/asset-map.md`.
 
 Do not recreate, re-typeset, redraw, or modify protected logo artwork merely to force live-text typography into the logo.
 
