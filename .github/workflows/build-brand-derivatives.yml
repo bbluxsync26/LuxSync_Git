@@ -1,0 +1,60 @@
+name: Build LuxSync brand derivatives
+
+on:
+  push:
+    branches:
+      - 'feature/brand-*'
+    paths:
+      - '.github/workflows/build-brand-derivatives.yml'
+      - 'scripts/render-brand-digital-derivatives.py'
+      - 'scripts/reconcile-brand-wave1-state.py'
+      - 'brand/manifests/digital-derivative-jobs.json'
+      - 'website/assets/auth/*.svg'
+      - 'website/assets/auth/manifest.json'
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    name: Render verified SVG derivatives
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out feature branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deterministic renderer dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pillow playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Render approved digital derivatives
+        run: python scripts/render-brand-digital-derivatives.py
+
+      - name: Reconcile Wave 1 state
+        run: python scripts/reconcile-brand-wave1-state.py
+
+      - name: Commit generated derivatives to feature branch
+        shell: bash
+        run: |
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+            echo "No derivative changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add brand/exports/digital/account-access \
+                  brand/audit/qa/account-access-derivatives.jpg \
+                  brand/audit/brand-build-state.json \
+                  brand/audit/brand-build-report.md \
+                  brand/manifests/omnichannel-brand-manifest.json
+          git commit -m "Generate verified brand digital derivatives and reconcile Wave 1 state [skip ci]"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

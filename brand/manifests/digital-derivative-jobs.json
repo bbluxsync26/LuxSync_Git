@@ -1,0 +1,51 @@
+{
+  "version": "1.0",
+  "renderer": "browser-svg-to-raster",
+  "purpose": "Deterministic feature-branch rendering of approved SVG masters into digital PNG/WebP derivatives without moving large binary payloads through chat tooling.",
+  "batches": [
+    {
+      "id": "account-access-ambient",
+      "approval_manifest": "website/assets/auth/manifest.json",
+      "publication_status_required": "production-approved",
+      "qa_contact_sheet": "brand/audit/qa/account-access-derivatives.jpg",
+      "jobs": [
+        {
+          "id": "login-vip-hero",
+          "source": "website/assets/auth/login-vip-hero.svg",
+          "output_png": "brand/exports/digital/account-access/png/login-vip-hero.png",
+          "output_webp": "brand/exports/digital/account-access/webp/login-vip-hero.webp",
+          "width": 1600,
+          "height": 1000,
+          "webp_lossless": true
+        },
+        {
+          "id": "login-vip-hero-mobile",
+          "source": "website/assets/auth/login-vip-hero-mobile.svg",
+          "output_png": "brand/exports/digital/account-access/png/login-vip-hero-mobile.png",
+          "output_webp": "brand/exports/digital/account-access/webp/login-vip-hero-mobile.webp",
+          "width": 900,
+          "height": 1200,
+          "webp_lossless": true
+        },
+        {
+          "id": "member-access-ambient",
+          "source": "website/assets/auth/member-access-ambient.svg",
+          "output_png": "brand/exports/digital/account-access/png/member-access-ambient.png",
+          "output_webp": "brand/exports/digital/account-access/webp/member-access-ambient.webp",
+          "width": 1000,
+          "height": 1000,
+          "webp_lossless": true
+        },
+        {
+          "id": "account-welcome-banner",
+          "source": "website/assets/auth/account-welcome-banner.svg",
+          "output_png": "brand/exports/digital/account-access/png/account-welcome-banner.png",
+          "output_webp": "brand/exports/digital/account-access/webp/account-welcome-banner.webp",
+          "width": 1600,
+          "height": 420,
+          "webp_lossless": true
+        }
+      ]
+    }
+  ]
+}
