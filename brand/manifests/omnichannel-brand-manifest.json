@@ -1,0 +1,172 @@
+{
+  "version": "1.0-phase0",
+  "brand": "LuxSync",
+  "status": "phase0-inventory-complete-with-exceptions",
+  "audited_commit": "c568a8092724e1f1328a7b2c3707af3c31ed83ce",
+  "official_slogan": "Where Luxury Lives Intelligently",
+  "design_dna": "Plush Drift",
+  "voice": "Intelligent Calm",
+  "purpose": "Channel-neutral master inventory and disposition layer for web, digital, print, video-ready static art, stationery, merchandise, apparel, signage, packaging, email and marketing.",
+  "precedence": [
+    "brand/source-logo/ protected logo masters",
+    "brand/reference-boards/ visual approval archive for non-logo artwork",
+    "current authoritative brand documentation",
+    "validated clean production assets",
+    "historical/reference exports"
+  ],
+  "reference_boards": [
+    {
+      "path": "brand/reference-boards/approved_brand_board.png",
+      "blob_sha": "4de93e3a7d1fedf4663ee903f361e904d8063db4",
+      "bytes": 1839061,
+      "role": "authoritative visual approval evidence"
+    },
+    {
+      "path": "brand/reference-boards/buttons_board.png",
+      "blob_sha": "15b88cc3bcd6fa5f585b9572034cd8f47fe20631",
+      "bytes": 1574943,
+      "role": "authoritative visual approval evidence"
+    },
+    {
+      "path": "brand/reference-boards/dividers_board.png",
+      "blob_sha": "988c74e97b6d9a8bc636763b14007252bb89fdf1",
+      "bytes": 1532275,
+      "role": "authoritative visual approval evidence"
+    },
+    {
+      "path": "brand/reference-boards/icons_board.png",
+      "blob_sha": "bf25fcdcf987deda85778a57c9ee9d6be0c0fc48",
+      "bytes": 1604840,
+      "role": "authoritative visual approval evidence"
+    },
+    {
+      "path": "brand/reference-boards/product_cards_board.png",
+      "blob_sha": "3450b81c956f793fd94d92a8ff48ac6d7ed15a68",
+      "bytes": 1831357,
+      "role": "authoritative visual approval evidence"
+    },
+    {
+      "path": "brand/reference-boards/stationery_board.png",
+      "blob_sha": "87641505e6cc4ff989b3935d94317472155f3425",
+      "bytes": 1907567,
+      "role": "authoritative visual approval evidence"
+    },
+    {
+      "path": "brand/reference-boards/ui_controls_board.png",
+      "blob_sha": "d07d9f83bb7b2690a7ea2bbd1271b593be15689a",
+      "bytes": 1614607,
+      "role": "authoritative visual approval evidence"
+    }
+  ],
+  "protected_logos": [
+    {
+      "id": "luxsync-horizontal-combo",
+      "master_path": "brand/source-logo/LuxSync_Logo_Horizontal_Combo.png",
+      "master_blob_sha": "b0354ba3e44226df0c1c98a78dad4621a6f77644",
+      "delivery_png": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+      "delivery_png_blob_sha": "b0354ba3e44226df0c1c98a78dad4621a6f77644",
+      "master_type": "protected-logo-raster",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "qa_status": "passed",
+      "source_delivery_identity": "byte-identical-git-blob"
+    },
+    {
+      "id": "luxsync-horizontal",
+      "master_path": "brand/source-logo/LuxSync_Logo_Horizontal_Final.png",
+      "master_blob_sha": "fb99a57df646067b55da8884d56d20fd21d28d27",
+      "delivery_png": "brand/assets/logos/png/luxsync-horizontal.png",
+      "delivery_png_blob_sha": "fb99a57df646067b55da8884d56d20fd21d28d27",
+      "master_type": "protected-logo-raster",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "qa_status": "passed",
+      "source_delivery_identity": "byte-identical-git-blob"
+    },
+    {
+      "id": "luxsync-orb",
+      "master_path": "brand/source-logo/LuxSync_Logo_Orb.png",
+      "master_blob_sha": "518717b4dddb91481399be705bbe167afbef78bd",
+      "delivery_png": "brand/assets/logos/png/luxsync-orb.png",
+      "delivery_png_blob_sha": "518717b4dddb91481399be705bbe167afbef78bd",
+      "master_type": "protected-logo-raster",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "qa_status": "passed",
+      "source_delivery_identity": "byte-identical-git-blob"
+    }
+  ],
+  "validated_atomic_delivery_layer": {
+    "manifest": "brand/assets/asset-manifest.json",
+    "version": "6.0-clean-atomic-triple-format",
+    "status": "adopted-as-validated-digital-delivery-layer",
+    "asset_count": 31,
+    "format_file_count": 93,
+    "families": {
+      "logos": 3,
+      "icons": 16,
+      "dividers": 12
+    },
+    "formats": ["svg", "png", "webp"],
+    "qa_requirement": "Each inherited asset record must remain production_status=approved and qa_status=passed in brand/assets/asset-manifest.json.",
+    "idempotence_rule": "Do not rebuild these 31 assets unless their master, hash, approval source or QA status becomes invalid."
+  },
+  "related_validated_assets": {
+    "auth_manifest": "website/assets/auth/manifest.json",
+    "production_approved_text_free_svg_count": 4,
+    "reference_only_svg_count": 3,
+    "status": "adopted-as-related-wave1-input",
+    "gap": "Production-approved auth SVGs do not yet have omnichannel PNG/WebP derivative records."
+  },
+  "approval_family_dispositions": [
+    {
+      "board": "approved_brand_board.png",
+      "classification": ["protected-logo", "approval-board-only-reference", "marketing-art"],
+      "current_disposition": "Protected logos already validated. Remaining non-logo board elements require element-level visual inventory before new masters are created.",
+      "wave": "wave1-and-wave2"
+    },
+    {
+      "board": "icons_board.png",
+      "classification": ["true-vector"],
+      "current_disposition": "16 clean semantic icons already exist in the validated atomic delivery layer and are skipped unless later visual audit finds a board element not represented.",
+      "wave": "wave1",
+      "state": "complete-pending-board-coverage-crosscheck"
+    },
+    {
+      "board": "dividers_board.png",
+      "classification": ["true-vector"],
+      "current_disposition": "12 clean divider/ornament assets already exist in the validated atomic delivery layer and are skipped unless later visual audit finds a board element not represented.",
+      "wave": "wave1",
+      "state": "complete-pending-board-coverage-crosscheck"
+    },
+    {
+      "board": "buttons_board.png",
+      "classification": ["semantic-live-ui-reference", "production-technique-variant"],
+      "current_disposition": "Do not restore flattened website buttons. Preserve approved appearance as brand reference and extract only genuinely reusable non-UI artwork or channel-neutral marketing components after visual inventory.",
+      "wave": "wave1-and-wave2"
+    },
+    {
+      "board": "ui_controls_board.png",
+      "classification": ["semantic-live-ui-reference"],
+      "current_disposition": "Live controls remain semantic UI; approval board remains durable brand evidence. Any non-UI artwork must be isolated only after visual inventory.",
+      "wave": "wave1-and-wave2"
+    },
+    {
+      "board": "product_cards_board.png",
+      "classification": ["semantic-live-ui-reference", "composition-template", "marketing-art"],
+      "current_disposition": "Do not restore flattened commerce cards as live UI. Preserve/rebuild approved reusable marketing compositions or decorative components after visual inventory.",
+      "wave": "wave2"
+    },
+    {
+      "board": "stationery_board.png",
+      "classification": ["composition-template", "true-vector", "raster-origin", "production-technique-variant"],
+      "current_disposition": "Stationery is part of the omnichannel brand and must be rebuilt/preserved as print-capable templates/components after element-level visual inventory.",
+      "wave": "wave3"
+    }
+  ],
+  "known_omnichannel_gaps": [
+    "Element-level visual inventory of non-logo approval-board artwork is not yet committed.",
+    "Most validated atomic assets have digital SVG/PNG/WebP only and do not yet have justified PDF/EPS/TIFF/specialty production variants.",
+    "Stationery, merchandise, apparel, signage, email and broader marketing export families are not yet built as a complete omnichannel delivery package.",
+    "Auth production-approved ambient SVGs lack omnichannel PNG/WebP derivative records.",
+    "The current repository includes stale pre-migration logo paths in active text/reference files; Phase 0 self-healing repairs them."
+  ],
+  "next_checkpoint": "Complete deterministic Phase 0 repairs and perform element-level visual inventory from brand/reference-boards before creating any new board-derived master artwork."
+}
