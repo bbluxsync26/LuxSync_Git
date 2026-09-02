@@ -85,6 +85,16 @@ Durable governance/state locations:
 - `brand/audit/brand-build-report.md`
 - `brand/audit/brand-exceptions.md`
 
+Wave 1 deterministic digital derivatives are governed by:
+
+- `brand/manifests/digital-derivative-jobs.json`
+- `scripts/render-brand-digital-derivatives.py`
+- `scripts/reconcile-brand-wave1-state.py`
+- `scripts/validate-brand-derivatives.py`
+- `.github/workflows/build-brand-derivatives.yml`
+
+The first governed derivative batch is the four text-free account-access ambient SVG masters. Their PNG and lossless WebP exports live under `brand/exports/digital/account-access/`; provenance, hashes, dimensions, transparency, and QA state are recorded in the omnichannel manifest. The SVG sources remain authoritative.
+
 As additional approved assets are produced, use the technically appropriate master/export chain. Do not force meaningless file types. True vector art may support SVG/PDF/EPS/AI plus PNG/WebP; raster-origin art should preserve a lossless high-resolution master and add print/digital derivatives appropriate to its use.
 
 ## Canonical implementation references
