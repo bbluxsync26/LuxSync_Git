@@ -36,6 +36,7 @@ jobs:
         with:
           name: brand-board-audit-previews
           path: |
+            brand/reference-boards/*.png
             brand/audit/tmp-board-previews/
             brand/assets/qa/icons-contact-sheet.jpg
             brand/assets/qa/dividers-contact-sheet.jpg
