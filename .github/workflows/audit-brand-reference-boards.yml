@@ -31,10 +31,13 @@ jobs:
       - name: Build reference-board previews
         run: python scripts/build-brand-board-audit-previews.py
 
-      - name: Upload audit previews
+      - name: Upload board and current-asset QA previews
         uses: actions/upload-artifact@v4
         with:
           name: brand-board-audit-previews
-          path: brand/audit/tmp-board-previews/
+          path: |
+            brand/audit/tmp-board-previews/
+            brand/assets/qa/icons-contact-sheet.jpg
+            brand/assets/qa/dividers-contact-sheet.jpg
           if-no-files-found: error
           retention-days: 1
