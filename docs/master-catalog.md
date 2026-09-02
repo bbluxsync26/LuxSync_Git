@@ -1,9 +1,9 @@
 # LuxSync Master Catalog
 
-**Status:** Active
-**Repository:** `bbluxsync26/LuxSync_Git`
-**Default branch:** `master`
-**Last updated:** 2026-09-01
+**Status:** Active  
+**Repository:** `bbluxsync26/LuxSync_Git`  
+**Default branch:** `master`  
+**Last updated:** 2026-09-02
 
 ## Purpose
 
@@ -31,6 +31,8 @@ For merchandising specifically, `content/product-catalog.md` governs current pro
 - **Authoritative visual system:** LuxSync Production Raster v5
 - **Enduring design DNA:** Plush Drift
 - **Brand architecture:** `brand/brand-architecture.md`
+- **Omnichannel brand governance:** `brand/README.md` + `brand/manifests/omnichannel-brand-manifest.json`
+- **Permanent visual approval archive:** `brand/reference-boards/`
 - **Headings / navigation / buttons / graphic UI:** Manrope 500/600
 - **Body / supporting UI:** Inter 400/500
 - **Sole approved public slogan / hero line:** **Where Luxury Lives Intelligently**
@@ -100,15 +102,26 @@ Approved colors:
 
 | ID | Artifact | Path | Status |
 |---|---|---|---|
-| BRAND-001 | Brand Guidelines | `brand/README.md` | Active — LuxSync Production Raster v5 |
+| BRAND-001 | Brand Guidelines / Omnichannel Brand Contract | `brand/README.md` | Active — LuxSync Production Raster v5 / Omnichannel |
 | BRAND-002 | Color System | `brand/colors.md` | Active |
 | BRAND-003 | Typography | `brand/typography.md` | Active — Manrope + Inter |
 | BRAND-004 | Voice & Tone | `brand/voice-and-tone.md` | Active — Intelligent Calm |
 | BRAND-005 | Brand Architecture / Plush Drift DNA | `brand/brand-architecture.md` | Active / Authoritative |
-| BRAND-006 | Approved Raster Asset Library | `brand/assets/` and current approved asset metadata | Active as governed by brand docs |
+| BRAND-006 | Clean Atomic Digital Delivery Library | `brand/assets/` and `brand/assets/asset-manifest.json` | Active / 31 approved atomic assets / 93 files |
 | BRAND-007 | Prior/generated visual libraries | legacy/historical locations | Superseded unless explicitly retained |
 | BRAND-008 | VIP Account Access Vector Mini-Library | `website/assets/auth/` | Active / Mixed publication status per manifest |
 | BRAND-009 | VIP Account Access Asset Manifest | `website/assets/auth/manifest.json` | Active / Authoritative for auth vectors |
+| BRAND-010 | Omnichannel Brand Manifest | `brand/manifests/omnichannel-brand-manifest.json` | Active / Phase 0 state and asset dispositions |
+| BRAND-011 | Omnichannel Brand Build State | `brand/audit/brand-build-state.json` | Active / Restart checkpoint |
+| BRAND-012 | Omnichannel Brand Audit Report | `brand/audit/brand-build-report.md` | Active / Internal audit |
+| BRAND-013 | Omnichannel Brand Exceptions | `brand/audit/brand-exceptions.md` | Active / Exception log |
+| BRAND-014 | Visual Approval Archive | `brand/reference-boards/` | Active / Permanent approval evidence |
+
+### Omnichannel brand rule
+
+LuxSync branding is not limited to the website. The validated `brand/assets/` tree is the current clean digital delivery layer; the complete brand system may also produce technically appropriate masters and exports for print, video-ready static graphics, stationery, merchandise, apparel, embroidery, signage, packaging, email, social and marketing.
+
+The approval boards under `brand/reference-boards/` are durable visual evidence. Retiring malformed grid-sliced files does not revoke the approved concepts represented on those boards.
 
 ## Architecture and Website
 
@@ -219,6 +232,7 @@ Key principles:
 | PR-001 | LuxSync Airo Master Website Build Prompt | `prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md` | Active / Reconciled | Airo staging build |
 | PR-002 | Website Design Review Prompt | TBD | Planned | Brand/UX review |
 | PR-003 | Deployment Validation Prompt | TBD | Planned | Pre-production validation |
+| PR-BRAND-001 | LuxSync Omnichannel Brand System Recovery, Build & Audit Prompt | `prompts/branding/PR-BRAND-001-LuxSync-Omnichannel-Brand-System-Recovery-Audit.md` | Active / Promptless / Restart-Safe / Self-Healing | Omnichannel brand build, recovery and internal audit |
 | PR-CONTENT-001 | LuxSync Content Writer | `prompts/content-writer.md` | Active / Reconciled | General approved copy |
 | PR-PRODUCT-001 | LuxSync Product Description | `prompts/product-descriptions.md` | Active / Reconciled | Product/bundle/Experience copy |
 | PR-EMAIL-001 | LuxSync Email Writer | `prompts/email-writer.md` | Active / Reconciled | Customer/marketing email copy |
@@ -236,6 +250,7 @@ All active prompts must inherit current company facts, exact founder titles, the
 - Manrope + Inter typography
 - Intelligent Calm voice
 - Approved logo artwork referenced directly, never regenerated
+- Website graphics consume validated omnichannel brand assets; the website does not redefine the brand masters
 - Account/login experience should feel like private, premium service while remaining simple and accessible
 
 Primary launch navigation:
@@ -278,7 +293,7 @@ Do not publish or invent:
 
 ## Maintenance Rules
 
-1. Add a catalog entry when a reusable prompt, runbook, architecture document, checklist, decision, content baseline, or shared product/UX contract becomes durable.
+1. Add a catalog entry when a reusable prompt, runbook, architecture document, checklist, decision, content baseline, shared product/UX contract, or durable brand audit/governance artifact becomes durable.
 2. Mark work-in-progress artifacts Draft.
 3. Preserve superseded material only where traceability matters, and mark it historical.
 4. Never store passwords, API keys, payment credentials, private tokens, or other secrets.
@@ -291,6 +306,8 @@ Do not publish or invent:
 11. ROI examples must use customer inputs or clearly labeled scenarios; never publish promised returns, invented benchmarks, or unvalidated savings percentages.
 12. Account/authentication UX must remain subordinate to the capabilities and security requirements of the selected production account platform.
 13. Auth asset publication status is governed by `website/assets/auth/manifest.json`; reference diagrams are never functional UI.
+14. Preserve `brand/reference-boards/` as permanent visual approval evidence; never treat a production-library cleanup as revocation of approved brand concepts.
+15. Run PR-BRAND-001 idempotently for omnichannel brand recovery/build work: audit first, skip validated completed work, self-heal deterministic drift, and never creatively overwrite approved masters.
 
 ## Change Log
 
@@ -308,10 +325,12 @@ Do not publish or invent:
 | 2026-09-01 | Added the VIP Account Access / Login blueprint and made VIP-level welcome/service an account-experience requirement. |
 | 2026-09-01 | Reconciled the three-month roadmap and six-day launch plan, connected production output to governed content sources, completed adaptive Contact property branching, and strengthened repository/site regression checks. |
 | 2026-09-01 | Promoted VIP Account Access to a production-ready visual/interaction package with exact approved-logo mapping, dedicated ambient vectors, interaction tokens, implementation manifest, and CL-002 review gate. |
+| 2026-09-02 | Added PR-BRAND-001 and established restart-safe, promptless, self-healing omnichannel brand governance. |
+| 2026-09-02 | Added the omnichannel brand manifest, restart state, audit report and exception log; preserved the seven reference boards as permanent approval evidence and clarified `brand/assets/` as the validated digital delivery layer rather than the full brand scope. |
 
 ## Production Completion Baseline
 
-**Authoritative visual system:** LuxSync Production Raster v5
+**Authoritative visual system:** LuxSync Production Raster v5  
 **Official slogan:** Where Luxury Lives Intelligently
 
 Canonical website implementation references:
@@ -326,4 +345,14 @@ Canonical website implementation references:
 - `website/assets/auth/manifest.json`
 - `website/src/concierge/luxsync-concierge-engine.v1.json`
 
-The imported non-logo raster slices are reference-only and must not be published directly. Auth vectors may be published only when their current website asset manifest explicitly marks them `production-approved`.
+Canonical omnichannel brand references:
+
+- `brand/README.md`
+- `brand/reference-boards/`
+- `brand/manifests/omnichannel-brand-manifest.json`
+- `brand/audit/brand-build-state.json`
+- `brand/audit/brand-build-report.md`
+- `brand/audit/brand-exceptions.md`
+- `prompts/branding/PR-BRAND-001-LuxSync-Omnichannel-Brand-System-Recovery-Audit.md`
+
+The old malformed grid-sliced production assets remain retired. Auth vectors may be published only when their current website asset manifest explicitly marks them `production-approved`. The wider approved brand remains governed by the visual approval archive and omnichannel manifest, not by whether an asset is currently used on the website.

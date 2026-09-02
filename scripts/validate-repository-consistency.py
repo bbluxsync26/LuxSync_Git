@@ -30,6 +30,23 @@ AUTH_REFERENCE_ASSETS = {
     "website/assets/auth/auth-input-states.svg",
     "website/assets/auth/auth-button-states.svg",
 }
+BRAND_REFERENCE_BOARDS = {
+    "brand/reference-boards/approved_brand_board.png",
+    "brand/reference-boards/buttons_board.png",
+    "brand/reference-boards/dividers_board.png",
+    "brand/reference-boards/icons_board.png",
+    "brand/reference-boards/product_cards_board.png",
+    "brand/reference-boards/stationery_board.png",
+    "brand/reference-boards/ui_controls_board.png",
+}
+OMNICHANNEL_STATE_FILES = {
+    "prompts/branding/PR-BRAND-001-LuxSync-Omnichannel-Brand-System-Recovery-Audit.md",
+    "prompts/branding/README.md",
+    "brand/manifests/omnichannel-brand-manifest.json",
+    "brand/audit/brand-build-state.json",
+    "brand/audit/brand-build-report.md",
+    "brand/audit/brand-exceptions.md",
+}
 RETIRED_HERO = "Smart Living" + ". " + "Elevated" + "."
 LEGACY_TERMS = [
     "LuxSync " + "v3",
@@ -108,6 +125,10 @@ for rel in REQUIRED_FILES:
     if not (ROOT / rel).exists(): errors.append(f"missing required file: {rel}")
 for rel in AUTH_PRODUCTION_ASSETS | AUTH_REFERENCE_ASSETS:
     if not (ROOT / rel).exists(): errors.append(f"missing VIP account asset: {rel}")
+for rel in BRAND_REFERENCE_BOARDS:
+    if not (ROOT / rel).exists(): errors.append(f"missing protected brand reference board: {rel}")
+for rel in OMNICHANNEL_STATE_FILES:
+    if not (ROOT / rel).exists(): errors.append(f"missing PR-BRAND-001 governance/state artifact: {rel}")
 if errors:
     print("LuxSync repository validation FAILED:")
     for e in errors: print("-", e)
@@ -304,6 +325,45 @@ for path in (ROOT / "website/pages").rglob("*.md"):
     for prefix in reference_prefixes:
         if prefix in text: errors.append(f"{path.relative_to(ROOT)}: reference-only raster path is wired directly")
 
+# PR-BRAND-001 omnichannel governance must remain restart-safe and preserve approval evidence.
+omni = json.loads(read("brand/manifests/omnichannel-brand-manifest.json"))
+board_paths = {item.get("path") for item in omni.get("reference_boards", [])}
+if board_paths != BRAND_REFERENCE_BOARDS:
+    errors.append(f"omnichannel brand manifest reference-board set mismatch: {sorted(board_paths ^ BRAND_REFERENCE_BOARDS)}")
+if omni.get("official_slogan") != SLOGAN:
+    errors.append("omnichannel brand manifest slogan mismatch")
+if omni.get("design_dna") != "Plush Drift":
+    errors.append("omnichannel brand manifest design DNA mismatch")
+validated_layer = omni.get("validated_atomic_delivery_layer", {})
+if validated_layer.get("asset_count") != 31 or validated_layer.get("format_file_count") != 93:
+    errors.append("omnichannel brand manifest validated atomic delivery baseline mismatch")
+if validated_layer.get("idempotence_rule") is None:
+    errors.append("omnichannel brand manifest missing idempotence rule")
+protected = omni.get("protected_logos", [])
+if len(protected) != 3:
+    errors.append("omnichannel brand manifest must preserve exactly three protected logo records")
+for item in protected:
+    if item.get("source_delivery_identity") != "byte-identical-git-blob":
+        errors.append(f"{item.get('id')}: omnichannel manifest does not preserve logo source/delivery identity")
+
+state = json.loads(read("brand/audit/brand-build-state.json"))
+if state.get("prompt_id") != "PR-BRAND-001":
+    errors.append("brand build state prompt_id mismatch")
+if state.get("execution_mode") != "promptless-self-healing":
+    errors.append("brand build state execution mode mismatch")
+if state.get("idempotence", {}).get("validated_atomic_asset_count") != 31:
+    errors.append("brand build state idempotent asset baseline mismatch")
+if state.get("idempotence", {}).get("protected_reference_board_count") != 7:
+    errors.append("brand build state protected reference-board baseline mismatch")
+
+for rel in ("brand/typography.md", "website/assets/auth/auth-card-reference.svg"):
+    if "brand/assets/01-logos" in read(rel):
+        errors.append(f"{rel}: stale pre-migration logo path remains")
+for token in ("PR-BRAND-001", "brand/reference-boards/", "brand/manifests/omnichannel-brand-manifest.json"):
+    require("docs/master-catalog.md", token)
+for token in ("omnichannel", "brand/reference-boards/", "website consumes this brand system"):
+    require("brand/README.md", token)
+
 for token in ("/shop", "/solutions", "/guides", "/about", "/faqs", "/contact", PRIMARY_CTA):
     require("website/navigation.md", token)
 
@@ -327,3 +387,4 @@ print(f"Brand system: {BRAND_SYSTEM}")
 print(f"Slogan: {SLOGAN}")
 print(f"Routes: {len(routes)}")
 print(f"VIP auth assets: {len(AUTH_PRODUCTION_ASSETS)} production + {len(AUTH_REFERENCE_ASSETS)} reference")
+print(f"Omnichannel brand: {len(BRAND_REFERENCE_BOARDS)} protected reference boards / PR-BRAND-001 state present")
