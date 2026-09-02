@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/build-brand-derivatives.yml'
       - 'scripts/render-brand-digital-derivatives.py'
+      - 'scripts/reconcile-brand-wave1-state.py'
       - 'brand/manifests/digital-derivative-jobs.json'
       - 'website/assets/auth/*.svg'
       - 'website/assets/auth/manifest.json'
@@ -38,6 +39,9 @@ jobs:
       - name: Render approved digital derivatives
         run: python scripts/render-brand-digital-derivatives.py
 
+      - name: Reconcile Wave 1 state
+        run: python scripts/reconcile-brand-wave1-state.py
+
       - name: Commit generated derivatives to feature branch
         shell: bash
         run: |
@@ -49,6 +53,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add brand/exports/digital/account-access \
                   brand/audit/qa/account-access-derivatives.jpg \
+                  brand/audit/brand-build-state.json \
+                  brand/audit/brand-build-report.md \
                   brand/manifests/omnichannel-brand-manifest.json
-          git commit -m "Generate verified brand digital derivatives [skip ci]"
+          git commit -m "Generate verified brand digital derivatives and reconcile Wave 1 state [skip ci]"
           git push origin "HEAD:${GITHUB_REF_NAME}"
