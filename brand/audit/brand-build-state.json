@@ -6,7 +6,7 @@
   "source_branch_at_start": "master",
   "audited_master_commit": "fdca34fb89a1d6c3b7805c73f26a2f23bbc90a78",
   "working_branch": "feature/brand-wave3-print-physical",
-  "overall_state": "wave3-qa-complete-pending-pr-validation",
+  "overall_state": "wave3-pr-open-final-ci-triggered",
   "current_phase": "wave3",
   "last_validation": {
     "workflow": "Validate LuxSync repository consistency",
@@ -50,7 +50,8 @@
     },
     "wave3": {
       "name": "Print and Physical Brand System",
-      "state": "qa_complete_pending_pr_validation",
+      "state": "pr_open_final_ci_triggered",
+      "pr": 32,
       "planned_families": [
         "business-card templates",
         "letterhead and stationery templates",
@@ -71,12 +72,12 @@
         "specialty-production variants require deterministic technical adaptation that preserves the protected mark silhouette and must be clearly labeled"
       ],
       "known_gaps": [
-        "full repository PR validation must pass with Wave 3 validator enabled before PR-BRAND-001 is closed",
+        "final PR #32 repository validation must pass with Wave 3 validator enabled before PR-BRAND-001 is closed",
         "actual specialty manufacturing artwork remains vendor-dependent and intentionally outside the generic master kit"
       ],
       "manifest": "brand/manifests/wave3-print-physical-manifest.json",
       "manifest_status": "qa-passed",
-      "latest_successful_build_run": 33714772180,
+      "latest_successful_build_run": 33714884137,
       "completed_checks": [
         "approved stationery board treated as composition evidence rather than a source of production contact data",
         "eight 300-DPI print/stationery source compositions generated",
@@ -89,7 +90,9 @@
         "Wave 3 contact-sheet visual QA passed",
         "all eight PDF pages rendered and visually checked for clipping, distortion and broken render artifacts",
         "manual QA approval bound to exact contact-sheet SHA256",
-        "vendor-specific specialty conversion deferred until actual production constraints are supplied"
+        "vendor-specific specialty conversion deferred until actual production constraints are supplied",
+        "Wave 3 validator wired into standard repository CI",
+        "PR #32 opened and normal checkpoint commit issued to trigger the full pull-request validation suite"
       ]
     }
   },
@@ -121,7 +124,8 @@
     "incorrect assumption that semantic icon/divider completeness implied approved visual fidelity",
     "Wave 2 bot push race by adding fetch/rebase before branch push",
     "visible rectangular board-crop seams in first Wave 2 composition QA by using clean transparent validated ornaments for new freeform layouts",
-    "Wave 2 PR validator missing Pillow dependency"
+    "Wave 2 PR validator missing Pillow dependency",
+    "Wave 3 PR validation skip risk from builder [skip ci] head by issuing a normal state checkpoint commit"
   ],
   "execution_constraints": [
     "The 58 faithful board-derived assets are raster-origin because the approved boards are the current visual authority; their SVGs are fidelity containers rather than newly redrawn editable vectors.",
@@ -130,5 +134,5 @@
     "Wave 3 physical-production files must distinguish exact full-color protected-logo use from any separately governed specialty-production adaptation."
   ],
   "human_decision_required": false,
-  "next_checkpoint": "Wire Wave 3 validation into standard repository CI, open the Wave 3 PR, pass full PR validation, merge, verify master, then mark PR-BRAND-001 complete with vendor-specific specialty conversions intentionally deferred until production requirements exist."
+  "next_checkpoint": "Verify the full pull-request validation run for PR #32. If green, seal validation into state, merge PR #32, verify post-merge master validation and production-candidate workflow, then mark PR-BRAND-001 complete."
 }
