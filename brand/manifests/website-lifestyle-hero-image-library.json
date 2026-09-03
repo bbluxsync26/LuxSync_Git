@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "library_id": "LS-WEB-HERO-001",
+  "brand": "LuxSync",
+  "status": "visual-qa-passed",
+  "created_at": "2026-09-03",
+  "creative_source": "Adobe Firefly",
+  "adobe_board": {
+    "name": "LuxSync Website Lifestyle & Hero Image Library",
+    "board_id": "urn:aaid:sc:US:4b3c7692-8f27-44d2-9606-2d9d9f8734b6",
+    "board_url": "https://firefly.adobe.com/boards/id/urn:aaid:sc:US:4b3c7692-8f27-44d2-9606-2d9d9f8734b6"
+  },
+  "governance": {
+    "protected_logo_embedded": false,
+    "baked_text_allowed": false,
+    "mutable_copy_live_only": true,
+    "fake_product_branding_allowed": false,
+    "purple_lavender_neon_allowed": false,
+    "style": "Plush Drift",
+    "voice_alignment": "Intelligent Calm",
+    "source_dimensions": "2688x1536",
+    "source_format": "PNG",
+    "repo_binary_status": "Adobe source assets approved; binary ingest into GitHub delivery folders remains a separate technical transfer step"
+  },
+  "assets": [
+    {
+      "id": "homepage-hero",
+      "name": "Homepage Hero",
+      "role": "hero",
+      "routes": ["/"],
+      "copy_safe_side": "left",
+      "adobe_asset_id": "urn:aaid:sc:US:9d9371f1-8db1-4173-897b-9868a938e941",
+      "qa_status": "passed",
+      "notes": "Luxury evening residence; text-free; logo-free; restrained cool/warm balance."
+    },
+    {
+      "id": "residential-hero",
+      "name": "Residential Hero",
+      "role": "hero",
+      "routes": ["/solutions/residential"],
+      "copy_safe_side": "right",
+      "adobe_asset_id": "urn:aaid:sc:US:d14d917f-ca57-4aa2-883e-e9650d140b77",
+      "qa_status": "passed",
+      "notes": "Blue-hour residential scene; warm/cool balance corrected after first draft drifted too orange."
+    },
+    {
+      "id": "commercial-offices-hero",
+      "name": "Commercial Offices Hero",
+      "role": "hero",
+      "routes": ["/solutions/commercial-offices"],
+      "copy_safe_side": "left",
+      "adobe_asset_id": "urn:aaid:sc:US:2c2ca710-f302-4970-80ea-b6cd944680a2",
+      "qa_status": "passed",
+      "notes": "Executive collaboration environment with discreet automation cues and no readable screens."
+    },
+    {
+      "id": "short-term-rentals-hero",
+      "name": "Short-Term Rentals Hero",
+      "role": "hero",
+      "routes": ["/solutions/short-term-rentals"],
+      "copy_safe_side": "left",
+      "adobe_asset_id": "urn:aaid:sc:US:152a6f4c-5ee3-4675-9bd4-02376d94562a",
+      "qa_status": "passed",
+      "notes": "Guest-ready arrival scene with discreet keyless-entry cue; replaced first draft that invented a text panel."
+    },
+    {
+      "id": "senior-living-hero",
+      "name": "Senior Living Hero",
+      "role": "hero",
+      "routes": ["/solutions/senior-living"],
+      "copy_safe_side": "left",
+      "adobe_asset_id": "urn:aaid:sc:US:f91c018f-4ba4-4b90-86b6-e9f937c5a9eb",
+      "qa_status": "passed",
+      "notes": "Dignified residential-style senior living; non-clinical; replaced first draft that invented a text panel."
+    },
+    {
+      "id": "aging-in-place-hero",
+      "name": "Aging in Place Hero",
+      "role": "hero",
+      "routes": ["/solutions/aging-in-place"],
+      "copy_safe_side": "right",
+      "adobe_asset_id": "urn:aaid:sc:US:08cf1f24-2ac4-4065-8286-2082ffcf3f3f",
+      "qa_status": "passed",
+      "notes": "Night-path lighting and confident independent movement; no medicalized framing."
+    },
+    {
+      "id": "concierge-hero",
+      "name": "Concierge Hero",
+      "role": "hero",
+      "routes": ["/find-my-luxsync-solution", "/my-luxsync-blueprint"],
+      "copy_safe_side": "left",
+      "adobe_asset_id": "urn:aaid:sc:US:9641e952-2c03-4551-a33a-ecddd7cbc49b",
+      "qa_status": "passed",
+      "notes": "Coordinated interior ambience expressing orchestration rather than gadgetry."
+    },
+    {
+      "id": "energy-roi-hero",
+      "name": "Energy & ROI Hero",
+      "role": "hero",
+      "routes": ["/guides"],
+      "copy_safe_side": "right",
+      "adobe_asset_id": "urn:aaid:sc:US:46b546f5-5089-422e-bd2c-69ead9c1b122",
+      "qa_status": "passed",
+      "notes": "Daylight balancing and shade/lighting efficiency implied architecturally; no fake dashboards or savings claims."
+    },
+    {
+      "id": "intelligent-evening-lifestyle",
+      "name": "Intelligent Evening Lifestyle",
+      "role": "lifestyle",
+      "experience": "Intelligent Evening",
+      "adobe_asset_id": "urn:aaid:sc:US:a4a1e33b-4657-41e9-892d-5818f863ede3",
+      "qa_status": "passed"
+    },
+    {
+      "id": "cinema-lifestyle",
+      "name": "Cinema Lifestyle",
+      "role": "lifestyle",
+      "experience": "Cinema",
+      "adobe_asset_id": "urn:aaid:sc:US:a68bb954-20bb-4280-aa10-b78683d95d5d",
+      "qa_status": "passed"
+    },
+    {
+      "id": "welcome-home-lifestyle",
+      "name": "Welcome Home Lifestyle",
+      "role": "lifestyle",
+      "experience": "Welcome Home",
+      "adobe_asset_id": "urn:aaid:sc:US:9f6b6148-5436-464e-b2f8-3f9f0d70c8e6",
+      "qa_status": "passed"
+    },
+    {
+      "id": "water-watch-lifestyle",
+      "name": "Water Watch Lifestyle",
+      "role": "lifestyle",
+      "experience": "Water Watch",
+      "adobe_asset_id": "urn:aaid:sc:US:fda3aa84-c42a-434d-8813-a50125a90da6",
+      "qa_status": "passed"
+    }
+  ],
+  "qa_summary": {
+    "final_asset_count": 12,
+    "rejected_drafts": 3,
+    "rejection_reasons": [
+      "residential first draft drifted too orange",
+      "short-term-rental first draft invented a graphic/text panel",
+      "senior-living first draft invented a graphic/text panel"
+    ],
+    "checks": [
+      "no baked text",
+      "no generated LuxSync logo",
+      "no visible fake product branding",
+      "no purple/lavender/neon drift",
+      "route-appropriate composition",
+      "usable live-copy negative space",
+      "no medicalized or infantilizing senior imagery",
+      "no fake UI, ROI numbers or claims"
+    ]
+  }
+}
