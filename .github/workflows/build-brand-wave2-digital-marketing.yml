@@ -7,9 +7,11 @@ on:
     paths:
       - '.github/workflows/build-brand-wave2-digital-marketing.yml'
       - 'scripts/build-wave2-digital-marketing.py'
+      - 'scripts/reconcile-wave2-digital-marketing-qa.py'
       - 'brand/templates/digital-marketing/**'
+      - 'brand/audit/wave2-digital-marketing-qa-approval.json'
       - 'brand/assets/logos/png/**'
-      - 'brand/exports/digital/approved/dividers/png/**'
+      - 'brand/assets/dividers/png/**'
   workflow_dispatch:
 
 permissions:
@@ -36,6 +38,9 @@ jobs:
       - name: Build Wave 2 digital marketing kit
         run: python scripts/build-wave2-digital-marketing.py
 
+      - name: Reconcile reviewed Wave 2 visual QA
+        run: python scripts/reconcile-wave2-digital-marketing-qa.py
+
       - name: Upload Wave 2 QA preview
         uses: actions/upload-artifact@v4
         with:
@@ -57,7 +62,7 @@ jobs:
                   brand/exports/digital/marketing \
                   brand/audit/qa/wave2-digital-marketing.jpg \
                   brand/manifests/wave2-digital-marketing-manifest.json
-          git commit -m "Generate Wave 2 digital marketing kit [skip ci]"
+          git commit -m "Generate validated Wave 2 digital marketing kit [skip ci]"
           git fetch origin "${GITHUB_REF_NAME}"
           git rebase "origin/${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
