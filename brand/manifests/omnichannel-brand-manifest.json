@@ -1,7 +1,7 @@
 {
-  "version": "1.3-wave1-faithful-layer-integrated",
+  "version": "1.5-wave3-print-physical-integrated",
   "brand": "LuxSync",
-  "status": "wave1-faithful-approved-board-layer-integrated-pending-final-ci",
+  "status": "wave3-print-physical-qa-passed-pending-pr-validation",
   "audited_commit": "c568a8092724e1f1328a7b2c3707af3c31ed83ce",
   "official_slogan": "Where Luxury Lives Intelligently",
   "design_dna": "Plush Drift",
@@ -413,5 +413,24 @@
     "qa_contact_sheet_sha256": "c22d77b4b92e8ec0d02ad06d9ed626e6dca24e66171a258977327ede2f7df32e",
     "qa_approval_record": "brand/audit/wave2-digital-marketing-qa-approval.json",
     "guardrail": "Mutable copy and commerce facts remain live/template-driven. Exact approved LuxSync logos only."
+  },
+  "wave3_print_physical": {
+    "status": "qa-passed",
+    "manifest": "brand/manifests/wave3-print-physical-manifest.json",
+    "manifest_sha256": "54fc9cd2f6ee0ec19eb3efe1f9cc2b8c132b4a333c4ce95ab0763e4d0dede70f",
+    "static_print_asset_count": 8,
+    "physical_placement_spec_count": 8,
+    "formats": [
+      "300-dpi-png",
+      "cmyk-tiff-companion",
+      "exact-page-pdf"
+    ],
+    "master_root": "brand/masters/print-physical/wave3/",
+    "print_export_root": "brand/exports/print/wave3/",
+    "template_root": "brand/templates/print-physical/",
+    "qa_contact_sheet": "brand/audit/qa/wave3-print-physical.jpg",
+    "qa_contact_sheet_sha256": "2f765947e50fdea434ad27ff329ccb16d661aa572ba775d781fe38570cadfa42",
+    "qa_approval_record": "brand/audit/wave3-print-physical-qa-approval.json",
+    "specialty_production_boundary": "Vendor-specific one-color, embroidery, engraving, vinyl, screen-print and foil conversions remain pending actual production constraints; do not invent them generatively."
   }
 }

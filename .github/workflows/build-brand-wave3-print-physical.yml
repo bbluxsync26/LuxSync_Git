@@ -1,0 +1,88 @@
+name: Build LuxSync Wave 3 print and physical kit
+
+on:
+  push:
+    branches:
+      - 'feature/brand-*'
+    paths:
+      - '.github/workflows/build-brand-wave3-print-physical.yml'
+      - 'scripts/build-wave3-print-physical.py'
+      - 'scripts/reconcile-wave3-print-physical-qa.py'
+      - 'scripts/reconcile-wave3-print-physical-governance.py'
+      - 'brand/templates/print-physical/**'
+      - 'brand/audit/wave3-print-physical-qa-approval.json'
+      - 'brand/assets/logos/png/**'
+      - 'brand/assets/dividers/png/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build Wave 3 print and physical templates
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out feature branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install print build dependencies
+        run: python -m pip install pillow reportlab pypdf
+
+      - name: Build Wave 3 print and physical kit
+        run: python scripts/build-wave3-print-physical.py
+
+      - name: Reconcile reviewed Wave 3 visual/PDF QA
+        run: python scripts/reconcile-wave3-print-physical-qa.py
+
+      - name: Reconcile Wave 3 governance and discovery
+        run: python scripts/reconcile-wave3-print-physical-governance.py
+
+      - name: Upload Wave 3 QA preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: wave3-print-physical-qa
+          path: brand/audit/qa/wave3-print-physical.jpg
+          if-no-files-found: error
+          retention-days: 1
+
+      - name: Upload Wave 3 print-source QA bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: wave3-print-source-bundle
+          path: |
+            brand/exports/print/wave3/**
+            brand/manifests/wave3-print-physical-manifest.json
+          if-no-files-found: error
+          retention-days: 1
+
+      - name: Commit generated Wave 3 assets, manifest and governance
+        shell: bash
+        run: |
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+            echo "No Wave 3 generated changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add brand/masters/print-physical/wave3 \
+                  brand/exports/print/wave3 \
+                  brand/audit/qa/wave3-print-physical.jpg \
+                  brand/manifests/wave3-print-physical-manifest.json \
+                  brand/manifests/omnichannel-brand-manifest.json \
+                  brand/audit/brand-build-state.json \
+                  brand/audit/brand-build-report.md \
+                  brand/README.md \
+                  docs/production-asset-library.md \
+                  docs/master-catalog.md
+          git commit -m "Reconcile validated Wave 3 print and physical system [skip ci]"
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

@@ -149,3 +149,17 @@ Completed:
 The first QA pass found rectangular board-crop seams around some ornaments. That was repaired objectively by using the clean transparent validated divider delivery layer for new compositions rather than altering the faithful board-derived masters. The second contact sheet passed visual review.
 
 Wave 2 remains pending pull-request and post-merge repository CI before being marked complete.
+
+## Wave 3 print and physical checkpoint
+
+Status: QA complete; pending repository PR validation.
+
+- 8 print/stationery compositions at 300 DPI.
+- 8 PNG masters + 8 PNG deliveries + 8 CMYK TIFF companions + 8 exact-page PDFs.
+- 8 vendor-neutral physical placement specifications.
+- Contact-sheet QA passed and is hash-bound.
+- All 8 PDFs were independently render-reviewed before approval.
+- No example identity/contact/invoice data from the stationery board was promoted as production data.
+- Specialty manufacturing conversions remain intentionally deferred until actual vendor constraints exist.
+
+Wave 3 manifest SHA256: `54fc9cd2f6ee0ec19eb3efe1f9cc2b8c132b4a333c4ce95ab0763e4d0dede70f`.

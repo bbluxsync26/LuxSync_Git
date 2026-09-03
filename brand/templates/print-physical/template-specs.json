@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0",
+  "brand": "LuxSync",
+  "brand_system": "LuxSync Production Raster v5",
+  "design_dna": "Plush Drift",
+  "dpi": 300,
+  "default_bleed_in": 0.125,
+  "logo_root": "brand/assets/logos/png",
+  "ornament_root": "brand/assets/dividers/png",
+  "templates": [
+    {
+      "id": "business-card-front",
+      "family": "stationery",
+      "trim_in": [3.5, 2.0],
+      "bleed_in": 0.125,
+      "background": "dark-full",
+      "logo": "luxsync-horizontal-combo.png",
+      "logo_anchor": "center",
+      "logo_width_ratio": 0.68,
+      "ornament": "divider-rose.png",
+      "ornament_anchor": "bottom-center",
+      "live_content_zones": []
+    },
+    {
+      "id": "business-card-back",
+      "family": "stationery",
+      "trim_in": [3.5, 2.0],
+      "bleed_in": 0.125,
+      "background": "light-paper",
+      "logo": "luxsync-orb.png",
+      "logo_anchor": "top-right",
+      "logo_width_ratio": 0.18,
+      "ornament": "divider-steel.png",
+      "ornament_anchor": "bottom-left",
+      "live_content_zones": [
+        {"id": "identity-contact", "rect_trim_ratio": [0.08, 0.18, 0.64, 0.60]}
+      ]
+    },
+    {
+      "id": "letterhead",
+      "family": "stationery",
+      "trim_in": [8.5, 11.0],
+      "bleed_in": 0.125,
+      "background": "light-paper",
+      "logo": "luxsync-horizontal-combo.png",
+      "logo_anchor": "top-left",
+      "logo_width_ratio": 0.31,
+      "ornament": "divider-steel.png",
+      "ornament_anchor": "header-line",
+      "live_content_zones": [
+        {"id": "document-body", "rect_trim_ratio": [0.10, 0.18, 0.80, 0.70]},
+        {"id": "footer-contact", "rect_trim_ratio": [0.10, 0.91, 0.80, 0.04]}
+      ]
+    },
+    {
+      "id": "envelope-number-10",
+      "family": "stationery",
+      "trim_in": [9.5, 4.125],
+      "bleed_in": 0.125,
+      "background": "light-paper",
+      "logo": "luxsync-horizontal-combo.png",
+      "logo_anchor": "top-left",
+      "logo_width_ratio": 0.26,
+      "ornament": "divider-rose.png",
+      "ornament_anchor": "lower-left",
+      "live_content_zones": [
+        {"id": "return-address", "rect_trim_ratio": [0.06, 0.25, 0.32, 0.18]},
+        {"id": "recipient-address", "rect_trim_ratio": [0.40, 0.42, 0.42, 0.28]}
+      ]
+    },
+    {
+      "id": "note-card",
+      "family": "stationery",
+      "trim_in": [5.0, 3.5],
+      "bleed_in": 0.125,
+      "background": "dark-full",
+      "logo": "luxsync-horizontal-combo.png",
+      "logo_anchor": "center-top",
+      "logo_width_ratio": 0.54,
+      "ornament": "divider-rose.png",
+      "ornament_anchor": "bottom-center",
+      "live_content_zones": [
+        {"id": "message", "rect_trim_ratio": [0.12, 0.46, 0.76, 0.30]}
+      ]
+    },
+    {
+      "id": "invoice-header",
+      "family": "business-document",
+      "trim_in": [8.5, 11.0],
+      "bleed_in": 0.125,
+      "background": "light-paper",
+      "logo": "luxsync-horizontal-combo.png",
+      "logo_anchor": "top-left",
+      "logo_width_ratio": 0.28,
+      "ornament": "divider-steel.png",
+      "ornament_anchor": "header-line",
+      "live_content_zones": [
+        {"id": "company-contact", "rect_trim_ratio": [0.62, 0.07, 0.28, 0.08]},
+        {"id": "invoice-metadata", "rect_trim_ratio": [0.62, 0.18, 0.28, 0.10]},
+        {"id": "invoice-body", "rect_trim_ratio": [0.10, 0.30, 0.80, 0.56]}
+      ]
+    },
+    {
+      "id": "document-cover",
+      "family": "business-document",
+      "trim_in": [8.5, 11.0],
+      "bleed_in": 0.125,
+      "background": "dark-full",
+      "logo": "luxsync-horizontal-combo.png",
+      "logo_anchor": "top-left",
+      "logo_width_ratio": 0.34,
+      "ornament": "orbit-stroke-steel.png",
+      "ornament_anchor": "right-center",
+      "live_content_zones": [
+        {"id": "document-title", "rect_trim_ratio": [0.10, 0.38, 0.62, 0.22]},
+        {"id": "document-subtitle", "rect_trim_ratio": [0.10, 0.62, 0.58, 0.10]}
+      ]
+    },
+    {
+      "id": "print-collateral-letter",
+      "family": "print-collateral",
+      "trim_in": [8.5, 11.0],
+      "bleed_in": 0.125,
+      "background": "dark-full",
+      "logo": "luxsync-orb.png",
+      "logo_anchor": "top-right",
+      "logo_width_ratio": 0.13,
+      "ornament": "divider-rose.png",
+      "ornament_anchor": "bottom-left",
+      "live_content_zones": [
+        {"id": "headline", "rect_trim_ratio": [0.09, 0.12, 0.66, 0.16]},
+        {"id": "body", "rect_trim_ratio": [0.09, 0.34, 0.72, 0.42]},
+        {"id": "call-to-action", "rect_trim_ratio": [0.09, 0.80, 0.52, 0.08]}
+      ]
+    }
+  ]
+}

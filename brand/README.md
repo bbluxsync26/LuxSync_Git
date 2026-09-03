@@ -147,3 +147,17 @@ PR-BRAND-001 Wave 2 adds a governed reusable digital-marketing layer without tur
 The kit contains ten text-safe static frames across social, presentations, campaigns and 4K video overlays, plus a live email-signature template and live semantic product-card treatment. Static frames use only exact approved LuxSync logo artwork. Mutable headlines, offers, product facts, prices, ratings, availability and customer information remain live/template-driven.
 
 For new freeform compositions, clean transparent validated dividers under `brand/assets/dividers/` are used to avoid crop-edge seams. The faithful approval-board-derived ornament masters remain preserved separately and unchanged.
+
+## Wave 3 - Print & Physical Brand System
+
+The PR-BRAND-001 Wave 3 source layer is governed by `brand/manifests/wave3-print-physical-manifest.json`.
+
+- Eight approved stationery/print composition templates are delivered as 300-DPI PNG source art, CMYK TIFF companions and exact-page-size PDFs.
+- Template sources live under `brand/templates/print-physical/`; print exports live under `brand/exports/print/wave3/`.
+- The stationery approval board remains composition evidence. Example identity/contact data from that board is not production data.
+- Exact approved LuxSync logo artwork is used unchanged in full-color source compositions.
+- Physical placements for signage, apparel, headwear, drinkware, vinyl, engraving and foil are governed by `brand/templates/print-physical/physical-production-specs.json`.
+- Vendor-specific one-color, stitch, cut-line, engraving, screen-print and foil conversions are created only after actual production constraints are known. Do not invent them or generatively redraw the logo.
+- All physical jobs require final vendor preflight before manufacture.
+
+Wave 3 QA contact sheet: `brand/audit/qa/wave3-print-physical.jpg`.
