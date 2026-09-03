@@ -1,63 +1,78 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "prompt_id": "PR-BRAND-001",
   "brand": "LuxSync",
   "execution_mode": "promptless-self-healing",
   "source_branch_at_start": "master",
-  "audited_master_commit": "6f49e812b0d60f9a597fadf232330b6e62cac54a",
-  "working_branch": "feature/brand-board-visual-audit",
-  "overall_state": "wave1-integration-complete-final-ci-triggered",
-  "current_phase": "wave1",
+  "audited_master_commit": "e15bfa940599a0b82ac36db713437b210e714c8c",
+  "working_branch": "feature/brand-wave2-digital-marketing",
+  "overall_state": "wave2-in-progress",
+  "current_phase": "wave2",
   "last_validation": {
     "workflow": "Validate LuxSync repository consistency",
-    "run_id": 33693342305,
+    "run_id": 33705861760,
     "result": "success",
-    "validated_head": "6f49e812b0d60f9a597fadf232330b6e62cac54a"
+    "validated_head": "19d0b56aa01f15107b3e17c52a18189bc3511453"
   },
   "phases": {
     "phase0": {
       "name": "Audit and State Detection",
-      "state": "complete-validated",
+      "state": "complete",
       "remaining_checks": []
     },
     "wave1": {
       "name": "Website-Critical Omnichannel Brand Set",
-      "state": "integration-complete-final-ci-triggered",
+      "state": "complete",
+      "validation": {
+        "pr": 30,
+        "pr_validation_run": 33705814560,
+        "post_merge_validation_run": 33705861760,
+        "merged_commit": "19d0b56aa01f15107b3e17c52a18189bc3511453",
+        "production_candidate_run": 33705861763,
+        "godaddy_publish": "skipped"
+      },
       "completed_checks": [
         "three protected logo masters preserved unchanged",
         "existing 31-asset semantic/vector delivery layer retained rather than destructively rebuilt",
         "four production-approved account-access SVG masters rendered to four PNG and four lossless WebP derivatives with QA evidence",
         "all seven authoritative reference boards made visually accessible through a private GitHub Actions audit artifact",
-        "full-resolution element-level visual audit completed across approved brand, buttons, dividers, icons, product cards, stationery and UI controls boards",
-        "direct visual comparison determined that the earlier 16 semantic icons and 12 dividers are simplified and do not fully reproduce the approved metallic board artwork",
+        "full-resolution element-level visual audit completed across all seven approval boards",
         "sixteen faithful metallic icon masters generated from the approved icon board",
         "forty-two faithful divider/accent masters generated from the approved divider board",
-        "each of the 58 board-derived artworks has a master PNG, matching PNG delivery, lossless WebP and explicitly labeled embedded-raster SVG fidelity container",
-        "source-board hashes, crop geometry, dimensions, output hashes and QA status recorded in brand/manifests/approved-board-asset-manifest.json",
-        "visual QA contact sheets generated and manually reviewed for all 58 board-derived artworks",
-        "buttons, section separators, product cards, stationery, UI controls and hero examples classified as semantic/template/reference families where mutable text or unvalidated facts prevent safe flattened production use",
-        "reference-board pixel-access exception closed",
-        "approved-board validator added and wired into standard repository CI",
-        "faithful approved-board visual layer documented in brand/README.md and docs/production-asset-library.md",
-        "website/asset-map.md updated to prefer faithful metallic artwork for branded visual moments while retaining semantic vectors for compact live UI",
-        "private short-retention board visual-audit workflow made reusable across brand feature branches",
-        "omnichannel icon/divider dispositions reconciled to the completed full-resolution visual audit",
-        "PR #30 opened and a normal non-skip commit issued to trigger the full pull-request validation suite"
+        "all 58 approved-board-derived artworks carry governed master/export hashes and QA evidence",
+        "reference/template-only families kept out of unsafe flattened production art",
+        "approved-board validator wired into standard repository CI",
+        "website and brand discovery mappings updated to distinguish faithful metallic artwork from compact semantic vectors",
+        "PR #30 and post-merge master validation passed",
+        "validated production candidate built and GoDaddy production publish remained skipped"
       ],
-      "already_validated_inputs": [
-        "3 protected logo PNG masters and current SVG/WebP delivery variants",
-        "31 pre-existing clean semantic assets / 93 files retained as a secondary semantic/vector delivery layer",
-        "4 account-access ambient SVG masters plus 8 governed PNG/WebP derivatives",
-        "58 faithful approved-board-derived artworks: 16 metallic icons + 42 dividers/accents"
-      ],
-      "known_gaps": [
-        "full repository CI must pass with scripts/validate-approved-board-assets.py enabled before Wave 1 is closed",
-        "Wave 2 and Wave 3 remain intentionally pending"
-      ]
+      "known_gaps": []
     },
     "wave2": {
       "name": "Broader Digital and Marketing Library",
-      "state": "not_started"
+      "state": "in_progress",
+      "planned_channels": [
+        "social-ready brand templates",
+        "email-signature components",
+        "presentation assets",
+        "video-overlay static assets",
+        "product-card visual treatments",
+        "reusable promotional ornaments",
+        "campaign-support graphics",
+        "digital marketing compositions and templates"
+      ],
+      "guardrails": [
+        "use exact protected logo artwork only",
+        "reuse approved metallic icon/divider layer rather than recreating it",
+        "keep mutable copy and commerce facts live/template-driven",
+        "do not publish conceptual product renders or example prices as live commerce",
+        "derive static compositions from approved Plush Drift brand rules and approved-board composition language",
+        "prefer reusable text-safe backgrounds and component templates over one-off advertisements"
+      ],
+      "known_gaps": [
+        "Wave 2 channel templates and governed manifest are not yet built",
+        "Wave 2 QA and CI validation are not yet established"
+      ]
     },
     "wave3": {
       "name": "Print and Physical Brand System",
@@ -91,5 +106,5 @@
     "Do not flatten mutable button, product, stationery, hero or UI copy into production assets when live/template implementation is appropriate."
   ],
   "human_decision_required": false,
-  "next_checkpoint": "Verify the full pull-request validation run triggered for PR #30. If green, seal validation into state, merge, verify master, and continue automatically into Wave 2."
+  "next_checkpoint": "Build and validate the Wave 2 reusable digital-marketing template system and channel exports, then open a Wave 2 PR when QA is complete."
 }
