@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "brand": "LuxSync",
+  "status": "vendor-neutral-placement-guidance",
+  "identity_rule": "Use exact protected LuxSync artwork. Specialty variants must not be invented without a validated production requirement.",
+  "placements": [
+    {
+      "id": "signage-primary-horizontal",
+      "channel": "signage",
+      "preferred_logo": "luxsync-horizontal-combo.png",
+      "alternate_logo": "luxsync-orb.png",
+      "minimum_clearspace_rule": "at least 0.5x the rendered orb diameter around the mark",
+      "background_rule": "use an approved dark or neutral field with sufficient contrast; do not place over visually busy imagery",
+      "specialty_status": "full-color-placement-approved; fabrication-specific conversion pending vendor specs"
+    },
+    {
+      "id": "apparel-left-chest",
+      "channel": "apparel",
+      "preferred_logo": "luxsync-orb.png",
+      "placement_rule": "left-chest placement centered within the garment decoration zone",
+      "size_rule": "scale proportionally; final physical size must be confirmed against garment size and decoration method",
+      "specialty_status": "placement-approved; embroidery/screen-print artwork pending vendor specs"
+    },
+    {
+      "id": "apparel-center-front-back",
+      "channel": "apparel",
+      "preferred_logo": "luxsync-horizontal-combo.png",
+      "placement_rule": "centered on front or back decoration zone",
+      "size_rule": "preserve aspect ratio and clearspace; validate actual print width with the decorator",
+      "specialty_status": "placement-approved; screen-print/DTG artwork pending vendor specs"
+    },
+    {
+      "id": "hat-front",
+      "channel": "headwear",
+      "preferred_logo": "luxsync-orb.png",
+      "placement_rule": "centered front-panel placement",
+      "size_rule": "validate stitch area, minimum stroke/detail and thread behavior before converting the protected mark",
+      "specialty_status": "placement-approved; embroidery adaptation pending vendor stitch specifications"
+    },
+    {
+      "id": "drinkware",
+      "channel": "merchandise",
+      "preferred_logo": "luxsync-horizontal-combo.png",
+      "alternate_logo": "luxsync-orb.png",
+      "placement_rule": "single-side or centered wrap placement with clearspace",
+      "size_rule": "confirm printable wrap area with the selected vessel and decorator",
+      "specialty_status": "placement-approved; sublimation/UV/engraving artwork pending vendor specs"
+    },
+    {
+      "id": "decal-vinyl",
+      "channel": "vinyl",
+      "preferred_logo": "luxsync-horizontal-combo.png",
+      "alternate_logo": "luxsync-orb.png",
+      "placement_rule": "use exact silhouette and preserve internal spacing",
+      "size_rule": "validate minimum cut detail and weedability with fabricator",
+      "specialty_status": "placement-approved; cut-line conversion pending fabricator constraints"
+    },
+    {
+      "id": "engraving-etching",
+      "channel": "engraving",
+      "preferred_logo": "luxsync-orb.png",
+      "alternate_logo": "luxsync-horizontal-combo.png",
+      "placement_rule": "preserve protected silhouette; do not substitute typed initials",
+      "size_rule": "validate laser/etch minimum feature size and material response before conversion",
+      "specialty_status": "placement-approved; one-color production conversion pending process constraints"
+    },
+    {
+      "id": "foil-metallic",
+      "channel": "print-finishing",
+      "preferred_logo": "luxsync-horizontal-combo.png",
+      "alternate_logo": "luxsync-orb.png",
+      "placement_rule": "use the protected mark as the identity source and keep foil treatment restrained",
+      "size_rule": "validate foil minimum line, trapping and stock compatibility with printer",
+      "specialty_status": "placement-approved; spot plate and actual metallic material selection pending printer specs"
+    }
+  ],
+  "vendor_inputs_required_before_specialty_conversion": [
+    "actual substrate/material",
+    "production process",
+    "minimum printable/stitchable/cuttable feature size",
+    "maximum decoration area",
+    "ink/thread/foil or laser constraints",
+    "required file format and color mode",
+    "vendor bleed, trapping, cut-line or registration requirements"
+  ]
+}
