@@ -31,7 +31,7 @@ jobs:
           node-version: '22'
 
       - name: Install brand validation dependencies
-        run: python -m pip install pillow
+        run: python -m pip install pillow pypdf
 
       - name: Validate production brand library
         run: python scripts/validate-production-brand.py
@@ -44,6 +44,9 @@ jobs:
 
       - name: Validate Wave 2 digital marketing kit
         run: python scripts/validate-wave2-digital-marketing.py
+
+      - name: Validate Wave 3 print and physical system
+        run: python scripts/validate-wave3-print-physical.py
 
       - name: Validate repository source of truth
         run: python scripts/validate-repository-consistency.py
