@@ -6,7 +6,7 @@
   "source_branch_at_start": "master",
   "audited_master_commit": "6f49e812b0d60f9a597fadf232330b6e62cac54a",
   "working_branch": "feature/brand-board-visual-audit",
-  "overall_state": "wave1-integration-complete-pending-final-ci",
+  "overall_state": "wave1-integration-complete-final-ci-triggered",
   "current_phase": "wave1",
   "last_validation": {
     "workflow": "Validate LuxSync repository consistency",
@@ -22,7 +22,7 @@
     },
     "wave1": {
       "name": "Website-Critical Omnichannel Brand Set",
-      "state": "integration-complete-pending-final-ci",
+      "state": "integration-complete-final-ci-triggered",
       "completed_checks": [
         "three protected logo masters preserved unchanged",
         "existing 31-asset semantic/vector delivery layer retained rather than destructively rebuilt",
@@ -41,7 +41,8 @@
         "faithful approved-board visual layer documented in brand/README.md and docs/production-asset-library.md",
         "website/asset-map.md updated to prefer faithful metallic artwork for branded visual moments while retaining semantic vectors for compact live UI",
         "private short-retention board visual-audit workflow made reusable across brand feature branches",
-        "omnichannel icon/divider dispositions reconciled to the completed full-resolution visual audit"
+        "omnichannel icon/divider dispositions reconciled to the completed full-resolution visual audit",
+        "PR #30 opened and a normal non-skip commit issued to trigger the full pull-request validation suite"
       ],
       "already_validated_inputs": [
         "3 protected logo PNG masters and current SVG/WebP delivery variants",
@@ -90,5 +91,5 @@
     "Do not flatten mutable button, product, stationery, hero or UI copy into production assets when live/template implementation is appropriate."
   ],
   "human_decision_required": false,
-  "next_checkpoint": "Run full repository CI on the Wave 1 branch. If green, seal validation into state, merge, and resume future PR-BRAND-001 runs at Wave 2."
+  "next_checkpoint": "Verify the full pull-request validation run triggered for PR #30. If green, seal validation into state, merge, verify master, and continue automatically into Wave 2."
 }
