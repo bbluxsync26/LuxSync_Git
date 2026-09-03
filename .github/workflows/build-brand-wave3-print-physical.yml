@@ -1,0 +1,63 @@
+name: Build LuxSync Wave 3 print and physical kit
+
+on:
+  push:
+    branches:
+      - 'feature/brand-*'
+    paths:
+      - '.github/workflows/build-brand-wave3-print-physical.yml'
+      - 'scripts/build-wave3-print-physical.py'
+      - 'brand/templates/print-physical/**'
+      - 'brand/assets/logos/png/**'
+      - 'brand/assets/dividers/png/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build Wave 3 print and physical templates
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out feature branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install print build dependencies
+        run: python -m pip install pillow reportlab pypdf
+
+      - name: Build Wave 3 print and physical kit
+        run: python scripts/build-wave3-print-physical.py
+
+      - name: Upload Wave 3 QA preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: wave3-print-physical-qa
+          path: brand/audit/qa/wave3-print-physical.jpg
+          if-no-files-found: error
+          retention-days: 1
+
+      - name: Commit generated Wave 3 assets and manifest
+        shell: bash
+        run: |
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+            echo "No Wave 3 generated changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add brand/masters/print-physical/wave3 \
+                  brand/exports/print/wave3 \
+                  brand/audit/qa/wave3-print-physical.jpg \
+                  brand/manifests/wave3-print-physical-manifest.json
+          git commit -m "Generate Wave 3 print and physical kit [skip ci]"
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
