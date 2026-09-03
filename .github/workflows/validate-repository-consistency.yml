@@ -39,6 +39,9 @@ jobs:
       - name: Validate approved reference-board assets
         run: python scripts/validate-approved-board-assets.py
 
+      - name: Validate Wave 2 digital marketing kit
+        run: python scripts/validate-wave2-digital-marketing.py
+
       - name: Validate repository source of truth
         run: python scripts/validate-repository-consistency.py
 
