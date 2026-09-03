@@ -678,3 +678,45 @@ body[data-route="/guides"] { --page-hero-image: url("/assets/plush-drift-energy.
 .section + .section{position:relative}
 .section + .section::before{content:"";position:absolute;top:0;left:50%;width:min(1120px,calc(100% - 32px));height:14px;transform:translateX(-50%);background:url("/assets/dividers/divider-steel.webp") center/contain no-repeat;opacity:.34;pointer-events:none}
 .section-dark + .section::before,.section-soft + .section::before{background-image:url("/assets/dividers/divider-dual.webp");opacity:.5}
+
+/* Plush Drift controls: dark tactile face, cool underlight, warm metallic edge. */
+.button,.option-card label,.intent-button,.field input,.field select,.field textarea,.auth-card input{
+  position:relative;
+  border-color:rgba(214,176,160,.38);
+  background:
+    linear-gradient(145deg,rgba(123,150,178,.12),transparent 46%),
+    linear-gradient(180deg,rgba(214,176,160,.1),rgba(13,21,38,.04)),
+    var(--suede);
+  box-shadow:inset 0 1px 0 rgba(208,190,176,.13),0 7px 0 -5px rgba(123,150,178,.6),0 13px 28px rgba(13,21,38,.3);
+}
+.button::after{
+  content:"";
+  width:16px;
+  height:16px;
+  margin-left:.65rem;
+  background:url("/assets/dividers/orbit-stroke-rose.webp") center/contain no-repeat;
+  opacity:.88;
+}
+.button-secondary::after{background-image:url("/assets/dividers/orbit-stroke-steel.webp")}
+.button:hover,.option-card label:hover,.intent-button:hover{
+  border-color:rgba(214,176,160,.72);
+  box-shadow:inset 0 1px 0 rgba(208,190,176,.2),0 9px 0 -5px rgba(123,150,178,.78),0 17px 34px rgba(13,21,38,.38);
+}
+.button:active,.option-card input:checked + label,.intent-button.is-selected{
+  transform:translateY(1px);
+  border-color:rgba(214,176,160,.76);
+  box-shadow:inset 0 3px 10px rgba(13,21,38,.42),0 5px 0 -4px rgba(214,176,160,.72),0 10px 20px rgba(13,21,38,.28);
+}
+.field input:focus,.field select:focus,.field textarea:focus,.auth-card input:focus{
+  border-color:rgba(123,150,178,.78);
+  background:linear-gradient(180deg,rgba(123,150,178,.1),rgba(13,21,38,.08)),var(--slate);
+}
+.card-icon{
+  width:52px;
+  height:52px;
+  padding:7px;
+  border:1px solid rgba(214,176,160,.22);
+  border-radius:15px;
+  background:linear-gradient(145deg,rgba(123,150,178,.12),rgba(214,176,160,.06));
+  box-shadow:0 8px 22px rgba(13,21,38,.28),0 3px 14px rgba(123,150,178,.12);
+}
