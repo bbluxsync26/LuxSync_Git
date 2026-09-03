@@ -2,82 +2,90 @@
 
 **Status:** Active / Authoritative delivery-layer reference  
 **Brand system:** LuxSync Production Raster v5  
-**Current digital delivery library:** 6.0 clean atomic triple-format  
 **Omnichannel recovery/build prompt:** PR-BRAND-001
 
 ## Scope
 
-LuxSync branding is omnichannel. The current `brand/assets/` tree is the validated clean **digital delivery layer**, not the entire brand universe.
-
-The complete brand system also preserves approval evidence, future masters, print/physical exports, stationery, merchandise, marketing and motion-ready static artwork. The website consumes this system; it does not define or limit it.
+LuxSync branding is omnichannel. No single website asset folder defines the whole brand system.
 
 Authoritative supporting locations:
 
 - protected logo masters: `brand/source-logo/`
 - visual approval archive: `brand/reference-boards/`
-- current clean digital delivery layer: `brand/assets/`
+- clean semantic/vector delivery layer: `brand/assets/`
+- faithful approved-board masters: `brand/masters/approved-board-raster/`
+- faithful approved-board digital exports: `brand/exports/digital/approved/`
+- faithful approved-board manifest: `brand/manifests/approved-board-asset-manifest.json`
+- account-access digital derivatives: `brand/exports/digital/account-access/`
 - omnichannel manifest: `brand/manifests/omnichannel-brand-manifest.json`
 - restart/audit state: `brand/audit/`
 - governing recovery/build prompt: `prompts/branding/PR-BRAND-001-LuxSync-Omnichannel-Brand-System-Recovery-Audit.md`
 
-## Current production-safe digital assets
+## Protected logos
 
-Every reusable production graphic currently completed under `brand/assets/` has three corresponding files with the same semantic basename:
+The protected logo masters remain authoritative under `brand/source-logo/`. Production PNG logo copies are byte-identical to those masters. Current logo SVG variants are embedded-raster fidelity containers that preserve exact approved artwork. They are not newly redrawn true-vector logo masters.
 
-1. SVG
-2. transparent PNG where appropriate
-3. WebP
+Never regenerate, redraw, retype, recolor or approximate LuxSync logo artwork.
 
-The current clean digital delivery library contains **31 approved atomic assets and 93 format-specific production files**.
+## Clean semantic/vector layer
 
-Current completed families:
+`brand/assets/` remains a validated technically clean delivery layer containing **31 atomic assets / 93 SVG-PNG-WebP files**:
 
-- `brand/assets/logos/`
-- `brand/assets/icons/`
-- `brand/assets/dividers/`
+- 3 protected logo deliveries;
+- 16 semantic vector icons;
+- 12 semantic vector dividers/ornaments.
 
-The protected logo masters remain authoritative under `brand/source-logo/`. Production PNG logo copies are byte-identical to those masters. Current logo SVG variants are **embedded-raster fidelity containers** that preserve the exact approved artwork rather than retyping or reconstructing the wordmark; they are not represented as newly redrawn true-vector logo masters.
+The icon and divider vectors are useful for scalable interface illustration and live application contexts. They have semantic IDs and clean geometry, and they remain valid.
 
-## Atomic icon library
+A full-resolution audit of the approval boards established that these icon/divider vectors are visually simplified. They are therefore a semantic/vector layer, not the sole faithful rendering of the approved LuxSync graphic archive.
 
-The icon family was rebuilt as clean semantic vector artwork. Each icon contains one intended symbol only, with consistent optical scale, padding, stroke treatment and approved LuxSync metallic colors.
+## Faithful approved-board layer
 
-No production icon may contain:
+Direct visual audit of the original board pixels produced a second, fidelity-first digital layer governed by `brand/manifests/approved-board-asset-manifest.json`.
 
-- a neighboring icon or partial neighboring icon;
-- presentation-board labels or headings;
-- crop borders or grid lines;
-- malformed generated text;
-- generated LuxSync logo approximations.
+Current Wave 1 inventory:
 
-The old numbered grid-sliced icon files were retired.
+- **16 approved metallic icons**;
+- **42 approved dividers/accents**;
+- **58 reusable approved artworks total**.
 
-## Dividers and ornamental accents
+Every asset has:
 
-Dividers, badge underlines, corners and orbit strokes are true vector assets under `brand/assets/dividers/`, with matching PNG and WebP exports. They are decorative graphics only and contain no mutable business copy.
+1. raster-origin master PNG under `brand/masters/approved-board-raster/`;
+2. byte-identical PNG delivery export under `brand/exports/digital/approved/`;
+3. lossless WebP delivery export;
+4. SVG fidelity container embedding the exact approved PNG;
+5. source-board hash and crop geometry;
+6. dimensions and output hashes;
+7. `qa_status: passed`;
+8. visual QA contact-sheet evidence.
 
-## Reference boards remain authoritative approval evidence
+Use the faithful layer where the approved metallic LuxSync artwork itself is part of the intended brand expression. Do not substitute a simplified semantic icon merely because it represents the same concept.
 
-Retiring malformed sliced exports did **not** revoke the visual concepts approved on the boards under `brand/reference-boards/`.
+The SVG fidelity containers are explicitly raster-embedded. Do not represent them as newly created editable vector masters.
 
-Those boards are permanent approval evidence for the wider brand system, including concepts that may later become:
+## Approved-board visual audit
 
-- print/stationery components;
-- marketing compositions;
-- merchandise/apparel artwork;
-- signage/packaging elements;
-- video-ready static overlays;
-- email/social/presentation assets;
-- website-supporting graphics;
-- semantic UI references.
+The element-level disposition of all seven boards is recorded in `brand/audit/reference-board-visual-inventory.md`.
 
-Do not grid-slice the boards into production files. Visually identify each intended element, reuse a matching clean asset when one exists, and create a new faithful master only when the approved element is genuinely missing.
+The approved boards remain permanent evidence. The audit distinguishes reusable artwork from composition/template families:
+
+- icons and text-free dividers/accents have faithful delivery assets;
+- buttons and controls remain semantic live UI;
+- section separators with mutable titles remain templates;
+- product cards remain composition/marketing references until commerce facts are validated;
+- stationery remains a Wave 3 template system because board identity/contact data is illustrative;
+- hero/banner examples remain composition references and should use current live copy.
 
 ## UI boundary
 
-Buttons, navigation, forms, toggles, cards, product cards and other interactive controls remain semantic HTML/CSS for websites/apps. Do not substitute screenshots for functional UI.
+Buttons, navigation, forms, toggles, cards, product cards, search, tabs and other interactive controls remain semantic HTML/CSS for websites/apps. Do not substitute screenshots for functional UI.
 
-Their approved appearance may still be durable brand reference and may inform other channels, marketing templates, presentations, video graphics or print collateral. Do not delete approval evidence merely because the website implementation is semantic.
+The approval boards define their design language and states. Mutable labels, prices, product facts, support claims, shipping/return statements and other changing facts must stay live and validated.
+
+## Account-access derivative layer
+
+Four text-free production-approved account ambient SVG masters are governed by `website/assets/auth/manifest.json`. Their PNG and lossless WebP derivatives live under `brand/exports/digital/account-access/` with hashes and QA evidence in the omnichannel manifest.
 
 ## Omnichannel format strategy
 
@@ -113,28 +121,36 @@ Champagne Rose Gold used as a physical metallic finish should be handled as a pr
 
 ## Visual QA
 
-Current rendered contact sheets are stored under:
+Semantic/vector contact sheets:
 
 - `brand/assets/qa/icons-contact-sheet.jpg`
 - `brand/assets/qa/dividers-contact-sheet.jpg`
 
-The contact sheets are QA artifacts only. They are not published as website graphics.
+Faithful approved-board contact sheets:
 
-The current digital delivery manifest is `brand/assets/asset-manifest.json`. Every approved entry must retain `production_status: approved` and `qa_status: passed`, plus valid SVG, PNG and WebP hashes.
+- `brand/audit/qa/approved-icons-board-derived.jpg`
+- `brand/audit/qa/approved-dividers-board-derived.jpg`
 
-The broader omnichannel state and asset dispositions are governed by:
+Account-access derivative QA:
 
-- `brand/manifests/omnichannel-brand-manifest.json`
-- `brand/audit/brand-build-state.json`
-- `brand/audit/brand-build-report.md`
-- `brand/audit/brand-exceptions.md`
+- `brand/audit/qa/account-access-derivatives.jpg`
+
+Contact sheets are QA artifacts only, not deployable graphics.
+
+Automated validation:
+
+- `scripts/validate-production-brand.py`
+- `scripts/validate-brand-derivatives.py`
+- `scripts/validate-approved-board-assets.py`
+- `scripts/validate-repository-consistency.py`
 
 ## Production visual strategy
 
 Across channels, LuxSync should use:
 
 - exact protected LuxSync logo artwork;
-- clean LuxSync icons and ornaments;
+- faithful approved metallic LuxSync artwork when brand fidelity is intended;
+- clean semantic vectors where a simpler scalable UI primitive is technically preferable;
 - Slate Navy and Dark Suede architectural fields;
 - Pale Driftwood copy;
 - Dusty Steel intelligent-light states;
