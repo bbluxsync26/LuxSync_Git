@@ -1,0 +1,19 @@
+<!-- LuxSync live product/category card template. Populate only with validated live data. -->
+<article class="lux-product-card" data-accent="{{accent}}">
+  <div class="lux-product-card__media">
+    <img src="{{image_url}}" alt="{{image_alt}}">
+  </div>
+
+  <div class="lux-product-card__eyebrow">{{eyebrow}}</div>
+  <h3 class="lux-product-card__title">{{title}}</h3>
+  <p class="lux-product-card__summary">{{summary}}</p>
+
+  <ul class="lux-product-card__meta" aria-label="{{meta_label}}">
+    {{feature_items}}
+  </ul>
+
+  <div class="lux-product-card__footer">
+    <span class="lux-product-card__price">{{validated_price}}</span>
+    <button class="lux-product-card__cta" type="button">{{cta_label}}</button>
+  </div>
+</article>
