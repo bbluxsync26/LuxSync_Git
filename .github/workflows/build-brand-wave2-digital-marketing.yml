@@ -8,6 +8,7 @@ on:
       - '.github/workflows/build-brand-wave2-digital-marketing.yml'
       - 'scripts/build-wave2-digital-marketing.py'
       - 'scripts/reconcile-wave2-digital-marketing-qa.py'
+      - 'scripts/reconcile-wave2-governance.py'
       - 'brand/templates/digital-marketing/**'
       - 'brand/audit/wave2-digital-marketing-qa-approval.json'
       - 'brand/assets/logos/png/**'
@@ -41,6 +42,9 @@ jobs:
       - name: Reconcile reviewed Wave 2 visual QA
         run: python scripts/reconcile-wave2-digital-marketing-qa.py
 
+      - name: Reconcile Wave 2 governance and discovery
+        run: python scripts/reconcile-wave2-governance.py
+
       - name: Upload Wave 2 QA preview
         uses: actions/upload-artifact@v4
         with:
@@ -49,7 +53,7 @@ jobs:
           if-no-files-found: error
           retention-days: 1
 
-      - name: Commit generated Wave 2 assets and manifest
+      - name: Commit generated Wave 2 assets, manifest and governance
         shell: bash
         run: |
           if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
@@ -61,7 +65,12 @@ jobs:
           git add brand/masters/marketing-art/wave2 \
                   brand/exports/digital/marketing \
                   brand/audit/qa/wave2-digital-marketing.jpg \
-                  brand/manifests/wave2-digital-marketing-manifest.json
+                  brand/manifests/wave2-digital-marketing-manifest.json \
+                  brand/manifests/omnichannel-brand-manifest.json \
+                  brand/README.md \
+                  docs/production-asset-library.md \
+                  docs/master-catalog.md \
+                  brand/audit/brand-build-report.md
           git commit -m "Generate validated Wave 2 digital marketing kit [skip ci]"
           git fetch origin "${GITHUB_REF_NAME}"
           git rebase "origin/${GITHUB_REF_NAME}"
