@@ -7,7 +7,9 @@ on:
     paths:
       - '.github/workflows/build-brand-wave3-print-physical.yml'
       - 'scripts/build-wave3-print-physical.py'
+      - 'scripts/reconcile-wave3-print-physical-qa.py'
       - 'brand/templates/print-physical/**'
+      - 'brand/audit/wave3-print-physical-qa-approval.json'
       - 'brand/assets/logos/png/**'
       - 'brand/assets/dividers/png/**'
   workflow_dispatch:
@@ -35,6 +37,9 @@ jobs:
 
       - name: Build Wave 3 print and physical kit
         run: python scripts/build-wave3-print-physical.py
+
+      - name: Reconcile reviewed Wave 3 visual/PDF QA
+        run: python scripts/reconcile-wave3-print-physical-qa.py
 
       - name: Upload Wave 3 QA preview
         uses: actions/upload-artifact@v4
@@ -67,7 +72,7 @@ jobs:
                   brand/exports/print/wave3 \
                   brand/audit/qa/wave3-print-physical.jpg \
                   brand/manifests/wave3-print-physical-manifest.json
-          git commit -m "Generate Wave 3 print and physical kit [skip ci]"
+          git commit -m "Generate validated Wave 3 print and physical kit [skip ci]"
           git fetch origin "${GITHUB_REF_NAME}"
           git rebase "origin/${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
