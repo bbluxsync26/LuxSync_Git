@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "brand": "LuxSync",
   "prompt": "PR-BRAND-001",
   "wave": "wave2",
@@ -9,8 +9,9 @@
   "official_slogan": "Where Luxury Lives Intelligently",
   "template_spec": {
     "path": "brand/templates/digital-marketing/template-specs.json",
-    "sha256": "21e88a35eb09cee698e69644b9e6498295749fa3afcb12d9f0ee80db32cd19c9"
+    "sha256": "0957dc4e35948047e87e7ba5b1f9ce70b1af213c0afeaa98f13a21287b16fcd8"
   },
+  "ornament_policy": "Use the clean transparent validated divider delivery layer for new freeform compositions so edges composite seamlessly. Preserve the faithful board-derived ornament crops separately for exact approved-board reproduction contexts; do not alter or downgrade those masters.",
   "live_templates": [
     {
       "id": "email-signature",
@@ -56,17 +57,19 @@
           59,
           194,
           194
-        ]
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
       },
       "ornament_source": {
-        "path": "brand/exports/digital/approved/dividers/png/corner-steel-rose-star.png",
-        "sha256": "4245ce5da856e556204483e25fffcca12fa76217ddca69f9a5d2f289e12344ce",
+        "path": "brand/assets/dividers/png/corner-steel.png",
+        "sha256": "e7d68427576abc5b2429815dd3db7343f432dec23607aea31b413409d588ae4b",
         "placement": [
           59,
-          860,
-          216,
-          161
-        ]
+          998,
+          184,
+          23
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
       },
       "format_policy": {
         "png": "lossless master/delivery",
@@ -76,18 +79,18 @@
       "files": {
         "master_png": {
           "path": "brand/masters/marketing-art/wave2/social-square-editorial.png",
-          "bytes": 140942,
-          "sha256": "d773845c1192e126458ba1ce44390dddd954ff5fd49b1437b0c6d10e47afe3c7"
+          "bytes": 94126,
+          "sha256": "01b568ed7289e9f25b83a5e78871c9177341fc3389fc5cc9bb87cdac03d36855"
         },
         "png": {
           "path": "brand/exports/digital/marketing/social/png/social-square-editorial.png",
-          "bytes": 140942,
-          "sha256": "d773845c1192e126458ba1ce44390dddd954ff5fd49b1437b0c6d10e47afe3c7"
+          "bytes": 94126,
+          "sha256": "01b568ed7289e9f25b83a5e78871c9177341fc3389fc5cc9bb87cdac03d36855"
         },
         "webp": {
           "path": "brand/exports/digital/marketing/social/webp/social-square-editorial.webp",
-          "bytes": 82120,
-          "sha256": "ba56864abbed18a26512a4db4856e1afc620adc9fa41f7c58e376cb313390298",
+          "bytes": 52854,
+          "sha256": "217083cb0d02fb7957dae1c7e00fc53d6304a55bc57a8489713c8c8754605e50",
           "lossless": true
         }
       },
@@ -116,17 +119,19 @@
           1125,
           454,
           151
-        ]
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
       },
       "ornament_source": {
-        "path": "brand/exports/digital/approved/dividers/png/orbit-dual.png",
-        "sha256": "35802894f0e4c284a3cf14513061658d184bfc34fcc34ba90ead80e48c260298",
+        "path": "brand/assets/dividers/png/orbit-stroke-steel.png",
+        "sha256": "91fb6983ecaebb1c0ae339337c4eb30b7ddf047f9a66e6780c69379c4a9b6a62",
         "placement": [
-          697,
+          773,
           74,
-          324,
-          136
-        ]
+          248,
+          31
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
       },
       "format_policy": {
         "png": "lossless master/delivery",
@@ -136,18 +141,18 @@
       "files": {
         "master_png": {
           "path": "brand/masters/marketing-art/wave2/social-portrait-editorial.png",
-          "bytes": 197498,
-          "sha256": "496bf1ff9af344a0ae77bdc5b3c258acf7a5c4b7c341e2d24b31201642202583"
+          "bytes": 124984,
+          "sha256": "381d75ce39baa8032f635150e92bd70093580ddfb445f8df59c902257df6d3d8"
         },
         "png": {
           "path": "brand/exports/digital/marketing/social/png/social-portrait-editorial.png",
-          "bytes": 197498,
-          "sha256": "496bf1ff9af344a0ae77bdc5b3c258acf7a5c4b7c341e2d24b31201642202583"
+          "bytes": 124984,
+          "sha256": "381d75ce39baa8032f635150e92bd70093580ddfb445f8df59c902257df6d3d8"
         },
         "webp": {
           "path": "brand/exports/digital/marketing/social/webp/social-portrait-editorial.webp",
-          "bytes": 118102,
-          "sha256": "07f5495c4238467a7e6d2210963131c9c25b9b3b6f6381b6659f352768e28873",
+          "bytes": 75818,
+          "sha256": "7a9dba9b6ef5bbc2f10b455181b2508893a00c385739516f79ba92d0fd90d608",
           "lossless": true
         }
       },
@@ -176,17 +181,19 @@
           106,
           216,
           216
-        ]
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
       },
       "ornament_source": {
-        "path": "brand/exports/digital/approved/dividers/png/corner-double-arc-rose.png",
-        "sha256": "2cab051f665765c16c621828481b122760205906eb78b5ae6dfa8f3de767f12d",
+        "path": "brand/assets/dividers/png/corner-rose.png",
+        "sha256": "8f801d962a9bee63467208e3c39547a38aa2cf782f92239fe749f33090849bba",
         "placement": [
-          805,
-          1653,
-          216,
-          161
-        ]
+          837,
+          1791,
+          184,
+          23
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
       },
       "format_policy": {
         "png": "lossless master/delivery",
@@ -196,18 +203,18 @@
       "files": {
         "master_png": {
           "path": "brand/masters/marketing-art/wave2/social-story-editorial.png",
-          "bytes": 183763,
-          "sha256": "4f538db22a738d82aa561ed7633e17b9ff2d1fe7e5de8366c0e8789676f5e67f"
+          "bytes": 118523,
+          "sha256": "06ffbca82442438603823e5bb1f6677b47a6763aceb3fce87b96129bb334315b"
         },
         "png": {
           "path": "brand/exports/digital/marketing/social/png/social-story-editorial.png",
-          "bytes": 183763,
-          "sha256": "4f538db22a738d82aa561ed7633e17b9ff2d1fe7e5de8366c0e8789676f5e67f"
+          "bytes": 118523,
+          "sha256": "06ffbca82442438603823e5bb1f6677b47a6763aceb3fce87b96129bb334315b"
         },
         "webp": {
           "path": "brand/exports/digital/marketing/social/webp/social-story-editorial.webp",
-          "bytes": 103982,
-          "sha256": "609b6f4c6796723dead6de6f9890bd8a0057c5a07ba7fd998396c0511fa07e8a",
+          "bytes": 66218,
+          "sha256": "a6a691105ebb04319ecd3b731e8803e11f71e11c36e601147001d9fc1dc890f6",
           "lossless": true
         }
       },
@@ -236,17 +243,19 @@
           457,
           408,
           136
-        ]
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
       },
       "ornament_source": {
-        "path": "brand/exports/digital/approved/dividers/png/horizontal-rose-spark.png",
-        "sha256": "f196fa46ce888815a7276c02a18ef0e9b21de3224e01d0948d8e6718d1103fe2",
+        "path": "brand/assets/dividers/png/divider-rose.png",
+        "sha256": "967536183268da2ef62c838220f57b1882e524c6608ff3346b2710a6c9a08dfa",
         "placement": [
-          798,
+          774,
           35,
-          336,
-          35
-        ]
+          360,
+          45
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
       },
       "format_policy": {
         "png": "lossless master/delivery",
@@ -256,18 +265,18 @@
       "files": {
         "master_png": {
           "path": "brand/masters/marketing-art/wave2/social-landscape-editorial.png",
-          "bytes": 119536,
-          "sha256": "89d1711fb5fd1f1bfbffa869603078957c8894a28b020c22df39869de736dad3"
+          "bytes": 96057,
+          "sha256": "ae133f7c49518c211ff8bb7f361c92fd28db71ae9f14a009ed768b5cc957aed2"
         },
         "png": {
           "path": "brand/exports/digital/marketing/social/png/social-landscape-editorial.png",
-          "bytes": 119536,
-          "sha256": "89d1711fb5fd1f1bfbffa869603078957c8894a28b020c22df39869de736dad3"
+          "bytes": 96057,
+          "sha256": "ae133f7c49518c211ff8bb7f361c92fd28db71ae9f14a009ed768b5cc957aed2"
         },
         "webp": {
           "path": "brand/exports/digital/marketing/social/webp/social-landscape-editorial.webp",
-          "bytes": 73256,
-          "sha256": "671f1ef9dbba20d5faec62a04052105f727f5658bdc03dd868d0bbe32190811e",
+          "bytes": 57406,
+          "sha256": "cbce266a1b8de1121e535d4306b31072649b13c8b41b859d74f27735bc1476f9",
           "lossless": true
         }
       },
@@ -296,17 +305,19 @@
           59,
           538,
           179
-        ]
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
       },
       "ornament_source": {
-        "path": "brand/exports/digital/approved/dividers/png/orbit-dual.png",
-        "sha256": "35802894f0e4c284a3cf14513061658d184bfc34fcc34ba90ead80e48c260298",
+        "path": "brand/assets/dividers/png/orbit-stroke-steel.png",
+        "sha256": "91fb6983ecaebb1c0ae339337c4eb30b7ddf047f9a66e6780c69379c4a9b6a62",
         "placement": [
-          1238,
-          418,
-          576,
-          243
-        ]
+          1372,
+          512,
+          442,
+          55
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
       },
       "format_policy": {
         "png": "lossless master/delivery",
@@ -316,18 +327,18 @@
       "files": {
         "master_png": {
           "path": "brand/masters/marketing-art/wave2/presentation-title-frame.png",
-          "bytes": 292359,
-          "sha256": "e23b96dc33e806b175c4b4bae80648ffd5af9ce0ae44f31d7994a7928617fefe"
+          "bytes": 172293,
+          "sha256": "1d08b2b5bbfb1b8f287a90942799aa9b556e5901a5005ae30e39eef488171b7b"
         },
         "png": {
           "path": "brand/exports/digital/marketing/presentation/png/presentation-title-frame.png",
-          "bytes": 292359,
-          "sha256": "e23b96dc33e806b175c4b4bae80648ffd5af9ce0ae44f31d7994a7928617fefe"
+          "bytes": 172293,
+          "sha256": "1d08b2b5bbfb1b8f287a90942799aa9b556e5901a5005ae30e39eef488171b7b"
         },
         "webp": {
           "path": "brand/exports/digital/marketing/presentation/webp/presentation-title-frame.webp",
-          "bytes": 179558,
-          "sha256": "edbc79766090f0574c0af0fed58bfd6270d49e0c9dcb985c466ab2af7a2508c8",
+          "bytes": 100614,
+          "sha256": "ce50815f60c82f350a41637aca5a62a4fbbb07edddebd619b639f4ed3f449c52",
           "lossless": true
         }
       },
@@ -356,17 +367,19 @@
           367,
           346,
           346
-        ]
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
       },
       "ornament_source": {
-        "path": "brand/exports/digital/approved/dividers/png/horizontal-steel-star.png",
-        "sha256": "7f5311917a9b16fdd9373da4549c6ac47c5b0865fa6263e9880e394899914cc5",
+        "path": "brand/assets/dividers/png/divider-steel.png",
+        "sha256": "af7eadaddc1ebb738ec6020a2de0abd0966a96f4c1b704d0878b7cf048d77e91",
         "placement": [
           106,
-          948,
-          538,
-          73
-        ]
+          949,
+          576,
+          72
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
       },
       "format_policy": {
         "png": "lossless master/delivery",
@@ -376,18 +389,18 @@
       "files": {
         "master_png": {
           "path": "brand/masters/marketing-art/wave2/presentation-section-frame.png",
-          "bytes": 245542,
-          "sha256": "228f5c6c5245673df14e4ac95a8ef3cd444cd2516188073fcb6ffef5d7897ba5"
+          "bytes": 183113,
+          "sha256": "92922db67578004e16ca5658acd342560c56e48d6cfef7207d71d5b91065f4ed"
         },
         "png": {
           "path": "brand/exports/digital/marketing/presentation/png/presentation-section-frame.png",
-          "bytes": 245542,
-          "sha256": "228f5c6c5245673df14e4ac95a8ef3cd444cd2516188073fcb6ffef5d7897ba5"
+          "bytes": 183113,
+          "sha256": "92922db67578004e16ca5658acd342560c56e48d6cfef7207d71d5b91065f4ed"
         },
         "webp": {
           "path": "brand/exports/digital/marketing/presentation/webp/presentation-section-frame.webp",
-          "bytes": 141108,
-          "sha256": "84a2bbabc8e3a2887e263d40ee2dc2d09bf9bc79cd63f7c5626262ea8961320c",
+          "bytes": 103826,
+          "sha256": "cc09fde9a4dd7e7136a3912a83cf4ae310a499b21182f587134c3089ded84c1b",
           "lossless": true
         }
       },
@@ -416,17 +429,19 @@
           690,
           480,
           160
-        ]
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
       },
       "ornament_source": {
-        "path": "brand/exports/digital/approved/dividers/png/badge-underline-rose-diamond.png",
-        "sha256": "9ba9f28f1d1242af30e044763159484f60f4a1a693deb9fe06e750aae9b223b6",
+        "path": "brand/assets/dividers/png/badge-underline-rose.png",
+        "sha256": "2dc6c7368e9372fa81ebf15eb366d8ddc803dc06b20efb906a41b8d3845cccbb",
         "placement": [
           88,
           50,
-          448,
-          47
-        ]
+          352,
+          44
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
       },
       "format_policy": {
         "png": "lossless master/delivery",
@@ -436,18 +451,18 @@
       "files": {
         "master_png": {
           "path": "brand/masters/marketing-art/wave2/campaign-landscape-frame.png",
-          "bytes": 172990,
-          "sha256": "329315bbceb892c6677c92ac4606699e041cd35408d2edddfb75dd8a74756fe3"
+          "bytes": 131348,
+          "sha256": "55997aeb3ddac42294171f4d0815568e52c218ebdfcb680d83afcb5688dc8136"
         },
         "png": {
           "path": "brand/exports/digital/marketing/campaign/png/campaign-landscape-frame.png",
-          "bytes": 172990,
-          "sha256": "329315bbceb892c6677c92ac4606699e041cd35408d2edddfb75dd8a74756fe3"
+          "bytes": 131348,
+          "sha256": "55997aeb3ddac42294171f4d0815568e52c218ebdfcb680d83afcb5688dc8136"
         },
         "webp": {
           "path": "brand/exports/digital/marketing/campaign/webp/campaign-landscape-frame.webp",
-          "bytes": 103852,
-          "sha256": "058af7c5a8e4feab6d73491aff52d90198a14034feedb59fbb4bae3b8ad8ef73",
+          "bytes": 78780,
+          "sha256": "d7cbbbf0ee1729cdb8b400b942860697f56aa9f7c508b5e0de5b3eab96e5ed1a",
           "lossless": true
         }
       },
@@ -476,17 +491,19 @@
           59,
           184,
           184
-        ]
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
       },
       "ornament_source": {
-        "path": "brand/exports/digital/approved/dividers/png/sparkle-divider-soft.png",
-        "sha256": "27e29e88b82dffbcd193cc716879c8cb1b1815c4e67696b04d6d341a346b8ad5",
+        "path": "brand/assets/dividers/png/divider-spark.png",
+        "sha256": "de5c7b3f2a7d8f38d2dcf289b8c49bcff23d87786b2c91a686986f1be969ed2c",
         "placement": [
           59,
-          982,
-          302,
-          39
-        ]
+          981,
+          324,
+          40
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
       },
       "format_policy": {
         "png": "lossless master/delivery",
@@ -496,18 +513,18 @@
       "files": {
         "master_png": {
           "path": "brand/masters/marketing-art/wave2/campaign-square-frame.png",
-          "bytes": 122965,
-          "sha256": "42894b93349296ce422083891d1d2a830b9474bedba047a7551fea8fbd5f7040"
+          "bytes": 91498,
+          "sha256": "17ce7af08e8193d0b34bd640f733980bace6ccecc5d14a8c522dacd41e82aa77"
         },
         "png": {
           "path": "brand/exports/digital/marketing/campaign/png/campaign-square-frame.png",
-          "bytes": 122965,
-          "sha256": "42894b93349296ce422083891d1d2a830b9474bedba047a7551fea8fbd5f7040"
+          "bytes": 91498,
+          "sha256": "17ce7af08e8193d0b34bd640f733980bace6ccecc5d14a8c522dacd41e82aa77"
         },
         "webp": {
           "path": "brand/exports/digital/marketing/campaign/webp/campaign-square-frame.webp",
-          "bytes": 69872,
-          "sha256": "7fd4aaca3d95ae040491f0292ff38f197759291adf5cc9072f55a7251c8c0895",
+          "bytes": 51030,
+          "sha256": "61751476da5efc6d8c5ad048c58cd54fe740abc19267f167ef4348340678f09b",
           "lossless": true
         }
       },
@@ -536,7 +553,8 @@
           1657,
           384,
           384
-        ]
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
       },
       "ornament_source": null,
       "format_policy": {
@@ -587,17 +605,19 @@
           1753,
           768,
           256
-        ]
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
       },
       "ornament_source": {
-        "path": "brand/exports/digital/approved/dividers/png/horizontal-steel-line.png",
-        "sha256": "0d788cdfc036c0a5e29f10bcf23de65c47acf86d19515970fa61824923c0f2ab",
+        "path": "brand/assets/dividers/png/divider-steel.png",
+        "sha256": "af7eadaddc1ebb738ec6020a2de0abd0966a96f4c1b704d0878b7cf048d77e91",
         "placement": [
           960,
-          1872,
-          845,
-          72
-        ]
+          1800,
+          1152,
+          144
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
       },
       "format_policy": {
         "png": "lossless master/delivery",
@@ -607,18 +627,18 @@
       "files": {
         "master_png": {
           "path": "brand/masters/marketing-art/wave2/video-lower-third-overlay.png",
-          "bytes": 275195,
-          "sha256": "997f837e68abdd66a26e0a2e7eda5d7b61441520a20338541d819dd27ea4f19f"
+          "bytes": 238256,
+          "sha256": "7506e6db2a30317e07fb04fc9a1114bf5cb25cf33e1df9cc59daf77cc14d42ac"
         },
         "png": {
           "path": "brand/exports/digital/marketing/video/png/video-lower-third-overlay.png",
-          "bytes": 275195,
-          "sha256": "997f837e68abdd66a26e0a2e7eda5d7b61441520a20338541d819dd27ea4f19f"
+          "bytes": 238256,
+          "sha256": "7506e6db2a30317e07fb04fc9a1114bf5cb25cf33e1df9cc59daf77cc14d42ac"
         },
         "webp": {
           "path": "brand/exports/digital/marketing/video/webp/video-lower-third-overlay.webp",
-          "bytes": 172056,
-          "sha256": "0cfabd9b8559c2cb63d9b19a4157113418a446eee97fe5e84e91676b3a727ed8",
+          "bytes": 147206,
+          "sha256": "0cf493f0aa6ac187ee8c3ca9fb7bec4f9d14ed174da2301642c90473454fb9b4",
           "lossless": true
         }
       },
@@ -627,13 +647,14 @@
   ],
   "qa": {
     "contact_sheet": "brand/audit/qa/wave2-digital-marketing.jpg",
-    "sha256": "eadaa8f068849f76955785d480287af49724b5135d0426ba05a88cbbc38049ba",
+    "sha256": "c22d77b4b92e8ec0d02ad06d9ed626e6dca24e66171a258977327ede2f7df32e",
     "status": "generated-pending-manual-review"
   },
   "publication_guardrails": [
     "static frames contain no mutable campaign copy or commerce facts",
     "conceptual approval-board product renders are not published as live products",
     "protected LuxSync logo source pixels are composited without recoloring, redrawing or retyping",
+    "clean transparent validated dividers are used for seamless new compositions while faithful board-derived crops remain preserved",
     "product-card and email-signature content remains live/template-driven",
     "video assets are static overlays only, not motion deliverables"
   ]
