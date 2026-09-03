@@ -44,6 +44,16 @@ jobs:
           if-no-files-found: error
           retention-days: 1
 
+      - name: Upload Wave 3 print-source QA bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: wave3-print-source-bundle
+          path: |
+            brand/exports/print/wave3/**
+            brand/manifests/wave3-print-physical-manifest.json
+          if-no-files-found: error
+          retention-days: 1
+
       - name: Commit generated Wave 3 assets and manifest
         shell: bash
         run: |
