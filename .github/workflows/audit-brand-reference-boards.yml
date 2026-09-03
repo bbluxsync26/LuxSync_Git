@@ -8,6 +8,7 @@ on:
       - '.github/workflows/audit-brand-reference-boards.yml'
       - 'scripts/build-brand-board-audit-previews.py'
       - 'brand/reference-boards/**'
+      - 'brand/audit/qa/approved-*-board-derived.jpg'
   workflow_dispatch:
 
 permissions:
@@ -31,7 +32,7 @@ jobs:
       - name: Build reference-board previews
         run: python scripts/build-brand-board-audit-previews.py
 
-      - name: Upload board and current-asset QA previews
+      - name: Upload board and asset QA previews
         uses: actions/upload-artifact@v4
         with:
           name: brand-board-audit-previews
@@ -40,5 +41,7 @@ jobs:
             brand/audit/tmp-board-previews/
             brand/assets/qa/icons-contact-sheet.jpg
             brand/assets/qa/dividers-contact-sheet.jpg
+            brand/audit/qa/approved-icons-board-derived.jpg
+            brand/audit/qa/approved-dividers-board-derived.jpg
           if-no-files-found: error
           retention-days: 1
