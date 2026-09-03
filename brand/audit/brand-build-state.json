@@ -1,18 +1,18 @@
 {
-  "schema_version": "1.3",
+  "schema_version": "1.4",
   "prompt_id": "PR-BRAND-001",
   "brand": "LuxSync",
   "execution_mode": "promptless-self-healing",
   "source_branch_at_start": "master",
-  "audited_master_commit": "e15bfa940599a0b82ac36db713437b210e714c8c",
-  "working_branch": "feature/brand-wave2-digital-marketing",
-  "overall_state": "wave2-pr-validated-ready-to-merge",
-  "current_phase": "wave2",
+  "audited_master_commit": "fdca34fb89a1d6c3b7805c73f26a2f23bbc90a78",
+  "working_branch": "feature/brand-wave3-print-physical",
+  "overall_state": "wave3-in-progress",
+  "current_phase": "wave3",
   "last_validation": {
     "workflow": "Validate LuxSync repository consistency",
-    "run_id": 33707238899,
+    "run_id": 33707336289,
     "result": "success",
-    "validated_head_before_state_seal": "ec24f32575cf19d8a20de8c5e38582b425179d4d"
+    "validated_head": "fdca34fb89a1d6c3b7805c73f26a2f23bbc90a78"
   },
   "phases": {
     "phase0": {
@@ -35,49 +35,46 @@
     },
     "wave2": {
       "name": "Broader Digital and Marketing Library",
-      "state": "pr_validated_ready_to_merge",
-      "pr": 31,
-      "pr_validation_run": 33707238899,
+      "state": "complete",
+      "validation": {
+        "pr": 31,
+        "pr_validation_run": 33707291729,
+        "post_merge_validation_run": 33707336289,
+        "merged_commit": "fdca34fb89a1d6c3b7805c73f26a2f23bbc90a78",
+        "production_candidate_run": 33707336193,
+        "godaddy_publish": "skipped"
+      },
       "manifest": "brand/manifests/wave2-digital-marketing-manifest.json",
       "manifest_status": "qa-passed",
-      "latest_successful_build_run": 33707075002,
-      "completed_checks": [
-        "four social-ready text-safe static composition frames generated",
-        "two presentation source frames generated",
-        "two reusable campaign source frames generated",
-        "two 4K static video-overlay source frames generated with transparency",
-        "live placeholder-driven email signature template created",
-        "live semantic product-card HTML/CSS treatment created with no baked product or price facts",
-        "exact approved LuxSync logo artwork composited without redraw, recolor or retyping",
-        "first visual QA pass identified rectangular approval-board crop seams around some ornaments",
-        "faithful board-derived ornament masters preserved unchanged while new compositions were repaired to use clean transparent validated divider assets",
-        "second contact-sheet visual QA passed for all ten static compositions",
-        "manual QA approval bound to exact contact-sheet SHA256",
-        "Wave 2 manifest reconciled to qa-passed only when reviewed contact-sheet hash matches",
-        "PNG and lossless WebP exports generated from governed raster composition masters",
-        "SVG intentionally omitted for raster compositions; template-spec JSON remains editable governed source",
-        "deterministic Wave 2 builder made concurrency-safe",
-        "Wave 2 validator wired into standard repository CI",
-        "standard CI installs Pillow for pixel-level delivery validation",
-        "omnichannel manifest, brand README, production asset guide, master catalog and audit report reconciled automatically",
-        "PR #31 full repository validation passed"
-      ],
-      "guardrails": [
-        "use exact protected LuxSync logo artwork only",
-        "keep mutable copy and commerce facts live/template-driven",
-        "do not publish conceptual approval-board product renders or example prices as live commerce",
-        "video outputs are motion-ready static overlays, not fabricated animation deliverables",
-        "faithful approval-board-derived ornament masters remain preserved separately from clean transparent composition ornaments"
-      ],
-      "known_gaps": [
-        "merge PR #31",
-        "verify post-merge master validation and production-candidate build",
-        "Wave 3 print and physical system remains intentionally pending"
-      ]
+      "known_gaps": []
     },
     "wave3": {
       "name": "Print and Physical Brand System",
-      "state": "not_started"
+      "state": "in_progress",
+      "planned_families": [
+        "business-card templates",
+        "letterhead and stationery templates",
+        "envelope and note-card templates",
+        "invoice/header and document-cover templates",
+        "print-collateral source frames",
+        "signage placement specifications",
+        "apparel and merchandise placement specifications",
+        "embroidery, engraving, vinyl, screen-print and foil production guidance",
+        "high-resolution print PNG, TIFF and PDF outputs where technically justified"
+      ],
+      "guardrails": [
+        "use exact protected LuxSync logo artwork only",
+        "preserve approval-board stationery as composition evidence rather than copying example identity/contact data",
+        "keep names, titles, addresses, phone numbers, email addresses, invoice details and other mutable information live or placeholder-driven",
+        "do not fabricate vendor-specific spot colors, Pantone numbers, thread colors, foil stocks, substrate tolerances or finishing specifications",
+        "do not redraw or generatively reconstruct protected logos for vector or specialty-production convenience",
+        "specialty-production variants require deterministic technical adaptation that preserves the protected mark silhouette and must be clearly labeled"
+      ],
+      "known_gaps": [
+        "Wave 3 governed print/physical template specification not yet built",
+        "Wave 3 high-resolution outputs and physical-production guidance not yet validated",
+        "Wave 3 visual QA and repository CI integration not yet complete"
+      ]
     }
   },
   "idempotence": {
@@ -111,8 +108,8 @@
     "The 58 faithful board-derived assets are raster-origin because the approved boards are the current visual authority; their SVGs are fidelity containers rather than newly redrawn editable vectors.",
     "Do not generatively redraw approved LuxSync artwork merely to obtain vector paths.",
     "Do not flatten mutable button, product, stationery, hero or UI copy into production assets when live/template implementation is appropriate.",
-    "Wave 2 static composition masters intentionally remain raster-origin; editable structure is retained in governed template specs and live HTML/CSS components."
+    "Wave 3 physical-production files must distinguish exact full-color protected-logo use from any separately governed specialty-production adaptation."
   ],
   "human_decision_required": false,
-  "next_checkpoint": "Verify the validation run triggered by this state-seal commit remains green, merge PR #31, verify post-merge master validation and production-candidate workflow, then mark Wave 2 complete and continue automatically into Wave 3."
+  "next_checkpoint": "Build the governed Wave 3 print/physical template specification, generate technically justified high-resolution outputs and production guides, visually QA the stationery/contact-sheet layer, wire validation into repository CI, then open the Wave 3 PR."
 }
