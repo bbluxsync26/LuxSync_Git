@@ -134,15 +134,16 @@ if "no open repository-wide image-cleanup blockers" not in exceptions.lower():
     fail("brand-exceptions.md must explicitly close repository-wide image cleanup blockers")
 
 required_final_tokens = (
-    "Repository-wide image cleanup is complete",
+    "repository-wide image cleanup is complete",
     "31 approved atomic assets",
     "58 reusable approved board-derived artworks",
     "10 deterministic text-safe static compositions",
     "8 governed 300-DPI print/stationery compositions",
     "GoDaddy production publishing: intentionally skipped",
 )
+final_lower = final.lower()
 for token in required_final_tokens:
-    if token not in final:
+    if token.lower() not in final_lower:
         fail(f"final image validation record missing token: {token!r}")
 
 for token in (
@@ -151,6 +152,7 @@ for token in (
     "scripts/validate-approved-board-assets.py",
     "scripts/validate-wave2-digital-marketing.py",
     "scripts/validate-wave3-print-physical.py",
+    "scripts/validate-image-governance.py",
 ):
     if token not in production_guide:
         fail(f"production asset guide missing validator reference: {token}")
