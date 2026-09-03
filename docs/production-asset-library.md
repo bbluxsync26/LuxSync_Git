@@ -142,7 +142,12 @@ Automated validation:
 - `scripts/validate-production-brand.py`
 - `scripts/validate-brand-derivatives.py`
 - `scripts/validate-approved-board-assets.py`
+- `scripts/validate-wave2-digital-marketing.py`
+- `scripts/validate-wave3-print-physical.py`
+- `scripts/validate-image-governance.py`
 - `scripts/validate-repository-consistency.py`
+
+The standard repository validation workflow executes this stack before the production website build and site tests. The final closeout record is `brand/audit/image-cleanup-final-validation.md`.
 
 ## Production visual strategy
 
