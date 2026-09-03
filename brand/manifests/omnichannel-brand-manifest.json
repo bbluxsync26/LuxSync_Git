@@ -1,7 +1,7 @@
 {
-  "version": "1.1-wave1",
+  "version": "1.2-wave1-board-audit",
   "brand": "LuxSync",
-  "status": "wave1-in-progress",
+  "status": "wave1-board-derived-assets-generated-pending-production-promotion",
   "audited_commit": "c568a8092724e1f1328a7b2c3707af3c31ed83ce",
   "official_slogan": "Where Luxury Lives Intelligently",
   "design_dna": "Plush Drift",
@@ -191,11 +191,11 @@
     }
   ],
   "known_omnichannel_gaps": [
-    "Element-level visual inventory of non-logo approval-board artwork is not yet committed.",
-    "Most validated atomic assets have digital SVG/PNG/WebP only and do not yet have justified PDF/EPS/TIFF/specialty production variants.",
-    "Stationery, merchandise, apparel, signage, email and broader marketing export families are not yet built as a complete omnichannel delivery package."
+    "Faithful board-derived Wave 1 icons/dividers must be deliberately promoted into the canonical production delivery mapping after final QA; the simplified legacy semantic layer remains in place until that controlled swap.",
+    "Stationery, merchandise, apparel, signage, email and broader marketing export families are not yet built as a complete omnichannel delivery package.",
+    "Print/specialty PDF/EPS/TIFF and one-color/embroidery/engraving variants remain Wave 3 work and must be technically justified per asset."
   ],
-  "next_checkpoint": "Wave 1 Checkpoint 1: visually inspect every element on brand/reference-boards, map each to an existing validated asset or a missing master, and create only missing faithful masters/justified derivatives. The account-access ambient digital derivative batch is complete and must be skipped unless its source or QA evidence changes.",
+  "next_checkpoint": "Wave 1 Checkpoint 2: validate the 58 faithful board-derived assets, update the canonical production asset mapping to use approved-board visuals where appropriate, and preserve template/reference-only families as live/template implementations rather than flattened screenshots.",
   "generated_derivative_batches": {
     "account-access-ambient": {
       "renderer": "browser-svg-to-raster",
@@ -324,5 +324,47 @@
       ]
     }
   },
-  "last_derivative_render_source_commit": "a7bf46d2a76a5f7a2f04c1bc4c4c900b221243f8"
+  "last_derivative_render_source_commit": "a7bf46d2a76a5f7a2f04c1bc4c4c900b221243f8",
+  "reference_board_visual_audit": {
+    "status": "complete",
+    "pixel_access": "full-resolution-private-audit-artifact",
+    "result": "Current semantic icon/divider layer is not a faithful visual match to the approved boards; faithful board-derived assets have been generated separately for controlled promotion.",
+    "approved_reusable_asset_count": 58,
+    "approved_icon_count": 16,
+    "approved_divider_accent_count": 42,
+    "generated_manifest": "brand/manifests/approved-board-asset-manifest.json",
+    "template_reference_only": [
+      {
+        "board": "brand/reference-boards/dividers_board.png",
+        "family": "section-separators",
+        "count": 4,
+        "reason": "Approved layout/template family contains placeholder SECTION text; preserve as reference/template rather than baking mutable text into production art."
+      },
+      {
+        "board": "brand/reference-boards/buttons_board.png",
+        "family": "buttons-and-cta-states",
+        "reason": "Approved semantic UI/component language; implement with live text and tokens, not flattened button screenshots."
+      },
+      {
+        "board": "brand/reference-boards/product_cards_board.png",
+        "family": "smart-home-category-cards",
+        "reason": "Approved marketing/composition direction; conceptual devices and mutable commerce content are not validated live catalog facts."
+      },
+      {
+        "board": "brand/reference-boards/stationery_board.png",
+        "family": "stationery-and-print-suite",
+        "reason": "Approved composition/template direction includes placeholder identity/contact data; rebuild as templates with real/live data in Wave 3."
+      },
+      {
+        "board": "brand/reference-boards/ui_controls_board.png",
+        "family": "ui-controls-and-product-meta",
+        "reason": "Approved semantic UI reference includes mutable or unsupported example claims; implement as live UI and validated data, not flattened production imagery."
+      },
+      {
+        "board": "brand/reference-boards/approved_brand_board.png",
+        "family": "hero-banner-examples",
+        "reason": "Approved composition direction contains baked example copy; preserve as reference and rebuild with current live copy/assets in Wave 2."
+      }
+    ]
+  }
 }

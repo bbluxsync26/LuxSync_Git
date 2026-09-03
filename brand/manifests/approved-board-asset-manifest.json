@@ -1,0 +1,2498 @@
+{
+  "schema_version": "1.0",
+  "brand": "LuxSync",
+  "source": "approved-reference-boards",
+  "status": "wave1-board-derived-assets-qa-passed",
+  "asset_count": 58,
+  "counts": {
+    "icons": 16,
+    "dividers": 42
+  },
+  "formats": [
+    "master-png",
+    "png",
+    "lossless-webp",
+    "svg-fidelity-container"
+  ],
+  "qa": {
+    "icons_contact_sheet": {
+      "path": "brand/audit/qa/approved-icons-board-derived.jpg",
+      "sha256": "2935fa6f4b8853d336afe09bf50f9f4ff1c22d38c4dc679e610f31e16cea57bf"
+    },
+    "dividers_contact_sheet": {
+      "path": "brand/audit/qa/approved-dividers-board-derived.jpg",
+      "sha256": "fa56aafb0291dd8ec2a5251765ee00db9edb3c9439a0470df5b0a80c89e78d55"
+    }
+  },
+  "template_reference_only": [
+    {
+      "board": "brand/reference-boards/dividers_board.png",
+      "family": "section-separators",
+      "count": 4,
+      "reason": "Approved layout/template family contains placeholder SECTION text; preserve as reference/template rather than baking mutable text into production art."
+    },
+    {
+      "board": "brand/reference-boards/buttons_board.png",
+      "family": "buttons-and-cta-states",
+      "reason": "Approved semantic UI/component language; implement with live text and tokens, not flattened button screenshots."
+    },
+    {
+      "board": "brand/reference-boards/product_cards_board.png",
+      "family": "smart-home-category-cards",
+      "reason": "Approved marketing/composition direction; conceptual devices and mutable commerce content are not validated live catalog facts."
+    },
+    {
+      "board": "brand/reference-boards/stationery_board.png",
+      "family": "stationery-and-print-suite",
+      "reason": "Approved composition/template direction includes placeholder identity/contact data; rebuild as templates with real/live data in Wave 3."
+    },
+    {
+      "board": "brand/reference-boards/ui_controls_board.png",
+      "family": "ui-controls-and-product-meta",
+      "reason": "Approved semantic UI reference includes mutable or unsupported example claims; implement as live UI and validated data, not flattened production imagery."
+    },
+    {
+      "board": "brand/reference-boards/approved_brand_board.png",
+      "family": "hero-banner-examples",
+      "reason": "Approved composition direction contains baked example copy; preserve as reference and rebuild with current live copy/assets in Wave 2."
+    }
+  ],
+  "assets": [
+    {
+      "id": "security-shield-check",
+      "category": "icons",
+      "subfamily": null,
+      "source_board": "brand/reference-boards/icons_board.png",
+      "source_board_sha256": "8ece513d5efd689626c69533ac57f83b490cdbdbc3d27a6d078074e363b7180c",
+      "crop_box": [
+        105,
+        180,
+        235,
+        355
+      ],
+      "width": 130,
+      "height": 175,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/icons/security-shield-check.png",
+          "bytes": 31448,
+          "sha256": "e6753df9ef423a5b102abbabe9f56a6a63508201233894fd8f248e96d4c89c0b"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/icons/png/security-shield-check.png",
+          "bytes": 31448,
+          "sha256": "e6753df9ef423a5b102abbabe9f56a6a63508201233894fd8f248e96d4c89c0b"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/icons/webp/security-shield-check.webp",
+          "bytes": 21890,
+          "sha256": "8de327bd34bafeb8813b6a63179229772ce17a74f555b4c18ab0d9c8f977d3a1"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/icons/svg/security-shield-check.svg",
+          "bytes": 42252,
+          "sha256": "85375d00396b5576c9aa22bed73bb96cf4786b7abb55468cc8aa90d5537bcd2a"
+        }
+      }
+    },
+    {
+      "id": "lighting-bulb",
+      "category": "icons",
+      "subfamily": null,
+      "source_board": "brand/reference-boards/icons_board.png",
+      "source_board_sha256": "8ece513d5efd689626c69533ac57f83b490cdbdbc3d27a6d078074e363b7180c",
+      "crop_box": [
+        345,
+        175,
+        525,
+        355
+      ],
+      "width": 180,
+      "height": 180,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/icons/lighting-bulb.png",
+          "bytes": 35527,
+          "sha256": "905490caccae1bd953249ae149437ef392e0ab1648c49fa5719bb749ea7e69fb"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/icons/png/lighting-bulb.png",
+          "bytes": 35527,
+          "sha256": "905490caccae1bd953249ae149437ef392e0ab1648c49fa5719bb749ea7e69fb"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/icons/webp/lighting-bulb.webp",
+          "bytes": 26910,
+          "sha256": "a175649bde2e99da808fea4ee4b5335a295a8c8f1ba4a879ebc00fa52cb3c5dc"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/icons/svg/lighting-bulb.svg",
+          "bytes": 47684,
+          "sha256": "c640121bc4dd79660a407366758671cbac07f265e5dcb98657593d0a11f0f4bb"
+        }
+      }
+    },
+    {
+      "id": "climate-thermostat",
+      "category": "icons",
+      "subfamily": null,
+      "source_board": "brand/reference-boards/icons_board.png",
+      "source_board_sha256": "8ece513d5efd689626c69533ac57f83b490cdbdbc3d27a6d078074e363b7180c",
+      "crop_box": [
+        625,
+        175,
+        815,
+        355
+      ],
+      "width": 190,
+      "height": 180,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/icons/climate-thermostat.png",
+          "bytes": 45420,
+          "sha256": "a72d68c5f1e337849b3527fb6624569e22e482f9244182a889b4a254f4f9ebce"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/icons/png/climate-thermostat.png",
+          "bytes": 45420,
+          "sha256": "a72d68c5f1e337849b3527fb6624569e22e482f9244182a889b4a254f4f9ebce"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/icons/webp/climate-thermostat.webp",
+          "bytes": 32792,
+          "sha256": "d47fd00774189cfce6e211984034f7666fe64376996d8f2309878af12e9b05e5"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/icons/svg/climate-thermostat.svg",
+          "bytes": 60877,
+          "sha256": "eaeb0d0949b4798664757b832fd0cd437f23de89042289835e3be5187dba40fc"
+        }
+      }
+    },
+    {
+      "id": "music-note",
+      "category": "icons",
+      "subfamily": null,
+      "source_board": "brand/reference-boards/icons_board.png",
+      "source_board_sha256": "8ece513d5efd689626c69533ac57f83b490cdbdbc3d27a6d078074e363b7180c",
+      "crop_box": [
+        890,
+        175,
+        1120,
+        355
+      ],
+      "width": 230,
+      "height": 180,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/icons/music-note.png",
+          "bytes": 42710,
+          "sha256": "807747d08005faeab06f06790dcafb0ee1e206e4d66295b9b6ea94ab8d57c73c"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/icons/png/music-note.png",
+          "bytes": 42710,
+          "sha256": "807747d08005faeab06f06790dcafb0ee1e206e4d66295b9b6ea94ab8d57c73c"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/icons/webp/music-note.webp",
+          "bytes": 31250,
+          "sha256": "7720f2194f931831b2721e30db0bf288204486121865a548302c8bb72623732d"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/icons/svg/music-note.svg",
+          "bytes": 57257,
+          "sha256": "82113e076edb2a3008426f505ef40a6d17091741beca06e7e6d6c2338f2242e3"
+        }
+      }
+    },
+    {
+      "id": "shades-window",
+      "category": "icons",
+      "subfamily": null,
+      "source_board": "brand/reference-boards/icons_board.png",
+      "source_board_sha256": "8ece513d5efd689626c69533ac57f83b490cdbdbc3d27a6d078074e363b7180c",
+      "crop_box": [
+        1170,
+        175,
+        1380,
+        355
+      ],
+      "width": 210,
+      "height": 180,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/icons/shades-window.png",
+          "bytes": 37651,
+          "sha256": "fababd7a0f83777c83c45d5b35cefde6843f09f132b46c0af89cae5c19533a1e"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/icons/png/shades-window.png",
+          "bytes": 37651,
+          "sha256": "fababd7a0f83777c83c45d5b35cefde6843f09f132b46c0af89cae5c19533a1e"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/icons/webp/shades-window.webp",
+          "bytes": 30486,
+          "sha256": "1a14949cd3cf00b2d114b33965e8c9cdf8a46326b816601fd9306b80527cbb29"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/icons/svg/shades-window.svg",
+          "bytes": 50516,
+          "sha256": "3168594177c2c20801926912ba80f865e122b3b3fe41c90800f927183effc2e3"
+        }
+      }
+    },
+    {
+      "id": "smart-lock",
+      "category": "icons",
+      "subfamily": null,
+      "source_board": "brand/reference-boards/icons_board.png",
+      "source_board_sha256": "8ece513d5efd689626c69533ac57f83b490cdbdbc3d27a6d078074e363b7180c",
+      "crop_box": [
+        135,
+        400,
+        250,
+        575
+      ],
+      "width": 115,
+      "height": 175,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/icons/smart-lock.png",
+          "bytes": 24254,
+          "sha256": "8f5eae5c7b5bbc5b47e9c5c6f5bff22c614229e81ec57713e44e79d68e971889"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/icons/png/smart-lock.png",
+          "bytes": 24254,
+          "sha256": "8f5eae5c7b5bbc5b47e9c5c6f5bff22c614229e81ec57713e44e79d68e971889"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/icons/webp/smart-lock.webp",
+          "bytes": 17906,
+          "sha256": "f0727685ccc910eea70a65db13b91a2727bad66abf89971f0a920d6f4bbd6a35"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/icons/svg/smart-lock.svg",
+          "bytes": 32649,
+          "sha256": "7a4eb8b72e0a8aab3a1a779b8ba2df98b0a2dc96cec1b4153446991838e762e4"
+        }
+      }
+    },
+    {
+      "id": "concierge-bell",
+      "category": "icons",
+      "subfamily": null,
+      "source_board": "brand/reference-boards/icons_board.png",
+      "source_board_sha256": "8ece513d5efd689626c69533ac57f83b490cdbdbc3d27a6d078074e363b7180c",
+      "crop_box": [
+        350,
+        400,
+        530,
+        575
+      ],
+      "width": 180,
+      "height": 175,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/icons/concierge-bell.png",
+          "bytes": 36154,
+          "sha256": "4fbb448cb82ef19673718311fb14aef1fd06e7c7553de5057c9dc7bb61d26708"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/icons/png/concierge-bell.png",
+          "bytes": 36154,
+          "sha256": "4fbb448cb82ef19673718311fb14aef1fd06e7c7553de5057c9dc7bb61d26708"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/icons/webp/concierge-bell.webp",
+          "bytes": 27116,
+          "sha256": "fa0111bb77d40ee86c8ba5385f1c99a50be1ebeb57309065029fc876b39f3459"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/icons/svg/concierge-bell.svg",
+          "bytes": 48521,
+          "sha256": "2a914ef7628c7362c1fe57a1ee405b9c0909a3e591c91f45524ef3857d3f67ee"
+        }
+      }
+    },
+    {
+      "id": "installation-tools",
+      "category": "icons",
+      "subfamily": null,
+      "source_board": "brand/reference-boards/icons_board.png",
+      "source_board_sha256": "8ece513d5efd689626c69533ac57f83b490cdbdbc3d27a6d078074e363b7180c",
+      "crop_box": [
+        615,
+        400,
+        825,
+        575
+      ],
+      "width": 210,
+      "height": 175,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/icons/installation-tools.png",
+          "bytes": 45962,
+          "sha256": "79f06e569ccb0f7b37880e78fbc5e4494573e9ccac0d0f79eb6db419a0d06c76"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/icons/png/installation-tools.png",
+          "bytes": 45962,
+          "sha256": "79f06e569ccb0f7b37880e78fbc5e4494573e9ccac0d0f79eb6db419a0d06c76"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/icons/webp/installation-tools.webp",
+          "bytes": 32298,
+          "sha256": "789df0ccb42564b2f1537d5dc5f6a159f63715d1bf449d31c9a45874ac5ce653"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/icons/svg/installation-tools.svg",
+          "bytes": 61601,
+          "sha256": "74df5a24df213b56f4f8d410ef15c69021175145bb837c585d8b5506e615139e"
+        }
+      }
+    },
+    {
+      "id": "support-headset",
+      "category": "icons",
+      "subfamily": null,
+      "source_board": "brand/reference-boards/icons_board.png",
+      "source_board_sha256": "8ece513d5efd689626c69533ac57f83b490cdbdbc3d27a6d078074e363b7180c",
+      "crop_box": [
+        900,
+        400,
+        1120,
+        575
+      ],
+      "width": 220,
+      "height": 175,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/icons/support-headset.png",
+          "bytes": 39813,
+          "sha256": "0cae38447cb794aae59861687dbca1c179bd6a2dc8252e0f2039c8aa2039e7e3"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/icons/png/support-headset.png",
+          "bytes": 39813,
+          "sha256": "0cae38447cb794aae59861687dbca1c179bd6a2dc8252e0f2039c8aa2039e7e3"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/icons/webp/support-headset.webp",
+          "bytes": 30310,
+          "sha256": "8b767ff1815d1aa0f39a02dc0f0787a4b1c11e6e2ca0bd74e3f42a515175e74b"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/icons/svg/support-headset.svg",
+          "bytes": 53398,
+          "sha256": "c928236093f2aa92b12c929979c896ca90af4cfd1f0095bceccf16546ec67a8a"
+        }
+      }
+    },
+    {
+      "id": "automation-home-gear",
+      "category": "icons",
+      "subfamily": null,
+      "source_board": "brand/reference-boards/icons_board.png",
+      "source_board_sha256": "8ece513d5efd689626c69533ac57f83b490cdbdbc3d27a6d078074e363b7180c",
+      "crop_box": [
+        1165,
+        400,
+        1380,
+        575
+      ],
+      "width": 215,
+      "height": 175,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/icons/automation-home-gear.png",
+          "bytes": 45949,
+          "sha256": "27f312c3d3995402e3c597693da4a90fb83ec9d7602bade19284a5bdbc38cadd"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/icons/png/automation-home-gear.png",
+          "bytes": 45949,
+          "sha256": "27f312c3d3995402e3c597693da4a90fb83ec9d7602bade19284a5bdbc38cadd"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/icons/webp/automation-home-gear.webp",
+          "bytes": 33260,
+          "sha256": "3ad12b131b29e68af03cf9f2092719237fd7cfaec2c2857e6f4d29fb5d0e41e0"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/icons/svg/automation-home-gear.svg",
+          "bytes": 61587,
+          "sha256": "bb41126dbe7178185bdc295d662a931e92780e44f64be13d9e457a8d3fc4b937"
+        }
+      }
+    },
+    {
+      "id": "energy-bolt",
+      "category": "icons",
+      "subfamily": null,
+      "source_board": "brand/reference-boards/icons_board.png",
+      "source_board_sha256": "8ece513d5efd689626c69533ac57f83b490cdbdbc3d27a6d078074e363b7180c",
+      "crop_box": [
+        100,
+        625,
+        250,
+        795
+      ],
+      "width": 150,
+      "height": 170,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/icons/energy-bolt.png",
+          "bytes": 35242,
+          "sha256": "0e0bc619f8e9b7fa532d93721a9b8932e099c6e522041cc11d19ca757acb52f5"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/icons/png/energy-bolt.png",
+          "bytes": 35242,
+          "sha256": "0e0bc619f8e9b7fa532d93721a9b8932e099c6e522041cc11d19ca757acb52f5"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/icons/webp/energy-bolt.webp",
+          "bytes": 25288,
+          "sha256": "b6e212d8df343fca5e250f4c054d6f37a2d76bf5c0eb52717261610c334d1fbd"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/icons/svg/energy-bolt.svg",
+          "bytes": 47302,
+          "sha256": "aa51f9acdc2e26b1aee26f8140f386c3e06bd9c30a03ceaf4cd9d2095ca82e3a"
+        }
+      }
+    },
+    {
+      "id": "camera",
+      "category": "icons",
+      "subfamily": null,
+      "source_board": "brand/reference-boards/icons_board.png",
+      "source_board_sha256": "8ece513d5efd689626c69533ac57f83b490cdbdbc3d27a6d078074e363b7180c",
+      "crop_box": [
+        340,
+        625,
+        530,
+        795
+      ],
+      "width": 190,
+      "height": 170,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/icons/camera.png",
+          "bytes": 39208,
+          "sha256": "3b97a948027fe6cb05a9c032038cf6ce01a71fbbef3f5a50ed76395c9f5651fe"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/icons/png/camera.png",
+          "bytes": 39208,
+          "sha256": "3b97a948027fe6cb05a9c032038cf6ce01a71fbbef3f5a50ed76395c9f5651fe"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/icons/webp/camera.webp",
+          "bytes": 28658,
+          "sha256": "a9715d11d25f6da05b22a46d2da390a3cba25d7b8bf53bc4c22ef6aa05601a85"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/icons/svg/camera.svg",
+          "bytes": 52585,
+          "sha256": "b631a1ee0263562ea4fa53f85f13c86a9c46daf93cd4a71c749fd7b36ca95a28"
+        }
+      }
+    },
+    {
+      "id": "faq-chat",
+      "category": "icons",
+      "subfamily": null,
+      "source_board": "brand/reference-boards/icons_board.png",
+      "source_board_sha256": "8ece513d5efd689626c69533ac57f83b490cdbdbc3d27a6d078074e363b7180c",
+      "crop_box": [
+        610,
+        625,
+        855,
+        795
+      ],
+      "width": 245,
+      "height": 170,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/icons/faq-chat.png",
+          "bytes": 45265,
+          "sha256": "aa3c596b5321084da3766646e84e4301cee59aef9525daa7ae913d98f742f7c3"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/icons/png/faq-chat.png",
+          "bytes": 45265,
+          "sha256": "aa3c596b5321084da3766646e84e4301cee59aef9525daa7ae913d98f742f7c3"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/icons/webp/faq-chat.webp",
+          "bytes": 33670,
+          "sha256": "34f99a9a7a839028f5d95ff4890230da934f30bc79114bba0dba8e3d85e0692b"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/icons/svg/faq-chat.svg",
+          "bytes": 60663,
+          "sha256": "380332b4e51a77cc599102417c7bf62eaa7f2468374215171cede38c3efe7484"
+        }
+      }
+    },
+    {
+      "id": "phone",
+      "category": "icons",
+      "subfamily": null,
+      "source_board": "brand/reference-boards/icons_board.png",
+      "source_board_sha256": "8ece513d5efd689626c69533ac57f83b490cdbdbc3d27a6d078074e363b7180c",
+      "crop_box": [
+        925,
+        625,
+        1110,
+        795
+      ],
+      "width": 185,
+      "height": 170,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/icons/phone.png",
+          "bytes": 31947,
+          "sha256": "bff050d478b7ab28cbd26d8a35d34c4a26b876d9ecefc94bebb9d3d8fe6aa8f4"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/icons/png/phone.png",
+          "bytes": 31947,
+          "sha256": "bff050d478b7ab28cbd26d8a35d34c4a26b876d9ecefc94bebb9d3d8fe6aa8f4"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/icons/webp/phone.webp",
+          "bytes": 24750,
+          "sha256": "5e1216b5297faa87415a0967cd66d1e485f4ffba5dfdc00b6121fa28ccbdb3e9"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/icons/svg/phone.svg",
+          "bytes": 42900,
+          "sha256": "faa5a31e97d7f2d23d19f6d177e5d9f048f8a65703dacfed41da1250137fb23b"
+        }
+      }
+    },
+    {
+      "id": "calendar",
+      "category": "icons",
+      "subfamily": null,
+      "source_board": "brand/reference-boards/icons_board.png",
+      "source_board_sha256": "8ece513d5efd689626c69533ac57f83b490cdbdbc3d27a6d078074e363b7180c",
+      "crop_box": [
+        1165,
+        625,
+        1390,
+        795
+      ],
+      "width": 225,
+      "height": 170,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/icons/calendar.png",
+          "bytes": 42101,
+          "sha256": "f9909e8fa760b1d8cf0f2351d344ca061c53d675d699693f87de2faacbe48e15"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/icons/png/calendar.png",
+          "bytes": 42101,
+          "sha256": "f9909e8fa760b1d8cf0f2351d344ca061c53d675d699693f87de2faacbe48e15"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/icons/webp/calendar.webp",
+          "bytes": 33114,
+          "sha256": "d5bb0d3670a52dc4e9fbd52fd11ac2df8ccc086e9b20dfdcc8b122794c3f3ae4"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/icons/svg/calendar.svg",
+          "bytes": 56443,
+          "sha256": "f2f9dc381ee604888eb38fd56aaf10724e9e056e3744d217bd2345d671432fe0"
+        }
+      }
+    },
+    {
+      "id": "location-pin",
+      "category": "icons",
+      "subfamily": null,
+      "source_board": "brand/reference-boards/icons_board.png",
+      "source_board_sha256": "8ece513d5efd689626c69533ac57f83b490cdbdbc3d27a6d078074e363b7180c",
+      "crop_box": [
+        635,
+        840,
+        815,
+        1000
+      ],
+      "width": 180,
+      "height": 160,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/icons/location-pin.png",
+          "bytes": 36501,
+          "sha256": "f020b3f34f42bf51fe0f1092262d14b1852d54ee375352759248a6ed14aaf975"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/icons/png/location-pin.png",
+          "bytes": 36501,
+          "sha256": "f020b3f34f42bf51fe0f1092262d14b1852d54ee375352759248a6ed14aaf975"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/icons/webp/location-pin.webp",
+          "bytes": 26706,
+          "sha256": "2cdd77989e0ed395e9abdb3371ba927c966ed64cb28766ddc7446dd1aab7ebf2"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/icons/svg/location-pin.svg",
+          "bytes": 48979,
+          "sha256": "0a478d8af161aa20db26944a89b41c4ffeed3681cc9be88ad3254764e25cd784"
+        }
+      }
+    },
+    {
+      "id": "horizontal-steel-line",
+      "category": "dividers",
+      "subfamily": "horizontal-divider",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        35,
+        210,
+        480,
+        248
+      ],
+      "width": 445,
+      "height": 38,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/horizontal-steel-line.png",
+          "bytes": 12734,
+          "sha256": "0d788cdfc036c0a5e29f10bcf23de65c47acf86d19515970fa61824923c0f2ab"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/horizontal-steel-line.png",
+          "bytes": 12734,
+          "sha256": "0d788cdfc036c0a5e29f10bcf23de65c47acf86d19515970fa61824923c0f2ab"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/horizontal-steel-line.webp",
+          "bytes": 10736,
+          "sha256": "aa53c616d135f9c033002c803171ac82bfd66aef8770f516e9e139ae7adffb4c"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/horizontal-steel-line.svg",
+          "bytes": 17297,
+          "sha256": "cfacad18f0ca690df8c320dd210a93a5e4392c57490cc37526903a6e7273efcb"
+        }
+      }
+    },
+    {
+      "id": "horizontal-rose-spark",
+      "category": "dividers",
+      "subfamily": "horizontal-divider",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        35,
+        255,
+        480,
+        302
+      ],
+      "width": 445,
+      "height": 47,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/horizontal-rose-spark.png",
+          "bytes": 18097,
+          "sha256": "f196fa46ce888815a7276c02a18ef0e9b21de3224e01d0948d8e6718d1103fe2"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/horizontal-rose-spark.png",
+          "bytes": 18097,
+          "sha256": "f196fa46ce888815a7276c02a18ef0e9b21de3224e01d0948d8e6718d1103fe2"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/horizontal-rose-spark.webp",
+          "bytes": 15446,
+          "sha256": "a06a105ee7ad8e8ad547e013ea67d2f282f11b64ffa10465c122bc8eb5a780b3"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/horizontal-rose-spark.svg",
+          "bytes": 24449,
+          "sha256": "5b32be04a28334c2aeb9a749693b15ede4f8b3bbdf4bc3c1fb4918eaffe93446"
+        }
+      }
+    },
+    {
+      "id": "horizontal-rose-tall-spark",
+      "category": "dividers",
+      "subfamily": "horizontal-divider",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        35,
+        300,
+        480,
+        348
+      ],
+      "width": 445,
+      "height": 48,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/horizontal-rose-tall-spark.png",
+          "bytes": 18350,
+          "sha256": "905041ade3a85ff96bf3560a28f2e5250cf000d6160f0543921946efae20e6ff"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/horizontal-rose-tall-spark.png",
+          "bytes": 18350,
+          "sha256": "905041ade3a85ff96bf3560a28f2e5250cf000d6160f0543921946efae20e6ff"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/horizontal-rose-tall-spark.webp",
+          "bytes": 15530,
+          "sha256": "86dd9933e5dfea3b763ec7b30d8024a74bea8d738f048d58596e1faba043c7a6"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/horizontal-rose-tall-spark.svg",
+          "bytes": 24790,
+          "sha256": "7cd0920057722b735c9b8e062b29e0b8ec7baffa08735263f590479d6e403167"
+        }
+      }
+    },
+    {
+      "id": "horizontal-dual-arrow-spark",
+      "category": "dividers",
+      "subfamily": "horizontal-divider",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        35,
+        345,
+        480,
+        395
+      ],
+      "width": 445,
+      "height": 50,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/horizontal-dual-arrow-spark.png",
+          "bytes": 19983,
+          "sha256": "0b864a07b2edd9bcbd90326e3e2a2c7d1b2b87059afc534fdd17454c2daa6e35"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/horizontal-dual-arrow-spark.png",
+          "bytes": 19983,
+          "sha256": "0b864a07b2edd9bcbd90326e3e2a2c7d1b2b87059afc534fdd17454c2daa6e35"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/horizontal-dual-arrow-spark.webp",
+          "bytes": 15768,
+          "sha256": "01512a0389420ae9b50ce6c9517a26b7294375e959fc31c12350a9682fa8ea95"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/horizontal-dual-arrow-spark.svg",
+          "bytes": 26967,
+          "sha256": "82c91a9d5f67a921bd80d5f3e1aabde813d181b54646ff2e54cf9f8139ac3acc"
+        }
+      }
+    },
+    {
+      "id": "horizontal-steel-diamond",
+      "category": "dividers",
+      "subfamily": "horizontal-divider",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        35,
+        395,
+        480,
+        447
+      ],
+      "width": 445,
+      "height": 52,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/horizontal-steel-diamond.png",
+          "bytes": 20551,
+          "sha256": "6f4998e161f26578190ef7b58f79c776c7f72cbd5733aba078d73d077b736e11"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/horizontal-steel-diamond.png",
+          "bytes": 20551,
+          "sha256": "6f4998e161f26578190ef7b58f79c776c7f72cbd5733aba078d73d077b736e11"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/horizontal-steel-diamond.webp",
+          "bytes": 16944,
+          "sha256": "5c28f1c5e1df0886f2f618d21bf4146106115448e59091190892a5d1b58ec68c"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/horizontal-steel-diamond.svg",
+          "bytes": 27724,
+          "sha256": "69daf93e701548fdef710ebce09231e62f502112f6819d86396b0815249ded24"
+        }
+      }
+    },
+    {
+      "id": "horizontal-rose-rounded-spark",
+      "category": "dividers",
+      "subfamily": "horizontal-divider",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        35,
+        445,
+        480,
+        500
+      ],
+      "width": 445,
+      "height": 55,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/horizontal-rose-rounded-spark.png",
+          "bytes": 21382,
+          "sha256": "e345f5f9c4b0c5b565c0409ad331c87d570289269738e47397330aecccbb543b"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/horizontal-rose-rounded-spark.png",
+          "bytes": 21382,
+          "sha256": "e345f5f9c4b0c5b565c0409ad331c87d570289269738e47397330aecccbb543b"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/horizontal-rose-rounded-spark.webp",
+          "bytes": 17610,
+          "sha256": "cf13eb983be513d53f8565835b7eeb13304ecf88c3288ed91fc01a93bf9808dd"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/horizontal-rose-rounded-spark.svg",
+          "bytes": 28837,
+          "sha256": "7c2742dc83df4b93f7870c9c0c64ecaf60f3df0b0600b6db4b104372a76bd541"
+        }
+      }
+    },
+    {
+      "id": "horizontal-steel-star",
+      "category": "dividers",
+      "subfamily": "horizontal-divider",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        35,
+        495,
+        480,
+        555
+      ],
+      "width": 445,
+      "height": 60,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/horizontal-steel-star.png",
+          "bytes": 21803,
+          "sha256": "7f5311917a9b16fdd9373da4549c6ac47c5b0865fa6263e9880e394899914cc5"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/horizontal-steel-star.png",
+          "bytes": 21803,
+          "sha256": "7f5311917a9b16fdd9373da4549c6ac47c5b0865fa6263e9880e394899914cc5"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/horizontal-steel-star.webp",
+          "bytes": 17584,
+          "sha256": "9a35412d3437c7515c11a0050d06d26598d1b3fbb968e7f70f4213b6997136cd"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/horizontal-steel-star.svg",
+          "bytes": 29389,
+          "sha256": "367b793862154a2eeaf285463a2f1b66305d31b759cac106f3c1231b9ea8bdad"
+        }
+      }
+    },
+    {
+      "id": "horizontal-micro-spectrum",
+      "category": "dividers",
+      "subfamily": "horizontal-divider",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        35,
+        550,
+        480,
+        600
+      ],
+      "width": 445,
+      "height": 50,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/horizontal-micro-spectrum.png",
+          "bytes": 19749,
+          "sha256": "1bec18375e12bee04808e9d1463ea165752f55382431ed827a0708a13fcedd5d"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/horizontal-micro-spectrum.png",
+          "bytes": 19749,
+          "sha256": "1bec18375e12bee04808e9d1463ea165752f55382431ed827a0708a13fcedd5d"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/horizontal-micro-spectrum.webp",
+          "bytes": 16494,
+          "sha256": "7494fe105353cd234b65a81ab1d6145554fce2bde5420eccd2008da0276055bc"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/horizontal-micro-spectrum.svg",
+          "bytes": 26653,
+          "sha256": "0fb40a3deaf50ecfad067ba5b483feecd2fbcebcbcd6ac46779114766c837eee"
+        }
+      }
+    },
+    {
+      "id": "sparkle-rose-small",
+      "category": "dividers",
+      "subfamily": "standalone-sparkle",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        610,
+        205,
+        670,
+        265
+      ],
+      "width": 60,
+      "height": 60,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/sparkle-rose-small.png",
+          "bytes": 4124,
+          "sha256": "8a8056ab683d39ce34296da3dfa90fb50910495b7e7b83459bf6fde019c647fc"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/sparkle-rose-small.png",
+          "bytes": 4124,
+          "sha256": "8a8056ab683d39ce34296da3dfa90fb50910495b7e7b83459bf6fde019c647fc"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/sparkle-rose-small.webp",
+          "bytes": 3554,
+          "sha256": "0c8687fbcfc29a7d361240eaf8f820fc3145fb67b80f10207a78d1e11b45a511"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/sparkle-rose-small.svg",
+          "bytes": 5811,
+          "sha256": "ccf17ba9a2732200d30861f1ec638c7b032d3496bc027c55195f774644d97e36"
+        }
+      }
+    },
+    {
+      "id": "sparkle-rose-medium",
+      "category": "dividers",
+      "subfamily": "standalone-sparkle",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        700,
+        205,
+        765,
+        275
+      ],
+      "width": 65,
+      "height": 70,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/sparkle-rose-medium.png",
+          "bytes": 4923,
+          "sha256": "b090677c47893adf17b0ddfd379de2f4763ede0ff1bf2201942b8d506bbe6d8a"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/sparkle-rose-medium.png",
+          "bytes": 4923,
+          "sha256": "b090677c47893adf17b0ddfd379de2f4763ede0ff1bf2201942b8d506bbe6d8a"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/sparkle-rose-medium.webp",
+          "bytes": 4058,
+          "sha256": "4a4b4807b8bddfb5faec3e384939a4cfde4224181461135424194c55142dc259"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/sparkle-rose-medium.svg",
+          "bytes": 6876,
+          "sha256": "d7a5a8ae0ee4a17629e5bef04605c9ebb7ed201010d2ccbbab67e70d0af9c078"
+        }
+      }
+    },
+    {
+      "id": "sparkle-steel-small",
+      "category": "dividers",
+      "subfamily": "standalone-sparkle",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        795,
+        205,
+        855,
+        270
+      ],
+      "width": 60,
+      "height": 65,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/sparkle-steel-small.png",
+          "bytes": 4300,
+          "sha256": "46d5a120e77997f12eed565e3fe045f818157b08d22542a97b0679ea489d67ea"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/sparkle-steel-small.png",
+          "bytes": 4300,
+          "sha256": "46d5a120e77997f12eed565e3fe045f818157b08d22542a97b0679ea489d67ea"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/sparkle-steel-small.webp",
+          "bytes": 3368,
+          "sha256": "a5fd3edfb7e5cd77340231fb474b8e75bfca5e383dbe5801b32d78758c99b1e1"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/sparkle-steel-small.svg",
+          "bytes": 6048,
+          "sha256": "ec8409f128bed7a0c39c60e04d4523012263c6b2457ce1708fd5b821918a8acf"
+        }
+      }
+    },
+    {
+      "id": "sparkle-divider-tall",
+      "category": "dividers",
+      "subfamily": "sparkle-divider",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        540,
+        265,
+        930,
+        315
+      ],
+      "width": 390,
+      "height": 50,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/sparkle-divider-tall.png",
+          "bytes": 16525,
+          "sha256": "0da5ef7a2f3b5f5115ddbe16054e18f4f2f4ad5bd3da194f3e46939e6d8f1462"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/sparkle-divider-tall.png",
+          "bytes": 16525,
+          "sha256": "0da5ef7a2f3b5f5115ddbe16054e18f4f2f4ad5bd3da194f3e46939e6d8f1462"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/sparkle-divider-tall.webp",
+          "bytes": 13288,
+          "sha256": "600889b5475a30841d41ad11771ea9dafb15fda0721039304a595d09a65f2eaa"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/sparkle-divider-tall.svg",
+          "bytes": 22352,
+          "sha256": "af80ef4a2b9108b29c53230b7fde37f9a62d07e06ddea7cd8a223eefb3ac68d7"
+        }
+      }
+    },
+    {
+      "id": "sparkle-divider-soft",
+      "category": "dividers",
+      "subfamily": "sparkle-divider",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        540,
+        315,
+        930,
+        365
+      ],
+      "width": 390,
+      "height": 50,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/sparkle-divider-soft.png",
+          "bytes": 16166,
+          "sha256": "27e29e88b82dffbcd193cc716879c8cb1b1815c4e67696b04d6d341a346b8ad5"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/sparkle-divider-soft.png",
+          "bytes": 16166,
+          "sha256": "27e29e88b82dffbcd193cc716879c8cb1b1815c4e67696b04d6d341a346b8ad5"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/sparkle-divider-soft.webp",
+          "bytes": 13282,
+          "sha256": "14c202d86681a5f7d32f6ff34457b194b51cabc3c9c2aba279ddf012b56f7e3d"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/sparkle-divider-soft.svg",
+          "bytes": 21872,
+          "sha256": "41f20b2df544f526580a31bf4eb972d55ebfb2a38630e17201d241ade18bbf7f"
+        }
+      }
+    },
+    {
+      "id": "sparkle-divider-bright",
+      "category": "dividers",
+      "subfamily": "sparkle-divider",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        540,
+        365,
+        930,
+        415
+      ],
+      "width": 390,
+      "height": 50,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/sparkle-divider-bright.png",
+          "bytes": 15571,
+          "sha256": "917fe40bfe2f6f3c2f945d07534145ba778e0756c8c74e25713f845cb0bd416e"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/sparkle-divider-bright.png",
+          "bytes": 15571,
+          "sha256": "917fe40bfe2f6f3c2f945d07534145ba778e0756c8c74e25713f845cb0bd416e"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/sparkle-divider-bright.webp",
+          "bytes": 12604,
+          "sha256": "8ac8076fa12118bb132701bb18a8be782bc3d7d65851b1e244098f27b596bf04"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/sparkle-divider-bright.svg",
+          "bytes": 21082,
+          "sha256": "c37170191976f9287629f4a8c098d2988c1bd0c06898b2f70ae78279a2294da8"
+        }
+      }
+    },
+    {
+      "id": "sparkle-divider-beaded",
+      "category": "dividers",
+      "subfamily": "sparkle-divider",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        540,
+        420,
+        930,
+        470
+      ],
+      "width": 390,
+      "height": 50,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/sparkle-divider-beaded.png",
+          "bytes": 18040,
+          "sha256": "df63dceadb8c5f5d50ba48185a2d65311e290eb9c79c1d306888d13751dd50b1"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/sparkle-divider-beaded.png",
+          "bytes": 18040,
+          "sha256": "df63dceadb8c5f5d50ba48185a2d65311e290eb9c79c1d306888d13751dd50b1"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/sparkle-divider-beaded.webp",
+          "bytes": 14292,
+          "sha256": "ebd587175dfd3735df542bf6dd543c3dd9cd8744610ed90b30f03e7adcd80263"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/sparkle-divider-beaded.svg",
+          "bytes": 24374,
+          "sha256": "996acd0bf9c3e007890a16221b3c4e5a2dd6d443f6c1164b83495883479e7c73"
+        }
+      }
+    },
+    {
+      "id": "sparkle-divider-orbital",
+      "category": "dividers",
+      "subfamily": "sparkle-divider",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        540,
+        485,
+        930,
+        540
+      ],
+      "width": 390,
+      "height": 55,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/sparkle-divider-orbital.png",
+          "bytes": 18785,
+          "sha256": "9928fd09e9cb210f40f2708b7464cdb86949134599df770b9f84d56d1e25e7ed"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/sparkle-divider-orbital.png",
+          "bytes": 18785,
+          "sha256": "9928fd09e9cb210f40f2708b7464cdb86949134599df770b9f84d56d1e25e7ed"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/sparkle-divider-orbital.webp",
+          "bytes": 15256,
+          "sha256": "1e10c9e93d8cd87003340c80c1d0ec1d71a54bd53554088d5ca4826b466ae784"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/sparkle-divider-orbital.svg",
+          "bytes": 25367,
+          "sha256": "595d295b39e7c7474e90d897642717ed53491be607f632b6d0afe3640b5039ba"
+        }
+      }
+    },
+    {
+      "id": "sparkle-divider-dotted",
+      "category": "dividers",
+      "subfamily": "sparkle-divider",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        540,
+        550,
+        930,
+        598
+      ],
+      "width": 390,
+      "height": 48,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/sparkle-divider-dotted.png",
+          "bytes": 16992,
+          "sha256": "d414e87cae9d7b9943806efcb9f6f1d89d055698f75a71b543385c27ca3ed57e"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/sparkle-divider-dotted.png",
+          "bytes": 16992,
+          "sha256": "d414e87cae9d7b9943806efcb9f6f1d89d055698f75a71b543385c27ca3ed57e"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/sparkle-divider-dotted.webp",
+          "bytes": 13616,
+          "sha256": "fa9568e7211e589815f72acfb90c78127ef22d5346906e1ef716f5c467829c8b"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/sparkle-divider-dotted.svg",
+          "bytes": 22974,
+          "sha256": "e653e969fdb7be91b0dbbcf44c3c0584b1799b79127003cb7bed6e97e1a0f884"
+        }
+      }
+    },
+    {
+      "id": "metal-line-circles",
+      "category": "dividers",
+      "subfamily": "metallic-line",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        980,
+        215,
+        1375,
+        260
+      ],
+      "width": 395,
+      "height": 45,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/metal-line-circles.png",
+          "bytes": 13799,
+          "sha256": "04e2641d71e46fba40fd01609ecdb787e1a477fa88f2fc7995d3c02157869576"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/metal-line-circles.png",
+          "bytes": 13799,
+          "sha256": "04e2641d71e46fba40fd01609ecdb787e1a477fa88f2fc7995d3c02157869576"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/metal-line-circles.webp",
+          "bytes": 11440,
+          "sha256": "f852c53d2b4dbae5b626867917fde0557062206b8f5212a29027b5cd229d4b2a"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/metal-line-circles.svg",
+          "bytes": 18714,
+          "sha256": "4bb926bf1a839cfa887e8fad1c61c72fd027ba6c5975df47a234a740b9e20112"
+        }
+      }
+    },
+    {
+      "id": "metal-line-diamonds",
+      "category": "dividers",
+      "subfamily": "metallic-line",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        980,
+        260,
+        1375,
+        310
+      ],
+      "width": 395,
+      "height": 50,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/metal-line-diamonds.png",
+          "bytes": 16365,
+          "sha256": "ada86d73adbe071e0604c6496efe3b48a1697b92300f4b78fcc579e09ba4a924"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/metal-line-diamonds.png",
+          "bytes": 16365,
+          "sha256": "ada86d73adbe071e0604c6496efe3b48a1697b92300f4b78fcc579e09ba4a924"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/metal-line-diamonds.webp",
+          "bytes": 13246,
+          "sha256": "ae2729614513d92d3679fc1cab4559bf8852e2dab68fe9ccff3dde548f73f863"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/metal-line-diamonds.svg",
+          "bytes": 22135,
+          "sha256": "77b8a010f15b5f02ce96bbfbd019792497b15d568a8e7a45dcfe3ad215b1b817"
+        }
+      }
+    },
+    {
+      "id": "metal-line-sparkle-ends",
+      "category": "dividers",
+      "subfamily": "metallic-line",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        980,
+        310,
+        1375,
+        355
+      ],
+      "width": 395,
+      "height": 45,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/metal-line-sparkle-ends.png",
+          "bytes": 13677,
+          "sha256": "2929b47cc9c96d7c545143467fdc455fee995f4729495f5027fe0af0a8e20ff5"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/metal-line-sparkle-ends.png",
+          "bytes": 13677,
+          "sha256": "2929b47cc9c96d7c545143467fdc455fee995f4729495f5027fe0af0a8e20ff5"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/metal-line-sparkle-ends.webp",
+          "bytes": 11172,
+          "sha256": "0782d0248fcaadea9877271085c11118dd9705742b3b5d5d9af009cf28d1f54f"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/metal-line-sparkle-ends.svg",
+          "bytes": 18555,
+          "sha256": "b2d8c9c2e16b737f5ccef341be1bd3a030c62eb2df4b76616b5fcc721e2f9992"
+        }
+      }
+    },
+    {
+      "id": "metal-line-double-diamonds",
+      "category": "dividers",
+      "subfamily": "metallic-line",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        980,
+        355,
+        1375,
+        405
+      ],
+      "width": 395,
+      "height": 50,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/metal-line-double-diamonds.png",
+          "bytes": 15252,
+          "sha256": "bc08144fa76d12c701e42edbb3c8d1bd82da65bcb0a57306335c394a732a21ad"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/metal-line-double-diamonds.png",
+          "bytes": 15252,
+          "sha256": "bc08144fa76d12c701e42edbb3c8d1bd82da65bcb0a57306335c394a732a21ad"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/metal-line-double-diamonds.webp",
+          "bytes": 12610,
+          "sha256": "f1fbdaacd845f5cc0a68f69dfa423389a2cbde548111c8a5d5a13f0decef9def"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/metal-line-double-diamonds.svg",
+          "bytes": 20658,
+          "sha256": "d92336d608cf8b6e028a459e23a2a822b1056cba73d556057ec59371087feb4e"
+        }
+      }
+    },
+    {
+      "id": "metal-line-dual-arrow",
+      "category": "dividers",
+      "subfamily": "metallic-line",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        980,
+        405,
+        1375,
+        450
+      ],
+      "width": 395,
+      "height": 45,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/metal-line-dual-arrow.png",
+          "bytes": 14134,
+          "sha256": "fbca43d313c941e70e54fa2fa673a316428d311a8daa41df1b01eae493e4bc43"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/metal-line-dual-arrow.png",
+          "bytes": 14134,
+          "sha256": "fbca43d313c941e70e54fa2fa673a316428d311a8daa41df1b01eae493e4bc43"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/metal-line-dual-arrow.webp",
+          "bytes": 12348,
+          "sha256": "64f6e714854eaa4a528c97088bcc31f77df1c98d0857eade11033daa0734f566"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/metal-line-dual-arrow.svg",
+          "bytes": 19165,
+          "sha256": "3993d8057a2fa80b0f61f2f94f6e8184c136c3554ea44f8613da0d2c0f9b1d57"
+        }
+      }
+    },
+    {
+      "id": "metal-bar-steel",
+      "category": "dividers",
+      "subfamily": "metallic-bar",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        980,
+        450,
+        1375,
+        505
+      ],
+      "width": 395,
+      "height": 55,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/metal-bar-steel.png",
+          "bytes": 18871,
+          "sha256": "bd3b1f17f36ac6857b176a5a20762921ad6c4d60aad917841c8826a3d5f2693b"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/metal-bar-steel.png",
+          "bytes": 18871,
+          "sha256": "bd3b1f17f36ac6857b176a5a20762921ad6c4d60aad917841c8826a3d5f2693b"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/metal-bar-steel.webp",
+          "bytes": 15662,
+          "sha256": "1f92c016756876b4e590a7da1c12bf228b9c230a1bee773bf27e9b64d5a3c95d"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/metal-bar-steel.svg",
+          "bytes": 25475,
+          "sha256": "5222100a8a31fdc5f6f4cabcda40891cd8c9474316bbf2906a1e1c1b5eb61758"
+        }
+      }
+    },
+    {
+      "id": "metal-bar-rose",
+      "category": "dividers",
+      "subfamily": "metallic-bar",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        980,
+        500,
+        1375,
+        555
+      ],
+      "width": 395,
+      "height": 55,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/metal-bar-rose.png",
+          "bytes": 20506,
+          "sha256": "9625b8774adc94541557bf169a57d8cb2aed3dbd00f9756f681518fe8aaaad87"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/metal-bar-rose.png",
+          "bytes": 20506,
+          "sha256": "9625b8774adc94541557bf169a57d8cb2aed3dbd00f9756f681518fe8aaaad87"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/metal-bar-rose.webp",
+          "bytes": 16724,
+          "sha256": "6bb4bfaed4b9e9fa8acb0571345494fff31fa41a108c5a08a66d44961f1f3d94"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/metal-bar-rose.svg",
+          "bytes": 27654,
+          "sha256": "63567812bbbeaf09d66361a2838710cfd40c81cb1c169cba4faf21526830bd7e"
+        }
+      }
+    },
+    {
+      "id": "badge-underline-steel-spark",
+      "category": "dividers",
+      "subfamily": "badge-underline",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        570,
+        680,
+        930,
+        715
+      ],
+      "width": 360,
+      "height": 35,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/badge-underline-steel-spark.png",
+          "bytes": 10068,
+          "sha256": "461218b7a9cb3208fc31f6bdd9eba22b68a99ebb1effc0ac03fe2f0e7446ba05"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/badge-underline-steel-spark.png",
+          "bytes": 10068,
+          "sha256": "461218b7a9cb3208fc31f6bdd9eba22b68a99ebb1effc0ac03fe2f0e7446ba05"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/badge-underline-steel-spark.webp",
+          "bytes": 7944,
+          "sha256": "aafda2cf1797a2b4574d163db6de30c917f194d0bc8b1c3bc8f1f8ee6707d861"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/badge-underline-steel-spark.svg",
+          "bytes": 13747,
+          "sha256": "c8f806d5efc66fabf99cc20b7aee3e712e046c86b315ffc2ac8b948127b50641"
+        }
+      }
+    },
+    {
+      "id": "badge-underline-rose-spark",
+      "category": "dividers",
+      "subfamily": "badge-underline",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        570,
+        720,
+        930,
+        765
+      ],
+      "width": 360,
+      "height": 45,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/badge-underline-rose-spark.png",
+          "bytes": 14047,
+          "sha256": "7f399857d45a97ff1f752063f105f7d90f39569c115c9cd711567c4f384fb047"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/badge-underline-rose-spark.png",
+          "bytes": 14047,
+          "sha256": "7f399857d45a97ff1f752063f105f7d90f39569c115c9cd711567c4f384fb047"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/badge-underline-rose-spark.webp",
+          "bytes": 11720,
+          "sha256": "2cd9fd76d6f33f1eb724470de0fd268b45b1c79a4fcaccccdc45ada99190e476"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/badge-underline-rose-spark.svg",
+          "bytes": 19054,
+          "sha256": "dcfa01448f40e938fe665fe3ee9df9ed32e0d4a75de3981c46349415749eeea6"
+        }
+      }
+    },
+    {
+      "id": "badge-underline-steel-diamond",
+      "category": "dividers",
+      "subfamily": "badge-underline",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        570,
+        770,
+        930,
+        810
+      ],
+      "width": 360,
+      "height": 40,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/badge-underline-steel-diamond.png",
+          "bytes": 11739,
+          "sha256": "fb1d9b6a6ee017a189ee85912a64226fc339fd76a2f4e133a44e6551f2237f82"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/badge-underline-steel-diamond.png",
+          "bytes": 11739,
+          "sha256": "fb1d9b6a6ee017a189ee85912a64226fc339fd76a2f4e133a44e6551f2237f82"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/badge-underline-steel-diamond.webp",
+          "bytes": 9506,
+          "sha256": "0d7337091d13de4d6c81ce9a148e277aa04910e85082cf3670bd42d1f07546e2"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/badge-underline-steel-diamond.svg",
+          "bytes": 15977,
+          "sha256": "2968cc822132607e3f7d967dc2faac1ceba73797f4a947a8bf0372c219f03ce8"
+        }
+      }
+    },
+    {
+      "id": "badge-underline-rose-diamond",
+      "category": "dividers",
+      "subfamily": "badge-underline",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        560,
+        825,
+        940,
+        865
+      ],
+      "width": 380,
+      "height": 40,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/badge-underline-rose-diamond.png",
+          "bytes": 12625,
+          "sha256": "9ba9f28f1d1242af30e044763159484f60f4a1a693deb9fe06e750aae9b223b6"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/badge-underline-rose-diamond.png",
+          "bytes": 12625,
+          "sha256": "9ba9f28f1d1242af30e044763159484f60f4a1a693deb9fe06e750aae9b223b6"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/badge-underline-rose-diamond.webp",
+          "bytes": 10012,
+          "sha256": "9b81040f4cd83e814153efd2008e530292c821bfa17ddea80b74d233cdbee7ff"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/badge-underline-rose-diamond.svg",
+          "bytes": 17160,
+          "sha256": "92fa0333f9e444f871c4577d0c277187da1a25c8fe6dac185407af41f3dc7d91"
+        }
+      }
+    },
+    {
+      "id": "orbit-steel",
+      "category": "dividers",
+      "subfamily": "orbit-accent",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        985,
+        680,
+        1185,
+        760
+      ],
+      "width": 200,
+      "height": 80,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/orbit-steel.png",
+          "bytes": 19474,
+          "sha256": "d37b8fb644f6b34e05b97b9b72e5969ea4e1134d7d2237a6bf2195d252885412"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/orbit-steel.png",
+          "bytes": 19474,
+          "sha256": "d37b8fb644f6b34e05b97b9b72e5969ea4e1134d7d2237a6bf2195d252885412"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/orbit-steel.webp",
+          "bytes": 14384,
+          "sha256": "48c4a7f17ca7b7fa9594d0cdaa28a07593aac0f55efcc0e0297b2cd97581ce30"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/orbit-steel.svg",
+          "bytes": 26275,
+          "sha256": "1db9508c9f36268a9720a627a9ff0a4628fbd9ab2e3d351b5d73c41921cc1a08"
+        }
+      }
+    },
+    {
+      "id": "orbit-dual",
+      "category": "dividers",
+      "subfamily": "orbit-accent",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        1185,
+        680,
+        1375,
+        760
+      ],
+      "width": 190,
+      "height": 80,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/orbit-dual.png",
+          "bytes": 20105,
+          "sha256": "35802894f0e4c284a3cf14513061658d184bfc34fcc34ba90ead80e48c260298"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/orbit-dual.png",
+          "bytes": 20105,
+          "sha256": "35802894f0e4c284a3cf14513061658d184bfc34fcc34ba90ead80e48c260298"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/orbit-dual.webp",
+          "bytes": 14184,
+          "sha256": "879a3cc8974e50f4036a2f73904e2e9dd9b86ba790f6aa7fdc0aec28b50463b2"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/orbit-dual.svg",
+          "bytes": 27114,
+          "sha256": "55ab80b7b8255374553a50e0d19a900197fe9e4fd3914c51757028030381c38a"
+        }
+      }
+    },
+    {
+      "id": "orbit-rose-left",
+      "category": "dividers",
+      "subfamily": "orbit-accent",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        985,
+        765,
+        1185,
+        860
+      ],
+      "width": 200,
+      "height": 95,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/orbit-rose-left.png",
+          "bytes": 22712,
+          "sha256": "1b9a03ef81da8974bf3e80252931b795c2a739d4cf117585cb7100972458a6b8"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/orbit-rose-left.png",
+          "bytes": 22712,
+          "sha256": "1b9a03ef81da8974bf3e80252931b795c2a739d4cf117585cb7100972458a6b8"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/orbit-rose-left.webp",
+          "bytes": 17338,
+          "sha256": "983a1022eefb143ec1e2d6df546c3af07b9acdffcb574d4552906bb52925cb33"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/orbit-rose-left.svg",
+          "bytes": 30595,
+          "sha256": "82dce0e5dab547e4b7a57be5e4f72eac60ee8eacb3bac8f6a6ce258938aad5a4"
+        }
+      }
+    },
+    {
+      "id": "orbit-rose-right",
+      "category": "dividers",
+      "subfamily": "orbit-accent",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        1185,
+        765,
+        1375,
+        860
+      ],
+      "width": 190,
+      "height": 95,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/orbit-rose-right.png",
+          "bytes": 21834,
+          "sha256": "07289cedbace6066d2e19290aa5a058c986b43553100a7d87f1b2e996b1c4198"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/orbit-rose-right.png",
+          "bytes": 21834,
+          "sha256": "07289cedbace6066d2e19290aa5a058c986b43553100a7d87f1b2e996b1c4198"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/orbit-rose-right.webp",
+          "bytes": 16508,
+          "sha256": "0c14f84cc5f8d73d95fb450224abe7d2f88031c281bafebf7d0d2adf0738f60e"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/orbit-rose-right.svg",
+          "bytes": 29424,
+          "sha256": "8a5775ec3d7187259606fa26f810df69ac45c795a78e35519c949200808fea3c"
+        }
+      }
+    },
+    {
+      "id": "corner-spark-rose",
+      "category": "dividers",
+      "subfamily": "corner-accent",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        45,
+        945,
+        175,
+        1025
+      ],
+      "width": 130,
+      "height": 80,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/corner-spark-rose.png",
+          "bytes": 10659,
+          "sha256": "8c6de46d60c4c935058fa77e10372b998bbec6712c11b4d48e9fecd79b8a79f2"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/corner-spark-rose.png",
+          "bytes": 10659,
+          "sha256": "8c6de46d60c4c935058fa77e10372b998bbec6712c11b4d48e9fecd79b8a79f2"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/corner-spark-rose.webp",
+          "bytes": 8476,
+          "sha256": "4e0a459353986373cfd8165fa73b09d989407472bdcf32cb5817032b885b971f"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/corner-spark-rose.svg",
+          "bytes": 14525,
+          "sha256": "7a74f974cf2a59c3a4861c5758d1f9eba1b071f0dc4ba46d7ef137f1d980ce71"
+        }
+      }
+    },
+    {
+      "id": "corner-double-arc",
+      "category": "dividers",
+      "subfamily": "corner-accent",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        195,
+        945,
+        330,
+        1025
+      ],
+      "width": 135,
+      "height": 80,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/corner-double-arc.png",
+          "bytes": 11543,
+          "sha256": "1c6e8b0f6a280d4b94e07b8bf15a691bc0318d3eda9933bad64b43e4404f6b4a"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/corner-double-arc.png",
+          "bytes": 11543,
+          "sha256": "1c6e8b0f6a280d4b94e07b8bf15a691bc0318d3eda9933bad64b43e4404f6b4a"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/corner-double-arc.webp",
+          "bytes": 9188,
+          "sha256": "520d2a17b39e29844e0f3cc051dc3f93dab7cb81417afdcf800aefbe2be09510"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/corner-double-arc.svg",
+          "bytes": 15705,
+          "sha256": "13461ae25af60bf47233dcc2376e67631c293ed466b3801d8ca81847386e9dd3"
+        }
+      }
+    },
+    {
+      "id": "corner-spark-straight",
+      "category": "dividers",
+      "subfamily": "corner-accent",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        345,
+        925,
+        465,
+        1018
+      ],
+      "width": 120,
+      "height": 93,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/corner-spark-straight.png",
+          "bytes": 10205,
+          "sha256": "ea0d49bd5d65c7ef2644f648c3fe6bd4e6466781fb11874713dadab85a42f9db"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/corner-spark-straight.png",
+          "bytes": 10205,
+          "sha256": "ea0d49bd5d65c7ef2644f648c3fe6bd4e6466781fb11874713dadab85a42f9db"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/corner-spark-straight.webp",
+          "bytes": 8114,
+          "sha256": "9fdb5e07151170755c380d5a39a408f2c62fc252599359f4463545e9612b1b4a"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/corner-spark-straight.svg",
+          "bytes": 13925,
+          "sha256": "e974d95f2a07854b6ed9b71e1572e65b85606c23610576e9ae587514fe8a6c75"
+        }
+      }
+    },
+    {
+      "id": "corner-diamond-curve",
+      "category": "dividers",
+      "subfamily": "corner-accent",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        500,
+        925,
+        590,
+        1018
+      ],
+      "width": 90,
+      "height": 93,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/corner-diamond-curve.png",
+          "bytes": 7962,
+          "sha256": "c6fe475a51b4867ca2d4b9dc351cafc11e8bec9fab4c368073e1104d8cadfed7"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/corner-diamond-curve.png",
+          "bytes": 7962,
+          "sha256": "c6fe475a51b4867ca2d4b9dc351cafc11e8bec9fab4c368073e1104d8cadfed7"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/corner-diamond-curve.webp",
+          "bytes": 6326,
+          "sha256": "c13e00016100bf36719ff7bf2f2f43b978502b7ff978fe1e702eb84eab850bd1"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/corner-diamond-curve.svg",
+          "bytes": 10929,
+          "sha256": "82a893b877066f8fed85d3b87bfaad1e746838c285cc4624d6eb39cdec8e5802"
+        }
+      }
+    },
+    {
+      "id": "ornament-center-star",
+      "category": "dividers",
+      "subfamily": "standalone-ornament",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        610,
+        915,
+        690,
+        1018
+      ],
+      "width": 80,
+      "height": 103,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/ornament-center-star.png",
+          "bytes": 8525,
+          "sha256": "09d66700963ef4fef3da0801034aa16917c695832981c9952b82e8dcd16b967e"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/ornament-center-star.png",
+          "bytes": 8525,
+          "sha256": "09d66700963ef4fef3da0801034aa16917c695832981c9952b82e8dcd16b967e"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/ornament-center-star.webp",
+          "bytes": 7254,
+          "sha256": "80440ef3bf7982fbdd7b2eff4d0bef3918a45b9a2aec8b0cedf6cb34102497ee"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/ornament-center-star.svg",
+          "bytes": 11684,
+          "sha256": "d7d3afd667bab2f57394f1b2e57fa14df5b65f35355f189f943a32e45ac849d0"
+        }
+      }
+    },
+    {
+      "id": "corner-diamond-double",
+      "category": "dividers",
+      "subfamily": "corner-accent",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        740,
+        925,
+        840,
+        1018
+      ],
+      "width": 100,
+      "height": 93,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/corner-diamond-double.png",
+          "bytes": 9395,
+          "sha256": "66b1638015e05a3d57b64b8e552dc4756f2c5b824cc785b9f59344514951fa56"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/corner-diamond-double.png",
+          "bytes": 9395,
+          "sha256": "66b1638015e05a3d57b64b8e552dc4756f2c5b824cc785b9f59344514951fa56"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/corner-diamond-double.webp",
+          "bytes": 7378,
+          "sha256": "2dd9272a72b707136fd50c4ff1a324fbaaa8154eb91bfb7e96a43cba4a3acee3"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/corner-diamond-double.svg",
+          "bytes": 12845,
+          "sha256": "dbe0534467fc3c67e8905c8eb3401a6f173b81b0b3cd1db7d2510c937565399b"
+        }
+      }
+    },
+    {
+      "id": "corner-double-line-spark",
+      "category": "dividers",
+      "subfamily": "corner-accent",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        860,
+        925,
+        975,
+        1018
+      ],
+      "width": 115,
+      "height": 93,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/corner-double-line-spark.png",
+          "bytes": 9922,
+          "sha256": "5e9de65734b138746bad76ba052b5bbc8b725cbed8b26c844f14496fd5cf5395"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/corner-double-line-spark.png",
+          "bytes": 9922,
+          "sha256": "5e9de65734b138746bad76ba052b5bbc8b725cbed8b26c844f14496fd5cf5395"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/corner-double-line-spark.webp",
+          "bytes": 7872,
+          "sha256": "72eefea056954bff8656b5d59ab96a055dc214687121c9923153fb7ea166fc08"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/corner-double-line-spark.svg",
+          "bytes": 13552,
+          "sha256": "95503c100e54ea77e87972245adc31685c57e3bc61ec555dd3b3872f95b93983"
+        }
+      }
+    },
+    {
+      "id": "corner-simple-double",
+      "category": "dividers",
+      "subfamily": "corner-accent",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        995,
+        925,
+        1090,
+        1018
+      ],
+      "width": 95,
+      "height": 93,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/corner-simple-double.png",
+          "bytes": 8214,
+          "sha256": "4e3e719f2428fa1bcbecd2d983332d9c9821735cc58fda0a080e5e32c34dc282"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/corner-simple-double.png",
+          "bytes": 8214,
+          "sha256": "4e3e719f2428fa1bcbecd2d983332d9c9821735cc58fda0a080e5e32c34dc282"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/corner-simple-double.webp",
+          "bytes": 6828,
+          "sha256": "d9f62242587e0b00dbde55b8e2d2c1c5d792f8c6343ef2dde5d5e5ba4102d6d4"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/corner-simple-double.svg",
+          "bytes": 11265,
+          "sha256": "b2db3c03ec80c7b6bc573246033d11eaf524727abfe55782dea51e4262b4656f"
+        }
+      }
+    },
+    {
+      "id": "corner-steel-rose-star",
+      "category": "dividers",
+      "subfamily": "corner-accent",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        1110,
+        925,
+        1235,
+        1018
+      ],
+      "width": 125,
+      "height": 93,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/corner-steel-rose-star.png",
+          "bytes": 11395,
+          "sha256": "4245ce5da856e556204483e25fffcca12fa76217ddca69f9a5d2f289e12344ce"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/corner-steel-rose-star.png",
+          "bytes": 11395,
+          "sha256": "4245ce5da856e556204483e25fffcca12fa76217ddca69f9a5d2f289e12344ce"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/corner-steel-rose-star.webp",
+          "bytes": 9016,
+          "sha256": "1144b2b2c098f775304d08c45dc68d7d85f80d65497e450ed7ea7f09150b428b"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/corner-steel-rose-star.svg",
+          "bytes": 15514,
+          "sha256": "d179f46b64bc17a91579f740bf82527cd1db3ebac6f0959a6a37c6a33e6cd4d6"
+        }
+      }
+    },
+    {
+      "id": "corner-double-arc-rose",
+      "category": "dividers",
+      "subfamily": "corner-accent",
+      "source_board": "brand/reference-boards/dividers_board.png",
+      "source_board_sha256": "608af48c2d1a7bbb61347f46f5b7dcd5bb628d2648f466d9f9d017a072339592",
+      "crop_box": [
+        1250,
+        925,
+        1375,
+        1018
+      ],
+      "width": 125,
+      "height": 93,
+      "master_type": "raster-origin-board-crop",
+      "svg_type": "embedded-raster-svg-fidelity-container",
+      "approved_background": "dark-board-background",
+      "publication_status": "approved-board-derived",
+      "qa_status": "passed",
+      "files": {
+        "master": {
+          "path": "brand/masters/approved-board-raster/dividers/corner-double-arc-rose.png",
+          "bytes": 12393,
+          "sha256": "2cab051f665765c16c621828481b122760205906eb78b5ae6dfa8f3de767f12d"
+        },
+        "png": {
+          "path": "brand/exports/digital/approved/dividers/png/corner-double-arc-rose.png",
+          "bytes": 12393,
+          "sha256": "2cab051f665765c16c621828481b122760205906eb78b5ae6dfa8f3de767f12d"
+        },
+        "webp": {
+          "path": "brand/exports/digital/approved/dividers/webp/corner-double-arc-rose.webp",
+          "bytes": 9770,
+          "sha256": "b0b7c4f450665ced38cba36f374b1ff27ba5b9f13c69d831506a6fdbe3cae8d6"
+        },
+        "svg": {
+          "path": "brand/exports/digital/approved/dividers/svg/corner-double-arc-rose.svg",
+          "bytes": 16842,
+          "sha256": "f61fbdf171952461a2a22cec5501a9541e63e89129e4d57372bce969500f7502"
+        }
+      }
+    }
+  ]
+}
