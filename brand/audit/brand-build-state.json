@@ -1,40 +1,65 @@
 {
-  "schema_version": "1.6",
+  "schema_version": "2.0",
   "prompt_id": "PR-BRAND-001",
   "brand": "LuxSync",
   "execution_mode": "promptless-self-healing",
   "source_branch_at_start": "master",
-  "audited_master_commit": "fdca34fb89a1d6c3b7805c73f26a2f23bbc90a78",
-  "working_branch": "feature/brand-wave3-print-physical",
-  "overall_state": "wave3-pr-validated-ready-to-merge",
-  "current_phase": "wave3",
+  "audited_master_commit": "a2e03a7956d3940bc453dbd64cdc819462c83538",
+  "working_branch": "chore/pr-brand-001-closeout",
+  "overall_state": "complete",
+  "current_phase": "complete",
   "last_validation": {
     "workflow": "Validate LuxSync repository consistency",
-    "run_id": 33715034094,
+    "run_id": 33715172276,
     "result": "success",
-    "validated_head_before_state_seal": "9e618220554f90adb33a30a29026f950451aec39"
+    "validated_head": "a2e03a7956d3940bc453dbd64cdc819462c83538"
   },
   "phases": {
-    "phase0": {"name": "Audit and State Detection", "state": "complete", "remaining_checks": []},
+    "phase0": {
+      "name": "Audit and State Detection",
+      "state": "complete",
+      "remaining_checks": []
+    },
     "wave1": {
       "name": "Website-Critical Omnichannel Brand Set",
       "state": "complete",
-      "validation": {"pr": 30, "pr_validation_run": 33705814560, "post_merge_validation_run": 33705861760, "merged_commit": "19d0b56aa01f15107b3e17c52a18189bc3511453", "production_candidate_run": 33705861763, "godaddy_publish": "skipped"},
+      "validation": {
+        "pr": 30,
+        "pr_validation_run": 33705814560,
+        "post_merge_validation_run": 33705861760,
+        "merged_commit": "19d0b56aa01f15107b3e17c52a18189bc3511453",
+        "production_candidate_run": 33705861763,
+        "godaddy_publish": "skipped"
+      },
       "known_gaps": []
     },
     "wave2": {
       "name": "Broader Digital and Marketing Library",
       "state": "complete",
-      "validation": {"pr": 31, "pr_validation_run": 33707291729, "post_merge_validation_run": 33707336289, "merged_commit": "fdca34fb89a1d6c3b7805c73f26a2f23bbc90a78", "production_candidate_run": 33707336193, "godaddy_publish": "skipped"},
+      "validation": {
+        "pr": 31,
+        "pr_validation_run": 33707291729,
+        "post_merge_validation_run": 33707336289,
+        "merged_commit": "fdca34fb89a1d6c3b7805c73f26a2f23bbc90a78",
+        "production_candidate_run": 33707336193,
+        "godaddy_publish": "skipped"
+      },
       "manifest": "brand/manifests/wave2-digital-marketing-manifest.json",
       "manifest_status": "qa-passed",
       "known_gaps": []
     },
     "wave3": {
       "name": "Print and Physical Brand System",
-      "state": "pr_validated_ready_to_merge",
-      "pr": 32,
-      "pr_validation_run": 33715034094,
+      "state": "complete",
+      "validation": {
+        "pr": 32,
+        "pr_validation_run": 33715034094,
+        "state_seal_validation_run": 33715131659,
+        "post_merge_validation_run": 33715172276,
+        "merged_commit": "a2e03a7956d3940bc453dbd64cdc819462c83538",
+        "production_candidate_run": 33715172210,
+        "godaddy_publish": "skipped"
+      },
       "manifest": "brand/manifests/wave3-print-physical-manifest.json",
       "manifest_status": "qa-passed",
       "latest_successful_build_run": 33714884137,
@@ -50,22 +75,13 @@
         "Wave 3 contact-sheet visual QA passed",
         "all eight PDF pages rendered and visually checked for clipping, distortion and broken render artifacts",
         "manual QA approval bound to exact contact-sheet SHA256",
-        "vendor-specific specialty conversion deferred until actual production constraints are supplied",
         "Wave 3 validator wired into standard repository CI",
-        "PR #32 full repository validation passed in run 33715034094"
+        "PR #32 and state-seal validations passed",
+        "post-merge master validation passed",
+        "validated production candidate built successfully",
+        "GoDaddy production publishing remained skipped"
       ],
-      "guardrails": [
-        "use exact protected LuxSync logo artwork only",
-        "keep mutable personal/contact/invoice/campaign data live or placeholder-driven",
-        "do not fabricate vendor-specific spot colors, Pantone numbers, thread colors, foil stocks, substrate tolerances or finishing specifications",
-        "do not redraw or generatively reconstruct protected logos for specialty-production convenience",
-        "specialty-production variants remain job-specific until actual vendor constraints exist"
-      ],
-      "known_gaps": [
-        "merge PR #32",
-        "verify post-merge master validation and production-candidate build",
-        "vendor-specific specialty manufacturing artwork remains intentionally deferred until real production requirements exist"
-      ]
+      "known_gaps": []
     }
   },
   "idempotence": {
@@ -86,25 +102,23 @@
     "protected_logo_master_count": 3,
     "skip_unless_invalidated": true
   },
-  "self_healed": [
-    "stale pre-migration logo delivery paths",
-    "website-only interpretation of the brand system",
-    "missing durable omnichannel audit/state layer",
-    "missing protection for the seven approval boards",
-    "stale account-access derivative gap in the omnichannel manifest",
-    "reference-board pixel-access limitation by using a private short-retention audit artifact",
-    "incorrect assumption that semantic icon/divider completeness implied approved visual fidelity",
-    "Wave 2 bot push race by adding fetch/rebase before branch push",
-    "visible rectangular board-crop seams in first Wave 2 composition QA by using clean transparent validated ornaments for new freeform layouts",
-    "Wave 2 PR validator missing Pillow dependency",
-    "Wave 3 PR validation skip risk from builder [skip ci] head by issuing a normal state checkpoint commit"
+  "deferred_job_specific_work": [
+    "vendor-specific one-color logo conversion",
+    "embroidery stitch adaptation",
+    "screen-print separation/adaptation",
+    "vinyl cut-line adaptation",
+    "engraving/etching adaptation",
+    "foil/spot-metallic production plate",
+    "vendor ICC/profile-specific prepress conversion"
   ],
+  "deferred_work_rule": "These items are intentionally not generic brand gaps. Create them only for a real production job after the selected vendor supplies material, process, minimum-detail, decoration-area, color, trapping, cut-line, stitch or file-format constraints.",
   "execution_constraints": [
-    "The 58 faithful board-derived assets are raster-origin because the approved boards are the current visual authority; their SVGs are fidelity containers rather than newly redrawn editable vectors.",
-    "Do not generatively redraw approved LuxSync artwork merely to obtain vector paths.",
-    "Do not flatten mutable button, product, stationery, hero or UI copy into production assets when live/template implementation is appropriate.",
-    "Wave 3 physical-production files must distinguish exact full-color protected-logo use from any separately governed specialty-production adaptation."
+    "Only approved protected LuxSync logo artwork may represent the LuxSync logo.",
+    "Do not generatively redraw approved LuxSync artwork merely to obtain vector paths or specialty variants.",
+    "Do not flatten mutable customer, product, campaign, stationery or business data when live/template implementation is appropriate.",
+    "Faithful board-derived SVG files remain embedded-raster fidelity containers, not claimed editable vectors.",
+    "Physical manufacturing files require vendor preflight before production."
   ],
   "human_decision_required": false,
-  "next_checkpoint": "Verify the validation run triggered by this state-seal commit remains green. If green, merge PR #32, verify post-merge master validation and production-candidate workflow, then close PR-BRAND-001 with vendor-specific specialty conversions intentionally deferred until production requirements exist."
+  "next_checkpoint": "PR-BRAND-001 is complete. On future runs, validate all three waves and skip production when governed source hashes and QA remain valid. Resume only from a newly invalidated source/QA checkpoint or from a real vendor-specific production request with supplied manufacturing constraints."
 }
