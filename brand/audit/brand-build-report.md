@@ -1,165 +1,150 @@
 # LuxSync Omnichannel Brand Build Audit
 
 **Prompt:** PR-BRAND-001  
-**Run state:** Phase 0 complete; Wave 1 in progress with full board visual audit complete  
-**Audited master at current run start:** `6f49e812b0d60f9a597fadf232330b6e62cac54a`  
-**Working branch:** `feature/brand-board-visual-audit`
+**Run state:** Complete  
+**Current phase:** Complete  
+**Completed production waves:** 3 of 3  
+**Current durable state:** `brand/audit/brand-build-state.json`
 
 ## Executive conclusion
 
-PR-BRAND-001 has now crossed the key visual-audit threshold that previously blocked faithful recovery of the approved LuxSync artwork.
+PR-BRAND-001 is complete.
 
-All seven original reference boards were exposed to the execution workspace through a private, short-retention GitHub Actions artifact and inspected at full resolution. The audit confirms that the earlier clean 31-asset delivery layer is useful and technically valid, but its 16 icon and 12 divider families are simplified semantic/vector interpretations rather than complete visual reproductions of the approved metallic board art.
+The repository now contains a governed omnichannel visual system that separates protected identity masters, permanent approval evidence, faithful raster-derived artwork, clean semantic vectors, live UI, digital-marketing templates, account-access derivatives, and print/physical source files.
 
-The existing clean library is therefore preserved as a semantic/vector layer, not deleted. A separate faithful approved visual layer has now been generated from the authoritative board pixels.
+The earlier malformed/grid-sliced image system is not production truth. The clean atomic asset layer remains valid for semantic/scalable use, while the faithful approved-board layer preserves the exact approved metallic artwork where visual fidelity is required.
 
-## Current verified inventory
+No protected LuxSync logo artwork was redrawn, retyped, recolored, approximated, or replaced during the completed build.
+
+## Final verified inventory
 
 ### Protected identity
 
-- 3 protected LuxSync logo masters remain unchanged.
-- Protected logos continue to outrank any logo appearance embedded in a reference board.
-- No generative logo recreation, redraw or re-typesetting occurred.
+- 3 protected LuxSync logo masters remain authoritative.
+- Production PNG logo deliveries remain byte-identical to those masters.
+- Logo SVG deliveries are fidelity containers where applicable, not retyped substitute logo artwork.
 
-### Existing clean delivery layer retained
+### Clean atomic delivery layer
 
-- 31 atomic assets remain intact.
-- 93 SVG/PNG/WebP files remain intact.
-- 16 semantic icon IDs remain available as clean vectors.
-- 12 simplified divider/ornament IDs remain available as clean vectors.
+- 31 approved atomic assets.
+- 93 governed SVG/PNG/WebP production files.
+- 16 semantic vector icon IDs.
+- 12 semantic vector divider/ornament IDs.
 
-These are not discarded because they remain useful for live UI and scalable semantic illustration. Direct visual audit simply removes the previous assumption that they fully represent the approved board archive.
+This layer is technically clean and useful for scalable interface illustration. It is not the sole faithful rendering of the approved reference-board archive.
 
-### Account-access derivative checkpoint retained
+### Account-access derivatives
 
-- 4 production-approved text-free account-access SVG masters.
-- 4 matching PNG derivatives.
-- 4 matching lossless WebP derivatives.
-- QA contact sheet and hash/provenance records.
-- Idempotent feature-branch renderer and CI validator.
+- 4 production-approved text-free account-access visual masters.
+- matching PNG derivatives.
+- matching lossless WebP derivatives.
+- hash/provenance records and QA evidence.
 
-### New faithful approved-board layer
+### Faithful approved-board layer
 
-The full-resolution visual audit identified **58 reusable text-free approved artworks** suitable for Wave 1 production:
+Direct full-resolution audit of the seven approved reference boards produced 58 reusable text-free approved artworks:
 
-- **16 metallic icons** from `icons_board.png`.
-- **42 dividers/accents** from `dividers_board.png`.
+- 16 metallic icons;
+- 42 dividers/accents.
 
-Each now has:
+Each approved-board asset has governed provenance, crop geometry, dimensions, hashes, QA status, raster-origin master PNG, matching PNG delivery, lossless WebP delivery, and an explicitly labeled embedded-raster SVG fidelity container.
 
-- a raster-origin master PNG under `brand/masters/approved-board-raster/`;
-- a matching PNG delivery export;
-- a lossless WebP delivery export;
-- an SVG fidelity container embedding the exact approved PNG;
-- source-board SHA-256;
-- crop geometry;
-- dimensions;
-- per-file SHA-256 and byte counts;
-- `qa_status: passed`;
-- visual QA contact-sheet evidence.
+### Wave 2 digital-marketing layer
 
-Governing manifest:
+Completed and QA-passed:
 
-`brand/manifests/approved-board-asset-manifest.json`
+- 10 deterministic text-safe static compositions;
+- 4 social frames;
+- 2 presentation frames;
+- 2 campaign frames;
+- 2 4K video-overlay frames;
+- live placeholder-driven email signature;
+- live semantic product-card template.
 
-QA evidence:
+Mutable product facts, prices, ratings, testimonials, availability, and other commerce claims remain live rather than baked into reusable image art.
 
-- `brand/audit/qa/approved-icons-board-derived.jpg`
-- `brand/audit/qa/approved-dividers-board-derived.jpg`
+### Wave 3 print and physical source layer
 
-## Full reference-board disposition
+Completed and QA-passed:
 
-The detailed visual inventory is recorded in:
+- 8 governed 300-DPI print/stationery compositions;
+- PNG masters and matching delivery PNGs;
+- CMYK TIFF companions;
+- exact-page PDF sources;
+- 8 vendor-neutral physical placement specifications.
 
-`brand/audit/reference-board-visual-inventory.md`
+Placeholder identity/contact/invoice data from the stationery approval board was not promoted into generic production masters.
 
-Summary:
+## Reference-board disposition
 
-- **Approved brand board:** identity/composition overview; logos remain protected-master governed.
-- **Icons board:** 16 reusable faithful metallic assets generated.
-- **Dividers board:** 42 reusable faithful decorative assets generated; 4 `SECTION` separator examples remain template/reference-only because the text is mutable.
-- **Buttons board:** live semantic UI/reference; do not flatten mutable button copy.
-- **Product cards board:** approved marketing/composition direction; conceptual device/category presentation must not be treated as validated live commerce facts.
-- **Stationery board:** approved print/template direction; placeholder identity/contact data prevents direct production use of the board itself.
-- **UI controls board:** live semantic UI/reference; example merchandising/service claims must not be published unless independently validated.
-- **Hero/banner examples:** approved composition direction; production should use current live copy rather than baked example text.
+The seven files under `brand/reference-boards/` remain permanent visual approval evidence.
 
-## Self-healing decisions made in this run
+Their approved concepts are separated by production behavior:
 
-1. The prior board-pixel access exception was resolved without asking the user to re-upload files. A private one-day GitHub Actions artifact exposed the exact repository originals for audit.
-2. The assumption that semantic completeness meant visual fidelity was invalidated by direct comparison. The current vectors were preserved, while a faithful board-derived layer was added.
-3. Approved raster board art is not falsely labeled as newly created vector artwork. SVG outputs are explicitly documented as embedded-raster fidelity containers.
-4. Mutable text, placeholder identity data, conceptual commerce content and unvalidated claims remain live/template concerns rather than being frozen into new production images.
+- reusable text-free icons and dividers have faithful delivery assets;
+- buttons, navigation, forms, toggles, cards, search, tabs, and controls remain semantic live UI;
+- mutable section/hero copy stays live;
+- product cards remain live/composition-driven until commerce facts are validated;
+- stationery remains template/source composition with mutable data zones;
+- unvalidated support, shipping, return, product, price, stock, compatibility, rating, and availability claims are never frozen into generic reusable art.
 
 ## Validation status
 
-Local/full-resolution visual QA passed for:
+The durable build state records all three waves as complete with no known brand-system gaps.
 
-- all 16 approved metallic icon crops;
-- all 42 approved divider/accent crops.
+Recorded successful gates include:
 
-Automated board-derived asset validation is now implemented in:
+- Wave 1 PR validation and post-merge validation: complete;
+- Wave 2 PR validation and post-merge validation: complete;
+- Wave 3 PR validation: run `33715034094`;
+- Wave 3 state-seal validation: run `33715131659`;
+- Wave 3 post-merge repository validation: run `33715172276`, success;
+- Wave 3 production-candidate build: run `33715172210`, success;
+- GoDaddy production publish: intentionally skipped.
 
-`scripts/validate-approved-board-assets.py`
+Standard repository CI validates:
 
-The standard repository CI workflow has been updated to execute this validator in addition to existing brand, derivative, repository, Concierge and site checks.
+- `scripts/validate-production-brand.py`
+- `scripts/validate-brand-derivatives.py`
+- `scripts/validate-approved-board-assets.py`
+- `scripts/validate-wave2-digital-marketing.py`
+- `scripts/validate-wave3-print-physical.py`
+- `scripts/validate-image-governance.py`
+- `scripts/validate-repository-consistency.py`
 
-A full PR-head CI pass is still required before Wave 1 can be marked complete and merged.
+Final closeout record:
 
-## Remaining Wave 1 work
+`brand/audit/image-cleanup-final-validation.md`
 
-The visual production work required by the reference-board audit is no longer blocked. Remaining work is controlled integration/governance:
+## Self-healing decisions retained
 
-- document the faithful board-derived layer in website and brand discovery maps;
-- make clear when to prefer faithful approved artwork versus clean semantic/live UI vectors;
-- ensure Airo/website guidance does not mistake simplified vectors for the only approved branding graphics;
-- validate the complete branch in CI;
-- merge after green checks.
+1. Protected logo masters always outrank reference-board logo appearances.
+2. Reference-board pixels are permanent approval evidence and are not disposable temporary crops.
+3. Simplified semantic vectors are preserved because they have a legitimate scalable UI purpose.
+4. Faithful board-derived raster artwork is preserved separately rather than being falsely relabeled as editable vector artwork.
+5. Embedded-raster SVG fidelity containers must never be described as newly redrawn vector masters.
+6. Mutable content remains live/template-driven instead of being baked into generic reusable graphics.
+7. Meaningless format proliferation is avoided. Each channel receives formats appropriate to its actual production use.
 
-## Wave 2 and Wave 3 remain intentionally pending
+## Intentional deferred job-specific work
 
-### Wave 2
+The following are not incomplete cleanup items. They require real vendor/material/process constraints before creation:
 
-Broader digital and marketing work still includes approved hero/composition rebuilding with current copy, social/email/presentation/video-ready static graphics, product-card marketing templates and other reusable promotional compositions.
+- one-color production conversion;
+- embroidery stitch adaptation;
+- screen-print separation/adaptation;
+- vinyl cut-line adaptation;
+- engraving/etching adaptation;
+- foil/spot-metallic production plate;
+- vendor ICC/profile-specific prepress conversion.
 
-### Wave 3
+## Resume rule
 
-Print and physical work still includes stationery templates, business cards, merchandise/apparel, mug/signage variants, one-color/reversed assets, embroidery/screen-print/engraving/foil requirements, and technically justified PDF/EPS/TIFF or other vendor-production formats.
+Do not rerun broad image generation when governed source hashes, manifests, and QA evidence remain valid.
 
-## Current resume point
+Future work resumes only when:
 
-**Wave 1, Checkpoint 2:** finish canonical discovery/usage mapping for the 58 faithful approved-board assets, run complete CI, then close and merge Wave 1. Subsequent PR-BRAND-001 runs must skip the generated 58 assets unless their source board hash, crop geometry, output hash or QA evidence changes.
-
-<!-- PR-BRAND-001-WAVE2-DIGITAL-MARKETING -->
-## Wave 2 digital and marketing checkpoint
-
-Wave 2 built and visually reviewed a reusable channel kit rather than a set of one-off flattened ads.
-
-Completed:
-
-- 10 deterministic text-safe static compositions: 4 social, 2 presentation, 2 campaign and 2 4K video-overlay frames;
-- exact approved LuxSync logo artwork used in every logo-bearing composition;
-- clean transparent validated divider assets used for seamless freeform compositing while faithful approval-board crop masters remain preserved;
-- live placeholder-driven email signature;
-- live semantic product-card HTML/CSS treatment with no baked product or price claims;
-- PNG and lossless WebP exports plus raster-origin masters;
-- manual contact-sheet QA recorded against an exact SHA256 approval record;
-- deterministic builder, validator and governance reconciliation tooling.
-
-The first QA pass found rectangular board-crop seams around some ornaments. That was repaired objectively by using the clean transparent validated divider delivery layer for new compositions rather than altering the faithful board-derived masters. The second contact sheet passed visual review.
-
-Wave 2 remains pending pull-request and post-merge repository CI before being marked complete.
-
-## Wave 3 print and physical checkpoint
-
-Status: QA complete; pending repository PR validation.
-
-- 8 print/stationery compositions at 300 DPI.
-- 8 PNG masters + 8 PNG deliveries + 8 CMYK TIFF companions + 8 exact-page PDFs.
-- 8 vendor-neutral physical placement specifications.
-- Contact-sheet QA passed and is hash-bound.
-- All 8 PDFs were independently render-reviewed before approval.
-- No example identity/contact/invoice data from the stationery board was promoted as production data.
-- Specialty manufacturing conversions remain intentionally deferred until actual vendor constraints exist.
-
-Wave 3 manifest SHA256: `54fc9cd2f6ee0ec19eb3efe1f9cc2b8c132b4a333c4ce95ab0763e4d0dede70f`.
+1. a governed source or approval hash changes;
+2. a validator detects drift or a missing/corrupt derivative;
+3. an approved new channel requires a justified derivative;
+4. a real production vendor supplies manufacturing constraints for a deferred specialty adaptation.
