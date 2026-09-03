@@ -239,20 +239,66 @@ p { margin: 0; }
 .hero-stat strong { display: block; margin-top: .35rem; font-family: Manrope, sans-serif; font-size: .92rem; }
 
 .page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   min-height: 480px;
   display: grid;
   align-items: end;
   border-bottom: 1px solid rgba(208,190,176,.08);
+  background: var(--slate);
+}
+.page-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background-image: var(--page-hero-image, url("/assets/plush-drift-concierge.png"));
+  background-size: cover;
+  background-position: center;
+  filter: saturate(.82) contrast(1.04);
+  transform: scale(1.015);
+}
+.page-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
   background:
-    radial-gradient(circle at 82% 10%, rgba(123,150,178,.15), transparent 35rem),
-    linear-gradient(180deg, rgba(23,32,54,.7), rgba(13,21,38,.94));
+    linear-gradient(90deg, rgba(13,21,38,.96) 0%, rgba(13,21,38,.83) 42%, rgba(13,21,38,.28) 76%, rgba(13,21,38,.48) 100%),
+    linear-gradient(0deg, rgba(13,21,38,.9), transparent 58%);
 }
 .page-hero.compact { min-height: 390px; }
 .page-hero > div {
+  position: relative;
   width: min(calc(100% - 32px), var(--content));
   margin: 0 auto;
   padding: 7rem 0 4.5rem;
 }
+.page-hero > div::after {
+  content: "";
+  display: block;
+  width: min(380px, 72vw);
+  height: 32px;
+  margin-top: 2rem;
+  background: url("/assets/dividers/divider-dual.webp") left center / contain no-repeat;
+  opacity: .86;
+}
+
+body[data-route="/solutions"],
+body[data-route="/solutions/residential"] { --page-hero-image: url("/assets/plush-drift-residential.png"); }
+body[data-route="/solutions/commercial-offices"] { --page-hero-image: url("/assets/plush-drift-commercial.png"); }
+body[data-route="/solutions/short-term-rentals"] { --page-hero-image: url("/assets/plush-drift-rental.png"); }
+body[data-route="/solutions/senior-living"],
+body[data-route="/solutions/aging-in-place"] { --page-hero-image: url("/assets/plush-drift-care.png"); }
+body[data-route="/find-my-luxsync-solution"],
+body[data-route="/my-luxsync-blueprint"],
+body[data-route="/about"],
+body[data-route="/faqs"],
+body[data-route="/contact"],
+body[data-route="/404"] { --page-hero-image: url("/assets/plush-drift-concierge.png"); }
+body[data-route="/shop"],
+body[data-route="/guides"] { --page-hero-image: url("/assets/plush-drift-energy.png"); }
 .page-hero h1 { max-width: 980px; font-size: clamp(2.8rem, 6vw, 5.6rem); }
 .page-hero p:not(.eyebrow) { max-width: 820px; margin-top: 1.4rem; color: rgba(208,190,176,.76); font-size: 1.1rem; }
 .page-hero .button-row { margin-top: 2rem; }
@@ -626,3 +672,9 @@ p { margin: 0; }
 
 .auth-card__primary-link{font-weight:800;color:var(--gold)}
 .auth-security-note{padding:.8rem 1rem;border-left:3px solid var(--gold);background:rgba(177,137,63,.09);font-size:.86rem}
+
+.section:nth-of-type(3n) .section-heading::after{background-image:url("/assets/dividers/divider-spark.webp")}
+.section:nth-of-type(3n + 1) .section-heading::after{background-image:url("/assets/dividers/divider-diamond.webp")}
+.section + .section{position:relative}
+.section + .section::before{content:"";position:absolute;top:0;left:50%;width:min(1120px,calc(100% - 32px));height:14px;transform:translateX(-50%);background:url("/assets/dividers/divider-steel.webp") center/contain no-repeat;opacity:.34;pointer-events:none}
+.section-dark + .section::before,.section-soft + .section::before{background-image:url("/assets/dividers/divider-dual.webp");opacity:.5}

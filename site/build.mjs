@@ -297,7 +297,11 @@ fs.copyFileSync(ENGINE, path.join(DIST, 'data', 'luxsync-concierge-engine.v1.jso
 fs.copyFileSync(path.join(HERE, 'src', 'styles.css'), path.join(DIST, 'styles.css'));
 fs.copyFileSync(path.join(HERE, 'src', 'app.js'), path.join(DIST, 'app.js'));
 fs.copyFileSync(path.join(HERE, 'src', 'og.png'), path.join(DIST, 'assets', 'og.png'));
-for (const file of ['bridgette-beardsley.jpg','sheldon-bardol.jpg','homepage-intelligent-living.png','member-access.png']) fs.copyFileSync(path.join(HERE,'src',file),path.join(DIST,'assets',file));
+for (const file of [
+  'bridgette-beardsley.jpg','sheldon-bardol.jpg','homepage-intelligent-living.png','member-access.png',
+  'plush-drift-residential.png','plush-drift-commercial.png','plush-drift-rental.png',
+  'plush-drift-care.png','plush-drift-concierge.png','plush-drift-energy.png'
+]) fs.copyFileSync(path.join(HERE,'src',file),path.join(DIST,'assets',file));
 
 const faqs = parseFaqs(fs.readFileSync(FAQ_SOURCE, 'utf8'));
 fs.writeFileSync(path.join(DIST, 'data', 'faqs.json'), JSON.stringify(faqs, null, 2) + '\n');

@@ -24,6 +24,7 @@
       "blueprint": "website/pages/concierge.md",
       "content_source": "docs/architecture/intelligent-living-concierge.md",
       "production_assets": [
+        "brand/assets/heroes/plush-drift-concierge.png",
         "brand/assets/logos/png/luxsync-orb.png"
       ],
       "visual_recipe": "live-concierge-ui"
@@ -33,6 +34,7 @@
       "blueprint": "website/pages/my-luxsync-blueprint.md",
       "content_source": "website/src/concierge/modules/63-blueprint-schema.json",
       "production_assets": [
+        "brand/assets/heroes/plush-drift-concierge.png",
         "brand/assets/logos/png/luxsync-horizontal-combo.png"
       ],
       "visual_recipe": "live-blueprint-ui"
@@ -42,6 +44,7 @@
       "blueprint": "website/pages/solutions.md",
       "content_source": "content/product-catalog.md",
       "production_assets": [
+        "brand/assets/heroes/plush-drift-residential.png",
         "brand/assets/logos/png/luxsync-horizontal-combo.png"
       ],
       "visual_recipe": "live-solution-cards"
@@ -51,6 +54,7 @@
       "blueprint": "website/pages/solutions/commercial-offices.md",
       "content_source": "content/guides/roi/commercial-offices.md",
       "production_assets": [
+        "brand/assets/heroes/plush-drift-commercial.png",
         "brand/assets/logos/png/luxsync-horizontal-combo.png"
       ],
       "visual_recipe": "live-office-composition"
@@ -60,6 +64,7 @@
       "blueprint": "website/pages/solutions/senior-living.md",
       "content_source": "content/guides/roi/senior-living-communities.md",
       "production_assets": [
+        "brand/assets/heroes/plush-drift-care.png",
         "brand/assets/logos/png/luxsync-horizontal-combo.png"
       ],
       "visual_recipe": "live-accessible-living-composition"
@@ -69,6 +74,7 @@
       "blueprint": "website/pages/solutions/short-term-rentals.md",
       "content_source": "content/guides/roi/str-owners.md",
       "production_assets": [
+        "brand/assets/heroes/plush-drift-rental.png",
         "brand/assets/logos/png/luxsync-horizontal-combo.png"
       ],
       "visual_recipe": "live-hosting-property-composition"
@@ -78,6 +84,7 @@
       "blueprint": "website/pages/solutions/residential.md",
       "content_source": "content/guides/roi/residential-homeowners.md",
       "production_assets": [
+        "brand/assets/heroes/plush-drift-residential.png",
         "brand/assets/logos/png/luxsync-horizontal-combo.png"
       ],
       "visual_recipe": "live-residential-composition"
@@ -87,6 +94,7 @@
       "blueprint": "website/pages/solutions/aging-in-place.md",
       "content_source": "content/guides/roi/residential-seniors-caregivers.md",
       "production_assets": [
+        "brand/assets/heroes/plush-drift-care.png",
         "brand/assets/logos/png/luxsync-horizontal-combo.png"
       ],
       "visual_recipe": "live-accessible-living-composition"
@@ -96,6 +104,7 @@
       "blueprint": "website/pages/shop.md",
       "content_source": "content/product-catalog.md",
       "production_assets": [
+        "brand/assets/heroes/plush-drift-energy.png",
         "brand/assets/logos/png/luxsync-horizontal-combo.png"
       ],
       "visual_recipe": "live-commerce-grid-with-validated-imagery"
@@ -105,6 +114,7 @@
       "blueprint": "website/pages/guides.md",
       "content_source": "content/guides/roi/README.md",
       "production_assets": [
+        "brand/assets/heroes/plush-drift-energy.png",
         "brand/assets/logos/png/luxsync-horizontal-combo.png"
       ],
       "visual_recipe": "live-roi-editorial-cards"
@@ -114,6 +124,7 @@
       "blueprint": "website/pages/about.md",
       "content_source": "content/about.md",
       "production_assets": [
+        "brand/assets/heroes/plush-drift-concierge.png",
         "brand/assets/logos/png/luxsync-horizontal-combo.png",
         "brand/assets/leadership/bridgette-beardsley.jpg",
         "brand/assets/leadership/sheldon-bardol.jpg"
@@ -125,6 +136,7 @@
       "blueprint": "website/pages/faqs.md",
       "content_source": "content/faqs.md",
       "production_assets": [
+        "brand/assets/heroes/plush-drift-concierge.png",
         "brand/assets/logos/png/luxsync-orb.png"
       ],
       "visual_recipe": "live-faq-accordion"
@@ -134,6 +146,7 @@
       "blueprint": "website/pages/contact.md",
       "content_source": "content/contact.md",
       "production_assets": [
+        "brand/assets/heroes/plush-drift-concierge.png",
         "brand/assets/logos/png/luxsync-orb.png"
       ],
       "visual_recipe": "live-adaptive-contact-form"
