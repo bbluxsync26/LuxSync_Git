@@ -1,64 +1,54 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "prompt_id": "PR-BRAND-001",
   "brand": "LuxSync",
   "execution_mode": "promptless-self-healing",
   "source_branch_at_start": "master",
-  "audited_master_commit": "c568a8092724e1f1328a7b2c3707af3c31ed83ce",
-  "working_branch": "feature/brand-omnichannel-wave1",
-  "overall_state": "wave1-in-progress-board-visual-audit-blocked",
+  "audited_master_commit": "6f49e812b0d60f9a597fadf232330b6e62cac54a",
+  "working_branch": "feature/brand-board-visual-audit",
+  "overall_state": "wave1-in-progress-faithful-board-assets-built-pending-canonical-mapping",
   "current_phase": "wave1",
   "last_validation": {
     "workflow": "Validate LuxSync repository consistency",
-    "run_id": 33693239733,
+    "run_id": 33693342305,
     "result": "success",
-    "validated_head": "e93cf26194caa679d13e1dca084af01c98ccb802"
+    "validated_head": "6f49e812b0d60f9a597fadf232330b6e62cac54a"
   },
   "phases": {
     "phase0": {
       "name": "Audit and State Detection",
       "state": "complete-validated",
-      "completed_checks": [
-        "current master refreshed",
-        "seven reference boards inventoried and protected by repository validation",
-        "protected logo masters inventoried",
-        "production logo PNG identity verified against protected masters by Git blob SHA",
-        "current brand/assets delivery library inventoried",
-        "existing brand/assets QA evidence inventoried",
-        "VIP account-access asset manifest inventoried",
-        "omnichannel manifest and restart/audit state established",
-        "stale active pre-migration logo paths repaired",
-        "brand/assets reclassified as the validated digital delivery layer of a wider omnichannel brand system",
-        "PR-BRAND-001 and omnichannel governance artifacts added to the Master Catalog",
-        "current clean 31-asset digital delivery layer adopted for idempotent reuse",
-        "repository consistency CI passed after Phase 0 repairs"
-      ],
       "remaining_checks": []
     },
     "wave1": {
       "name": "Website-Critical Omnichannel Brand Set",
-      "state": "in_progress-blocked-only-on-board-pixel-access-for-new-board-derived-masters",
+      "state": "in_progress-faithful-board-assets-qa-passed-pending-canonical-mapping",
+      "completed_checks": [
+        "three protected logo masters preserved unchanged",
+        "existing 31-asset semantic/vector delivery layer retained rather than destructively rebuilt",
+        "four production-approved account-access SVG masters rendered to four PNG and four lossless WebP derivatives with QA evidence",
+        "all seven authoritative reference boards made visually accessible through a private GitHub Actions audit artifact",
+        "full-resolution element-level visual audit completed across approved brand, buttons, dividers, icons, product cards, stationery and UI controls boards",
+        "direct visual comparison determined that the earlier 16 semantic icons and 12 dividers are simplified and do not fully reproduce the approved metallic board artwork",
+        "sixteen faithful metallic icon masters generated from the approved icon board",
+        "forty-two faithful divider/accent masters generated from the approved divider board",
+        "each of the 58 board-derived artworks has a master PNG, matching PNG delivery, lossless WebP and explicitly labeled embedded-raster SVG fidelity container",
+        "source-board hashes, crop geometry, dimensions, output hashes and QA status recorded in brand/manifests/approved-board-asset-manifest.json",
+        "visual QA contact sheets generated and manually reviewed for all 58 board-derived artworks",
+        "buttons, section separators, product cards, stationery, UI controls and hero examples classified as semantic/template/reference families where mutable text or unvalidated facts prevent safe flattened production use",
+        "reference-board pixel-access exception closed",
+        "approved-board validator added and wired into standard repository CI"
+      ],
       "already_validated_inputs": [
         "3 protected logo PNG masters and current SVG/WebP delivery variants",
-        "16 clean semantic icon assets in SVG/PNG/WebP",
-        "12 clean divider/ornament assets in SVG/PNG/WebP",
-        "4 production-approved text-free VIP account ambient SVG assets",
-        "4 account-access ambient PNG derivatives with manifest hashes and QA evidence",
-        "4 account-access ambient lossless WebP derivatives with manifest hashes and QA evidence",
-        "account-access derivative QA contact sheet",
-        "self-healing feature-branch derivative renderer and CI validator"
+        "31 pre-existing clean semantic assets / 93 files retained as a secondary semantic/vector delivery layer",
+        "4 account-access ambient SVG masters plus 8 governed PNG/WebP derivatives",
+        "58 faithful approved-board-derived artworks: 16 metallic icons + 42 dividers/accents"
       ],
       "known_gaps": [
-        "board-to-asset coverage crosscheck cannot be completed without current visual access to reference-board pixels",
-        "hero/background/pattern/decorative artwork outside the 31-asset digital layer requires element-level board inventory before production"
-      ],
-      "completed_checks": [
-        "account-access production SVG sources revalidated against website/assets/auth/manifest.json",
-        "four PNG and four lossless WebP account-access derivatives rendered and hashed",
-        "account-access derivative QA contact sheet generated",
-        "brand derivative renderer made idempotent and feature-branch scoped",
-        "brand derivative validation added to repository CI",
-        "full repository PR validation passed with derivative validation enabled"
+        "canonical website/brand discovery mapping must explicitly distinguish and prefer the faithful approved-board visual layer where brand-fidelity artwork is desired while retaining semantic live UI/vector primitives where technically appropriate",
+        "section separators, buttons, product cards, hero compositions and UI controls remain live/template implementations rather than flattened graphics",
+        "broader marketing compositions and print/physical production variants remain Wave 2 and Wave 3 work"
       ]
     },
     "wave2": {
@@ -73,24 +63,29 @@
   "idempotence": {
     "validated_atomic_asset_count": 31,
     "validated_atomic_format_file_count": 93,
-    "skip_unless_invalidated": true,
+    "validated_account_derivative_asset_count": 4,
+    "validated_account_derivative_file_count": 8,
+    "approved_board_derived_asset_count": 58,
+    "approved_board_icon_count": 16,
+    "approved_board_divider_accent_count": 42,
     "protected_reference_board_count": 7,
-    "protected_logo_master_count": 3
+    "protected_logo_master_count": 3,
+    "skip_unless_invalidated": true
   },
   "self_healed": [
-    "brand/typography.md retired logo delivery path",
-    "website/assets/auth/auth-card-reference.svg retired logo delivery path",
-    "docs/master-catalog.md missing PR-BRAND-001 and omnichannel governance records",
-    "brand governance website-only/digital-only scope ambiguity",
-    "repository validation did not previously protect the seven reference boards or PR-BRAND-001 state files",
-    "omnichannel manifest still reported the account-access PNG/WebP derivative gap after the derivatives were generated"
+    "stale pre-migration logo delivery paths",
+    "website-only interpretation of the brand system",
+    "missing durable omnichannel audit/state layer",
+    "missing protection for the seven approval boards",
+    "stale account-access derivative gap in the omnichannel manifest",
+    "reference-board pixel-access limitation by using a private short-retention audit artifact",
+    "incorrect assumption that semantic icon/divider completeness implied approved visual fidelity"
   ],
   "execution_constraints": [
-    "The current GitHub connector exposes reference-board metadata but not binary pixels for direct visual inspection.",
-    "The connected creative preview service cannot ingest the authenticated GitHub raw URL supplied by the repository connector in this session.",
-    "File Library search did not locate equivalent uploaded copies of the seven authoritative board images.",
-    "Do not infer or recreate unseen board-derived artwork from filenames or old crop numbering."
+    "The 58 faithful board-derived assets are raster-origin because the approved boards are the current visual authority; their SVGs are fidelity containers rather than newly redrawn editable vectors.",
+    "Do not generatively redraw approved LuxSync artwork merely to obtain vector paths.",
+    "Do not flatten mutable button, product, stationery, hero or UI copy into production assets when live/template implementation is appropriate."
   ],
   "human_decision_required": false,
-  "next_checkpoint": "Wave 1 Checkpoint 1: obtain direct visual access to all seven brand/reference-boards, perform element-level mapping, then create only missing faithful website-critical masters. Skip the 31 validated atomic assets and the completed account-access derivative batch unless direct QA invalidates them."
+  "next_checkpoint": "Wave 1 Checkpoint 2: update canonical brand/website discovery and usage mapping so faithful approved-board artwork is discoverable and preferred for branded visual applications while live UI and technically superior semantic vectors remain available where appropriate; validate the 58-asset library in full CI, then close Wave 1."
 }
