@@ -1,12 +1,12 @@
 {
-  "schema_version": "1.4",
+  "schema_version": "1.5",
   "prompt_id": "PR-BRAND-001",
   "brand": "LuxSync",
   "execution_mode": "promptless-self-healing",
   "source_branch_at_start": "master",
   "audited_master_commit": "fdca34fb89a1d6c3b7805c73f26a2f23bbc90a78",
   "working_branch": "feature/brand-wave3-print-physical",
-  "overall_state": "wave3-in-progress",
+  "overall_state": "wave3-qa-complete-pending-pr-validation",
   "current_phase": "wave3",
   "last_validation": {
     "workflow": "Validate LuxSync repository consistency",
@@ -50,7 +50,7 @@
     },
     "wave3": {
       "name": "Print and Physical Brand System",
-      "state": "in_progress",
+      "state": "qa_complete_pending_pr_validation",
       "planned_families": [
         "business-card templates",
         "letterhead and stationery templates",
@@ -71,9 +71,25 @@
         "specialty-production variants require deterministic technical adaptation that preserves the protected mark silhouette and must be clearly labeled"
       ],
       "known_gaps": [
-        "Wave 3 governed print/physical template specification not yet built",
-        "Wave 3 high-resolution outputs and physical-production guidance not yet validated",
-        "Wave 3 visual QA and repository CI integration not yet complete"
+        "full repository PR validation must pass with Wave 3 validator enabled before PR-BRAND-001 is closed",
+        "actual specialty manufacturing artwork remains vendor-dependent and intentionally outside the generic master kit"
+      ],
+      "manifest": "brand/manifests/wave3-print-physical-manifest.json",
+      "manifest_status": "qa-passed",
+      "latest_successful_build_run": 33714772180,
+      "completed_checks": [
+        "approved stationery board treated as composition evidence rather than a source of production contact data",
+        "eight 300-DPI print/stationery source compositions generated",
+        "high-resolution PNG masters and matching PNG delivery files generated",
+        "CMYK TIFF companions generated without unsupported vendor ICC claims",
+        "exact-page-size PDF source files generated and independently render-reviewed",
+        "eight vendor-neutral physical placement specifications created for signage, apparel, headwear, drinkware, vinyl, engraving and foil use",
+        "exact approved LuxSync raster logo artwork used without redraw, recolor or retyping",
+        "mutable personal/contact/invoice/campaign data kept out of flattened source art",
+        "Wave 3 contact-sheet visual QA passed",
+        "all eight PDF pages rendered and visually checked for clipping, distortion and broken render artifacts",
+        "manual QA approval bound to exact contact-sheet SHA256",
+        "vendor-specific specialty conversion deferred until actual production constraints are supplied"
       ]
     }
   },
@@ -90,7 +106,10 @@
     "wave2_static_delivery_file_count": 20,
     "protected_reference_board_count": 7,
     "protected_logo_master_count": 3,
-    "skip_unless_invalidated": true
+    "skip_unless_invalidated": true,
+    "wave3_static_print_asset_count": 8,
+    "wave3_static_delivery_file_count": 24,
+    "wave3_physical_placement_spec_count": 8
   },
   "self_healed": [
     "stale pre-migration logo delivery paths",
@@ -111,5 +130,5 @@
     "Wave 3 physical-production files must distinguish exact full-color protected-logo use from any separately governed specialty-production adaptation."
   ],
   "human_decision_required": false,
-  "next_checkpoint": "Build the governed Wave 3 print/physical template specification, generate technically justified high-resolution outputs and production guides, visually QA the stationery/contact-sheet layer, wire validation into repository CI, then open the Wave 3 PR."
+  "next_checkpoint": "Wire Wave 3 validation into standard repository CI, open the Wave 3 PR, pass full PR validation, merge, verify master, then mark PR-BRAND-001 complete with vendor-specific specialty conversions intentionally deferred until production requirements exist."
 }

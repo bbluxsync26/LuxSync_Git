@@ -118,6 +118,8 @@ Approved colors:
 | BRAND-014 | Visual Approval Archive | `brand/reference-boards/` | Active / Permanent approval evidence |
 | BRAND-015 | Wave 2 Digital Marketing Manifest | `brand/manifests/wave2-digital-marketing-manifest.json` | Active / QA-passed |
 | BRAND-016 | Wave 2 Digital Marketing Templates & Channel Kit | `brand/templates/digital-marketing/` + `brand/exports/digital/marketing/` | Active / PR-BRAND-001 Wave 2 |
+| BRAND-017 | Wave 3 Print & Physical Manifest | `brand/manifests/wave3-print-physical-manifest.json` | Active / QA-passed |
+| BRAND-018 | Wave 3 Print, Stationery & Physical Production Kit | `brand/templates/print-physical/` + `brand/exports/print/wave3/` | Active / PR-BRAND-001 Wave 3 |
 
 ### Omnichannel brand rule
 

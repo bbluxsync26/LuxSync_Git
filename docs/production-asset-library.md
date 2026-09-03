@@ -178,3 +178,11 @@ Wave 2 is governed by `brand/manifests/wave2-digital-marketing-manifest.json` an
 Raster composition masters live under `brand/masters/marketing-art/wave2/`; PNG and lossless WebP deliveries live under `brand/exports/digital/marketing/`. The static templates intentionally omit SVG because they combine protected raster logo artwork with atmospheric raster effects; `brand/templates/digital-marketing/template-specs.json` is the editable governed source.
 
 All ten static frames are intentionally text-safe. Add current copy and validated commerce data at use time rather than baking mutable facts into reusable brand art.
+
+## Wave 3 print and physical source layer
+
+Use `brand/manifests/wave3-print-physical-manifest.json` as the authoritative Wave 3 inventory.
+
+The layer contains eight 300-DPI stationery/print compositions across business cards, letterhead, #10 envelope, note card, invoice/header, document cover and one-page print collateral. Each composition has a governed PNG source, CMYK TIFF companion and exact-page PDF. Live-content zones are recorded in the manifest so mutable data stays editable.
+
+Physical-production placement guidance lives in `brand/templates/print-physical/physical-production-specs.json`. It does not fabricate printer/fabricator settings. Validate material, process, minimum feature size, decoration area, ink/thread/foil constraints, cut lines, registration, trapping and vendor file requirements before creating specialty manufacturing artwork.
