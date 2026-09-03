@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/build-approved-board-assets.yml'
       - 'scripts/build-approved-board-assets.py'
+      - 'scripts/reconcile-approved-board-integration.py'
       - 'brand/reference-boards/icons_board.png'
       - 'brand/reference-boards/dividers_board.png'
   workflow_dispatch:
@@ -35,11 +36,14 @@ jobs:
       - name: Build approved-board assets
         run: python scripts/build-approved-board-assets.py
 
-      - name: Commit generated masters, exports, QA, and manifests
+      - name: Reconcile approved-board integration state
+        run: python scripts/reconcile-approved-board-integration.py
+
+      - name: Commit generated masters, exports, QA, manifests, and state
         shell: bash
         run: |
           if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
-            echo "No approved-board asset changes to commit."
+            echo "No approved-board asset or state changes to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
@@ -48,7 +52,8 @@ jobs:
                   brand/exports/digital/approved \
                   brand/audit/qa/approved-icons-board-derived.jpg \
                   brand/audit/qa/approved-dividers-board-derived.jpg \
+                  brand/audit/brand-build-state.json \
                   brand/manifests/approved-board-asset-manifest.json \
                   brand/manifests/omnichannel-brand-manifest.json
-          git commit -m "Generate faithful approved-board brand assets [skip ci]"
+          git commit -m "Reconcile faithful approved-board brand assets [skip ci]"
           git push origin "HEAD:${GITHUB_REF_NAME}"
