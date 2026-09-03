@@ -1,0 +1,836 @@
+{
+  "schema_version": "1.0",
+  "brand": "LuxSync",
+  "prompt": "PR-BRAND-001",
+  "wave": "wave3",
+  "status": "generated-pending-manual-qa-and-pr-validation",
+  "brand_system": "LuxSync Production Raster v5",
+  "design_dna": "Plush Drift",
+  "dpi": 300,
+  "template_spec": {
+    "path": "brand/templates/print-physical/template-specs.json",
+    "sha256": "b4c22c9c89c710d8cbd043acd064305a50f6dc2ed20ba9bba9fbb51c8d17bc56"
+  },
+  "physical_spec": {
+    "path": "brand/templates/print-physical/physical-production-specs.json",
+    "sha256": "7e470e8101c23ab6cd5131f80eedc4a64d53770cb6d77d752770652cbbb2dd33",
+    "placement_count": 8
+  },
+  "static_asset_count": 8,
+  "static_assets": [
+    {
+      "id": "business-card-front",
+      "family": "stationery",
+      "dpi": 300,
+      "trim_in": [
+        3.5,
+        2.0
+      ],
+      "bleed_in": 0.125,
+      "full_pixel_dimensions": [
+        1125,
+        675
+      ],
+      "trim_box_px": [
+        38,
+        38,
+        1088,
+        638
+      ],
+      "background": "dark-full",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
+        "placement": [
+          239,
+          230,
+          648,
+          216
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/divider-rose.png",
+        "sha256": "967536183268da2ef62c838220f57b1882e524c6608ff3346b2710a6c9a08dfa",
+        "placement": [
+          395,
+          548,
+          336,
+          42
+        ]
+      },
+      "live_content_zones": [],
+      "master_type": "raster-print-composition-from-approved-sources",
+      "editable_source": "brand/templates/print-physical/template-specs.json",
+      "color_policy": {
+        "png": "sRGB/RGBA source art",
+        "tiff": "CMYK conversion companion without vendor ICC claim",
+        "pdf": "vendor-neutral exact-page-size source PDF; printer preflight required"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/print-physical/wave3/business-card-front.png",
+          "sha256": "e5140afc1eb8547b25b5609f3fe5479ffa124993a0da8a0a97f91aae3f984774",
+          "bytes": 157226
+        },
+        "png": {
+          "path": "brand/exports/print/wave3/stationery/png/business-card-front.png",
+          "sha256": "e5140afc1eb8547b25b5609f3fe5479ffa124993a0da8a0a97f91aae3f984774",
+          "bytes": 157226
+        },
+        "tiff": {
+          "path": "brand/exports/print/wave3/stationery/tiff/business-card-front.tiff",
+          "sha256": "9381e3c9764f9de2d35360e37d60c48c3d0f030122ef16fbd59085051de666ae",
+          "bytes": 411342
+        },
+        "pdf": {
+          "path": "brand/exports/print/wave3/stationery/pdf/business-card-front.pdf",
+          "sha256": "5101f1207550d8f4d34559a30acff5999129aec208cde1556a0c63b954122e93",
+          "bytes": 221359
+        }
+      },
+      "qa_status": "generated-pending-contact-sheet-review"
+    },
+    {
+      "id": "business-card-back",
+      "family": "stationery",
+      "dpi": 300,
+      "trim_in": [
+        3.5,
+        2.0
+      ],
+      "bleed_in": 0.125,
+      "full_pixel_dimensions": [
+        1125,
+        675
+      ],
+      "trim_box_px": [
+        38,
+        38,
+        1088,
+        638
+      ],
+      "background": "light-paper",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-orb.png",
+        "sha256": "873a6d3692b0e4fba8cdac405c23a3d7e9cd7cfb2302bb78e068c6a4dc605be1",
+        "placement": [
+          841,
+          71,
+          189,
+          189
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/divider-steel.png",
+        "sha256": "af7eadaddc1ebb738ec6020a2de0abd0966a96f4c1b704d0878b7cf048d77e91",
+        "placement": [
+          96,
+          554,
+          336,
+          42
+        ]
+      },
+      "live_content_zones": [
+        {
+          "id": "identity-contact",
+          "rect_px": [
+            122,
+            146,
+            672,
+            360
+          ],
+          "rect_trim_ratio": [
+            0.08,
+            0.18,
+            0.64,
+            0.6
+          ]
+        }
+      ],
+      "master_type": "raster-print-composition-from-approved-sources",
+      "editable_source": "brand/templates/print-physical/template-specs.json",
+      "color_policy": {
+        "png": "sRGB/RGBA source art",
+        "tiff": "CMYK conversion companion without vendor ICC claim",
+        "pdf": "vendor-neutral exact-page-size source PDF; printer preflight required"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/print-physical/wave3/business-card-back.png",
+          "sha256": "e936c9ce726f1c151eea46b0bf738adf9dec0398b700e438872511f08a3c28c2",
+          "bytes": 48354
+        },
+        "png": {
+          "path": "brand/exports/print/wave3/stationery/png/business-card-back.png",
+          "sha256": "e936c9ce726f1c151eea46b0bf738adf9dec0398b700e438872511f08a3c28c2",
+          "bytes": 48354
+        },
+        "tiff": {
+          "path": "brand/exports/print/wave3/stationery/tiff/business-card-back.tiff",
+          "sha256": "42abec91da43577c65b8859ee88f9b16ffcd512c1b28ee30be6c2894e3a9ca61",
+          "bytes": 99490
+        },
+        "pdf": {
+          "path": "brand/exports/print/wave3/stationery/pdf/business-card-back.pdf",
+          "sha256": "f2777ae16dd5006b335975cf45c1c6158604e85185618d3111b532b853e4ac54",
+          "bytes": 53108
+        }
+      },
+      "qa_status": "generated-pending-contact-sheet-review"
+    },
+    {
+      "id": "letterhead",
+      "family": "stationery",
+      "dpi": 300,
+      "trim_in": [
+        8.5,
+        11.0
+      ],
+      "bleed_in": 0.125,
+      "full_pixel_dimensions": [
+        2625,
+        3375
+      ],
+      "trim_box_px": [
+        38,
+        38,
+        2588,
+        3338
+      ],
+      "background": "light-paper",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
+        "placement": [
+          178,
+          220,
+          790,
+          263
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/divider-steel.png",
+        "sha256": "af7eadaddc1ebb738ec6020a2de0abd0966a96f4c1b704d0878b7cf048d77e91",
+        "placement": [
+          178,
+          516,
+          816,
+          102
+        ]
+      },
+      "live_content_zones": [
+        {
+          "id": "document-body",
+          "rect_px": [
+            293,
+            632,
+            2040,
+            2310
+          ],
+          "rect_trim_ratio": [
+            0.1,
+            0.18,
+            0.8,
+            0.7
+          ]
+        },
+        {
+          "id": "footer-contact",
+          "rect_px": [
+            293,
+            3041,
+            2040,
+            132
+          ],
+          "rect_trim_ratio": [
+            0.1,
+            0.91,
+            0.8,
+            0.04
+          ]
+        }
+      ],
+      "master_type": "raster-print-composition-from-approved-sources",
+      "editable_source": "brand/templates/print-physical/template-specs.json",
+      "color_policy": {
+        "png": "sRGB/RGBA source art",
+        "tiff": "CMYK conversion companion without vendor ICC claim",
+        "pdf": "vendor-neutral exact-page-size source PDF; printer preflight required"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/print-physical/wave3/letterhead.png",
+          "sha256": "a3fbb9cfabc8529b87f61757a92376b6146effb15821b5c469d563db457538b9",
+          "bytes": 222426
+        },
+        "png": {
+          "path": "brand/exports/print/wave3/stationery/png/letterhead.png",
+          "sha256": "a3fbb9cfabc8529b87f61757a92376b6146effb15821b5c469d563db457538b9",
+          "bytes": 222426
+        },
+        "tiff": {
+          "path": "brand/exports/print/wave3/stationery/tiff/letterhead.tiff",
+          "sha256": "fc6ba278d8bee606e410208bfd730aa6bac5e3fe4f9a21137e37c671e5bd2933",
+          "bytes": 776400
+        },
+        "pdf": {
+          "path": "brand/exports/print/wave3/stationery/pdf/letterhead.pdf",
+          "sha256": "5c688c02f0c8f3be9d7811e9dd20ff041bf480da7d70d1876734a6fe88d49b67",
+          "bytes": 275865
+        }
+      },
+      "qa_status": "generated-pending-contact-sheet-review"
+    },
+    {
+      "id": "envelope-number-10",
+      "family": "stationery",
+      "dpi": 300,
+      "trim_in": [
+        9.5,
+        4.125
+      ],
+      "bleed_in": 0.125,
+      "full_pixel_dimensions": [
+        2925,
+        1312
+      ],
+      "trim_box_px": [
+        38,
+        38,
+        2888,
+        1276
+      ],
+      "background": "light-paper",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
+        "placement": [
+          195,
+          106,
+          741,
+          247
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/divider-rose.png",
+        "sha256": "967536183268da2ef62c838220f57b1882e524c6608ff3346b2710a6c9a08dfa",
+        "placement": [
+          209,
+          989,
+          912,
+          114
+        ]
+      },
+      "live_content_zones": [
+        {
+          "id": "return-address",
+          "rect_px": [
+            209,
+            348,
+            912,
+            223
+          ],
+          "rect_trim_ratio": [
+            0.06,
+            0.25,
+            0.32,
+            0.18
+          ]
+        },
+        {
+          "id": "recipient-address",
+          "rect_px": [
+            1178,
+            558,
+            1197,
+            347
+          ],
+          "rect_trim_ratio": [
+            0.4,
+            0.42,
+            0.42,
+            0.28
+          ]
+        }
+      ],
+      "master_type": "raster-print-composition-from-approved-sources",
+      "editable_source": "brand/templates/print-physical/template-specs.json",
+      "color_policy": {
+        "png": "sRGB/RGBA source art",
+        "tiff": "CMYK conversion companion without vendor ICC claim",
+        "pdf": "vendor-neutral exact-page-size source PDF; printer preflight required"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/print-physical/wave3/envelope-number-10.png",
+          "sha256": "b4393f08045f872ae3d44b76db2ce8f5e689d9853b3ea41e81cd1ad3369f2e3f",
+          "bytes": 179919
+        },
+        "png": {
+          "path": "brand/exports/print/wave3/stationery/png/envelope-number-10.png",
+          "sha256": "b4393f08045f872ae3d44b76db2ce8f5e689d9853b3ea41e81cd1ad3369f2e3f",
+          "bytes": 179919
+        },
+        "tiff": {
+          "path": "brand/exports/print/wave3/stationery/tiff/envelope-number-10.tiff",
+          "sha256": "d2aad77213f2de759eb6c41a24516376244cd0f010533a4664d7e205a3658d60",
+          "bytes": 477524
+        },
+        "pdf": {
+          "path": "brand/exports/print/wave3/stationery/pdf/envelope-number-10.pdf",
+          "sha256": "1b6788e419b2e1ecbb50459ce4cd2add47c2dd7ca4bc3a3ba7013202201348c6",
+          "bytes": 226518
+        }
+      },
+      "qa_status": "generated-pending-contact-sheet-review"
+    },
+    {
+      "id": "note-card",
+      "family": "stationery",
+      "dpi": 300,
+      "trim_in": [
+        5.0,
+        3.5
+      ],
+      "bleed_in": 0.125,
+      "full_pixel_dimensions": [
+        1575,
+        1125
+      ],
+      "trim_box_px": [
+        38,
+        38,
+        1538,
+        1088
+      ],
+      "background": "dark-full",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
+        "placement": [
+          383,
+          206,
+          810,
+          270
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/divider-rose.png",
+        "sha256": "967536183268da2ef62c838220f57b1882e524c6608ff3346b2710a6c9a08dfa",
+        "placement": [
+          548,
+          944,
+          480,
+          60
+        ]
+      },
+      "live_content_zones": [
+        {
+          "id": "message",
+          "rect_px": [
+            218,
+            521,
+            1140,
+            315
+          ],
+          "rect_trim_ratio": [
+            0.12,
+            0.46,
+            0.76,
+            0.3
+          ]
+        }
+      ],
+      "master_type": "raster-print-composition-from-approved-sources",
+      "editable_source": "brand/templates/print-physical/template-specs.json",
+      "color_policy": {
+        "png": "sRGB/RGBA source art",
+        "tiff": "CMYK conversion companion without vendor ICC claim",
+        "pdf": "vendor-neutral exact-page-size source PDF; printer preflight required"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/print-physical/wave3/note-card.png",
+          "sha256": "d951eb44aa5bd7e1c44a91a0d62c1a3dd4c70c66b760a383b115f78ffd729ab7",
+          "bytes": 239773
+        },
+        "png": {
+          "path": "brand/exports/print/wave3/stationery/png/note-card.png",
+          "sha256": "d951eb44aa5bd7e1c44a91a0d62c1a3dd4c70c66b760a383b115f78ffd729ab7",
+          "bytes": 239773
+        },
+        "tiff": {
+          "path": "brand/exports/print/wave3/stationery/tiff/note-card.tiff",
+          "sha256": "8240fafa1135fb8da9c83ffaf099d92f715deee83f9fd70f7e2aff1b26e6828e",
+          "bytes": 777358
+        },
+        "pdf": {
+          "path": "brand/exports/print/wave3/stationery/pdf/note-card.pdf",
+          "sha256": "dfa58fd09e8fb08e56922aec2992fcd59fe6d3b97861db634d88f79371da1a80",
+          "bytes": 353417
+        }
+      },
+      "qa_status": "generated-pending-contact-sheet-review"
+    },
+    {
+      "id": "invoice-header",
+      "family": "business-document",
+      "dpi": 300,
+      "trim_in": [
+        8.5,
+        11.0
+      ],
+      "bleed_in": 0.125,
+      "full_pixel_dimensions": [
+        2625,
+        3375
+      ],
+      "trim_box_px": [
+        38,
+        38,
+        2588,
+        3338
+      ],
+      "background": "light-paper",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
+        "placement": [
+          178,
+          220,
+          714,
+          238
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/divider-steel.png",
+        "sha256": "af7eadaddc1ebb738ec6020a2de0abd0966a96f4c1b704d0878b7cf048d77e91",
+        "placement": [
+          178,
+          516,
+          816,
+          102
+        ]
+      },
+      "live_content_zones": [
+        {
+          "id": "company-contact",
+          "rect_px": [
+            1619,
+            269,
+            714,
+            264
+          ],
+          "rect_trim_ratio": [
+            0.62,
+            0.07,
+            0.28,
+            0.08
+          ]
+        },
+        {
+          "id": "invoice-metadata",
+          "rect_px": [
+            1619,
+            632,
+            714,
+            330
+          ],
+          "rect_trim_ratio": [
+            0.62,
+            0.18,
+            0.28,
+            0.1
+          ]
+        },
+        {
+          "id": "invoice-body",
+          "rect_px": [
+            293,
+            1028,
+            2040,
+            1848
+          ],
+          "rect_trim_ratio": [
+            0.1,
+            0.3,
+            0.8,
+            0.56
+          ]
+        }
+      ],
+      "master_type": "raster-print-composition-from-approved-sources",
+      "editable_source": "brand/templates/print-physical/template-specs.json",
+      "color_policy": {
+        "png": "sRGB/RGBA source art",
+        "tiff": "CMYK conversion companion without vendor ICC claim",
+        "pdf": "vendor-neutral exact-page-size source PDF; printer preflight required"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/print-physical/wave3/invoice-header.png",
+          "sha256": "133b19f0375e23f34d99c1f9e0057e93520d20cf4f0f2d330ee30724a375c651",
+          "bytes": 194725
+        },
+        "png": {
+          "path": "brand/exports/print/wave3/business-document/png/invoice-header.png",
+          "sha256": "133b19f0375e23f34d99c1f9e0057e93520d20cf4f0f2d330ee30724a375c651",
+          "bytes": 194725
+        },
+        "tiff": {
+          "path": "brand/exports/print/wave3/business-document/tiff/invoice-header.tiff",
+          "sha256": "feb9444d8b1153dae42dd8c153792a728e36738f7bbd808b1cbe8e2598a5d5f6",
+          "bytes": 727268
+        },
+        "pdf": {
+          "path": "brand/exports/print/wave3/business-document/pdf/invoice-header.pdf",
+          "sha256": "4033dc5e870b5d151c2c224bfa5b3debde1345d5ee18193f00b253dd331d7d9a",
+          "bytes": 229235
+        }
+      },
+      "qa_status": "generated-pending-contact-sheet-review"
+    },
+    {
+      "id": "document-cover",
+      "family": "business-document",
+      "dpi": 300,
+      "trim_in": [
+        8.5,
+        11.0
+      ],
+      "bleed_in": 0.125,
+      "full_pixel_dimensions": [
+        2625,
+        3375
+      ],
+      "trim_box_px": [
+        38,
+        38,
+        2588,
+        3338
+      ],
+      "background": "dark-full",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
+        "placement": [
+          178,
+          220,
+          867,
+          289
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/orbit-stroke-steel.png",
+        "sha256": "91fb6983ecaebb1c0ae339337c4eb30b7ddf047f9a66e6780c69379c4a9b6a62",
+        "placement": [
+          1746,
+          1644,
+          714,
+          89
+        ]
+      },
+      "live_content_zones": [
+        {
+          "id": "document-title",
+          "rect_px": [
+            293,
+            1292,
+            1581,
+            726
+          ],
+          "rect_trim_ratio": [
+            0.1,
+            0.38,
+            0.62,
+            0.22
+          ]
+        },
+        {
+          "id": "document-subtitle",
+          "rect_px": [
+            293,
+            2084,
+            1479,
+            330
+          ],
+          "rect_trim_ratio": [
+            0.1,
+            0.62,
+            0.58,
+            0.1
+          ]
+        }
+      ],
+      "master_type": "raster-print-composition-from-approved-sources",
+      "editable_source": "brand/templates/print-physical/template-specs.json",
+      "color_policy": {
+        "png": "sRGB/RGBA source art",
+        "tiff": "CMYK conversion companion without vendor ICC claim",
+        "pdf": "vendor-neutral exact-page-size source PDF; printer preflight required"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/print-physical/wave3/document-cover.png",
+          "sha256": "f8cfae94aada6ca86ddc96eb1d7fadca1def3028887beee90e8017e835a430a1",
+          "bytes": 394589
+        },
+        "png": {
+          "path": "brand/exports/print/wave3/business-document/png/document-cover.png",
+          "sha256": "f8cfae94aada6ca86ddc96eb1d7fadca1def3028887beee90e8017e835a430a1",
+          "bytes": 394589
+        },
+        "tiff": {
+          "path": "brand/exports/print/wave3/business-document/tiff/document-cover.tiff",
+          "sha256": "d7e6fcffb308cd44de66806197cb018ca1d4d425d38f252c2688d69acb3da3a7",
+          "bytes": 2764500
+        },
+        "pdf": {
+          "path": "brand/exports/print/wave3/business-document/pdf/document-cover.pdf",
+          "sha256": "241dd188c863efc04b33d3a5ea21c5b8aced03061d0db67f0d9e25745618b7b5",
+          "bytes": 599041
+        }
+      },
+      "qa_status": "generated-pending-contact-sheet-review"
+    },
+    {
+      "id": "print-collateral-letter",
+      "family": "print-collateral",
+      "dpi": 300,
+      "trim_in": [
+        8.5,
+        11.0
+      ],
+      "bleed_in": 0.125,
+      "full_pixel_dimensions": [
+        2625,
+        3375
+      ],
+      "trim_box_px": [
+        38,
+        38,
+        2588,
+        3338
+      ],
+      "background": "dark-full",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-orb.png",
+        "sha256": "873a6d3692b0e4fba8cdac405c23a3d7e9cd7cfb2302bb78e068c6a4dc605be1",
+        "placement": [
+          2116,
+          220,
+          332,
+          332
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/divider-rose.png",
+        "sha256": "967536183268da2ef62c838220f57b1882e524c6608ff3346b2710a6c9a08dfa",
+        "placement": [
+          178,
+          3005,
+          816,
+          102
+        ]
+      },
+      "live_content_zones": [
+        {
+          "id": "headline",
+          "rect_px": [
+            268,
+            434,
+            1683,
+            528
+          ],
+          "rect_trim_ratio": [
+            0.09,
+            0.12,
+            0.66,
+            0.16
+          ]
+        },
+        {
+          "id": "body",
+          "rect_px": [
+            268,
+            1160,
+            1836,
+            1386
+          ],
+          "rect_trim_ratio": [
+            0.09,
+            0.34,
+            0.72,
+            0.42
+          ]
+        },
+        {
+          "id": "call-to-action",
+          "rect_px": [
+            268,
+            2678,
+            1326,
+            264
+          ],
+          "rect_trim_ratio": [
+            0.09,
+            0.8,
+            0.52,
+            0.08
+          ]
+        }
+      ],
+      "master_type": "raster-print-composition-from-approved-sources",
+      "editable_source": "brand/templates/print-physical/template-specs.json",
+      "color_policy": {
+        "png": "sRGB/RGBA source art",
+        "tiff": "CMYK conversion companion without vendor ICC claim",
+        "pdf": "vendor-neutral exact-page-size source PDF; printer preflight required"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/print-physical/wave3/print-collateral-letter.png",
+          "sha256": "6cbe46a6626756cdbfc717f54ad17b277771d581b7a650b3e632f76687b4c4b6",
+          "bytes": 283440
+        },
+        "png": {
+          "path": "brand/exports/print/wave3/print-collateral/png/print-collateral-letter.png",
+          "sha256": "6cbe46a6626756cdbfc717f54ad17b277771d581b7a650b3e632f76687b4c4b6",
+          "bytes": 283440
+        },
+        "tiff": {
+          "path": "brand/exports/print/wave3/print-collateral/tiff/print-collateral-letter.tiff",
+          "sha256": "a8a73e22811a82bd726ae3c3a73167d4d06deca2c913d7e0024b5c6105fcf667",
+          "bytes": 2550402
+        },
+        "pdf": {
+          "path": "brand/exports/print/wave3/print-collateral/pdf/print-collateral-letter.pdf",
+          "sha256": "4983e196a994be5814adf216f1a7e761992017df352080bb32376385fbfd127e",
+          "bytes": 424385
+        }
+      },
+      "qa_status": "generated-pending-contact-sheet-review"
+    }
+  ],
+  "qa": {
+    "contact_sheet": "brand/audit/qa/wave3-print-physical.jpg",
+    "sha256": "2f765947e50fdea434ad27ff329ccb16d661aa572ba775d781fe38570cadfa42",
+    "status": "generated-pending-manual-review"
+  },
+  "specialty_production_status": "placement-guidance-complete; vendor-specific one-color/embroidery/engraving/vinyl/screen-print/foil conversions intentionally pending actual vendor constraints",
+  "publication_guardrails": [
+    "generated static source art contains no invented personal/contact/invoice data",
+    "exact approved LuxSync raster logo artwork only",
+    "CMYK TIFF companions do not claim a vendor ICC profile",
+    "PDFs require selected-printer preflight before manufacture",
+    "specialty-production variants must not be invented from screenshots or generative redraws"
+  ]
+}
