@@ -58,4 +58,6 @@ jobs:
                   brand/audit/qa/wave2-digital-marketing.jpg \
                   brand/manifests/wave2-digital-marketing-manifest.json
           git commit -m "Generate Wave 2 digital marketing kit [skip ci]"
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
