@@ -3,7 +3,7 @@ name: Build LuxSync reference-board audit previews
 on:
   push:
     branches:
-      - feature/brand-board-visual-audit
+      - 'feature/brand-*'
     paths:
       - '.github/workflows/audit-brand-reference-boards.yml'
       - 'scripts/build-brand-board-audit-previews.py'
@@ -32,7 +32,7 @@ jobs:
       - name: Build reference-board previews
         run: python scripts/build-brand-board-audit-previews.py
 
-      - name: Upload board and asset QA previews
+      - name: Upload private short-retention board and asset QA previews
         uses: actions/upload-artifact@v4
         with:
           name: brand-board-audit-previews
