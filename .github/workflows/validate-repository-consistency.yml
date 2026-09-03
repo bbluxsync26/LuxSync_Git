@@ -36,6 +36,9 @@ jobs:
       - name: Validate omnichannel brand derivatives
         run: python scripts/validate-brand-derivatives.py
 
+      - name: Validate approved reference-board assets
+        run: python scripts/validate-approved-board-assets.py
+
       - name: Validate repository source of truth
         run: python scripts/validate-repository-consistency.py
 

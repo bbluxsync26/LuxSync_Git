@@ -1,7 +1,7 @@
 {
-  "version": "1.1-wave1",
+  "version": "1.3-wave1-faithful-layer-integrated",
   "brand": "LuxSync",
-  "status": "wave1-in-progress",
+  "status": "wave1-faithful-approved-board-layer-integrated-pending-final-ci",
   "audited_commit": "c568a8092724e1f1328a7b2c3707af3c31ed83ce",
   "official_slogan": "Where Luxury Lives Intelligently",
   "design_dna": "Plush Drift",
@@ -130,26 +130,29 @@
         "approval-board-only-reference",
         "marketing-art"
       ],
-      "current_disposition": "Protected logos already validated. Remaining non-logo board elements require element-level visual inventory before new masters are created.",
-      "wave": "wave1-and-wave2"
+      "current_disposition": "Full-resolution visual audit complete. Protected logos remain master-governed; hero/composition examples remain reference/template families with live current copy.",
+      "wave": "wave1-and-wave2",
+      "state": "visual-audit-complete"
     },
     {
       "board": "icons_board.png",
       "classification": [
-        "true-vector"
+        "raster-origin-approved-art",
+        "semantic-live-ui-reference"
       ],
-      "current_disposition": "16 clean semantic icons already exist in the validated atomic delivery layer and are skipped unless later visual audit finds a board element not represented.",
+      "current_disposition": "16 faithful metallic board-derived assets generated and QA-passed. Earlier clean vectors remain as simplified semantic UI primitives and are not the sole faithful brand rendering.",
       "wave": "wave1",
-      "state": "complete-pending-board-coverage-crosscheck"
+      "state": "complete-faithful-layer-integrated"
     },
     {
       "board": "dividers_board.png",
       "classification": [
-        "true-vector"
+        "raster-origin-approved-art",
+        "composition-template"
       ],
-      "current_disposition": "12 clean divider/ornament assets already exist in the validated atomic delivery layer and are skipped unless later visual audit finds a board element not represented.",
+      "current_disposition": "42 faithful text-free divider/accent assets generated and QA-passed. Four SECTION separator examples remain template/reference-only because their titles are mutable.",
       "wave": "wave1",
-      "state": "complete-pending-board-coverage-crosscheck"
+      "state": "complete-faithful-layer-integrated"
     },
     {
       "board": "buttons_board.png",
@@ -157,16 +160,18 @@
         "semantic-live-ui-reference",
         "production-technique-variant"
       ],
-      "current_disposition": "Do not restore flattened website buttons. Preserve approved appearance as brand reference and extract only genuinely reusable non-UI artwork or channel-neutral marketing components after visual inventory.",
-      "wave": "wave1-and-wave2"
+      "current_disposition": "Approved visual/state language retained as semantic live UI reference. Do not flatten mutable button labels into production images.",
+      "wave": "wave1-and-wave2",
+      "state": "visual-audit-complete-template-reference"
     },
     {
       "board": "ui_controls_board.png",
       "classification": [
         "semantic-live-ui-reference"
       ],
-      "current_disposition": "Live controls remain semantic UI; approval board remains durable brand evidence. Any non-UI artwork must be isolated only after visual inventory.",
-      "wave": "wave1-and-wave2"
+      "current_disposition": "Approved visual/state language retained as semantic live UI reference. Mutable data and example claims remain live and require validation.",
+      "wave": "wave1-and-wave2",
+      "state": "visual-audit-complete-template-reference"
     },
     {
       "board": "product_cards_board.png",
@@ -175,8 +180,9 @@
         "composition-template",
         "marketing-art"
       ],
-      "current_disposition": "Do not restore flattened commerce cards as live UI. Preserve/rebuild approved reusable marketing compositions or decorative components after visual inventory.",
-      "wave": "wave2"
+      "current_disposition": "Approved category-card composition retained for Wave 2 template/marketing work. Conceptual imagery or commerce content is not validated live catalog data.",
+      "wave": "wave2",
+      "state": "visual-audit-complete-wave2-template"
     },
     {
       "board": "stationery_board.png",
@@ -186,16 +192,17 @@
         "raster-origin",
         "production-technique-variant"
       ],
-      "current_disposition": "Stationery is part of the omnichannel brand and must be rebuilt/preserved as print-capable templates/components after element-level visual inventory.",
-      "wave": "wave3"
+      "current_disposition": "Approved stationery composition retained for Wave 3 print/template work. Placeholder identity/contact data on the board is not production data.",
+      "wave": "wave3",
+      "state": "visual-audit-complete-wave3-template"
     }
   ],
   "known_omnichannel_gaps": [
-    "Element-level visual inventory of non-logo approval-board artwork is not yet committed.",
-    "Most validated atomic assets have digital SVG/PNG/WebP only and do not yet have justified PDF/EPS/TIFF/specialty production variants.",
-    "Stationery, merchandise, apparel, signage, email and broader marketing export families are not yet built as a complete omnichannel delivery package."
+    "Wave 2 broader digital/marketing compositions remain to be built with current live copy and validated data.",
+    "Wave 3 print/physical production remains to be built, including stationery, merchandise/apparel/signage and technically justified PDF/EPS/TIFF or specialty variants.",
+    "Board-derived raster-origin artworks retain their approved dark-board-background masters; transparency or specialty-production variants must be created only when technically justified without altering the approved masters."
   ],
-  "next_checkpoint": "Wave 1 Checkpoint 1: visually inspect every element on brand/reference-boards, map each to an existing validated asset or a missing master, and create only missing faithful masters/justified derivatives. The account-access ambient digital derivative batch is complete and must be skipped unless its source or QA evidence changes.",
+  "next_checkpoint": "Run full repository CI with approved-board validation enabled. If green, mark Wave 1 complete and resume PR-BRAND-001 at Wave 2 without regenerating the validated 58-asset faithful layer.",
   "generated_derivative_batches": {
     "account-access-ambient": {
       "renderer": "browser-svg-to-raster",
@@ -324,5 +331,67 @@
       ]
     }
   },
-  "last_derivative_render_source_commit": "a7bf46d2a76a5f7a2f04c1bc4c4c900b221243f8"
+  "last_derivative_render_source_commit": "a7bf46d2a76a5f7a2f04c1bc4c4c900b221243f8",
+  "reference_board_visual_audit": {
+    "status": "complete",
+    "pixel_access": "full-resolution-private-audit-artifact",
+    "result": "Current semantic icon/divider layer is not a faithful visual match to the approved boards; faithful board-derived assets have been generated separately for controlled promotion.",
+    "approved_reusable_asset_count": 58,
+    "approved_icon_count": 16,
+    "approved_divider_accent_count": 42,
+    "generated_manifest": "brand/manifests/approved-board-asset-manifest.json",
+    "template_reference_only": [
+      {
+        "board": "brand/reference-boards/dividers_board.png",
+        "family": "section-separators",
+        "count": 4,
+        "reason": "Approved layout/template family contains placeholder SECTION text; preserve as reference/template rather than baking mutable text into production art."
+      },
+      {
+        "board": "brand/reference-boards/buttons_board.png",
+        "family": "buttons-and-cta-states",
+        "reason": "Approved semantic UI/component language; implement with live text and tokens, not flattened button screenshots."
+      },
+      {
+        "board": "brand/reference-boards/product_cards_board.png",
+        "family": "smart-home-category-cards",
+        "reason": "Approved marketing/composition direction; conceptual devices and mutable commerce content are not validated live catalog facts."
+      },
+      {
+        "board": "brand/reference-boards/stationery_board.png",
+        "family": "stationery-and-print-suite",
+        "reason": "Approved composition/template direction includes placeholder identity/contact data; rebuild as templates with real/live data in Wave 3."
+      },
+      {
+        "board": "brand/reference-boards/ui_controls_board.png",
+        "family": "ui-controls-and-product-meta",
+        "reason": "Approved semantic UI reference includes mutable or unsupported example claims; implement as live UI and validated data, not flattened production imagery."
+      },
+      {
+        "board": "brand/reference-boards/approved_brand_board.png",
+        "family": "hero-banner-examples",
+        "reason": "Approved composition direction contains baked example copy; preserve as reference and rebuild with current live copy/assets in Wave 2."
+      }
+    ]
+  },
+  "approved_board_delivery_layer": {
+    "manifest": "brand/manifests/approved-board-asset-manifest.json",
+    "visual_inventory": "brand/audit/reference-board-visual-inventory.md",
+    "status": "faithful-approved-visual-layer",
+    "asset_count": 58,
+    "families": {
+      "metallic_icons": 16,
+      "dividers_accents": 42
+    },
+    "master_root": "brand/masters/approved-board-raster/",
+    "digital_export_root": "brand/exports/digital/approved/",
+    "format_contract": [
+      "master-png",
+      "png",
+      "lossless-webp",
+      "svg-fidelity-container"
+    ],
+    "usage_rule": "Prefer this layer when the approved metallic LuxSync artwork itself is intended. Retain clean semantic vectors for compact/scalable live UI where technically appropriate.",
+    "idempotence_rule": "Skip regeneration when source-board hash, crop geometry, output hashes and QA evidence remain valid."
+  }
 }

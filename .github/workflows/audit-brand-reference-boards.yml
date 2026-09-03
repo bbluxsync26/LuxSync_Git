@@ -1,0 +1,47 @@
+name: Build LuxSync reference-board audit previews
+
+on:
+  push:
+    branches:
+      - 'feature/brand-*'
+    paths:
+      - '.github/workflows/audit-brand-reference-boards.yml'
+      - 'scripts/build-brand-board-audit-previews.py'
+      - 'brand/reference-boards/**'
+      - 'brand/audit/qa/approved-*-board-derived.jpg'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install preview dependency
+        run: python -m pip install pillow
+
+      - name: Build reference-board previews
+        run: python scripts/build-brand-board-audit-previews.py
+
+      - name: Upload private short-retention board and asset QA previews
+        uses: actions/upload-artifact@v4
+        with:
+          name: brand-board-audit-previews
+          path: |
+            brand/reference-boards/*.png
+            brand/audit/tmp-board-previews/
+            brand/assets/qa/icons-contact-sheet.jpg
+            brand/assets/qa/dividers-contact-sheet.jpg
+            brand/audit/qa/approved-icons-board-derived.jpg
+            brand/audit/qa/approved-dividers-board-derived.jpg
+          if-no-files-found: error
+          retention-days: 1
