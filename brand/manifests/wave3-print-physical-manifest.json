@@ -85,7 +85,7 @@
         },
         "pdf": {
           "path": "brand/exports/print/wave3/stationery/pdf/business-card-front.pdf",
-          "sha256": "5101f1207550d8f4d34559a30acff5999129aec208cde1556a0c63b954122e93",
+          "sha256": "749ad2be008d62116a1712436735330f3792461054f7dafe2cac6d6fd7757059",
           "bytes": 221359
         }
       },
@@ -174,7 +174,7 @@
         },
         "pdf": {
           "path": "brand/exports/print/wave3/stationery/pdf/business-card-back.pdf",
-          "sha256": "f2777ae16dd5006b335975cf45c1c6158604e85185618d3111b532b853e4ac54",
+          "sha256": "d116c9925f2600c807fc215d3579d93dc5dc3864ea95fd8638ffa7392a06a997",
           "bytes": 53108
         }
       },
@@ -278,7 +278,7 @@
         },
         "pdf": {
           "path": "brand/exports/print/wave3/stationery/pdf/letterhead.pdf",
-          "sha256": "5c688c02f0c8f3be9d7811e9dd20ff041bf480da7d70d1876734a6fe88d49b67",
+          "sha256": "86651eea815f3111e5e118e3d12c659194d5a573a752d41e0912e50688e0702b",
           "bytes": 275865
         }
       },
@@ -382,7 +382,7 @@
         },
         "pdf": {
           "path": "brand/exports/print/wave3/stationery/pdf/envelope-number-10.pdf",
-          "sha256": "1b6788e419b2e1ecbb50459ce4cd2add47c2dd7ca4bc3a3ba7013202201348c6",
+          "sha256": "fb0205d4f8fc49c3832435f4efc6fe5577f735e6c2c76cc77a5480d590d711d3",
           "bytes": 226518
         }
       },
@@ -471,7 +471,7 @@
         },
         "pdf": {
           "path": "brand/exports/print/wave3/stationery/pdf/note-card.pdf",
-          "sha256": "dfa58fd09e8fb08e56922aec2992fcd59fe6d3b97861db634d88f79371da1a80",
+          "sha256": "ffaf13398f79042b36715c2fd3e34df5c1972fafb17c06ec18300492c66ad99b",
           "bytes": 353417
         }
       },
@@ -590,7 +590,7 @@
         },
         "pdf": {
           "path": "brand/exports/print/wave3/business-document/pdf/invoice-header.pdf",
-          "sha256": "4033dc5e870b5d151c2c224bfa5b3debde1345d5ee18193f00b253dd331d7d9a",
+          "sha256": "f10c22bff074593ff37d38806e9496b2260fe7760cf1a9ee269891835f8947ea",
           "bytes": 229235
         }
       },
@@ -694,7 +694,7 @@
         },
         "pdf": {
           "path": "brand/exports/print/wave3/business-document/pdf/document-cover.pdf",
-          "sha256": "241dd188c863efc04b33d3a5ea21c5b8aced03061d0db67f0d9e25745618b7b5",
+          "sha256": "ab1a0d5cf6e38901e6bb8fb59810b412e99d50ca9be978f9f0abb4415115ce75",
           "bytes": 599041
         }
       },
@@ -813,7 +813,7 @@
         },
         "pdf": {
           "path": "brand/exports/print/wave3/print-collateral/pdf/print-collateral-letter.pdf",
-          "sha256": "4983e196a994be5814adf216f1a7e761992017df352080bb32376385fbfd127e",
+          "sha256": "404f0fddf7f56d4f0268ba286fa4a906113a33f23615089297cb13339c944b68",
           "bytes": 424385
         }
       },
