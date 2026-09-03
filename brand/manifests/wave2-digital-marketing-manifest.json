@@ -3,7 +3,7 @@
   "brand": "LuxSync",
   "prompt": "PR-BRAND-001",
   "wave": "wave2",
-  "status": "generated-pending-manual-qa-and-pr-validation",
+  "status": "qa-passed",
   "brand_system": "LuxSync Production Raster v5",
   "design_dna": "Plush Drift",
   "official_slogan": "Where Luxury Lives Intelligently",
@@ -94,7 +94,7 @@
           "lossless": true
         }
       },
-      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+      "qa_status": "passed"
     },
     {
       "id": "social-portrait-editorial",
@@ -156,7 +156,7 @@
           "lossless": true
         }
       },
-      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+      "qa_status": "passed"
     },
     {
       "id": "social-story-editorial",
@@ -218,7 +218,7 @@
           "lossless": true
         }
       },
-      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+      "qa_status": "passed"
     },
     {
       "id": "social-landscape-editorial",
@@ -280,7 +280,7 @@
           "lossless": true
         }
       },
-      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+      "qa_status": "passed"
     },
     {
       "id": "presentation-title-frame",
@@ -342,7 +342,7 @@
           "lossless": true
         }
       },
-      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+      "qa_status": "passed"
     },
     {
       "id": "presentation-section-frame",
@@ -404,7 +404,7 @@
           "lossless": true
         }
       },
-      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+      "qa_status": "passed"
     },
     {
       "id": "campaign-landscape-frame",
@@ -466,7 +466,7 @@
           "lossless": true
         }
       },
-      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+      "qa_status": "passed"
     },
     {
       "id": "campaign-square-frame",
@@ -528,7 +528,7 @@
           "lossless": true
         }
       },
-      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+      "qa_status": "passed"
     },
     {
       "id": "video-corner-bug-overlay",
@@ -580,7 +580,7 @@
           "lossless": true
         }
       },
-      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+      "qa_status": "passed"
     },
     {
       "id": "video-lower-third-overlay",
@@ -642,13 +642,15 @@
           "lossless": true
         }
       },
-      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+      "qa_status": "passed"
     }
   ],
   "qa": {
     "contact_sheet": "brand/audit/qa/wave2-digital-marketing.jpg",
     "sha256": "c22d77b4b92e8ec0d02ad06d9ed626e6dca24e66171a258977327ede2f7df32e",
-    "status": "generated-pending-manual-review"
+    "status": "passed-manual-review",
+    "approval_record": "brand/audit/wave2-digital-marketing-qa-approval.json",
+    "approval_record_sha256": "fbbdf8dbcad55ff53155abda89db5c6c2de800c9898f248771e344715dc54b68"
   },
   "publication_guardrails": [
     "static frames contain no mutable campaign copy or commerce facts",
