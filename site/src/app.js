@@ -358,6 +358,12 @@ function humanize(value = '') {
   return String(value).replaceAll('_', ' ').replace(/\b\w/g, (m) => m.toUpperCase());
 }
 
+
+function recommendedBundle(b){const e=(b.result?.recommended_experiences||[]).map(x=>x.name),r=[["Entry & Access",/departure|away|vacation|guest|opening|closing/i],["Lighting & Ambience",/welcome|goodnight|morning|evening|night path|cinema|entertain|relax|accessible/i],["Comfort & Climate",/climate|morning|goodnight|guest/i],["Property Awareness",/protect|pulse|turnover|away|vacation/i],["Water Protection",/water/i],["Energy & Power",/energy/i],["Entertainment & Ambience",/cinema|entertain|relax/i]];return{id:"blueprint-"+b.id,name:"My LuxSync Recommended Bundle",foundation:b.result?.recommended_foundation?.label||"Compatibility review recommended",experiences:e,families:r.filter(([,x])=>e.some(n=>x.test(n))).map(([n])=>n)}}
+function readCart(){try{return JSON.parse(localStorage.getItem("luxsyncCart")||"[]")}catch{return[]}}
+function writeCart(c){localStorage.setItem("luxsyncCart",JSON.stringify(c));qsa("[data-cart-count]").forEach(n=>n.textContent=String(c.length))}
+function itemList(x=[]){return x.length?"<ul>"+x.map(n=>"<li>"+escapeHtml(n)+"</li>").join("")+"</ul>":"<p>LuxSync will confirm the right product families during compatibility review.</p>"}
+
 function initBlueprint() {
   const root = qs('#blueprint-app');
   if (!root) return;
@@ -371,7 +377,9 @@ function initBlueprint() {
   const path = result.implementation_path || {};
   const pathLabel = path.label || path.name || humanize(path.id);
   const ctaLabel = result.next_best_action?.label || 'Talk With LuxSync';
-  root.innerHTML = `<div class="blueprint-hero"><p class="blueprint-id">Blueprint ${escapeHtml(blueprint.id)}</p><h2>Your intelligent-living direction is ready.</h2><p>LuxSync starts with your desired experiences, then uses compatibility and implementation context to guide the technology behind them.</p><div class="blueprint-grid"><article class="blueprint-card"><h3>Your Space</h3><p>${escapeHtml(humanize(profile.property_type || 'Not specified'))}${profile.square_feet_band ? ` · ${escapeHtml(humanize(profile.square_feet_band))}` : ''}</p></article><article class="blueprint-card"><h3>Recommended Foundation</h3><p>${escapeHtml(result.recommended_foundation?.label || 'Compatibility review recommended')}</p></article><article class="blueprint-card"><h3>Recommended Experiences</h3>${blueprintList(result.recommended_experiences)}</article><article class="blueprint-card"><h3>Optional Experiences</h3>${blueprintList(result.optional_experiences)}</article><article class="blueprint-card"><h3>Implementation Path</h3><p>${escapeHtml(pathLabel)}</p></article><article class="blueprint-card"><h3>Why LuxSync Chose This</h3><p>Your recommendations reflect the routines, priorities, property context, pain points, implementation preference, and technology information you shared.</p></article></div><div class="button-row blueprint-actions"><a class="button" href="/contact/?intent=consultation&source=blueprint">${escapeHtml(ctaLabel)}</a><a class="button button-secondary" href="/shop/">Explore Product Families</a><button class="button button-secondary" type="button" id="restart-blueprint">Start Over</button></div></div>`;
+  const bundle = recommendedBundle(blueprint);
+  root.innerHTML = `<div class="blueprint-hero"><p class="blueprint-id">Blueprint ${escapeHtml(blueprint.id)}</p><h2>Your intelligent-living direction is ready.</h2><p>LuxSync starts with your desired experiences, then uses compatibility and implementation context to guide the technology behind them.</p><div class="blueprint-grid"><article class="blueprint-card"><h3>Your Space</h3><p>${escapeHtml(humanize(profile.property_type || 'Not specified'))}${profile.square_feet_band ? ` · ${escapeHtml(humanize(profile.square_feet_band))}` : ''}</p></article><article class="blueprint-card"><h3>Recommended Foundation</h3><p>${escapeHtml(result.recommended_foundation?.label || 'Compatibility review recommended')}</p></article><article class="blueprint-card"><h3>Recommended Experiences</h3>${blueprintList(result.recommended_experiences)}</article><article class="blueprint-card"><h3>Optional Experiences</h3>${blueprintList(result.optional_experiences)}</article><article class="blueprint-card"><h3>Implementation Path</h3><p>${escapeHtml(pathLabel)}</p></article><article class="blueprint-card"><h3>Why LuxSync Chose This</h3><p>Your recommendations reflect the routines, priorities, property context, pain points, implementation preference, and technology information you shared.</p></article></div><article class="recommended-bundle"><p class="eyebrow">Your Recommended Bundle</p><h3>${escapeHtml(bundle.name)}</h3><p>One planning bundle built from your recommended foundation and experiences.</p><div class="bundle-columns"><div><h4>Foundation</h4><p>${escapeHtml(bundle.foundation)}</p></div><div><h4>Experiences</h4>${itemList(bundle.experiences)}</div><div><h4>Product families to validate</h4>${itemList(bundle.families)}</div></div><p class="bundle-disclaimer">Exact products, compatibility, availability, and pricing are confirmed before checkout.</p><div class="button-row"><button class="button" type="button" id="add-bundle-to-cart">Add Recommended Bundle to Cart</button><a class="button button-secondary" href="/shop/#planning-cart">View Cart</a></div><p id="bundle-cart-status" class="cart-status" role="status" aria-live="polite"></p></article><div class="button-row blueprint-actions"><a class="button" href="/contact/?intent=consultation&source=blueprint">${escapeHtml(ctaLabel)}</a><a class="button button-secondary" href="/shop/">Explore Product Families</a><button class="button button-secondary" type="button" id="restart-blueprint">Start Over</button></div></div>`;
+  qs("#add-bundle-to-cart",root)?.addEventListener("click",e=>{const c=readCart().filter(x=>x.id!==bundle.id);c.push(bundle);writeCart(c);e.currentTarget.textContent="Bundle Added";qs("#bundle-cart-status",root).textContent="Your recommended bundle is in the cart and ready for validation."});
   qs('#restart-blueprint', root)?.addEventListener('click', () => {
     localStorage.removeItem('luxsyncBlueprint');
     localStorage.removeItem('luxsyncProfile');
@@ -379,6 +387,9 @@ function initBlueprint() {
     window.location.assign('/find-my-luxsync-solution/');
   });
 }
+
+
+function initCart(){const c=readCart();writeCart(c);const r=qs("#planning-cart");if(!r)return;if(!c.length){r.innerHTML='<div class="empty-state"><h2>Your cart is ready for a Blueprint.</h2><p>Complete the Concierge and add your recommended bundle here.</p><a class="button" href="/find-my-luxsync-solution/">Find My LuxSync Solution</a></div>';return}r.innerHTML='<div class="section-heading"><p class="eyebrow">Planning Cart</p><h2>Your recommended bundle</h2><p>Review the bundled direction before LuxSync validates exact products, compatibility, availability, and pricing.</p></div><div class="cart-items">'+c.map(x=>'<article class="cart-item"><div><span class="status-chip">Blueprint bundle</span><h3>'+escapeHtml(x.name)+'</h3><p>'+escapeHtml(x.foundation)+'</p></div><div><h4>Included experiences</h4>'+itemList(x.experiences)+'</div><div><h4>Product families</h4>'+itemList(x.families)+'</div><button class="text-link cart-remove" type="button" data-remove-cart="'+escapeHtml(x.id)+'">Remove</button></article>').join("")+'</div><div class="cart-checkout"><p><strong>Next step:</strong> LuxSync will translate this planning bundle into validated, purchasable products.</p><a class="button" href="'+(CONFIG.commerceUrl?escapeHtml(CONFIG.commerceUrl):"/contact/?intent=product_information&source=cart")+'">'+(CONFIG.commerceUrl?"Continue to Store":"Validate Bundle With LuxSync")+'</a></div>';qsa("[data-remove-cart]",r).forEach(b=>b.addEventListener("click",()=>{writeCart(readCart().filter(x=>x.id!==b.dataset.removeCart));initCart()}))}
 
 const contactIntents = {
   support: { label: 'Support', description: 'Existing product, solution, setup, compatibility, order, or troubleshooting help.', route: 'support@luxsync.net', submit: 'Send Support Request' },
@@ -569,6 +580,8 @@ function initContact() {
   render();
 }
 
+function initLogin(){const f=qs("#login-form");if(!f)return;f.addEventListener("submit",e=>{e.preventDefault();const s=qs("#login-status");if(CONFIG.commerceUrl){window.location.assign(CONFIG.commerceUrl);return}s.textContent="The secure Commerce Plus account connection is not configured yet. Contact LuxSync support for access.";});}
+
 function initCommerceLink() {
   const link = qs('#commerce-link');
   if (!link || !CONFIG.commerceUrl) return;
@@ -583,3 +596,4 @@ initConcierge();
 initBlueprint();
 initContact();
 initCommerceLink();
+initLogin();

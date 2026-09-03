@@ -14,7 +14,8 @@
       "blueprint": "website/pages/home.md",
       "content_source": "content/homepage.md",
       "production_assets": [
-        "brand/assets/logos/png/luxsync-horizontal-combo.png"
+        "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "brand/assets/heroes/homepage-intelligent-living.png"
       ],
       "visual_recipe": "live-editorial-hero"
     },
@@ -113,7 +114,9 @@
       "blueprint": "website/pages/about.md",
       "content_source": "content/about.md",
       "production_assets": [
-        "brand/assets/logos/png/luxsync-horizontal-combo.png"
+        "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "brand/assets/leadership/bridgette-beardsley.jpg",
+        "brand/assets/leadership/sheldon-bardol.jpg"
       ],
       "visual_recipe": "live-founder-layout"
     },
@@ -134,6 +137,25 @@
         "brand/assets/logos/png/luxsync-orb.png"
       ],
       "visual_recipe": "live-adaptive-contact-form"
+    },
+    {
+      "route": "/account",
+      "blueprint": "website/pages/account-login.md",
+      "content_source": "website/pages/account-login.md",
+      "production_assets": [
+        "brand/assets/heroes/member-access.png",
+        "brand/assets/logos/png/luxsync-horizontal-combo.png"
+      ],
+      "visual_recipe": "live-vip-account-access"
+    },
+    {
+      "route": "/account/welcome",
+      "blueprint": "website/pages/account-login.md",
+      "content_source": "website/pages/account-login.md",
+      "production_assets": [
+        "brand/assets/heroes/member-access.png"
+      ],
+      "visual_recipe": "live-member-welcome"
     }
   ]
 }

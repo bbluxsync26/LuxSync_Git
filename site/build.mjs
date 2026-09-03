@@ -7,6 +7,8 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
 const DIST = path.join(HERE, 'dist');
 const BRAND = path.join(ROOT, 'brand', 'assets', 'logos', 'png');
+const ICONS = path.join(ROOT, 'brand', 'assets', 'icons', 'webp');
+const DIVIDERS = path.join(ROOT, 'brand', 'assets', 'dividers', 'webp');
 const ENGINE = path.join(ROOT, 'website', 'src', 'concierge', 'luxsync-concierge-engine.v1.json');
 const FAQ_SOURCE = path.join(ROOT, 'content', 'faqs.md');
 const MANIFEST = JSON.parse(fs.readFileSync(path.join(ROOT, 'website', 'implementation-manifest.json'), 'utf8'));
@@ -97,22 +99,27 @@ const solutionPages = {
   }
 };
 
+function iconFor(title = '') {
+  const rules = [['lighting-bulb', /light|ambience|evening|morning|night/i], ['smart-lock', /entry|access|rental|guest/i], ['climate-thermostat', /climate|comfort/i], ['security-shield-check', /protect|security|awareness|pulse/i], ['energy-bolt', /energy|power/i], ['music-note', /entertain|cinema|relax/i], ['automation-home-gear', /home|residential|family|professional/i], ['concierge-bell', /concierge|bundle|solution/i], ['support-headset', /support|help/i], ['faq-chat', /faq|question/i], ['installation-tools', /install|setup/i], ['camera', /camera|property/i], ['calendar', /turnover|schedule/i], ['location-pin', /office|location/i], ['phone', /contact|consultation/i], ['shades-window', /shade|window/i]];
+  return (rules.find(([, rule]) => rule.test(title)) || ['automation-home-gear'])[0];
+}
+
 function card(title, body, href = '') {
   const tag = href ? 'a' : 'article';
   const attr = href ? ` href="${href}"` : '';
-  return `<${tag} class="lux-card"${attr}><span class="card-glint" aria-hidden="true"></span><h3>${escapeHtml(title)}</h3><p>${escapeHtml(body)}</p>${href ? '<span class="card-link">Explore →</span>' : ''}</${tag}>`;
+  return `<${tag} class="lux-card"${attr}><span class="card-glint" aria-hidden="true"></span><img class="card-icon" src="/assets/icons/${iconFor(title)}.webp" alt=""><h3>${escapeHtml(title)}</h3><p>${escapeHtml(body)}</p>${href ? '<span class="card-link">Explore →</span>' : ''}</${tag}>`;
 }
 
 function header(activeRoute) {
   const nav = [
     ['/', 'Home'], ['/solutions/', 'Solutions'], ['/find-my-luxsync-solution/', 'Concierge'], ['/shop/', 'Shop'],
-    ['/guides/', 'Guides'], ['/about/', 'About'], ['/faqs/', 'FAQs'], ['/contact/', 'Contact']
+    ['/guides/', 'Guides'], ['/about/', 'About'], ['/account/', 'Account'], ['/faqs/', 'FAQs'], ['/contact/', 'Contact']
   ];
   const links = nav.map(([href, label]) => {
     const active = activeRoute === href || (href !== '/' && activeRoute.startsWith(href));
     return `<a class="nav-link${active ? ' is-active' : ''}" href="${href}"${active ? ' aria-current="page"' : ''}>${label}</a>`;
   }).join('');
-  return `<header class="site-header"><div class="header-inner"><a class="brand-link" href="/" aria-label="LuxSync home"><img src="/assets/luxsync-horizontal-combo.png" alt="LuxSync"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Menu</span></button><nav id="main-nav" class="main-nav" aria-label="Primary navigation">${links}<a class="button button-small" href="/find-my-luxsync-solution/">${escapeHtml(HOME.primaryCta)}</a></nav></div></header>`;
+  return `<header class="site-header"><div class="header-inner"><a class="brand-link" href="/" aria-label="LuxSync home"><img src="/assets/luxsync-horizontal-combo.png" alt="LuxSync"></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Menu</span></button><nav id="main-nav" class="main-nav" aria-label="Primary navigation">${links}<a class="nav-link cart-nav" href="/shop/#planning-cart">Cart <span class="cart-count" data-cart-count>0</span></a><a class="button button-small" href="/find-my-luxsync-solution/">${escapeHtml(HOME.primaryCta)}</a></nav></div></header>`;
 }
 
 function footer() {
@@ -158,7 +165,7 @@ function shell({ route, title, description, main, bodyClass = '' }) {
 </html>`;
 }
 
-const hero = `<section class="hero"><div class="hero-aura" aria-hidden="true"></div><div class="hero-inner"><div class="hero-copy"><p class="eyebrow">Intelligent living, curated</p><h1>${SLOGAN}</h1><p class="hero-lede">${escapeHtml(HOME.supportingCopy)}</p><div class="button-row"><a class="button" href="/find-my-luxsync-solution/">${escapeHtml(HOME.primaryCta)}</a><a class="button button-secondary" href="/shop/">${escapeHtml(HOME.secondaryCta)}</a><a class="text-link" href="/guides/">${escapeHtml(HOME.supportingCta)} →</a></div></div><div class="hero-visual" aria-label="LuxSync intelligent living concept"><div class="orbital-shell"><img src="/assets/luxsync-orb.png" alt=""><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="orbit orbit-three"></span></div><div class="hero-stat"><span>Outcome first</span><strong>Lifestyle → Experience → Intelligence → Technology</strong></div></div></div></section>`;
+const hero = `<section class="hero"><div class="hero-aura" aria-hidden="true"></div><div class="hero-inner"><div class="hero-copy"><p class="eyebrow">Intelligent living, curated</p><h1>${SLOGAN}</h1><p class="hero-lede">${escapeHtml(HOME.supportingCopy)}</p><div class="button-row"><a class="button" href="/find-my-luxsync-solution/">${escapeHtml(HOME.primaryCta)}</a><a class="button button-secondary" href="/shop/">${escapeHtml(HOME.secondaryCta)}</a><a class="text-link" href="/guides/">${escapeHtml(HOME.supportingCta)} →</a></div></div><div class="hero-visual hero-photo" aria-label="A refined intelligent living interior"><img class="hero-photo__image" src="/assets/homepage-intelligent-living.png" alt="A refined modern living room with integrated lighting and quiet technology"><div class="orbital-shell"><img src="/assets/luxsync-orb.png" alt=""><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="orbit orbit-three"></span></div><div class="hero-stat"><span>Outcome first</span><strong>Lifestyle → Experience → Intelligence → Technology</strong></div></div></div></section>`;
 
 function homePage() {
   const featured = [
@@ -174,7 +181,7 @@ function homePage() {
 <section class="section concierge-teaser"><div class="section-heading"><p class="eyebrow">LuxSync Intelligent Living Concierge</p><h2>Tell us how you want your space to live.</h2><p>LuxSync starts with your space, routines, priorities, and existing technology. We translate those goals into recommended intelligent-living experiences, compatible technology categories, and a phased Blueprint you can build at your own pace.</p><div class="button-row"><a class="button" href="/find-my-luxsync-solution/">${escapeHtml(HOME.primaryCta)}</a><a class="text-link" href="/my-luxsync-blueprint/">See how the Blueprint works →</a></div></div><div class="journey-line" aria-label="Lifestyle to technology journey"><span>Lifestyle</span><i></i><span>Experience</span><i></i><span>Intelligence</span><i></i><span>Technology</span></div></section>
 <section class="section"><div class="section-heading"><p class="eyebrow">Product Collections</p><h2>A curated foundation for intelligent living.</h2><p>Browse LuxSync's approved product-family structure. Exact live products, pricing, inventory, and compatibility come from validated Commerce Plus data.</p></div><div id="home-catalog" class="card-grid"></div><div class="section-cta"><a class="button button-secondary" href="/shop/">Shop Collections</a></div></section>
 <section class="section section-soft"><div class="section-heading"><p class="eyebrow">How It Works</p><h2>Four calm steps from idea to intelligent living.</h2></div><ol class="steps"><li><span>01</span><div><h3>Discover</h3><p>Tell LuxSync about the space, routine, property, or outcome.</p></div></li><li><span>02</span><div><h3>Design</h3><p>Receive recommended Experiences and My LuxSync Blueprint.</p></div></li><li><span>03</span><div><h3>Choose</h3><p>Select validated compatible products or bundles.</p></div></li><li><span>04</span><div><h3>Evolve</h3><p>Add compatible experiences over time.</p></div></li></ol></section>
-<section class="section"><div class="section-heading"><p class="eyebrow">Meet the Founders</p><h2>Technology strategy meets customer-centered operations.</h2></div><div class="founder-grid"><article class="founder-card"><div class="founder-monogram">BB</div><h3>Bridgette Beardsley</h3><p class="role">${escapeHtml(LEADERSHIP.bridgette.role)}</p><p>${escapeHtml(LEADERSHIP.bridgette.compactBiography)}</p></article><article class="founder-card"><div class="founder-monogram">SB</div><h3>Sheldon Bardol</h3><p class="role">${escapeHtml(LEADERSHIP.sheldon.role)}</p><p>${escapeHtml(LEADERSHIP.sheldon.compactBiography)}</p></article></div><div class="section-cta"><a class="text-link" href="/about/">Meet LuxSync leadership →</a></div></section>
+<section class="section"><div class="section-heading"><p class="eyebrow">Meet the Founders</p><h2>Technology strategy meets customer-centered operations.</h2></div><div class="founder-grid"><article class="founder-card"><img class="founder-photo" src="/assets/bridgette-beardsley.jpg" alt="Bridgette Beardsley"><h3>Bridgette Beardsley</h3><p class="role">${escapeHtml(LEADERSHIP.bridgette.role)}</p><p>${escapeHtml(LEADERSHIP.bridgette.compactBiography)}</p></article><article class="founder-card"><img class="founder-photo" src="/assets/sheldon-bardol.jpg" alt="Sheldon Bardol"><h3>Sheldon Bardol</h3><p class="role">${escapeHtml(LEADERSHIP.sheldon.role)}</p><p>${escapeHtml(LEADERSHIP.sheldon.compactBiography)}</p></article></div><div class="section-cta"><a class="text-link" href="/about/">Meet LuxSync leadership →</a></div></section>
 <section class="section section-dark"><div class="section-heading"><p class="eyebrow">Frequently Asked Questions</p><h2>Clear answers, without the technical fog.</h2></div><div id="faq-preview" class="faq-list"></div><div class="button-row"><a class="button button-secondary" href="/faqs/">View All FAQs</a><a class="text-link" href="/contact/">Contact LuxSync →</a></div></section>
 <section class="section"><div class="split"><div><p class="eyebrow">ROI Guide Library</p><h2>Choose the guide built for your environment.</h2><p>Explore audience-specific ROI frameworks for offices, senior living, short-term rentals, residential households, families, and aging in place.</p><a class="button" href="/guides/">Get the ROI Guide</a></div><div class="contact-gateway"><a href="/contact/?intent=support"><strong>Get Support</strong><span>Help with an existing product, solution, setup, compatibility question, or order.</span></a><a href="/contact/?intent=general_question"><strong>Ask a Question</strong><span>General information, compatibility, company, or product questions.</span></a><a href="/contact/?intent=consultation"><strong>Request a Consultation</strong><span>Plan a new space, upgrade an existing setup, or review a Blueprint.</span></a></div></div></section>`;
 }
@@ -204,8 +211,12 @@ function blueprintPage() {
 }
 
 function shopPage() {
-  return `<section class="page-hero"><div><p class="eyebrow">LuxSync Shop</p><h1>Curated technology, organized by the life it supports.</h1><p>Explore the approved LuxSync product-family structure and planning bundles. Exact live products, prices, stock, shipping, and compatibility remain governed by validated GoDaddy Commerce Plus data.</p><div class="button-row"><a id="commerce-link" class="button" href="/contact/?intent=product_information">Browse Current Store</a><a class="button button-secondary" href="/find-my-luxsync-solution/">Need Guidance First?</a></div></div></section><section class="section"><div class="section-heading"><p class="eyebrow">Product Families</p><h2>Build from a compatible foundation.</h2></div><div id="shop-families" class="card-grid"></div></section><section class="section section-dark"><div class="section-heading"><p class="eyebrow">Curated Bundle Concepts</p><h2>Clear starting points, validated before sale.</h2></div><div id="shop-bundles" class="card-grid"></div></section><section class="section"><div class="section-heading"><p class="eyebrow">LuxSync Experiences</p><h2>Outcome-first concepts that can map to products, bundles, setup guidance, and automation recommendations.</h2></div><div id="shop-experiences" class="chip-grid"></div></section>`;
+  return `<section class="page-hero"><div><p class="eyebrow">LuxSync Shop</p><h1>Curated technology, organized by the life it supports.</h1><p>Explore the approved LuxSync product-family structure and planning bundles. Exact live products, prices, stock, shipping, and compatibility remain governed by validated GoDaddy Commerce Plus data.</p><div class="button-row"><a id="commerce-link" class="button" href="/contact/?intent=product_information">Browse Current Store</a><a class="button button-secondary" href="/find-my-luxsync-solution/">Need Guidance First?</a></div></div></section><section id="planning-cart" class="section section-soft" aria-live="polite"></section><section class="section"><div class="section-heading"><p class="eyebrow">Product Families</p><h2>Build from a compatible foundation.</h2></div><div id="shop-families" class="card-grid"></div></section><section class="section section-dark"><div class="section-heading"><p class="eyebrow">Curated Bundle Concepts</p><h2>Clear starting points, validated before sale.</h2></div><div id="shop-bundles" class="card-grid"></div></section><section class="section"><div class="section-heading"><p class="eyebrow">LuxSync Experiences</p><h2>Outcome-first concepts that can map to products, bundles, setup guidance, and automation recommendations.</h2></div><div id="shop-experiences" class="chip-grid"></div></section>`;
 }
+
+
+function accountPage(){return `<section class="auth-page"><div class="auth-visual"><img src="/assets/member-access.png" alt=""><div><img src="/assets/luxsync-horizontal-combo.png" alt="LuxSync"><p><p class="eyebrow">Private member access</p><h1>Welcome Back</h1><p>Sign in to continue to your LuxSync account, orders, and saved recommendations.</p></div></div><div class="auth-panel"><form id="login-form" class="auth-card"><h2>Member Sign In</h2><p>Authentication is securely handled by the connected Commerce Plus account service.</p><label>Email address<input type="email" autocomplete="email" required></label><label>Password<input type="password" autocomplete="current-password" required></label><button class="button" type="submit">Continue to Secure Sign In</button><p id="login-status" role="status"></p><a href="/contact/?intent=support">Need account help?</a><a href="/account/welcome/">Preview the welcome page</a></form></div></section>`;}
+function welcomePage(){return `<section class="welcome-hero"><img src="/assets/member-access.png" alt=""><div><p class="eyebrow">LuxSync Member Access</p><h1>Welcome Back</h1><p>Your calm starting point for orders, saved recommendations, support, and account preferences.</p></div></section><section class="section"><div class="card-grid"><a class="lux-card" href="/shop/"><h3>Orders & Shopping</h3><p>Continue with the connected Commerce Plus account experience.</p></a><a class="lux-card" href="/my-luxsync-blueprint/"><h3>Saved Recommendations</h3><p>Return to your latest intelligent-living Blueprint on this device.</p></a><a class="lux-card" href="/contact/?intent=support"><h3>Support</h3><p>Get help with products, orders, setup, or account access.</p></a></div></section>`;}
 
 function guidesPage() {
   const groups = [
@@ -237,6 +248,8 @@ const pageBuilders = {
   '/solutions': solutionsIndex,
   '/shop': shopPage,
   '/guides': guidesPage,
+  '/account': accountPage,
+  '/account/welcome': welcomePage,
   '/about': aboutPage,
   '/faqs': faqPage,
   '/contact': contactPage
@@ -267,14 +280,19 @@ fs.rmSync(DIST, { recursive: true, force: true });
 fs.mkdirSync(DIST, { recursive: true });
 fs.mkdirSync(path.join(DIST, 'assets'), { recursive: true });
 fs.mkdirSync(path.join(DIST, 'data'), { recursive: true });
+fs.mkdirSync(path.join(DIST, 'assets', 'icons'), { recursive: true });
+fs.mkdirSync(path.join(DIST, 'assets', 'dividers'), { recursive: true });
 
 for (const file of ['luxsync-horizontal-combo.png', 'luxsync-horizontal.png', 'luxsync-orb.png']) {
   fs.copyFileSync(path.join(BRAND, file), path.join(DIST, 'assets', file));
 }
+for (const file of fs.readdirSync(ICONS)) fs.copyFileSync(path.join(ICONS,file),path.join(DIST,'assets','icons',file));
+for (const file of fs.readdirSync(DIVIDERS)) fs.copyFileSync(path.join(DIVIDERS,file),path.join(DIST,'assets','dividers',file));
 fs.copyFileSync(ENGINE, path.join(DIST, 'data', 'luxsync-concierge-engine.v1.json'));
 fs.copyFileSync(path.join(HERE, 'src', 'styles.css'), path.join(DIST, 'styles.css'));
 fs.copyFileSync(path.join(HERE, 'src', 'app.js'), path.join(DIST, 'app.js'));
 fs.copyFileSync(path.join(HERE, 'src', 'og.png'), path.join(DIST, 'assets', 'og.png'));
+for (const file of ['bridgette-beardsley.jpg','sheldon-bardol.jpg','homepage-intelligent-living.png','member-access.png']) fs.copyFileSync(path.join(HERE,'src',file),path.join(DIST,'assets',file));
 
 const faqs = parseFaqs(fs.readFileSync(FAQ_SOURCE, 'utf8'));
 fs.writeFileSync(path.join(DIST, 'data', 'faqs.json'), JSON.stringify(faqs, null, 2) + '\n');
@@ -301,4 +319,5 @@ fs.writeFileSync(path.join(DIST, '404.html'), shell({ route: '/404', title: 'Pag
 
 fs.writeFileSync(path.join(DIST, '.htaccess'), `Options -MultiViews\nErrorDocument 404 /404.html\nDirectoryIndex index.html\n`);
 console.log(`Built LuxSync site with ${routes.length} governed routes.`);
+
 
