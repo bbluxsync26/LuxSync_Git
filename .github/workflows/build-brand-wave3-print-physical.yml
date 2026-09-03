@@ -8,6 +8,7 @@ on:
       - '.github/workflows/build-brand-wave3-print-physical.yml'
       - 'scripts/build-wave3-print-physical.py'
       - 'scripts/reconcile-wave3-print-physical-qa.py'
+      - 'scripts/reconcile-wave3-print-physical-governance.py'
       - 'brand/templates/print-physical/**'
       - 'brand/audit/wave3-print-physical-qa-approval.json'
       - 'brand/assets/logos/png/**'
@@ -41,6 +42,9 @@ jobs:
       - name: Reconcile reviewed Wave 3 visual/PDF QA
         run: python scripts/reconcile-wave3-print-physical-qa.py
 
+      - name: Reconcile Wave 3 governance and discovery
+        run: python scripts/reconcile-wave3-print-physical-governance.py
+
       - name: Upload Wave 3 QA preview
         uses: actions/upload-artifact@v4
         with:
@@ -59,7 +63,7 @@ jobs:
           if-no-files-found: error
           retention-days: 1
 
-      - name: Commit generated Wave 3 assets and manifest
+      - name: Commit generated Wave 3 assets, manifest and governance
         shell: bash
         run: |
           if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
@@ -71,8 +75,14 @@ jobs:
           git add brand/masters/print-physical/wave3 \
                   brand/exports/print/wave3 \
                   brand/audit/qa/wave3-print-physical.jpg \
-                  brand/manifests/wave3-print-physical-manifest.json
-          git commit -m "Generate validated Wave 3 print and physical kit [skip ci]"
+                  brand/manifests/wave3-print-physical-manifest.json \
+                  brand/manifests/omnichannel-brand-manifest.json \
+                  brand/audit/brand-build-state.json \
+                  brand/audit/brand-build-report.md \
+                  brand/README.md \
+                  docs/production-asset-library.md \
+                  docs/master-catalog.md
+          git commit -m "Reconcile validated Wave 3 print and physical system [skip ci]"
           git fetch origin "${GITHUB_REF_NAME}"
           git rebase "origin/${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
