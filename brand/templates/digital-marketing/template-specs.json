@@ -1,12 +1,14 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "brand": "LuxSync",
   "brand_system": "LuxSync Production Raster v5",
   "design_dna": "Plush Drift",
   "official_slogan": "Where Luxury Lives Intelligently",
   "source_rules": {
     "protected_logos": "brand/assets/logos/png/",
-    "approved_ornaments": "brand/exports/digital/approved/dividers/png/",
+    "composition_ornaments": "brand/assets/dividers/png/",
+    "faithful_board_ornaments": "brand/exports/digital/approved/dividers/png/",
+    "ornament_selection": "Use the clean transparent validated divider delivery layer for new freeform compositions so edges composite seamlessly. Preserve the faithful board-derived ornament crops separately for exact approved-board reproduction contexts; do not alter or downgrade those masters.",
     "mutable_copy": "live/template-driven",
     "commerce_data": "validated-live-data-only"
   },
@@ -21,7 +23,7 @@
       "logo": "luxsync-orb.png",
       "logo_anchor": "top-right",
       "logo_width_ratio": 0.18,
-      "ornament": "corner-steel-rose-star.png",
+      "ornament": "corner-steel.png",
       "ornament_anchor": "bottom-left",
       "safe_zone": [0.08, 0.12, 0.70, 0.72],
       "transparency": false
@@ -36,7 +38,7 @@
       "logo": "luxsync-horizontal-combo.png",
       "logo_anchor": "bottom-left",
       "logo_width_ratio": 0.42,
-      "ornament": "orbit-dual.png",
+      "ornament": "orbit-stroke-steel.png",
       "ornament_anchor": "top-right",
       "safe_zone": [0.08, 0.10, 0.76, 0.68],
       "transparency": false
@@ -51,7 +53,7 @@
       "logo": "luxsync-orb.png",
       "logo_anchor": "top-left",
       "logo_width_ratio": 0.20,
-      "ornament": "corner-double-arc-rose.png",
+      "ornament": "corner-rose.png",
       "ornament_anchor": "bottom-right",
       "safe_zone": [0.08, 0.22, 0.84, 0.58],
       "transparency": false
@@ -66,7 +68,7 @@
       "logo": "luxsync-horizontal-combo.png",
       "logo_anchor": "bottom-left",
       "logo_width_ratio": 0.34,
-      "ornament": "horizontal-rose-spark.png",
+      "ornament": "divider-rose.png",
       "ornament_anchor": "top-right",
       "safe_zone": [0.07, 0.10, 0.66, 0.62],
       "transparency": false
@@ -81,7 +83,7 @@
       "logo": "luxsync-horizontal-combo.png",
       "logo_anchor": "top-left",
       "logo_width_ratio": 0.28,
-      "ornament": "orbit-dual.png",
+      "ornament": "orbit-stroke-steel.png",
       "ornament_anchor": "right-center",
       "safe_zone": [0.08, 0.30, 0.62, 0.42],
       "transparency": false
@@ -96,7 +98,7 @@
       "logo": "luxsync-orb.png",
       "logo_anchor": "right-center",
       "logo_width_ratio": 0.18,
-      "ornament": "horizontal-steel-star.png",
+      "ornament": "divider-steel.png",
       "ornament_anchor": "bottom-left",
       "safe_zone": [0.08, 0.26, 0.62, 0.42],
       "transparency": false
@@ -111,7 +113,7 @@
       "logo": "luxsync-horizontal-combo.png",
       "logo_anchor": "bottom-left",
       "logo_width_ratio": 0.30,
-      "ornament": "badge-underline-rose-diamond.png",
+      "ornament": "badge-underline-rose.png",
       "ornament_anchor": "top-left",
       "safe_zone": [0.08, 0.16, 0.68, 0.54],
       "transparency": false
@@ -126,7 +128,7 @@
       "logo": "luxsync-orb.png",
       "logo_anchor": "top-right",
       "logo_width_ratio": 0.17,
-      "ornament": "sparkle-divider-soft.png",
+      "ornament": "divider-spark.png",
       "ornament_anchor": "bottom-left",
       "safe_zone": [0.08, 0.16, 0.74, 0.60],
       "transparency": false
@@ -156,7 +158,7 @@
       "logo": "luxsync-horizontal-combo.png",
       "logo_anchor": "lower-third-left",
       "logo_width_ratio": 0.20,
-      "ornament": "horizontal-steel-line.png",
+      "ornament": "divider-steel.png",
       "ornament_anchor": "lower-third-line",
       "safe_zone": [0.24, 0.77, 0.56, 0.12],
       "transparency": true
