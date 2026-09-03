@@ -1,0 +1,12 @@
+# Generated local transport artifacts
+/dist/airo/
+
+# Common local dependency/cache output
+/node_modules/
+__pycache__/
+*.pyc
+
+# Local environment and secret-bearing files
+.env
+.env.*
+!.env.example

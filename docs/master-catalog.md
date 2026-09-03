@@ -3,7 +3,7 @@
 **Status:** Active  
 **Repository:** `bbluxsync26/LuxSync_Git`  
 **Default branch:** `master`  
-**Last updated:** 2026-09-02
+**Last updated:** 2026-09-03
 
 ## Purpose
 
@@ -52,6 +52,7 @@ For merchandising specifically, `content/product-catalog.md` governs current pro
 - **Protected logo artwork:** approved logo masters remain immutable artwork
 - **Approved logo paths:** `brand/assets/logos/png/luxsync-horizontal-combo.png`, `brand/assets/logos/png/luxsync-horizontal.png`, `brand/assets/logos/png/luxsync-orb.png`
 - **Account experience principle:** every customer receives the same high-care, VIP-level welcome and service experience
+- **Website source-control principle:** GitHub `master` owns product truth; Airo consumes a governed package and returns export candidates through GitHub reconciliation
 
 Approved colors:
 
@@ -111,15 +112,16 @@ Approved colors:
 | BRAND-007 | Prior/generated visual libraries | legacy/historical locations | Superseded unless explicitly retained |
 | BRAND-008 | VIP Account Access Vector Mini-Library | `website/assets/auth/` | Active / Mixed publication status per manifest |
 | BRAND-009 | VIP Account Access Asset Manifest | `website/assets/auth/manifest.json` | Active / Authoritative for auth vectors |
-| BRAND-010 | Omnichannel Brand Manifest | `brand/manifests/omnichannel-brand-manifest.json` | Active / Phase 0 state and asset dispositions |
-| BRAND-011 | Omnichannel Brand Build State | `brand/audit/brand-build-state.json` | Active / Restart checkpoint |
-| BRAND-012 | Omnichannel Brand Audit Report | `brand/audit/brand-build-report.md` | Active / Internal audit |
+| BRAND-010 | Omnichannel Brand Manifest | `brand/manifests/omnichannel-brand-manifest.json` | Active / Completed brand state and asset dispositions |
+| BRAND-011 | Omnichannel Brand Build State | `brand/audit/brand-build-state.json` | Active / Complete restart checkpoint |
+| BRAND-012 | Omnichannel Brand Audit Report | `brand/audit/brand-build-report.md` | Active / Internal audit / Complete |
 | BRAND-013 | Omnichannel Brand Exceptions | `brand/audit/brand-exceptions.md` | Active / Exception log |
 | BRAND-014 | Visual Approval Archive | `brand/reference-boards/` | Active / Permanent approval evidence |
 | BRAND-015 | Wave 2 Digital Marketing Manifest | `brand/manifests/wave2-digital-marketing-manifest.json` | Active / QA-passed |
 | BRAND-016 | Wave 2 Digital Marketing Templates & Channel Kit | `brand/templates/digital-marketing/` + `brand/exports/digital/marketing/` | Active / PR-BRAND-001 Wave 2 |
 | BRAND-017 | Wave 3 Print & Physical Manifest | `brand/manifests/wave3-print-physical-manifest.json` | Active / QA-passed |
 | BRAND-018 | Wave 3 Print, Stationery & Physical Production Kit | `brand/templates/print-physical/` + `brand/exports/print/wave3/` | Active / PR-BRAND-001 Wave 3 |
+| BRAND-019 | Repository-Wide Image Cleanup Final Validation | `brand/audit/image-cleanup-final-validation.md` | Active / Complete |
 
 ### Omnichannel brand rule
 
@@ -133,6 +135,7 @@ The approval boards under `brand/reference-boards/` are durable visual evidence.
 |---|---|---|---|
 | ARC-001 | Launch Website Information Architecture | `docs/architecture/website-information-architecture.md` | Active / Approved |
 | ARC-002 | Intelligent Living Concierge Architecture | `docs/architecture/intelligent-living-concierge.md` | Active / Flagship |
+| ARC-003 | Airo Source Package Contract | `docs/architecture/airo-source-package-contract.md` | Active / Authoritative |
 | DEC-004 | Commerce Plus and Airo Role | `docs/decisions/DEC-004-commerce-plus-and-airo-role.md` | Active |
 | DEC-005 | Senior Service Pricing | `docs/decisions/DEC-005-senior-service-pricing.md` | Open / Decision Required |
 | WEB-001 | Homepage Blueprint | `website/pages/home.md` | Active |
@@ -146,6 +149,27 @@ The approval boards under `brand/reference-boards/` are durable visual evidence.
 | WEB-009 | VIP Account Access / Login Production Specification | `website/pages/account-login.md` | Active / Production-ready visual baseline; auth integration pending |
 | WEB-010 | VIP Account Access Implementation Manifest | `website/account-access-manifest.json` | Active |
 | WEB-011 | VIP Account Access Interaction Tokens | `website/styles/account-access-tokens.css` | Active / Implementation reference |
+| WEB-012 | Production Static-Site Implementation | `site/` | Active / Buildable baseline |
+| TOOL-AIRO-001 | Deterministic Airo Source Package Builder | `scripts/build-airo-source-package.py` | Active |
+| CI-AIRO-001 | Airo Source Package Artifact Workflow | `.github/workflows/build-airo-source-package.yml` | Active / Manual + package-contract PR validation |
+
+### Airo / GitHub development contract
+
+GitHub is the source of truth. Airo receives only the curated source defined by ARC-003.
+
+Default local source package:
+
+`dist/airo/LuxSync-Airo-Source.zip`
+
+The ZIP contains a generated provenance manifest and control README. It deliberately excludes Git internals, financial planning, unresolved pricing material, protected approval/source graphics, audit evidence, and print/vendor-production assets that are unnecessary for website generation.
+
+Airo exports return through the branch/reconciliation process in RB-012. Raw Airo exports do not merge directly to `master`.
+
+Persistent website integration branch:
+
+`website/airo-development`
+
+Per-cycle Airo reconciliation work uses short-lived branches from that current baseline and is merged only after review and CI.
 
 ### Shared Property Profile Contract
 
@@ -221,11 +245,12 @@ Key principles:
 
 | ID | Artifact | Path | Status |
 |---|---|---|---|
-| RB-002 | GoDaddy Airo AI Builder | `docs/runbooks/RB-002-GoDaddy-Airo-AI-Builder.md` | Active |
-| RB-004 | CI/CD | TBD | Planned |
+| RB-002 | GoDaddy Airo AI Builder | `docs/runbooks/RB-002-GoDaddy-Airo-AI-Builder.md` | Active / Reconciled to package workflow |
+| RB-004 | CI/CD | TBD | Planned / existing workflows active |
 | RB-005 | Production Deployment and Domain/DNS | TBD | Planned |
 | RB-006 | Rollback | TBD | Planned |
 | RB-009 | Repository Consistency Validation | `docs/runbooks/RB-009-Repository-Consistency-Validation.md` | Active |
+| RB-012 | Airo ↔ GitHub Development Loop | `docs/runbooks/RB-012-Airo-GitHub-Development-Loop.md` | Active |
 | CL-001 | Airo First-Pass Review | `docs/checklists/CL-001-Airo-First-Pass-Review.md` | Active |
 | CL-002 | VIP Account Access Review | `docs/checklists/CL-002-Account-Access-Review.md` | Active |
 
@@ -256,6 +281,7 @@ All active prompts must inherit current company facts, exact founder titles, the
 - Approved logo artwork referenced directly, never regenerated
 - Website graphics consume validated omnichannel brand assets; the website does not redefine the brand masters
 - Account/login experience should feel like private, premium service while remaining simple and accessible
+- Airo cycles begin from a governed GitHub source package and return through GitHub reconciliation, never by directly replacing `master`
 
 Primary launch navigation:
 
@@ -312,6 +338,8 @@ Do not publish or invent:
 13. Auth asset publication status is governed by `website/assets/auth/manifest.json`; reference diagrams are never functional UI.
 14. Preserve `brand/reference-boards/` as permanent visual approval evidence; never treat a production-library cleanup as revocation of approved brand concepts.
 15. Run PR-BRAND-001 idempotently for omnichannel brand recovery/build work: audit first, skip validated completed work, self-heal deterministic drift, and never creatively overwrite approved masters.
+16. Build Airo context only through ARC-003 / `scripts/build-airo-source-package.py`; do not substitute a raw repository ZIP without an explicit review.
+17. Treat returned Airo exports as proposed source until reconciled through RB-012 and CI.
 
 ## Change Log
 
@@ -331,6 +359,8 @@ Do not publish or invent:
 | 2026-09-01 | Promoted VIP Account Access to a production-ready visual/interaction package with exact approved-logo mapping, dedicated ambient vectors, interaction tokens, implementation manifest, and CL-002 review gate. |
 | 2026-09-02 | Added PR-BRAND-001 and established restart-safe, promptless, self-healing omnichannel brand governance. |
 | 2026-09-02 | Added the omnichannel brand manifest, restart state, audit report and exception log; preserved the seven reference boards as permanent approval evidence and clarified `brand/assets/` as the validated digital delivery layer rather than the full brand scope. |
+| 2026-09-03 | Closed repository-wide image cleanup/validation and added durable image-governance regression protection. |
+| 2026-09-03 | Added ARC-003, deterministic GitHub → Airo packaging, artifact workflow, and RB-012 Airo → GitHub reconciliation process. |
 
 ## Production Completion Baseline
 
@@ -348,6 +378,15 @@ Canonical website implementation references:
 - `website/styles/account-access-tokens.css`
 - `website/assets/auth/manifest.json`
 - `website/src/concierge/luxsync-concierge-engine.v1.json`
+- `site/`
+
+Canonical Airo/GitHub development references:
+
+- `docs/architecture/airo-source-package-contract.md`
+- `scripts/build-airo-source-package.py`
+- `.github/workflows/build-airo-source-package.yml`
+- `docs/runbooks/RB-012-Airo-GitHub-Development-Loop.md`
+- `prompts/website/PR-001-LuxSync-Airo-Master-Website-Build-Prompt.md`
 
 Canonical omnichannel brand references:
 
@@ -357,6 +396,7 @@ Canonical omnichannel brand references:
 - `brand/audit/brand-build-state.json`
 - `brand/audit/brand-build-report.md`
 - `brand/audit/brand-exceptions.md`
+- `brand/audit/image-cleanup-final-validation.md`
 - `prompts/branding/PR-BRAND-001-LuxSync-Omnichannel-Brand-System-Recovery-Audit.md`
 
 The old malformed grid-sliced production assets remain retired. Auth vectors may be published only when their current website asset manifest explicitly marks them `production-approved`. The wider approved brand remains governed by the visual approval archive and omnichannel manifest, not by whether an asset is currently used on the website.
