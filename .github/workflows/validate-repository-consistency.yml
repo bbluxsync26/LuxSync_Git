@@ -54,6 +54,9 @@ jobs:
       - name: Validate repository source of truth
         run: python scripts/validate-repository-consistency.py
 
+      - name: Validate Airo source package selection
+        run: python scripts/build-airo-source-package.py --check
+
       - name: Verify Concierge production engine is current
         run: |
           node website/src/concierge/assemble-engine.mjs
