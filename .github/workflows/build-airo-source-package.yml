@@ -1,0 +1,38 @@
+name: Build Airo source package
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'docs/architecture/airo-source-package-contract.md'
+      - 'scripts/build-airo-source-package.py'
+      - '.github/workflows/build-airo-source-package.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate Airo source selection
+        run: python scripts/build-airo-source-package.py --check
+
+      - name: Build Airo source ZIP
+        run: python scripts/build-airo-source-package.py
+
+      - name: Upload Airo source package
+        uses: actions/upload-artifact@v4
+        with:
+          name: luxsync-airo-source
+          path: dist/airo/LuxSync-Airo-Source.zip
+          if-no-files-found: error
+          retention-days: 7
