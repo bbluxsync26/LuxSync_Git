@@ -121,6 +121,8 @@ function footer() {
 
 function shell({ route, title, description, main, bodyClass = '' }) {
   const active = route.endsWith('/') ? route : `${route}/`;
+  const documentTitle = title === 'LuxSync' ? 'LuxSync' : `${title} | LuxSync`;
+  const canonicalUrl = `https://luxsync-intelligent-living.fine-fawn-3657.chatgpt.site${active}`;
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -128,7 +130,18 @@ function shell({ route, title, description, main, bodyClass = '' }) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0D1526">
   <meta name="description" content="${escapeHtml(description)}">
-  <title>${escapeHtml(title)} | LuxSync</title>
+  <link rel="canonical" href="${canonicalUrl}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LuxSync">
+  <meta property="og:title" content="${escapeHtml(documentTitle)}">
+  <meta property="og:description" content="${escapeHtml(description)}">
+  <meta property="og:url" content="${canonicalUrl}">
+  <meta property="og:image" content="https://luxsync-intelligent-living.fine-fawn-3657.chatgpt.site/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escapeHtml(documentTitle)}">
+  <meta name="twitter:description" content="${escapeHtml(description)}">
+  <meta name="twitter:image" content="https://luxsync-intelligent-living.fine-fawn-3657.chatgpt.site/assets/og.png">
+  <title>${escapeHtml(documentTitle)}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600&display=swap" rel="stylesheet">
@@ -261,6 +274,7 @@ for (const file of ['luxsync-horizontal-combo.png', 'luxsync-horizontal.png', 'l
 fs.copyFileSync(ENGINE, path.join(DIST, 'data', 'luxsync-concierge-engine.v1.json'));
 fs.copyFileSync(path.join(HERE, 'src', 'styles.css'), path.join(DIST, 'styles.css'));
 fs.copyFileSync(path.join(HERE, 'src', 'app.js'), path.join(DIST, 'app.js'));
+fs.copyFileSync(path.join(HERE, 'src', 'og.png'), path.join(DIST, 'assets', 'og.png'));
 
 const faqs = parseFaqs(fs.readFileSync(FAQ_SOURCE, 'utf8'));
 fs.writeFileSync(path.join(DIST, 'data', 'faqs.json'), JSON.stringify(faqs, null, 2) + '\n');
@@ -287,3 +301,4 @@ fs.writeFileSync(path.join(DIST, '404.html'), shell({ route: '/404', title: 'Pag
 
 fs.writeFileSync(path.join(DIST, '.htaccess'), `Options -MultiViews\nErrorDocument 404 /404.html\nDirectoryIndex index.html\n`);
 console.log(`Built LuxSync site with ${routes.length} governed routes.`);
+
