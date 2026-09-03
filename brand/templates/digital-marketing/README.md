@@ -9,7 +9,16 @@
 
 This directory contains reusable, channel-ready composition templates for broader digital and marketing use. The templates extend approved LuxSync visual language without flattening mutable copy, customer information, product data, pricing, availability, testimonials, or unsupported claims into generic brand artwork.
 
-The exact LuxSync logo artwork remains protected and immutable. Static templates may composite only the approved delivery copies under `brand/assets/logos/png/`. Reusable metallic ornaments come from the visually faithful approved-board layer under `brand/exports/digital/approved/dividers/`.
+The exact LuxSync logo artwork remains protected and immutable. Static templates may composite only the approved delivery copies under `brand/assets/logos/png/`.
+
+### Ornament compositing policy
+
+LuxSync maintains two valid ornament layers with different jobs:
+
+- `brand/exports/digital/approved/dividers/` preserves the visually faithful approval-board crops. Those masters remain intact for exact board-derived reproduction and provenance.
+- `brand/assets/dividers/` contains the clean transparent validated divider/ornament delivery layer. Wave 2 uses these transparent assets for new freeform compositions so ornamental edges blend seamlessly into social, campaign, presentation and video canvases.
+
+Using the clean transparent delivery layer in Wave 2 is a technical channel adaptation, not a redesign or downgrade of the faithful approval-board artwork.
 
 ## Static composition set
 
