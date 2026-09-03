@@ -48,6 +48,9 @@ jobs:
       - name: Validate Wave 3 print and physical system
         run: python scripts/validate-wave3-print-physical.py
 
+      - name: Validate final image governance state
+        run: python scripts/validate-image-governance.py
+
       - name: Validate repository source of truth
         run: python scripts/validate-repository-consistency.py
 
