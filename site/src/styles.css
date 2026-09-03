@@ -623,3 +623,6 @@ p { margin: 0; }
 
 .card-icon{position:relative;z-index:2;width:46px;height:46px;object-fit:contain;margin-bottom:1.15rem;filter:drop-shadow(0 8px 18px rgba(123,150,178,.14))}.section-heading::after{content:"";display:block;width:min(330px,72vw);height:28px;margin-top:1.4rem;background:url("/assets/dividers/divider-dual.webp") left center/contain no-repeat;opacity:.72}.section-dark .section-heading::after{background-image:url("/assets/dividers/divider-rose.webp")}.auth-card::before{content:"";display:block;width:90px;height:34px;margin:0 auto 1rem;background:url("/assets/dividers/orbit-stroke-steel.webp") center/contain no-repeat;opacity:.7}
 
+
+.auth-card__primary-link{font-weight:800;color:var(--gold)}
+.auth-security-note{padding:.8rem 1rem;border-left:3px solid var(--gold);background:rgba(177,137,63,.09);font-size:.86rem}

@@ -149,6 +149,16 @@
       "visual_recipe": "live-vip-account-access"
     },
     {
+      "route": "/account/create",
+      "blueprint": "website/pages/account-login.md",
+      "content_source": "website/pages/account-login.md",
+      "production_assets": [
+        "brand/assets/heroes/member-access.png",
+        "brand/assets/logos/png/luxsync-horizontal-combo.png"
+      ],
+      "visual_recipe": "live-vip-account-creation"
+    },
+    {
       "route": "/account/welcome",
       "blueprint": "website/pages/account-login.md",
       "content_source": "website/pages/account-login.md",

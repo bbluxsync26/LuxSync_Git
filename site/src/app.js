@@ -582,6 +582,25 @@ function initContact() {
 
 function initLogin(){const f=qs("#login-form");if(!f)return;f.addEventListener("submit",e=>{e.preventDefault();const s=qs("#login-status");if(CONFIG.commerceUrl){window.location.assign(CONFIG.commerceUrl);return}s.textContent="The secure Commerce Plus account connection is not configured yet. Contact LuxSync support for access.";});}
 
+function initCreateAccount(){
+  const form=qs("#create-account-form");
+  if(!form)return;
+  form.addEventListener("submit",e=>{
+    e.preventDefault();
+    const status=qs("#create-account-status");
+    const password=qs('[name="password"]',form);
+    const confirmation=qs('[name="confirmPassword"]',form);
+    if(password.value!==confirmation.value){
+      status.textContent="Passwords do not match. Please re-enter your confirmation.";
+      confirmation.focus();
+      return;
+    }
+    if(CONFIG.commerceUrl){window.location.assign(CONFIG.commerceUrl);return;}
+    status.textContent="Secure account creation will continue through Commerce Plus once the account connection is configured. No details were saved by this page.";
+    form.reset();
+  });
+}
+
 function initCommerceLink() {
   const link = qs('#commerce-link');
   if (!link || !CONFIG.commerceUrl) return;
@@ -597,3 +616,4 @@ initBlueprint();
 initContact();
 initCommerceLink();
 initLogin();
+initCreateAccount();
