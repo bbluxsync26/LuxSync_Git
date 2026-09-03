@@ -1,0 +1,640 @@
+{
+  "schema_version": "1.0",
+  "brand": "LuxSync",
+  "prompt": "PR-BRAND-001",
+  "wave": "wave2",
+  "status": "generated-pending-manual-qa-and-pr-validation",
+  "brand_system": "LuxSync Production Raster v5",
+  "design_dna": "Plush Drift",
+  "official_slogan": "Where Luxury Lives Intelligently",
+  "template_spec": {
+    "path": "brand/templates/digital-marketing/template-specs.json",
+    "sha256": "21e88a35eb09cee698e69644b9e6498295749fa3afcb12d9f0ee80db32cd19c9"
+  },
+  "live_templates": [
+    {
+      "id": "email-signature",
+      "path": "brand/templates/digital-marketing/email/luxsync-email-signature.html",
+      "sha256": "ef8381816600e495ca6e83b7acae5c32b156fa245f3afc3dbf55f169e201be53",
+      "mode": "live-placeholder-html"
+    },
+    {
+      "id": "product-card-html",
+      "path": "brand/templates/digital-marketing/product-card/product-card-template.html",
+      "sha256": "6ec8f3eb972dd45aa332d9b646bb7d69735da54cf68881f35f7242c8465816c3",
+      "mode": "live-placeholder-html"
+    },
+    {
+      "id": "product-card-css",
+      "path": "brand/templates/digital-marketing/product-card/product-card.css",
+      "sha256": "8a449119cb3a8cca3912e135214b4ae97c52fd3b4cc267d3c6844946415d6731",
+      "mode": "live-semantic-css"
+    }
+  ],
+  "static_asset_count": 10,
+  "static_assets": [
+    {
+      "id": "social-square-editorial",
+      "channel": "social",
+      "layout": "editorial-square",
+      "width": 1080,
+      "height": 1080,
+      "transparency": false,
+      "safe_zone": [
+        0.08,
+        0.12,
+        0.7,
+        0.72
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-orb.png",
+        "sha256": "873a6d3692b0e4fba8cdac405c23a3d7e9cd7cfb2302bb78e068c6a4dc605be1",
+        "placement": [
+          827,
+          59,
+          194,
+          194
+        ]
+      },
+      "ornament_source": {
+        "path": "brand/exports/digital/approved/dividers/png/corner-steel-rose-star.png",
+        "sha256": "4245ce5da856e556204483e25fffcca12fa76217ddca69f9a5d2f289e12344ce",
+        "placement": [
+          59,
+          860,
+          216,
+          161
+        ]
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/social-square-editorial.png",
+          "bytes": 140942,
+          "sha256": "d773845c1192e126458ba1ce44390dddd954ff5fd49b1437b0c6d10e47afe3c7"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/social/png/social-square-editorial.png",
+          "bytes": 140942,
+          "sha256": "d773845c1192e126458ba1ce44390dddd954ff5fd49b1437b0c6d10e47afe3c7"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/social/webp/social-square-editorial.webp",
+          "bytes": 82120,
+          "sha256": "ba56864abbed18a26512a4db4856e1afc620adc9fa41f7c58e376cb313390298",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+    },
+    {
+      "id": "social-portrait-editorial",
+      "channel": "social",
+      "layout": "editorial-portrait",
+      "width": 1080,
+      "height": 1350,
+      "transparency": false,
+      "safe_zone": [
+        0.08,
+        0.1,
+        0.76,
+        0.68
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
+        "placement": [
+          59,
+          1125,
+          454,
+          151
+        ]
+      },
+      "ornament_source": {
+        "path": "brand/exports/digital/approved/dividers/png/orbit-dual.png",
+        "sha256": "35802894f0e4c284a3cf14513061658d184bfc34fcc34ba90ead80e48c260298",
+        "placement": [
+          697,
+          74,
+          324,
+          136
+        ]
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/social-portrait-editorial.png",
+          "bytes": 197498,
+          "sha256": "496bf1ff9af344a0ae77bdc5b3c258acf7a5c4b7c341e2d24b31201642202583"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/social/png/social-portrait-editorial.png",
+          "bytes": 197498,
+          "sha256": "496bf1ff9af344a0ae77bdc5b3c258acf7a5c4b7c341e2d24b31201642202583"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/social/webp/social-portrait-editorial.webp",
+          "bytes": 118102,
+          "sha256": "07f5495c4238467a7e6d2210963131c9c25b9b3b6f6381b6659f352768e28873",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+    },
+    {
+      "id": "social-story-editorial",
+      "channel": "social",
+      "layout": "editorial-story",
+      "width": 1080,
+      "height": 1920,
+      "transparency": false,
+      "safe_zone": [
+        0.08,
+        0.22,
+        0.84,
+        0.58
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-orb.png",
+        "sha256": "873a6d3692b0e4fba8cdac405c23a3d7e9cd7cfb2302bb78e068c6a4dc605be1",
+        "placement": [
+          59,
+          106,
+          216,
+          216
+        ]
+      },
+      "ornament_source": {
+        "path": "brand/exports/digital/approved/dividers/png/corner-double-arc-rose.png",
+        "sha256": "2cab051f665765c16c621828481b122760205906eb78b5ae6dfa8f3de767f12d",
+        "placement": [
+          805,
+          1653,
+          216,
+          161
+        ]
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/social-story-editorial.png",
+          "bytes": 183763,
+          "sha256": "4f538db22a738d82aa561ed7633e17b9ff2d1fe7e5de8366c0e8789676f5e67f"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/social/png/social-story-editorial.png",
+          "bytes": 183763,
+          "sha256": "4f538db22a738d82aa561ed7633e17b9ff2d1fe7e5de8366c0e8789676f5e67f"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/social/webp/social-story-editorial.webp",
+          "bytes": 103982,
+          "sha256": "609b6f4c6796723dead6de6f9890bd8a0057c5a07ba7fd998396c0511fa07e8a",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+    },
+    {
+      "id": "social-landscape-editorial",
+      "channel": "social",
+      "layout": "editorial-landscape",
+      "width": 1200,
+      "height": 628,
+      "transparency": false,
+      "safe_zone": [
+        0.07,
+        0.1,
+        0.66,
+        0.62
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
+        "placement": [
+          66,
+          457,
+          408,
+          136
+        ]
+      },
+      "ornament_source": {
+        "path": "brand/exports/digital/approved/dividers/png/horizontal-rose-spark.png",
+        "sha256": "f196fa46ce888815a7276c02a18ef0e9b21de3224e01d0948d8e6718d1103fe2",
+        "placement": [
+          798,
+          35,
+          336,
+          35
+        ]
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/social-landscape-editorial.png",
+          "bytes": 119536,
+          "sha256": "89d1711fb5fd1f1bfbffa869603078957c8894a28b020c22df39869de736dad3"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/social/png/social-landscape-editorial.png",
+          "bytes": 119536,
+          "sha256": "89d1711fb5fd1f1bfbffa869603078957c8894a28b020c22df39869de736dad3"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/social/webp/social-landscape-editorial.webp",
+          "bytes": 73256,
+          "sha256": "671f1ef9dbba20d5faec62a04052105f727f5658bdc03dd868d0bbe32190811e",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+    },
+    {
+      "id": "presentation-title-frame",
+      "channel": "presentation",
+      "layout": "presentation-title",
+      "width": 1920,
+      "height": 1080,
+      "transparency": false,
+      "safe_zone": [
+        0.08,
+        0.3,
+        0.62,
+        0.42
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
+        "placement": [
+          106,
+          59,
+          538,
+          179
+        ]
+      },
+      "ornament_source": {
+        "path": "brand/exports/digital/approved/dividers/png/orbit-dual.png",
+        "sha256": "35802894f0e4c284a3cf14513061658d184bfc34fcc34ba90ead80e48c260298",
+        "placement": [
+          1238,
+          418,
+          576,
+          243
+        ]
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/presentation-title-frame.png",
+          "bytes": 292359,
+          "sha256": "e23b96dc33e806b175c4b4bae80648ffd5af9ce0ae44f31d7994a7928617fefe"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/presentation/png/presentation-title-frame.png",
+          "bytes": 292359,
+          "sha256": "e23b96dc33e806b175c4b4bae80648ffd5af9ce0ae44f31d7994a7928617fefe"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/presentation/webp/presentation-title-frame.webp",
+          "bytes": 179558,
+          "sha256": "edbc79766090f0574c0af0fed58bfd6270d49e0c9dcb985c466ab2af7a2508c8",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+    },
+    {
+      "id": "presentation-section-frame",
+      "channel": "presentation",
+      "layout": "presentation-section",
+      "width": 1920,
+      "height": 1080,
+      "transparency": false,
+      "safe_zone": [
+        0.08,
+        0.26,
+        0.62,
+        0.42
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-orb.png",
+        "sha256": "873a6d3692b0e4fba8cdac405c23a3d7e9cd7cfb2302bb78e068c6a4dc605be1",
+        "placement": [
+          1468,
+          367,
+          346,
+          346
+        ]
+      },
+      "ornament_source": {
+        "path": "brand/exports/digital/approved/dividers/png/horizontal-steel-star.png",
+        "sha256": "7f5311917a9b16fdd9373da4549c6ac47c5b0865fa6263e9880e394899914cc5",
+        "placement": [
+          106,
+          948,
+          538,
+          73
+        ]
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/presentation-section-frame.png",
+          "bytes": 245542,
+          "sha256": "228f5c6c5245673df14e4ac95a8ef3cd444cd2516188073fcb6ffef5d7897ba5"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/presentation/png/presentation-section-frame.png",
+          "bytes": 245542,
+          "sha256": "228f5c6c5245673df14e4ac95a8ef3cd444cd2516188073fcb6ffef5d7897ba5"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/presentation/webp/presentation-section-frame.webp",
+          "bytes": 141108,
+          "sha256": "84a2bbabc8e3a2887e263d40ee2dc2d09bf9bc79cd63f7c5626262ea8961320c",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+    },
+    {
+      "id": "campaign-landscape-frame",
+      "channel": "campaign",
+      "layout": "campaign-landscape",
+      "width": 1600,
+      "height": 900,
+      "transparency": false,
+      "safe_zone": [
+        0.08,
+        0.16,
+        0.68,
+        0.54
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
+        "placement": [
+          88,
+          690,
+          480,
+          160
+        ]
+      },
+      "ornament_source": {
+        "path": "brand/exports/digital/approved/dividers/png/badge-underline-rose-diamond.png",
+        "sha256": "9ba9f28f1d1242af30e044763159484f60f4a1a693deb9fe06e750aae9b223b6",
+        "placement": [
+          88,
+          50,
+          448,
+          47
+        ]
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/campaign-landscape-frame.png",
+          "bytes": 172990,
+          "sha256": "329315bbceb892c6677c92ac4606699e041cd35408d2edddfb75dd8a74756fe3"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/campaign/png/campaign-landscape-frame.png",
+          "bytes": 172990,
+          "sha256": "329315bbceb892c6677c92ac4606699e041cd35408d2edddfb75dd8a74756fe3"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/campaign/webp/campaign-landscape-frame.webp",
+          "bytes": 103852,
+          "sha256": "058af7c5a8e4feab6d73491aff52d90198a14034feedb59fbb4bae3b8ad8ef73",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+    },
+    {
+      "id": "campaign-square-frame",
+      "channel": "campaign",
+      "layout": "campaign-square",
+      "width": 1080,
+      "height": 1080,
+      "transparency": false,
+      "safe_zone": [
+        0.08,
+        0.16,
+        0.74,
+        0.6
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-orb.png",
+        "sha256": "873a6d3692b0e4fba8cdac405c23a3d7e9cd7cfb2302bb78e068c6a4dc605be1",
+        "placement": [
+          837,
+          59,
+          184,
+          184
+        ]
+      },
+      "ornament_source": {
+        "path": "brand/exports/digital/approved/dividers/png/sparkle-divider-soft.png",
+        "sha256": "27e29e88b82dffbcd193cc716879c8cb1b1815c4e67696b04d6d341a346b8ad5",
+        "placement": [
+          59,
+          982,
+          302,
+          39
+        ]
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/campaign-square-frame.png",
+          "bytes": 122965,
+          "sha256": "42894b93349296ce422083891d1d2a830b9474bedba047a7551fea8fbd5f7040"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/campaign/png/campaign-square-frame.png",
+          "bytes": 122965,
+          "sha256": "42894b93349296ce422083891d1d2a830b9474bedba047a7551fea8fbd5f7040"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/campaign/webp/campaign-square-frame.webp",
+          "bytes": 69872,
+          "sha256": "7fd4aaca3d95ae040491f0292ff38f197759291adf5cc9072f55a7251c8c0895",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+    },
+    {
+      "id": "video-corner-bug-overlay",
+      "channel": "video",
+      "layout": "video-corner-bug",
+      "width": 3840,
+      "height": 2160,
+      "transparency": true,
+      "safe_zone": [
+        0.05,
+        0.05,
+        0.9,
+        0.9
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-orb.png",
+        "sha256": "873a6d3692b0e4fba8cdac405c23a3d7e9cd7cfb2302bb78e068c6a4dc605be1",
+        "placement": [
+          3245,
+          1657,
+          384,
+          384
+        ]
+      },
+      "ornament_source": null,
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/video-corner-bug-overlay.png",
+          "bytes": 203967,
+          "sha256": "dbfaaa87a7817db978b1f97833358ff6ab7b899e2c9c667185775f1099028a66"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/video/png/video-corner-bug-overlay.png",
+          "bytes": 203967,
+          "sha256": "dbfaaa87a7817db978b1f97833358ff6ab7b899e2c9c667185775f1099028a66"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/video/webp/video-corner-bug-overlay.webp",
+          "bytes": 113770,
+          "sha256": "9e9fdcfe0e110d2cd3be07f401b18fdc9cdc1752d97243e1f5bee9f204aedb48",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+    },
+    {
+      "id": "video-lower-third-overlay",
+      "channel": "video",
+      "layout": "video-lower-third",
+      "width": 3840,
+      "height": 2160,
+      "transparency": true,
+      "safe_zone": [
+        0.24,
+        0.77,
+        0.56,
+        0.12
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
+        "placement": [
+          211,
+          1753,
+          768,
+          256
+        ]
+      },
+      "ornament_source": {
+        "path": "brand/exports/digital/approved/dividers/png/horizontal-steel-line.png",
+        "sha256": "0d788cdfc036c0a5e29f10bcf23de65c47acf86d19515970fa61824923c0f2ab",
+        "placement": [
+          960,
+          1872,
+          845,
+          72
+        ]
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/video-lower-third-overlay.png",
+          "bytes": 275195,
+          "sha256": "997f837e68abdd66a26e0a2e7eda5d7b61441520a20338541d819dd27ea4f19f"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/video/png/video-lower-third-overlay.png",
+          "bytes": 275195,
+          "sha256": "997f837e68abdd66a26e0a2e7eda5d7b61441520a20338541d819dd27ea4f19f"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/video/webp/video-lower-third-overlay.webp",
+          "bytes": 172056,
+          "sha256": "0cfabd9b8559c2cb63d9b19a4157113418a446eee97fe5e84e91676b3a727ed8",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed-by-deterministic-build-pending-contact-sheet-review"
+    }
+  ],
+  "qa": {
+    "contact_sheet": "brand/audit/qa/wave2-digital-marketing.jpg",
+    "sha256": "eadaa8f068849f76955785d480287af49724b5135d0426ba05a88cbbc38049ba",
+    "status": "generated-pending-manual-review"
+  },
+  "publication_guardrails": [
+    "static frames contain no mutable campaign copy or commerce facts",
+    "conceptual approval-board product renders are not published as live products",
+    "protected LuxSync logo source pixels are composited without recoloring, redrawing or retyping",
+    "product-card and email-signature content remains live/template-driven",
+    "video assets are static overlays only, not motion deliverables"
+  ]
+}
