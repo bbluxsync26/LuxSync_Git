@@ -162,3 +162,19 @@ Across channels, LuxSync should use:
 Do not bake mutable prices, availability, founder identities, support hours, customer information or unsupported claims into generic reusable brand imagery.
 
 For route-level website usage, see `website/asset-map.md`.
+
+<!-- PR-BRAND-001-WAVE2-DIGITAL-MARKETING -->
+## Wave 2 digital marketing delivery layer
+
+Wave 2 is governed by `brand/manifests/wave2-digital-marketing-manifest.json` and provides:
+
+- four social composition frames;
+- two presentation frames;
+- two campaign frames;
+- two 4K static video-overlay frames;
+- a live placeholder-driven email signature;
+- a live semantic product-card HTML/CSS treatment.
+
+Raster composition masters live under `brand/masters/marketing-art/wave2/`; PNG and lossless WebP deliveries live under `brand/exports/digital/marketing/`. The static templates intentionally omit SVG because they combine protected raster logo artwork with atmospheric raster effects; `brand/templates/digital-marketing/template-specs.json` is the editable governed source.
+
+All ten static frames are intentionally text-safe. Add current copy and validated commerce data at use time rather than baking mutable facts into reusable brand art.

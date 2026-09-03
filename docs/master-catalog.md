@@ -116,6 +116,8 @@ Approved colors:
 | BRAND-012 | Omnichannel Brand Audit Report | `brand/audit/brand-build-report.md` | Active / Internal audit |
 | BRAND-013 | Omnichannel Brand Exceptions | `brand/audit/brand-exceptions.md` | Active / Exception log |
 | BRAND-014 | Visual Approval Archive | `brand/reference-boards/` | Active / Permanent approval evidence |
+| BRAND-015 | Wave 2 Digital Marketing Manifest | `brand/manifests/wave2-digital-marketing-manifest.json` | Active / QA-passed |
+| BRAND-016 | Wave 2 Digital Marketing Templates & Channel Kit | `brand/templates/digital-marketing/` + `brand/exports/digital/marketing/` | Active / PR-BRAND-001 Wave 2 |
 
 ### Omnichannel brand rule
 
