@@ -131,3 +131,19 @@ Do not force meaningless file types. True vector art may support SVG/PDF/EPS/AI 
 - `website/asset-map.md`
 - `website/implementation-manifest.json`
 - `website/styles/design-system.md`
+
+<!-- PR-BRAND-001-WAVE2-DIGITAL-MARKETING -->
+## Wave 2 digital and marketing kit
+
+PR-BRAND-001 Wave 2 adds a governed reusable digital-marketing layer without turning mutable campaign or commerce content into fixed artwork.
+
+- Governed manifest: `brand/manifests/wave2-digital-marketing-manifest.json`
+- Editable composition specs and live templates: `brand/templates/digital-marketing/`
+- Raster-origin composition masters: `brand/masters/marketing-art/wave2/`
+- PNG and lossless WebP channel exports: `brand/exports/digital/marketing/`
+- QA contact sheet: `brand/audit/qa/wave2-digital-marketing.jpg`
+- Hash-bound manual QA approval: `brand/audit/wave2-digital-marketing-qa-approval.json`
+
+The kit contains ten text-safe static frames across social, presentations, campaigns and 4K video overlays, plus a live email-signature template and live semantic product-card treatment. Static frames use only exact approved LuxSync logo artwork. Mutable headlines, offers, product facts, prices, ratings, availability and customer information remain live/template-driven.
+
+For new freeform compositions, clean transparent validated dividers under `brand/assets/dividers/` are used to avoid crop-edge seams. The faithful approval-board-derived ornament masters remain preserved separately and unchanged.

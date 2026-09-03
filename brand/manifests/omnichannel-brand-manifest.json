@@ -393,5 +393,25 @@
     ],
     "usage_rule": "Prefer this layer when the approved metallic LuxSync artwork itself is intended. Retain clean semantic vectors for compact/scalable live UI where technically appropriate.",
     "idempotence_rule": "Skip regeneration when source-board hash, crop geometry, output hashes and QA evidence remain valid."
+  },
+  "wave2_digital_marketing": {
+    "status": "qa-passed",
+    "manifest": "brand/manifests/wave2-digital-marketing-manifest.json",
+    "manifest_sha256": "90b69015b52cc26304614d8a1911599700afb53561907dba4ce84567ab547ad3",
+    "static_template_count": 10,
+    "live_template_count": 3,
+    "channels": [
+      "campaign",
+      "presentation",
+      "social",
+      "video"
+    ],
+    "master_root": "brand/masters/marketing-art/wave2/",
+    "digital_export_root": "brand/exports/digital/marketing/",
+    "template_root": "brand/templates/digital-marketing/",
+    "qa_contact_sheet": "brand/audit/qa/wave2-digital-marketing.jpg",
+    "qa_contact_sheet_sha256": "c22d77b4b92e8ec0d02ad06d9ed626e6dca24e66171a258977327ede2f7df32e",
+    "qa_approval_record": "brand/audit/wave2-digital-marketing-qa-approval.json",
+    "guardrail": "Mutable copy and commerce facts remain live/template-driven. Exact approved LuxSync logos only."
   }
 }

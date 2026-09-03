@@ -129,3 +129,23 @@ Print and physical work still includes stationery templates, business cards, mer
 ## Current resume point
 
 **Wave 1, Checkpoint 2:** finish canonical discovery/usage mapping for the 58 faithful approved-board assets, run complete CI, then close and merge Wave 1. Subsequent PR-BRAND-001 runs must skip the generated 58 assets unless their source board hash, crop geometry, output hash or QA evidence changes.
+
+<!-- PR-BRAND-001-WAVE2-DIGITAL-MARKETING -->
+## Wave 2 digital and marketing checkpoint
+
+Wave 2 built and visually reviewed a reusable channel kit rather than a set of one-off flattened ads.
+
+Completed:
+
+- 10 deterministic text-safe static compositions: 4 social, 2 presentation, 2 campaign and 2 4K video-overlay frames;
+- exact approved LuxSync logo artwork used in every logo-bearing composition;
+- clean transparent validated divider assets used for seamless freeform compositing while faithful approval-board crop masters remain preserved;
+- live placeholder-driven email signature;
+- live semantic product-card HTML/CSS treatment with no baked product or price claims;
+- PNG and lossless WebP exports plus raster-origin masters;
+- manual contact-sheet QA recorded against an exact SHA256 approval record;
+- deterministic builder, validator and governance reconciliation tooling.
+
+The first QA pass found rectangular board-crop seams around some ornaments. That was repaired objectively by using the clean transparent validated divider delivery layer for new compositions rather than altering the faithful board-derived masters. The second contact sheet passed visual review.
+
+Wave 2 remains pending pull-request and post-merge repository CI before being marked complete.

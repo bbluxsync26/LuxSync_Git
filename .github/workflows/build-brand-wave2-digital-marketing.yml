@@ -1,0 +1,77 @@
+name: Build LuxSync Wave 2 digital marketing kit
+
+on:
+  push:
+    branches:
+      - 'feature/brand-*'
+    paths:
+      - '.github/workflows/build-brand-wave2-digital-marketing.yml'
+      - 'scripts/build-wave2-digital-marketing.py'
+      - 'scripts/reconcile-wave2-digital-marketing-qa.py'
+      - 'scripts/reconcile-wave2-governance.py'
+      - 'brand/templates/digital-marketing/**'
+      - 'brand/audit/wave2-digital-marketing-qa-approval.json'
+      - 'brand/assets/logos/png/**'
+      - 'brand/assets/dividers/png/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build Wave 2 marketing templates
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out feature branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install image dependency
+        run: python -m pip install pillow
+
+      - name: Build Wave 2 digital marketing kit
+        run: python scripts/build-wave2-digital-marketing.py
+
+      - name: Reconcile reviewed Wave 2 visual QA
+        run: python scripts/reconcile-wave2-digital-marketing-qa.py
+
+      - name: Reconcile Wave 2 governance and discovery
+        run: python scripts/reconcile-wave2-governance.py
+
+      - name: Upload Wave 2 QA preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: wave2-digital-marketing-qa
+          path: brand/audit/qa/wave2-digital-marketing.jpg
+          if-no-files-found: error
+          retention-days: 1
+
+      - name: Commit generated Wave 2 assets, manifest and governance
+        shell: bash
+        run: |
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+            echo "No Wave 2 generated changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add brand/masters/marketing-art/wave2 \
+                  brand/exports/digital/marketing \
+                  brand/audit/qa/wave2-digital-marketing.jpg \
+                  brand/manifests/wave2-digital-marketing-manifest.json \
+                  brand/manifests/omnichannel-brand-manifest.json \
+                  brand/README.md \
+                  docs/production-asset-library.md \
+                  docs/master-catalog.md \
+                  brand/audit/brand-build-report.md
+          git commit -m "Generate validated Wave 2 digital marketing kit [skip ci]"
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

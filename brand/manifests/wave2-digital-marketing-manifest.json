@@ -1,0 +1,663 @@
+{
+  "schema_version": "1.1",
+  "brand": "LuxSync",
+  "prompt": "PR-BRAND-001",
+  "wave": "wave2",
+  "status": "qa-passed",
+  "brand_system": "LuxSync Production Raster v5",
+  "design_dna": "Plush Drift",
+  "official_slogan": "Where Luxury Lives Intelligently",
+  "template_spec": {
+    "path": "brand/templates/digital-marketing/template-specs.json",
+    "sha256": "0957dc4e35948047e87e7ba5b1f9ce70b1af213c0afeaa98f13a21287b16fcd8"
+  },
+  "ornament_policy": "Use the clean transparent validated divider delivery layer for new freeform compositions so edges composite seamlessly. Preserve the faithful board-derived ornament crops separately for exact approved-board reproduction contexts; do not alter or downgrade those masters.",
+  "live_templates": [
+    {
+      "id": "email-signature",
+      "path": "brand/templates/digital-marketing/email/luxsync-email-signature.html",
+      "sha256": "ef8381816600e495ca6e83b7acae5c32b156fa245f3afc3dbf55f169e201be53",
+      "mode": "live-placeholder-html"
+    },
+    {
+      "id": "product-card-html",
+      "path": "brand/templates/digital-marketing/product-card/product-card-template.html",
+      "sha256": "6ec8f3eb972dd45aa332d9b646bb7d69735da54cf68881f35f7242c8465816c3",
+      "mode": "live-placeholder-html"
+    },
+    {
+      "id": "product-card-css",
+      "path": "brand/templates/digital-marketing/product-card/product-card.css",
+      "sha256": "8a449119cb3a8cca3912e135214b4ae97c52fd3b4cc267d3c6844946415d6731",
+      "mode": "live-semantic-css"
+    }
+  ],
+  "static_asset_count": 10,
+  "static_assets": [
+    {
+      "id": "social-square-editorial",
+      "channel": "social",
+      "layout": "editorial-square",
+      "width": 1080,
+      "height": 1080,
+      "transparency": false,
+      "safe_zone": [
+        0.08,
+        0.12,
+        0.7,
+        0.72
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-orb.png",
+        "sha256": "873a6d3692b0e4fba8cdac405c23a3d7e9cd7cfb2302bb78e068c6a4dc605be1",
+        "placement": [
+          827,
+          59,
+          194,
+          194
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/corner-steel.png",
+        "sha256": "e7d68427576abc5b2429815dd3db7343f432dec23607aea31b413409d588ae4b",
+        "placement": [
+          59,
+          998,
+          184,
+          23
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/social-square-editorial.png",
+          "bytes": 94126,
+          "sha256": "01b568ed7289e9f25b83a5e78871c9177341fc3389fc5cc9bb87cdac03d36855"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/social/png/social-square-editorial.png",
+          "bytes": 94126,
+          "sha256": "01b568ed7289e9f25b83a5e78871c9177341fc3389fc5cc9bb87cdac03d36855"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/social/webp/social-square-editorial.webp",
+          "bytes": 52854,
+          "sha256": "217083cb0d02fb7957dae1c7e00fc53d6304a55bc57a8489713c8c8754605e50",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed"
+    },
+    {
+      "id": "social-portrait-editorial",
+      "channel": "social",
+      "layout": "editorial-portrait",
+      "width": 1080,
+      "height": 1350,
+      "transparency": false,
+      "safe_zone": [
+        0.08,
+        0.1,
+        0.76,
+        0.68
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
+        "placement": [
+          59,
+          1125,
+          454,
+          151
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/orbit-stroke-steel.png",
+        "sha256": "91fb6983ecaebb1c0ae339337c4eb30b7ddf047f9a66e6780c69379c4a9b6a62",
+        "placement": [
+          773,
+          74,
+          248,
+          31
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/social-portrait-editorial.png",
+          "bytes": 124984,
+          "sha256": "381d75ce39baa8032f635150e92bd70093580ddfb445f8df59c902257df6d3d8"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/social/png/social-portrait-editorial.png",
+          "bytes": 124984,
+          "sha256": "381d75ce39baa8032f635150e92bd70093580ddfb445f8df59c902257df6d3d8"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/social/webp/social-portrait-editorial.webp",
+          "bytes": 75818,
+          "sha256": "7a9dba9b6ef5bbc2f10b455181b2508893a00c385739516f79ba92d0fd90d608",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed"
+    },
+    {
+      "id": "social-story-editorial",
+      "channel": "social",
+      "layout": "editorial-story",
+      "width": 1080,
+      "height": 1920,
+      "transparency": false,
+      "safe_zone": [
+        0.08,
+        0.22,
+        0.84,
+        0.58
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-orb.png",
+        "sha256": "873a6d3692b0e4fba8cdac405c23a3d7e9cd7cfb2302bb78e068c6a4dc605be1",
+        "placement": [
+          59,
+          106,
+          216,
+          216
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/corner-rose.png",
+        "sha256": "8f801d962a9bee63467208e3c39547a38aa2cf782f92239fe749f33090849bba",
+        "placement": [
+          837,
+          1791,
+          184,
+          23
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/social-story-editorial.png",
+          "bytes": 118523,
+          "sha256": "06ffbca82442438603823e5bb1f6677b47a6763aceb3fce87b96129bb334315b"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/social/png/social-story-editorial.png",
+          "bytes": 118523,
+          "sha256": "06ffbca82442438603823e5bb1f6677b47a6763aceb3fce87b96129bb334315b"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/social/webp/social-story-editorial.webp",
+          "bytes": 66218,
+          "sha256": "a6a691105ebb04319ecd3b731e8803e11f71e11c36e601147001d9fc1dc890f6",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed"
+    },
+    {
+      "id": "social-landscape-editorial",
+      "channel": "social",
+      "layout": "editorial-landscape",
+      "width": 1200,
+      "height": 628,
+      "transparency": false,
+      "safe_zone": [
+        0.07,
+        0.1,
+        0.66,
+        0.62
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
+        "placement": [
+          66,
+          457,
+          408,
+          136
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/divider-rose.png",
+        "sha256": "967536183268da2ef62c838220f57b1882e524c6608ff3346b2710a6c9a08dfa",
+        "placement": [
+          774,
+          35,
+          360,
+          45
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/social-landscape-editorial.png",
+          "bytes": 96057,
+          "sha256": "ae133f7c49518c211ff8bb7f361c92fd28db71ae9f14a009ed768b5cc957aed2"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/social/png/social-landscape-editorial.png",
+          "bytes": 96057,
+          "sha256": "ae133f7c49518c211ff8bb7f361c92fd28db71ae9f14a009ed768b5cc957aed2"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/social/webp/social-landscape-editorial.webp",
+          "bytes": 57406,
+          "sha256": "cbce266a1b8de1121e535d4306b31072649b13c8b41b859d74f27735bc1476f9",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed"
+    },
+    {
+      "id": "presentation-title-frame",
+      "channel": "presentation",
+      "layout": "presentation-title",
+      "width": 1920,
+      "height": 1080,
+      "transparency": false,
+      "safe_zone": [
+        0.08,
+        0.3,
+        0.62,
+        0.42
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
+        "placement": [
+          106,
+          59,
+          538,
+          179
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/orbit-stroke-steel.png",
+        "sha256": "91fb6983ecaebb1c0ae339337c4eb30b7ddf047f9a66e6780c69379c4a9b6a62",
+        "placement": [
+          1372,
+          512,
+          442,
+          55
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/presentation-title-frame.png",
+          "bytes": 172293,
+          "sha256": "1d08b2b5bbfb1b8f287a90942799aa9b556e5901a5005ae30e39eef488171b7b"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/presentation/png/presentation-title-frame.png",
+          "bytes": 172293,
+          "sha256": "1d08b2b5bbfb1b8f287a90942799aa9b556e5901a5005ae30e39eef488171b7b"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/presentation/webp/presentation-title-frame.webp",
+          "bytes": 100614,
+          "sha256": "ce50815f60c82f350a41637aca5a62a4fbbb07edddebd619b639f4ed3f449c52",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed"
+    },
+    {
+      "id": "presentation-section-frame",
+      "channel": "presentation",
+      "layout": "presentation-section",
+      "width": 1920,
+      "height": 1080,
+      "transparency": false,
+      "safe_zone": [
+        0.08,
+        0.26,
+        0.62,
+        0.42
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-orb.png",
+        "sha256": "873a6d3692b0e4fba8cdac405c23a3d7e9cd7cfb2302bb78e068c6a4dc605be1",
+        "placement": [
+          1468,
+          367,
+          346,
+          346
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/divider-steel.png",
+        "sha256": "af7eadaddc1ebb738ec6020a2de0abd0966a96f4c1b704d0878b7cf048d77e91",
+        "placement": [
+          106,
+          949,
+          576,
+          72
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/presentation-section-frame.png",
+          "bytes": 183113,
+          "sha256": "92922db67578004e16ca5658acd342560c56e48d6cfef7207d71d5b91065f4ed"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/presentation/png/presentation-section-frame.png",
+          "bytes": 183113,
+          "sha256": "92922db67578004e16ca5658acd342560c56e48d6cfef7207d71d5b91065f4ed"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/presentation/webp/presentation-section-frame.webp",
+          "bytes": 103826,
+          "sha256": "cc09fde9a4dd7e7136a3912a83cf4ae310a499b21182f587134c3089ded84c1b",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed"
+    },
+    {
+      "id": "campaign-landscape-frame",
+      "channel": "campaign",
+      "layout": "campaign-landscape",
+      "width": 1600,
+      "height": 900,
+      "transparency": false,
+      "safe_zone": [
+        0.08,
+        0.16,
+        0.68,
+        0.54
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
+        "placement": [
+          88,
+          690,
+          480,
+          160
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/badge-underline-rose.png",
+        "sha256": "2dc6c7368e9372fa81ebf15eb366d8ddc803dc06b20efb906a41b8d3845cccbb",
+        "placement": [
+          88,
+          50,
+          352,
+          44
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/campaign-landscape-frame.png",
+          "bytes": 131348,
+          "sha256": "55997aeb3ddac42294171f4d0815568e52c218ebdfcb680d83afcb5688dc8136"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/campaign/png/campaign-landscape-frame.png",
+          "bytes": 131348,
+          "sha256": "55997aeb3ddac42294171f4d0815568e52c218ebdfcb680d83afcb5688dc8136"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/campaign/webp/campaign-landscape-frame.webp",
+          "bytes": 78780,
+          "sha256": "d7cbbbf0ee1729cdb8b400b942860697f56aa9f7c508b5e0de5b3eab96e5ed1a",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed"
+    },
+    {
+      "id": "campaign-square-frame",
+      "channel": "campaign",
+      "layout": "campaign-square",
+      "width": 1080,
+      "height": 1080,
+      "transparency": false,
+      "safe_zone": [
+        0.08,
+        0.16,
+        0.74,
+        0.6
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-orb.png",
+        "sha256": "873a6d3692b0e4fba8cdac405c23a3d7e9cd7cfb2302bb78e068c6a4dc605be1",
+        "placement": [
+          837,
+          59,
+          184,
+          184
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/divider-spark.png",
+        "sha256": "de5c7b3f2a7d8f38d2dcf289b8c49bcff23d87786b2c91a686986f1be969ed2c",
+        "placement": [
+          59,
+          981,
+          324,
+          40
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/campaign-square-frame.png",
+          "bytes": 91498,
+          "sha256": "17ce7af08e8193d0b34bd640f733980bace6ccecc5d14a8c522dacd41e82aa77"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/campaign/png/campaign-square-frame.png",
+          "bytes": 91498,
+          "sha256": "17ce7af08e8193d0b34bd640f733980bace6ccecc5d14a8c522dacd41e82aa77"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/campaign/webp/campaign-square-frame.webp",
+          "bytes": 51030,
+          "sha256": "61751476da5efc6d8c5ad048c58cd54fe740abc19267f167ef4348340678f09b",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed"
+    },
+    {
+      "id": "video-corner-bug-overlay",
+      "channel": "video",
+      "layout": "video-corner-bug",
+      "width": 3840,
+      "height": 2160,
+      "transparency": true,
+      "safe_zone": [
+        0.05,
+        0.05,
+        0.9,
+        0.9
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-orb.png",
+        "sha256": "873a6d3692b0e4fba8cdac405c23a3d7e9cd7cfb2302bb78e068c6a4dc605be1",
+        "placement": [
+          3245,
+          1657,
+          384,
+          384
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": null,
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/video-corner-bug-overlay.png",
+          "bytes": 203967,
+          "sha256": "dbfaaa87a7817db978b1f97833358ff6ab7b899e2c9c667185775f1099028a66"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/video/png/video-corner-bug-overlay.png",
+          "bytes": 203967,
+          "sha256": "dbfaaa87a7817db978b1f97833358ff6ab7b899e2c9c667185775f1099028a66"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/video/webp/video-corner-bug-overlay.webp",
+          "bytes": 113770,
+          "sha256": "9e9fdcfe0e110d2cd3be07f401b18fdc9cdc1752d97243e1f5bee9f204aedb48",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed"
+    },
+    {
+      "id": "video-lower-third-overlay",
+      "channel": "video",
+      "layout": "video-lower-third",
+      "width": 3840,
+      "height": 2160,
+      "transparency": true,
+      "safe_zone": [
+        0.24,
+        0.77,
+        0.56,
+        0.12
+      ],
+      "master_type": "raster-composition-from-approved-sources",
+      "editable_source": "brand/templates/digital-marketing/template-specs.json",
+      "logo_source": {
+        "path": "brand/assets/logos/png/luxsync-horizontal-combo.png",
+        "sha256": "35543985cd201e3a52a0b30210fb8e8bc48a36cbad438d8364226145b561e198",
+        "placement": [
+          211,
+          1753,
+          768,
+          256
+        ],
+        "identity_rule": "exact approved LuxSync raster logo artwork composited without redraw, recolor or retyping"
+      },
+      "ornament_source": {
+        "path": "brand/assets/dividers/png/divider-steel.png",
+        "sha256": "af7eadaddc1ebb738ec6020a2de0abd0966a96f4c1b704d0878b7cf048d77e91",
+        "placement": [
+          960,
+          1800,
+          1152,
+          144
+        ],
+        "selection_rule": "clean transparent validated divider delivery used for seamless new composition; faithful board-derived crop remains preserved separately"
+      },
+      "format_policy": {
+        "png": "lossless master/delivery",
+        "webp": "lossless digital delivery",
+        "svg": "intentionally omitted: composition uses protected raster logo artwork and atmospheric raster effects; editable source is the governed template spec"
+      },
+      "files": {
+        "master_png": {
+          "path": "brand/masters/marketing-art/wave2/video-lower-third-overlay.png",
+          "bytes": 238256,
+          "sha256": "7506e6db2a30317e07fb04fc9a1114bf5cb25cf33e1df9cc59daf77cc14d42ac"
+        },
+        "png": {
+          "path": "brand/exports/digital/marketing/video/png/video-lower-third-overlay.png",
+          "bytes": 238256,
+          "sha256": "7506e6db2a30317e07fb04fc9a1114bf5cb25cf33e1df9cc59daf77cc14d42ac"
+        },
+        "webp": {
+          "path": "brand/exports/digital/marketing/video/webp/video-lower-third-overlay.webp",
+          "bytes": 147206,
+          "sha256": "0cf493f0aa6ac187ee8c3ca9fb7bec4f9d14ed174da2301642c90473454fb9b4",
+          "lossless": true
+        }
+      },
+      "qa_status": "passed"
+    }
+  ],
+  "qa": {
+    "contact_sheet": "brand/audit/qa/wave2-digital-marketing.jpg",
+    "sha256": "c22d77b4b92e8ec0d02ad06d9ed626e6dca24e66171a258977327ede2f7df32e",
+    "status": "passed-manual-review",
+    "approval_record": "brand/audit/wave2-digital-marketing-qa-approval.json",
+    "approval_record_sha256": "fbbdf8dbcad55ff53155abda89db5c6c2de800c9898f248771e344715dc54b68"
+  },
+  "publication_guardrails": [
+    "static frames contain no mutable campaign copy or commerce facts",
+    "conceptual approval-board product renders are not published as live products",
+    "protected LuxSync logo source pixels are composited without recoloring, redrawing or retyping",
+    "clean transparent validated dividers are used for seamless new compositions while faithful board-derived crops remain preserved",
+    "product-card and email-signature content remains live/template-driven",
+    "video assets are static overlays only, not motion deliverables"
+  ]
+}
