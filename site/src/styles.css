@@ -81,7 +81,7 @@ p { margin: 0; }
 .main-nav{position:absolute;top:calc(100% + 1px);left:0;width:min(340px,calc(100vw - 32px));display:none;padding:1rem 1.2rem 1.35rem;background:rgba(13,21,38,.98);border:1px solid rgba(214,176,160,.2);border-top:0;border-radius:0 0 20px 20px;box-shadow:0 24px 54px rgba(5,10,20,.5);flex-direction:column;align-items:stretch;gap:.15rem}.main-nav.is-open{display:flex}
 .header-actions{grid-column:3;display:flex;align-items:center;justify-content:flex-end;gap:1rem}
 .nav-link{position:relative;color:rgba(208,190,176,.76);text-decoration:none;font-size:.88rem;font-weight:600;letter-spacing:.01em;padding:.7rem .1rem}.nav-link::after{content:'';position:absolute;left:0;right:0;bottom:.45rem;height:1px;background:var(--champagne);transform:scaleX(0);transform-origin:left;transition:transform .2s ease}.nav-link:hover,.nav-link.is-active{color:var(--driftwood)}.nav-link:hover::after,.nav-link.is-active::after{transform:scaleX(1)}
-.nav-toggle{grid-column:1;grid-row:1;display:grid;align-content:center;justify-self:start;width:48px;height:48px;padding:10px;border:1px solid rgba(214,176,160,.34);border-radius:14px;background:linear-gradient(145deg,rgba(123,150,178,.12),rgba(214,176,160,.06)),var(--suede);color:var(--driftwood);cursor:pointer;box-shadow:0 8px 22px rgba(13,21,38,.32),0 3px 12px rgba(123,150,178,.14)}.nav-toggle span:not(.sr-only){display:block;width:25px;height:1px;background:linear-gradient(90deg,var(--steel),var(--champagne));margin:3px 0;transition:transform .2s ease,opacity .2s ease}.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-toggle{grid-column:1;grid-row:1;display:grid;align-content:center;justify-self:start;width:48px;height:48px;padding:10px;border:1px solid rgba(214,176,160,.34);border-radius:14px;background:linear-gradient(145deg,rgba(123,150,178,.12),rgba(214,176,160,.06)),var(--suede);color:var(--driftwood);cursor:pointer;box-shadow:0 8px 22px rgba(13,21,38,.32),0 3px 12px rgba(123,150,178,.14)}.nav-toggle img{width:30px;height:30px;object-fit:contain;filter:drop-shadow(0 3px 8px rgba(123,150,178,.35));transition:transform .22s ease,filter .22s ease}.nav-toggle:hover img{transform:rotate(8deg) scale(1.06);filter:drop-shadow(0 4px 12px rgba(214,176,160,.45))}.nav-toggle[aria-expanded="true"] img{transform:rotate(32deg);filter:drop-shadow(0 4px 14px rgba(123,150,178,.55))}
 
 .button {
   display: inline-flex;
@@ -671,4 +671,5 @@ body[data-route="/guides"] { --page-hero-image: url("/assets/plush-drift-energy.
   background:linear-gradient(145deg,rgba(123,150,178,.12),rgba(214,176,160,.06));
   box-shadow:0 8px 22px rgba(13,21,38,.28),0 3px 14px rgba(123,150,178,.12);
 }
+
 
