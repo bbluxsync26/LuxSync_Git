@@ -76,42 +76,12 @@ p { margin: 0; }
   background: rgba(13,21,38,.88);
   backdrop-filter: blur(18px);
 }
-.header-inner {
-  width: min(calc(100% - 32px), var(--content));
-  margin: 0 auto;
-  min-height: 76px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-.brand-link { flex: 0 0 auto; }
-.brand-link img { width: 180px; height: auto; }
-.main-nav { display: flex; align-items: center; gap: 1.2rem; }
-.nav-link {
-  position: relative;
-  color: rgba(208,190,176,.76);
-  text-decoration: none;
-  font-size: .88rem;
-  font-weight: 600;
-  letter-spacing: .01em;
-  padding: .7rem .1rem;
-}
-.nav-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: .45rem;
-  height: 1px;
-  background: var(--champagne);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .2s ease;
-}
-.nav-link:hover, .nav-link.is-active { color: var(--driftwood); }
-.nav-link:hover::after, .nav-link.is-active::after { transform: scaleX(1); }
-.nav-toggle { display: none; }
+.header-inner {position:relative;width:min(calc(100% - 40px),1540px);margin:0 auto;min-height:88px;display:grid;grid-template-columns:minmax(250px,1fr) auto minmax(250px,1fr);align-items:center;gap:1.25rem}
+.brand-link{grid-column:2;display:block;justify-self:center;line-height:0}.brand-link img{width:clamp(230px,22vw,360px);height:auto}
+.main-nav{position:absolute;top:calc(100% + 1px);left:0;width:min(340px,calc(100vw - 32px));display:none;padding:1rem 1.2rem 1.35rem;background:rgba(13,21,38,.98);border:1px solid rgba(214,176,160,.2);border-top:0;border-radius:0 0 20px 20px;box-shadow:0 24px 54px rgba(5,10,20,.5);flex-direction:column;align-items:stretch;gap:.15rem}.main-nav.is-open{display:flex}
+.header-actions{grid-column:3;display:flex;align-items:center;justify-content:flex-end;gap:1rem}
+.nav-link{position:relative;color:rgba(208,190,176,.76);text-decoration:none;font-size:.88rem;font-weight:600;letter-spacing:.01em;padding:.7rem .1rem}.nav-link::after{content:'';position:absolute;left:0;right:0;bottom:.45rem;height:1px;background:var(--champagne);transform:scaleX(0);transform-origin:left;transition:transform .2s ease}.nav-link:hover,.nav-link.is-active{color:var(--driftwood)}.nav-link:hover::after,.nav-link.is-active::after{transform:scaleX(1)}
+.nav-toggle{grid-column:1;grid-row:1;display:grid;align-content:center;justify-self:start;width:48px;height:48px;padding:10px;border:1px solid rgba(214,176,160,.34);border-radius:14px;background:linear-gradient(145deg,rgba(123,150,178,.12),rgba(214,176,160,.06)),var(--suede);color:var(--driftwood);cursor:pointer;box-shadow:0 8px 22px rgba(13,21,38,.32),0 3px 12px rgba(123,150,178,.14)}.nav-toggle span:not(.sr-only){display:block;width:25px;height:1px;background:linear-gradient(90deg,var(--steel),var(--champagne));margin:3px 0;transition:transform .2s ease,opacity .2s ease}.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 .button {
   display: inline-flex;
@@ -600,35 +570,11 @@ body[data-route="/guides"] { --page-hero-image: url("/assets/plush-drift-energy.
 }
 
 @media (max-width: 820px) {
-  .header-inner { min-height: 68px; }
-  .brand-link img { width: 150px; }
-  .nav-toggle {
-    display: grid;
-    width: 44px;
-    height: 44px;
-    padding: 10px;
-    border: 1px solid rgba(123,150,178,.18);
-    border-radius: 12px;
-    background: rgba(23,32,54,.62);
-    color: var(--driftwood);
-    cursor: pointer;
-  }
-  .nav-toggle span:not(.sr-only) { display: block; height: 1px; background: var(--driftwood); margin: 3px 0; }
-  .main-nav {
-    position: absolute;
-    top: 68px;
-    left: 0;
-    right: 0;
-    display: none;
-    padding: 1rem 16px 1.3rem;
-    background: rgba(13,21,38,.98);
-    border-bottom: 1px solid rgba(208,190,176,.08);
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .main-nav.is-open { display: flex; }
-  .nav-link { padding: .8rem 0; }
-  .main-nav .button { display: inline-flex; margin-top: .4rem; }
+  .header-inner{min-height:76px;grid-template-columns:1fr auto 1fr;width:min(calc(100% - 24px),1540px)}
+  .brand-link img{width:clamp(170px,29vw,240px)}
+  .main-nav{top:76px}.nav-link{padding:.8rem 0}
+  .header-actions{gap:.65rem}.header-actions .nav-link{font-size:.8rem;padding:.6rem 0}
+  .header-cta{min-height:42px;padding:.6rem .8rem;font-size:.72rem}
   .hero { min-height: auto; }
   .hero-inner { grid-template-columns: 1fr; padding: 5rem 0; }
   .hero-visual { min-height: 390px; }
@@ -642,6 +588,11 @@ body[data-route="/guides"] { --page-hero-image: url("/assets/plush-drift-energy.
 }
 
 @media (max-width: 560px) {
+  .header-inner{grid-template-columns:48px 1fr auto;gap:.45rem}
+  .brand-link{justify-self:center}.brand-link img{width:145px}
+  .header-actions .account-nav{display:none}.header-actions{gap:.45rem}
+  .header-actions .cart-nav{font-size:.72rem}
+  .header-cta{max-width:126px;min-height:38px;padding:.45rem .55rem;font-size:.62rem;line-height:1.15;text-align:center}
   h1 { font-size: clamp(2.7rem, 13vw, 4.2rem); }
   .hero-inner { padding: 4rem 0; }
   .hero-visual { min-height: 330px; }
