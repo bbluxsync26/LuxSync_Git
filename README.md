@@ -21,13 +21,37 @@
 
 | Surface | Purpose | Enter |
 |---|---|---|
-| **Strategy** | Business model, launch, finance, roadmap, decisions | [`docs/`](docs/) |
-| **Brand** | LuxSync Production Raster v5, Plush Drift DNA, palette, type, voice, assets | [`brand/`](brand/) |
-| **Content** | Approved website copy, FAQs, Contact, product/solution catalog | [`content/`](content/) |
+| **CI/CD** | GitHub Actions validation, packaging, and release workflows | [`.github/`](.github/) |
+| **Brand** | LuxSync Production Raster v5, Plush Drift DNA, palette, type, voice, governed assets | [`brand/`](brand/) |
+| **Content** | Approved website copy, FAQs, Contact, product/solution catalog, ROI guides | [`content/`](content/) |
+| **Strategy & Governance** | Business model, architecture, decisions, runbooks, launch and operational documentation | [`docs/`](docs/) |
+| **Incoming** | Controlled intake area for source material awaiting reconciliation or classification | [`incoming/`](incoming/) |
 | **Prompts** | Airo build prompt and reusable AI workflows | [`prompts/`](prompts/) |
-| **Website** | IA, page blueprints, design system, Concierge engine | [`website/`](website/) |
+| **Automation & Validation** | Repository validators, packaging tools, asset checks, build-support scripts | [`scripts/`](scripts/) |
+| **Production Site** | Buildable static-site implementation and production candidate source | [`site/`](site/) |
+| **Website Source & UX** | IA, page blueprints, design system, Concierge engine, account-access specifications and assets | [`website/`](website/) |
 
 **Repository source of truth:** [`docs/master-catalog.md`](docs/master-catalog.md)
+
+### Current top-level directory structure
+
+```text
+LuxSync_Git/
+├── .github/          # CI/CD workflows and repository automation
+├── brand/            # Governed brand masters, assets, exports, manifests, and QA
+├── content/          # Approved customer-facing content and product/ROI source material
+├── docs/             # Architecture, decisions, runbooks, governance, strategy, and planning
+├── incoming/         # Controlled intake for material not yet reconciled into source of truth
+├── prompts/          # Website, brand, content, product, and email prompts
+├── scripts/          # Validation, packaging, asset, and repository automation
+├── site/             # Production static-site implementation, build, and tests
+├── website/          # Website blueprints, UX contracts, styles, Concierge source, and web assets
+├── README.md         # Repository overview
+├── setup-luxsync.ps1 # Windows setup helper
+└── setup-luxsync.sh  # Shell setup helper
+```
+
+Generated build artifacts and local-only files are intentionally not part of the committed top-level structure.
 
 ---
 
