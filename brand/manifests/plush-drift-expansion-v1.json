@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "collection_id": "LS-PLUSH-DRIFT-EXPANSION-001",
+  "status": "production-candidate",
+  "created_at": "2026-09-03",
+  "principles": [
+    "protected logos remain exact",
+    "mutable copy remains live",
+    "reference-board claims are not production facts",
+    "no invented products or pricing"
+  ],
+  "raster_masters": [
+    {
+      "uses": [
+        "website hero",
+        "digital campaign",
+        "social crop"
+      ],
+      "path": "brand/assets/campaign/web/intelligent-living-master-v1.png"
+    },
+    {
+      "uses": [
+        "ROI guide cover",
+        "brochure cover",
+        "social story"
+      ],
+      "path": "brand/assets/campaign/print/plush-drift-cover-master-v1.png"
+    },
+    {
+      "uses": [
+        "merchandise presentation",
+        "logo placement proof"
+      ],
+      "path": "brand/assets/campaign/merchandise/merchandise-blank-master-v1.png"
+    }
+  ],
+  "vector_components": [
+    "metallic-pill.svg",
+    "orbit-frame.svg",
+    "sparkle-divider.svg",
+    "corner-frame.svg",
+    "product-card-shell.svg",
+    "cover-frame.svg"
+  ],
+  "reference_only": [
+    "brand/reference-boards/hero-style-examples/home_smart_living_showcase.png",
+    "brand/reference-boards/hero-style-examples/home_luxury_smart_home_showcase.png",
+    "brand/reference-boards/hero-style-examples/home_intelligent_luxury_living.png",
+    "brand/reference-boards/hero-style-examples/roi_guide_hero.png"
+  ]
+}

@@ -165,7 +165,7 @@ function shell({ route, title, description, main, bodyClass = '' }) {
 </html>`;
 }
 
-const hero = `<section class="hero"><div class="hero-aura" aria-hidden="true"></div><div class="hero-inner"><div class="hero-copy"><p class="eyebrow">Intelligent living, curated</p><h1>${SLOGAN}</h1><p class="hero-lede">${escapeHtml(HOME.supportingCopy)}</p><div class="button-row"><a class="button" href="/find-my-luxsync-solution/">${escapeHtml(HOME.primaryCta)}</a><a class="button button-secondary" href="/shop/">${escapeHtml(HOME.secondaryCta)}</a><a class="text-link" href="/guides/">${escapeHtml(HOME.supportingCta)} →</a></div></div><div class="hero-visual hero-photo" aria-label="A refined intelligent living interior"><img class="hero-photo__image" src="/assets/homepage-intelligent-living.png" alt="A refined modern living room with integrated lighting and quiet technology"><div class="orbital-shell"><img src="/assets/luxsync-orb.png" alt=""><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="orbit orbit-three"></span></div><div class="hero-stat"><span>Outcome first</span><strong>Lifestyle → Experience → Intelligence → Technology</strong></div></div></div></section>`;
+const hero = `<section class="hero"><div class="hero-aura" aria-hidden="true"></div><div class="hero-inner"><div class="hero-copy"><p class="eyebrow">Intelligent living, curated</p><h1>${SLOGAN}</h1><p class="hero-lede">${escapeHtml(HOME.supportingCopy)}</p><div class="button-row"><a class="button" href="/find-my-luxsync-solution/">${escapeHtml(HOME.primaryCta)}</a><a class="button button-secondary" href="/shop/">${escapeHtml(HOME.secondaryCta)}</a><a class="text-link" href="/guides/">${escapeHtml(HOME.supportingCta)} →</a></div></div><div class="hero-visual hero-photo" aria-label="A refined intelligent living interior"><img class="hero-photo__image" src="/assets/intelligent-living-master-v1.png" alt="A refined modern living room with integrated lighting and quiet technology"><div class="orbital-shell"><img src="/assets/luxsync-orb.png" alt=""><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="orbit orbit-three"></span></div><div class="hero-stat"><span>Outcome first</span><strong>Lifestyle → Experience → Intelligence → Technology</strong></div></div></div></section>`;
 
 function homePage() {
   const featured = [
@@ -300,7 +300,7 @@ fs.copyFileSync(path.join(HERE, 'src', 'og.png'), path.join(DIST, 'assets', 'og.
 for (const file of [
   'bridgette-beardsley.jpg','sheldon-bardol.jpg','homepage-intelligent-living.png','member-access.png',
   'plush-drift-residential.png','plush-drift-commercial.png','plush-drift-rental.png',
-  'plush-drift-care.png','plush-drift-concierge.png','plush-drift-energy.png'
+  'plush-drift-care.png','plush-drift-concierge.png','plush-drift-energy.png','intelligent-living-master-v1.png'
 ]) fs.copyFileSync(path.join(HERE,'src',file),path.join(DIST,'assets',file));
 
 const faqs = parseFaqs(fs.readFileSync(FAQ_SOURCE, 'utf8'));
@@ -328,5 +328,6 @@ fs.writeFileSync(path.join(DIST, '404.html'), shell({ route: '/404', title: 'Pag
 
 fs.writeFileSync(path.join(DIST, '.htaccess'), `Options -MultiViews\nErrorDocument 404 /404.html\nDirectoryIndex index.html\n`);
 console.log(`Built LuxSync site with ${routes.length} governed routes.`);
+
 
 
