@@ -67,4 +67,4 @@ Add one away-from-home property priority, such as Water Watch or Property Pulse.
 
 LuxSync does not guarantee time savings, energy savings, incident prevention, or productivity gains. Automation supports routines but does not replace household judgment, emergency services, life-safety systems, professional monitoring, or responsible maintenance.
 
-**Next step:** **Find My LuxSync Solution** and choose the routines that matter most.
+**Next step:** **LuxSync Concierge** and choose the routines that matter most.

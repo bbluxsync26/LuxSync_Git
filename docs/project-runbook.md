@@ -33,7 +33,7 @@ The repository is the source of truth. Conversation drafts and external copies b
 | Website Design & CI/CD | IA, UX/UI, source, testing, preview, Airo handoff/reconciliation, deployment, rollback | Architecture, website source, CI/CD runbooks |
 | Content & Guides | FAQs, Contact, setup/education, product content | `content/`, `website/pages/`, guides |
 | Prompts & Docs | Prompts, runbooks, checklists, catalog, decisions | `docs/`, `prompts/`, Master Catalog |
-| Concierge | Find My LuxSync Solution, engine, Blueprint, product mapping | `docs/architecture/intelligent-living-concierge.md`, `website/src/concierge/` |
+| Concierge | LuxSync Concierge, engine, Blueprint, product mapping | `docs/architecture/intelligent-living-concierge.md`, `website/src/concierge/` |
 | Brand & Graphics | Logos, vector/UI graphics, imagery, asset metadata | `brand/`, asset tooling/runbooks |
 
 ## Environment Map
@@ -65,7 +65,7 @@ Current implementation rules:
 - Visual system: **LuxSync Production Raster v5**
 - Design DNA: **Plush Drift**
 - Sole approved public slogan / hero line: **Where Luxury Lives Intelligently**
-- Primary homepage CTA: **Find My LuxSync Solution**
+- Primary homepage CTA: **LuxSync Concierge**
 - Secondary homepage CTA: **Shop Smart Home**
 - Supporting CTA: **Get the ROI Guide**
 - Headings / display / navigation / graphic UI: **Manrope 500/600**
@@ -218,7 +218,7 @@ The second verifies the governed Airo handoff allowlist, required sources, forbi
 | DEC-003 | 2026-08-29 | Maintain Master Catalog and Project Runbook | Active |
 | DEC-004 | 2026-08-29 | Commerce Plus governs launch commerce; Airo accelerates staging/design | Active |
 | DEC-005 | 2026-08-30 | Do not publish senior-service pricing until explicitly approved | Open |
-| ARCH-001 | 2026-08-31 | Find My LuxSync Solution / Intelligent Living Concierge is a flagship customer journey | Active |
+| ARCH-001 | 2026-08-31 | LuxSync Concierge / Intelligent Living Concierge is a flagship customer journey | Active |
 | ARCH-002 | 2026-08-31 | Contact and Concierge share a reusable Property Profile | Active |
 | ARC-003 | 2026-09-03 | Airo receives an allowlisted source package and returns exports through GitHub reconciliation | Active |
 | BRAND-001 | 2026-08-31 | Where Luxury Lives Intelligently is the sole public slogan/hero line | Active |

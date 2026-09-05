@@ -70,6 +70,6 @@ Use only benefits that can be supported by baseline data and post-implementation
 
 Each guide should be offered as an accessible web page and downloadable branded document. Use Manrope 500/600 for headings and Inter 400/500 for body text. Use the approved LuxSync palette only, with Champagne Rose Gold Metallic as a restrained premium accent.
 
-Primary CTA: **Find My LuxSync Solution**
+Primary CTA: **LuxSync Concierge**
 Consultation CTA: **Request a Consultation**
 Information contact: `info@luxsync.net`

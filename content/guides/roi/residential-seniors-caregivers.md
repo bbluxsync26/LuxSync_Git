@@ -70,4 +70,4 @@ Measure adoption, confidence, false alerts, support requests, and whether the re
 
 LuxSync solutions are not medical devices, clinical monitoring, fall-detection guarantees, personal emergency-response services, professional security monitoring, or substitutes for caregivers, emergency services, required life-safety equipment, or medical advice. Alerts may fail because of power, internet, device, configuration, or human-response issues.
 
-**Next step:** **Find My LuxSync Solution** with the resident's priorities at the center, or request guidance at `info@luxsync.net`.
+**Next step:** **LuxSync Concierge** with the resident's priorities at the center, or request guidance at `info@luxsync.net`.

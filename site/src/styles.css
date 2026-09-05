@@ -235,7 +235,7 @@ p { margin: 0; }
   z-index: -1;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(13,21,38,.96) 0%, rgba(13,21,38,.83) 42%, rgba(13,21,38,.28) 76%, rgba(13,21,38,.48) 100%),
+    linear-gradient(90deg, rgba(13,21,38,1) 0%, rgba(13,21,38,.98) 44%, rgba(13,21,38,.32) 76%, rgba(13,21,38,.48) 100%),
     linear-gradient(0deg, rgba(13,21,38,.9), transparent 58%);
 }
 .page-hero.compact { min-height: 390px; }
@@ -256,19 +256,19 @@ p { margin: 0; }
 }
 
 body[data-route="/solutions"],
-body[data-route="/solutions/residential"] { --page-hero-image: url("/assets/plush-drift-residential.png"); }
-body[data-route="/solutions/commercial-offices"] { --page-hero-image: url("/assets/plush-drift-commercial.png"); }
-body[data-route="/solutions/short-term-rentals"] { --page-hero-image: url("/assets/plush-drift-rental.png"); }
+body[data-route="/solutions/residential"] { --page-hero-image: url("/assets/heroes/luxsync-residential.png"); }
+body[data-route="/solutions/commercial-offices"] { --page-hero-image: url("/assets/heroes/luxsync-commercial.png"); }
+body[data-route="/solutions/short-term-rentals"] { --page-hero-image: url("/assets/heroes/luxsync-rental.png"); }
 body[data-route="/solutions/senior-living"],
-body[data-route="/solutions/aging-in-place"] { --page-hero-image: url("/assets/plush-drift-care.png"); }
+body[data-route="/solutions/aging-in-place"] { --page-hero-image: url("/assets/heroes/luxsync-care.png"); }
 body[data-route="/find-my-luxsync-solution"],
-body[data-route="/my-luxsync-blueprint"],
-body[data-route="/about"],
+body[data-route="/my-luxsync-blueprint"] { --page-hero-image: url("/assets/heroes/luxsync-concierge.png"); }
+body[data-route="/about"] { --page-hero-image: url("/assets/heroes/luxsync-home-approved-showcase.png"); }
 body[data-route="/faqs"],
 body[data-route="/contact"],
-body[data-route="/404"] { --page-hero-image: url("/assets/plush-drift-concierge.png"); }
-body[data-route="/shop"],
-body[data-route="/guides"] { --page-hero-image: url("/assets/plush-drift-energy.png"); }
+body[data-route="/404"] { --page-hero-image: url("/assets/heroes/luxsync-support-contact.png"); }
+body[data-route="/shop"] { --page-hero-image: url("/assets/heroes/luxsync-shop.png"); }
+body[data-route="/guides"] { --page-hero-image: url("/assets/heroes/luxsync-roi-guide.png"); }
 .page-hero h1 { max-width: 980px; font-size: clamp(2.8rem, 6vw, 5.6rem); }
 .page-hero p:not(.eyebrow) { max-width: 820px; margin-top: 1.4rem; color: rgba(208,190,176,.76); font-size: 1.1rem; }
 .page-hero .button-row { margin-top: 2rem; }
@@ -671,5 +671,3 @@ body[data-route="/guides"] { --page-hero-image: url("/assets/plush-drift-energy.
   background:linear-gradient(145deg,rgba(123,150,178,.12),rgba(214,176,160,.06));
   box-shadow:0 8px 22px rgba(13,21,38,.28),0 3px 14px rgba(123,150,178,.12);
 }
-
-

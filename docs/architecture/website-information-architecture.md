@@ -18,7 +18,7 @@ Where older generated assets or guidance conflict, **LuxSync Production Raster v
 
 The launch website is a **commerce-first premium intelligent-living storefront with guided discovery as a flagship journey**.
 
-A visitor should quickly understand what LuxSync offers, why the catalog is curated, how **Find My LuxSync Solution** can create a personalized **My LuxSync Blueprint**, why SmartThings compatibility matters, how to shop, and where to get help.
+A visitor should quickly understand what LuxSync offers, why the catalog is curated, how **LuxSync Concierge** can create a personalized **My LuxSync Blueprint**, why SmartThings compatibility matters, how to shop, and where to get help.
 
 ## Primary Navigation
 
@@ -48,12 +48,12 @@ Required sequence:
 1. **Hero**
    - Official slogan / hero line: **Where Luxury Lives Intelligently**
    - Supporting copy: premium smart-home technology, curated hardware, and thoughtful automation for modern living
-   - Primary CTA: **Find My LuxSync Solution**
+   - Primary CTA: **LuxSync Concierge**
    - Secondary CTA: **Shop Smart Home**
    - Supporting CTA: **Get the ROI Guide**
 2. **Featured Solutions** — Short-Term Rentals; Seniors & Caregivers / Accessible Living; Smart Office & Property Management; Intentional Parents; Busy Professionals
 3. **Why LuxSync** — Curated Catalog; SmartThings Compatibility; Intelligent Discovery; Simplified Buying; Premium Customer Experience
-4. **Find My LuxSync Solution** — flagship Intelligent Living Concierge with Blueprint output
+4. **LuxSync Concierge** — flagship Intelligent Living Concierge with Blueprint output
 5. **Product Collections** — current categories from `content/product-catalog.md`
 6. **How It Works** — Discover; Design; Choose; Evolve
 7. **Featured Products / Bundles** — validated commerce data only; solution concepts clearly labeled
@@ -63,13 +63,13 @@ Required sequence:
 11. **ROI Guide Library / Optional Email Download** — audience-specific guides for commercial, care, STR, and residential visitors
 12. **Footer**
 
-## Find My LuxSync Solution
+## LuxSync Concierge
 
 This is a primary website journey, governed by `docs/architecture/intelligent-living-concierge.md` and `website/src/concierge/`.
 
 Customer-facing naming:
 
-- Entry point: **Find My LuxSync Solution**
+- Entry point: **LuxSync Concierge**
 - Experience: **LuxSync Intelligent Living Concierge**
 - Output: **My LuxSync Blueprint**
 
@@ -251,7 +251,7 @@ A first-time visitor should quickly answer:
 - What is LuxSync?
 - What can I buy?
 - What could my space do?
-- How does Find My LuxSync Solution help me decide?
+- How does LuxSync Concierge help me decide?
 - Why is LuxSync different from a generic electronics store?
 - How do I shop?
 - How do I ask a question or request a consultation?

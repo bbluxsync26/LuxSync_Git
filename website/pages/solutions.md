@@ -19,4 +19,4 @@ Each pathway should answer: what outcomes matter, which LuxSync Experiences are 
 
 Use the exact horizontal logo and live Plush Drift pathway cards. No flattened generated solution boards.
 
-Primary CTA: **Find My LuxSync Solution**. Secondary paths: **Get the ROI Guide** and **Contact LuxSync**.
+Primary CTA: **LuxSync Concierge**. Secondary paths: **Get the ROI Guide** and **Contact LuxSync**.

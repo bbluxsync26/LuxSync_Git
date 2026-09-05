@@ -52,7 +52,7 @@ The first twelve weeks use three controlled horizons:
 
 ### Week 2 — Guided Discovery and Customer Education
 
-- Validate the **Find My LuxSync Solution** journey and **My LuxSync Blueprint** handoff.
+- Validate the **LuxSync Concierge** journey and **My LuxSync Blueprint** handoff.
 - Publish only approved FAQs, guides, product families, and solution concepts.
 - Review early inquiries for unclear compatibility, terminology, or routing.
 - Keep marketing consent separate from the required privacy acknowledgment.

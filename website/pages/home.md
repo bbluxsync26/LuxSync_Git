@@ -22,7 +22,7 @@ Luxury smart-home technology designed for modern living, with curated hardware a
 
 ### Calls to action
 
-- Primary: **Find My LuxSync Solution**
+- Primary: **LuxSync Concierge**
 - Secondary: **Shop Smart Home**
 - Supporting: **Get the ROI Guide**
 
@@ -60,13 +60,13 @@ Use the Intelligent Calm voice. Avoid unsupported claims.
 
 ---
 
-## 4. Find My LuxSync Solution
+## 4. LuxSync Concierge
 
 This is a flagship homepage experience and should appear before the main product-collection grid.
 
 ### Customer-facing identity
 
-- Entry CTA: **Find My LuxSync Solution**
+- Entry CTA: **LuxSync Concierge**
 - Guided experience: **LuxSync Intelligent Living Concierge**
 - Personalized result: **My LuxSync Blueprint**
 
@@ -88,7 +88,7 @@ The Concierge should capture property type, approximate square footage, existing
 
 Use the actual engine under `website/src/concierge/`. Do not implement this as a novelty quiz.
 
-Primary CTA: **Find My LuxSync Solution**
+Primary CTA: **LuxSync Concierge**
 
 Secondary CTA: **See How the Blueprint Works**
 
@@ -282,7 +282,7 @@ The homepage succeeds when a new visitor can quickly understand:
 
 1. LuxSync is a curated premium intelligent-living and smart-home commerce brand.
 2. **Where Luxury Lives Intelligently** is the single governing slogan/hero line.
-3. Find My LuxSync Solution is a primary way to begin.
+3. LuxSync Concierge is a primary way to begin.
 4. My LuxSync Blueprint recommends experiences before products.
 5. What kinds of solutions and products are available.
 6. Why compatibility and curation matter.

@@ -14,7 +14,7 @@ You are writing approved customer-facing content for **LuxSync LLC**.
 - Primary launch compatibility standard: Samsung SmartThings
 - Production commerce system of record: GoDaddy Commerce Plus
 - Voice: **Intelligent Calm**
-- Flagship guided experience: **Find My LuxSync Solution**
+- Flagship guided experience: **LuxSync Concierge**
 - Guided product name: **LuxSync Intelligent Living Concierge**
 - Personalized output: **My LuxSync Blueprint**
 - Support email: `support@luxsync.net`
@@ -53,7 +53,7 @@ Preferred model:
 
 **Lifestyle Goal → LuxSync Experience → Capability → Compatible Technology**
 
-When appropriate, direct visitors to **Find My LuxSync Solution** rather than forcing them to identify devices or protocols on their own.
+When appropriate, direct visitors to **LuxSync Concierge** rather than forcing them to identify devices or protocols on their own.
 
 The Concierge is not a quiz. It is a guided intelligent-living recommendation experience that can produce **My LuxSync Blueprint**, including recommended LuxSync Experiences, foundation, implementation path, and phased roadmap.
 

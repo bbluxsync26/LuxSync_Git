@@ -22,7 +22,7 @@ The governing customer model is:
 
 **Lifestyle → Experience → Intelligence → Technology**
 
-Customers can shop directly, but LuxSync's signature differentiator is **Find My LuxSync Solution**, powered by the **LuxSync Intelligent Living Concierge**. The Concierge begins with the customer's property, priorities, routines, frustrations, and existing technology, then produces **My LuxSync Blueprint** with recommended experiences, foundation, compatibility context, implementation path, and phased roadmap.
+Customers can shop directly, but LuxSync's signature differentiator is **LuxSync Concierge**, powered by the **LuxSync Intelligent Living Concierge**. The Concierge begins with the customer's property, priorities, routines, frustrations, and existing technology, then produces **My LuxSync Blueprint** with recommended experiences, foundation, compatibility context, implementation path, and phased roadmap.
 
 That allows LuxSync to answer a more useful question than “Which device do you want?”
 
@@ -159,7 +159,7 @@ The Contact page shares Property Profile concepts with the Concierge so customer
 - **Headings / display / UI:** Manrope 500/600
 - **Body / supporting UI:** Inter 400/500
 - **Voice:** Intelligent Calm
-- **Flagship journey:** Find My LuxSync Solution
+- **Flagship journey:** LuxSync Concierge
 - **Guided experience:** LuxSync Intelligent Living Concierge
 - **Output:** My LuxSync Blueprint
 

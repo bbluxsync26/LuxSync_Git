@@ -15,17 +15,17 @@
 - [ ] Sole approved slogan / hero line is exactly `Where Luxury Lives Intelligently`
 - [ ] No retired alternate slogan or hero treatment appears
 - [ ] Supporting copy matches `website/pages/home.md`
-- [ ] Primary CTA is `Find My LuxSync Solution`
+- [ ] Primary CTA is `LuxSync Concierge`
 - [ ] Secondary CTA is `Shop Smart Home`
 - [ ] Supporting CTA is `Get the ROI Guide`
 - [ ] Featured Solutions uses the five approved segments
-- [ ] Find My LuxSync Solution receives flagship visual priority before the main product-collection grid
+- [ ] LuxSync Concierge receives flagship visual priority before the main product-collection grid
 - [ ] Product Collections, How It Works, featured products, founder preview, FAQ preview, Contact/Support gateway, and lead-magnet blocks are present
 - [ ] Featured products do not use invented prices, compatibility, or availability
 
 ## Intelligent Living Concierge
 
-- [ ] Entry point is `Find My LuxSync Solution`
+- [ ] Entry point is `LuxSync Concierge`
 - [ ] Guided experience is named `LuxSync Intelligent Living Concierge`
 - [ ] Output is named `My LuxSync Blueprint`
 - [ ] Experience follows `Lifestyle → Experience → Intelligence → Technology`

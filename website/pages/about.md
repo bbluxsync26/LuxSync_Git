@@ -25,7 +25,7 @@ Keep this page personal and credible without turning it into a résumé wall or 
 - Eyebrow: **About LuxSync**
 - Heading: **Technology should improve the atmosphere—not interrupt it.**
 - Supporting copy: Use the opening story in `content/about.md`.
-- Primary CTA: **Find My LuxSync Solution**
+- Primary CTA: **LuxSync Concierge**
 - Secondary CTA: **Explore Smart Home**
 
 Use a spacious Slate Navy or Dark Suede composition with Pale Driftwood copy, restrained Champagne Rose Gold Metallic detail, and a **production-approved architectural or smart-living visual** governed by `website/asset-map.md` and the current asset manifests.
@@ -76,7 +76,7 @@ Close the story with three commitments:
 ### 6. CTA Band
 
 - Heading: **Ready to create a more intelligent space?**
-- Primary CTA: **Find My LuxSync Solution**
+- Primary CTA: **LuxSync Concierge**
 - Secondary CTA: **Browse Frequently Asked Questions**
 
 ## Responsive and Accessibility Rules

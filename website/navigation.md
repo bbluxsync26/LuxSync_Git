@@ -24,7 +24,7 @@ The Account utility must feel like part of the LuxSync premium experience, not a
 
 Do not collect real credentials in a static site or invent an authentication provider to make the preferred route work. The production route/redirect may change to match the supported account platform while preserving the LuxSync visual experience.
 
-Primary header CTA: **Find My LuxSync Solution** → `/find-my-luxsync-solution`
+Primary header CTA: **LuxSync Concierge** → `/find-my-luxsync-solution`
 
 ## Solutions submenu
 

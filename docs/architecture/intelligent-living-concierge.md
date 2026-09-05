@@ -2,7 +2,7 @@
 
 **Artifact:** ARC-002
 **Status:** Active / Flagship experience
-**Entry point:** **Find My LuxSync Solution**
+**Entry point:** **LuxSync Concierge**
 **Guided experience:** **LuxSync Intelligent Living Concierge**
 **Output:** **My LuxSync Blueprint**
 **Engine source:** `website/src/concierge/`

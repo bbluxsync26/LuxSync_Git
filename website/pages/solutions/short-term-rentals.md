@@ -8,6 +8,6 @@ Focus on Guest Ready, access, climate consistency, property awareness, water pro
 
 Relevant experience themes may include Guest Ready, Property Pulse, Water Watch, Welcome Home and Goodnight depending on property context.
 
-CTAs: **Find My LuxSync Solution**, **Choose an STR ROI Guide**, **Request a Consultation**.
+CTAs: **LuxSync Concierge**, **Choose an STR ROI Guide**, **Request a Consultation**.
 
 **Visual assignment:** exact horizontal LuxSync logo with a live hosting/property composition using approved brand tokens.

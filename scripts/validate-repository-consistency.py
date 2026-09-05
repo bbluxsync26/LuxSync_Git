@@ -8,16 +8,30 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BRAND_SYSTEM = 'LuxSync Production Raster v5'
 SLOGAN = 'Where Luxury Lives Intelligently'
-PRIMARY_CTA = 'Find My LuxSync Solution'
+PRIMARY_CTA = 'LuxSync Concierge'
 SECONDARY_CTA = 'Shop Smart Home'
 BRIDGETTE_TITLE = 'Co-Founder & Chief Technology and Strategy Officer'
 SHELDON_TITLE = 'Co-Founder & Chief Customer and Operations Officer'
 CONCIERGE = "LuxSync Intelligent Living Concierge"
 BLUEPRINT = "My LuxSync Blueprint"
-SAFE_ASSETS = {
+APPROVED_LOGOS = {
     "brand/assets/logos/png/luxsync-horizontal-combo.png",
     "brand/assets/logos/png/luxsync-horizontal.png",
     "brand/assets/logos/png/luxsync-orb.png",
+}
+SAFE_ASSETS = APPROVED_LOGOS | {
+    "brand/assets/heroes/member-access.png",
+    "brand/assets/leadership/bridgette-beardsley.jpg",
+    "brand/assets/leadership/sheldon-bardol.jpg",
+    "site/src/assets/heroes/luxsync-home-approved-showcase.png",
+    "site/src/assets/heroes/luxsync-concierge.png",
+    "site/src/assets/heroes/luxsync-residential.png",
+    "site/src/assets/heroes/luxsync-commercial.png",
+    "site/src/assets/heroes/luxsync-rental.png",
+    "site/src/assets/heroes/luxsync-care.png",
+    "site/src/assets/heroes/luxsync-shop.png",
+    "site/src/assets/heroes/luxsync-roi-guide.png",
+    "site/src/assets/heroes/luxsync-support-contact.png",
 }
 AUTH_PRODUCTION_ASSETS = {
     "website/assets/auth/login-vip-hero.svg",
@@ -226,6 +240,7 @@ required_routes = {
     "/", "/find-my-luxsync-solution", "/my-luxsync-blueprint", "/solutions",
     "/solutions/commercial-offices", "/solutions/senior-living", "/solutions/short-term-rentals",
     "/solutions/residential", "/solutions/aging-in-place", "/shop", "/guides", "/about", "/faqs", "/contact",
+    "/account", "/account/create", "/account/welcome",
 }
 routes = impl.get("routes", [])
 route_names = {r.get("route") for r in routes}
@@ -247,7 +262,7 @@ if auth.get("brand_system") != BRAND_SYSTEM:
     errors.append("account-access manifest brand_system mismatch")
 if auth.get("primary_route") != "/account/login":
     errors.append("account-access manifest primary_route must be /account/login")
-if set(auth.get("approved_logos", {}).values()) != SAFE_ASSETS:
+if set(auth.get("approved_logos", {}).values()) != APPROVED_LOGOS:
     errors.append("account-access manifest approved logo set mismatch")
 platform = auth.get("platform_boundary", {})
 if platform.get("commerce_account_authority") != "GoDaddy Commerce Plus":

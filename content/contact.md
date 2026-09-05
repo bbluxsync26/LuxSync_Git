@@ -26,7 +26,7 @@ For product information, consultations, business inquiries, partnerships, or gen
 
 ## Form Promise
 
-The contact form should reveal only the questions relevant to the visitor's inquiry. Property information collected here should use the same reusable LuxSync Property Profile used by **Find My LuxSync Solution** and **My LuxSync Blueprint**.
+The contact form should reveal only the questions relevant to the visitor's inquiry. Property information collected here should use the same reusable LuxSync Property Profile used by **LuxSync Concierge** and **My LuxSync Blueprint**.
 
 ## Confirmation
 

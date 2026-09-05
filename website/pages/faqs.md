@@ -33,7 +33,7 @@ Link the FAQ page from:
 - Eyebrow: **LuxSync Guides**
 - Heading: **Questions, thoughtfully answered.**
 - Supporting copy: **Clear guidance for choosing compatible products, understanding the LuxSync experience, and finding the right kind of help.**
-- Primary CTA: **Find My LuxSync Solution**
+- Primary CTA: **LuxSync Concierge**
 - Secondary CTA: **Contact LuxSync**
 
 ### 2. FAQ Search and Categories
@@ -67,7 +67,7 @@ Requirements:
 
 Where appropriate, place quiet inline links beneath an answer:
 
-- **Find My LuxSync Solution** for customers who need a recommendation
+- **LuxSync Concierge** for customers who need a recommendation
 - **Shop Smart Home** for customers ready to browse
 - **Contact Information** for product-selection questions
 - **Contact Support** for existing orders or products
@@ -78,7 +78,7 @@ Do not place aggressive sales CTAs inside every answer.
 
 - Heading: **Still deciding what fits?**
 - Body: **Tell us about your space and what you want it to do. We will route your question to the right LuxSync path.**
-- Primary CTA: **Find My LuxSync Solution**
+- Primary CTA: **LuxSync Concierge**
 - Secondary CTA: **Contact LuxSync**
 - Information email: `info@luxsync.net`
 - Support email: `support@luxsync.net`

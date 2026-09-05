@@ -59,7 +59,7 @@ Prepare and approve a commerce-first LuxSync launch candidate in six working day
 
 **Tasks**
 
-- Test **Find My LuxSync Solution**, **LuxSync Intelligent Living Concierge**, and **My LuxSync Blueprint** across supported devices and browsers.
+- Test **LuxSync Concierge**, **LuxSync Intelligent Living Concierge**, and **My LuxSync Blueprint** across supported devices and browsers.
 - Validate adaptive Contact paths: Support, Product Information, Consultation, General Question, Business / Partnership, and Other.
 - Validate residence, short-term-rental, commercial, and other-property conditional fields.
 - Confirm support routes to `support@luxsync.net`; all other inquiries route to `info@luxsync.net`.

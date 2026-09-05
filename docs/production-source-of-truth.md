@@ -17,7 +17,7 @@ This file is the shortest path through the repository. When two active files app
 ## Locked identity
 
 - Official slogan: **Where Luxury Lives Intelligently**
-- Primary CTA: **Find My LuxSync Solution**
+- Primary CTA: **LuxSync Concierge**
 - Secondary CTA: **Shop Smart Home**
 - Concierge: **LuxSync Intelligent Living Concierge**
 - Result: **My LuxSync Blueprint**
@@ -32,7 +32,7 @@ LuxSync begins with lifestyle outcomes and compatible intelligent-living experie
 ## Canonical page set
 
 - Home
-- Find My LuxSync Solution / Concierge
+- LuxSync Concierge / Concierge
 - My LuxSync Blueprint
 - Solutions hub
 - Commercial Offices

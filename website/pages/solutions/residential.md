@@ -8,6 +8,6 @@ Lead with comfort, control, confidence and routines rather than gadget count. Co
 
 Relevant experience themes may include Welcome Home, Goodnight, lighting and ambience, comfort and climate, security awareness, water protection, entertainment and energy awareness.
 
-CTAs: **Find My LuxSync Solution**, **Residential ROI Guides**, **Shop Smart Home**.
+CTAs: **LuxSync Concierge**, **Residential ROI Guides**, **Shop Smart Home**.
 
 **Visual assignment:** exact horizontal LuxSync logo with a live residential intelligent-living composition using approved brand tokens.

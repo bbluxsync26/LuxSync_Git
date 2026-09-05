@@ -58,13 +58,13 @@ Approved logo lettering is protected artwork and is not recreated with live type
 
 ---
 
-## ◈ Find My LuxSync Solution
+## ◈ LuxSync Concierge
 
-**Find My LuxSync Solution** is a flagship customer journey.
+**LuxSync Concierge** is a flagship customer journey.
 
 | Layer | Customer experience |
 |---|---|
-| Entry | **Find My LuxSync Solution** |
+| Entry | **LuxSync Concierge** |
 | Guided experience | **LuxSync Intelligent Living Concierge** |
 | Personalized result | **My LuxSync Blueprint** |
 
@@ -164,7 +164,7 @@ Search | Account | Cart
 
 Homepage action hierarchy:
 
-1. **Find My LuxSync Solution**
+1. **LuxSync Concierge**
 2. **Shop Smart Home**
 3. **Get the ROI Guide**
 

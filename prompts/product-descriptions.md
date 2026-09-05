@@ -11,7 +11,7 @@ Write product, bundle, collection, or solution-copy for **LuxSync LLC**.
 - Voice: **Intelligent Calm**
 - Positioning: premium intelligent living through curation, compatibility, simplicity, and experience
 - Primary launch compatibility standard: Samsung SmartThings
-- Flagship discovery path: **Find My LuxSync Solution**
+- Flagship discovery path: **LuxSync Concierge**
 - Personalized recommendation output: **My LuxSync Blueprint**
 
 Do not use retired slogan/hero language.
@@ -88,7 +88,7 @@ Use one clear CTA such as:
 
 - **Add to Cart** for validated live products
 - **Explore the Bundle** for validated bundles
-- **Find My LuxSync Solution** when the customer still needs guidance
+- **LuxSync Concierge** when the customer still needs guidance
 - **Review My Compatibility** when existing technology needs verification
 - **Request Information** when the item is not yet a live commerce SKU
 

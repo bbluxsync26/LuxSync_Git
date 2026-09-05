@@ -28,8 +28,8 @@ For merchandising specifically, `content/product-catalog.md` governs current pro
 
 ## Current Brand and Product Tie-Breakers
 
-- **Authoritative visual system:** LuxSync Production Raster v5
-- **Enduring design DNA:** Plush Drift
+- **Authoritative website visual treatment:** Luxury Orbit
+- **Approved palette / design lineage:** Plush Drift v2.1, expressed through Luxury Orbit rather than used as a competing website theme
 - **Brand architecture:** `brand/brand-architecture.md`
 - **Omnichannel brand governance:** `brand/README.md` + `brand/manifests/omnichannel-brand-manifest.json`
 - **Permanent visual approval archive:** `brand/reference-boards/`
@@ -38,7 +38,7 @@ For merchandising specifically, `content/product-catalog.md` governs current pro
 - **Sole approved public slogan / hero line:** **Where Luxury Lives Intelligently**
 - **Retired slogan/hero treatments:** must not be regenerated or restored
 - **Voice:** Intelligent Calm
-- **Primary homepage CTA:** Find My LuxSync Solution
+- **Primary homepage CTA:** LuxSync Concierge
 - **Secondary homepage CTA:** Shop Smart Home
 - **Supporting homepage CTA:** Get the ROI Guide
 - **Flagship experience:** LuxSync Intelligent Living Concierge
@@ -103,7 +103,7 @@ Approved colors:
 
 | ID | Artifact | Path | Status |
 |---|---|---|---|
-| BRAND-001 | Brand Guidelines / Omnichannel Brand Contract | `brand/README.md` | Active — LuxSync Production Raster v5 / Omnichannel |
+| BRAND-001 | Brand Guidelines / Omnichannel Brand Contract | `brand/README.md` | Active — Luxury Orbit website treatment / governed production assets |
 | BRAND-002 | Color System | `brand/colors.md` | Active |
 | BRAND-003 | Typography | `brand/typography.md` | Active — Manrope + Inter |
 | BRAND-004 | Voice & Tone | `brand/voice-and-tone.md` | Active — Intelligent Calm |
@@ -232,7 +232,7 @@ Key principles:
 
 - every ordinary customer receives the same VIP-level welcome and service treatment;
 - use only the three approved immutable logo masters under `brand/assets/logos/png/`;
-- use Plush Drift tactile illumination for login card, fields, and primary CTA;
+- use Luxury Orbit tactile illumination for login card, fields, and primary CTA;
 - keep authentication calm, private, and friction-light;
 - Dusty Steel is the preferred cool concealed underlight;
 - Champagne Rose Gold is restrained premium reflected detail;
@@ -275,7 +275,7 @@ All active prompts must inherit current company facts, exact founder titles, the
 - GoDaddy Commerce Plus remains production commerce authority
 - Samsung SmartThings remains the primary launch compatibility standard
 - Mobile-first, accessible, performant experience
-- LuxSync Production Raster v5 visual system with Plush Drift design DNA
+- Luxury Orbit website visual treatment using the approved seven-color palette and governed production assets
 - Manrope + Inter typography
 - Intelligent Calm voice
 - Approved logo artwork referenced directly, never regenerated
@@ -361,10 +361,12 @@ Do not publish or invent:
 | 2026-09-02 | Added the omnichannel brand manifest, restart state, audit report and exception log; preserved the seven reference boards as permanent approval evidence and clarified `brand/assets/` as the validated digital delivery layer rather than the full brand scope. |
 | 2026-09-03 | Closed repository-wide image cleanup/validation and added durable image-governance regression protection. |
 | 2026-09-03 | Added ARC-003, deterministic GitHub → Airo packaging, artifact workflow, and RB-012 Airo → GitHub reconciliation process. |
+| 2026-09-04 | Reconciled PR-001 and the launch-site catalog direction to Luxury Orbit while preserving the approved palette, Manrope/Inter typography, production assets, and all business/commerce guardrails. |
 
 ## Production Completion Baseline
 
-**Authoritative visual system:** LuxSync Production Raster v5  
+**Authoritative website visual treatment:** Luxury Orbit
+
 **Official slogan:** Where Luxury Lives Intelligently
 
 Canonical website implementation references:

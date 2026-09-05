@@ -34,11 +34,11 @@ LuxSync designs shopping and guidance pathways for private residences, short-ter
 
 ### Where should I begin if I am not sure what I need?
 
-Start with **Find My LuxSync Solution**. The guided experience begins with your space, priorities, routines, and desired outcomes, then recommends a practical combination of compatible products, bundles, automation possibilities, and a phased path you can build over time.
+Start with **LuxSync Concierge**. The guided experience begins with your space, priorities, routines, and desired outcomes, then recommends a practical combination of compatible products, bundles, automation possibilities, and a phased path you can build over time.
 
-### What is Find My LuxSync Solution?
+### What is LuxSync Concierge?
 
-Find My LuxSync Solution is LuxSync's outcome-first recommendation experience. Instead of asking customers to compare technical specifications on their own, it translates goals such as comfort, security, energy awareness, guest readiness, or independent living into a clear and personalized smart-living direction.
+LuxSync Concierge is LuxSync's outcome-first recommendation experience. Instead of asking customers to compare technical specifications on their own, it translates goals such as comfort, security, energy awareness, guest readiness, or independent living into a clear and personalized smart-living direction.
 
 ## Products and Compatibility
 

@@ -62,4 +62,4 @@ For two representative weeks, note:
 
 LuxSync routines and connected products do not replace adult supervision, childproofing, safe-sleep guidance, smoke/CO alarms, pool safety, emergency services, medical devices, professional monitoring, or code-required life-safety systems. No nursery or household automation should be presented as a safety guarantee.
 
-**Next step:** **Find My LuxSync Solution** to design routines around your family.
+**Next step:** **LuxSync Concierge** to design routines around your family.

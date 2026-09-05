@@ -2,7 +2,7 @@
 
 **Status:** Active / Fresh Build Edition / Reconciled for first-pass staging generation  
 **Updated:** 2026-09-01  
-**Purpose:** Generate the first complete LuxSync website in GoDaddy Airo AI Builder from a clean slate while preserving the current repository source of truth, Production Raster v5 brand system, Plush Drift design DNA, Intelligent Living Concierge architecture, VIP Account Access experience, and GoDaddy Commerce Plus production boundary.
+**Purpose:** Generate the first complete LuxSync website in GoDaddy Airo AI Builder from a clean slate while preserving the current repository source of truth, Luxury Orbit visual system, Intelligent Living Concierge architecture, VIP Account Access experience, and GoDaddy Commerce Plus production boundary.
 
 ## Prompt to paste into GoDaddy Airo AI Builder
 
@@ -43,7 +43,7 @@ The experience should feel like luxury interior architecture with intelligent te
 
 - Company: **LuxSync**
 - Sole approved public slogan / hero line: **Where Luxury Lives Intelligently**
-- Primary homepage CTA: **Find My LuxSync Solution**
+- Primary homepage CTA: **LuxSync Concierge**
 - Secondary homepage CTA: **Shop Smart Home**
 - Supporting homepage CTA: **Get the ROI Guide**
 - Voice: **Intelligent Calm**
@@ -87,7 +87,7 @@ Persistent utilities, where supported:
 
 Primary header CTA:
 
-**Find My LuxSync Solution** -> `/find-my-luxsync-solution`
+**LuxSync Concierge** -> `/find-my-luxsync-solution`
 
 Support should route through:
 
@@ -102,7 +102,7 @@ Do not create dead navigation, invented social accounts, unsupported commerce ut
 Create a coherent first-pass experience for:
 
 - Home `/`
-- Find My LuxSync Solution `/find-my-luxsync-solution`
+- LuxSync Concierge `/find-my-luxsync-solution`
 - My LuxSync Blueprint `/my-luxsync-blueprint`
 - Solutions `/solutions`
 - Commercial Offices `/solutions/commercial-offices`
@@ -122,10 +122,10 @@ The first pass should feel like one connected website, not a collection of unrel
 ## Homepage Sequence
 
 1. Hero using **Where Luxury Lives Intelligently**.
-2. Supporting copy and three clear paths: **Find My LuxSync Solution**, **Shop Smart Home**, **Get the ROI Guide**.
+2. Supporting copy and three clear paths: **LuxSync Concierge**, **Shop Smart Home**, **Get the ROI Guide**.
 3. Featured Solutions for the five canonical audience paths.
 4. Why LuxSync: Curated Catalog; SmartThings Compatibility; Intelligent Discovery; Simplified Buying; Premium Customer Experience.
-5. Flagship **Find My LuxSync Solution / Intelligent Living Concierge** section.
+5. Flagship **LuxSync Concierge / Intelligent Living Concierge** section.
 6. Product Collections from `content/product-catalog.md`.
 7. How It Works: Discover; Design; Choose; Evolve.
 8. Featured products or bundle concepts using validated catalog data or clearly labeled non-commerce concepts only.
@@ -136,13 +136,13 @@ The first pass should feel like one connected website, not a collection of unrel
 13. Calm optional email signup only if consent is separate and optional.
 14. Footer with Shop, Solutions, Guides, About, FAQs, Contact, Support, Account, and legal placeholders.
 
-## Flagship Experience - Find My LuxSync Solution
+## Flagship Experience - LuxSync Concierge
 
-Treat **Find My LuxSync Solution** as a primary customer journey, never as a lightweight product quiz.
+Treat **LuxSync Concierge** as a primary customer journey, never as a lightweight product quiz.
 
 Customer-facing architecture:
 
-- Entry point: **Find My LuxSync Solution**
+- Entry point: **LuxSync Concierge**
 - Guided experience: **LuxSync Intelligent Living Concierge**
 - Personalized output: **My LuxSync Blueprint**
 
@@ -300,7 +300,7 @@ Each of the five canonical Solutions pages should include:
 - relevant product families or validated bundles;
 - SmartThings compatibility guidance;
 - relevant ROI Guide CTA where available;
-- a clear **Find My LuxSync Solution**, Shop, or Consultation CTA.
+- a clear **LuxSync Concierge**, Shop, or Consultation CTA.
 
 Do not imply Samsung, SmartThings, Airbnb, Vrbo, or any third party endorses LuxSync unless documented.
 
@@ -542,9 +542,11 @@ Never:
 
 If an exact approved logo asset cannot be loaded, leave the logo placement blank or use a clearly labeled implementation placeholder. Never improvise a replacement.
 
-## LuxSync Production Raster v5 Brand System
+## Luxury Orbit Visual System
 
-Use **LuxSync Production Raster v5** as the authoritative visual system and **Plush Drift** as the enduring design DNA.
+Use **Luxury Orbit** as the authoritative website and web-graphics direction. It should feel like luxury interior architecture with intelligent technology quietly underneath it: dark, spacious, warm, precise, and calm.
+
+LuxSync Production Raster v5 and Plush Drift may appear in repository provenance or asset history, but they are not alternative website themes. Do not let Airo drift back to an older Plush Drift composition, a generic dark-luxury template, or a flat Production Raster interpretation. When visual guidance conflicts, `brand/colors.md`, `brand/typography.md`, `website/styles/design-system.md`, and the current approved asset manifests govern.
 
 Approved colors:
 
@@ -560,16 +562,27 @@ Use Champagne Rose Gold like jewelry, not wallpaper. Keep it to fine edges, rest
 
 Use Dusty Steel as the preferred cool interaction underlight.
 
+Luxury Orbit composition:
+
+- Use Slate Navy as the dominant architectural canvas and Dark Suede for layered elevated surfaces.
+- Use Pale Driftwood for warm high-contrast text and light surfaces; never default to stark white.
+- Use Warm Taupe Mauve and Antique Rose Taupe for restrained warmth, secondary information, and atmospheric detail.
+- Use Dusty Steel as the cool intelligent-light source for orbit traces, focus treatments, and quiet technology cues.
+- Use Champagne Rose Gold Metallic for selective rims, dividers, focal lines, premium CTA detail, and reflected edges—not as a large flat fill.
+- Favor editorial negative space, asymmetrical but balanced layouts, soft architectural curves, orbit lines, refined rounded cards, and controlled depth.
+- Keep imagery rooted in sophisticated interiors, hospitality, care, work, and modern living; technology should feel integrated into the environment rather than displayed as gadget spectacle.
+- Use subtle metallic gradients and localized atmospheric light only where they clarify hierarchy or interaction.
+
 Typography:
 
 - **Headings / display / navigation / CTA labels / graphic UI:** Manrope 500/600
 - **Body / product copy / forms / supporting UI:** Inter 400/500
 
-The approved LuxSync logo lettering remains artwork. Never recreate it with typography.
+The approved LuxSync logo lettering remains artwork. Never recreate it with typography. Do not introduce Bodoni, Didot, Century Gothic, Candara, or other legacy type guidance into editable website text.
 
-## Plush Drift Tactile Illumination
+## Luxury Orbit Tactile Illumination
 
-Interactive controls should feel like premium backlit architectural controls rather than flat SaaS buttons.
+Interactive controls should feel like premium backlit architectural controls within the Luxury Orbit system rather than flat SaaS buttons.
 
 Layering:
 
@@ -592,6 +605,8 @@ Interaction behavior:
 Use the effect most strongly on buttons, form controls, navigation actions, Concierge selections, Contact intent cards, and account controls. Use it more subtly on static cards.
 
 Avoid neon, cyberpunk color, hard glowing outlines, flashing, arcade lighting, giant bloom, aggressive scaling, bouncing, or glow-only state communication.
+
+Avoid older-theme drift: no beige-first page system, mauve-heavy haze, generic soft-neutral lifestyle template, dense gadget grids, or decorative glow applied uniformly to every surface.
 
 ## Voice
 
@@ -699,11 +714,11 @@ The build passes the first review only if:
 - **Where Luxury Lives Intelligently** is the only public slogan;
 - the approved logo masters are used directly and exclusively;
 - Manrope and Inter are used correctly;
-- the palette matches Production Raster v5;
-- Plush Drift tactile illumination is evident but restrained;
+- the palette and visual hierarchy match Luxury Orbit;
+- Luxury Orbit tactile illumination and orbit cues are evident but restrained;
 - the five canonical Solutions paths are present;
 - `/faqs` is used as the FAQ route;
-- **Find My LuxSync Solution** is a primary journey;
+- **LuxSync Concierge** is a primary journey;
 - My LuxSync Blueprint recommends experiences before technology;
 - Contact uses adaptive intent branching;
 - Account looks premium and VIP-level without inventing backend authentication;
@@ -744,7 +759,7 @@ A first-time visitor should quickly understand that:
 
 - LuxSync is a premium curated intelligent-living brand;
 - **Where Luxury Lives Intelligently** is the governing slogan;
-- **Find My LuxSync Solution** is a primary way to begin;
+- **LuxSync Concierge** is a primary way to begin;
 - the Concierge starts with lifestyle outcomes rather than devices;
 - My LuxSync Blueprint recommends experiences before technology;
 - SmartThings compatibility helps reduce complexity;

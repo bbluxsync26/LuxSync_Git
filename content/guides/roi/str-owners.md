@@ -62,4 +62,4 @@ Collect 6–12 months where available, while accounting for seasonality:
 
 LuxSync does not guarantee bookings, nightly rates, reviews, utility savings, insurance outcomes, or incident prevention. Property-awareness and security-related technology does not replace professional monitoring, emergency services, code-required life-safety systems, or responsible local support.
 
-**Next step:** **Find My LuxSync Solution** for your property or contact `info@luxsync.net`.
+**Next step:** **LuxSync Concierge** for your property or contact `info@luxsync.net`.

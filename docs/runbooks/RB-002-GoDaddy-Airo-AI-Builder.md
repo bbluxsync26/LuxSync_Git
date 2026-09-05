@@ -60,7 +60,7 @@ Review before each Airo build:
 - Manrope 500/600 is authoritative for headings/display/UI.
 - Inter 400/500 is authoritative for body/supporting UI.
 - Sole approved public slogan/hero line is `Where Luxury Lives Intelligently`.
-- Primary homepage CTA is `Find My LuxSync Solution`.
+- Primary homepage CTA is `LuxSync Concierge`.
 - Secondary homepage CTA is `Shop Smart Home`.
 - Supporting CTA is `Get the ROI Guide`.
 - Contact routes support to `support@luxsync.net` and information/consultation to `info@luxsync.net`.
@@ -120,7 +120,7 @@ Reject invented partnerships, awards, reviews, certifications, customer counts, 
 
 ## Step 4 — Concierge Review
 
-Verify **Find My LuxSync Solution** is treated as a flagship journey rather than a novelty quiz.
+Verify **LuxSync Concierge** is treated as a flagship journey rather than a novelty quiz.
 
 Confirm:
 

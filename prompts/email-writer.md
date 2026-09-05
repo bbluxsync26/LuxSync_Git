@@ -9,7 +9,7 @@ Write customer-facing email copy for **LuxSync LLC** using repository-approved f
 - Official slogan: **Where Luxury Lives Intelligently**
 - Voice: **Intelligent Calm**
 - Brand: premium intelligent living and curated smart-home commerce
-- Flagship discovery experience: **Find My LuxSync Solution**
+- Flagship discovery experience: **LuxSync Concierge**
 - Guided experience: **LuxSync Intelligent Living Concierge**
 - Personalized result: **My LuxSync Blueprint**
 - Support: `support@luxsync.net`
@@ -40,7 +40,7 @@ Avoid excessive exclamation marks, countdown pressure, false scarcity, unsupport
 
 Choose one primary CTA appropriate to the message:
 
-- **Find My LuxSync Solution**
+- **LuxSync Concierge**
 - **Shop Smart Home**
 - **Explore Solutions**
 - **View My LuxSync Blueprint**

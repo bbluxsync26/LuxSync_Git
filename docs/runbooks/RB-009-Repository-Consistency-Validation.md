@@ -25,7 +25,7 @@ A non-zero exit code blocks the consistency gate.
 
 - sole public slogan / hero line is **Where Luxury Lives Intelligently**
 - retired alternate hero/slogan wording must not remain in text, scripts, or SVG source
-- primary homepage CTA is **Find My LuxSync Solution**
+- primary homepage CTA is **LuxSync Concierge**
 - secondary homepage CTA is **Shop Smart Home**
 
 ### Founder identities
@@ -46,7 +46,7 @@ The Contact blueprint must preserve the adaptive Support / Product Information /
 
 Required names:
 
-- **Find My LuxSync Solution**
+- **LuxSync Concierge**
 - **LuxSync Intelligent Living Concierge**
 - **My LuxSync Blueprint**
 

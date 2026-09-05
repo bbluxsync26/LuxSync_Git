@@ -113,7 +113,7 @@ function card(title, body, href = '') {
 function header(activeRoute) {
   const nav = [['/', 'Home'], ['/solutions/', 'Solutions'], ['/shop/', 'Shop'], ['/guides/', 'Guides'], ['/about/', 'About'], ['/faqs/', 'FAQs'], ['/contact/', 'Contact']];
   const links = nav.map(([href, label]) => { const active = activeRoute === href || (href !== '/' && activeRoute.startsWith(href)); return `<a class="nav-link${active ? ' is-active' : ''}" href="${href}"${active ? ' aria-current="page"' : ''}>${label}</a>`; }).join('');
-  return `<header class="site-header"><div class="header-inner"><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><img src="/assets/icons/automation-home-gear.webp" alt=""><span class="sr-only">Open navigation menu</span></button><a class="brand-link" href="/" aria-label="LuxSync home"><img src="/assets/luxsync-horizontal-combo.png" alt="LuxSync"></a><nav id="main-nav" class="main-nav" aria-label="Primary navigation">${links}</nav><div class="header-actions"><a class="nav-link account-nav" href="/account/">Account</a><a class="nav-link cart-nav" href="/shop/#planning-cart">Cart <span class="cart-count" data-cart-count>0</span></a><a class="button button-small header-cta" href="/find-my-luxsync-solution/">Find My LuxSync Solution</a></div></div></header>`;
+  return `<header class="site-header"><div class="header-inner"><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><img src="/assets/icons/automation-home-gear.webp" alt=""><span class="sr-only">Open navigation menu</span></button><a class="brand-link" href="/" aria-label="LuxSync home"><img src="/assets/luxsync-horizontal-combo.png" alt="LuxSync"></a><nav id="main-nav" class="main-nav" aria-label="Primary navigation">${links}</nav><div class="header-actions"><a class="nav-link account-nav" href="/account/">Account</a><a class="nav-link cart-nav" href="/shop/#planning-cart">Cart <span class="cart-count" data-cart-count>0</span></a><a class="button button-small header-cta" href="/find-my-luxsync-solution/">LuxSync Concierge</a></div></div></header>`;
 }
 
 function footer() {
@@ -159,7 +159,7 @@ function shell({ route, title, description, main, bodyClass = '' }) {
 </html>`;
 }
 
-const hero = `<section class="hero"><div class="hero-aura" aria-hidden="true"></div><div class="hero-inner"><div class="hero-copy"><p class="eyebrow">Intelligent living, curated</p><h1>${SLOGAN}</h1><p class="hero-lede">${escapeHtml(HOME.supportingCopy)}</p><div class="button-row"><a class="button" href="/find-my-luxsync-solution/">${escapeHtml(HOME.primaryCta)}</a><a class="button button-secondary" href="/shop/">${escapeHtml(HOME.secondaryCta)}</a><a class="text-link" href="/guides/">${escapeHtml(HOME.supportingCta)} →</a></div></div><div class="hero-visual hero-photo" aria-label="A refined intelligent living interior"><img class="hero-photo__image" src="/assets/intelligent-living-master-v1.png" alt="A refined modern living room with integrated lighting and quiet technology"><div class="orbital-shell"><img src="/assets/luxsync-orb.png" alt=""><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="orbit orbit-three"></span></div><div class="hero-stat"><span>Outcome first</span><strong>Lifestyle → Experience → Intelligence → Technology</strong></div></div></div></section>`;
+const hero = `<section class="hero"><div class="hero-aura" aria-hidden="true"></div><div class="hero-inner"><div class="hero-copy"><p class="eyebrow">Intelligent living, curated</p><h1>${SLOGAN}</h1><p class="hero-lede">${escapeHtml(HOME.supportingCopy)}</p><div class="button-row"><a class="button" href="/find-my-luxsync-solution/">${escapeHtml(HOME.primaryCta)}</a><a class="button button-secondary" href="/shop/">${escapeHtml(HOME.secondaryCta)}</a><a class="text-link" href="/guides/">${escapeHtml(HOME.supportingCta)} →</a></div></div><div class="hero-visual hero-photo" aria-label="A refined intelligent living interior"><img class="hero-photo__image" src="/assets/heroes/luxsync-home-approved-showcase.png" alt="A refined modern living room with integrated smart-home controls"><div class="orbital-shell"><img src="/assets/luxsync-orb.png" alt=""><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="orbit orbit-three"></span></div><div class="hero-stat"><span>Outcome first</span><strong>Lifestyle → Experience → Intelligence → Technology</strong></div></div></div></section>`;
 
 function homePage() {
   const featured = [
@@ -197,7 +197,7 @@ function solutionDetail(route) {
 }
 
 function conciergePage() {
-  return `<section class="page-hero compact"><div><p class="eyebrow">LuxSync Intelligent Living Concierge</p><h1>Find My LuxSync Solution</h1><p>Begin with your routines, priorities, property, and existing technology. The Concierge turns those answers into recommended Experiences and My LuxSync Blueprint.</p></div></section><section class="section app-section"><div id="concierge-app" class="app-shell" aria-live="polite"><div class="loading-state">Preparing your intelligent-living journey…</div></div></section>`;
+  return `<section class="page-hero compact"><div><p class="eyebrow">LuxSync Intelligent Living Concierge</p><h1>LuxSync Concierge</h1><p>Begin with your routines, priorities, property, and existing technology. The Concierge turns those answers into recommended Experiences and My LuxSync Blueprint.</p></div></section><section class="section app-section"><div id="concierge-app" class="app-shell" aria-live="polite"><div class="loading-state">Preparing your intelligent-living journey…</div></div></section>`;
 }
 
 function blueprintPage() {
@@ -254,7 +254,7 @@ const pageBuilders = {
 function pageMeta(route) {
   const metas = {
     '/': ['LuxSync', 'Curated smart-living technology and guidance built around comfort, compatibility, control, and confidence.'],
-    '/find-my-luxsync-solution': ['Find My LuxSync Solution', 'Use the LuxSync Intelligent Living Concierge to create My LuxSync Blueprint.'],
+    '/find-my-luxsync-solution': ['LuxSync Concierge', 'Use the LuxSync Intelligent Living Concierge to create My LuxSync Blueprint.'],
     '/my-luxsync-blueprint': ['My LuxSync Blueprint', 'Review your personalized LuxSync experiences, foundation, roadmap, and next best action.'],
     '/solutions': ['Smart Living Solutions', 'Explore LuxSync solution pathways for homes, rentals, offices, senior living, and aging in place.'],
     '/shop': ['Shop Smart Home', 'Explore LuxSync product families, curated bundle concepts, and outcome-first smart-living experiences.'],
@@ -296,6 +296,7 @@ for (const file of [
   'plush-drift-residential.png','plush-drift-commercial.png','plush-drift-rental.png',
   'plush-drift-care.png','plush-drift-concierge.png','plush-drift-energy.png','intelligent-living-master-v1.png'
 ]) fs.copyFileSync(path.join(HERE,'src',file),path.join(DIST,'assets',file));
+fs.cpSync(path.join(HERE, 'src', 'assets', 'heroes'), path.join(DIST, 'assets', 'heroes'), { recursive: true });
 
 const faqs = parseFaqs(fs.readFileSync(FAQ_SOURCE, 'utf8'));
 fs.writeFileSync(path.join(DIST, 'data', 'faqs.json'), JSON.stringify(faqs, null, 2) + '\n');
@@ -322,7 +323,6 @@ fs.writeFileSync(path.join(DIST, '404.html'), shell({ route: '/404', title: 'Pag
 
 fs.writeFileSync(path.join(DIST, '.htaccess'), `Options -MultiViews\nErrorDocument 404 /404.html\nDirectoryIndex index.html\n`);
 console.log(`Built LuxSync site with ${routes.length} governed routes.`);
-
 
 
 

@@ -8,6 +8,6 @@ Focus on accessible living, comfort, lighting, environmental awareness, simplifi
 
 Relevant experience themes may include Accessible Living, lighting routines, climate comfort, water awareness and property pulse.
 
-CTAs: **Find My LuxSync Solution**, **Senior Living ROI Guide**, **Request a Consultation**.
+CTAs: **LuxSync Concierge**, **Senior Living ROI Guide**, **Request a Consultation**.
 
 **Visual assignment:** exact horizontal LuxSync logo with a live calm accessible-living composition using approved brand tokens.

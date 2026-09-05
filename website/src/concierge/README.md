@@ -1,6 +1,6 @@
 # LuxSync Intelligent Living Concierge Engine
 
-This directory contains the implementation source for **Find My LuxSync Solution**, the LuxSync Intelligent Living Concierge and **My LuxSync Blueprint** recommendation engine.
+This directory contains the implementation source for **LuxSync Concierge**, the LuxSync Intelligent Living Concierge and **My LuxSync Blueprint** recommendation engine.
 
 ## Structure
 

@@ -19,7 +19,7 @@ Luxury smart-home technology designed for modern living, with curated hardware a
 
 ## Primary CTA
 
-**Find My LuxSync Solution**
+**LuxSync Concierge**
 
 ## Secondary CTA
 
@@ -33,7 +33,7 @@ Luxury smart-home technology designed for modern living, with curated hardware a
 
 - Featured Solutions
 - Why LuxSync
-- Find My LuxSync Solution / Intelligent Living Concierge
+- LuxSync Concierge / Intelligent Living Concierge
 - Product Collections
 - How It Works
 - Featured Products & Bundles
@@ -45,7 +45,7 @@ Luxury smart-home technology designed for modern living, with curated hardware a
 
 ## Concierge Positioning
 
-**Find My LuxSync Solution** is a flagship homepage journey. It should lead customers from lifestyle goals and property needs to recommended LuxSync Experiences and **My LuxSync Blueprint** before requiring them to choose individual devices.
+**LuxSync Concierge** is a flagship homepage journey. It should lead customers from lifestyle goals and property needs to recommended LuxSync Experiences and **My LuxSync Blueprint** before requiring them to choose individual devices.
 
 The experience follows:
 

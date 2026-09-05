@@ -65,4 +65,4 @@ Measure for at least one meaningful season before projecting annual energy resul
 
 LuxSync does not guarantee energy savings, home-value appreciation, insurance reductions, incident prevention, or payback. Property-awareness and security-related products do not replace smoke/CO alarms, life-safety systems, emergency services, professional monitoring, or responsible home maintenance.
 
-**Next step:** **Find My LuxSync Solution** to create your personalized Blueprint.
+**Next step:** **LuxSync Concierge** to create your personalized Blueprint.

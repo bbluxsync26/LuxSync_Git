@@ -1,4 +1,4 @@
-# Find My LuxSync Solution / Intelligent Living Concierge
+# LuxSync Concierge / Intelligent Living Concierge
 
 **Status:** Active production blueprint
 **Route:** `/find-my-luxsync-solution`

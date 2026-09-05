@@ -19,7 +19,7 @@ Supporting copy:
 **Choose the guide designed for your property, operating role, or household. Each LuxSync ROI Guide helps you establish a baseline, identify measurable value, and build a thoughtful pilot using your own information.**
 
 Primary CTA: **Choose Your ROI Guide**
-Secondary CTA: **Find My LuxSync Solution**
+Secondary CTA: **LuxSync Concierge**
 
 ## 3. Guide Finder
 
@@ -130,7 +130,7 @@ Each guide detail page includes:
 5. pilot and measurement guidance;
 6. relevant LuxSync Experiences;
 7. limitations and safety/care boundaries;
-8. **Find My LuxSync Solution** or **Request a Consultation** CTA.
+8. **LuxSync Concierge** or **Request a Consultation** CTA.
 
 Use canonical copy from `content/guides/roi/`. Do not generate independent ROI claims in the page builder.
 
@@ -166,7 +166,7 @@ The page succeeds when visitors can:
 3. distinguish STR owner, operator, and manager economics;
 4. distinguish nursing-home, senior-living, and residential-senior needs;
 5. open every guide without a mandatory email gate;
-6. continue to Find My LuxSync Solution or request a consultation.
+6. continue to LuxSync Concierge or request a consultation.
 
 ## Production Visual Assignment
 

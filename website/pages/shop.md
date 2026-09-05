@@ -27,4 +27,4 @@ Names, prices, stock, ratings, shipping, warranties, subscription requirements, 
 
 Use the exact horizontal logo. Build collection and product cards live with HTML/CSS. Do not use the imported product-card raster slices as public commerce cards; they are reference-only.
 
-Primary CTA from category pages: **Add to Cart** only when backed by a validated live commerce item. Discovery CTA: **Find My LuxSync Solution**.
+Primary CTA from category pages: **Add to Cart** only when backed by a validated live commerce item. Discovery CTA: **LuxSync Concierge**.

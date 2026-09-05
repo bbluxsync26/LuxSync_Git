@@ -168,7 +168,7 @@ Use:
 - premium interior / architectural imagery or approved branded composition
 - restrained dark field and warm/cool lighting
 - native text rather than baked-in copy when practical
-- primary CTA: **Find My LuxSync Solution**
+- primary CTA: **LuxSync Concierge**
 - secondary CTA: **Shop Smart Home**
 
 Do not use assets that embed retired slogan/hero copy.
