@@ -142,3 +142,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   .header-actions .utility-icon{width:40px;height:40px}
 }
 @media(max-width:600px){.header-inner{gap:6px 8px}.header-start .ls-home img{width:28px;height:28px}}
+
+/* Keep property controls under Menu and LS on full-width screens too. */
+@media(min-width:1101px){
+  .header-inner{grid-template-columns:minmax(195px,1fr) auto minmax(195px,1fr);grid-template-rows:42px 42px;gap:8px 18px;min-height:114px;padding:11px 0}
+  .header-start{grid-column:1;grid-row:1;gap:8px;align-self:stretch}
+  .header-start .nav-toggle,.header-start .ls-home{width:42px;height:42px;padding:6px;border-radius:12px}
+  .property-nav{grid-column:1;grid-row:2;justify-content:start;gap:8px;padding:0;align-self:stretch}
+  .property-nav .property-icon{width:42px;height:42px}
+  .brand-link{grid-column:2;grid-row:1 / 3;align-self:center}
+  .header-actions{grid-column:3;grid-row:1 / 3;align-self:center;justify-self:end}
+  .main-nav{top:100%}
+}
