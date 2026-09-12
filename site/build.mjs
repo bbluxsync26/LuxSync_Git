@@ -116,6 +116,8 @@ function shell({ route, title, description, main, bodyClass = '' }) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/assets/luxsync-orb.png">
+  <link rel="apple-touch-icon" href="/assets/luxsync-orb.png">
   <meta name="theme-color" content="#0D1526">
   <meta name="description" content="${escapeHtml(description)}">
   <link rel="canonical" href="${canonicalUrl}">
