@@ -5,8 +5,8 @@ import { fileURLToPath } from 'node:url';
 import { readGovernedContent } from './source-content.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(HERE, '..');
-const DIST = path.join(HERE, 'dist');
+const ROOT = fs.existsSync(path.join(HERE, 'source-data')) ? path.join(HERE, 'source-data') : path.resolve(HERE, '..');
+const DIST = path.join(HERE, 'dist','client');
 const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'website', 'implementation-manifest.json'), 'utf8'));
 const approvedColors = new Set(['#0D1526', '#172036', '#D0BEB0', '#9E8B85', '#967878', '#7B96B2', '#D6B0A0']);
 const retired = 'Smart Living' + '. ' + 'Elevated' + '.';
@@ -72,8 +72,9 @@ const protectedLogos = [
   ['LuxSync_Logo_Orb.png', 'luxsync-orb.png']
 ];
 for (const [sourceName, productionName] of protectedLogos) {
-  const source = path.join(ROOT, 'brand', 'source-logo', sourceName);
-  const production = path.join(ROOT, 'brand', 'assets', 'logos', 'png', productionName);
+  const externalSource = path.join(ROOT, 'brand', 'source-logo', sourceName);
+  const production = path.join(HERE, 'src', 'logos', productionName);
+  const source = fs.existsSync(externalSource) ? externalSource : production;
   const built = path.join(DIST, 'assets', productionName);
   if (![source, production, built].every(fs.existsSync)) {
     errors.push(`Missing protected logo path for ${productionName}`);

@@ -673,3 +673,12 @@ body[data-route="/guides"] { --page-hero-image: url("/assets/plush-drift-energy.
 }
 
 
+
+/* Featured Solutions photography */
+.featured-solution { padding-top:0; transition:transform 180ms ease,border-color 180ms ease,box-shadow 180ms ease; }
+.featured-solution-image { display:block; width:calc(100% + 2.9rem); max-width:none; height:155px; object-fit:cover; margin:0 -1.45rem 1.25rem; border-bottom:1px solid rgba(214,176,160,.25); }
+.featured-solution .card-icon { display:none; }
+.featured-solution:hover { transform:none; border-color:rgba(214,176,160,.65); }
+.featured-solution:active { transform:translateY(1px); box-shadow:inset 0 2px 8px rgba(0,0,0,.35); }
+.featured-solution:focus-visible { outline:2px solid var(--champagne); outline-offset:4px; }
+@media (prefers-reduced-motion:reduce) { .featured-solution:active { transform:none; border-color:var(--champagne); } }

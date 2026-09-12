@@ -1,0 +1,2570 @@
+[
+  {
+    "id": "commercial-offices",
+    "title": "Commercial Offices",
+    "group": "Commercial & care",
+    "hero": "plush-drift-commercial",
+    "coverLines": [
+      "COMMERCIAL",
+      "OFFICES"
+    ],
+    "audience": "For office owners, workplace leaders, facilities teams, and property managers",
+    "intro": "An intelligent office should do more than add devices. It should reduce avoidable operating effort, support comfortable workdays, improve visibility across the property, and create a more responsive environment without adding technology friction.",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "**For office owners, workplace leaders, facilities teams, and property managers**"
+      },
+      {
+        "type": "paragraph",
+        "text": "An intelligent office should do more than add devices. It should reduce avoidable operating effort, support comfortable workdays, improve visibility across the property, and create a more responsive environment without adding technology friction."
+      },
+      {
+        "type": "heading",
+        "text": "The Office ROI Case"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Value area",
+            "What to measure",
+            "Relevant LuxSync capabilities"
+          ],
+          [
+            "Energy management",
+            "Lighting and HVAC use during occupied and unoccupied hours",
+            "Lighting & Ambience, Climate Intelligence, Energy Intelligence, Away"
+          ],
+          [
+            "Facilities efficiency",
+            "Time spent on repetitive checks, resets, and routine adjustments",
+            "Property Pulse, Effortless Departure, scheduled routines"
+          ],
+          [
+            "Water and property awareness",
+            "Leak events, response time, affected area, avoidable downtime",
+            "Water Watch, compatible sensors and shut-off products"
+          ],
+          [
+            "Space readiness",
+            "Time required to prepare meeting, reception, and shared spaces",
+            "Welcome, Entertain, lighting and climate scenes"
+          ],
+          [
+            "Workplace experience",
+            "Comfort requests, environment-related tickets, employee feedback",
+            "Climate, lighting, shades, ambience, accessible controls"
+          ],
+          [
+            "Multi-location oversight",
+            "Site visits, after-hours exceptions, visibility gaps",
+            "Property Pulse, remote status, standardized routines"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Build the Baseline"
+      },
+      {
+        "type": "paragraph",
+        "text": "Use at least 30–90 days of available operating data before comparing outcomes:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "monthly electricity and climate costs;",
+          "normal business hours and after-hours usage;",
+          "facilities labor spent on repeatable environmental tasks;",
+          "comfort and environment-related tickets;",
+          "water incidents, response times, and downtime;",
+          "number of sites, floors, rooms, and shared spaces;",
+          "existing SmartThings, Matter, lighting, climate, access, and network infrastructure."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Office ROI Worksheet"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Input",
+            "Your value",
+            "Calculation"
+          ],
+          [
+            "Annual verified lighting/climate savings",
+            "$",
+            "Baseline cost minus measured post-launch cost, normalized for weather and occupancy"
+          ],
+          [
+            "Annual facilities time recovered",
+            "$",
+            "Verified hours avoided × loaded hourly labor cost"
+          ],
+          [
+            "Annual avoided site-visit cost",
+            "$",
+            "Avoided trips × fully loaded cost per trip"
+          ],
+          [
+            "Risk-adjusted water/property value",
+            "$",
+            "Event probability × attributable avoidable cost; keep separate from guaranteed savings"
+          ],
+          [
+            "Annual recurring platform/service cost",
+            "$",
+            "Subtract from benefits"
+          ],
+          [
+            "Initial equipment/setup investment",
+            "$",
+            "Use validated proposal data"
+          ]
+        ]
+      },
+      {
+        "type": "formula",
+        "text": "Annual net benefit = verified savings + recovered labor + risk-adjusted value - recurring cost\nSimple ROI = annual net benefit / initial investment × 100\nPayback months = initial investment / (annual net benefit / 12)"
+      },
+      {
+        "type": "heading",
+        "text": "Start With a Measurable Pilot"
+      },
+      {
+        "type": "paragraph",
+        "text": "Choose one floor, department, or site where the baseline is clear. Prioritize two or three outcomes, such as after-hours lighting, climate scheduling, and leak awareness. Run the pilot long enough to account for operating and weather variation, then compare normalized results before expanding."
+      },
+      {
+        "type": "heading",
+        "text": "What a LuxSync Office Blueprint Can Include"
+      },
+      {
+        "type": "list",
+        "items": [
+          "current-state technology and compatibility review;",
+          "outcome-based LuxSync Experiences;",
+          "recommended foundation and capability categories;",
+          "Essential Intelligence, Elevated Living, and Complete LuxSync Experience paths;",
+          "phased rollout by room, floor, or location;",
+          "measurement plan and owner for each ROI metric."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Important Boundaries"
+      },
+      {
+        "type": "paragraph",
+        "text": "Results depend on building systems, occupancy, climate, tariffs, operating practices, device compatibility, and adoption. LuxSync does not guarantee savings or operational outcomes. Access, security-related, and property-awareness technology does not replace code-required systems, professional monitoring, or emergency services."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Next step:** **Find My LuxSync Solution** or request an office consultation at `info@luxsync.net`."
+      }
+    ],
+    "metrics": [
+      {
+        "id": "metric-0",
+        "label": "Energy management",
+        "hint": "Lighting and HVAC use during occupied and unoccupied hours"
+      },
+      {
+        "id": "metric-1",
+        "label": "Facilities efficiency",
+        "hint": "Time spent on repetitive checks, resets, and routine adjustments"
+      },
+      {
+        "id": "metric-2",
+        "label": "Water and property awareness",
+        "hint": "Leak events, response time, affected area, avoidable downtime"
+      },
+      {
+        "id": "metric-3",
+        "label": "Space readiness",
+        "hint": "Time required to prepare meeting, reception, and shared spaces"
+      },
+      {
+        "id": "metric-4",
+        "label": "Workplace experience",
+        "hint": "Comfort requests, environment-related tickets, employee feedback"
+      },
+      {
+        "id": "metric-5",
+        "label": "Multi-location oversight",
+        "hint": "Site visits, after-hours exceptions, visibility gaps"
+      }
+    ],
+    "worksheet": [
+      {
+        "id": "input-0",
+        "label": "Annual verified lighting/climate savings",
+        "unit": "$",
+        "method": "Baseline cost minus measured post-launch cost, normalized for weather and occupancy"
+      },
+      {
+        "id": "input-1",
+        "label": "Annual facilities time recovered",
+        "unit": "$",
+        "method": "Verified hours avoided × loaded hourly labor cost"
+      },
+      {
+        "id": "input-2",
+        "label": "Annual avoided site-visit cost",
+        "unit": "$",
+        "method": "Avoided trips × fully loaded cost per trip"
+      },
+      {
+        "id": "input-3",
+        "label": "Risk-adjusted water/property value",
+        "unit": "$",
+        "method": "Event probability × attributable avoidable cost; keep separate from guaranteed savings"
+      },
+      {
+        "id": "input-4",
+        "label": "Annual recurring platform/service cost",
+        "unit": "$",
+        "method": "Subtract from benefits"
+      },
+      {
+        "id": "input-5",
+        "label": "Initial equipment/setup investment",
+        "unit": "$",
+        "method": "Use validated proposal data"
+      }
+    ]
+  },
+  {
+    "id": "nursing-homes",
+    "title": "Nursing Homes",
+    "group": "Commercial & care",
+    "hero": "plush-drift-care",
+    "coverLines": [
+      "NURSING HOMES"
+    ],
+    "audience": "For nursing-home owners, administrators, facilities leaders, operations teams, and care-technology stakeholders",
+    "intro": "In a nursing-home environment, technology must support dignity, comfort, staff workflow, and responsible property operations. The ROI case should be grounded in measured operational improvement—not medical promises or assumptions that automation can replace people, clinical systems, or required safety infrastructure.",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "**For nursing-home owners, administrators, facilities leaders, operations teams, and care-technology stakeholders**"
+      },
+      {
+        "type": "paragraph",
+        "text": "In a nursing-home environment, technology must support dignity, comfort, staff workflow, and responsible property operations. The ROI case should be grounded in measured operational improvement—not medical promises or assumptions that automation can replace people, clinical systems, or required safety infrastructure."
+      },
+      {
+        "type": "heading",
+        "text": "The Nursing-Home ROI Case"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Value area",
+            "What to measure",
+            "Relevant LuxSync capabilities"
+          ],
+          [
+            "Staff workflow",
+            "Time spent on non-clinical environmental adjustments and repeatable room tasks",
+            "Accessible Living, lighting, climate, routines"
+          ],
+          [
+            "Resident comfort",
+            "Environmental requests, room-comfort feedback, response time",
+            "Climate Intelligence, Gentle Morning, Goodnight, accessible controls"
+          ],
+          [
+            "Nighttime environment",
+            "Lighting-related requests and pathway-lighting usability",
+            "Night Path, low-level lighting routines"
+          ],
+          [
+            "Room readiness",
+            "Time and steps required to prepare rooms after a transition",
+            "Room-state routines, lighting, climate, Property Pulse"
+          ],
+          [
+            "Energy operations",
+            "Lighting and climate use in rooms and common areas",
+            "Energy Intelligence, Climate Intelligence, Away states for appropriate spaces"
+          ],
+          [
+            "Water/property awareness",
+            "Leak detection and facilities response",
+            "Water Watch, compatible sensors and shut-off capabilities"
+          ],
+          [
+            "Facilities oversight",
+            "Manual checks, site walks, and exception response",
+            "Property Pulse, environmental and device-status visibility"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Build the Baseline"
+      },
+      {
+        "type": "paragraph",
+        "text": "Before a pilot, document:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "room count, common areas, floors, and operating zones;",
+          "utility use by available meter or zone;",
+          "non-clinical environmental requests and response times;",
+          "staff time spent on repeatable room/environment tasks;",
+          "room turnover or readiness time;",
+          "water events and facilities response history;",
+          "resident, family, staff, privacy, accessibility, consent, and regulatory requirements;",
+          "existing nurse-call, fire/life-safety, security, building-management, and clinical systems that must remain independent unless an approved integration is specifically validated."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Nursing-Home ROI Worksheet"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Input",
+            "Your value",
+            "Calculation"
+          ],
+          [
+            "Annual verified energy savings",
+            "$",
+            "Normalized baseline minus measured post-launch cost"
+          ],
+          [
+            "Annual non-clinical staff time recovered",
+            "$",
+            "Verified hours avoided × loaded labor cost"
+          ],
+          [
+            "Annual room-readiness value",
+            "$",
+            "Verified time reduction × labor cost; add attributable capacity value only when evidenced"
+          ],
+          [
+            "Annual facilities response value",
+            "$",
+            "Avoided routine checks/trips × loaded cost"
+          ],
+          [
+            "Risk-adjusted water/property value",
+            "$",
+            "Probability × attributable avoidable cost; report as a scenario"
+          ],
+          [
+            "Annual recurring cost",
+            "$",
+            "Subtract from benefits"
+          ],
+          [
+            "Initial investment",
+            "$",
+            "Validated equipment, setup, training, and change-management cost"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Pilot With Governance First"
+      },
+      {
+        "type": "paragraph",
+        "text": "Select a limited non-clinical use case and involve administration, facilities, IT/security, accessibility, privacy, care leadership, residents or representatives, and legal/compliance reviewers as appropriate. Define what the system may control, who receives alerts, what happens during connectivity loss, and how consent and access are handled."
+      },
+      {
+        "type": "paragraph",
+        "text": "Good pilot candidates may include:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "common-area lighting schedules;",
+          "resident-controlled room lighting or climate where appropriate;",
+          "Night Path lighting that does not interfere with care protocols;",
+          "leak awareness in a limited zone;",
+          "non-clinical room-readiness routines."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "What a LuxSync Nursing-Home Blueprint Can Include"
+      },
+      {
+        "type": "list",
+        "items": [
+          "property and technology profile;",
+          "stakeholder, privacy, accessibility, and compatibility review flags;",
+          "non-clinical Experience recommendations;",
+          "pilot boundaries and human-override requirements;",
+          "phased implementation path;",
+          "baseline, measurement owner, and review cadence."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Care and Safety Boundary"
+      },
+      {
+        "type": "paragraph",
+        "text": "LuxSync solutions are not medical devices, nurse-call systems, fall-detection guarantees, clinical monitoring, emergency response, professional security monitoring, or substitutes for required staffing and life-safety systems. No automation should delay or replace clinical judgment, resident support, emergency procedures, or mandated equipment."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Next step:** Request a nursing-home discovery consultation at `info@luxsync.net`."
+      }
+    ],
+    "metrics": [
+      {
+        "id": "metric-0",
+        "label": "Staff workflow",
+        "hint": "Time spent on non-clinical environmental adjustments and repeatable room tasks"
+      },
+      {
+        "id": "metric-1",
+        "label": "Resident comfort",
+        "hint": "Environmental requests, room-comfort feedback, response time"
+      },
+      {
+        "id": "metric-2",
+        "label": "Nighttime environment",
+        "hint": "Lighting-related requests and pathway-lighting usability"
+      },
+      {
+        "id": "metric-3",
+        "label": "Room readiness",
+        "hint": "Time and steps required to prepare rooms after a transition"
+      },
+      {
+        "id": "metric-4",
+        "label": "Energy operations",
+        "hint": "Lighting and climate use in rooms and common areas"
+      },
+      {
+        "id": "metric-5",
+        "label": "Water/property awareness",
+        "hint": "Leak detection and facilities response"
+      },
+      {
+        "id": "metric-6",
+        "label": "Facilities oversight",
+        "hint": "Manual checks, site walks, and exception response"
+      }
+    ],
+    "worksheet": [
+      {
+        "id": "input-0",
+        "label": "Annual verified energy savings",
+        "unit": "$",
+        "method": "Normalized baseline minus measured post-launch cost"
+      },
+      {
+        "id": "input-1",
+        "label": "Annual non-clinical staff time recovered",
+        "unit": "$",
+        "method": "Verified hours avoided × loaded labor cost"
+      },
+      {
+        "id": "input-2",
+        "label": "Annual room-readiness value",
+        "unit": "$",
+        "method": "Verified time reduction × labor cost; add attributable capacity value only when evidenced"
+      },
+      {
+        "id": "input-3",
+        "label": "Annual facilities response value",
+        "unit": "$",
+        "method": "Avoided routine checks/trips × loaded cost"
+      },
+      {
+        "id": "input-4",
+        "label": "Risk-adjusted water/property value",
+        "unit": "$",
+        "method": "Probability × attributable avoidable cost; report as a scenario"
+      },
+      {
+        "id": "input-5",
+        "label": "Annual recurring cost",
+        "unit": "$",
+        "method": "Subtract from benefits"
+      },
+      {
+        "id": "input-6",
+        "label": "Initial investment",
+        "unit": "$",
+        "method": "Validated equipment, setup, training, and change-management cost"
+      }
+    ]
+  },
+  {
+    "id": "senior-living-communities",
+    "title": "Senior Living Communities",
+    "group": "Commercial & care",
+    "hero": "aging-in-place",
+    "coverLines": [
+      "SENIOR LIVING",
+      "COMMUNITIES"
+    ],
+    "audience": "For independent-living, assisted-living, continuing-care, and senior-community owners and operators",
+    "intro": "Senior living is both a home and an operating environment. A thoughtful intelligent-living program can support resident choice, comfort, property visibility, staff efficiency, and a differentiated living experience. The business case must remain distinct from clinical care and must be tested with residents, families, staff, and operators.",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "**For independent-living, assisted-living, continuing-care, and senior-community owners and operators**"
+      },
+      {
+        "type": "paragraph",
+        "text": "Senior living is both a home and an operating environment. A thoughtful intelligent-living program can support resident choice, comfort, property visibility, staff efficiency, and a differentiated living experience. The business case must remain distinct from clinical care and must be tested with residents, families, staff, and operators."
+      },
+      {
+        "type": "heading",
+        "text": "The Senior-Living ROI Case"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Value area",
+            "What to measure",
+            "Relevant LuxSync capabilities"
+          ],
+          [
+            "Resident experience",
+            "Comfort, ease-of-use feedback, adoption, environmental service requests",
+            "Accessible Living, Welcome Home, Gentle Morning, Goodnight, Night Path"
+          ],
+          [
+            "Staff efficiency",
+            "Time spent on non-clinical environmental tasks and repeatable unit support",
+            "Room routines, Property Pulse, guided controls"
+          ],
+          [
+            "Unit readiness",
+            "Time and labor required between residents",
+            "Guest Ready-style unit reset, lighting, climate, status checks"
+          ],
+          [
+            "Occupancy and retention",
+            "Lead feedback, move-in decisions, renewals, transfer requests",
+            "Demonstrable intelligent-living features; count value only when attributable"
+          ],
+          [
+            "Common-area operations",
+            "Lighting and climate use by schedule and occupancy",
+            "Energy Intelligence, Climate Intelligence, Entertain"
+          ],
+          [
+            "Property awareness",
+            "Leaks, device exceptions, response time, site walks",
+            "Water Watch, Property Pulse"
+          ],
+          [
+            "Portfolio consistency",
+            "Training, setup variance, and support patterns across properties",
+            "Standardized compatible foundations and repeatable Blueprints"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Build the Baseline"
+      },
+      {
+        "type": "paragraph",
+        "text": "Capture available data for:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "occupied and vacant units, common spaces, and care-level distinctions;",
+          "unit-turn time and labor;",
+          "resident environmental requests and response time;",
+          "utility use by unit, wing, or common area where available;",
+          "staff time spent on non-clinical room/environment support;",
+          "move-in, renewal, and satisfaction feedback related to technology or accessibility;",
+          "water events and facilities response;",
+          "privacy, consent, accessibility, cybersecurity, and regulatory requirements."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Senior-Living ROI Worksheet"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Input",
+            "Your value",
+            "Calculation"
+          ],
+          [
+            "Annual verified energy savings",
+            "$",
+            "Normalized baseline minus measured result"
+          ],
+          [
+            "Annual staff/facilities time recovered",
+            "$",
+            "Verified hours avoided × loaded labor cost"
+          ],
+          [
+            "Annual unit-readiness value",
+            "$",
+            "Verified labor/time reduction plus evidenced revenue timing, if attributable"
+          ],
+          [
+            "Attributable retention/occupancy value",
+            "$",
+            "Use only documented decision or cohort evidence; keep as scenario until verified"
+          ],
+          [
+            "Risk-adjusted property value",
+            "$",
+            "Probability × attributable avoidable cost"
+          ],
+          [
+            "Annual recurring cost",
+            "$",
+            "Subtract from benefits"
+          ],
+          [
+            "Initial investment",
+            "$",
+            "Validated equipment, setup, training, and change-management cost"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Recommended Pilot"
+      },
+      {
+        "type": "paragraph",
+        "text": "Pilot in a defined group of units or one community area. Pair objective operating metrics with resident and staff experience measures. Provide simple manual controls and human support, test accessibility with real users, and measure adoption rather than assuming it."
+      },
+      {
+        "type": "paragraph",
+        "text": "Potential pilots:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "accessible lighting and climate controls in selected units;",
+          "Night Path and Goodnight experiences;",
+          "vacant-unit climate/lighting routines;",
+          "common-area scheduling and ambience;",
+          "water awareness in a limited zone."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "What a LuxSync Senior-Living Blueprint Can Include"
+      },
+      {
+        "type": "list",
+        "items": [
+          "community, unit, and common-area profile;",
+          "resident-experience and operating priorities;",
+          "Accessible Living and property-operations recommendations;",
+          "Essential, Elevated, and Complete phased paths;",
+          "accessibility, privacy, consent, compatibility, and human-override review;",
+          "measurement plan for resident experience and operational value."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Care and Safety Boundary"
+      },
+      {
+        "type": "paragraph",
+        "text": "LuxSync provides convenience, accessibility, and property-awareness concepts. It does not provide clinical monitoring, emergency response, guaranteed fall detection, nurse-call replacement, professional security monitoring, or a substitute for required care, staffing, or life-safety systems."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Next step:** Request a senior-living consultation at `info@luxsync.net`."
+      }
+    ],
+    "metrics": [
+      {
+        "id": "metric-0",
+        "label": "Resident experience",
+        "hint": "Comfort, ease-of-use feedback, adoption, environmental service requests"
+      },
+      {
+        "id": "metric-1",
+        "label": "Staff efficiency",
+        "hint": "Time spent on non-clinical environmental tasks and repeatable unit support"
+      },
+      {
+        "id": "metric-2",
+        "label": "Unit readiness",
+        "hint": "Time and labor required between residents"
+      },
+      {
+        "id": "metric-3",
+        "label": "Occupancy and retention",
+        "hint": "Lead feedback, move-in decisions, renewals, transfer requests"
+      },
+      {
+        "id": "metric-4",
+        "label": "Common-area operations",
+        "hint": "Lighting and climate use by schedule and occupancy"
+      },
+      {
+        "id": "metric-5",
+        "label": "Property awareness",
+        "hint": "Leaks, device exceptions, response time, site walks"
+      },
+      {
+        "id": "metric-6",
+        "label": "Portfolio consistency",
+        "hint": "Training, setup variance, and support patterns across properties"
+      }
+    ],
+    "worksheet": [
+      {
+        "id": "input-0",
+        "label": "Annual verified energy savings",
+        "unit": "$",
+        "method": "Normalized baseline minus measured result"
+      },
+      {
+        "id": "input-1",
+        "label": "Annual staff/facilities time recovered",
+        "unit": "$",
+        "method": "Verified hours avoided × loaded labor cost"
+      },
+      {
+        "id": "input-2",
+        "label": "Annual unit-readiness value",
+        "unit": "$",
+        "method": "Verified labor/time reduction plus evidenced revenue timing, if attributable"
+      },
+      {
+        "id": "input-3",
+        "label": "Attributable retention/occupancy value",
+        "unit": "$",
+        "method": "Use only documented decision or cohort evidence; keep as scenario until verified"
+      },
+      {
+        "id": "input-4",
+        "label": "Risk-adjusted property value",
+        "unit": "$",
+        "method": "Probability × attributable avoidable cost"
+      },
+      {
+        "id": "input-5",
+        "label": "Annual recurring cost",
+        "unit": "$",
+        "method": "Subtract from benefits"
+      },
+      {
+        "id": "input-6",
+        "label": "Initial investment",
+        "unit": "$",
+        "method": "Validated equipment, setup, training, and change-management cost"
+      }
+    ]
+  },
+  {
+    "id": "str-owners",
+    "title": "Short-Term Rental Owners",
+    "group": "Short-term rentals",
+    "hero": "plush-drift-rental",
+    "coverLines": [
+      "SHORT-TERM RENTAL",
+      "OWNERS"
+    ],
+    "audience": "For individual and portfolio short-term-rental property owners",
+    "intro": "For an STR owner, intelligent technology should strengthen the property's net operating performance and guest experience without creating a fragile collection of disconnected devices. The owner ROI case centers on property-level income, operating costs, asset awareness, and long-term flexibility.",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "**For individual and portfolio short-term-rental property owners**"
+      },
+      {
+        "type": "paragraph",
+        "text": "For an STR owner, intelligent technology should strengthen the property's net operating performance and guest experience without creating a fragile collection of disconnected devices. The owner ROI case centers on property-level income, operating costs, asset awareness, and long-term flexibility."
+      },
+      {
+        "type": "heading",
+        "text": "The STR Owner ROI Case"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Value area",
+            "What to measure",
+            "Relevant LuxSync capabilities"
+          ],
+          [
+            "Utility control",
+            "Energy used between stays and during unoccupied periods",
+            "Climate Intelligence, Energy Intelligence, Away"
+          ],
+          [
+            "Guest arrival",
+            "Access issues, failed check-ins, owner interventions",
+            "Guest Ready, compatible smart entry and lighting"
+          ],
+          [
+            "Property awareness",
+            "Leak events, temperature exceptions, doors/windows, response time",
+            "Water Watch, Property Pulse, Protect"
+          ],
+          [
+            "Turnover readiness",
+            "Time spent confirming property state before arrival",
+            "Turnover, Guest Ready, remote status"
+          ],
+          [
+            "Guest experience",
+            "Technology-related messages, review themes, comfort issues",
+            "Welcome, lighting, climate, entertainment, accessible controls"
+          ],
+          [
+            "Owner time",
+            "Hours spent on repeatable checks and device coordination",
+            "Standardized routines, remote visibility, Blueprint guidance"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Establish the Property Baseline"
+      },
+      {
+        "type": "paragraph",
+        "text": "Collect 6–12 months where available, while accounting for seasonality:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "nights available, nights booked, average daily rate, and gross booking revenue;",
+          "electricity, gas, water, and internet costs;",
+          "owner time spent on access, thermostat, lighting, and troubleshooting tasks;",
+          "guest messages and incidents related to entry, comfort, connectivity, or devices;",
+          "turnover confirmations and emergency/extra site visits;",
+          "water or property incidents and attributable costs;",
+          "current platform, lock, thermostat, lighting, sensor, and SmartThings compatibility."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "STR Owner ROI Worksheet"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Input",
+            "Your value",
+            "Calculation"
+          ],
+          [
+            "Annual verified utility savings",
+            "$",
+            "Seasonally normalized baseline minus measured result"
+          ],
+          [
+            "Annual owner time recovered",
+            "$",
+            "Verified hours avoided × chosen owner time value"
+          ],
+          [
+            "Annual avoided intervention cost",
+            "$",
+            "Avoided trips/callouts × fully loaded cost"
+          ],
+          [
+            "Attributable revenue/experience value",
+            "$",
+            "Count only evidence linked to the implementation; otherwise show as a scenario"
+          ],
+          [
+            "Risk-adjusted incident value",
+            "$",
+            "Event probability × attributable avoidable cost"
+          ],
+          [
+            "Annual recurring cost",
+            "$",
+            "Subtract from benefits"
+          ],
+          [
+            "Initial investment",
+            "$",
+            "Validated equipment and setup cost"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Owner-Focused Decision Rules"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Evaluate each property independently before assuming portfolio-wide ROI.",
+          "Separate cash savings from time value and risk scenarios.",
+          "Do not count the same benefit twice—for example, a saved site visit and the same recovered hour.",
+          "Confirm that access, privacy, noise-awareness, cameras, and monitoring practices follow platform rules and applicable law.",
+          "Prefer compatible, supportable products over a larger device count."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "What a LuxSync STR Owner Blueprint Can Include"
+      },
+      {
+        "type": "list",
+        "items": [
+          "property type, size, occupancy pattern, and remote-management profile;",
+          "Guest Ready, Turnover, Property Pulse, Water Watch, and Climate Intelligence recommendations;",
+          "compatible foundation and product categories;",
+          "Essential, Elevated, and Complete investment paths;",
+          "measurement plan for utilities, interventions, incidents, and guest experience;",
+          "phased roadmap that can expand after results are verified."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Important Boundaries"
+      },
+      {
+        "type": "paragraph",
+        "text": "LuxSync does not guarantee bookings, nightly rates, reviews, utility savings, insurance outcomes, or incident prevention. Property-awareness and security-related technology does not replace professional monitoring, emergency services, code-required life-safety systems, or responsible local support."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Next step:** **Find My LuxSync Solution** for your property or contact `info@luxsync.net`."
+      }
+    ],
+    "metrics": [
+      {
+        "id": "metric-0",
+        "label": "Utility control",
+        "hint": "Energy used between stays and during unoccupied periods"
+      },
+      {
+        "id": "metric-1",
+        "label": "Guest arrival",
+        "hint": "Access issues, failed check-ins, owner interventions"
+      },
+      {
+        "id": "metric-2",
+        "label": "Property awareness",
+        "hint": "Leak events, temperature exceptions, doors/windows, response time"
+      },
+      {
+        "id": "metric-3",
+        "label": "Turnover readiness",
+        "hint": "Time spent confirming property state before arrival"
+      },
+      {
+        "id": "metric-4",
+        "label": "Guest experience",
+        "hint": "Technology-related messages, review themes, comfort issues"
+      },
+      {
+        "id": "metric-5",
+        "label": "Owner time",
+        "hint": "Hours spent on repeatable checks and device coordination"
+      }
+    ],
+    "worksheet": [
+      {
+        "id": "input-0",
+        "label": "Annual verified utility savings",
+        "unit": "$",
+        "method": "Seasonally normalized baseline minus measured result"
+      },
+      {
+        "id": "input-1",
+        "label": "Annual owner time recovered",
+        "unit": "$",
+        "method": "Verified hours avoided × chosen owner time value"
+      },
+      {
+        "id": "input-2",
+        "label": "Annual avoided intervention cost",
+        "unit": "$",
+        "method": "Avoided trips/callouts × fully loaded cost"
+      },
+      {
+        "id": "input-3",
+        "label": "Attributable revenue/experience value",
+        "unit": "$",
+        "method": "Count only evidence linked to the implementation; otherwise show as a scenario"
+      },
+      {
+        "id": "input-4",
+        "label": "Risk-adjusted incident value",
+        "unit": "$",
+        "method": "Event probability × attributable avoidable cost"
+      },
+      {
+        "id": "input-5",
+        "label": "Annual recurring cost",
+        "unit": "$",
+        "method": "Subtract from benefits"
+      },
+      {
+        "id": "input-6",
+        "label": "Initial investment",
+        "unit": "$",
+        "method": "Validated equipment and setup cost"
+      }
+    ]
+  },
+  {
+    "id": "str-operators",
+    "title": "Short-Term Rental Operators",
+    "group": "Short-term rentals",
+    "hero": "solutions",
+    "coverLines": [
+      "SHORT-TERM RENTAL",
+      "OPERATORS"
+    ],
+    "audience": "For the teams responsible for the daily operation of one or more short-term rentals",
+    "intro": "STR operators live in the space between guest expectations and property reality. Their ROI comes from reducing repetitive coordination, improving exception visibility, standardizing property behavior, and helping teams act before small issues become expensive disruptions.",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "**For the teams responsible for the daily operation of one or more short-term rentals**"
+      },
+      {
+        "type": "paragraph",
+        "text": "STR operators live in the space between guest expectations and property reality. Their ROI comes from reducing repetitive coordination, improving exception visibility, standardizing property behavior, and helping teams act before small issues become expensive disruptions."
+      },
+      {
+        "type": "heading",
+        "text": "The STR Operator ROI Case"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Value area",
+            "What to measure",
+            "Relevant LuxSync capabilities"
+          ],
+          [
+            "Check-in operations",
+            "Failed entries, manual code work, arrival interventions",
+            "Guest Ready, compatible entry/access"
+          ],
+          [
+            "Turnover coordination",
+            "Readiness checks, missed steps, rework, extra trips",
+            "Turnover, Property Pulse, standardized routines"
+          ],
+          [
+            "Exception management",
+            "Time to detect, assign, and resolve property exceptions",
+            "Property Pulse, Water Watch, climate/status alerts"
+          ],
+          [
+            "Utility operations",
+            "Unoccupied lighting/climate runtime across units",
+            "Climate Intelligence, Energy Intelligence, Away"
+          ],
+          [
+            "Support volume",
+            "Guest contacts about access, comfort, Wi-Fi, and controls",
+            "Clear guidance, compatible foundations, simplified experiences"
+          ],
+          [
+            "Team capacity",
+            "Units managed per operations hour and after-hours workload",
+            "Standardized Blueprints, repeatable experiences, remote status"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Establish the Operating Baseline"
+      },
+      {
+        "type": "paragraph",
+        "text": "Track by property and across the portfolio:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "arrivals, failed/self-service check-ins, and manual interventions;",
+          "turnovers, readiness exceptions, rework, and extra site visits;",
+          "guest-support contacts by category and handling time;",
+          "after-hours escalations and time to resolution;",
+          "utility cost per occupied and available night where practical;",
+          "device exceptions, battery/service events, and technology downtime;",
+          "current systems, integrations, responsibilities, and local support coverage."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "STR Operator ROI Worksheet"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Input",
+            "Your value",
+            "Calculation"
+          ],
+          [
+            "Annual verified operations time recovered",
+            "$",
+            "Avoided task hours × loaded labor cost"
+          ],
+          [
+            "Annual avoided dispatch/site-visit cost",
+            "$",
+            "Verified avoided visits × fully loaded cost"
+          ],
+          [
+            "Annual verified utility savings",
+            "$",
+            "Normalized baseline minus measured result"
+          ],
+          [
+            "Annual reduction in rework",
+            "$",
+            "Avoided repeated tasks × labor/vendor cost"
+          ],
+          [
+            "Attributable capacity value",
+            "$",
+            "Additional sustainable unit capacity × evidenced contribution; keep separate until verified"
+          ],
+          [
+            "Risk-adjusted incident value",
+            "$",
+            "Probability × attributable avoidable cost"
+          ],
+          [
+            "Recurring and initial costs",
+            "$",
+            "Subtract from benefits per period"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Operator-Focused Pilot"
+      },
+      {
+        "type": "paragraph",
+        "text": "Choose a small group of representative properties—not only the easiest units. Standardize the foundation, naming, access roles, routines, alert ownership, and escalation rules. Compare results by property and portfolio so a strong result at one unit does not hide poor adoption elsewhere."
+      },
+      {
+        "type": "paragraph",
+        "text": "Measure:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "intervention rate per 100 stays;",
+          "turnover exception rate;",
+          "guest technology contacts per 100 stays;",
+          "after-hours operations minutes per stay;",
+          "utility cost normalized for occupancy and weather;",
+          "device uptime and repeat fault rate."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "What a LuxSync STR Operator Blueprint Can Include"
+      },
+      {
+        "type": "list",
+        "items": [
+          "portfolio and property profiles;",
+          "common foundation plus property-specific exceptions;",
+          "Guest Ready, Turnover, Property Pulse, Water Watch, Climate Intelligence, and Away experiences;",
+          "alert ownership and human escalation requirements;",
+          "rollout waves and training guidance;",
+          "portfolio dashboard requirements without claiming unreleased software is live."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Important Boundaries"
+      },
+      {
+        "type": "paragraph",
+        "text": "Automation should make responsibilities clearer, not remove local accountability. LuxSync does not guarantee labor reductions, operating capacity, reviews, revenue, or incident prevention. Validate guest privacy, access controls, camera/noise-device rules, and local law for every property."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Next step:** Request an STR operations consultation at `info@luxsync.net`."
+      }
+    ],
+    "metrics": [
+      {
+        "id": "metric-0",
+        "label": "Check-in operations",
+        "hint": "Failed entries, manual code work, arrival interventions"
+      },
+      {
+        "id": "metric-1",
+        "label": "Turnover coordination",
+        "hint": "Readiness checks, missed steps, rework, extra trips"
+      },
+      {
+        "id": "metric-2",
+        "label": "Exception management",
+        "hint": "Time to detect, assign, and resolve property exceptions"
+      },
+      {
+        "id": "metric-3",
+        "label": "Utility operations",
+        "hint": "Unoccupied lighting/climate runtime across units"
+      },
+      {
+        "id": "metric-4",
+        "label": "Support volume",
+        "hint": "Guest contacts about access, comfort, Wi-Fi, and controls"
+      },
+      {
+        "id": "metric-5",
+        "label": "Team capacity",
+        "hint": "Units managed per operations hour and after-hours workload"
+      }
+    ],
+    "worksheet": [
+      {
+        "id": "input-0",
+        "label": "Annual verified operations time recovered",
+        "unit": "$",
+        "method": "Avoided task hours × loaded labor cost"
+      },
+      {
+        "id": "input-1",
+        "label": "Annual avoided dispatch/site-visit cost",
+        "unit": "$",
+        "method": "Verified avoided visits × fully loaded cost"
+      },
+      {
+        "id": "input-2",
+        "label": "Annual verified utility savings",
+        "unit": "$",
+        "method": "Normalized baseline minus measured result"
+      },
+      {
+        "id": "input-3",
+        "label": "Annual reduction in rework",
+        "unit": "$",
+        "method": "Avoided repeated tasks × labor/vendor cost"
+      },
+      {
+        "id": "input-4",
+        "label": "Attributable capacity value",
+        "unit": "$",
+        "method": "Additional sustainable unit capacity × evidenced contribution; keep separate until verified"
+      },
+      {
+        "id": "input-5",
+        "label": "Risk-adjusted incident value",
+        "unit": "$",
+        "method": "Probability × attributable avoidable cost"
+      },
+      {
+        "id": "input-6",
+        "label": "Recurring and initial costs",
+        "unit": "$",
+        "method": "Subtract from benefits per period"
+      }
+    ]
+  },
+  {
+    "id": "str-managers",
+    "title": "Short-Term Rental Managers",
+    "group": "Short-term rentals",
+    "hero": "professionals",
+    "coverLines": [
+      "SHORT-TERM RENTAL",
+      "MANAGERS"
+    ],
+    "audience": "For professional short-term-rental managers and management-company leaders",
+    "intro": "An STR manager must deliver results for two customers: the guest and the property owner. The manager ROI case therefore includes service efficiency, scalable standards, owner confidence, portfolio growth, and the cost of supporting technology across unlike properties.",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "**For professional short-term-rental managers and management-company leaders**"
+      },
+      {
+        "type": "paragraph",
+        "text": "An STR manager must deliver results for two customers: the guest and the property owner. The manager ROI case therefore includes service efficiency, scalable standards, owner confidence, portfolio growth, and the cost of supporting technology across unlike properties."
+      },
+      {
+        "type": "heading",
+        "text": "The STR Manager ROI Case"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Value area",
+            "What to measure",
+            "Relevant LuxSync capabilities"
+          ],
+          [
+            "Management margin",
+            "Technology-related labor and vendor cost per unit",
+            "Standardized compatible foundations and Blueprints"
+          ],
+          [
+            "Owner retention",
+            "Owner concerns, renewal reasons, reporting confidence",
+            "Property Pulse, documented performance and exception handling"
+          ],
+          [
+            "Portfolio onboarding",
+            "Time to assess, configure, document, and train each property",
+            "Repeatable Property Profile and implementation paths"
+          ],
+          [
+            "Guest service",
+            "Technology contacts, escalation rate, resolution time",
+            "Guest Ready, simplified controls, compatible products"
+          ],
+          [
+            "Field operations",
+            "Dispatches, rework, after-hours interventions",
+            "Turnover, Water Watch, climate/status awareness"
+          ],
+          [
+            "Portfolio scalability",
+            "Units supported per manager/operations team",
+            "Standards, roles, templates, phased rollout"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Establish the Management Baseline"
+      },
+      {
+        "type": "paragraph",
+        "text": "Track:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "active units, new-unit onboarding time, and technology assessment cost;",
+          "management revenue and direct service cost by unit where available;",
+          "technology-related tickets, escalations, vendor calls, and dispatches;",
+          "owner questions, technology-related dissatisfaction, and contract-renewal themes;",
+          "guest issue rates and resolution time;",
+          "device and ecosystem variation across the portfolio;",
+          "training time for internal teams, cleaners, vendors, and local contacts."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "STR Manager ROI Worksheet"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Input",
+            "Your value",
+            "Calculation"
+          ],
+          [
+            "Annual service labor recovered",
+            "$",
+            "Verified avoided hours × loaded labor cost"
+          ],
+          [
+            "Annual dispatch/rework savings",
+            "$",
+            "Avoided events × fully loaded event cost"
+          ],
+          [
+            "Annual onboarding efficiency",
+            "$",
+            "Verified hours avoided per new unit × units onboarded × loaded cost"
+          ],
+          [
+            "Attributable owner-retention value",
+            "$",
+            "Retained contribution linked to evidenced decision factors; scenario until verified"
+          ],
+          [
+            "Attributable scalable-capacity value",
+            "$",
+            "Added sustainable units × evidenced contribution, net of added support cost"
+          ],
+          [
+            "Recurring and initial costs",
+            "$",
+            "Subtract implementation, platform, training, support, and replacement costs"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Management-Company Decision Rules"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Segment properties by ecosystem, size, connectivity, and owner appetite before standardizing.",
+          "Define a supported-product policy and exception process.",
+          "Assign alert owners, after-hours escalation, battery maintenance, and device-replacement responsibility.",
+          "Show owners measured facts, not implied guarantees.",
+          "Keep guest privacy and platform disclosure rules inside onboarding and quality assurance."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "What a LuxSync STR Manager Blueprint Can Include"
+      },
+      {
+        "type": "list",
+        "items": [
+          "portfolio segmentation and property standards;",
+          "supported foundation and approved capability categories;",
+          "minimum, preferred, and premium property packages using validated products;",
+          "Guest Ready, Turnover, Property Pulse, Water Watch, and Climate Intelligence mappings;",
+          "operating roles, handoffs, training, and exception paths;",
+          "owner-facing measurement framework and rollout sequence."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Important Boundaries"
+      },
+      {
+        "type": "paragraph",
+        "text": "LuxSync does not guarantee owner retention, portfolio growth, reviews, labor savings, or management margin. Any capacity or retention value must be linked to actual operating and customer evidence. Security-related and property-awareness products do not replace emergency response, professional monitoring, code-required systems, or local property support."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Next step:** Request an STR management consultation at `info@luxsync.net`."
+      }
+    ],
+    "metrics": [
+      {
+        "id": "metric-0",
+        "label": "Management margin",
+        "hint": "Technology-related labor and vendor cost per unit"
+      },
+      {
+        "id": "metric-1",
+        "label": "Owner retention",
+        "hint": "Owner concerns, renewal reasons, reporting confidence"
+      },
+      {
+        "id": "metric-2",
+        "label": "Portfolio onboarding",
+        "hint": "Time to assess, configure, document, and train each property"
+      },
+      {
+        "id": "metric-3",
+        "label": "Guest service",
+        "hint": "Technology contacts, escalation rate, resolution time"
+      },
+      {
+        "id": "metric-4",
+        "label": "Field operations",
+        "hint": "Dispatches, rework, after-hours interventions"
+      },
+      {
+        "id": "metric-5",
+        "label": "Portfolio scalability",
+        "hint": "Units supported per manager/operations team"
+      }
+    ],
+    "worksheet": [
+      {
+        "id": "input-0",
+        "label": "Annual service labor recovered",
+        "unit": "$",
+        "method": "Verified avoided hours × loaded labor cost"
+      },
+      {
+        "id": "input-1",
+        "label": "Annual dispatch/rework savings",
+        "unit": "$",
+        "method": "Avoided events × fully loaded event cost"
+      },
+      {
+        "id": "input-2",
+        "label": "Annual onboarding efficiency",
+        "unit": "$",
+        "method": "Verified hours avoided per new unit × units onboarded × loaded cost"
+      },
+      {
+        "id": "input-3",
+        "label": "Attributable owner-retention value",
+        "unit": "$",
+        "method": "Retained contribution linked to evidenced decision factors; scenario until verified"
+      },
+      {
+        "id": "input-4",
+        "label": "Attributable scalable-capacity value",
+        "unit": "$",
+        "method": "Added sustainable units × evidenced contribution, net of added support cost"
+      },
+      {
+        "id": "input-5",
+        "label": "Recurring and initial costs",
+        "unit": "$",
+        "method": "Subtract implementation, platform, training, support, and replacement costs"
+      }
+    ]
+  },
+  {
+    "id": "residential-homeowners",
+    "title": "Residential Homeowners",
+    "group": "Residential",
+    "hero": "plush-drift-residential",
+    "coverLines": [
+      "RESIDENTIAL",
+      "HOMEOWNERS"
+    ],
+    "audience": "For homeowners planning a first smart-home foundation, improving an existing system, or creating a phased intelligent-living roadmap",
+    "intro": "Residential ROI is not only a resale calculation. It may include measured operating savings, time recovered from repetitive tasks, reduced service calls, earlier awareness of property issues, and everyday value from a home that is easier to use. LuxSync keeps financial outcomes separate from personal lifestyle value so the decision stays clear.",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "**For homeowners planning a first smart-home foundation, improving an existing system, or creating a phased intelligent-living roadmap**"
+      },
+      {
+        "type": "paragraph",
+        "text": "Residential ROI is not only a resale calculation. It may include measured operating savings, time recovered from repetitive tasks, reduced service calls, earlier awareness of property issues, and everyday value from a home that is easier to use. LuxSync keeps financial outcomes separate from personal lifestyle value so the decision stays clear."
+      },
+      {
+        "type": "heading",
+        "text": "The Residential ROI Case"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Value area",
+            "What to measure",
+            "Relevant LuxSync capabilities"
+          ],
+          [
+            "Energy use",
+            "Lighting, climate, and avoidable device runtime",
+            "Energy Intelligence, Climate Intelligence, Away"
+          ],
+          [
+            "Time and convenience",
+            "Minutes spent on repeatable lighting, entry, climate, and device tasks",
+            "Welcome Home, Effortless Departure, Goodnight, Gentle Morning"
+          ],
+          [
+            "Property awareness",
+            "Leak events, response time, second-home checks",
+            "Water Watch, Property Pulse, Vacation Mode"
+          ],
+          [
+            "Service simplicity",
+            "Troubleshooting time, duplicate devices, unsupported ecosystems",
+            "SmartThings-compatible foundation, Blueprint planning"
+          ],
+          [
+            "Comfort and ambience",
+            "Rooms/routines improved and household satisfaction",
+            "Intelligent Evening, Cinema, Entertain, Relax"
+          ],
+          [
+            "Accessibility",
+            "Tasks made easier through appropriate controls and routines",
+            "Accessible Living, Night Path"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Build Your Baseline"
+      },
+      {
+        "type": "paragraph",
+        "text": "Gather:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "12 months of energy costs where available;",
+          "household routines and repetitive tasks worth simplifying;",
+          "technology-related service calls, replacements, and troubleshooting time;",
+          "water/property incidents and response time;",
+          "current hubs, voice assistants, locks, lighting, thermostats, sensors, entertainment, and network equipment;",
+          "rooms and priorities for the first phase;",
+          "personal value of convenience, comfort, and accessibility—kept separate from cash savings."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Residential ROI Worksheet"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Input",
+            "Your value",
+            "Calculation"
+          ],
+          [
+            "Annual verified energy savings",
+            "$",
+            "Weather-normalized baseline minus measured result"
+          ],
+          [
+            "Annual time value",
+            "$",
+            "Verified hours recovered × your chosen hourly value"
+          ],
+          [
+            "Annual avoided service/visit cost",
+            "$",
+            "Verified avoided events × cost per event"
+          ],
+          [
+            "Risk-adjusted property value",
+            "$",
+            "Probability × attributable avoidable cost; show as scenario"
+          ],
+          [
+            "Annual recurring cost",
+            "$",
+            "Subtract subscriptions/services"
+          ],
+          [
+            "Initial investment",
+            "$",
+            "Validated product and setup cost"
+          ],
+          [
+            "Personal lifestyle value",
+            "Describe separately",
+            "Do not force comfort or peace of mind into a false cash claim"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Choose a First Phase"
+      },
+      {
+        "type": "paragraph",
+        "text": "Start with one or two routines that happen every day and one property-awareness priority. For example:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Welcome Home + Goodnight;",
+          "Climate Intelligence + Away;",
+          "Water Watch + Property Pulse;",
+          "Accessible Living + Night Path."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Measure for at least one meaningful season before projecting annual energy results."
+      },
+      {
+        "type": "heading",
+        "text": "What My LuxSync Blueprint Can Include"
+      },
+      {
+        "type": "list",
+        "items": [
+          "property type and approximate square footage;",
+          "current technology and compatibility context;",
+          "household priorities and recommended LuxSync Experiences;",
+          "Essential Intelligence, Elevated Living, and Complete LuxSync Experience paths;",
+          "room-by-room or phase-by-phase roadmap;",
+          "validated product categories and next best action."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Important Boundaries"
+      },
+      {
+        "type": "paragraph",
+        "text": "LuxSync does not guarantee energy savings, home-value appreciation, insurance reductions, incident prevention, or payback. Property-awareness and security-related products do not replace smoke/CO alarms, life-safety systems, emergency services, professional monitoring, or responsible home maintenance."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Next step:** **Find My LuxSync Solution** to create your personalized Blueprint."
+      }
+    ],
+    "metrics": [
+      {
+        "id": "metric-0",
+        "label": "Energy use",
+        "hint": "Lighting, climate, and avoidable device runtime"
+      },
+      {
+        "id": "metric-1",
+        "label": "Time and convenience",
+        "hint": "Minutes spent on repeatable lighting, entry, climate, and device tasks"
+      },
+      {
+        "id": "metric-2",
+        "label": "Property awareness",
+        "hint": "Leak events, response time, second-home checks"
+      },
+      {
+        "id": "metric-3",
+        "label": "Service simplicity",
+        "hint": "Troubleshooting time, duplicate devices, unsupported ecosystems"
+      },
+      {
+        "id": "metric-4",
+        "label": "Comfort and ambience",
+        "hint": "Rooms/routines improved and household satisfaction"
+      },
+      {
+        "id": "metric-5",
+        "label": "Accessibility",
+        "hint": "Tasks made easier through appropriate controls and routines"
+      }
+    ],
+    "worksheet": [
+      {
+        "id": "input-0",
+        "label": "Annual verified energy savings",
+        "unit": "$",
+        "method": "Weather-normalized baseline minus measured result"
+      },
+      {
+        "id": "input-1",
+        "label": "Annual time value",
+        "unit": "$",
+        "method": "Verified hours recovered × your chosen hourly value"
+      },
+      {
+        "id": "input-2",
+        "label": "Annual avoided service/visit cost",
+        "unit": "$",
+        "method": "Verified avoided events × cost per event"
+      },
+      {
+        "id": "input-3",
+        "label": "Risk-adjusted property value",
+        "unit": "$",
+        "method": "Probability × attributable avoidable cost; show as scenario"
+      },
+      {
+        "id": "input-4",
+        "label": "Annual recurring cost",
+        "unit": "$",
+        "method": "Subtract subscriptions/services"
+      },
+      {
+        "id": "input-5",
+        "label": "Initial investment",
+        "unit": "$",
+        "method": "Validated product and setup cost"
+      },
+      {
+        "id": "input-6",
+        "label": "Personal lifestyle value",
+        "unit": "Describe separately",
+        "method": "Do not force comfort or peace of mind into a false cash claim"
+      }
+    ]
+  },
+  {
+    "id": "residential-busy-professionals",
+    "title": "Busy Professionals",
+    "group": "Residential",
+    "hero": "professionals",
+    "coverLines": [
+      "BUSY",
+      "PROFESSIONALS"
+    ],
+    "audience": "For professionals who want the home to reduce daily friction without becoming another system to manage",
+    "intro": "For a busy professional, the most meaningful return may be a combination of verified operating savings, fewer interruptions, faster routines, and confidence that important property conditions are visible while away. The right plan values time honestly without pretending every saved minute becomes cash.",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "**For professionals who want the home to reduce daily friction without becoming another system to manage**"
+      },
+      {
+        "type": "paragraph",
+        "text": "For a busy professional, the most meaningful return may be a combination of verified operating savings, fewer interruptions, faster routines, and confidence that important property conditions are visible while away. The right plan values time honestly without pretending every saved minute becomes cash."
+      },
+      {
+        "type": "heading",
+        "text": "The Busy-Professional ROI Case"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Value area",
+            "What to measure",
+            "Relevant LuxSync capabilities"
+          ],
+          [
+            "Departure and arrival",
+            "Repeated steps and forgotten-device interruptions",
+            "Welcome Home, Effortless Departure, Away"
+          ],
+          [
+            "Daily transitions",
+            "Morning, evening, entertainment, and bedtime setup time",
+            "Gentle Morning, Intelligent Evening, Cinema, Goodnight"
+          ],
+          [
+            "Remote visibility",
+            "Trips or interruptions to check property conditions",
+            "Property Pulse, Water Watch, Vacation Mode"
+          ],
+          [
+            "Energy use",
+            "Lighting/climate runtime while away or asleep",
+            "Energy Intelligence, Climate Intelligence"
+          ],
+          [
+            "Technology simplicity",
+            "Troubleshooting, app switching, and duplicate controls",
+            "Compatible foundation, coordinated experiences"
+          ],
+          [
+            "Home support",
+            "Service access and household handoffs",
+            "Compatible entry, lighting, and status routines"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Create a Time-and-Cost Baseline"
+      },
+      {
+        "type": "paragraph",
+        "text": "For two typical weeks, record:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "minutes spent on repeated home-control tasks;",
+          "preventable interruptions or return trips;",
+          "time spent checking multiple apps or troubleshooting devices;",
+          "work travel and days away from home;",
+          "energy use and temperature/lighting schedules;",
+          "service-provider, pet-care, or household access handoffs;",
+          "the routines that would feel most valuable even without a cash return."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Busy-Professional ROI Worksheet"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Input",
+            "Your value",
+            "Calculation"
+          ],
+          [
+            "Annual verified time recovered",
+            "Hours",
+            "Weekly verified minutes ÷ 60 × 52"
+          ],
+          [
+            "Conservative time value",
+            "$",
+            "Recovered hours × chosen personal hourly value"
+          ],
+          [
+            "Annual verified energy savings",
+            "$",
+            "Normalized baseline minus measured result"
+          ],
+          [
+            "Annual avoided interruption/visit cost",
+            "$",
+            "Verified avoided events × actual event cost"
+          ],
+          [
+            "Annual recurring cost",
+            "$",
+            "Subtract from calculated benefits"
+          ],
+          [
+            "Initial investment",
+            "$",
+            "Validated products and setup"
+          ]
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Keep two views:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Cash ROI** — verified bills and direct avoided costs only.",
+          "**Personal-value ROI** — time, reduced friction, comfort, and confidence."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "A Focused First Phase"
+      },
+      {
+        "type": "paragraph",
+        "text": "Begin with three high-frequency moments:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "leaving home;",
+          "returning home;",
+          "going to bed."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Add one away-from-home property priority, such as Water Watch or Property Pulse. Avoid automating rare tasks before the daily foundation works reliably."
+      },
+      {
+        "type": "heading",
+        "text": "What My LuxSync Blueprint Can Include"
+      },
+      {
+        "type": "list",
+        "items": [
+          "weekday, weekend, travel, and work-from-home patterns;",
+          "existing SmartThings and connected-device profile;",
+          "Welcome Home, Effortless Departure, Goodnight, Climate Intelligence, and Property Pulse recommendations;",
+          "implementation paths matched to available time and preferred level of guidance;",
+          "a phased roadmap that minimizes technology clutter."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Important Boundaries"
+      },
+      {
+        "type": "paragraph",
+        "text": "LuxSync does not guarantee time savings, energy savings, incident prevention, or productivity gains. Automation supports routines but does not replace household judgment, emergency services, life-safety systems, professional monitoring, or responsible maintenance."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Next step:** **Find My LuxSync Solution** and choose the routines that matter most."
+      }
+    ],
+    "metrics": [
+      {
+        "id": "metric-0",
+        "label": "Departure and arrival",
+        "hint": "Repeated steps and forgotten-device interruptions"
+      },
+      {
+        "id": "metric-1",
+        "label": "Daily transitions",
+        "hint": "Morning, evening, entertainment, and bedtime setup time"
+      },
+      {
+        "id": "metric-2",
+        "label": "Remote visibility",
+        "hint": "Trips or interruptions to check property conditions"
+      },
+      {
+        "id": "metric-3",
+        "label": "Energy use",
+        "hint": "Lighting/climate runtime while away or asleep"
+      },
+      {
+        "id": "metric-4",
+        "label": "Technology simplicity",
+        "hint": "Troubleshooting, app switching, and duplicate controls"
+      },
+      {
+        "id": "metric-5",
+        "label": "Home support",
+        "hint": "Service access and household handoffs"
+      }
+    ],
+    "worksheet": [
+      {
+        "id": "input-0",
+        "label": "Annual verified time recovered",
+        "unit": "Hours",
+        "method": "Weekly verified minutes ÷ 60 × 52"
+      },
+      {
+        "id": "input-1",
+        "label": "Conservative time value",
+        "unit": "$",
+        "method": "Recovered hours × chosen personal hourly value"
+      },
+      {
+        "id": "input-2",
+        "label": "Annual verified energy savings",
+        "unit": "$",
+        "method": "Normalized baseline minus measured result"
+      },
+      {
+        "id": "input-3",
+        "label": "Annual avoided interruption/visit cost",
+        "unit": "$",
+        "method": "Verified avoided events × actual event cost"
+      },
+      {
+        "id": "input-4",
+        "label": "Annual recurring cost",
+        "unit": "$",
+        "method": "Subtract from calculated benefits"
+      },
+      {
+        "id": "input-5",
+        "label": "Initial investment",
+        "unit": "$",
+        "method": "Validated products and setup"
+      }
+    ]
+  },
+  {
+    "id": "residential-intentional-parents",
+    "title": "Intentional Parents & Families",
+    "group": "Residential",
+    "hero": "families",
+    "coverLines": [
+      "INTENTIONAL PARENTS",
+      "& FAMILIES"
+    ],
+    "audience": "For families who want technology to support calmer routines, comfort, and connection without dominating the home",
+    "intro": "Family ROI often appears in the daily transitions that shape home life: mornings, departures, homework, dinner, bedtime, and nighttime movement. Financial returns may come from energy use and avoided service costs; the broader value comes from routines that are simpler, more consistent, and easier for the household to use.",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "**For families who want technology to support calmer routines, comfort, and connection without dominating the home**"
+      },
+      {
+        "type": "paragraph",
+        "text": "Family ROI often appears in the daily transitions that shape home life: mornings, departures, homework, dinner, bedtime, and nighttime movement. Financial returns may come from energy use and avoided service costs; the broader value comes from routines that are simpler, more consistent, and easier for the household to use."
+      },
+      {
+        "type": "heading",
+        "text": "The Family ROI Case"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Value area",
+            "What to measure",
+            "Relevant LuxSync capabilities"
+          ],
+          [
+            "Morning and bedtime routines",
+            "Repeated steps, delays, and parent interventions",
+            "Gentle Morning, Goodnight, Night Path"
+          ],
+          [
+            "Arrivals and departures",
+            "Lighting, climate, entry, and forgotten-device checks",
+            "Welcome Home, Effortless Departure, Away"
+          ],
+          [
+            "Nursery/sleep environment",
+            "Manual lighting, shade, climate, and sound adjustments",
+            "Smart Sleep Nursery concept, lighting, climate, ambience"
+          ],
+          [
+            "Energy use",
+            "Empty-room lighting, climate schedules, device runtime",
+            "Energy Intelligence, Climate Intelligence"
+          ],
+          [
+            "Family usability",
+            "App switching, confusing controls, support requests",
+            "Shared controls, simple scenes, compatible foundation"
+          ],
+          [
+            "Property awareness",
+            "Water events and home status while away",
+            "Water Watch, Property Pulse"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Build the Family Baseline"
+      },
+      {
+        "type": "paragraph",
+        "text": "For two representative weeks, note:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "steps and time involved in morning and bedtime routines;",
+          "repeated lighting, climate, shade, and device adjustments;",
+          "family members who need simpler or more accessible controls;",
+          "empty-home hours and current energy schedules;",
+          "technology friction, app switching, and troubleshooting;",
+          "water/property events or recurring concerns;",
+          "privacy, household permissions, and age-appropriate control needs."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Family ROI Worksheet"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Input",
+            "Your value",
+            "Calculation"
+          ],
+          [
+            "Annual verified energy savings",
+            "$",
+            "Normalized baseline minus measured result"
+          ],
+          [
+            "Annual routine time recovered",
+            "$",
+            "Verified hours × conservative household time value"
+          ],
+          [
+            "Annual avoided service/replacement cost",
+            "$",
+            "Verified avoided events × actual cost"
+          ],
+          [
+            "Risk-adjusted property value",
+            "$",
+            "Probability × attributable avoidable cost; scenario only"
+          ],
+          [
+            "Annual recurring cost",
+            "$",
+            "Subtract from benefits"
+          ],
+          [
+            "Initial investment",
+            "$",
+            "Validated products and setup"
+          ],
+          [
+            "Family experience value",
+            "Describe separately",
+            "Calmer routines, easier controls, and comfort are not guaranteed cash savings"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Design for the Household"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Keep physical/manual control available.",
+          "Use clear names and predictable behavior.",
+          "Give children only age-appropriate access.",
+          "Avoid cameras or sensing practices that conflict with household privacy expectations.",
+          "Test routines with the people who will use them, not only the person who configures them.",
+          "Make bedtime and nighttime routines gentle, quiet, and easy to override."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "What My LuxSync Blueprint Can Include"
+      },
+      {
+        "type": "list",
+        "items": [
+          "household schedule, rooms, ages, and control preferences without unnecessary personal data;",
+          "Gentle Morning, Welcome Home, Goodnight, Night Path, and Water Watch recommendations;",
+          "family-friendly control and permissions plan;",
+          "Smart Sleep Nursery bundle concept where relevant, with contents/pricing validated before sale;",
+          "Essential, Elevated, and Complete phased paths."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Safety Boundary"
+      },
+      {
+        "type": "paragraph",
+        "text": "LuxSync routines and connected products do not replace adult supervision, childproofing, safe-sleep guidance, smoke/CO alarms, pool safety, emergency services, medical devices, professional monitoring, or code-required life-safety systems. No nursery or household automation should be presented as a safety guarantee."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Next step:** **Find My LuxSync Solution** to design routines around your family."
+      }
+    ],
+    "metrics": [
+      {
+        "id": "metric-0",
+        "label": "Morning and bedtime routines",
+        "hint": "Repeated steps, delays, and parent interventions"
+      },
+      {
+        "id": "metric-1",
+        "label": "Arrivals and departures",
+        "hint": "Lighting, climate, entry, and forgotten-device checks"
+      },
+      {
+        "id": "metric-2",
+        "label": "Nursery/sleep environment",
+        "hint": "Manual lighting, shade, climate, and sound adjustments"
+      },
+      {
+        "id": "metric-3",
+        "label": "Energy use",
+        "hint": "Empty-room lighting, climate schedules, device runtime"
+      },
+      {
+        "id": "metric-4",
+        "label": "Family usability",
+        "hint": "App switching, confusing controls, support requests"
+      },
+      {
+        "id": "metric-5",
+        "label": "Property awareness",
+        "hint": "Water events and home status while away"
+      }
+    ],
+    "worksheet": [
+      {
+        "id": "input-0",
+        "label": "Annual verified energy savings",
+        "unit": "$",
+        "method": "Normalized baseline minus measured result"
+      },
+      {
+        "id": "input-1",
+        "label": "Annual routine time recovered",
+        "unit": "$",
+        "method": "Verified hours × conservative household time value"
+      },
+      {
+        "id": "input-2",
+        "label": "Annual avoided service/replacement cost",
+        "unit": "$",
+        "method": "Verified avoided events × actual cost"
+      },
+      {
+        "id": "input-3",
+        "label": "Risk-adjusted property value",
+        "unit": "$",
+        "method": "Probability × attributable avoidable cost; scenario only"
+      },
+      {
+        "id": "input-4",
+        "label": "Annual recurring cost",
+        "unit": "$",
+        "method": "Subtract from benefits"
+      },
+      {
+        "id": "input-5",
+        "label": "Initial investment",
+        "unit": "$",
+        "method": "Validated products and setup"
+      },
+      {
+        "id": "input-6",
+        "label": "Family experience value",
+        "unit": "Describe separately",
+        "method": "Calmer routines, easier controls, and comfort are not guaranteed cash savings"
+      }
+    ]
+  },
+  {
+    "id": "residential-seniors-caregivers",
+    "title": "Seniors, Caregivers & Aging in Place",
+    "group": "Residential",
+    "hero": "plush-drift-care",
+    "coverLines": [
+      "SENIORS & CAREGIVERS",
+      "AGING IN PLACE"
+    ],
+    "audience": "For older adults, families, caregivers, and households planning for greater ease of use at home",
+    "intro": "The best aging-in-place technology should respect independence, consent, privacy, dignity, and personal preference. Residential ROI may include easier daily tasks, less non-clinical assistance for routine environmental controls, measured energy savings, and earlier awareness of certain property conditions. It must never be framed as a replacement for care or emergency support.",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "**For older adults, families, caregivers, and households planning for greater ease of use at home**"
+      },
+      {
+        "type": "paragraph",
+        "text": "The best aging-in-place technology should respect independence, consent, privacy, dignity, and personal preference. Residential ROI may include easier daily tasks, less non-clinical assistance for routine environmental controls, measured energy savings, and earlier awareness of certain property conditions. It must never be framed as a replacement for care or emergency support."
+      },
+      {
+        "type": "heading",
+        "text": "The Residential Senior ROI Case"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Value area",
+            "What to measure",
+            "Relevant LuxSync capabilities"
+          ],
+          [
+            "Everyday ease",
+            "Tasks simplified for lighting, climate, shades, and selected devices",
+            "Accessible Living, voice/manual controls, routines"
+          ],
+          [
+            "Nighttime movement",
+            "Ease of finding a softly lit path and number of manual lighting steps",
+            "Night Path, Goodnight"
+          ],
+          [
+            "Comfort",
+            "Environmental adjustment requests and usability",
+            "Climate Intelligence, Gentle Morning, simple scenes"
+          ],
+          [
+            "Family/caregiver coordination",
+            "Non-clinical check-in trips or calls related to home status",
+            "Property Pulse, consent-based notifications"
+          ],
+          [
+            "Property awareness",
+            "Leak and temperature exceptions, response time",
+            "Water Watch, Property Pulse"
+          ],
+          [
+            "Energy use",
+            "Lighting/climate operation when rooms or the home are unoccupied",
+            "Energy Intelligence, Away"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Build the Baseline Together"
+      },
+      {
+        "type": "paragraph",
+        "text": "With the resident's involvement and consent, document:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "daily home-control tasks that are difficult, tiring, or easy to forget;",
+          "preferred physical, app, or voice controls;",
+          "nighttime lighting needs and manual steps;",
+          "non-clinical assistance related to lighting, climate, shades, entry, or property checks;",
+          "energy use and typical occupancy patterns;",
+          "current technology, Wi-Fi, SmartThings, hearing/vision/mobility considerations, and support comfort;",
+          "who may access controls or receive notifications;",
+          "what must continue to work during an internet or power interruption."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Senior and Caregiver ROI Worksheet"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Input",
+            "Your value",
+            "Calculation"
+          ],
+          [
+            "Annual verified energy savings",
+            "$",
+            "Normalized baseline minus measured result"
+          ],
+          [
+            "Annual routine-assistance time recovered",
+            "$",
+            "Verified non-clinical hours avoided × chosen time/labor value"
+          ],
+          [
+            "Annual avoided property-check travel",
+            "$",
+            "Verified avoided trips × actual trip cost"
+          ],
+          [
+            "Risk-adjusted property value",
+            "$",
+            "Probability × attributable avoidable cost; scenario only"
+          ],
+          [
+            "Annual recurring cost",
+            "$",
+            "Subtract from benefits"
+          ],
+          [
+            "Initial investment",
+            "$",
+            "Validated equipment, setup, training, and support"
+          ],
+          [
+            "Independence/ease-of-use value",
+            "Describe separately",
+            "Do not convert dignity or peace of mind into an unsupported cash claim"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "A Respectful Pilot"
+      },
+      {
+        "type": "paragraph",
+        "text": "Start with one or two tasks the resident chooses. Keep a simple manual option and test it in real conditions."
+      },
+      {
+        "type": "paragraph",
+        "text": "Potential first steps:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "bedside or hallway Night Path lighting;",
+          "simplified Goodnight lighting and climate;",
+          "easy-to-use lighting or shade controls;",
+          "Water Watch notifications with a clearly agreed response plan;",
+          "consent-based Property Pulse status for a second home or family-supported household."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Measure adoption, confidence, false alerts, support requests, and whether the resident actually prefers the new experience."
+      },
+      {
+        "type": "heading",
+        "text": "What My LuxSync Blueprint Can Include"
+      },
+      {
+        "type": "list",
+        "items": [
+          "home profile and resident-selected goals;",
+          "accessibility and control preferences;",
+          "Accessible Living, Night Path, Goodnight, Water Watch, and Climate Intelligence recommendations;",
+          "caregiver/family roles only with consent;",
+          "Essential, Elevated, and Complete paths;",
+          "training, manual override, outage behavior, and phased adoption plan;",
+          "Senior Independent Safety Bundle concept only after exact contents and unresolved pricing are approved."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Care and Safety Boundary"
+      },
+      {
+        "type": "paragraph",
+        "text": "LuxSync solutions are not medical devices, clinical monitoring, fall-detection guarantees, personal emergency-response services, professional security monitoring, or substitutes for caregivers, emergency services, required life-safety equipment, or medical advice. Alerts may fail because of power, internet, device, configuration, or human-response issues."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Next step:** **Find My LuxSync Solution** with the resident's priorities at the center, or request guidance at `info@luxsync.net`."
+      }
+    ],
+    "metrics": [
+      {
+        "id": "metric-0",
+        "label": "Everyday ease",
+        "hint": "Tasks simplified for lighting, climate, shades, and selected devices"
+      },
+      {
+        "id": "metric-1",
+        "label": "Nighttime movement",
+        "hint": "Ease of finding a softly lit path and number of manual lighting steps"
+      },
+      {
+        "id": "metric-2",
+        "label": "Comfort",
+        "hint": "Environmental adjustment requests and usability"
+      },
+      {
+        "id": "metric-3",
+        "label": "Family/caregiver coordination",
+        "hint": "Non-clinical check-in trips or calls related to home status"
+      },
+      {
+        "id": "metric-4",
+        "label": "Property awareness",
+        "hint": "Leak and temperature exceptions, response time"
+      },
+      {
+        "id": "metric-5",
+        "label": "Energy use",
+        "hint": "Lighting/climate operation when rooms or the home are unoccupied"
+      }
+    ],
+    "worksheet": [
+      {
+        "id": "input-0",
+        "label": "Annual verified energy savings",
+        "unit": "$",
+        "method": "Normalized baseline minus measured result"
+      },
+      {
+        "id": "input-1",
+        "label": "Annual routine-assistance time recovered",
+        "unit": "$",
+        "method": "Verified non-clinical hours avoided × chosen time/labor value"
+      },
+      {
+        "id": "input-2",
+        "label": "Annual avoided property-check travel",
+        "unit": "$",
+        "method": "Verified avoided trips × actual trip cost"
+      },
+      {
+        "id": "input-3",
+        "label": "Risk-adjusted property value",
+        "unit": "$",
+        "method": "Probability × attributable avoidable cost; scenario only"
+      },
+      {
+        "id": "input-4",
+        "label": "Annual recurring cost",
+        "unit": "$",
+        "method": "Subtract from benefits"
+      },
+      {
+        "id": "input-5",
+        "label": "Initial investment",
+        "unit": "$",
+        "method": "Validated equipment, setup, training, and support"
+      },
+      {
+        "id": "input-6",
+        "label": "Independence/ease-of-use value",
+        "unit": "Describe separately",
+        "method": "Do not convert dignity or peace of mind into an unsupported cash claim"
+      }
+    ]
+  }
+]

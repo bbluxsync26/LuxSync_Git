@@ -1,1 +1,4 @@
 dist/
+
+.local-data/
+node_modules/

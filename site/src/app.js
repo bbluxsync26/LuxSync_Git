@@ -1,3 +1,5 @@
+import {restoreSavedConcierge} from './account-workspace.js';
+import {iconFor} from './icon-map.js';
 const CONFIG = window.LUXSYNC_CONFIG || {};
 const qs = (selector, root = document) => root.querySelector(selector);
 const qsa = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -64,7 +66,7 @@ async function initFaqs() {
 }
 
 function catalogCard(item) {
-  return `<article class="lux-card"><span class="card-glint" aria-hidden="true"></span><span class="status-chip">${escapeHtml(item.status)}</span><h3>${escapeHtml(item.name)}</h3><p>${escapeHtml(item.description || item.note || '')}</p></article>`;
+  return `<article class="lux-card"><span class="card-glint" aria-hidden="true"></span><img class="card-icon" src="/assets/icons/${iconFor(item.name)}.webp" width="48" height="48" alt=""><span class="status-chip">${escapeHtml(item.status)}</span><h3>${escapeHtml(item.name)}</h3><p>${escapeHtml(item.description || item.note || '')}</p></article>`;
 }
 
 async function initCatalog() {
@@ -263,12 +265,14 @@ async function initConcierge() {
   const root = qs('#concierge-app');
   if (!root) return;
   try {
+    await restoreSavedConcierge();
     const engine = await fetchJson('/data/luxsync-concierge-engine.v1.json');
     let profile = {};
     try { profile = JSON.parse(localStorage.getItem('luxsyncProfile') || '{}'); } catch { profile = {}; }
     let stageIndex = Number(sessionStorage.getItem('luxsyncStageIndex') || 0);
     if (!Number.isInteger(stageIndex) || stageIndex < 0 || stageIndex >= engine.questionnaire.length) stageIndex = 0;
 
+    document.addEventListener('luxsync:collect-concierge',()=>collectVisibleAnswers(engine.questionnaire[stageIndex]));
     function collectVisibleAnswers(stage) {
       const visible = stage.questions.filter((q) => questionVisible(q, profile));
       for (const question of visible) {
@@ -617,3 +621,44 @@ initContact();
 initCommerceLink();
 initLogin();
 initCreateAccount();
+
+
+// The search control occupies the unused space to the left of Login and Cart.
+function initSiteSearch() {
+  const trigger = document.querySelector('.search-nav');
+  const dialog = document.querySelector('#site-search');
+  if (!trigger || !dialog) return;
+  const input = dialog.querySelector('input');
+  const status = dialog.querySelector('.search-status');
+  const results = dialog.querySelector('.search-results');
+  let index;
+  let pending;
+  let revision = 0;
+  async function render() {
+    const current = ++revision;
+    results.replaceChildren();
+    const terms = input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    if (!terms.length) {status.textContent = 'Search LuxSync pages, solutions, and guides.';return;}
+    status.textContent = 'Searching…';
+    try {
+      if (!index) {
+        pending ||= fetchJson('/data/search.json').catch(error=>{pending=null;throw error;});
+        index = await pending;
+      }
+      if (current !== revision) return;
+      const matches = index.filter(page=>terms.every(term=>(page.title+' '+page.text).toLowerCase().includes(term)));
+      status.textContent = matches.length ? `${matches.length} result${matches.length===1?'':'s'}` : 'No matches. Try lighting, security, or support.';
+      for (const page of matches) {
+        const link = document.createElement('a');
+        link.href = page.url;
+        link.textContent = page.title;
+        results.append(link);
+      }
+    } catch { if(current===revision)status.textContent='Search is unavailable. Please use the menu or try again.'; }
+  }
+  trigger.addEventListener('click',()=>{dialog.showModal();input.focus();render();});
+  dialog.querySelector('.search-close').addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('close',()=>{revision++;trigger.focus();});
+  input.addEventListener('input',render);
+}
+initSiteSearch();

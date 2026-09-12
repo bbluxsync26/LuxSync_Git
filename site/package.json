@@ -1,1 +1,21 @@
-{"name":"luxsync-site","version":"1.0.0","private":true,"type":"module","scripts":{"build":"node build.mjs","test":"node build.mjs && node test.mjs"},"engines":{"node":">=20"}}
+{
+  "name": "luxsync-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node build.mjs && node test.mjs",
+    "dev": "node server/local.mjs",
+    "db:generate": "drizzle-kit generate",
+    "test:accounts": "node --test server/api.test.mjs"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.10",
+    "drizzle-orm": "^0.45.2",
+    "esbuild": "^0.28.2"
+  }
+}
