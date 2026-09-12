@@ -1,3 +1,7 @@
+import {cartApi} from './cart-api.mjs';
+import {validWishlist} from './cart-model.mjs';
+import storeCatalog from '../src/store/catalog.json' with {type:'json'};
+const storeSkus=new Set(storeCatalog.items.map(i=>i.sku));
 import guides from '../src/roi/catalog.json' with {type:'json'};
 const guideIds=new Set(guides.map(g=>g.id));
 export function safeReturn(value) {
@@ -11,7 +15,8 @@ function user(request) {
   return id&&email?{id,email}:null;
 }
 function validPayload(body) {
-  if(!body||!['guide','concierge'].includes(body.kind)||typeof body.title!=='string'||body.title.length>160||!body.title.trim()||!body.data||typeof body.data!=='object'||Array.isArray(body.data))return false;
+  if(!body||!['guide','concierge','wishlist'].includes(body.kind)||typeof body.title!=='string'||body.title.length>160||!body.title.trim()||!body.data||typeof body.data!=='object'||Array.isArray(body.data))return false;
+  if(body.kind==='wishlist'&&(body.title.length>120||!validWishlist(body.data,storeSkus)))return false;
   if(body.kind==='guide'&&!guideIds.has(body.guideId))return false;
   if(JSON.stringify(body.data).length>180000)return false;
   if(body.kind==='guide') {
@@ -24,6 +29,7 @@ const unpack=row=>row?{...row,data:JSON.parse(row.data)}:null;
 export async function api(request,env) {
   const url=new URL(request.url);
   if(!url.pathname.startsWith('/api/'))return null;
+  if(url.pathname==='/api/cart')return cartApi(request,env);
   const me=user(request);
   if(url.pathname==='/api/session'&&request.method==='GET')return json({user:me,localPreview:!!env.LOCAL_PREVIEW});
   if(!me)return json({error:'Sign in to save or open your account records.'},401);
@@ -46,7 +52,7 @@ export async function api(request,env) {
       const text=await request.text();
       if(text.length>190000)return json({error:'This worksheet is too large to save. Keep up to 100 measurement periods.'},413);
       let body;try{body=JSON.parse(text);}catch{return json({error:'The saved data could not be read.'},400);}
-      if(!validPayload(body))return json({error:'Check the worksheet title, measurement dates, and entries before saving.'},400);
+      if(!validPayload(body))return json({error:'Check the title and entries before saving.'},400);
       const now=new Date().toISOString();
       if(request.method==='POST') {
         const count=await env.DB.prepare('SELECT COUNT(*) AS total FROM saved_items WHERE owner_id=?').bind(me.id).first();

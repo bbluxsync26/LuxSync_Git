@@ -1,3 +1,4 @@
+import {shopPage as storeShop,storeRoutes,wishlistDialog} from './src/store/pages.mjs';
 import {parseFaqs, faqLibrary} from './src/faq-content.mjs';
 import {guides,guideLibrary,guidePage,accountPage as workspaceAccount,accountDashboard,savePrompt,conciergeSave} from './src/roi-pages.mjs';
 import {build as bundleWorker} from 'esbuild';
@@ -134,7 +135,7 @@ function shell({ route, title, description, main, bodyClass = '' }) {
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
   <script src="/config.js"></script>
-  <script type="module" src="/app.js"></script>
+  <script type="module" src="/store-client.js"></script><script type="module" src="/app.js"></script>
 </head>
 <body class="${escapeHtml(bodyClass)}" data-route="${escapeHtml(route)}">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -143,7 +144,7 @@ function shell({ route, title, description, main, bodyClass = '' }) {
 ${savePrompt}
   <main id="main">${decoratePage(route, main)}${['/find-my-luxsync-solution','/my-luxsync-blueprint'].includes(route)?conciergeSave:''}</main>
   ${footer()}
-</body>
+${wishlistDialog}</body>
 </html>`;
 }
 
@@ -173,7 +174,8 @@ function blueprintPage() {
   return `<section class="page-hero compact"><div><p class="eyebrow">Personalized result</p><h1>My LuxSync Blueprint</h1><p>Your Blueprint explains the experiences LuxSync recommends, the foundation they depend on, a practical implementation path, and the next best action.</p></div></section><section class="section app-section"><div id="blueprint-app" class="app-shell" aria-live="polite"></div></section>`;
 }
 
-function shopPage() {
+function shopPage() { return storeShop(); }
+function legacyShopPage() {
   return `<section class="page-hero"><div><p class="eyebrow">LuxSync Shop</p><h1>Curated technology, organized by the life it supports.</h1><p>Explore the approved LuxSync product-family structure and planning bundles. Exact live products, prices, stock, shipping, and compatibility remain governed by validated GoDaddy Commerce Plus data.</p><div class="button-row"><a id="commerce-link" class="button" href="/contact/?intent=product_information">Browse Current Store</a><a class="button button-secondary" href="/find-my-luxsync-solution/">Need Guidance First?</a></div></div></section><section id="planning-cart" class="section section-soft" aria-live="polite"></section><section class="section"><div class="section-heading"><p class="eyebrow">Product Families</p><h2>Build from a compatible foundation.</h2></div><div id="shop-families" class="card-grid"></div></section><section class="section section-dark"><div class="section-heading"><p class="eyebrow">Curated Bundle Concepts</p><h2>Clear starting points, validated before sale.</h2></div><div id="shop-bundles" class="card-grid"></div></section><section class="section"><div class="section-heading"><p class="eyebrow">LuxSync Experiences</p><h2>Outcome-first concepts that can map to products, bundles, setup guidance, and automation recommendations.</h2></div><div id="shop-experiences" class="chip-grid"></div></section>`;
 }
 
@@ -326,3 +328,9 @@ fs.mkdirSync(path.join(HERE,'dist','.openai'),{recursive:true});
 fs.copyFileSync(path.join(HERE,'.openai','hosting.json'),path.join(HERE,'dist','.openai','hosting.json'));
 fs.cpSync(path.join(HERE,'drizzle'),path.join(HERE,'dist','.openai','drizzle'),{recursive:true});
 console.log('Built 10 downloadable and online ROI guides plus the account storage service.');
+
+for(const file of ['client.js','device-icons.js'])fs.copyFileSync(path.join(HERE,'src','store',file),path.join(DIST,file==='client.js'?'store-client.js':file));
+fs.copyFileSync(path.join(HERE,'src','store','catalog.json'),path.join(DIST,'data','store-catalog.json'));
+fs.appendFileSync(path.join(DIST,'styles.css'),fs.readFileSync(path.join(HERE,'src','store','store.css'),'utf8'));
+for(const page of storeRoutes){const dir=routePath(page.route);fs.mkdirSync(dir,{recursive:true});fs.writeFileSync(path.join(dir,'index.html'),shell({route:page.route,title:page.title,description:page.description,main:page.main()}));if(!page.route.startsWith('/account'))searchPages.push({url:page.route+'/',title:page.title,text:page.description});}
+fs.writeFileSync(path.join(DIST,'data','search.json'),JSON.stringify(searchPages));

@@ -1,0 +1,1990 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "foundation-connectivity",
+      "name": "Foundation & Connectivity",
+      "description": "A considered foundation for a connected space.",
+      "image": "category-connectivity",
+      "icon": "hub",
+      "kind": "product"
+    },
+    {
+      "id": "entry-access",
+      "name": "Entry & Access",
+      "description": "Thoughtful arrivals, departures, and everyday access.",
+      "image": "plush-drift-rental",
+      "icon": "lock",
+      "kind": "product"
+    },
+    {
+      "id": "lighting-ambience",
+      "name": "Lighting & Ambience",
+      "description": "Shape the mood with layered, quietly luminous light.",
+      "image": "plush-drift-residential",
+      "icon": "bulb",
+      "kind": "product"
+    },
+    {
+      "id": "comfort-climate",
+      "name": "Comfort & Climate",
+      "description": "A comfortable environment, attuned to your routines.",
+      "image": "plush-drift-energy",
+      "icon": "thermostat",
+      "kind": "product"
+    },
+    {
+      "id": "property-awareness",
+      "name": "Property Awareness",
+      "description": "Keep a clearer view of the spaces that matter.",
+      "image": "solutions",
+      "icon": "camera",
+      "kind": "product"
+    },
+    {
+      "id": "water-protection",
+      "name": "Water Protection",
+      "description": "Build awareness around leaks and changing conditions.",
+      "image": "category-water-protection",
+      "icon": "leak",
+      "kind": "product"
+    },
+    {
+      "id": "energy-power",
+      "name": "Energy & Power",
+      "description": "Understand and manage the energy behind everyday living.",
+      "image": "professionals",
+      "icon": "plug",
+      "kind": "product"
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment",
+      "description": "Settle into sound, screen, and shared moments.",
+      "image": "homepage-intelligent-living",
+      "icon": "tv",
+      "kind": "product"
+    },
+    {
+      "id": "cleaning-convenience",
+      "name": "Cleaning & Convenience",
+      "description": "Make room for the parts of your day that matter.",
+      "image": "families",
+      "icon": "vacuum",
+      "kind": "product"
+    },
+    {
+      "id": "outdoor-living",
+      "name": "Outdoor Living",
+      "description": "Carry comfort and connection beyond the door.",
+      "image": "category-outdoor-living",
+      "icon": "spotlight",
+      "kind": "product"
+    },
+    {
+      "id": "residential-bundles",
+      "name": "Residential Bundles",
+      "description": "Start with an experience. Build a home around it.",
+      "image": "plush-drift-residential",
+      "icon": "home",
+      "kind": "bundle"
+    },
+    {
+      "id": "rental-bundles",
+      "name": "Short-Term Rental Bundles",
+      "description": "Considered combinations for hosts and property teams.",
+      "image": "plush-drift-rental",
+      "icon": "home",
+      "kind": "bundle"
+    },
+    {
+      "id": "senior-bundles",
+      "name": "Senior & Caregiver Bundles",
+      "description": "Support everyday ease, comfort, and independence.",
+      "image": "plush-drift-care",
+      "icon": "home",
+      "kind": "bundle"
+    },
+    {
+      "id": "commercial-bundles",
+      "name": "Commercial Bundles",
+      "description": "Connected foundations for a calmer working day.",
+      "image": "plush-drift-commercial",
+      "icon": "home",
+      "kind": "bundle"
+    }
+  ],
+  "items": [
+    {
+      "sku": "LSX-FC-001",
+      "name": "Samsung SmartThings Hub v3",
+      "kind": "product",
+      "categoryId": "foundation-connectivity",
+      "description": "Main hub enabling SmartThings ecosystem control",
+      "experiences": [
+        "All Experiences"
+      ],
+      "audience": "All Segments",
+      "icon": "hub",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-FC-002",
+      "name": "SmartThings Station",
+      "kind": "product",
+      "categoryId": "foundation-connectivity",
+      "description": "Hub + wireless charger combo; compact SmartThings hub device",
+      "experiences": [
+        "All Experiences"
+      ],
+      "audience": "Residential / STR",
+      "icon": "hub",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-FC-003",
+      "name": "Matter-Compatible Bridge / Controller",
+      "kind": "product",
+      "categoryId": "foundation-connectivity",
+      "description": "Bridge enabling Matter protocol devices to integrate with SmartThings",
+      "experiences": [
+        "All Experiences"
+      ],
+      "audience": "All Segments",
+      "icon": "bridge",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-FC-004",
+      "name": "Wi-Fi Range Extender / Mesh Node",
+      "kind": "product",
+      "categoryId": "foundation-connectivity",
+      "description": "Network support product for reliable smart-home coverage",
+      "experiences": [
+        "All Experiences"
+      ],
+      "audience": "All Segments",
+      "icon": "wifi",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Network support accessory; not a SmartThings device.",
+      "components": []
+    },
+    {
+      "sku": "LSX-EA-001",
+      "name": "Smart Lock (Keypad / Code-Based)",
+      "kind": "product",
+      "categoryId": "entry-access",
+      "description": "Code-entry smart lock; supports remote access codes for guests and family",
+      "experiences": [
+        "Welcome Home",
+        "Effortless Departure",
+        "Goodnight",
+        "Guest Ready",
+        "Turnover"
+      ],
+      "audience": "Residential; STR; Senior",
+      "icon": "lock",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-EA-002",
+      "name": "Smart Garage Door Controller",
+      "kind": "product",
+      "categoryId": "entry-access",
+      "description": "Wi-Fi garage controller enabling remote open/close and status awareness",
+      "experiences": [
+        "Welcome Home",
+        "Effortless Departure",
+        "Away"
+      ],
+      "audience": "Residential; Busy Professionals",
+      "icon": "garage",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-EA-003",
+      "name": "Door / Window Contact Sensor",
+      "kind": "product",
+      "categoryId": "entry-access",
+      "description": "Magnetic sensor alerts on open/close events for doors and windows",
+      "experiences": [
+        "Goodnight",
+        "Away",
+        "Protect",
+        "Property Pulse",
+        "STR Property Pulse"
+      ],
+      "audience": "All Segments",
+      "icon": "contact",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-EA-004",
+      "name": "Smart Video Doorbell",
+      "kind": "product",
+      "categoryId": "entry-access",
+      "description": "Camera-enabled doorbell with remote view and two-way audio",
+      "experiences": [
+        "Welcome Home",
+        "Guest Ready",
+        "Protect"
+      ],
+      "audience": "Residential; STR",
+      "icon": "doorbell",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-EA-005",
+      "name": "Keypad / Access Code Accessory",
+      "kind": "product",
+      "categoryId": "entry-access",
+      "description": "Standalone keypad for code-based entry; pairs with smart locks",
+      "experiences": [
+        "Guest Ready",
+        "Turnover",
+        "Accessible Living"
+      ],
+      "audience": "STR; Senior; Residential",
+      "icon": "keypad",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-LA-001",
+      "name": "Smart Color Bulbs — 4-Pack (Sengled)",
+      "kind": "product",
+      "categoryId": "lighting-ambience",
+      "description": "Sengled color-tunable SmartThings-compatible smart bulbs, 4-pack",
+      "experiences": [
+        "Welcome Home",
+        "Goodnight",
+        "Gentle Morning",
+        "Intelligent Evening",
+        "Cinema",
+        "Entertain",
+        "Relax",
+        "Night Path"
+      ],
+      "audience": "All Segments",
+      "icon": "bulb",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-LA-002",
+      "name": "Smart Dimmer Switch Kit (Lutron Caseta)",
+      "kind": "product",
+      "categoryId": "lighting-ambience",
+      "description": "Lutron Caseta in-wall dimmer switch with Pico remote; SmartThings-compatible",
+      "experiences": [
+        "Welcome Home",
+        "Intelligent Evening",
+        "Cinema",
+        "Entertain",
+        "Relax",
+        "Goodnight"
+      ],
+      "audience": "Residential; Busy Professionals",
+      "icon": "switch",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-LA-003",
+      "name": "Smart Plug / Outlet Adapter",
+      "kind": "product",
+      "categoryId": "lighting-ambience",
+      "description": "Single smart plug for lamp and device automation; energy monitoring optional",
+      "experiences": [
+        "Goodnight",
+        "Effortless Departure",
+        "Away",
+        "Energy Intelligence"
+      ],
+      "audience": "All Segments",
+      "icon": "plug",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-LA-004",
+      "name": "Architectural Sunset Projection Lamp",
+      "kind": "product",
+      "categoryId": "lighting-ambience",
+      "description": "Decorative smart lamp projecting warm sunset gradient; ambience focal piece",
+      "experiences": [
+        "Relax",
+        "Intelligent Evening",
+        "Entertain",
+        "Cinema"
+      ],
+      "audience": "Residential; Busy Professionals",
+      "icon": "lamp",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-LA-005",
+      "name": "Sculptural Smart Pendant Light",
+      "kind": "product",
+      "categoryId": "lighting-ambience",
+      "description": "Designer pendant with smart dimming; architectural statement piece",
+      "experiences": [
+        "Intelligent Evening",
+        "Entertain",
+        "Relax"
+      ],
+      "audience": "Residential",
+      "icon": "pendant",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-LA-006",
+      "name": "Ambient LED Sconce",
+      "kind": "product",
+      "categoryId": "lighting-ambience",
+      "description": "Wall-mounted ambient smart sconce for accent and pathway lighting",
+      "experiences": [
+        "Night Path",
+        "Intelligent Evening",
+        "Relax",
+        "Accessible Living"
+      ],
+      "audience": "Residential; Senior",
+      "icon": "sconce",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-LA-007",
+      "name": "Mid-Century Modern Smart Table Lamp",
+      "kind": "product",
+      "categoryId": "lighting-ambience",
+      "description": "Styled smart table lamp with tunable warmth; plugs into smart outlet",
+      "experiences": [
+        "Relax",
+        "Intelligent Evening",
+        "Entertain"
+      ],
+      "audience": "Residential",
+      "icon": "lamp",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-LA-008",
+      "name": "Smart Outdoor Path / Porch Light",
+      "kind": "product",
+      "categoryId": "lighting-ambience",
+      "description": "Outdoor-rated smart light for porch, path, or entry; compatible with SmartThings",
+      "experiences": [
+        "Welcome Home",
+        "Effortless Departure",
+        "Away",
+        "Outdoor Living"
+      ],
+      "audience": "Residential; STR",
+      "icon": "spotlight",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-LA-009",
+      "name": "Smart Motorized Shades / Blinds",
+      "kind": "product",
+      "categoryId": "lighting-ambience",
+      "description": "Motorized window shades compatible with SmartThings routines",
+      "experiences": [
+        "Gentle Morning",
+        "Intelligent Evening",
+        "Cinema",
+        "Climate Intelligence",
+        "Away"
+      ],
+      "audience": "Residential; Busy Professionals",
+      "icon": "shades",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-CC-001",
+      "name": "Smart Thermostat",
+      "kind": "product",
+      "categoryId": "comfort-climate",
+      "description": "Programmable Wi-Fi smart thermostat; SmartThings-compatible",
+      "experiences": [
+        "Climate Intelligence",
+        "Welcome Home",
+        "Goodnight",
+        "Gentle Morning",
+        "Away",
+        "Effortless Departure",
+        "Vacation Mode"
+      ],
+      "audience": "All Segments",
+      "icon": "thermostat",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-CC-002",
+      "name": "Temperature Sensor",
+      "kind": "product",
+      "categoryId": "comfort-climate",
+      "description": "Wireless room-level temperature sensor for climate zoning",
+      "experiences": [
+        "Climate Intelligence",
+        "Guest Ready",
+        "STR Energy Intelligence"
+      ],
+      "audience": "Residential; STR; Senior",
+      "icon": "temperature",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-CC-003",
+      "name": "Humidity & Environmental Sensor",
+      "kind": "product",
+      "categoryId": "comfort-climate",
+      "description": "Combined humidity, temperature, and environmental quality sensor",
+      "experiences": [
+        "Climate Intelligence",
+        "Water Watch",
+        "Smart Sleep Nursery"
+      ],
+      "audience": "Residential; Senior; STR",
+      "icon": "humidity",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-PA-001",
+      "name": "Indoor Smart Security Camera",
+      "kind": "product",
+      "categoryId": "property-awareness",
+      "description": "Indoor Wi-Fi camera with motion detection and SmartThings integration",
+      "experiences": [
+        "Protect",
+        "Property Pulse",
+        "Away",
+        "STR Property Pulse",
+        "Vacation Mode"
+      ],
+      "audience": "Residential; STR; Commercial",
+      "icon": "camera",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-PA-002",
+      "name": "Outdoor Smart Security Camera",
+      "kind": "product",
+      "categoryId": "property-awareness",
+      "description": "Outdoor-rated Wi-Fi camera with weatherproofing and night vision",
+      "experiences": [
+        "Protect",
+        "Property Pulse",
+        "STR Property Pulse",
+        "Away",
+        "Vacation Mode"
+      ],
+      "audience": "Residential; STR; Commercial",
+      "icon": "camera",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-PA-003",
+      "name": "Motion / Presence Sensor",
+      "kind": "product",
+      "categoryId": "property-awareness",
+      "description": "Wireless motion sensor for automation triggers and awareness",
+      "experiences": [
+        "Welcome Home",
+        "Night Path",
+        "Away",
+        "Protect",
+        "Guest Ready",
+        "Accessible Living"
+      ],
+      "audience": "All Segments",
+      "icon": "motion",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-PA-004",
+      "name": "Smart Doorbell Camera",
+      "kind": "product",
+      "categoryId": "property-awareness",
+      "description": "Video doorbell with camera, motion alert, and two-way audio",
+      "experiences": [
+        "Welcome Home",
+        "Protect",
+        "Guest Ready"
+      ],
+      "audience": "Residential; STR",
+      "icon": "doorbell",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-WP-001",
+      "name": "Smart Leak Sensor",
+      "kind": "product",
+      "categoryId": "water-protection",
+      "description": "Floor-level water leak sensor with instant alert; SmartThings-compatible",
+      "experiences": [
+        "Water Watch",
+        "STR Water Watch",
+        "Property Pulse",
+        "Vacation Mode"
+      ],
+      "audience": "All Segments",
+      "icon": "leak",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-WP-002",
+      "name": "Smart Water Shut-Off Valve",
+      "kind": "product",
+      "categoryId": "water-protection",
+      "description": "Motorized valve to remotely shut off water supply on leak detection",
+      "experiences": [
+        "Water Watch",
+        "STR Water Watch",
+        "Vacation Mode"
+      ],
+      "audience": "Residential; STR; Senior",
+      "icon": "valve",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-WP-003",
+      "name": "Freeze / Pipe Temperature Sensor",
+      "kind": "product",
+      "categoryId": "water-protection",
+      "description": "Monitor low temperatures near pipes and plan appropriate responses to changing conditions.",
+      "experiences": [
+        "Water Watch",
+        "Property Pulse",
+        "Vacation Mode"
+      ],
+      "audience": "Residential; STR; Senior",
+      "icon": "temperature",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-EP-001",
+      "name": "Smart Plug with Energy Monitoring",
+      "kind": "product",
+      "categoryId": "energy-power",
+      "description": "Smart plug with real-time energy usage monitoring; SmartThings-compatible",
+      "experiences": [
+        "Energy Intelligence",
+        "Business Energy Intelligence",
+        "STR Energy Intelligence",
+        "Away"
+      ],
+      "audience": "All Segments",
+      "icon": "plug",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-EP-002",
+      "name": "In-Wall Smart Outlet",
+      "kind": "product",
+      "categoryId": "energy-power",
+      "description": "In-wall smart outlet with energy monitoring; replaces standard outlet",
+      "experiences": [
+        "Energy Intelligence",
+        "Business Energy Intelligence"
+      ],
+      "audience": "Residential; Commercial",
+      "icon": "outlet",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-EN-001",
+      "name": "Smart Television (Mid-Size)",
+      "kind": "product",
+      "categoryId": "entertainment",
+      "description": "SmartThings-compatible smart TV; mid-size for living or bedroom use",
+      "experiences": [
+        "Cinema",
+        "Entertain",
+        "Relax",
+        "Welcome Home"
+      ],
+      "audience": "Residential; STR",
+      "icon": "tv",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-EN-002",
+      "name": "Smart Speaker",
+      "kind": "product",
+      "categoryId": "entertainment",
+      "description": "Voice-assistant smart speaker for audio, routines, and information",
+      "experiences": [
+        "Cinema",
+        "Entertain",
+        "Relax",
+        "Gentle Morning",
+        "Welcome Home",
+        "Accessible Living"
+      ],
+      "audience": "All Segments",
+      "icon": "speaker",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-EN-003",
+      "name": "Smart Streaming / Media Device",
+      "kind": "product",
+      "categoryId": "entertainment",
+      "description": "HDMI streaming device enabling smart TV features on any display",
+      "experiences": [
+        "Cinema",
+        "Entertain",
+        "STR Guest Welcome"
+      ],
+      "audience": "STR; Residential",
+      "icon": "streaming",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-CL-001",
+      "name": "Robotic Vacuum & Mop Combo",
+      "kind": "product",
+      "categoryId": "cleaning-convenience",
+      "description": "Self-navigating robotic vacuum and mop combo; schedule-compatible",
+      "experiences": [
+        "Effortless Departure",
+        "Guest Ready",
+        "Turnover"
+      ],
+      "audience": "Residential; STR; Busy Professionals",
+      "icon": "vacuum",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-CL-002",
+      "name": "Smart Countertop Appliance",
+      "kind": "product",
+      "categoryId": "cleaning-convenience",
+      "description": "Programmable smart kitchen appliance; Wi-Fi connected",
+      "experiences": [
+        "Gentle Morning",
+        "Welcome Home"
+      ],
+      "audience": "Residential; Busy Professionals",
+      "icon": "appliance",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-OL-001",
+      "name": "Motion-Activated Outdoor Spotlight",
+      "kind": "product",
+      "categoryId": "outdoor-living",
+      "description": "Weather-resistant spotlight with motion detection; SmartThings-compatible",
+      "experiences": [
+        "Away",
+        "Protect",
+        "Property Pulse",
+        "Outdoor Living"
+      ],
+      "audience": "Residential; STR",
+      "icon": "spotlight",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-OL-002",
+      "name": "Outdoor-Compatible Smart Plug",
+      "kind": "product",
+      "categoryId": "outdoor-living",
+      "description": "Weather-rated outdoor smart plug for seasonal lighting and devices",
+      "experiences": [
+        "Outdoor Living",
+        "Entertain",
+        "Away"
+      ],
+      "audience": "Residential; STR",
+      "icon": "plug",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSX-OL-003",
+      "name": "Outdoor Smart Speaker",
+      "kind": "product",
+      "categoryId": "outdoor-living",
+      "description": "Weather-resistant smart speaker for outdoor entertainment routines",
+      "experiences": [
+        "Entertain",
+        "Outdoor Living",
+        "STR Guest Welcome"
+      ],
+      "audience": "Residential; STR",
+      "icon": "speaker",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": []
+    },
+    {
+      "sku": "LSB-STR-001",
+      "name": "STR Property Automation Kit — Cashmere",
+      "kind": "bundle",
+      "categoryId": "rental-bundles",
+      "description": "Entry-level STR kit: smart lock + door sensors + leak sensor + smart thermostat + hub",
+      "experiences": [
+        "Guest Ready",
+        "Turnover",
+        "STR Property Pulse",
+        "STR Water Watch"
+      ],
+      "audience": "STR Operators / Owners",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-EA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-WP-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-FC-001",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-STR-002",
+      "name": "STR Property Automation Kit — Eminence",
+      "kind": "bundle",
+      "categoryId": "rental-bundles",
+      "description": "An STR planning kit combining entry, water awareness, comfort, indoor camera, and energy-monitoring capabilities.",
+      "experiences": [
+        "Guest Ready",
+        "Turnover",
+        "STR Property Pulse",
+        "STR Water Watch",
+        "STR Energy Intelligence"
+      ],
+      "audience": "STR Operators",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-EA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-WP-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-PA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EP-001",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-STR-003",
+      "name": "STR Property Automation Kit — Monarch",
+      "kind": "bundle",
+      "categoryId": "rental-bundles",
+      "description": "An STR planning kit combining entry, outdoor awareness, motorized shades, cleaning, entertainment, and comfort.",
+      "experiences": [
+        "All STR Experiences"
+      ],
+      "audience": "STR Operators / Managers",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-EA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-PA-002",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-009",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CL-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EN-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-STR-004",
+      "name": "STR Guest Welcome & Keyless Entry Bundle",
+      "kind": "bundle",
+      "categoryId": "rental-bundles",
+      "description": "Smart lock + keypad + video doorbell + smart speaker for guest welcome flow",
+      "experiences": [
+        "Guest Ready",
+        "Welcome Home",
+        "Turnover"
+      ],
+      "audience": "STR Owners / Operators",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-EA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EA-005",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EA-004",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EN-002",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-NUR-001",
+      "name": "Smart Sleep Nursery Kit",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Smart bulbs (warm/dim) + smart plug + temp/humidity sensor + smart speaker",
+      "experiences": [
+        "Gentle Morning",
+        "Goodnight",
+        "Relax"
+      ],
+      "audience": "Intentional Parents / Families",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-LA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CC-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EN-002",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-SEN-001",
+      "name": "Senior Independent Safety Bundle",
+      "kind": "bundle",
+      "categoryId": "senior-bundles",
+      "description": "Motion sensors + leak sensor + smart lock + smart plug + ambient sconce + speaker",
+      "experiences": [
+        "Accessible Living",
+        "Night Path",
+        "Water Watch",
+        "Protect"
+      ],
+      "audience": "Seniors / Caregivers",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-PA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-WP-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-006",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EN-002",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-WH-001",
+      "name": "Welcome Home Experience Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Smart lock + motion sensor + interior/exterior smart lights + smart thermostat; arrival automation starter kit",
+      "experiences": [
+        "Welcome Home"
+      ],
+      "audience": "Residential; Busy Professionals",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-EA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-PA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-008",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-ED-001",
+      "name": "Effortless Departure Experience Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Smart plug(s) + door/window sensors + smart thermostat setback + away lighting",
+      "experiences": [
+        "Effortless Departure",
+        "Away",
+        "Energy Intelligence"
+      ],
+      "audience": "Residential; Busy Professionals",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-LA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EP-001",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-GN-001",
+      "name": "Goodnight Experience Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "A bedtime combination of door/window awareness, plug control, temperature control, and pathway lighting.",
+      "experiences": [
+        "Goodnight",
+        "Night Path"
+      ],
+      "audience": "Residential",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-EA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-006",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-GM-001",
+      "name": "Gentle Morning Experience Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Smart bulbs (sunrise simulation) + motorized shades + thermostat wake + smart speaker",
+      "experiences": [
+        "Gentle Morning"
+      ],
+      "audience": "Residential; Busy Professionals",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-LA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-009",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EN-002",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-IE-001",
+      "name": "Intelligent Evening Experience Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Smart dimmer switches + color bulbs + motorized shades + smart plug(s) for ambience",
+      "experiences": [
+        "Intelligent Evening"
+      ],
+      "audience": "Residential",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-LA-002",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-009",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-003",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-NP-001",
+      "name": "Night Path Experience Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Motion sensors + ambient LED sconces + low-level smart plug lighting",
+      "experiences": [
+        "Night Path",
+        "Accessible Living"
+      ],
+      "audience": "Residential; Senior",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-PA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-006",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-003",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-CI-001",
+      "name": "Climate Intelligence Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Smart thermostat + temperature sensors (2) + humidity sensor + smart shades",
+      "experiences": [
+        "Climate Intelligence"
+      ],
+      "audience": "Residential; Busy Professionals",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CC-002",
+          "quantity": 2
+        },
+        {
+          "sku": "LSX-CC-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-009",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-EI-001",
+      "name": "Energy Intelligence Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Smart plugs with energy monitoring (3-pack) + smart dimmer + thermostat setback",
+      "experiences": [
+        "Energy Intelligence"
+      ],
+      "audience": "Residential; Busy Professionals; Commercial",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-EP-001",
+          "quantity": 3
+        },
+        {
+          "sku": "LSX-LA-002",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-WW-001",
+      "name": "Water Watch Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Leak sensors (3-pack) + freeze/pipe sensor + smart shut-off valve",
+      "experiences": [
+        "Water Watch"
+      ],
+      "audience": "Residential; STR; Senior",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-WP-001",
+          "quantity": 3
+        },
+        {
+          "sku": "LSX-WP-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-WP-002",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-AW-001",
+      "name": "Away Experience Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Door/window sensors + motion sensor + outdoor spotlight + smart plug shutdown",
+      "experiences": [
+        "Away",
+        "Protect",
+        "Energy Intelligence"
+      ],
+      "audience": "Residential; STR",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-EA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-PA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-OL-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-003",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-PT-001",
+      "name": "Protect Experience Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Indoor camera + outdoor camera + motion sensors + door/window sensors + doorbell",
+      "experiences": [
+        "Protect",
+        "Property Pulse"
+      ],
+      "audience": "Residential; STR",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-PA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-PA-002",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-PA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EA-004",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-PP-001",
+      "name": "Property Pulse Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Indoor camera + motion sensor + door sensor + leak sensor + freeze sensor",
+      "experiences": [
+        "Property Pulse",
+        "Water Watch"
+      ],
+      "audience": "Residential; Vacation Home",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-PA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-PA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-WP-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-WP-003",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-VM-001",
+      "name": "Vacation Mode Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Smart thermostat setback + leak sensors + outdoor spotlight + door sensor + smart lock",
+      "experiences": [
+        "Vacation Mode",
+        "Water Watch",
+        "Away"
+      ],
+      "audience": "Residential; Vacation Home",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-WP-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-OL-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EA-001",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-CN-001",
+      "name": "Cinema Experience Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Smart TV + smart speaker + color bulbs (scene) + smart dimmer + motorized shades",
+      "experiences": [
+        "Cinema"
+      ],
+      "audience": "Residential",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-EN-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EN-002",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-002",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-009",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-ET-001",
+      "name": "Entertain Experience Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Smart speaker(s) + outdoor speaker + color bulbs + smart dimmer + outdoor smart plug",
+      "experiences": [
+        "Entertain"
+      ],
+      "audience": "Residential",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-EN-002",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-OL-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-002",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-OL-002",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-RX-001",
+      "name": "Relax Experience Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Sunset projection lamp + smart table lamp + color bulbs (warm) + smart thermostat",
+      "experiences": [
+        "Relax",
+        "Intelligent Evening"
+      ],
+      "audience": "Residential; Busy Professionals",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-LA-004",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-007",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-AL-001",
+      "name": "Accessible Living Bundle",
+      "kind": "bundle",
+      "categoryId": "residential-bundles",
+      "description": "Smart lock + motion sensors + smart plugs + ambient sconces + smart speaker + thermostat",
+      "experiences": [
+        "Accessible Living",
+        "Night Path",
+        "Water Watch"
+      ],
+      "audience": "Senior; Caregivers; Residential",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-EA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-PA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-006",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EN-002",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-GR-001",
+      "name": "Guest Ready Bundle",
+      "kind": "bundle",
+      "categoryId": "rental-bundles",
+      "description": "Smart lock (guest code) + smart thermostat (guest temp) + smart lights + smart speaker (welcome)",
+      "experiences": [
+        "Guest Ready",
+        "Welcome Home"
+      ],
+      "audience": "STR Owners / Operators",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-EA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EN-002",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-TO-001",
+      "name": "Turnover Bundle",
+      "kind": "bundle",
+      "categoryId": "rental-bundles",
+      "description": "Smart lock (code reset) + thermostat reset + robotic vacuum + motion sensor + smart plug",
+      "experiences": [
+        "Turnover"
+      ],
+      "audience": "STR Operators / Managers",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-EA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CL-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-PA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-LA-003",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-SP-001",
+      "name": "STR Property Pulse Bundle",
+      "kind": "bundle",
+      "categoryId": "rental-bundles",
+      "description": "Outdoor camera + indoor camera + leak sensor + motion sensor + door/window sensors",
+      "experiences": [
+        "STR Property Pulse",
+        "Away",
+        "Protect"
+      ],
+      "audience": "STR Owners / Managers",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-PA-002",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-PA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-WP-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-PA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EA-003",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-SW-001",
+      "name": "STR Water Watch Bundle",
+      "kind": "bundle",
+      "categoryId": "rental-bundles",
+      "description": "Leak sensors (4-pack) + freeze sensor + smart water shut-off valve",
+      "experiences": [
+        "STR Water Watch"
+      ],
+      "audience": "STR Owners / Operators / Managers",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-WP-001",
+          "quantity": 4
+        },
+        {
+          "sku": "LSX-WP-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-WP-002",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-SE-001",
+      "name": "STR Energy Intelligence Bundle",
+      "kind": "bundle",
+      "categoryId": "rental-bundles",
+      "description": "Smart thermostat + smart plugs with monitoring (3-pack) + smart dimmer(s)",
+      "experiences": [
+        "STR Energy Intelligence",
+        "Energy Intelligence"
+      ],
+      "audience": "STR Operators / Managers",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EP-001",
+          "quantity": 3
+        },
+        {
+          "sku": "LSX-LA-002",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-IO-001",
+      "name": "Intelligent Opening Bundle",
+      "kind": "bundle",
+      "categoryId": "commercial-bundles",
+      "description": "Smart lights (office zones) + thermostat + smart lock + motion sensor(s)",
+      "experiences": [
+        "Intelligent Opening"
+      ],
+      "audience": "Commercial Offices",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-LA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-PA-003",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-IC-001",
+      "name": "Intelligent Closing Bundle",
+      "kind": "bundle",
+      "categoryId": "commercial-bundles",
+      "description": "Smart plug shutdown + thermostat setback + motion sensors + door/window sensors",
+      "experiences": [
+        "Intelligent Closing",
+        "Business Energy Intelligence"
+      ],
+      "audience": "Commercial Offices",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-LA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-PA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EA-003",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-BE-001",
+      "name": "Business Energy Intelligence Bundle",
+      "kind": "bundle",
+      "categoryId": "commercial-bundles",
+      "description": "An office energy-awareness combination of monitoring plugs and a smart thermostat.",
+      "experiences": [
+        "Business Energy Intelligence"
+      ],
+      "audience": "Commercial Offices; Property Managers",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-EP-001",
+          "quantity": 5
+        },
+        {
+          "sku": "LSX-CC-001",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    },
+    {
+      "sku": "LSB-BP-001",
+      "name": "Business Property Pulse Bundle",
+      "kind": "bundle",
+      "categoryId": "commercial-bundles",
+      "description": "Indoor cameras + motion sensors + door/window sensors + smart lock",
+      "experiences": [
+        "Business Property Pulse",
+        "Protect"
+      ],
+      "audience": "Commercial Offices; Property Managers",
+      "icon": "home",
+      "price": null,
+      "priceLabel": "Coming soon",
+      "compatibility": "Intended for a SmartThings-based plan. Confirm the exact model and integration before purchase.",
+      "components": [
+        {
+          "sku": "LSX-PA-001",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-PA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EA-003",
+          "quantity": 1
+        },
+        {
+          "sku": "LSX-EA-001",
+          "quantity": 1
+        }
+      ],
+      "contentsNote": "Planned contents shown below. Final configuration and compatibility will be confirmed before purchase."
+    }
+  ]
+}

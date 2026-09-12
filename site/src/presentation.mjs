@@ -30,7 +30,7 @@ export function headerControls() {
   return `<div class="header-actions" role="group" aria-label="Quick actions">
     <a class="utility-icon concierge-nav" href="/find-my-luxsync-solution/" aria-label="LuxSync Concierge" title="LuxSync Concierge"><img src="/assets/icons/concierge-bell.webp" width="26" height="26" alt=""></a>
     <a class="utility-icon account-nav" href="/account/" aria-label="Account" title="Account">${svg('<circle class="metal-steel" cx="12" cy="7.5" r="3.6"/><path class="metal-rose" d="M4.5 21v-2a7.5 7.5 0 0 1 15 0v2"/>')}</a>
-    <a class="utility-icon cart-nav" href="/shop/#planning-cart" aria-label="Shopping cart" title="Shopping cart">${svg('<path class="metal-steel" d="M2.5 3.5H5L7.2 15h11L21 7H6"/><path class="metal-rose" d="M8 10h11M9 13h9"/><circle class="metal-rose" cx="9" cy="20" r="1.25"/><circle class="metal-rose" cx="18" cy="20" r="1.25"/>')}<span class="cart-count" data-cart-count>0</span></a>
+    <a class="utility-icon cart-nav" href="/cart/" aria-label="Shopping cart" title="Shopping cart">${svg('<path class="metal-steel" d="M2.5 3.5H5L7.2 15h11L21 7H6"/><path class="metal-rose" d="M8 10h11M9 13h9"/><circle class="metal-rose" cx="9" cy="20" r="1.25"/><circle class="metal-rose" cx="18" cy="20" r="1.25"/>')}<span class="cart-count" data-cart-count>0</span></a>
     <button class="utility-icon search-nav" type="button" aria-label="Search LuxSync" title="Search LuxSync" aria-haspopup="dialog" aria-controls="site-search">${svg('<circle class="metal-steel" cx="10.5" cy="10.5" r="6.8"/><path class="metal-rose" d="m15.7 15.7 5 5"/>')}</button>
   </div>`;
 }

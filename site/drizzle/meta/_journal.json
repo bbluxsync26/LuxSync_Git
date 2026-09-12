@@ -8,6 +8,13 @@
       "when": 1789137696434,
       "tag": "0000_silky_steve_rogers",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1789239489004,
+      "tag": "0001_fantastic_thunderbolt_ross",
+      "breakpoints": true
     }
   ]
 }

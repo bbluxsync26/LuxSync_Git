@@ -27,7 +27,7 @@ test('built FAQs contain every question and resolve internal links and search de
   assert.ok(faqs.length >= 50);
   assert.equal(new Set(faqs.map(faq => faq.id)).size, faqs.length);
   assert.equal([...html.matchAll(/<details class="faq-item"/g)].length, faqs.length);
-  assert.equal(new Set(faqs.map(faq => faq.category)).size, 9);
+  assert.equal(new Set(faqs.map(faq => faq.category)).size, 10);
   assert.match(html, /https:\/\/www.youtube.com\/watch\?v=UPj32rMGmS4/);
   assert.match(html, /https:\/\/www.youtube.com\/watch\?v=5WDCht0aGVs/);
   for (const faq of faqs) {

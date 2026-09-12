@@ -192,7 +192,7 @@ Record only what is useful for your measurement plan: your goal, period, values,
 
 ### What is the difference between an item, a bundle, and an Experience?
 
-An item is a particular product; a product family is a category of hardware. A bundle groups products around a use case. A LuxSync Experience describes an outcome that may use several products, guidance, and routines. The [Shop](/shop/) currently organizes families and concepts, rather than a fully validated list of purchasable items.
+An item is a particular product; a product family is a category of hardware. A bundle groups products around a use case. A LuxSync Experience describes an outcome that may use several products, guidance, and routines. The [Shop](/shop/) includes individual devices and curated bundles organized by category. They are available for planning; pricing and checkout are coming later.
 
 ### What kinds of products does the catalog cover?
 
@@ -200,15 +200,15 @@ The planning catalog includes connectivity, entry and access, lighting, climate,
 
 ### Can I choose individual items instead of a bundle?
 
-The intended catalog supports both individual products and curated bundles. Current pages show planning concepts; they do not confirm live item availability. [Contact LuxSync](/contact/) to discuss an existing device or a smaller starting point before assuming a bundle is required.
+You can add individual devices or complete bundles to your [cart](/cart/). Current listings do not confirm live stock or pricing. [Contact LuxSync](/contact/) to discuss an existing device or a smaller starting point before assuming a bundle is required.
 
 ### What is included in a bundle, and how much does it cost?
 
-Current bundle cards communicate an intended use case. They do not establish final quantities, specific models, price, stock, installation, or subscriptions. Confirm those details in validated product and checkout information before purchasing. [Ask about a bundle](/contact/?intent=product_information) if its requirements are unclear.
+Each bundle page lists its planned component devices and quantities, with links to the individual items. Pricing is shown as coming soon. Contents are preliminary and require final configuration and compatibility confirmation. Confirm those details in validated product and checkout information before purchasing. [Ask about a bundle](/contact/?intent=product_information) if its requirements are unclear.
 
 ### Does the cart place an order or take payment?
 
-The current [planning cart](/shop/#planning-cart) helps organize a direction. It does not place an order, charge a payment method, reserve stock, or confirm delivery. A completed Concierge Blueprint or saved guide is also not an order.
+The current [planning cart](/cart/) helps organize a direction. It does not place an order, charge a payment method, reserve stock, or confirm delivery. A completed Concierge Blueprint or saved guide is also not an order.
 
 ### Are subscriptions required?
 
@@ -217,6 +217,20 @@ There is no LuxSync subscription requirement to browse the current site, downloa
 ### Where do I check shipping, returns, and warranties?
 
 Rely on the terms supplied with a validated product listing and purchase. The current planning pages do not establish shipping dates, return windows, or warranty coverage; manufacturer terms can differ. [Contact support](/contact/?intent=support) about an existing purchase or unclear terms.
+
+## Personal wishlists
+
+### How do I save an item or bundle to a wishlist?
+
+Choose **Save to wishlist** on a device or bundle, then select one of your lists or create a new one. Sign in or create an account first: wishlists are private account records. You can return to [My wishlists](/account/wishlists/) on another device after signing in.
+
+### Can I choose or change the name of a wishlist?
+
+Yes. Name each list for a room, property, or project. Open a list in [My wishlists](/account/wishlists/), edit its name, and choose **Save name**. You can keep multiple lists, change quantities, remove entries, and add saved devices or bundles to your cart.
+
+### Is my cart the same as my wishlist?
+
+Your cart collects items on this browser and can be used without signing in. A wishlist belongs to your signed-in account and keeps your ideas together across visits and devices. Neither reserves stock or places an order; pricing and checkout are coming soon.
 
 ## Setup, support, and accessibility
 
@@ -234,7 +248,7 @@ Use [Contact — Support](/contact/?intent=support), or email [support@luxsync.n
 
 ### What do the four header icons do?
 
-The bell opens [Concierge](/find-my-luxsync-solution/), the profile opens [Account](/account/), the cart opens [Shop’s planning cart](/shop/#planning-cart), and the magnifying glass opens site search. The controls form a row on wider screens and a two-by-two group when the header is condensed.
+The bell opens [Concierge](/find-my-luxsync-solution/), the profile opens [Account](/account/), the cart opens [Cart](/cart/), and the magnifying glass opens site search. The controls form a row on wider screens and a two-by-two group when the header is condensed.
 
 ### Can I use the site with a keyboard or reduced motion?
 
