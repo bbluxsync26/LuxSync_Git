@@ -126,3 +126,5 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 [hidden]{display:none!important}.header-start{grid-column:1;grid-row:1}.property-nav{grid-column:3;grid-row:1}.header-actions{grid-column:4;grid-row:1}.brand-link{grid-column:2;grid-row:1}.property-nav a[aria-current]{border-bottom:3px solid var(--champagne)}
 @media(max-width:1100px){.header-actions{grid-column:3}.property-nav{grid-column:1/-1;grid-row:2}}
+
+.property-nav .property-icon{width:42px;height:42px;padding:0;border-radius:12px;flex:none}.property-icon svg{width:24px;height:24px;fill:none;stroke-width:1.65}.property-nav{align-items:center}.property-nav a[aria-current]{border-bottom:3px solid var(--champagne)}@media(max-width:960px){.property-nav .property-icon{width:40px;height:40px}}
