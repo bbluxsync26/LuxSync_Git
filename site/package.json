@@ -8,7 +8,8 @@
     "test": "node build.mjs && node test.mjs",
     "dev": "node server/local.mjs",
     "db:generate": "drizzle-kit generate",
-    "test:accounts": "node --test server/api.test.mjs"
+    "test:accounts": "node --test server/api.test.mjs",
+    "test:faqs": "node --test test-faqs.mjs"
   },
   "engines": {
     "node": ">=22.13"

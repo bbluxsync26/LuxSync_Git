@@ -1,95 +1,259 @@
 # LuxSync Frequently Asked Questions
 
-**Status:** Active / Approved website content
+**Status:** Active website content
 **Company:** LuxSync LLC
-**Brand system:** LuxSync Production Raster v5
-**Voice:** Intelligent Calm
-**Website blueprint:** `website/pages/faqs.md`
-
-These answers are the canonical launch FAQ copy. Website implementations may shorten an answer for a homepage preview, but must not change its meaning or add unsupported claims.
+**Updated:** 2026-09-12
 
 ## About LuxSync
 
 ### What is LuxSync?
 
-LuxSync is a premium smart-living commerce and guidance company. We curate compatible smart-home products, thoughtful bundles, and clear guidance to help customers create environments that feel safer, more comfortable, more efficient, and easier to manage.
+LuxSync is a smart-living curation and guidance company. We organize technology around the things you want your space to do: feel comfortable, simplify routines, improve awareness, and make everyday control easier. Explore our [Solutions](/solutions/) or [meet the company](/about/).
 
 ### What does “Where Luxury Lives Intelligently” mean?
 
-For LuxSync, luxury is not more technology or more complexity. It is the confidence of knowing that thoughtfully selected technology works quietly in the background and supports the way you want to live.
-
-### What makes LuxSync different from a typical electronics store?
-
-LuxSync begins with the experience a customer wants to create, not an endless list of devices. Our approach emphasizes trusted curation, compatibility, understandable choices, premium presentation, and guidance that makes smart living feel intentional rather than technical.
+It means thoughtfully chosen technology should support the way you live. LuxSync pairs a calm, considered aesthetic with practical guidance, so the focus stays on your experience of a space.
 
 ### Who leads LuxSync?
 
-LuxSync was co-founded by Bridgette Beardsley, Co-Founder & Chief Technology and Strategy Officer, and Sheldon Bardol, Co-Founder & Chief Customer and Operations Officer. Bridgette leads the company's technology and strategic direction, while Sheldon leads customer experience and operational execution.
+LuxSync was co-founded by Bridgette Beardsley, Co-Founder & Chief Technology and Strategy Officer, and Sheldon Bardol, Co-Founder & Chief Customer and Operations Officer. Learn about their roles and approach on our [About page](/about/).
 
-### What kinds of spaces does LuxSync support?
+### Who are LuxSync solutions for?
 
-LuxSync designs shopping and guidance pathways for private residences, short-term rentals, senior and caregiver environments, smart offices and managed properties, intentional family spaces, and other settings where thoughtfully integrated technology can improve comfort, awareness, and control.
+Our pathways cover homes, busy professionals, families, seniors and caregivers, short-term rental owners and teams, commercial offices, and senior-living environments. Choose the setting closest to yours on [Solutions](/solutions/) to see relevant examples.
 
-## Choosing a Solution
+### What makes LuxSync different from a device catalog?
 
-### Where should I begin if I am not sure what I need?
+We start with your priorities and routines, then connect those goals to useful capabilities, product families, and bundle concepts. Our approach emphasizes understandable choices, compatibility, and a plan you can build in phases.
 
-Start with **Find My LuxSync Solution**. The guided experience begins with your space, priorities, routines, and desired outcomes, then recommends a practical combination of compatible products, bundles, automation possibilities, and a phased path you can build over time.
+### How do I reach the team?
 
-### What is Find My LuxSync Solution?
+Use [Contact LuxSync](/contact/) for questions or consultation requests. General inquiries can go to [info@luxsync.net](mailto:info@luxsync.net); existing-product and support questions can go to [support@luxsync.net](mailto:support@luxsync.net).
 
-Find My LuxSync Solution is LuxSync's outcome-first recommendation experience. Instead of asking customers to compare technical specifications on their own, it translates goals such as comfort, security, energy awareness, guest readiness, or independent living into a clear and personalized smart-living direction.
+## Smart-home basics
 
-## Products and Compatibility
+### What is a smart home?
 
-### Which smart-home platform does LuxSync support?
+A smart home uses connected devices and controls to help manage functions such as lighting, temperature, access, and property awareness. You can start with one useful function and add others as your needs become clearer. Our [Concierge](/find-my-luxsync-solution/) can help you choose a starting point.
 
-Samsung SmartThings is LuxSync's primary launch compatibility standard. Product compatibility can vary by model, region, software version, and third-party service, so customers should review the compatibility information provided with each product before purchasing.
+### What is the difference between a device, a hub, and a platform?
 
-### Will every product work with every smart-home system?
+A device performs a task, such as sensing movement or controlling a light. A hub or bridge connects supported devices. A platform, such as SmartThings, provides the app and integrations used to organize and control them. The combination you need depends on the exact products; check the [manufacturer’s setup guidance](https://www.samsung.com/us/support/answer/ANS10002639/).
 
-No. Smart-home compatibility is specific to the device and ecosystem. LuxSync organizes products and guidance to make those differences easier to understand, but customers should rely on the compatibility details shown on the applicable product page and manufacturer documentation.
+### What are routines and scenes?
 
-### Can I buy individual products as well as bundles?
+They group actions so you can manage an experience more easily. In SmartThings, a routine can run actions when selected conditions are met, or run manually. For example, you might choose compatible lights to switch off at bedtime. See [SmartThings’ routine instructions](https://support.smartthings.com/hc/en-us/articles/360051931952-Routines-in-SmartThings).
 
-Yes. The LuxSync catalog is designed to include both individually selected products and curated bundles, subject to validated catalog availability. Bundles provide an easier starting point, while individual products allow customers to expand an existing environment at their own pace.
+### Which platform does LuxSync focus on?
 
-### Does LuxSync manufacture its own smart-home devices?
+Samsung SmartThings is our primary launch compatibility standard. That focus does not make every device compatible. Check the exact model, region, firmware, required hub or bridge, and third-party service requirements before selecting a product. Start with our [catalog overview](/shop/) and the manufacturer’s documentation.
 
-LuxSync's launch model focuses on curating compatible products from established manufacturers and organizing them into understandable smart-living solutions. Any future LuxSync-developed product or service will be identified clearly only after it has been built, validated, and released.
+### What is Matter?
 
-## Shopping, Setup, and Support
+Matter is a smart-home interoperability standard that helps certified products work with supported platforms. It can use Wi-Fi, Thread, or Ethernet; Bluetooth Low Energy is used during setup. A Matter label does not mean every platform supports every feature. Read the [Connectivity Standards Alliance’s Matter FAQ](https://csa-iot.org/all-solutions/matter/matter-faq/).
 
-### Do I need a LuxSync subscription to shop?
+### What is Thread, and is it the same as Matter?
 
-No LuxSync subscription is required to browse or purchase launch products. Some third-party devices or services may have their own optional or required subscriptions; when applicable, those requirements should be disclosed with the product information.
+Thread is a low-power networking technology used by some smart-home devices. Matter is an application standard and may use Thread as its network. A Thread border router connects a Thread network to the wider home network; check whether your chosen controller provides that function. The [Thread Group’s resources](https://threadgroup.org/resources) explain the distinction.
+
+### Will my smart home work if the internet or power goes out?
+
+Behavior depends on each device, controller, connection, and routine. Do not assume remote access, cloud services, alerts, or automations will continue. Review each manufacturer’s offline and power-loss behavior, and plan practical manual access and controls for your space. [Ask about compatibility](/contact/?intent=product_information) if you need help evaluating a setup.
+
+### Do I have to replace everything at once?
+
+No. Start by listing what you own and the outcome you want. Verify which existing devices fit your chosen platform, then build a manageable first phase. The [Concierge](/find-my-luxsync-solution/) helps organize those priorities; final device compatibility still needs to be checked.
+
+## Features and expectations
+
+### What can I do on the LuxSync site today?
+
+Explore solutions and product families, build a Concierge Blueprint, download ten audience-specific ROI guides, and use online worksheets to log and compare your own measurements. [Sign in](/account/) to save online guides and Concierge choices. The [Shop](/shop/) currently presents a planning catalog.
+
+### What kinds of experiences does LuxSync describe?
+
+Examples include Welcome Home, Effortless Departure, Goodnight, Climate Intelligence, Water Watch, Property Pulse, and Guest Ready. These describe useful outcomes and possible combinations of capabilities. They are not automatically separate products or installed automations. Explore the [catalog and experience concepts](/shop/).
+
+### Does the website control my devices or install automations?
+
+No. The website provides guidance and planning tools. It does not connect to your home, change device settings, or install SmartThings routines. Device setup and control take place through the supported manufacturer or platform tools. See our [video guide links](#video-guides) for a starting point.
+
+### Does LuxSync promise a particular amount of savings or return on investment?
+
+No. Results depend on your equipment, costs, usage, occupancy, and circumstances. The [ROI guides](/guides/) help you document assumptions and measurements; they do not promise savings, payback, increased property value, or insurance discounts. Online comparisons show your entries without calculating results.
+
+### Can LuxSync replace emergency monitoring or professional care?
+
+No. Lighting, awareness sensors, and comfort routines may support daily living, but LuxSync does not provide medical care or emergency monitoring. These concepts do not replace professional care, emergency services, or required life-safety systems. Explore [Solutions](/solutions/) for the intended scope of care-related guidance.
+
+### Are LuxSync Grid and automation templates available?
+
+LuxSync Grid and downloadable or installable LuxSync automation templates remain future concepts. They are not current site features. Essential Intelligence, Elevated Living, and Complete LuxSync describe possible planning phases, rather than a promise of a subscription or a fixed product package. [Contact us](/contact/) for clarification about a specific offering.
+
+## Concierge and your Blueprint
+
+### What does the bell icon open?
+
+The bell opens the [LuxSync Concierge](/find-my-luxsync-solution/), also called Find My LuxSync Solution. It asks about your space, priorities, and routines to help build a practical direction for your smart-living plan.
+
+### What is a LuxSync Blueprint?
+
+A Blueprint summarizes the direction suggested by your Concierge choices, including relevant experiences and a phased approach. It is a planning recommendation, not a purchase order, installation plan, or guarantee that a specific product fits your property. [Start your Blueprint](/find-my-luxsync-solution/).
+
+### Can I save my Concierge choices and return later?
+
+Yes. Choose **Save my Concierge choices** in the Concierge flow or on your Blueprint. If you are signed out, the site offers sign-in or account creation. After signing in, complete the save and wait for confirmation. Your journey then appears under [My Concierge choices](/account/welcome/).
+
+### How do I reopen or change a saved Concierge journey?
+
+Open [My account](/account/welcome/) and choose **Resume choices** for the saved journey. Review your answers and continue through the Concierge. Use the save action again to keep the revised choices; reviewing or changing a choice alone does not save it to your account.
+
+### Do I need an account just to try the Concierge?
+
+No. You can explore the questions and create a Blueprint without signing in. An account is needed to save a journey for later access. Browser-only progress is not the same as an account save, so use the save action before relying on it across sessions or devices.
+
+## Login and your account
+
+### How do I sign in or create an account?
+
+Select the profile icon in the header, then choose [Sign in](/account/) or [Create an account](/account/create/). The published site uses **Continue with ChatGPT**. After that sign-in step, return to LuxSync to access your saved work. LuxSync does not ask you to set a separate site password.
+
+### Is my LuxSync account the same as my SmartThings account?
+
+No. ChatGPT sign-in identifies you to this LuxSync website. Your Samsung or SmartThings account manages the supported devices and services you use there. Signing in to LuxSync does not connect your SmartThings devices or import their data.
+
+### What can I save in my account?
+
+You can save named online ROI worksheets, notes, measurement periods, and Concierge choices. Find them in [My saved work](/account/welcome/). Your account does not currently contain order history, connected-device telemetry, or automatically calculated ROI reports.
+
+### Where do I find something I already saved?
+
+Open [My saved work](/account/welcome/) using the same sign-in identity you used to save it. Guides appear under **My ROI guides**, and Concierge journeys appear under **My Concierge choices**. Choose **Open worksheet & logs** or **Resume choices** to continue.
+
+### Will my work save automatically?
+
+No. Use **Save guide to my account** or **Save my Concierge choices** and wait for the confirmation. Adding or editing a measurement period updates the open worksheet, but you still need to save the guide to keep those changes in your account.
+
+### What should I do if sign-in or saving fails?
+
+Keep the current page open and copy any important unsaved entries before reloading. Confirm you are signed in, retry the save, and look for confirmation. If another tab has a newer version, reopen the saved worksheet before continuing. For help, [contact support](/contact/?intent=support) without sending passwords or private account credentials.
+
+### Can I share, delete, or recover my saved account records?
+
+The current interface opens records for the account that saved them; it does not offer sharing, deletion, or recovery controls. [Contact support](/contact/?intent=support) about a record or data request. Signing out does not delete saved work, and clearing browser storage is not an account-deletion request.
+
+### How do I sign out, and where are the privacy terms?
+
+Use **Sign out** from [My saved work](/account/welcome/) when finished, especially on a shared device. The footer currently identifies the privacy policy and terms as pending publication. For information about handling your data before entering personal details, [contact LuxSync](/contact/).
+
+## ROI guides: PDFs and online worksheets
+
+### Which ROI guides are available?
+
+The [Guide Library](/guides/) has ten editions: Commercial Offices, Nursing Homes, Senior Living Communities, Short-Term Rental Owners, Operators, and Managers, plus Residential Homeowners, Busy Professionals, Intentional Parents, and Seniors & Caregivers. Each has a PDF and an online worksheet.
+
+### How do I download a PDF guide?
+
+Choose your edition in the [Guide Library](/guides/) and select **Download PDF**. You can save or print it without a LuxSync account. For example, [download the Residential Homeowners PDF](/downloads/roi/residential-homeowners.pdf), or choose another audience from the library.
+
+### Are the PDFs fillable, and do they sync with my account?
+
+The current PDFs are reading and printable worksheet guides, not interactive fillable forms. Notes made on a downloaded copy stay in that copy. PDF edits do not sync to the site, and there is no PDF import. Use the [online guide](/guides/) to enter information you want to save in your account.
+
+### How do I start and save an online ROI guide?
+
+Choose **Use online guide** from the [Guide Library](/guides/). Give the worksheet a name, add your goals and baseline details, then select **Save guide to my account**. If prompted, sign in or create an account and finish saving. The saved worksheet appears in [My ROI guides](/account/welcome/).
+
+### How do I log usage or another measurement?
+
+In your online guide, go to **Usage log**. Add a period label, recorded date, phase, values, units, and any evidence or context. Select **Add measurement period**, then save the guide. Enter your own observations or source records; the site does not collect readings from devices or bills.
+
+### How do I compare periods?
+
+In **Compare your records**, select Period A and Period B. The table displays the values you entered side by side. Use consistent units and note differences in occupancy, weather, period length, equipment, or other circumstances. This display does not calculate savings or establish what caused a change.
+
+### Will the online guide calculate ROI, savings, or payback?
+
+Not yet. Calculation logic is planned for later. You can read the reference methods, record baselines, add measurement periods, and compare entered values now. No automatically calculated differences, projections, or financial recommendations are produced by the online worksheet.
+
+### Can I keep separate guides for multiple properties or scenarios?
+
+Yes. Open a fresh online guide from the [Guide Library](/guides/), give it a distinct worksheet or property name, and save it. Reopen an existing record from [My account](/account/welcome/) when you want to update that record. Clear names help you distinguish properties and scenarios.
+
+### Can I edit a measurement or continue on another device?
+
+Open the saved guide from [My account](/account/welcome/), use the measurement’s **Edit** action, then save the guide after making changes. On another device, sign in with the same identity and reopen the saved record. Unsaved entries on an open page are not available on another device.
+
+### What information should I include in my worksheet?
+
+Record only what is useful for your measurement plan: your goal, period, values, units, evidence, and relevant context. Avoid passwords, access codes, guest identities, or detailed medical information. You can label a property with a nickname instead of entering its full address.
+
+## Bundles, items, and the planning cart
+
+### What is the difference between an item, a bundle, and an Experience?
+
+An item is a particular product; a product family is a category of hardware. A bundle groups products around a use case. A LuxSync Experience describes an outcome that may use several products, guidance, and routines. The [Shop](/shop/) currently organizes families and concepts, rather than a fully validated list of purchasable items.
+
+### What kinds of products does the catalog cover?
+
+The planning catalog includes connectivity, entry and access, lighting, climate, property awareness, water protection, energy and power, entertainment, cleaning, and outdoor living. Browse the [product families](/shop/) to understand the possibilities. Exact models and requirements must be validated before a purchase.
+
+### Can I choose individual items instead of a bundle?
+
+The intended catalog supports both individual products and curated bundles. Current pages show planning concepts; they do not confirm live item availability. [Contact LuxSync](/contact/) to discuss an existing device or a smaller starting point before assuming a bundle is required.
+
+### What is included in a bundle, and how much does it cost?
+
+Current bundle cards communicate an intended use case. They do not establish final quantities, specific models, price, stock, installation, or subscriptions. Confirm those details in validated product and checkout information before purchasing. [Ask about a bundle](/contact/?intent=product_information) if its requirements are unclear.
+
+### Does the cart place an order or take payment?
+
+The current [planning cart](/shop/#planning-cart) helps organize a direction. It does not place an order, charge a payment method, reserve stock, or confirm delivery. A completed Concierge Blueprint or saved guide is also not an order.
+
+### Are subscriptions required?
+
+There is no LuxSync subscription requirement to browse the current site, download guides, or use its planning tools. Individual manufacturers or services may have their own fees or subscription requirements. Check those requirements for each exact product before selecting it.
+
+### Where do I check shipping, returns, and warranties?
+
+Rely on the terms supplied with a validated product listing and purchase. The current planning pages do not establish shipping dates, return windows, or warranty coverage; manufacturer terms can differ. [Contact support](/contact/?intent=support) about an existing purchase or unclear terms.
+
+## Setup, support, and accessibility
 
 ### Does LuxSync provide on-site installation?
 
-LuxSync is designed around curated products, self-service setup, and clear guidance rather than on-site installation. Product documentation and available support resources should be reviewed before purchase to make sure the solution fits your comfort level and space.
+LuxSync currently focuses on curated products, self-service guidance, and planning support. This site does not offer an on-site installation booking service. Review setup requirements for each device and [ask for guidance](/contact/) if a proposed solution exceeds your comfort level.
 
-### How can I get product or compatibility help?
+### How do I add a compatible device to SmartThings?
 
-Use the website contact experience and select **Information or Questions**, then choose the product, compatibility, solution, or consultation topic that best matches your need. General information may also be sent to `info@luxsync.net`.
+Use the current SmartThings app and the instructions for the exact device. Pairing steps, permissions, hubs, and network requirements vary. Start with [Samsung’s device setup guide](https://www.samsung.com/us/support/answer/ANS10002639/) or the [linked setup video](#video-guides); a video is a supplement to the device’s instructions.
 
-### How do I get help with an order or product I already purchased?
+### Where should I ask for product or order support?
 
-Use the website contact experience and select **Support**, then choose the appropriate order, delivery, setup, compatibility, return, or other support topic. Support requests may also be sent to `support@luxsync.net`.
+Use [Contact — Support](/contact/?intent=support), or email [support@luxsync.net](mailto:support@luxsync.net). Include the device model, a brief description, and any relevant order reference. For new-solution or compatibility questions, use [general inquiries](/contact/) instead. No response-time guarantee is stated on this site.
 
-### Where can I find shipping, return, and warranty information?
+### What do the four header icons do?
 
-Current shipping and return terms should be displayed through the live storefront and checkout experience. Manufacturer warranty terms may differ by product. If the applicable information is not clear, contact `support@luxsync.net` before relying on an assumption.
+The bell opens [Concierge](/find-my-luxsync-solution/), the profile opens [Account](/account/), the cart opens [Shop’s planning cart](/shop/#planning-cart), and the magnifying glass opens site search. The controls form a row on wider screens and a two-by-two group when the header is condensed.
 
-## Safety, Caregiving, and Future Services
+### Can I use the site with a keyboard or reduced motion?
 
-### Can LuxSync solutions support seniors and caregivers?
+The site provides keyboard focus indicators, labeled controls, and FAQ panels that open with Enter or Space. Reduced-motion preferences remove physical button travel while retaining visible interaction states. If a page or control prevents you from completing something, [tell LuxSync](/contact/) which device and browser you are using.
 
-LuxSync may curate non-intrusive products that support home awareness, pathway lighting, leak detection, comfort, and independent-living routines. LuxSync does not provide medical care, emergency monitoring, or medical advice, and its products should not be represented as substitutes for professional care or emergency services.
+## Video guides
 
-### Are LuxSync automation templates or LuxSync Grid available now?
+### Where can I watch a guide to adding a device?
 
-SmartThings automation templates, LuxSync Grid, and other advanced platform concepts are part of the future roadmap and must not be represented as currently available until they are built, validated, supported, and formally released.
+Watch the existing [How to add a Samsung device to SmartThings video](https://www.youtube.com/watch?v=5WDCht0aGVs). It opens on YouTube and is an external guide, not a LuxSync production. Check your exact device’s requirements alongside the demonstration.
 
-### How can I contact LuxSync with another question?
+### Where can I watch a guide to creating a routine?
 
-Use the website contact form so your request can be routed to the right topic. Send general information and product-selection questions to `info@luxsync.net`; send order, setup, or existing-product support requests to `support@luxsync.net`.
+Watch [Samsung US: How to create an automated routine in SmartThings](https://www.youtube.com/watch?v=UPj32rMGmS4). It demonstrates the platform’s routine flow. Your available conditions and actions depend on the devices and services in your setup.
+
+### Are there LuxSync videos for accounts, ROI guides, and bundles?
+
+LuxSync-specific videos are not available yet. Planned topics include signing in and saving work, downloading a PDF, using an online ROI worksheet, comparing logged periods, saving Concierge choices, and understanding bundles and items. For now, use the instructions in this FAQ and the relevant site pages; no new videos have been created.
+
+### What if a linked video does not match my screen?
+
+App layouts and supported features can change. Check the [current SmartThings support instructions](https://support.smartthings.com/hc/en-us/articles/360051931952-Routines-in-SmartThings) and your manufacturer’s documentation. You can also [contact LuxSync](/contact/) with the device model and the step you are trying to complete.

@@ -1,3 +1,4 @@
+import {parseFaqs, faqLibrary} from './src/faq-content.mjs';
 import {guides,guideLibrary,guidePage,accountPage as workspaceAccount,accountDashboard,savePrompt,conciergeSave} from './src/roi-pages.mjs';
 import {build as bundleWorker} from 'esbuild';
 import {heroAssets,headerControls,searchDialog,decoratePage,homeOverview} from './src/presentation.mjs';
@@ -28,22 +29,6 @@ const escapeHtml = (value = '') => String(value)
   .replaceAll('>', '&gt;')
   .replaceAll('"', '&quot;');
 
-function parseFaqs(markdown) {
-  const items = [];
-  const re = /^###\s+(.+?)\n\n([\s\S]*?)(?=^###\s+|^##\s+|\Z)/gm;
-  let match;
-  while ((match = re.exec(markdown)) !== null) {
-    const question = match[1].trim();
-    const answer = match[2]
-      .replace(/`([^`]+)`/g, '$1')
-      .replace(/\*\*([^*]+)\*\*/g, '$1')
-      .replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1')
-      .replace(/\n+/g, ' ')
-      .trim();
-    if (question.endsWith('?') && answer) items.push({ question, answer });
-  }
-  return items;
-}
 
 const solutionPages = {
   '/solutions/commercial-offices': {
@@ -213,7 +198,7 @@ function aboutPage() {
 }
 
 function faqPage() {
-  return `<section class="page-hero"><div><p class="eyebrow">Frequently Asked Questions</p><h1>Smart living, explained clearly.</h1><p>Browse the launch FAQ library for LuxSync, compatibility, shopping, setup, support, seniors and caregivers, and roadmap boundaries.</p></div></section><section class="section"><div id="faq-full" class="faq-list"></div><div class="section-cta"><a class="button" href="/contact/">Contact LuxSync</a></div></section>`;
+  return `<section class="page-hero"><div><p class="eyebrow">The LuxSync FAQ Library</p><h1>Smart living, explained clearly.</h1><p>Get to know LuxSync, find your starting point, and learn how to keep building your plan.</p><div class="button-row"><a class="button" href="#about-luxsync">Browse answers</a><a class="text-link" href="#video-guides">Video guide links →</a></div></div></section><section class="section">${faqLibrary(faqs)}<div class="section-cta"><p>Still have a question?</p><a class="button" href="/contact/">Contact LuxSync</a></div></section>`;
 }
 
 function contactPage() {
@@ -247,7 +232,7 @@ function pageMeta(route) {
     '/account/welcome': ['Welcome Back', 'Access orders, saved recommendations, support, and LuxSync account preferences.'],
     '/guides': ['ROI Guide Library', 'Explore LuxSync ROI guides for commercial, STR, residential, senior living, and caregiving environments.'],
     '/about': ['About LuxSync', 'Learn how LuxSync simplifies smart living through trusted curation, thoughtful automation, and intelligent guidance.'],
-    '/faqs': ['Frequently Asked Questions', 'Clear answers about LuxSync, compatibility, products, setup, support, seniors, caregivers, and future services.'],
+    '/faqs': ['Frequently Asked Questions', 'Answers about LuxSync, smart-home basics, Concierge, accounts, ROI guides, bundles, setup, and video resources.'],
     '/contact': ['Contact LuxSync', 'Contact LuxSync for support, product information, consultations, general questions, or business partnerships.']
   };
   if (solutionPages[route]) return [`${solutionPages[route].eyebrow} Solutions`, solutionPages[route].intro];
@@ -328,7 +313,7 @@ const searchPages = routes.filter(route=>!route.startsWith('/account') && !route
   return {url: route === '/' ? '/' : route+'/', title:pageMeta(route)[0],text};
 });
 for(const family of catalog.families) searchPages.push({url:'/shop/',title:family.name,text:family.description||''});
-for(const faq of faqs) searchPages.push({url:'/faqs/',title:faq.question,text:faq.answer||''});
+for(const faq of faqs) searchPages.push({url:'/faqs/#'+faq.id,title:faq.question,text:faq.answer||''});
 fs.writeFileSync(path.join(DIST,'data','search.json'),JSON.stringify(searchPages,null,2));
 
 for(const guide of guides) {

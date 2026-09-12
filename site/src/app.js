@@ -48,22 +48,28 @@ function wireFaqs(root) {
 async function initFaqs() {
   const preview = qs('#faq-preview');
   const full = qs('#faq-full');
-  if (!preview && !full) return;
-  try {
-    const faqs = await fetchJson('/data/faqs.json');
-    if (preview) {
+  if (preview) {
+    try {
+      const faqs = await fetchJson('/data/faqs.json');
       preview.innerHTML = faqs.slice(0, 6).map(faqMarkup).join('');
       wireFaqs(preview);
+    } catch {
+      preview.innerHTML = '<p>Visit the <a href="/faqs/">FAQ library</a> for answers.</p>';
     }
-    if (full) {
-      full.innerHTML = faqs.map(faqMarkup).join('');
-      wireFaqs(full);
-    }
-  } catch (error) {
-    const target = full || preview;
-    target.innerHTML = `<p class="form-error">FAQ content could not be loaded. Please contact <a href="mailto:info@luxsync.net">info@luxsync.net</a>.</p>`;
   }
+  if (!full) return;
+  const revealHash = () => {
+    let id;
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+    const target = document.getElementById(id);
+    if (!target || !full.contains(target)) return;
+    if (target.matches('details')) { target.open = true; target.querySelector('summary')?.focus({preventScroll: true}); }
+    target.scrollIntoView({block: 'start', behavior: 'instant'});
+  };
+  window.addEventListener('hashchange', revealHash);
+  revealHash();
 }
+
 
 function catalogCard(item) {
   return `<article class="lux-card"><span class="card-glint" aria-hidden="true"></span><img class="card-icon" src="/assets/icons/${iconFor(item.name)}.webp" width="48" height="48" alt=""><span class="status-chip">${escapeHtml(item.status)}</span><h3>${escapeHtml(item.name)}</h3><p>${escapeHtml(item.description || item.note || '')}</p></article>`;
@@ -652,6 +658,7 @@ function initSiteSearch() {
         const link = document.createElement('a');
         link.href = page.url;
         link.textContent = page.title;
+        link.addEventListener('click', () => dialog.close());
         results.append(link);
       }
     } catch { if(current===revision)status.textContent='Search is unavailable. Please use the menu or try again.'; }
