@@ -246,9 +246,9 @@ Use the current SmartThings app and the instructions for the exact device. Pairi
 
 Use [Contact — Support](/contact/?intent=support), or email [support@luxsync.net](mailto:support@luxsync.net). Include the device model, a brief description, and any relevant order reference. For new-solution or compatibility questions, use [general inquiries](/contact/) instead. No response-time guarantee is stated on this site.
 
-### What do the four header icons do?
+### How do I use the header navigation?
 
-The bell opens [Concierge](/find-my-luxsync-solution/), the profile opens [Account](/account/), the cart opens [Cart](/cart/), and the magnifying glass opens site search. The controls form a row on wider screens and a two-by-two group when the header is condensed.
+The first button opens the menu. The LS logo returns to [Home](/). The Commercial and Residential buttons open their property-focused solution paths. The bell opens [Concierge](/find-my-luxsync-solution/), the profile opens [Account](/account/), the cart opens [Cart](/cart/), and the magnifying glass opens site search. The controls form a row on wider screens and a two-by-two group when the header is condensed.
 
 ### Can I use the site with a keyboard or reduced motion?
 
