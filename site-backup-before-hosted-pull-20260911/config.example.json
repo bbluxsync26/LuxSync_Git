@@ -1,0 +1,5 @@
+{
+  "LUXSYNC_COMMERCE_URL": "https://your-commerce-plus-store.example",
+  "LUXSYNC_CONTACT_ENDPOINT": "https://your-form-endpoint.example/contact",
+  "LUXSYNC_SITE_URL": "https://www.luxsync.net"
+}

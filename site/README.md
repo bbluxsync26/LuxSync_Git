@@ -18,7 +18,28 @@ npm run build
 npm test
 ```
 
-The deployable output is written to `site/dist/` and is intentionally not committed.
+The current browser files are built into `site/dist/client/`. The server build is `site/dist/server/index.js`. Build output is generated locally and is not committed. Older files directly inside `site/dist/` are not the current browser build.
+
+## View locally (PowerShell)
+
+Use the functional preview for cart, account, and wishlist features:
+
+```powershell
+cd C:\LuxSync_Git\site
+npm run build
+npm run dev
+```
+
+Open http://localhost:4177/ . Local sign-in uses a test workspace stored on this computer, not your production account.
+
+For a static visual preview only:
+
+```powershell
+cd C:\LuxSync_Git\site\dist\client
+python -m http.server 8000 --bind 127.0.0.1
+```
+
+Open http://localhost:8000/ . Python does not provide the account or cart API. Do not serve the parent `dist` folder or the archived backup site.
 
 ## Runtime integration variables
 

@@ -20,4 +20,4 @@ Run `npm test` for the site build and existing content checks, and `npm run test
 
 PDFs are prebuilt in `src/roi/pdfs/`. To regenerate, run `scripts/prepare-roi.py` and `scripts/build-roi-pdfs.py` using Python with ReportLab and pypdf; the current print typography uses the Windows Inter font. Render and visually inspect regenerated PDFs before release.
 
-Hosted ChatGPT sign-in is owned by Sites; account records are stored in D1. The standalone site repository includes approved build inputs in source-data/.
+Published with the LuxSync site. Hosted ChatGPT sign-in is owned by Sites, and account records use D1. Local preview uses a separate SQLite test workspace.
