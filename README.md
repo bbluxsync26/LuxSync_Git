@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="brand/assets/logos/png/luxsync-horizontal-combo.png" alt="LuxSync" width="620" />
+<img src="brand/assets/logos/png/luxsync-orb.png" alt="LuxSync" width="620" />
 
 # LuxSync LLC
 
