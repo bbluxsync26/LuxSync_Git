@@ -2,10 +2,6 @@
 
 <img src="site/src/logos/luxsync-vertical.png" alt="LuxSync LLC" width="155" />
 
-# LuxSync LLC
-
-## Where Luxury Lives Intelligently
-
 **Curated smart-home commerce · Intelligent living · Personalized guidance · Premium customer experience**
 
 </div>
