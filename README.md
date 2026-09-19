@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="site/src/logos/luxsync-vertical.png" alt="LuxSync LLC" width="155" />
+<img src="site/src/logos/luxsync-vertical.png" alt="LuxSync LLC" width="310" />
 
 **Curated smart-home commerce · Intelligent living · Personalized guidance · Premium customer experience**
 
