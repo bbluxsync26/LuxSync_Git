@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="site/src/logos/luxsync-vertical.png" alt="LuxSync LLC" width="620" />
+<img src="site/src/logos/luxsync-vertical.png" alt="LuxSync LLC" width="155" />
 
 # LuxSync LLC
 
