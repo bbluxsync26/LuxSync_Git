@@ -1,7 +1,7 @@
-# CL-001 — Airo First-Pass Review
+# CL-001 - Airo First-Pass Review
 
-**Status:** Active / Reconciled
-**Updated:** 2026-08-31
+**Status:** Active / Reconciled  
+**Updated:** 2026-09-01  
 **Use:** Immediately after a PR-001 generation in Airo AI Builder
 
 ## Structure
@@ -28,7 +28,7 @@
 - [ ] Entry point is `Find My LuxSync Solution`
 - [ ] Guided experience is named `LuxSync Intelligent Living Concierge`
 - [ ] Output is named `My LuxSync Blueprint`
-- [ ] Experience follows `Lifestyle → Experience → Intelligence → Technology`
+- [ ] Experience follows `Lifestyle -> Experience -> Intelligence -> Technology`
 - [ ] It is presented as a concierge/guided design experience, not a novelty quiz
 - [ ] Property Profile includes property type and approximate square footage/range
 - [ ] Relevant residence, STR, and business branching is present
@@ -121,7 +121,7 @@
 
 ## Frequently Asked Questions
 
-- [ ] FAQ page exists at `/guides/faqs`
+- [ ] FAQ page exists at `/faqs`
 - [ ] Questions and answers follow `content/faqs.md`
 - [ ] Homepage shows no more than the approved FAQ preview set
 - [ ] Accordion is keyboard operable and exposes expanded state correctly
