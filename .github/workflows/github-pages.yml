@@ -1,0 +1,63 @@
+name: Validate and publish GitHub Pages
+on:
+  pull_request:
+    paths:
+      - 'site/**'
+      - '.github/workflows/github-pages.yml'
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Publish the static preview after Cloudflare Access and DNS are ready'
+        type: boolean
+        required: true
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: github-pages-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      LUXSYNC_SITE_URL: https://luxsync.net
+      LUXSYNC_COMMERCE_URL: ${{ vars.LUXSYNC_COMMERCE_URL }}
+      LUXSYNC_CONTACT_ENDPOINT: ${{ vars.LUXSYNC_CONTACT_ENDPOINT }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Install locked build dependencies
+        run: npm ci --prefix site
+      - name: Build static client and server bundle
+        run: node site/build.mjs
+      - name: Validate website
+        run: node site/test.mjs
+      - name: Prepare static Pages artifact
+        run: |
+          test -f site/dist/client/index.html
+          cp CNAME site/dist/client/CNAME
+          touch site/dist/client/.nojekyll
+      - name: Upload static client only
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist/client
+  deploy:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish && github.ref == 'refs/heads/master' }}
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Deploy static preview
+        id: deployment
+        uses: actions/deploy-pages@v4
